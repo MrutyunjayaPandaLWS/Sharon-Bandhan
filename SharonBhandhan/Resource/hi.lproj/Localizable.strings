@@ -1,0 +1,413 @@
+/*
+  Localizable.strings
+  
+
+  Created by ADMIN on 02/05/2022.
+  
+*/
+
+/* Class = "UILabel"; text = "Offers and Promotions"; ObjectID = "00f-n8-xwQ"; */
+//INITIAL VIEW
+"ivWanttoregisterKEY" = "रजिस्टर करना चाहते हैं?";
+"ivAlreadyAMemberKEY" = "आप क्या पहले से सदस्य हैं?";
+//ENTER MOBILE NUMBER VC
+"emnEnterMobileNumberToGetStartedKEY" = "शुरू करने के लिए अपना मोबाइल नंबर दर्ज करें!";
+"emnSendOTPKEY" = "SEND OTP/ओटीपी भेजें";
+//FORGOTPASSWORD VC
+"fpForgotPasswordKEY" = "Forgot password? / पासवर्ड भूल गए?";
+"fpEnterYourRegisterdMobileNumberKEY" = "अपना पंजीकृत मोबाइल नंबर दर्ज करें";
+"fpSubmitKEY" = "Submit / सबमिट";
+//LOGIN VC
+"lTermsAndConditionsKEY" = "नियम एवं शर्तें";
+"lDeclineKEY" = "अस्वीकार करें";
+"lAcceptKEY" = "स्वीकार करें";
+"lLoginKEY" = "Login / लॉग इन करें";
+"lpasswordKEY" = "पास वर्ड दर्ज करें";
+"lmobilenumberKEY" = "मोबाइल नंबरर्ड दर्ज करें";
+
+//VERIFY MOBILE NUMBER VC
+"vmnResendOTPKEY" = "Resend OTP/ओटीपी दोबारा भेजें";
+"vmnSubmitKEY" = "Submit/सबमिट";
+"vmnSecondsRemainingKEY" = "कुछ सेकंड बचा हुआ है  ";
+//MY PROFILE VC
+"mpMyProfileKEY" = "मेरी प्रोफाइल";
+"mpGeneralInformationKEY" = "सामान्य जानकारी";
+"mpNameKEY" = "नाम";
+"mpMobileNumberKEY" = "मोबाइल नंबर";
+"mpEmailIDKEY" = "ईमेल";
+"mpAddressKEY" = "पता";
+"mpCountryKEY" = "देश";
+"mpStateKEY" = "राज्य";
+"mpCityKEY" = "शहर";
+"mpDistrictKEY" = "जिला";
+"mpPinKEY" = "पिन कोड";
+"mpPreferredLanguageKEY" = "पसंदीदा भाषा";
+"mpNativeStateKEY" = "मूल राज्य";
+//REGISTRATION VC
+"rMobileKEY" = "Mobile/मोबाइल";
+"rNameKEY" = "Name/नाम";
+"rEmailKEY" = "Email/ईमेल";
+"rAddressKEY" = "Address/पता";
+"rStateKEY" = "State/राज्य";
+"rCityKEY" = "City/शहर";
+"rPinKEY" = "Pincode/पिन कोड";
+"rDistrictKEY" = "District/जिला";
+"rPreferredLanguageKEY" = "Preferred Language/पसंदीदा भाषा";
+"rNativeStateKEY" = "Native State/मूल राज्य";
+"rOKKEY" = "ठीक";
+"rSelectStateKEY" = "राज्य चुनें";
+"rSelectCityKEY" = "शहर चुनें";
+"rSelectPreferredLanguageKEY" = "पसंदीदा भाषा का चयन करें";
+"rSelectNativeStateKEY" = "मूल राज्य का चयन करें";
+//HOMEPAGE VC
+"hcHelplineCallKEY" = "हेल्पलाइन कॉल";
+"hpWelcomeKEY" = "स्वागत हे";
+"hpQRCodeisSubmittedSuccessfullyKEY" = "कोड सफलतापूर्वक सबमिट किया गया।";
+"hpChecktheStatusOfCodeInTheReportKEY" = "स्टेटस रिपोर्ट में कोड की स्थिति की जाँच करें";
+"hpStatusKEY" = "स्टेटस";
+"hpScanAgainKEY" = "फिर से\n स्कैन करें";
+"hpRaiseTicketKEY" = " Raise\nticket";
+"hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY" = "एप्लिकेशन सेवाओं तक पहुंचने में असमर्थ है क्योंकि सिस्टम रखरखाव के लिए नीचे है! कृपया कुछ समय बाद प्रयास करें।";
+"hpMembershipIDKEY" = "मेम्बरशिपआईडी";
+"hpPointsKEY" = "प्वाइंट्स";
+"panDetails" = "पान विवरण";
+"hpTierKEY" = "टियर";
+"hpScanCodeKEY" = "क्यूआर कोड स्कैन करें";
+"hpUploadCodeKEY" = "कोड अपलोड करें";
+"hpRedemptionCatalogueKEY" = "रिडेम्पशन कैटलॉग ";
+"hpHelpLineCallKEY" = "हेल्पलाइन कॉल";
+"hpMyRedemptionsKEY" = "मेरी रिडेम्पशन";
+"hpLodgeQueryKEY" = "लॉजक्वेरी";
+//SIDEMENU VC
+"smMemberSinceKEY" = "कब से सदस्य";
+"smPointsKEY" = "प्वाइंट्स";
+"smMembershipIDKEY" = "मेम्बरशिपआईडी";
+"smAnyQueriesGiveAMissedCallOnKEY" = "यदि कोई प्रश्न हैं, तो कृपया इस नंबर को मिस्ड कॉल करें 8955177400";
+//REDEMPTION CATALOGUE VC
+"rcRedemptionCatalogueKEY" = "रिडेम्पशन कैटलॉग";
+"rcCategoryKEY" = "केटेगरी";
+"rcPointsKEY" = "प्वाइंट्स";
+"rcAddToPlannerKEY" = "लानर में जोड़ें";
+"rcAddToCartKEY" = "कार्ट में डालें";
+"rcAddedToCartKEY" = "पहले से ही कार्ट में";
+"rcAddedToPlannerKEY" = "पहले से ही लानर में";
+//UPLOAD CODE
+"ucEnterYourCodeKEY" = "अपना कोड दर्ज करें";
+"ucCloseKEY" = "बंद करें";
+"ucQRCodeIsSubmittedSuccessfullyKEY" = "QR कोड सफलतापूर्वक सबमिट किया गया है";
+"ucCheckTheStatusOfTheCodeInTheStatusReportKEY" = "स्टेटस रिपोर्ट में कोड की स्थिति की जाँच करें";
+"ucStatusKEY" = "स्टेटस";
+"ucScanAgainKEY" = "फिर से\n स्कैन करें";
+"ucRaiseTicketKEY" = " Raise\nticket";
+"ucSubmitKEY" = "सबमिट";
+"ucUpLoadCodeKEY" = "कोड अपलोड करें";
+//MY REDEMPTIONVC
+"mrMyCatalogueRedemptionsKEY" = "मेरी कैटेलॉग रिडेम्पशन";
+"meDateRange" = "कृपया दिनांक सीमा चुनें";
+"mrFromDateKEY" = "तारीख से";
+"mrToDateKEY" = "तारीख तक";
+"mrFilterKEY" = "फिल्टर";
+"mrSelectDateKEY" = "तारीख़ चुनें";
+"mrNoSearchResultFoundKEY" = "कोई खोज परिणाम नहीं मिला";
+"mrCancelKEY" = "रद्द करना";
+"mrConfirmKEY" = "सुनिश्चित करें";
+//OFFERS AND MARKETING VC
+"opOffersAndMarketingKEY" = "ऑफ़र और प्रचार";
+"opNoPromotionresultFoundKEY" = "कोई प्रचार परिणाम नहीं मिला";
+"opViewKEY" = "देखें";
+"opReserveKEY" = "रिजर्व";
+"opClaimKEY" = "क्लेम";
+"opCommentHereKEY" = "यहाँ टिप्पणी करें ...";
+//TERMS AND CONDITIONS VC
+"tcTermsAndConditionsKEY" = "नियम एवं शर्तें";
+//HELPLINE CALL VC
+"hcForAnyQuestionandQueriesKEY" = "सेंटुरि प्रोक्लब लॉयल्टी प्रोग्राम के बारे में किसी भी प्रश्नों के लिए कृपया निम्नलिखित नंबर पर एक मिस कॉल दें";
+// UNIQUE FEATURE VC
+"ufUniqueFeaturesKEY" = "अनन्य विशेषताएं";
+//MY EARNING VC
+"meFromDateKEY" = "तारीख से";
+"enterFromDate" = "दिनांक से दर्ज करें";
+"enterToDate" = "तिथि दर्ज करें";
+"endDateKEY" = "दिनांक से दिनांक तक से अधिक नहीं होना चाहिए";
+"meToDateKEY" = "तारीख तक";
+"meFilterKEY" = "फिल्टर";
+"meSelectDateKEY" = "तारीख़ चुनें";
+"meNoSearchResultFoundKEY" = "कोई खोज परिणाम नहीं मिला";
+"meCancelKEY" = "रद्द करना";
+"meConfirmKEY" = "सुनिश्चित करें";
+"meTransactionDateKEY" = "लेन - देन की तारीख";
+"meQRCodeKEY" = "QR कोड";
+"meEarningQuantityKEY" = "आय की मात्रा";
+//LODGE QUERY VC
+"lqPleaseSubmitYourQueryUsingThisFormKEY" = "कृपया इस फ़ॉर्म का उपयोग करके अपनी क्वेरी सबमिट करें";
+"lqSelectYourTopic" = "प्रश्न पूछने के लिए विषय का चयन करेंरें";
+"lqQuerySummary" = "क्वेरी सारांश";
+"lqQueryDetails" = "वेरी विवरण";
+"lqBrowseImageKEY" = "छवि ब्राउज़ करें";
+"lqSubmitKEY" = "जिज्ञासा दर्ज करें";
+"lqCenturyProclubExecutiveWillCallYouAsSoonasWeReceiveYourQueryKEY" = "जैसे ही हम आपकी क्वेरी प्राप्त करते हैं, सेंचुरी प्रोक्लब एग्जीक्यूटिव आपको कॉल करेगी। कोई भी प्रश्न के लिए 8955177400 पर मिस्ड कॉल दे सकता है।";
+"lqOpenNewTicketKEY" = "नया टिकट खोलें";
+//REDEMPTIONCATALOGUE DETAILS VC
+"rcdRedemptionCatalogueKEY" = "रिडेम्पशन कैटलॉग";
+"rcdCategoryKEY" = "कैटेगरी";
+"rcdPointsperproductKEY" = "अंक / उत्पाद";
+"rcdTotalPointsKEY" = "कुल पॉइंट्स";
+"rcdAddTpPlannerKEY" = "लानर में जोड़ें";
+"rcdAddedtoPlannerKEY" = "पहले से ही लानर में";
+"rcdAddtocartKEY" = "कार्ट में डालें";
+"rcdAddedtoCartKEY" = "पहले से ही कार्ट में";
+"rcdDescriptionsKEY" = "विस्तृत विवरण";
+"rcdOtherInformationsKEY" = "अन्य जानकारी";
+"rcdProductCodeKEY" = "प्रोडक्ट कोड";
+"rcdDelivaryTypeKEY" = "डिलीवरी प्रकार";
+"rcdT&C" = "नियम एवं शर्तें";
+
+//MY BENEFITS VC
+"mbMyBenefitsKEY" = "मेरे लाभ";
+//FIREBASESCANNER VC
+"fcScanQRCodeKEY" = "क्यूआर कोड स्कैन करें";
+"fcPlaceAQRCodeInsideTheViewFinderRectangleToScanITKEY" = "क्यूआर कोड स्कैन करने के लिए व्यू फाइंडर रेक्टेंगल के अंदर रख कर स्कैन करें";
+//CHECKOUTVC
+"coSuccess!!KEY" = "सफलता !!";
+"coYourRedemptionItemWillBeDeliveredToYouAtEarliestKEY" = "आप जल्द से जल्द रिडेम्पशन आइटम आप तक पहुँचाया जाएगा।";
+"coAnyQueriesRegardingTheRedemptionServicesKEY" = "रिडेम्पशन सेवाओं के बारे में कोई भी प्रश्न के लिए 8955177400 नंबर पर एक मिस्ड कॉल दें";
+"checkoutkey" = "चेक आउट";
+"selectyourlanguageKEYq" = "अपनी भाषा का चयन करें";
+
+"coEditAddressKEY" = "पता एडिट करें";
+"coDefaultAddressKEY" = "डिफ़ॉल्ट पता";
+"coProceedKEY" = "आगेबढ़िये";
+"coOTPKEY" = "ओटीपी";
+"coRedendOTPKEY" = "ओटीपी दोबारा भेजें";
+"coSubmitKEY" = "दर्ज करें";
+"coSecondsRemainingKEY" = "कुछ सेकंड बचा हुआ है";
+//EDITADDRESS VC
+"eaNameKEY" = "नाम";
+"eaMobileKEY" = "मोबाइल";
+"eaEmailKEY" = "ईमेल";
+"eaAddressKEY" = "पता";
+"eaStateKEY" = "राज्य";
+"eaCityKEY" = "शहर";
+"eaPinKEY" = "पिन कोड";
+"eaDistrictKEY" = "जिला";
+"eaSubmitKEY" = "दर्ज करें";
+"eaEditAddressKEY" = "पता एडिट करें";
+"eaSelectStateKEY" = "राज्य चुनें";
+"eaSelectCityKEY" = "शहर चुनें";
+//MY CART VC
+"mcMyCartKEY" = "मेरी कार्ट";
+"mcPointsPerPorductKEY" = "अंक / उत्पाद";
+"mcTotalPointsKEY" = "कुल पॉइंट्स";
+"mcCheckOutKEY" = "चेक आउट";
+//CUSTOMER QUERY LISTING VC
+"cqlLodgeQueryKEY" = "Lodge Query";
+"cqlResolvedKEY" = "Resolved";
+"cqlPendingKEY" = "अपूर्ण";
+"cqlREopenKEY" = "Re-Open";
+"cqlClosedKEY" = "Closed";
+"cqlSelectTopicToLodgeQueryKEY" = "प्रश्न पूछने के लिए विषय का चयन करें";
+//WISHLIST LISTING VC
+"wlWishlistKEY" = "रिडेम्पशन प्लानर";
+"wlProductNameKEY" = "उत्पाद का नाम";
+"wlCategoryKEY" = "केटेगरी";
+"wlPointsKEY" = "प्वाइंट्स";
+"wlRedeemKEY" = "रिडीम";
+"wlDetailsKEY" = "विवरण";
+"wlExpectedRedemptionDateKEY" = "अपेक्षित रिडेम्पशन दिनांक";
+//WISHLIST DETAILS
+"wdPlannerDetailsKEY" = "रिडेम्पशन प्लानर विवरण";
+"wdNeedKEY" = " जरूरत है";
+"wdPointstoRedeemTheProductKEY" = "इस उत्पाद को रिडीम के लिए अधिक रिडीमेबल पॉइंट्स";
+"wdRemoveKEY" = "हटाना";
+"wdRedeemKEY" = "रिडीम";
+"wdWishlistSummaryKEY" = "प्लानर सारांश";
+//CODESTATUS VC
+"csCodeStatusKEY" = "कोड की स्थिति";
+"csSyncKEY" = "सिंक";
+"csClaerKEY" = "साफ़ करें";
+"csCodeKEY" = "कोड";
+"csDateKEY" = "दिनांक";
+//DREAM GIFT VC
+"mdgMyDreamGiftKEY" = "मेरे ड्रीम गिफ़्";
+"mdgRedeemKEY" = "रिडीम";
+"mdgDetailsKEY" = "विस्तृत विवरण";
+"mdgRemoveKEY" = "हटाना";
+"mdgNeedKEY" = "जरूरत है";
+"mdgPoitsToRedeemTheProductKEY" = "इस उत्पाद को रिडीम के लिए अधिक रिडीमेबल पॉइंट्स";
+"mdgAveragepointsToBeEarnedPerMonthKEY" = "प्रति माह अर्जित किए जाने वाले औसत अंक।";
+"DesiredDateKEY" = "वांछित तारीख";
+//FOLLOWER VC
+"fFollowerKEY" = "अनुगामी";
+"fMembershipIDKEY" = "मेम्बरशिप आईडी";
+"fNameKEY" = "नाम";
+"fMobileKEY" = "मोबाइल";
+"fSendSMSKEY" = "संदेश भेजो";
+"fAddFollowerKEY" = "अनुयायी जोड़ें";
+"fEnterMobileNumberKEY" = "मोबाइल नंबर दर्ज करें";
+"fEnterMobileNumberHereKEY" = "यहां मोबाइल नंबर डालें";
+"fSendOTPKEY" = "ओटीपी भेजें";
+"fotpKEY" = "ओटीपी";
+//EWARRENTY VC
+"ewEWarrentyCertificateKEY" = "ई-वारंटी प्रमाण पत्र";
+"ewFromDatemKEY" = "तारीख से";
+"ewToDateKEY" = "तारीख तक";
+"ewFilterKEY" = "फिल्टर";
+"ewSelectStateKEY" = "तारीख़ चुनें";
+"ewCancelKEY" = "रद्द करना";
+"ewConfirmKEY" = "सुनिश्चित करें";
+"ewDownloadPDFandShareKEY" = "पीडीएफ डाउनलोड और साझा करें";
+"ewCustomerNameKEY" = "ग्राहक का नाम";
+"ewMobileNumberKEY" = "मोबाइल नंबर";
+"ewEmailIDKEY" = "ईमेल";
+"ewAddressKEY" = "पता";
+"ewSelectCityKEY" = "शहर चुनें";
+"ewSelectAreaKEY" = "क्षेत्र का चयन करें";
+"ewGenerateEWarrentyKEY" = "ई-वारंटी प्रमाणपत्र उत्पन्न करें।";
+"ewDownloadandShareEwarrentyPDFKEY" = "पीडीएफ डाउनलोड और साझा करें";
+"ewEwarrentyCertificateKEY" = "एवरेण्ट प्रमाण पत्र";
+"ewCodeBankingDateKEY" = "कोड बैंकिंग की तारीख";
+"ewBrandKEY" = "ब्रांड";
+"ewProductKEY" = "उत्पाद";
+"ewTotalQRCodesKEY" = "कुल qr कोड";
+"ewAreaKEY" = "क्षेत्र";
+"ewEnterQuantityKEY" = "मात्रा दर्ज करें";
+"ewNextKEY" = "Next";
+//MY REDEMPTIONS DETAILS
+"mrdMyCatalogueredemptionsKEY" = "मेरी कैटेलॉग रिडेम्पशन";
+"mrdCategoryKEY" = "केटेगरी";
+"mrdPointsperproductKEY" = "पॉइंट्स / उत्पाद";
+"mrdtotalPointsKEY" = "कुल पॉइंट्स";
+"mrdDescriptionsKEY" = "विस्तृत विवरण ";
+"mrdOtherInformationsKEY" = "अन्य जानकारी";
+"mrdProductCodeKEY" = "उत्पाद कोड";
+"mrdDelivaryTypeKEY" = "डिलीवरी प्रकार";
+//ACCESS CAMERA VC
+"acAccessCameraKEY" = "एक्सेसकरें कैमरा";
+"acEnableCameraKEY" = "Enable Camera";
+"acQRCodeScannerRequiresKEY" = "सेंचुरी प्रोक्लब कोड को स्कैन करने के लिए QR कोड स्कैनर को कैमरा अनुमति की आवश्यकता होती है।";
+//CODE STATUS
+"NoDataFoundKEY" = "डाटा प्राप्त नहीं हुआ";
+
+//UPLOAD CODE
+"UploadKEY" = "अपलोड";
+"RaiseTicketKEY" = "टिकट रेज करे";
+"EnterYourCodeKEY" = "अपना कोड दर्ज करे";
+"OKKey" = "ठीक है";
+"SureWantToRemoveKEY" = "क्या आप वाकई हटाना चाहते हैं";
+"YesKey" = "हां";
+"NoKey" = "नहीं";
+"SubmitCodeKey" = "अपना कोड सबमिट करें";
+"Enter12DigitsKey" = "कृपया १२ अंकों का कोड दर्ज करें";
+
+//Code sync status
+ "CodeSYNCKey" = "कोड सिंक स्थिति";
+"CodeSummaryKey" = "कोड सारांश";
+"ToDateKey" = "तारीख तक";
+"FromDateKey" = "तारीख से";
+"FilterKey" = "फ़िल्टर";
+"DateOrStausKey" = "कृपया तिथि या स्थिति चुनें";
+"SelectToDateKey" = "कृपया दिनांक तक चुनें";
+ "ToDateGreaterFromDateKey" = "आज तक तारीख से बड़ा होना चाहिए";
+"CountKey" = "गिनती";
+"SelectDateKey" = "तारीख़ चुनें";
+ "CancelKey" = "रद्द करें";
+"ConfirmKey" = "पुष्टि करें";
+
+//E-warranty certhificate
+"EWarrantyKey" = "ई-वारंटी प्रमाण पत्र";
+"ResetKey" = "रीसेट";
+"NoEWarrantyKey" = "कोई ई-वारंटी परिणाम नहीं मिला";
+//Need to Update
+"DateForCodeDisplayeKey" = "कोड प्रदर्शित करने के लिए दिनांक और तिथि से चुनें";
+
+//My dream gift
+"CreatedDateKey" = "रचना तिथि";
+"okKey" = "ठीक है";
+"NotAllowedRedeemKey" = "आपको रिडीम करने की अनुमति नहीं है। कृपया अपने व्यवस्थापक से संपर्क करें";
+"NoDreamGiftKey" = "कोई सपना उपहार नहीं मिला";
+
+// Add follower
+"AlertKey" = "चेतावनी";
+"InvalidPasswordKey" = "अवैध पासवर्ड";
+"FollowerCategoryKey" = "अनुयायी श्रेणी का चयन करें";
+"NoFollowersFoundKey" = "इस समय कोई अनुयायी नहीं मिला नया अनुयायी जोड़ने के लिए '+' पर क्लिक करें";
+
+//Redemption catelogue
+"addedToCartKey" = "कार्ट में जोड़ा गया";
+ "EnterAllFieldsKey" = "सभी फ़ील्ड दर्ज करें";
+"AlreadyPlannerAddedKey"  = "उत्पाद आपके रिडेम्पशन प्लानर में पहले ही जोड़ा जा चुका है";
+"PlannerAddedKey" = "उत्पाद को आपके रिडेम्पशन प्लानर में जोड़ दिया गया है";
+"NotAllowedToRedeemKey" = "आपको रिडीम करने की अनुमति नहीं है। कृपया अपने व्यवस्थापक से संपर्क करें।";
+
+//My earning
+ "SelectDateRangeKey" = "दिनांक सीमा चुनें";
+"QRCodeKey" = "क्यूआर कोड";
+
+//My redemption
+"NoSearchResultKey" = "कोई खोज परिणाम नहीं मिला!";
+"GiftTypeKey" = "उपहार प्रकार";
+
+//Scan code
+"RaiseTicketKey" = "टिकट रेज करे";
+
+//Lodge query
+"WriteQueryHereKey" = "क्वेरी यहाँ लिखें";
+"OpenNewTicketKey" = "नया टिकट खोलें";
+
+//Forgot password
+"EnterValidNumberKey" = "मान्य मोबाइल नंबर दर्ज करें";
+"MemberExistKey" = "सदस्य मौजूद नहीं है।";
+
+//Help line call
+"ExecutiveCallKey" = "जैसे ही हमें आपका मिस्ड कॉल प्राप्त होगा, सेंचुरीप्रोक्लब के कार्यकारी आपको कॉल करेंगे!";
+"MissedCallOnKey" = "पर मिस्ड कॉल दें";
+
+//Registration
+"OTPDoesNotMatchKey" = "दर्ज किया गया ओटीपी मेल नहीं खाता";
+"ResendOTPKey" = "ओटीपी पुनः भेजें";
+
+//Notifications
+"NotificationsKey" = "सूचनाएं";
+
+//Dashboard
+"AccessDeniedKey" = "वर्तमान में आपके पास इस मेनू तक पहुंच नहीं है। कृपया व्यवस्थापक या संपर्क केंद्र से +91-8955177400 पर संपर्क करें।";
+
+"enterScratchCode" = "कृपया स्क्रैच कोड डालें.";
+"alreadySubmittedKey" = " यह कोड पहले ही सबमिट किया जा चुका है.";
+"PlzSelectFromDateKey" = "कृपया तिथि से चुनें";
+"PlzEnterOTPKey" = "कृपया ओटीपी दर्ज करें!";
+"view" = "दृश्य";
+
+
+"QRCodeSubmitted" = "क्यूआर कोड सफलतापूर्वक सबमिट किया गया है। स्थिति रिपोर्ट में कोड की स्थिति की जाँच करें।";
+"CodeScannedSuccess" = "कोड सफलतापूर्वक स्कैन किया गया";
+"myPan" = "मेरा पैन";
+"myProfile" = "मेरी प्रोफाइल";
+"myPanDetails" = "मेरा पैन विवरण";
+"enterPanNum" = "अपना पैन नंबर दर्ज करें";
+"view" = "देखना";
+"ptsBalance" = "प्वाइंट बैलेंस";
+"tdsPts" = "टीडीएस(TDS) अंक";
+"TDS" = "टीडीएस(TDS)";
+"plzEnterPAN" = "कृपया अपना पैन नंबर दर्ज करें";
+"validPanNum" = "मान्य पैन नंबर दर्ज करें!";
+"douWantSubmit" = "क्या आप पैन अटैचमेंट के बिना सबमिट करना चाहते हैं?";
+"PanSaveFailed" = "पैन कार्ड विवरण सहेजना विफल रहा!";
+"panDetailsSaved" = "पैन कार्ड विवरण सफलतापूर्वक सहेजा गया!";
+"panDetailsSubmitted" = "आपका पैन विवरण सत्यापन के लिए सबमिट कर दिया गया है!";
+"panVerified" = "आपका पैन विवरण सत्यापित किया गया है!";
+"techincalErr" = "तकनीकि खराबी!";
+
+"PanVerification" = "पैन सत्यापन";
+"kindlyUploadDetails" = "कृपया अपना पैन विवरण अपलोड करें";
+"PANnumbeer" = "पैन नंबर";
+"Validate" = "मान्य";
+"DOB" = "जन्म की तारीख : ";
+"PANAttachment" = "पैन अटैचमेंट";
+"customerPANDetails" = "सत्यापन के लिए ग्राहक पैन विवरण प्रस्तुत कर दिया गया है!";
+"Save" = "बचाना";
+"personName" = "व्यक्ति का नाम :";
+"customerPANVerified" = "ग्राहक पैन विवरण सत्यापित किया गया है!";
+"verify" = "सत्यापित करना";
+"savingPancarFailed" = "पैनकार्ड सहेजना विफल रहा. कुछ देर बाद कोशिश करें";
+

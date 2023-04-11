@@ -1,0 +1,410 @@
+
+/*
+  Localizable.strings
+  CenturyProClubApplication
+
+  Created by Arokia IT on 2/5/20.
+  Copyright © 2020 Ltd.Technologies.WeMakeAppz. All rights reserved.
+*/
+//INITIAL VIEW
+"ivWanttoregisterKEY" = "रजिस्टर करना चाहते हैं?";
+"ivAlreadyAMemberKEY" = "आप क्या पहले से सदस्य हैं?";
+//ENTER MOBILE NUMBER VC
+"emnEnterMobileNumberToGetStartedKEY" = "शुरू करने के लिए अपना मोबाइल नंबर दर्ज करें!";
+"emnSendOTPKEY" = "SEND OTP/ओटीपी भेजें";
+//FORGOTPASSWORD VC
+"fpForgotPasswordKEY" = "Forgot password? / पासवर्ड भूल गए?";
+"fpEnterYourRegisterdMobileNumberKEY" = "Enter your registered mobile number";
+"fpSubmitKEY" = "Submit / सबमिट";
+//LOGIN VC
+"lForgotPasswordKEY" = "Forgot password? / पासवर्ड भूल गए?";
+"lTermsAndConditionsKEY" = "Terms & Conditions";
+"lDeclineKEY" = "DECLINE";
+"lAcceptKEY" = "ACCEPT";
+"lLoginKEY" = "Login / लॉग इन करें";
+"lpasswordKEY" = "Enter password";
+"lmobilenumberKEY" = "Enter Mobile number";
+//VERIFY MOBILE NUMBER VC
+"vmnResendOTPKEY" = "Resend OTP/ओटीपी दोबारा भेजें";
+"vmnSubmitKEY" = "Submit/सबमिट";
+"vmnSecondsRemainingKEY" = "Seconds remaining";
+//MY PROFILE VC
+"mpMyProfileKEY" = "My Profile";
+"mpGeneralInformationKEY" = "General Information";
+"mpNameKEY" = "Name";
+"mpMobileNumberKEY" = "Mobile Number";
+"mpEmailIDKEY" = "Email ID";
+"mpAddressKEY" = "Address";
+"mpCountryKEY" = "Country";
+"mpStateKEY" = "State";
+"mpCityKEY" = "City";
+"mpDistrictKEY" = "District";
+"mpPinKEY" = "Pin";
+"mpPreferredLanguageKEY" = "Preferred Language";
+"mpNativeStateKEY" = "Native State";
+//REGISTRATION VC
+"rMobileKEY" = "Mobile/मोबाइल";
+"rNameKEY" = "Name/नाम";
+"rEmailKEY" = "Email/ईमेल";
+"rAddressKEY" = "Address/पता";
+"rStateKEY" = "State/राज्य";
+"rCityKEY" = "City/शहर";
+"rPinKEY" = "Pincode/पिन कोड";
+"rDistrictKEY" = "District/जिला";
+"rPreferredLanguageKEY" = "Preferred Language/पसंदीदा भाषा";
+"rNativeStateKEY" = "Native State/मूल राज्य";
+"rOKKEY" = "OK";
+"rSelectStateKEY" = "Select State";
+"rSelectCityKEY" = "Select City";
+"rSelectPreferredLanguageKEY" = "Select Preferred Language";
+"rSelectNativeStateKEY" = "Select Native State";
+//HOMEPAGE VC
+"hpWelcomeKEY" = "Welcome";
+"hpQRCodeisSubmittedSuccessfullyKEY" = "QR Code is submitted successfully.";
+"hpChecktheStatusOfCodeInTheReportKEY" = "Check the status of the code in code status report";
+"hpStatusKEY" = "Status";
+"hpScanAgainKEY" = "Scan\n again";
+"hpRaiseTicketKEY" = "Raise\nticket";
+"hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY" = "The app is unable to access the services as the system is down for maintenance!.Please try after sometime.";
+"hpMembershipIDKEY" = "Membership ID";
+"hpPointsKEY" = "Points";
+"panDetails" = "Pan Details";
+"hpTierKEY" = "Tier";
+"hpScanCodeKEY" = "SCAN CODE";
+"hpUploadCodeKEY" = "UPLOAD CODE";
+"hpRedemptionCatalogueKEY" = "REDEMPTION CATALOGUE";
+"hpHelpLineCallKEY" = "HELPLINE CALL";
+"hpMyRedemptionsKEY" = "MY REDEMPTION";
+"hpLodgeQueryKEY" = "LODGE QUERY";
+//SIDEMENU VC
+"smMemberSinceKEY" = "Member Since";
+"smPointsKEY" = "Points";
+"smMembershipIDKEY" = "Membership ID";
+"smAnyQueriesGiveAMissedCallOnKEY" = "(Any queries give a missed call on 8955177400)";
+//REDEMPTION CATALOGUE VC
+"rcRedemptionCatalogueKEY" = "Redemption Catalogue";
+"rcCategoryKEY" = "Category";
+"rcPointsKEY" = "Points";
+"rcAddToPlannerKEY" = "Add To Wishtlist";
+"rcAddToCartKEY" = "Add To Cart";
+"rcAddedToCartKEY" = "Added To Cart";
+"rcAddedToPlannerKEY" = "Added To Wishlist";
+//UPLOAD CODE
+"ucEnterYourCodeKEY" = "Enter your code";
+"ucCloseKEY" = "Close";
+"ucQRCodeIsSubmittedSuccessfullyKEY" = "QR Code is submitted successfully.";
+"ucCheckTheStatusOfTheCodeInTheStatusReportKEY" = "Check the status of the code in code status report";
+"ucStatusKEY" = "Status";
+"ucScanAgainKEY" = "Upload\n  again";
+"ucRaiseTicketKEY" = " Raise\nticket";
+"ucSubmitKEY" = "SUBMIT";
+"ucUpLoadCodeKEY" = "UPLOAD CODE";
+//MY REDEMPTIONVC
+"mrMyCatalogueRedemptionsKEY" = "My Catalogue Redemptions";
+"mrFromDateKEY" = "From Date";
+"mrToDateKEY" = "To Date";
+"mrFilterKEY" = "FILTER";
+"mrSelectDateKEY" = "Select Date";
+"mrNoSearchResultFoundKEY" = "No Search Result Found";
+"mrCancelKEY" = "CANCEL";
+"mrConfirmKEY" = "CONFIRM";
+//OFFERS AND MARKETING VC
+"opOffersAndMarketingKEY" = "Offers and Promotions";
+"opNoPromotionresultFoundKEY" = "No Promotion Result Found";
+"opViewKEY" = "VIEW";
+"opReserveKEY" = "RESERVE";
+"opClaimKEY" = "CLAIM";
+"opCommentHereKEY" = "COMMENT";
+//TERMS AND CONDITIONS VC
+"tcTermsAndConditionsKEY" = "Terms and Conditions";
+//HELPLINE CALL VC
+"hcHelplineCallKEY" = "Helpline Call";
+"hcForAnyQuestionandQueriesKEY" = "For any question and queries on the CenturyProClub loyalty Program please give a miss call on the following number";
+// UNIQUE FEATURE VC
+"ufUniqueFeaturesKEY" = "Unique Features";
+//MY EARNING VC
+"meMyEarning" = "My Earning";
+"meFromDateKEY" = "From Date";
+"meDateRange" = "Please select date range";
+"meToDateKEY" = "To Date";
+"meFilterKEY" = "FILTER";
+"meSelectDateKEY" = "Select Date";
+"meNoSearchResultFoundKEY" = "No Search Result Found";
+"meCancelKEY" = "CANCEL";
+"meConfirmKEY" = "CONFIRM";
+"meTransactionDateKEY" = "Transaction Date :";
+"meQRCodeKEY" = "QR Code :";
+"meEarningQuantityKEY" = "Earning Qty :";
+//LODGE QUERY VC
+"lqPleaseSubmitYourQueryUsingThisFormKEY" = "Please submit your query using this form";
+"lqSelectYourTopic" = "Select your Topic";
+"lqQuerySummary" = "Query Summary";
+"lqQueryDetails" = "Query Details";
+"lqBrowseImageKEY" = "BROWSE IMAGE";
+"lqSubmitKEY" = "SUBMIT";
+"lqCenturyProclubExecutiveWillCallYouAsSoonasWeReceiveYourQueryKEY" = "CenturyProClub will call you as soon as we receive your query";
+"lqOpenNewTicketKEY" = "Open New Ticket";
+//REDEMPTIONCATALOGUE DETAILS VC
+"rcdRedemptionCatalogueKEY" = "Redemption Catalogue";
+"rcdCategoryKEY" = "Category";
+"rcdPointsperproductKEY" = "Points/product";
+"rcdTotalPointsKEY" = "Total Points";
+"rcdAddTpPlannerKEY" = "ADD TO WISHLIST";
+"rcdAddedtoPlannerKEY" = "ADDED TO WISHLIST";
+"rcdAddtocartKEY" = "ADD TO CART";
+"rcdAddedtoCartKEY" = "ADDED TO CART";
+"rcdDescriptionsKEY" = "Description";
+"rcdOtherInformationsKEY" = "Other Informations";
+"rcdProductCodeKEY" = "Product Code";
+"rcdDelivaryTypeKEY" = "DelivaryType";
+"rcdT&C" = "";
+//MY BENEFITS VC
+"mbMyBenefitsKEY" = "My Benefits";
+//FIREBASESCANNER VC
+"fcScanQRCodeKEY" = "Scan QR Code";
+"fcPlaceAQRCodeInsideTheViewFinderRectangleToScanITKEY" = "Place a QR Code inside the view finder";
+//CHECKOUTVC
+"coSuccess!!KEY" = "Success !!";
+"coYourRedemptionItemWillBeDeliveredToYouAtEarliestKEY" = "Your redemption item will be delivered to you at the earliest";
+"coAnyQueriesRegardingTheRedemptionServicesKEY" = "Any queries regarding the redemption services. Give a missed call on 8955177400";
+"coEditAddressKEY" = "Edit Address";
+"coDefaultAddressKEY" = "Default address";
+"coProceedKEY" = "PROCEED";
+"coOTPKEY" = "OTP";
+"coRedendOTPKEY" = "RESEND OTP";
+"coSubmitKEY" = "SUBMIT";
+"coSecondsRemainingKEY" = "Seconds Remaining";
+//EDITADDRESS VC
+"eaNameKEY" = "Name";
+"eaMobileKEY" = "Mobile";
+"eaEmailKEY" = "Email";
+"eaAddressKEY" = "Address";
+"eaStateKEY" = "State";
+"eaCityKEY" = "City";
+"eaPinKEY" = "Pin";
+"eaDistrictKEY" = "District";
+"eaSubmitKEY" = "SUBMIT";
+"eaEditAddressKEY" = "Edit Address";
+"eaSelectStateKEY" = "Select State";
+"eaSelectCityKEY" = "Select City";
+//MY CART VC
+"mcMyCartKEY" = "My Cart";
+"mcPointsPerPorductKEY" = "Points/product";
+"mcTotalPointsKEY" = "Total points";
+"mcCheckOutKEY" = "CHECKOUT";
+//CUSTOMER QUERY LISTING VC
+"cqlLodgeQueryKEY" = "Lodge Query";
+"cqlResolvedKEY" = "Resolved";
+"cqlPendingKEY" = "Pending";
+"cqlREopenKEY" = "Re-Open";
+"cqlClosedKEY" = "Closed";
+"cqlSelectTopicToLodgeQueryKEY" = "Select topic to lodge query";
+//WISHLIST LISTING VC
+"selectyourlanguageKEYq" = "Select your Language";
+"checkoutkey" = "Checkout";
+"wlWishlistKEY" = "Redemption Planner";
+"wlProductNameKEY" = "Product Name";
+"wlCategoryKEY" = "Category";
+"wlPointsKEY" = "Points";
+"wlRedeemKEY" = "REDEEM";
+"wlDetailsKEY" = "DETAILS";
+"wlExpectedRedemptionDateKEY" = "Expected redemption date";
+//WISHLIST DETAILS
+"wdPlannerDetailsKEY" = "Redemption Planner details";
+"wdNeedKEY" = "Need";
+"wdPointstoRedeemTheProductKEY" = "Points to redeem the product";
+"wdRemoveKEY" = "REMOVE";
+"wdRedeemKEY" = "REDEEM";
+"wdWishlistSummaryKEY" = "Redemption Planner Summary";
+//CODESTATUS VC
+"csCodeStatusKEY" = "Code Status";
+"csSyncKEY" = "SYNC";
+"csClaerKEY" = "CLEAR";
+"csCodeKEY" = "Code";
+"csDateKEY" = "Date";
+//DREAM GIFT VC
+"mdgMyDreamGiftKEY" = "My Dream Gift";
+"mdgRedeemKEY" = "REDEEM";
+"mdgDetailsKEY" = "Details";
+"mdgDetailsbuttonKEY" = "DETAILS";
+"mdgRemoveKEY" = "REMOVE";
+"mdgNeedKEY" = "Need";
+"mdgPoitsToRedeemTheProductKEY" = "Points to redeem the product";
+"mdgAveragepointsToBeEarnedPerMonthKEY" = "Average points to be earned per month";
+"DesiredDateKEY" = "Desired date";
+//FOLLOWER VC
+"fFollowerKEY" = "Follower";
+"fMembershipIDKEY" = "membershipID";
+"fNameKEY" = "Name";
+"fMobileKEY" = "Mobile";
+"fSendSMSKEY" = "Send SMS";
+"fAddFollowerKEY" = "Add Follower";
+"fEnterMobileNumberKEY" = "Enter Mobile Number";
+"fEnterMobileNumberHereKEY" = "Enter mobile number here";
+"fSendOTPKEY" = "SEND OTP";
+"fotpKEY" = "OTP";
+//EWARRENTY VC
+"ewEWarrentyCertificateKEY" = "E-Warranty Certificate";
+"ewFromDatemKEY" = "From Date";
+"enterFromDate" = "Enter From Date";
+"enterToDate" = "Enter To Date";
+"endDateKEY" = "From Date shouldn't be greater than To Date";
+"ewToDateKEY" = "To Date";
+"ewFilterKEY" = "FILTER";
+"ewSelectStateKEY" = "Select State";
+"ewCancelKEY" = "CANCEL";
+"ewConfirmKEY" = "CONFIRM";
+"ewDownloadPDFandShareKEY" = "Download and Share E-warranty PDF";
+"ewCustomerNameKEY" = "Customer Name";
+"ewMobileNumberKEY" = "Mobile Number";
+"ewEmailIDKEY" = "Email ID";
+"ewAddressKEY" = "Address";
+"ewSelectCityKEY" = "City";
+"ewSelectAreaKEY" = "Area";
+"ewGenerateEWarrentyKEY" = "Generate E-Warranty Certificate";
+"ewDownloadandShareEwarrentyPDFKEY" = "Download and Share E-warranty PDF";
+"ewEwarrentyCertificateKEY" = "EWarranty Certificate";
+"ewCodeBankingDateKEY" = "Code banking date";
+"ewBrandKEY" = "Brand";
+"ewProductKEY" = "Product";
+"ewTotalQRCodesKEY" = "Total QR Code";
+"ewAreaKEY" = "Area";
+"ewEnterQuantityKEY" = "Enter quantity*";
+"ewNextKEY" = "Next";
+//MY REDEMPTIONS DETAILS
+"mrdMyCatalogueredemptionsKEY" = "My catalogue redemptions";
+"mrdCategoryKEY" = "Category";
+"mrdPointsperproductKEY" = "points/product";
+"mrdtotalPointsKEY" = "total points";
+"mrdDescriptionsKEY" = "Descriptions";
+"mrdOtherInformationsKEY" = "Other Informations";
+"mrdProductCodeKEY" = "product code";
+"mrdDelivaryTypeKEY" = "DelivaryType";
+//ACCESS CAMERA VC
+"acAccessCameraKEY" = "Access Camera";
+"acEnableCameraKEY" = "Enable Camera";
+"acQRCodeScannerRequiresKEY" = "QR Code scanner requires camera permission to start scanning CenturyProClub Code.";
+//CODE STATUS  //CodeStatusViewController
+"NoDataFoundKEY" = "No data found";
+
+//UPLOAD CODE // UploadCodeVC
+"UploadKEY" = "UPLOAD";
+"RaiseTicketKEY" = "RAISE TICKET";
+"EnterYourCodeKEY" = "Enter your code";
+"OKKey" = "Ok";
+"SureWantToRemoveKEY" = "Are you sure you want to remove";
+"YesKey" = "Yes";
+"NoKey" = "No";
+"SubmitCodeKey" = "Submit your code";
+"Enter12DigitsKey" = "Please enter 12 digit code";
+
+//Code sync status // CodeSyncingStatusVC  // CodeSummaryFilterVC
+ "CodeSYNCKey" = "Code sync status";
+"CodeSummaryKey" = "Code summary";
+"ToDateKey" = "To date";
+"FromDateKey" = "From date";
+"FilterKey" = "Filter";
+"DateOrStausKey" = "Please select date or status";
+"SelectToDateKey" = "Please select to date";
+ "ToDateGreaterFromDateKey" = "To date should be greater than from date";
+"CountKey" = "Count";
+"SelectDateKey" = "Select date";
+ "CancelKey" = "Cancel";
+"ConfirmKey" = "Confirm";
+
+//E-warranty certhificate
+"EWarrantyKey" = "E-warranty Certicates";
+"ResetKey" = "Reset";
+"NoEWarrantyKey" = "No E-Warranty result found";
+"DateForCodeDisplayeKey" = "Select from date and To date for the codes to displayed";
+
+//My dream gift
+"CreatedDateKey" = "Created date";
+"okKey" = "ok";
+"NotAllowedRedeemKey" = "You are not allowled to redeem .Please contact your administrator";
+"NoDreamGiftKey" = "No dream gift found";
+
+// Add follower
+"AlertKey" = "Alert";
+"InvalidPasswordKey" = "Invalid password";
+"FollowerCategoryKey" = "Select follower category";
+"NoFollowersFoundKey" = "No Followers found at this moment click on '+' to add new follower";
+
+//Redemption catelogue
+"addedToCartKey" = "added to cart";
+ "EnterAllFieldsKey" = "Enter all fields";
+"AlreadyPlannerAddedKey"  = "Product is already added to your Redemption planner";
+"PlannerAddedKey" = "Product has been added to your Redemption planner";
+"NotAllowedToRedeemKey" = "You are not allowed to redeem.Please contact your administrator.";
+
+//My earning
+ "SelectDateRangeKey" = "Select date range";
+"QRCodeKey" = "QR code";
+
+//My redemption
+"NoSearchResultKey" = "No search result found!";
+"GiftTypeKey" = "Gift type";
+
+//Scan code
+"RaiseTicketKey" = "Raise ticket";
+
+//Lodge query
+"WriteQueryHereKey" = "Write query here";
+"OpenNewTicketKey" = "Open new Ticket";
+
+//Forgot password
+"EnterValidNumberKey" = "Enter valid mobile number";
+"MemberExistKey" = "Member does not exist";
+
+//Help line call
+"ExecutiveCallKey" = "Centuryproclub executive will call you as soon as we receive your missed call !";
+"MissedCallOnKey" = "Give a missed call on";
+
+//Registration
+"OTPDoesNotMatchKey" = "OTP entered does not match";
+"ResendOTPKey" = "Resend OTP";
+
+//Notifications
+"NotificationsKey" = "Notifications";
+
+//Dashboard
+"AccessDeniedKey" = "You currently do not have access to this menu.Kindly contact the administrator or contact center at +91-8955177400.";
+
+"enterScratchCode" = "Please enter scratch code.";
+"alreadySubmittedKey" = "This code is already submitted.";
+"PlzSelectFromDateKey" = "Please Select From Date";
+"PlzEnterOTPKey" = "Please Enter OTP!";
+"view" = "View";
+
+
+"QRCodeSubmitted" = "QR code is Submitted Successfully. Check the status of the code in status report.";
+"CodeScannedSuccess" = "Code scanned successfully";
+"myPan" = "My PAN";
+"myProfile" = "My Profile";
+"myPanDetails" = "My PAN Details";
+"enterPanNum" = "Enter your PAN Number";
+"view" = "View";
+"ptsBalance" = "Point Balance";
+"tdsPts" = "TDS Points";
+"TDS" = "TDS";
+"plzEnterPAN" = "Please enter your PAN number";
+"validPanNum" = "Enter valid PAN Number!";
+"douWantSubmit" = "Do you want to submit without PAN attachment?";
+"PanSaveFailed" = "Pan Card details save failed!";
+"panDetailsSaved" = "Pan Card details saved successfully!";
+"panDetailsSubmitted" = "Your PAN details have been submitted for verification!";
+"panVerified" = "Your PAN details have been verified!";
+"techincalErr" = "Technical error!";
+
+"PanVerification" = "Pan Verification";
+"kindlyUploadDetails" = "Kindly upload your PAN details";
+"PANnumbeer" = "PAN Number";
+"Validate" = "Validate";
+"DOB" = "Date Of Birth : ";
+"PANAttachment" = "PAN Attachment";
+"customerPANDetails" = "Customer PAN Details have been submitted for verification !";
+"Save" = "Save";
+"personName" = "Person Name :";
+"customerPANVerified" = "Customer PAN Details has been verified!";
+"verify" = "Verify";
+"savingPancarFailed" = "Saving Pancard failed. try after sometime";

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>232342046260-n8g7nu5rgnm77ondbni4947vl6ffl4tm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.232342046260-n8g7nu5rgnm77ondbni4947vl6ffl4tm</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBR2B2vfHRhyvkoV3-_CN-BtyQaKpbL67E</string>
+	<key>GCM_SENDER_ID</key>
+	<string>232342046260</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.loyaltyWorks.SharonBhandhan</string>
+	<key>PROJECT_ID</key>
+	<string>sharon-2f8a5</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sharon-2f8a5.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:232342046260:ios:1ccbd5d032858f4994ac61</string>
+</dict>
+</plist>

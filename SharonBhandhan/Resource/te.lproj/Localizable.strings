@@ -1,0 +1,412 @@
+/*
+  Localizable.strings
+  
+
+  Created by ADMIN on 02/05/2022.
+  
+*/
+
+//INITIAL VIEW
+"ivWanttoregisterKEY" = "నమోదు చేయాలనుకుంటున్నారా?";
+"ivAlreadyAMemberKEY" = "ఇప్పటికే సభ్యులా?";
+//ENTER MOBILE NUMBER VC
+"emnEnterMobileNumberToGetStartedKEY" = "ప్రారంభించడానికి మీ మొబైల్ నెంబర్ను నమోదు చేయండి!";
+"emnSendOTPKEY" = "SEND OTP/OTP పంపండి";
+//FORGOTPASSWORD VC
+"fpForgotPasswordKEY" = "Forgot password?/పాస్వర్డ్ మర్చిపోయాను";
+"fpEnterYourRegisterdMobileNumberKEY" = "మీ నమోదిత మొబైల్ నంబర్‌ను నమోదు చేయండి";
+"fpSubmitKEY" = "Submit/సమర్పించండి";
+//LOGIN VC
+"lForgotPasswordKEY" = "Forgot password?/పాస్వర్డ్ మర్చిపోయాను";
+"lTermsAndConditionsKEY" = "నిబంధనలు & షరతులు";
+"lDeclineKEY" = "క్షీణత";
+"lAcceptKEY" = "అంగీకరించండి";
+"lLoginKEY" = "Login / లాగిన్";
+"lpasswordKEY" = "పాస్వర్డ్ టైప్ చేయండి";
+"lmobilenumberKEY" = "మొబైల్ నంబర్‌ను నమోదు చేయండి";
+//VERIFY MOBILE NUMBER VC
+"vmnResendOTPKEY" = "Resend OTP/ओटीपी दोबारा भेजें";
+"vmnSubmitKEY" = "Submit/సమర్పించండి";
+"vmnSecondsRemainingKEY" = "మిగిలిన సెకన్లు";
+//MY PROFILE VC
+"mpMyProfileKEY" = "నా ప్రొఫైల్";
+"mpGeneralInformationKEY" = "సాధారణ సమాచారం";
+"mpNameKEY" = "పేరు";
+"mpMobileNumberKEY" = "మొబైల్ నంబరు";
+"mpEmailIDKEY" = "ఇ-మెయిల్";
+"mpAddressKEY" = "చిరునామా";
+"mpCountryKEY" = "దేశం";
+"mpStateKEY" = "రాష్ట్రం";
+"mpCityKEY" = "నగరం";
+"mpDistrictKEY" = "జిల్లా";
+"mpPinKEY" = "పిన్";
+"mpPreferredLanguageKEY" = "ఇష్టపడే భాష";
+"mpNativeStateKEY" = "స్థానిక రాష్ట్రం";
+//REGISTRATION VC
+"rMobileKEY" = "Mobile/మొబైల్";
+"rNameKEY" = "Name/పేరు";
+"rEmailKEY" = "Email/ఇ-మెయిల్";
+"rAddressKEY" = "Address/చిరునామా";
+"rStateKEY" = "State/రాష్ట్రం";
+"rCityKEY" = "City/నగరం";
+"rPinKEY" = "Pincode/పిన్ కోడ్";
+"rDistrictKEY" = "District/జిల్లా";
+"rPreferredLanguageKEY" = "Preferred Language/ఇష్టపడే భాష";
+"rNativeStateKEY" = "Native State/స్థానిక రాష్ట్రం";
+"rOKKEY" = "OK";
+"rSelectStateKEY" = "రాష్ట్రం ఎంచుకోండి";
+"rSelectCityKEY" = "నగరాన్ని ఎంచుకోండి";
+"rSelectPreferredLanguageKEY" = "ఇష్టపడే భాషను ఎంచుకోండి";
+"rSelectNativeStateKEY" = "స్థానిక రాష్ట్రాన్ని ఎంచుకోండి";
+//HOMEPAGE VC
+"hpWelcomeKEY" = "స్వాగతం";
+"hpQRCodeisSubmittedSuccessfullyKEY" = "QR కోడ్ విజయవంతంగా సమర్పించబడింది.";
+"hpChecktheStatusOfCodeInTheReportKEY" = "స్థితి నివేదికలో కోడ్ యొక్క స్థితిని తనిఖీ చేయండి";
+"hpStatusKEY" = "స్థితి";
+"hpScanAgainKEY" = "మళ్ళీ స్కాన్\n చేయండి";
+"hpRaiseTicketKEY" = " Raise\nticket";
+"hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY" = "The app is unable to access the services as the system is down for maintenance!.Please try after sometime.";
+"hpMembershipIDKEY" = "సభ్యత్వపు ఐడి";
+"hpPointsKEY" = "పాయింట్లు";
+"panDetails" = "పాన్ వివరాలు";
+"hpTierKEY" = "టైర్";
+"hpScanCodeKEY" = "స్కాన్ క్యూఆర్ కోడ్ ";
+"hpUploadCodeKEY" = "కోడ్ను అప్లోడ్ చేయండి";
+"hpRedemptionCatalogueKEY" = "రెడెంప్షన్ కేటలాగ్";
+"hpHelpLineCallKEY" = "హెల్ప్ లైన్ కాల్";
+"hpMyRedemptionsKEY" = "నా రిడంప్షన్స్";
+"hpLodgeQueryKEY" = "లాడ్జ్ ప్రశ్న";
+//SIDEMENU VC
+"smMemberSinceKEY" = "అప్పటి నుంచి సభ్యుడు";
+"smPointsKEY" = "పాయింట్లు";
+"smMembershipIDKEY" = "సభ్యత్వపు ఐడి";
+"smAnyQueriesGiveAMissedCallOnKEY" = "(ఏదైనా ప్రశ్నలు ఉంటే దానిపై మిస్డ్ కాల్ ఇవ్వండి 8955177400)";
+//REDEMPTION CATALOGUE VC
+"rcRedemptionCatalogueKEY" = "రెడెంప్షన్ కేటలాగ్";
+"rcCategoryKEY" = "రకం";
+"rcPointsKEY" = "పాయింట్లు";
+"rcAddToPlannerKEY" = "కోరిక జాబితాకి జోడించండి";
+"rcAddToCartKEY" = "కార్ట్ కు జోడించండి";
+"rcAddedToCartKEY" = "కార్ట్‌కి జోడించబడింది";
+"rcAddedToPlannerKEY" = "కోరికల జాబితాకు జోడించబడింది";
+//UPLOAD CODE
+"ucEnterYourCodeKEY" = "మీ కోడ్ను నమోదు చేయండి";
+"ucCloseKEY" = "మూసేయండి";
+"ucQRCodeIsSubmittedSuccessfullyKEY" = "QR కోడ్ విజయవంతంగా సమర్పించబడింది.";
+"ucCheckTheStatusOfTheCodeInTheStatusReportKEY" = "స్థితి నివేదికలో కోడ్ యొక్క స్థితిని తనిఖీ చేయండి";
+"ucStatusKEY" = "స్థితి";
+"ucScanAgainKEY" = "మళ్ళీ స్కాన్\n చేయండి";
+"ucRaiseTicketKEY" = " Raise\nticket";
+"ucSubmitKEY" = "సమర్పించండి";
+"ucUpLoadCodeKEY" = "స్కాన్ క్యూఆర్ కోడ్";
+//MY REDEMPTIONVC
+"mrMyCatalogueRedemptionsKEY" = "నా రిడంప్షన్స్";
+"mrFromDateKEY" = "తేదీ నుంచి";
+"mrToDateKEY" = "తేదీ వరకు";
+"mrFilterKEY" = "వడపోత";
+"mrSelectDateKEY" = "తేదీని ఎంచుకోండి";
+"mrNoSearchResultFoundKEY" = "శోధన ఫలితం కనుగొనబడలేదు";
+"mrCancelKEY" = "రద్దు చేయండి";
+"mrConfirmKEY" = "కన్ఫర్మ్";
+//OFFERS AND MARKETING VC
+"checkoutkey" = "చెక్అవుట్";
+"selectyourlanguageKEYq" = "మీ భాషను ఎంచుకోండి";
+
+"opOffersAndMarketingKEY" = "ఆఫర్లు మరియు ప్రమోషన్";
+"opNoPromotionresultFoundKEY" = "ప్రమోషన్ ఫలితం కనుగొనబడలేదు";
+"opViewKEY" = "చూడండి";
+"opReserveKEY" = "రిజర్వ్";
+"opClaimKEY" = "క్లెయిమ్";
+"opCommentHereKEY" = "వ్యాఖ్యానం";
+//TERMS AND CONDITIONS VC
+"tcTermsAndConditionsKEY" = "నిబంధనలు & షరతులు";
+//HELPLINE CALL VC
+"hcHelplineCallKEY" = "హెల్ప్ లైన్ కాల్";
+"hcForAnyQuestionandQueriesKEY" = "సెంచురీ ప్రోక్లబ్ లాయల్టీ ప్రోగ్రామ్ లో ఏదైనా ప్రశ్న మరియు ప్రశ్నలకు దయచేసి కింది నెంబర్కు మిస్ కాల్ ఇవ్వండి";
+// UNIQUE FEATURE VC
+"ufUniqueFeaturesKEY" = "ఏకైక లక్షణాలు";
+//MY EARNING VC
+"meMyEarning" = "నా సంపాదన";
+"meDateRange" = "దయచేసి తేదీ పరిధిని ఎంచుకోండి";
+"enterFromDate" = "తేదీ నుండి నమోదు చేయండి";
+"enterToDate" = "తేదీకి నమోదు చేయండి";
+"endDateKEY" = "తేదీ నుండి తేదీ కంటే ఎక్కువ ఉండకూడదు";
+"meFromDateKEY" = "తేదీ నుంచి";
+"meToDateKEY" = "తేదీ వరకు";
+"meFilterKEY" = "వడపోత";
+"meSelectDateKEY" = "తేదీని ఎంచుకోండి";
+"meNoSearchResultFoundKEY" = "No Search Result Found";
+"meCancelKEY" = "రద్దు చేయండి";
+"meConfirmKEY" = "కన్ఫర్మ్";
+"meTransactionDateKEY" = "లావాదేవీ తేదీ :";
+"meQRCodeKEY" = "QR కోడ్ :";
+"meEarningQuantityKEY" = "సంపాదించే పరిమాణం :";
+//LODGE QUERY VC
+"lqPleaseSubmitYourQueryUsingThisFormKEY" = "దయచేసి ఈ ఫారమ్ను ఉపయోగించి మీ ప్రశ్నను సమర్పించండి";
+"lqSelectYourTopic" = "మీ అంశాన్ని ఎంచుకోండి";
+"lqQuerySummary" = "ప్రశ్న సారాంశం";
+"lqQueryDetails" = "ప్రశ్న వివరాలు";
+"lqBrowseImageKEY" = "చిత్రాన్ని బ్రౌజ్ చేయండి";
+"lqSubmitKEY" = "సమర్పించండి";
+"lqCenturyProclubExecutiveWillCallYouAsSoonasWeReceiveYourQueryKEY" = "మేము మీ ప్రశ్నను స్వీకరించిన వెంటనే సెంచురీ ప్రోక్లబ్ ఎగ్జిక్యూటివ్ మిమ్మల్ని పిలుస్తారు. ఏదైనా ప్రశ్నలు 8955177400 లో మిస్డ్ కాల్ ఇస్తాయి.";
+"lqOpenNewTicketKEY" = "క్రొత్త టికెట్ తెరవండి";
+//REDEMPTIONCATALOGUE DETAILS VC
+"rcdRedemptionCatalogueKEY" = "రెడెంప్షన్ కేటలాగ్";
+"rcdCategoryKEY" = "రకం";
+"rcdPointsperproductKEY" = "పాయింట్లు / ఉత్పత్తి";
+"rcdTotalPointsKEY" = "మొత్తం పాయింట్లు";
+"rcdAddTpPlannerKEY" = "ADD TO WISHLIST";
+"rcdAddedtoPlannerKEY" = "ADDED TO WISHLIST";
+"rcdAddtocartKEY" = "కార్ట్ కు జోడించండి";
+"rcdAddedtoCartKEY" = "ADDED TO CART";
+"rcdDescriptionsKEY" = "వివరణలు";
+"rcdOtherInformationsKEY" = "ఇతర సమాచారాలు";
+"rcdProductCodeKEY" = "ఉత్పత్తి కోడ్";
+"rcdDelivaryTypeKEY" = "డెలివరీ రకం";
+"rcdT&C" = "";
+//MY BENEFITS VC
+"mbMyBenefitsKEY" = "నా ప్రయోజనాలు";
+//FIREBASESCANNER VC
+"fcScanQRCodeKEY" = "స్కాన్ క్యూఆర్ కోడ్ ";
+"fcPlaceAQRCodeInsideTheViewFinderRectangleToScanITKEY" = "వ్యూ ఫైండర్ లోపల క్యూఆర్ కోడ్ ఉంచండి";
+//CHECKOUTVC
+"coSuccess!!KEY" = "విజయం !!";
+"coYourRedemptionItemWillBeDeliveredToYouAtEarliestKEY" = "మీరు రీడీమ్ చేసుకున్న వస్తూని త్వరలోనే పంపబడుతుంది";
+"coAnyQueriesRegardingTheRedemptionServicesKEY" = "రీడింషన్ సేవలకు సంబంధించి ఏదైనా ప్రశ్నలు. 8955177400 కి మిస్డ్ కాల్ ఇవ్వండి";
+"coEditAddressKEY" = "చిరునామాను సవరించండి";
+"coDefaultAddressKEY" = "డిఫాల్ట్ చిరునామా";
+"coProceedKEY" = "కొనసాగండి";
+"coOTPKEY" = "ఓటిపి";
+"coRedendOTPKEY" = "OTP ను మళ్ళీ పంపు";
+"coSubmitKEY" = "సమర్పించండి";
+"coSecondsRemainingKEY" = "మిగిలిన సెకన్లు";
+//EDITADDRESS VC
+"eaNameKEY" = "ಹೆಸರು";
+"eaMobileKEY" = "మొబైల్";
+"eaEmailKEY" = "ఇ-మెయిల్";
+"eaAddressKEY" = "చిరునామా";
+"eaStateKEY" = "రాష్ట్రం";
+"eaCityKEY" = "నగరం";
+"eaPinKEY" = "పిన్";
+"eaDistrictKEY" = "జిల్లా";
+"eaSubmitKEY" = "సమర్పించండి";
+"eaEditAddressKEY" = "చిరునామాను సవరించండి";
+"eaSelectStateKEY" = "రాష్ట్రం ఎంచుకోండి";
+"eaSelectCityKEY" = "నగరాన్ని ఎంచుకోండి";
+//MY CART VC
+"mcMyCartKEY" = "నా కార్ట్";
+"mcPointsPerPorductKEY" = "పాయింట్లు / ఉత్పత్తి";
+"mcTotalPointsKEY" = "మొత్తం పాయింట్లు";
+"mcCheckOutKEY" = "చెక్అవుట్";
+//CUSTOMER QUERY LISTING VC
+"cqlLodgeQueryKEY" = "లాడ్జ్ ప్రశ్న";
+"cqlResolvedKEY" = "పరిష్కరించిన";
+"cqlPendingKEY" = "పెండింగ్";
+"cqlREopenKEY" = "మళ్ళీ తెరువు";
+"cqlClosedKEY" = "మూసేయండి";
+"cqlSelectTopicToLodgeQueryKEY" = "ప్రశ్నను సమర్పించడానికి అంశాన్ని ఎంచుకోండి";
+//WISHLIST LISTING VC
+"wlWishlistKEY" = "రెడెంప్షన్ప్లానర్";
+"wlProductNameKEY" = "వస్తువు పేరు";
+"wlCategoryKEY" = "రకం";
+"wlPointsKEY" = "పాయింట్లు";
+"wlRedeemKEY" = "రీడీమ్";
+"wlDetailsKEY" = "వివరాలు";
+"wlExpectedRedemptionDateKEY" = "రీడీమ్ చేసుకోవాలనుకున్న తేదీ";
+//WISHLIST DETAILS
+"wdPlannerDetailsKEY" = "ప్లానర్ వివరాలు";
+"wdNeedKEY" = "Need";
+"wdPointstoRedeemTheProductKEY" = "వస్తువుని రీడీమ్ చేయడానికి పాయింట్లు";
+"wdRemoveKEY" = "తొలగిస్తాయి";
+"wdRedeemKEY" = "రీడీమ్";
+"wdWishlistSummaryKEY" = "ప్లానర్సారాంశం";
+//CODESTATUS VC
+"csCodeStatusKEY" = "కోడ్ స్థితి";
+"csSyncKEY" = "సమకాలీకరణ";
+"csClaerKEY" = "క్లియర్";
+"csCodeKEY" = "Code";
+"csDateKEY" = "తేదీ";
+//DREAM GIFT VC
+"mdgMyDreamGiftKEY" = "నా డ్రీం గిఫ్ట్";
+"mdgRedeemKEY" = "రీడీమ్";
+"mdgDetailsKEY" = "వివరాలు";
+"mdgDetailsbuttonKEY" = "వివరాలు";
+"mdgRemoveKEY" = "తొలగిస్తాయి";
+"mdgNeedKEY" = "Need";
+"mdgPoitsToRedeemTheProductKEY" = "వస్తువును రీడీమ్ చేయడానికి పాయింట్లు";
+"mdgAveragepointsToBeEarnedPerMonthKEY" = "నెలకు సగటు పాయింట్లు సంపాదించాలి";
+"DesiredDateKEY" = "కోరుకున్న తేదీ";
+//FOLLOWER VC
+"fFollowerKEY" = "అనుచరుడు";
+"fMembershipIDKEY" = "సభ్యత్వపు ఐడి";
+"fNameKEY" = "పేరు";
+"fMobileKEY" = "మొబైల్";
+"fSendSMSKEY" = "ఎస్ ఎం ఎస్ పంపండి";
+"fAddFollowerKEY" = "అనుచరుడిని జోడించండి";
+"fEnterMobileNumberKEY" = "మొబైల్ నెంబర్ను నమోదు చేయండి";
+"fEnterMobileNumberHereKEY" = "మొబైల్ నెంబర్ను నమోదు చేయండి";
+"fSendOTPKEY" = "SEND ఓటిపి";
+"fotpKEY" = "ఓటిపి";
+//EWARRENTY VC
+"ewEWarrentyCertificateKEY" = "ఈ-వారంటీ సర్టిఫికేట్";
+"ewFromDatemKEY" = "తేదీ నుంచి";
+"ewToDateKEY" = "తేదీ వరకు";
+"ewFilterKEY" = "వడపోత";
+"ewSelectStateKEY" = "Select State";
+"ewCancelKEY" = "రద్దు చేయండి";
+"ewConfirmKEY" = "కన్ఫర్మ్";
+"ewDownloadPDFandShareKEY" = "ఈ-వారంటీ పిడిఎఫ్ ని డౌన్‌లోడ్ చేసి షేర్ చేయండి";
+"ewCustomerNameKEY" = "వినియోగదారుని పేరు";
+"ewMobileNumberKEY" = "మొబైల్ సంఖ్య";
+"ewEmailIDKEY" = "ఇ-మెయిల్";
+"ewAddressKEY" = "చిరునామా";
+"ewSelectCityKEY" = "నగరాన్ని ఎంచుకోండి";
+"ewSelectAreaKEY" = "ప్రాంతాన్ని ఎంచుకోండి";
+"ewGenerateEWarrentyKEY" = "ఈ-వారంటీ సర్టిఫికెట్‌ను రూపొందించండి";
+"ewDownloadandShareEwarrentyPDFKEY" = "Download and Share E-warranty PDF";
+"ewEwarrentyCertificateKEY" = "ఈ వారంటీ సర్టిఫికేట్";
+"ewCodeBankingDateKEY" = "కోడ్ బ్యాంకింగ్ తేదీ";
+"ewBrandKEY" = "బ్రాండ్";
+"ewProductKEY" = "ఉత్పత్తి";
+"ewTotalQRCodesKEY" = "మొత్తం క్యూఆర్ కోడ్";
+"ewAreaKEY" = "ప్రాంతం";
+"ewEnterQuantityKEY" = "పరిమాణాన్ని నమోదు చేయండి";
+"ewNextKEY" = "తరువాత";
+//MY REDEMPTIONS DETAILS
+"mrdMyCatalogueredemptionsKEY" = "నా రిడంప్షన్స్";
+"mrdCategoryKEY" = "రకం";
+"mrdPointsperproductKEY" = "పాయింట్లు / వస్తువు";
+"mrdtotalPointsKEY" = "మొత్తం పాయింట్లు";
+"mrdDescriptionsKEY" = "వివరణలు";
+"mrdOtherInformationsKEY" = "ఇతర సమాచారాలు";
+"mrdProductCodeKEY" = "ఉత్పత్తి కోడ్";
+"mrdDelivaryTypeKEY" = "డెలివరీ రకం";
+//ACCESS CAMERA VC
+"acAccessCameraKEY" = "కెమెరాను యాక్సెస్ చేయండి";
+"acEnableCameraKEY" = "Enable Camera";
+"acQRCodeScannerRequiresKEY" = "QR Code scanner requires camera permission to start scanning CenturyProClub Code.";
+
+//CODE STATUS
+"NoDataFoundKEY" = "డేటా కనుగొనబడలేదు";
+
+//UPLOAD CODE
+"UploadKEY" = "అప్";
+"RaiseTicketKEY" = "టికెట్ పెంచండి";
+"EnterYourCodeKEY" = "మీ కోడ్";
+"OKKey" = "అలాగే";
+"SureWantToRemoveKEY" = "మీరు ఖచ్చితంగా తీసివేయాలనుకుంటున్నారా";
+"YesKey" = "అవును";
+"NoKey" = "లేదు";
+"SubmitCodeKey" = "మీ కోడ్ని సమర్పించండి";
+"Enter12DigitsKey" = "దయచేసి 12 అంకెల కోడ్";
+
+//Code sync status
+ "CodeSYNCKey" = "కోడ్ సమకాలీకరణ స్థితి";
+"CodeSummaryKey" = "కోడ్ సారాంశం";
+"ToDateKey" = "తేదీ వరకు";
+"FromDateKey" = "తేదీ నుండి";
+"FilterKey" = "ఫిల్టర్ చేయండి";
+"DateOrStausKey" = "దయచేసి తేదీ లేదా స్థితిని ఎంచుకోండి";
+"SelectToDateKey" = "దయచేసి తేదీని ఎంచుకోండి";
+ "ToDateGreaterFromDateKey" = "తేదీ తేదీ కంటే ఎక్కువ ఉండాలి";
+"CountKey" = "కౌంట్";
+"SelectDateKey" = "తేదీని ఎంచుకోండి";
+ "CancelKey" = "రద్దు చేయండి";
+"ConfirmKey" = "నిర్ధారించండి";
+
+//E-warranty certhificate
+"EWarrantyKey" = "ఇ-వారంటీ సర్టిఫికేట్లు";
+"ResetKey" = "రీసెట్ చేయండి";
+"NoEWarrantyKey" = "E- వారంటీ ఫలితం కనుగొనబడలేదు";
+"DateForCodeDisplayeKey" = "కోడ్లు ప్రదర్శించడానికి తేదీ మరియు తేదీ నుండి ఎంచుకోండి";
+
+//My dream gift
+"CreatedDateKey" = "సృష్టించిన తేదీ";
+"okKey" = "అలాగే";
+"NotAllowedRedeemKey" = "మీరు రీడీమ్ చేయడానికి అనుమతించబడలేదు. దయచేసి మీ నిర్వాహకుడిని సంప్రదించండి";
+"NoDreamGiftKey" = "కలల బహుమతి దొరకలేదు";
+
+// Add follower
+"AlertKey" = "హెచ్చరిక";
+"InvalidPasswordKey" = "చెల్లని పాస్వర్డ్";
+"FollowerCategoryKey" = "అనుచరుల వర్గాన్ని ఎంచుకోండి";
+"NoFollowersFoundKey" = "ఈ సమయంలో అనుచరులు ఎవరూ కనిపించలేదు, కొత్త అనుచరుడిని జోడించడానికి '+' పై క్లిక్ చేయండి";
+
+//Redemption catelogue
+"addedToCartKey" = "బండికి జోడించబడింది";
+ "EnterAllFieldsKey" = "అన్ని ఫీల్డ్లను నమోదు చేయండి";
+"AlreadyPlannerAddedKey"  = "మీ విమోచన ప్లానర్కు ఉత్పత్తి ఇప్పటికే జోడించబడింది";
+"PlannerAddedKey" = "ఉత్పత్తి మీ విమోచన ప్లానర్కు జోడించబడింది";
+"NotAllowedToRedeemKey" = "మీరు రీడీమ్ చేయడానికి అనుమతించబడలేదు. దయచేసి మీ నిర్వాహకుడిని సంప్రదించండి";
+
+//My earning
+ "SelectDateRangeKey" = "తేదీ పరిధిని ఎంచుకోండి";
+"QRCodeKey" = "QR కోడ్";
+
+//My redemption
+"NoSearchResultKey" = "ఏ శోధన ఫలితం కనుగొనబడింది!";
+"GiftTypeKey" = "గిఫ్ట్ రకం";
+
+//Scan code
+"RaiseTicketKey" = "రైజ్ టికెట్";
+
+//Lodge query
+"WriteQueryHereKey" = "ప్రశ్నను ఇక్కడ వ్రాయండి";
+"OpenNewTicketKey" = "కొత్త టికెట్ తెరవండి";
+
+//Forgot password
+"EnterValidNumberKey" = "చెల్లే మొబైల్ నెంబర్ ను ఎంటర్ చేయండి";
+"MemberExistKey" = "సభ్యుడు ఉనికిలో లేదు";
+
+//Help line call
+"ExecutiveCallKey" = "మీ మిస్డ్ కాల్ మాకు అందిన వెంటనే సెంచరీప్రోక్లబ్ ఎగ్జిక్యూటివ్ మీకు కాల్ చేస్తారు!";
+"MissedCallOnKey" = "మిస్డ్ కాల్ ఇవ్వండి";
+
+//Registration
+"OTPDoesNotMatchKey" = "OTP ఎంటర్ సరిపోలడం లేదు";
+"ResendOTPKey" = "OTP ను మళ్ళీ పంపు";
+
+//Notifications
+"NotificationsKey" = "నోటిఫికేషన్లు";
+
+//Dashboard
+"AccessDeniedKey" = "మీకు ప్రస్తుతం ఈ మెనూకి ప్రాప్యత లేదు. దయచేసి నిర్వాహకుడిని లేదా +91-8955177400 వద్ద సంప్రదింపు కేంద్రాన్ని సంప్రదించండి.";
+
+"enterScratchCode" = "దయచేసి స్క్రాచ్ కోడ్ని నమోదు చేయండి.";
+"alreadySubmittedKey" = "ఈ కోడ్ ఇప్పటికే సమర్పించబడింది.";
+"PlzSelectFromDateKey" = "దయచేసి తేదీ నుండి ఎంచుకోండి";
+"PlzEnterOTPKey" = "దయచేసి OTP నమోదు చేయండి!";
+"view" = "వీక్షణ";
+
+"QRCodeSubmitted" = "QR కోడ్ విజయవంతంగా సమర్పించబడింది. స్థితి నివేదికలో కోడ్ స్థితిని తనిఖీ చేయండి.";
+"CodeScannedSuccess" = "కోడ్ విజయవంతంగా స్కాన్ చేయబడింది";
+"myPan" = "నా పాన్";
+"myProfile" = "నా జీవన వివరణ";
+"myPanDetails" = "నా పాన్ వివరాలు";
+"enterPanNum" = "మీ పాన్ నంబర్‌ను నమోదు చేయండి";
+"view" = "చూడండి";
+"ptsBalance" = "పాయింట్ బ్యాలెన్స్";
+"tdsPts" = "TDS పాయింట్లు";
+"TDS" = "TDS";
+"plzEnterPAN" = "దయచేసి మీ పాన్ నంబర్‌ను నమోదు చేయండి";
+"validPanNum" = "చెల్లుబాటు అయ్యే  పాన్ నంబర్‌ని నమోదు చేయండి!";
+"douWantSubmit" = "మీరు పాన్ అటాచ్‌మెంట్ లేకుండా సమర్పించాలనుకుంటున్నారా?";
+"PanSaveFailed" = "పాన్ కార్డ్ వివరాలను సేవ్ చేయడం విఫలమైంది!";
+"panDetailsSaved" = "పాన్ కార్డ్ వివరాలు విజయవంతంగా సేవ్ చేయబడ్డాయి!";
+"panDetailsSubmitted" = "మీ పాన్  వివరాలు ధృవీకరణ కోసం సమర్పించబడ్డాయి!";
+"panVerified" = "మీ పాన్  వివరాలు ధృవీకరించబడ్డాయి!";
+"techincalErr" = "సాంకేతిక లోపం!";
+
+"PanVerification" = "పాన్ ధృవీకరణ";
+"kindlyUploadDetails" = "దయచేసి మీ పాన్ వివరాలను అప్‌లోడ్ చేయండి";
+"PANnumbeer" = "పాన్ నంబర్";
+"Validate" = "ధృవీకరించండి";
+"DOB" = "పుట్టిన తేది : ";
+"PANAttachment" = "PAN అటాచ్‌మెంట్";
+"customerPANDetails" = "కస్టమర్ పాన్ వివరాలు ధృవీకరణ కోసం సమర్పించబడ్డాయి!";
+"Save" = "సేవ్ చేయండి";
+"personName" = "వ్యక్తి పేరు:";
+"customerPANVerified" = "కస్టమర్ పాన్ వివరాలు ధృవీకరించబడ్డాయి!";
+"verify" = "ధృవీకరించండి";
+"savingPancarFailed" = "పాన్‌కార్డ్‌ను సేవ్ చేయడం విఫలమైంది. కొంత సమయం తర్వాత ప్రయత్నించండి";
+
