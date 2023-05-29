@@ -9,7 +9,7 @@ import UIKit
 import Lottie
 import Firebase
 
-class SelectProductEWarrantyListViewController: BaseViewController, DateSelectedDelegate, popUpDelegate, quantityDelegate {
+class SelectProductEWarrantyListViewController: BaseViewController, DateSelectedDelegate, quantityDelegate, popUpDelegate {
    
     
     
@@ -49,6 +49,7 @@ class SelectProductEWarrantyListViewController: BaseViewController, DateSelected
         super.viewDidLoad()
        // playAnimation()
         self.vm.VC = self
+        infoLbl.isHidden = true
         self.addE_warrantyTableView.register(UINib(nibName: "SelectProductEWarrantyListTableViewCell", bundle: nil), forCellReuseIdentifier: "SelectProductEWarrantyListTableViewCell")
         noDataFound.isHidden = true
         self.addE_warrantyTableView.delegate = self

@@ -10,6 +10,7 @@ import Firebase
 
 class SyncStatus_VC: BaseViewController, checkMarkDelegate {
 
+    @IBOutlet weak var nodatafoundLbl: UILabel!
     @IBOutlet var syncStatusTitleLabel: UILabel!
     @IBOutlet var checkMarkButton: UIButton!
     @IBOutlet var syncStatusTableView: UITableView!

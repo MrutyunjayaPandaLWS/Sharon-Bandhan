@@ -62,5 +62,6 @@ class LoginViewModel{
             }
             
         }
+//        self.VC?.stopLoading()
     }
 }

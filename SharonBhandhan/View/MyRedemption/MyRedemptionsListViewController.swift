@@ -10,10 +10,10 @@ import Lottie
 import SDWebImage
 import Firebase
 
-class MyRedemptionsListViewController: BaseViewController, popUpDelegate, FilterDelegate{
+class MyRedemptionsListViewController: BaseViewController, FilterDelegate{
     
-    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
-    
+    @IBOutlet weak var pointsLbl: UILabel!
+    @IBOutlet weak var redemablePointsTitle: UILabel!
     @IBOutlet weak var myRedemptionstableView: UITableView!
     @IBOutlet weak var noDataFound: UILabel!
     @IBOutlet weak var header: UILabel!
@@ -39,6 +39,7 @@ class MyRedemptionsListViewController: BaseViewController, popUpDelegate, Filter
         super.viewWillAppear(animated)
         myRedemptionList()
         self.noDataFound.isHidden = true
+        pointsLbl.text = UserDefaults.standard.string(forKey: "RedeemablePointBalance") ?? "0"
         languagelocalization()
 //        
 //            guard let tracker = GAI.sharedInstance().defaultTracker else { return }
@@ -105,7 +106,7 @@ class MyRedemptionsListViewController: BaseViewController, popUpDelegate, Filter
         vc.delegate = self
         vc.selectedFromDate = self.startDate
         vc.selectedToDate = self.endDate
-        vc.modalTransitionStyle = .coverVertical
+        vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: true, completion: nil)
     }
@@ -159,59 +160,69 @@ extension MyRedemptionsListViewController : UITableViewDelegate, UITableViewData
         
 
         let redemptionDate = (self.VM.myRedemptionList[indexPath.row].jRedemptionDate ?? "-").split(separator: " ")
-        let dateFormatted = convertDateFormater(String(redemptionDate[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")
-        cell?.redemptionDate.text = "\(dateFormatted)"
+//        let dateFormatted = convertDateFormater(String(redemptionDate[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")
+        cell?.redemptionDate.text = "\(redemptionDate[0])"//"\(dateFormatted)"
         cell?.productName.text = self.VM.myRedemptionList[indexPath.row].productName ?? "-"
         cell?.tdsvalue.text = "\(Int(self.VM.myRedemptionList[indexPath.row].ApplicableTds ?? 0.0))"
         cell?.productPoints.text = "\(self.VM.myRedemptionList[indexPath.row].redeemedPoints ?? 0)"
 
         if self.VM.myRedemptionList[indexPath.row].status ?? 0 == 0 || self.VM.myRedemptionList[indexPath.row].status ?? 0 == 1{
             cell?.productStatus.text = "Pending"
+            cell?.statusLblWidthconstraints.constant = 100
             cell?.productStatus.textColor = UIColor.black
             cell?.productStatus.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
             cell?.productStatus.borderColor = #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)
         }else if self.VM.myRedemptionList[indexPath.row].status ?? 0 == 2 {
             cell?.productStatus.text = "Processed"
+            cell?.statusLblWidthconstraints.constant = 100
             cell?.productStatus.textColor = UIColor.black
             cell?.productStatus.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
             cell?.productStatus.borderColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
         }else if self.VM.myRedemptionList[indexPath.row].status ?? 0 == 3 {
             cell?.productStatus.text = "Cancelled"
+            cell?.statusLblWidthconstraints.constant = 100
             cell?.productStatus.textColor = UIColor.black
             cell?.productStatus.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
             cell?.productStatus.borderColor = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)
         }else if self.VM.myRedemptionList[indexPath.row].status ?? 0 == 4 {
             cell?.productStatus.text = "Delivered"
+            cell?.statusLblWidthconstraints.constant = 100
             cell?.productStatus.textColor = UIColor.black
             cell?.productStatus.backgroundColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
             cell?.productStatus.borderColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
         }else if self.VM.myRedemptionList[indexPath.row].status ?? 0 == 7 {
             cell?.productStatus.text = "Returned"
+            cell?.statusLblWidthconstraints.constant = 100
             cell?.productStatus.textColor = UIColor.black
             cell?.productStatus.backgroundColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
             cell?.productStatus.borderColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
         }else if self.VM.myRedemptionList[indexPath.row].status ?? 0 == 8 {
             cell?.productStatus.text = "Redispatched"
+            cell?.statusLblWidthconstraints.constant = 120
             cell?.productStatus.textColor = UIColor.black
             cell?.productStatus.backgroundColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
             cell?.productStatus.borderColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
         }else if self.VM.myRedemptionList[indexPath.row].status ?? 0 == 9 {
             cell?.productStatus.text = "OnHold"
+            cell?.statusLblWidthconstraints.constant = 100
             cell?.productStatus.textColor = UIColor.black
             cell?.productStatus.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
             cell?.productStatus.borderColor = #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)
         }else if self.VM.myRedemptionList[indexPath.row].status ?? 0 == 10 {
             cell?.productStatus.text = "Dispatched"
+            cell?.statusLblWidthconstraints.constant = 115
             cell?.productStatus.textColor = UIColor.black
             cell?.productStatus.backgroundColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
             cell?.productStatus.borderColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
         }else if self.VM.myRedemptionList[indexPath.row].status ?? 0 == 11 {
             cell?.productStatus.text = "Out for Delivery"
+            cell?.statusLblWidthconstraints.constant = 140
             cell?.productStatus.backgroundColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
             cell?.productStatus.borderColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
             cell?.productStatus.textColor = UIColor.black
         }else if self.VM.myRedemptionList[indexPath.row].status ?? 0 == 12 {
             cell?.productStatus.text = "Address Verified"
+            cell?.statusLblWidthconstraints.constant = 140
             cell?.productStatus.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
             cell?.productStatus.textColor = UIColor.black
             cell?.productStatus.borderColor = #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)

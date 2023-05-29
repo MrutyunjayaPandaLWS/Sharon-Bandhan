@@ -10,6 +10,7 @@ import Firebase
 
 class CodeSummary_VC: BaseViewController {
 
+    @IBOutlet weak var emptymessage: UILabel!
     @IBOutlet var codeSummaryLabel: UILabel!
     @IBOutlet var codeSummaryTableView: UITableView!
     let loyaltyId = UserDefaults.standard.string(forKey: "LoyaltyID") ?? ""

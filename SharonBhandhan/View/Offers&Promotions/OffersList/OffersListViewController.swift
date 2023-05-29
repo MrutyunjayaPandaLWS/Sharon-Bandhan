@@ -14,6 +14,8 @@ class OffersListViewController: BaseViewController, OffersandPromotionsDelegate{
     
     
 
+    @IBOutlet weak var pointsLbl: UILabel!
+    @IBOutlet weak var redemblePointTitleLbl: UILabel!
     @IBOutlet weak var animationLottieView: LottieAnimationView!
     @IBOutlet weak var offerstableView: UITableView!
     @IBOutlet weak var header: UILabel!
@@ -43,7 +45,7 @@ class OffersListViewController: BaseViewController, OffersandPromotionsDelegate{
 //
 //        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
 //        tracker.send(builder.build() as [NSObject : AnyObject])
-
+        pointsLbl.text = UserDefaults.standard.string(forKey: "RedeemablePointBalance") ?? "0"
         
     }
     

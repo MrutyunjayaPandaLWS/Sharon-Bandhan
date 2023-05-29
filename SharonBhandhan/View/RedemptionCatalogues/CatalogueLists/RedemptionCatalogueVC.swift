@@ -10,6 +10,8 @@ import SDWebImage
 import CoreData
 import Firebase
 class RedemptionCatalogueVC: BaseViewController, AddedToCartOrPlannerDelegate, popUpDelegate{
+    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
+    
     
 
     @IBOutlet var redemptionCatalogueHeadingLabel: UILabel!
@@ -73,22 +75,22 @@ class RedemptionCatalogueVC: BaseViewController, AddedToCartOrPlannerDelegate, p
     func languagelocalization(){
         if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
             self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "en")
-            self.pointsHeadingLabel.text = "Redeemable points"
-            searchProductTF.attributedPlaceholder = NSAttributedString(string: "Search Product Name", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+            self.pointsHeadingLabel.text = "Points"
+            searchProductTF.attributedPlaceholder = NSAttributedString(string: "Search Product Name", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
             
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
             self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "hi")
-            self.pointsHeadingLabel.text = "रिडीम के लिए पॉइंट्स"
-            searchProductTF.attributedPlaceholder = NSAttributedString(string: "उत्पाद का नाम खोजें", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+            self.pointsHeadingLabel.text = "पॉइंट्स"
+            searchProductTF.attributedPlaceholder = NSAttributedString(string: "उत्पाद का नाम खोजें", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
             
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
             self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "bn")
-            self.pointsHeadingLabel.text = "পুনঃনির্ধারণযোগ্য পয়েন্টস"
-            searchProductTF.attributedPlaceholder = NSAttributedString(string: "পণ্যের নাম অনুসন্ধান করুন", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+            self.pointsHeadingLabel.text = "পয়েন্টস"
+            searchProductTF.attributedPlaceholder = NSAttributedString(string: "পণ্যের নাম অনুসন্ধান করুন", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
         }else{
             self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "te")
             self.pointsHeadingLabel.text = "రీడీమ్ చేయగల పాయింట్లు"
-            searchProductTF.attributedPlaceholder = NSAttributedString(string: "శోధన ఉత్పత్తి పేరు", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+            searchProductTF.attributedPlaceholder = NSAttributedString(string: "శోధన ఉత్పత్తి పేరు", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
         }
     }
     
@@ -140,7 +142,7 @@ class RedemptionCatalogueVC: BaseViewController, AddedToCartOrPlannerDelegate, p
     
     //Delegate:-
     
-    func popupAlertDidTap(_ vc: PopupAlertOne_VC){}
+
     
     func addToCart(_ cell: Products_TVC) {
       //  self.selectedCatalogueID = -1

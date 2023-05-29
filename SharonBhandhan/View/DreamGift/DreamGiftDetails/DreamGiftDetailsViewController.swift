@@ -9,7 +9,9 @@ import SDWebImage
 import Firebase
 import Toast_Swift
 class DreamGiftDetailsViewController: BaseViewController, popUpDelegate {
-    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
+    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {
+    }
+    
     
 
     @IBOutlet weak var tdspopints: UILabel!

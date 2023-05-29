@@ -16,6 +16,7 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
     func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
     
     
+    
        @IBOutlet weak var querydetails: UILabel!
        @IBOutlet weak var querysummarylabel: UILabel!
        @IBOutlet weak var selectyourtopiclabel: UILabel!
@@ -506,15 +507,15 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
         let parameters = [
             "ActionType": "0",
             "ActorId": "\(userID)",
-            "CustomerName": "null",
-            "Email": "null",
+            "CustomerName": "",
+            "Email": "",
             "HelpTopic": topicnamelabel.text ?? "",
             "HelpTopicID": "\(helptopicid)",
             "IsQueryFromMobile": "true",
             "LoyaltyID": "\(loyaltyId)",
             "QueryDetails": textviewforquerysummary.text ?? "",
             "QuerySummary": querysummarytf.text ?? "",
-            "SourceType": "1",
+            "SourceType": "3",
             "ImageUrl": "\(self.strdata1)",
             "FileType": ""
         ] as [String: Any]

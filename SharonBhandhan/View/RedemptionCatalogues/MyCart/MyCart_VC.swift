@@ -11,6 +11,9 @@ import Firebase
 import Toast_Swift
 
 class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
+    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {
+    }
+    
    
     @IBOutlet var myCartTitleLabel: UILabel!
     @IBOutlet var myCartTableView: UITableView!
@@ -98,7 +101,11 @@ class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
                 vc.redemptionTypeId = 1
                 self.navigationController?.pushViewController(vc, animated: true)
             }else{
-                self.view.makeToast("Insufficient point balance to redeem!", duration: 2.0, position: .bottom)
+                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ShippingAddress_VC") as! ShippingAddress_VC
+                vc.totalPoint = finalPoints
+                vc.redemptionTypeId = 1
+                self.navigationController?.pushViewController(vc, animated: true)
+//                self.view.makeToast("Insufficient point balance to redeem!", duration: 2.0, position: .bottom)
             }
         }
         
@@ -106,7 +113,6 @@ class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
     
     //Delegate:-
     
-    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
     func increaseCount(_ cell: MyCart_TVC) {
         guard let tappedIndexPath = self.myCartTableView.indexPath(for: cell) else{return}
         if cell.plusBTN.tag == tappedIndexPath.row{
@@ -233,7 +239,7 @@ class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
                        if self.VM.myCartListArray[0].Is_Redeemable ?? -2 == 1 || self.VM.myCartListArray[0].Is_Redeemable ?? -2 == -3 || self.VM.myCartListArray[0].Is_Redeemable ?? -2 == -4{
                            self.checkoutView.isHidden = false
                        }else{
-                           self.checkoutView.isHidden = true
+                           self.checkoutView.isHidden = false
 
                        }
                        self.stopLoading()

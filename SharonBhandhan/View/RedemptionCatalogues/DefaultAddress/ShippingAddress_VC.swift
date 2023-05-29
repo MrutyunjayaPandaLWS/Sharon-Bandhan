@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 
 class ShippingAddress_VC: BaseViewController, SendUpdatedAddressDelegate, popUpDelegate{
+    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
+    
    
     @IBOutlet var customerAddressTV: UITextView!
     @IBOutlet var customerNameLabel: UILabel!
@@ -207,7 +209,6 @@ class ShippingAddress_VC: BaseViewController, SendUpdatedAddressDelegate, popUpD
     
     //Delegate:
     
-    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
     
     func updatedAddressDetails(_ vc: EditAddressViewController) {
         DispatchQueue.main.async {

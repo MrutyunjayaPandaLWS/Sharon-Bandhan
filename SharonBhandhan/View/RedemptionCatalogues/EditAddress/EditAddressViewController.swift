@@ -11,7 +11,10 @@ import Firebase
 protocol SendUpdatedAddressDelegate {
     func updatedAddressDetails(_ vc: EditAddressViewController)
 }
-class EditAddressViewController: BaseViewController, UITextFieldDelegate, popUpDelegate, SelectedItemDelegate{
+class EditAddressViewController: BaseViewController, UITextFieldDelegate, SelectedItemDelegate, popUpDelegate{
+    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {
+    }
+    
   
     @IBOutlet var nameTF: UITextField!
     @IBOutlet var mobileTF: UITextField!
@@ -535,6 +538,5 @@ class EditAddressViewController: BaseViewController, UITextFieldDelegate, popUpD
         }
     }
     
-    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
     
 }

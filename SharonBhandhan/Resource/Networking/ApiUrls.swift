@@ -8,15 +8,16 @@
 import Foundation
 
 //DEMO
-let baseURl = "http://services.loyltwo3ks.com/CPLP/MobileApp/MobileApi.svc/json/"
+
+let baseURl = "https://bandhandemoserv.loyltwo3ks.com/MobileApp/MobileApi.svc/json/"
 let username = "CenturlyAPI"
 let password = "Centurly@%454"
-let PROMO_IMG = "http://az-cpil.oneloyalty.in"
-let product_IMG = "http://az-cpil.oneloyalty.in/UploadFiles/CategoryImg/"
-let imageBaseURL = "http://az-cpil.oneloyalty.in/UploadFiles/ProductManager/ProductImages/"
-let profileImageURL = "http://az-cpil.oneloyalty.in/UploadFiles/CustomerImage/"
-let productCatalogueImgURL = "http://az-cpil.oneloyalty.in/UploadFiles/CatalogueImages/"
-
+let PROMO_IMG = "http://sharonbandhan.loyltwo3ks.com"
+let product_IMG = "https://bandhandemoserv.loyltwo3ks.com/UploadFiles/CategoryImg/"
+let imageBaseURL = "https://bandhandemoserv.loyltwo3ks.com/UploadFiles/ProductManager/ProductImages/"
+let profileImageURL = "https://bandhandemoserv.loyltwo3ks.com/UploadFiles/CustomerImage/"
+let productCatalogueImgURL = "https://bandhandemoserv.loyltwo3ks.com/UploadFiles/CatalogueImages/"
+let baseURL2 = "https://bandhandemoserv.loyltwo3ks.com/"
 
 ///LIVE
 //let baseURl = "https://centuryproclub.com/CPLService/MobileApp/MobileApi.svc/json/"

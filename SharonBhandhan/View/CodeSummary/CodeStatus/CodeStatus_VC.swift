@@ -9,6 +9,7 @@ import UIKit
 
 class CodeStatus_VC: BaseViewController {
 
+    @IBOutlet weak var emptyMessageLBL: UILabel!
     @IBOutlet var codeStatusTitleLabel: UILabel!
     @IBOutlet var codeStatusCount: UILabel!
     @IBOutlet var codeSyncButton: UIButton!

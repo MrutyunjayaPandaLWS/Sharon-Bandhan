@@ -10,7 +10,7 @@ import UIKit
 class MyRedemptionsTableViewCell: UITableViewCell {
 
     
-    
+    @IBOutlet weak var statusLblWidthconstraints: NSLayoutConstraint!
     @IBOutlet weak var tdsvalue: UILabel!
     @IBOutlet weak var productTitle: UILabel!
     @IBOutlet weak var productName: UILabel!
@@ -23,7 +23,8 @@ class MyRedemptionsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
-        productTitle.roundCorners(corners: [.bottomRight], radius: 20)
+        productTitle.roundCorners(corners: [.bottomRight,.topLeft], radius: 12)
+//        productStatus.textconta
         
     }
 

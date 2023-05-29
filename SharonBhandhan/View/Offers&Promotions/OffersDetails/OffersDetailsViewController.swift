@@ -12,6 +12,8 @@ import Firebase
 class OffersDetailsViewController: BaseViewController {
     @IBOutlet weak var offersImg: UIImageView!
     
+    @IBOutlet weak var poinntsLbl: UILabel!
+    @IBOutlet weak var redemblepointsTitle: UILabel!
     @IBOutlet weak var offersName: UILabel!
     @IBOutlet weak var offersDescription: UIWebView!
     @IBOutlet weak var header: UILabel!
@@ -41,6 +43,7 @@ class OffersDetailsViewController: BaseViewController {
 //
 //        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
 //        tracker.send(builder.build() as [NSObject : AnyObject])
+        poinntsLbl.text = UserDefaults.standard.string(forKey: "RedeemablePointBalance") ?? "0"
 
         
     }

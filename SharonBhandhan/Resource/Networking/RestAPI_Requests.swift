@@ -322,6 +322,22 @@ class RestAPI_Requests {
             }
         }
     
+    
+    //MARK: - ImageSavingAPI
+    func imageSavingAPI(parameters: JSON, completion: @escaping (ProfileImageUpdateModel?, Error?) -> ()) -> URLSessionDataTask? {
+            return client.load(path: UpdateCustomerProfileMobileApp, method: .post, params: parameters) { data, error in
+                do{
+                    if data != nil{
+                        let result1 =  try JSONDecoder().decode(ProfileImageUpdateModel?.self, from: data as! Data)
+                        completion(result1, nil)
+                    }
+                }catch{
+                    completion(nil, error)
+                }
+            }
+        }
+    
+    
     // STATE LISTING
     
     func stateList(parameters: JSON, completion: @escaping (StateListModels?, Error?) -> ()) -> URLSessionDataTask? {
@@ -681,7 +697,7 @@ class RestAPI_Requests {
        }
     }
     
-    //Pan get details
+    //MARK: - Pan get details
     
     func getpaneApi(parameters: JSON, completion: @escaping (GetpanDetails?, Error?) -> ()) -> URLSessionDataTask? {
        return client.load(path: GetPanDetails, method: .post, params: parameters) { data, error in
@@ -695,5 +711,19 @@ class RestAPI_Requests {
            }
        }
     }
+    
+    //MARK: - E-WARENTY - SCAN CODE VALIDATION
+    
+    func ewarrentyScanCodeValidation(parameters: JSON, completion: @escaping (EWarrentyScannerModel?, Error?) -> ()) -> URLSessionDataTask? {
+       return client.load(path: getScratchCode_MethodName, method: .post, params: parameters) { data, error in
+           do{
+               if data != nil{
+                   let result1 =  try JSONDecoder().decode(EWarrentyScannerModel?.self, from: data as! Data)
+                   completion(result1, nil)
+               }
+           }catch{
+               completion(nil, error)
+           }
+       }
+    }
 }
-

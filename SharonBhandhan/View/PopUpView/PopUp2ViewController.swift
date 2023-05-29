@@ -8,7 +8,7 @@
 import UIKit
 import Toast_Swift
 protocol PopUpDelegate: AnyObject{
-    func popUpAlertDidTap(_ vc: PopUp2ViewController)
+    func popUpAlertDidTap2(_ vc: PopUp2ViewController)
 }
 class PopUp2ViewController: BaseViewController {
 
@@ -42,7 +42,7 @@ class PopUp2ViewController: BaseViewController {
             }
         }else if self.itsFrom == "feedBackSubmission"{
             self.dismiss(animated: true){
-                NotificationCenter.default.post(name: .feedBackSubmission, object: nil)
+//                NotificationCenter.default.post(name: .feedBackSubmission, object: nil)
             }
         }else if self.itsFrom == "RegistrationModels"{
             self.dismiss(animated: true){
@@ -93,7 +93,7 @@ class PopUp2ViewController: BaseViewController {
             self.dismiss(animated: true, completion: nil)
         }
         
-        self.delegate.popUpAlertDidTap(self)
+        self.delegate.popUpAlertDidTap2(self)
        
     }
     deinit{

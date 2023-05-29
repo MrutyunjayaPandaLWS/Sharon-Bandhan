@@ -8,7 +8,7 @@
 import UIKit
 
 class LodgeListViewModel{
- 
+    
     weak var VC: CustomerQueryListingViewController?
     var requestAPIs = RestAPI_Requests()
     var queryListingArray = [ObjCustomerAllQueryJsonList]()
@@ -26,18 +26,19 @@ class LodgeListViewModel{
                 } else {
                     print("No Response")
                     DispatchQueue.main.async {
+                        self.VC?.nodatafoundLbl.isHidden = false
                         self.VC?.stopLoading()
                     }
                 }
             }else{
                 print("ERROR_Login \(error)")
                 DispatchQueue.main.async {
+                    self.VC?.nodatafoundLbl.isHidden = false
                     self.VC?.stopLoading()
                 }
-
+            }
         }
+        
     }
     
-    }
-
 }

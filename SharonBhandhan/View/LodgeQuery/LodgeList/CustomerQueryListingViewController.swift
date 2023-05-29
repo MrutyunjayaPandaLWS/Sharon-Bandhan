@@ -38,7 +38,7 @@ class CustomerQueryListingViewController: BaseViewController,UNUserNotificationC
     }
     override func viewWillAppear(_ animated: Bool) {
 
-            topview.backgroundColor = UIColor.red
+//            topview.backgroundColor = UIColor.red
             topview.isHidden = false
             self.querylistingTableview.isHidden = false
             queryListApi()
@@ -61,7 +61,7 @@ class CustomerQueryListingViewController: BaseViewController,UNUserNotificationC
         if isfromStatus != 1{
             let touch = touchscreen.first
             if touch?.view != self.presentingViewController{
-                self.topview.backgroundColor = UIColor.red
+//                self.topview.backgroundColor = UIColor.red
                 self.querylistingTableview.isHidden = false
                 self.topview.isHidden = false
                 self.dismiss(animated: true, completion: nil)
@@ -83,7 +83,7 @@ class CustomerQueryListingViewController: BaseViewController,UNUserNotificationC
     
         
     @IBAction func customerNewticketbutton(_ sender: Any) {
-         self.topview.backgroundColor = UIColor.red
+//         self.topview.backgroundColor = UIColor.red
         let centerviewcontroller = self.storyboard1.instantiateViewController(withIdentifier: "CreateNewQueryViewController") as! CreateNewQueryViewController
         centerviewcontroller.isFrom = 3
          self.navigationController?.pushViewController(centerviewcontroller, animated: true)
@@ -123,6 +123,7 @@ class CustomerQueryListingViewController: BaseViewController,UNUserNotificationC
                     self.querylistingTableview.isHidden = true
                     self.nodatafoundLbl.isHidden = false
                 }
+                    //self.nodatafoundLbl.isHidden = false
                 self.stopLoading()
             }
             
@@ -136,6 +137,11 @@ class CustomerQueryListingViewController: BaseViewController,UNUserNotificationC
 extension CustomerQueryListingViewController:  UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        if VM.queryListingArray.count == 0{
+            nodatafoundLbl.isHidden = false
+        }else{
+            nodatafoundLbl.isHidden = true
+        }
             return VM.queryListingArray.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

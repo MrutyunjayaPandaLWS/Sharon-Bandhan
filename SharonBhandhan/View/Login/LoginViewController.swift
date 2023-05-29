@@ -8,7 +8,9 @@
 import UIKit
 import Firebase
 
-class LoginViewController: BaseViewController, popUpDelegate, TermsAndConditionDelegate,UITextFieldDelegate{
+class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextFieldDelegate, popUpDelegate{
+    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
+    
   
     var vm = LoginViewModel()
     var boolResult:Bool = false
@@ -94,28 +96,30 @@ class LoginViewController: BaseViewController, popUpDelegate, TermsAndConditionD
         }
     }
     @IBAction func membershipIDDidEnd(_ sender: Any) {
-        let parameters = ["ActionType":"58","Location":["UserName":"\(userNameTF.text ?? "")"]] as [String : Any]
-        print(parameters)
-        self.vm.membershipIDVerification(parameters: parameters) { response in
-            if response?.CheckCustomerExistancyAndVerificationJsonResult ?? -1 != 1 &&  response?.CheckCustomerExistancyAndVerificationJsonResult ?? -1 != 4{
-                DispatchQueue.main.async{
-                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
-                    vc!.delegate = self
-                    vc!.titleInfo = ""
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "MembershipID doesn't exists"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                        vc!.descriptionInfo = "सदस्यता आईडी मौजूद नहीं है"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "সদস্যতা আইডি বিদ্যমান নেই"
-                    }else{
-                        vc!.descriptionInfo = "సభ్యత్వ ID ఉనికిలో లేదు"
+        if userNameTF.text?.count != 0{
+            let parameters = ["ActionType":"58","Location":["UserName":"\(userNameTF.text ?? "")"]] as [String : Any]
+            print(parameters)
+            self.vm.membershipIDVerification(parameters: parameters) { response in
+                if response?.CheckCustomerExistancyAndVerificationJsonResult ?? -1 != 1 &&  response?.CheckCustomerExistancyAndVerificationJsonResult ?? -1 != 4{
+                    DispatchQueue.main.async{
+                        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
+                        vc!.delegate = self
+                        vc!.titleInfo = ""
+                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                            vc!.descriptionInfo = "MembershipID doesn't exists"
+                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                            vc!.descriptionInfo = "सदस्यता आईडी मौजूद नहीं है"
+                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                            vc!.descriptionInfo = "সদস্যতা আইডি বিদ্যমান নেই"
+                        }else{
+                            vc!.descriptionInfo = "సభ్యత్వ ID ఉనికిలో లేదు"
+                        }
+                        
+                        vc!.modalPresentationStyle = .overCurrentContext
+                        vc!.modalTransitionStyle = .crossDissolve
+                        self.present(vc!, animated: true, completion: nil)
+                        self.userNameTF.text = ""
                     }
-                   
-                    vc!.modalPresentationStyle = .overCurrentContext
-                    vc!.modalTransitionStyle = .crossDissolve
-                    self.present(vc!, animated: true, completion: nil)
-                    self.userNameTF.text = ""
                 }
             }
         }
@@ -217,8 +221,6 @@ class LoginViewController: BaseViewController, popUpDelegate, TermsAndConditionD
          return
     }
     
-    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {
-    }
     
     func callAPI() {
         self.startLoading()

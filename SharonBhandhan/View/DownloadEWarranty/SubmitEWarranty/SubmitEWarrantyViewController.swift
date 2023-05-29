@@ -12,7 +12,10 @@ import Alamofire
 import Lottie
 import Firebase
 
-class SubmitEWarrantyViewController: BaseViewController, popUpDelegate, SelectedItemDelegate, UITextFieldDelegate, UIDocumentInteractionControllerDelegate{
+class SubmitEWarrantyViewController: BaseViewController, SelectedItemDelegate, UITextFieldDelegate, UIDocumentInteractionControllerDelegate, popUpDelegate{
+    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {
+    }
+    
     
     @IBOutlet var nameTF: UITextField!
     @IBOutlet var mobileNumberTF: UITextField!
@@ -345,7 +348,6 @@ class SubmitEWarrantyViewController: BaseViewController, popUpDelegate, Selected
         
     }
     
-    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
     func pdf(data1:String, productName:String){
         guard let  data = Data(base64Encoded: data1) else {
             print("unable to convert base 64 string to data")

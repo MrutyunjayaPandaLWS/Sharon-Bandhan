@@ -7,8 +7,14 @@
 
 import UIKit
 import Firebase
-class RedemptionOTP_VC: BaseViewController, popUpDelegate,UITextFieldDelegate {
-    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
+import DPOTPView
+
+
+class RedemptionOTP_VC: BaseViewController,UITextFieldDelegate, popUpDelegate {
+    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {
+    }
+    
+    @IBOutlet weak var otpView: DPOTPView!
     
 
     @IBOutlet var otpVerificationLabel: UILabel!
@@ -85,7 +91,7 @@ class RedemptionOTP_VC: BaseViewController, popUpDelegate,UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.otpTF.text = ""
+        self.otpView.text = ""
         
 //        guard let tracker = GAI.sharedInstance().defaultTracker else { return }
 //        tracker.set(kGAIScreenName, value: "RedemptionOTP")
@@ -267,7 +273,7 @@ class RedemptionOTP_VC: BaseViewController, popUpDelegate,UITextFieldDelegate {
 
     
     @IBAction func resendOTP(_ sender: Any) {
-        self.otpTF.text = ""
+        self.otpView.text = ""
         getOTP()
 
     }
@@ -276,8 +282,8 @@ class RedemptionOTP_VC: BaseViewController, popUpDelegate,UITextFieldDelegate {
     @IBAction func submitButton(_ sender: Any) {
         print(contractorName, "Contractor Name")
         print(self.cityID, "City ID")
-        if otpTF.text?.count == 6{
-            if self.OTPforVerification == self.otpTF.text!{
+        if otpView.text?.count == 6{
+            if self.OTPforVerification == self.otpView.text!{
                 self.timer.invalidate()
                 if self.contractorName == ""{
                     productsParameter = [
@@ -402,7 +408,7 @@ class RedemptionOTP_VC: BaseViewController, popUpDelegate,UITextFieldDelegate {
                 }
             }
         }else{
-            if otpTF.text?.count == 0 {
+            if otpView.text?.count == 0 {
                 DispatchQueue.main.async{
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
@@ -421,7 +427,7 @@ class RedemptionOTP_VC: BaseViewController, popUpDelegate,UITextFieldDelegate {
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
                 }
-            }else if otpTF.text?.count != 6{
+            }else if otpView.text?.count != 6{
                 DispatchQueue.main.async{
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
@@ -601,7 +607,7 @@ class RedemptionOTP_VC: BaseViewController, popUpDelegate,UITextFieldDelegate {
       let numberFiltered = compSepByCharInSet.joined(separator: "")
 
       if string == numberFiltered {
-        let currentText = otpTF.text ?? ""
+        let currentText = otpView.text ?? "-"
         guard let stringRange = Range(range, in: currentText) else { return false }
         let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
         return updatedText.count <= 6

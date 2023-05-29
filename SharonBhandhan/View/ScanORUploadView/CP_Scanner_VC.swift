@@ -10,13 +10,11 @@ import UIKit
 import AVFoundation
 import Firebase
 
-class CP_Scanner_VC: SP_Base_VC,AVCaptureMetadataOutputObjectsDelegate, UNUserNotificationCenterDelegate, closeCodesDelegate, UITextFieldDelegate, PopUpDelegate, PopUpDelegate2  {
+class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, UNUserNotificationCenterDelegate, closeCodesDelegate, UITextFieldDelegate, PopUpDelegate, PopUpDelegate2{
+    func popUpAlertDidTap2(_ vc: PopUp2ViewController) {}
+    
     
     func didTapYesButton(_ vc: Popup3ViewController) {}
-    
-    func popUpAlertDidTap(_ vc: PopUp2ViewController) {}
-    
-    
     
     @IBOutlet weak var scanoruploadLabel: UILabel!
     //@IBOutlet weak var scanImage12: UIImageView!
@@ -41,7 +39,7 @@ class CP_Scanner_VC: SP_Base_VC,AVCaptureMetadataOutputObjectsDelegate, UNUserNo
     @IBOutlet weak var backBtnView: UIView!
     
     var scannerVM = ScannerViewModel()
-    let userID = UserDefaults.standard.string(forKey: "UserID") ?? "-1"
+    let userID = UserDefaults.standard.string(forKey: "UserID") ?? ""
     var captureSession = AVCaptureSession()
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView: UIView?
@@ -105,11 +103,7 @@ class CP_Scanner_VC: SP_Base_VC,AVCaptureMetadataOutputObjectsDelegate, UNUserNo
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        guard let tracker = GAI.sharedInstance().defaultTracker else { return }
-        tracker.set(kGAIScreenName, value: "QR/Scanner")
-
-        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
-        tracker.send(builder.build() as [NSObject : AnyObject])
+        
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -153,7 +147,7 @@ class CP_Scanner_VC: SP_Base_VC,AVCaptureMetadataOutputObjectsDelegate, UNUserNo
         }else if codeTF.text!.count <= 11{
             self.alertValidationfor12digits(code: codeTF.text ?? "")
         }else{
-            var list3 = [GenuineCodeSaveModels]()
+            var list3 = [QrUsegereport1]()
             list3 = self.scannerVM.tempStoreCodesArray
             //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
             if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
@@ -190,10 +184,10 @@ class CP_Scanner_VC: SP_Base_VC,AVCaptureMetadataOutputObjectsDelegate, UNUserNo
                     }
 
                 }else{
-                    list3 = self.scannerVM.tempStoreCodesArray.filter{ ($0.ScratchCode == codeTF.text) }
+                    list3 = self.scannerVM.tempStoreCodesArray.filter{ ($0.scratchCode == codeTF.text) }
                     print(list3.count)
                     if list3.count == 0 {
-                        self.scannerVM.codeGenuineAPI(code: codeTF.text!)
+                        codeGenuineAPI(code: codeTF.text!)
                     } else {
                         if self.selectedindex == 1 {
                             DispatchQueue.main.async{
@@ -229,9 +223,9 @@ class CP_Scanner_VC: SP_Base_VC,AVCaptureMetadataOutputObjectsDelegate, UNUserNo
                 }
                 
             }else{
-                list3 = self.scannerVM.tempStoreCodesArray.filter{ ($0.ScratchCode == codeTF.text) }
+                list3 = self.scannerVM.tempStoreCodesArray.filter{ ($0.scratchCode == codeTF.text) }
                 if list3.count == 0 {
-                    self.scannerVM.codeGenuineAPI(code: codeTF.text!)
+                    self.codeGenuineAPI(code: codeTF.text!)
                 } else {
                     if self.selectedindex == 1 {
                         DispatchQueue.main.async{
@@ -279,17 +273,17 @@ class CP_Scanner_VC: SP_Base_VC,AVCaptureMetadataOutputObjectsDelegate, UNUserNo
     }
     
     @IBAction func scanAgain(_ sender: Any) {
-        self.scannerVM.codeGenuineResponse.PlantCode = ""
-        self.scannerVM.codeGenuineResponse.PlantName = ""
-        self.scannerVM.codeGenuineResponse.PrintDate = ""
-        self.scannerVM.codeGenuineResponse.ProductId = ""
-        self.scannerVM.codeGenuineResponse.ProductName = ""
-        self.scannerVM.codeGenuineResponse.ReturnMessage = ""
-        self.scannerVM.codeGenuineResponse.ScratchCode = ""
-        self.scannerVM.codeGenuineResponse.Thickness = ""
-        self.scannerVM.codeGenuineResponse.Size = ""
-        self.scannerVM.codeGenuineResponse.brandID = ""
-        self.scannerVM.codeGenuineResponse.membername = ""
+        self.scannerVM.codeGenuineResponse?.plantCode = ""
+        self.scannerVM.codeGenuineResponse?.plantName = ""
+        self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].printDate = ""
+        self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].productId = 0
+        self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].productName = ""
+        self.scannerVM.codeGenuineResponse?.returnMessage = ""
+        self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].scratchCode = ""
+        self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].thickness = ""
+        self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].size = ""
+        self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].brandId = 0
+        self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].memberName = ""
         DispatchQueue.main.async {
             self.isscannedOnce = true
             self.captureSession.startRunning()
@@ -306,8 +300,8 @@ class CP_Scanner_VC: SP_Base_VC,AVCaptureMetadataOutputObjectsDelegate, UNUserNo
         }else{
             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "GnerateEWarrantyViewController") as? GnerateEWarrantyViewController
             self.captureSession.stopRunning()
-            vc!.tempStoreCodesArray = scannerVM.validStoreCodesArray
-            vc!.CodesArray = scannerVM.GenuineCodesArray
+//            vc!.tempStoreCodesArray = scannerVM.validStoreCodesArray
+//            vc!.CodesArray = scannerVM.GenuineCodesArray
             self.navigationController?.pushViewController(vc!, animated: true)
         }
     }
@@ -321,8 +315,8 @@ class CP_Scanner_VC: SP_Base_VC,AVCaptureMetadataOutputObjectsDelegate, UNUserNo
         }else{
             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "GnerateEWarrantyViewController") as? GnerateEWarrantyViewController
             self.captureSession.stopRunning()
-            vc!.tempStoreCodesArray = scannerVM.validStoreCodesArray
-            vc!.CodesArray = scannerVM.GenuineCodesArray
+//            vc!.tempStoreCodesArray = scannerVM.validStoreCodesArray
+//            vc!.CodesArray = scannerVM.GenuineCodesArray
             self.navigationController?.pushViewController(vc!, animated: true)
         }
     }
@@ -347,8 +341,8 @@ class CP_Scanner_VC: SP_Base_VC,AVCaptureMetadataOutputObjectsDelegate, UNUserNo
             self.navigationController?.popViewController(animated: true)
 
                 }else{
-                    let filteredArray = self.scannerVM.tempStoreCodesArray.filter { $0.StatusID == "1"}
-                    let filteredAnotherArray = self.scannerVM.tempStoreCodesArray.filter { $0.StatusID == "4"}
+                    let filteredArray = self.scannerVM.tempStoreCodesArray.filter { $0.status == "1"}
+                    let filteredAnotherArray = self.scannerVM.tempStoreCodesArray.filter { $0.status == "4"}
                     if filteredArray.count != 0 || filteredAnotherArray.count != 0 {
                         DispatchQueue.main.async{
                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "Popup3ViewController") as? Popup3ViewController
@@ -434,7 +428,7 @@ class CP_Scanner_VC: SP_Base_VC,AVCaptureMetadataOutputObjectsDelegate, UNUserNo
                     if metadataObj.stringValue!.count <= 11{
                     self.alertValidationfor12digits(code: metadataObj.stringValue!)
                 }else{
-                    var list3 = [GenuineCodeSaveModels]()
+                    var list3 = [QrUsegereport1]()
                     list3 = self.scannerVM.tempStoreCodesArray
                     if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" {
                     //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
@@ -470,9 +464,9 @@ class CP_Scanner_VC: SP_Base_VC,AVCaptureMetadataOutputObjectsDelegate, UNUserNo
                             }
 
                         }else{
-                            list3 = self.scannerVM.tempStoreCodesArray.filter{ ($0.ScratchCode == metadataObj.stringValue!) }
+                            list3 = self.scannerVM.tempStoreCodesArray.filter{ ($0.scratchCode == metadataObj.stringValue!) }
                             if list3.count == 0 {
-                                self.scannerVM.codeGenuineAPI(code: metadataObj.stringValue!)
+                                self.codeGenuineAPI(code: metadataObj.stringValue!)
                             } else {
                                 if self.selectedindex == 1 {
                                     DispatchQueue.main.async{
@@ -506,9 +500,9 @@ class CP_Scanner_VC: SP_Base_VC,AVCaptureMetadataOutputObjectsDelegate, UNUserNo
                             }
                         }
                     }else{
-                        list3 = self.scannerVM.tempStoreCodesArray.filter{ ($0.ScratchCode == metadataObj.stringValue!) }
+                        list3 = self.scannerVM.tempStoreCodesArray.filter{ ($0.scratchCode == metadataObj.stringValue!) }
                         if list3.count == 0 {
-                            self.scannerVM.codeGenuineAPI(code: metadataObj.stringValue!)
+                            self.codeGenuineAPI(code: metadataObj.stringValue!)
                         } else {
                             if self.selectedindex == 1{
                                 DispatchQueue.main.async{
@@ -598,16 +592,16 @@ extension CP_Scanner_VC : UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "CP_CodesScanned_TVC", for: indexPath) as? CP_CodesScanned_TVC
         cell!.delegate = self
         cell!.datelabel.text = Date.getCurrentDate()
-        print(self.scannerVM.tempStoreCodesArray[indexPath.row].StatusID ?? "", "Ddsafsadfasdfasdf")
-        if self.scannerVM.tempStoreCodesArray[indexPath.row].StatusID == "-1"{
+        print(self.scannerVM.tempStoreCodesArray[indexPath.row].status ?? "", "Ddsafsadfasdfasdf")
+        if self.scannerVM.tempStoreCodesArray[indexPath.row].status == "-1"{
             cell?.genuineProductLabel.text = "Not a Sharon Ply Genuine Product"
             cell?.statusLabel.text = "Failed"
             cell?.statusImage.image = UIImage(named: "cross")
             cell?.statusLabel.textColor = UIColor.red
 
-        }else if self.scannerVM.tempStoreCodesArray[indexPath.row].StatusID == "-2"{
+        }else if self.scannerVM.tempStoreCodesArray[indexPath.row].status == "-2"{
             if self.scannerVM.checkMessage != "Kindly check download menu for the e-warranty" {
-                cell?.genuineProductLabel.text = "This code is already scanned and E - warranty generated by \(self.scannerVM.tempStoreCodesArray[indexPath.row].Membername ?? "")"
+                cell?.genuineProductLabel.text = "This code is already scanned and E - warranty generated by \(self.scannerVM.tempStoreCodesArray[indexPath.row].memberName ?? "")"
                 cell?.statusLabel.text = "Failed"
                 cell?.statusImage.image = UIImage(named: "cross")
                 cell?.statusLabel.textColor = UIColor.red
@@ -618,18 +612,18 @@ extension CP_Scanner_VC : UITableViewDelegate, UITableViewDataSource{
                 cell?.statusImage.image = UIImage(named: "checked")
 
             }
-        } else if self.scannerVM.tempStoreCodesArray[indexPath.row].StatusID == "3"{
+        } else if self.scannerVM.tempStoreCodesArray[indexPath.row].status == "3"{
             cell?.genuineProductLabel.text = self.scannerVM.message
             cell?.statusLabel.text = "Successful"
             cell?.statusImage.image = UIImage(named: "checked")
 
-        }else if self.scannerVM.tempStoreCodesArray[indexPath.row].StatusID == "-3"{
+        }else if self.scannerVM.tempStoreCodesArray[indexPath.row].status == "-3"{
             cell?.genuineProductLabel.text = "You are not entitled to this product."
             cell?.statusLabel.text = "Failed"
             cell?.statusImage.image = UIImage(named: "cross")
             cell?.statusLabel.textColor = UIColor.red
 
-        } else if self.scannerVM.tempStoreCodesArray[indexPath.row].StatusID == "5"{
+        } else if self.scannerVM.tempStoreCodesArray[indexPath.row].status == "5"{
             cell?.genuineProductLabel.text = self.scannerVM.message2
             cell?.statusLabel.text = "Successful"
             cell?.statusImage.image = UIImage(named: "checked")
@@ -639,25 +633,25 @@ extension CP_Scanner_VC : UITableViewDelegate, UITableViewDataSource{
             cell?.statusImage.image = UIImage(named: "checked")
 
         }
-        cell?.productName.text = "Code : \(self.scannerVM.tempStoreCodesArray[indexPath.row].ScratchCode ?? "")"
+        cell?.productName.text = "Code : \(self.scannerVM.tempStoreCodesArray[indexPath.row].scratchCode ?? "")"
 //        let split = self.scannerVM.tempStoreCodesArray[indexPath.row].ScratchCode ?? ""
 //               let qrsplit = split.components(separatedBy: "//")
 //               cell?.productName.text = "Code :\(qrsplit[1])"
-        print("Entered Code is:",self.scannerVM.tempStoreCodesArray[indexPath.row].ScratchCode ?? "")
+        print("Entered Code is:",self.scannerVM.tempStoreCodesArray[indexPath.row].scratchCode ?? "")
         return cell!
     }
     
     func closeBtn(_ cell: CP_CodesScanned_TVC) {
         guard let tappedIndexPath = codetableView.indexPath(for: cell) else { return }
         for itm in self.scannerVM.validStoreCodesArray{
-            if self.scannerVM.tempStoreCodesArray[tappedIndexPath.row].ProductId ?? "" == itm.ProductId ?? ""{
-                print(itm.codeCount,"CodesCocunt")
-                if itm.codeCount == 1{
+            if self.scannerVM.tempStoreCodesArray[tappedIndexPath.row].productId ?? 0 == itm.productId ?? 0{
+//                print(itm.codeCount,"CodesCocunt")
+                if itm.codeStatusWiseCount == 1{
                     print("ONLY 1 ITEM")
-                    self.scannerVM.validStoreCodesArray = self.scannerVM.validStoreCodesArray.filter{$0.ProductId != itm.ProductId}
+                    self.scannerVM.validStoreCodesArray = self.scannerVM.validStoreCodesArray.filter{$0.productId != itm.productId}
                 }else{
                     print("MORE THAN 1 ITEM")
-                    self.scannerVM.validStoreCodesArray.filter({$0.ProductId == itm.ProductId}).first?.codeCount = (self.scannerVM.validStoreCodesArray.filter({$0.ProductId == itm.ProductId}).first?.codeCount)! - 1
+//                    self.scannerVM.validStoreCodesArray.filter({$0.productId == itm.productId}).first?.codeStatusWiseCount = (self.scannerVM.validStoreCodesArray.filter({$0.productId == itm.productId}).first?.codeStatusWiseCount)! - 1
                 }
             }
         }
@@ -694,13 +688,13 @@ extension CP_Scanner_VC : UITableViewDelegate, UITableViewDataSource{
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if self.scannerVM.tempStoreCodesArray[indexPath.row].StatusID ?? "-1" != "-1"{
-            self.productname.text = self.scannerVM.tempStoreCodesArray[indexPath.row].ProductName ?? ""
-            self.plantName.text = self.scannerVM.tempStoreCodesArray[indexPath.row].PlantName ?? ""
-            self.thickness.text = self.scannerVM.tempStoreCodesArray[indexPath.row].Thickness ?? ""
-            self.size.text = self.scannerVM.tempStoreCodesArray[indexPath.row].Size ?? ""
-            self.uniqueCode.text = self.scannerVM.tempStoreCodesArray[indexPath.row].ScratchCode ?? ""
-            if self.scannerVM.tempStoreCodesArray[indexPath.row].StatusID == "1"{
+        if self.scannerVM.tempStoreCodesArray[indexPath.row].status ?? "-1" != "-1"{
+            self.productname.text = self.scannerVM.tempStoreCodesArray[indexPath.row].productName ?? ""
+            self.plantName.text = self.scannerVM.tempStoreCodesArray[indexPath.row].memberName ?? ""
+            self.thickness.text = self.scannerVM.tempStoreCodesArray[indexPath.row].thickness ?? ""
+            self.size.text = self.scannerVM.tempStoreCodesArray[indexPath.row].size ?? ""
+            self.uniqueCode.text = self.scannerVM.tempStoreCodesArray[indexPath.row].scratchCode ?? ""
+            if self.scannerVM.tempStoreCodesArray[indexPath.row].status == "1"{
                 //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
                 if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
                 self.generateEwarranty.isHidden = true
@@ -709,21 +703,21 @@ extension CP_Scanner_VC : UITableViewDelegate, UITableViewDataSource{
                 }
                 self.captureSession.stopRunning()
                 self.statusLabel.text = "Sharon Ply Genuine Product "
-            } else if self.scannerVM.tempStoreCodesArray[indexPath.row].StatusID == "-2"{
+            } else if self.scannerVM.tempStoreCodesArray[indexPath.row].status == "-2"{
                 self.captureSession.stopRunning()
                 if self.scannerVM.checkMessage != "Kindly check download menu for the e-warranty" {
-                    self.statusLabel.text = "This code is already scanned and E - warranty generated by \(self.scannerVM.tempStoreCodesArray[indexPath.row].Membername ?? "")"
+                    self.statusLabel.text = "This code is already scanned and E - warranty generated by \(self.scannerVM.tempStoreCodesArray[indexPath.row].memberName ?? "")"
                 } else {
                     self.statusLabel.text = "Sharon Ply Genuine Product "
                 }
-            } else if self.scannerVM.tempStoreCodesArray[indexPath.row].StatusID == "3" {
+            } else if self.scannerVM.tempStoreCodesArray[indexPath.row].status == "3" {
                     return
-            }else if self.scannerVM.tempStoreCodesArray[indexPath.row].StatusID == "-3" {
+            }else if self.scannerVM.tempStoreCodesArray[indexPath.row].status == "-3" {
                 self.statusLabel.text = "not entitled to Product "
                 return
-        } else if self.scannerVM.tempStoreCodesArray[indexPath.row].StatusID == "5" {
+        } else if self.scannerVM.tempStoreCodesArray[indexPath.row].status == "5" {
                     return
-            } else if self.scannerVM.tempStoreCodesArray[indexPath.row].StatusID == "4" {
+            } else if self.scannerVM.tempStoreCodesArray[indexPath.row].status == "4" {
                 self.captureSession.stopRunning()
                 //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
                 if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
@@ -751,5 +745,18 @@ extension CP_Scanner_VC : UITableViewDelegate, UITableViewDataSource{
                 self.present(vc!, animated: true, completion: nil)
             }
         }
+    }
+}
+
+
+extension CP_Scanner_VC{
+    func codeGenuineAPI(code: String){
+        let parameter : [String : Any] = [
+                "ActionType": 2,
+                "ActorId": userID,
+                "SCRATCH_CODE": code
+        ]
+        
+        self.scannerVM.codeGenuineAPI(parameter: parameter, code: codeTF.text!)
     }
 }

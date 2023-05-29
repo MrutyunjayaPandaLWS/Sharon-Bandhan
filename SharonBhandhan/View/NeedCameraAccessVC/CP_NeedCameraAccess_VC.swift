@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import Toast_Swift
 
-class CP_NeedCameraAccess_VC: SP_Base_VC {
+class CP_NeedCameraAccess_VC: BaseViewController {
     var selectedindex = 0
     @IBOutlet weak var backBTNview: UIView!
     

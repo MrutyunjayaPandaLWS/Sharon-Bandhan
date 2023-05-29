@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class ForgotPasswordViewController: BaseViewController, popUpDelegate, UITextFieldDelegate {
+class ForgotPasswordViewController: BaseViewController, UITextFieldDelegate, popUpDelegate {
     func popupAlertDidTap(_ vc: PopupAlertOne_VC) {
         if self.isSuccess == 1 {
             self.navigationController?.popViewController(animated: true)

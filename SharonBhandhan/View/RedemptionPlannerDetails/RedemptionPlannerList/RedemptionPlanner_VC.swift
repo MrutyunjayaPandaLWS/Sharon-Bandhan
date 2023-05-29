@@ -10,6 +10,9 @@ import SDWebImage
 import Firebase
 import Toast_Swift
 class RedemptionPlanner_VC: BaseViewController, RedemptionPlannerDelegate, popUpDelegate{
+    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {
+    }
+    
    
     @IBOutlet var redemptionPlannerTitleLabel: UILabel!
     @IBOutlet var productsTableView: UITableView!
@@ -84,8 +87,6 @@ class RedemptionPlanner_VC: BaseViewController, RedemptionPlannerDelegate, popUp
         self.navigationController?.pushViewController(vc, animated: true)
     }
     //Delegate:-
-    
-    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
     
     func removeProduct(_ cell: RedemptionPlanner_TVC) {
         guard let tappedIndex = productsTableView.indexPath(for: cell) else{return}

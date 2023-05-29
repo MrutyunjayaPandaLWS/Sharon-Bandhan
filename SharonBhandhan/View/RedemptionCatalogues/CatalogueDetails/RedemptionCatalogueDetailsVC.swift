@@ -9,7 +9,9 @@ import UIKit
 import SDWebImage
 import Firebase
 class RedemptionCatalogueDetailsVC: BaseViewController, popUpDelegate {
-    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
+    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {
+    }
+    
     
 
     @IBOutlet weak var tdsvalue: UILabel!

@@ -4,6 +4,7 @@ PODS:
     - Alamofire (~> 4.9)
   - Crashlytics (3.14.0):
     - Fabric (~> 1.10.2)
+  - DPOTPView (1.5.12)
   - Fabric (1.10.2)
   - Firebase/Analytics (10.7.0):
     - Firebase/Core
@@ -120,8 +121,9 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - Crashlytics (~> 3.14.0)
+  - DPOTPView
   - Firebase/Analytics
-  - Firebase/Core
+  - Firebase/CoreOnly
   - Firebase/Messaging
   - GoogleAnalytics
   - ImageSlideshow/Alamofire
@@ -138,6 +140,7 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - Crashlytics
+    - DPOTPView
     - Fabric
     - Firebase
     - FirebaseAnalytics
@@ -164,6 +167,7 @@ SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
   Crashlytics: 9220f5bc89e7a618df411b4f639389dbfb0e03d2
+  DPOTPView: 28d8a0a84a2ff4b1e4a7712065aba1cbb14e2704
   Fabric: ea977e3cd9c20425516d3dafd3bf8c941c51223f
   Firebase: 0219acf760880eeec8ce479895bd7767466d9f81
   FirebaseAnalytics: f8133442ee6f8512e28ff19e62ce15398bfaeace
@@ -186,6 +190,6 @@ SPEC CHECKSUMS:
   SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: a56305416b246373ed051cf48018cafc4062f105
+PODFILE CHECKSUM: 14850fd06da0632d7dc180a4d46e0a8c5955925a
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0

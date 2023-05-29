@@ -11,9 +11,7 @@ import Photos
 import AVFoundation
 import Firebase
 
-class ChatListViewController: BaseViewController,UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, popUpDelegate {
-    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {
-    }
+class ChatListViewController: BaseViewController,UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     

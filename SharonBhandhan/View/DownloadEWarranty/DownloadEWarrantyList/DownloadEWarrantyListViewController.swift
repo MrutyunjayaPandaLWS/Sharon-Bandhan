@@ -11,9 +11,13 @@ import SafariServices
 import PDFKit
 import Alamofire
 import Firebase
+import AVFoundation
+
 
 class DownloadEWarrantyListViewController: BaseViewController, eWarrantyDelegate, UIDocumentInteractionControllerDelegate, popUpDelegate{
     func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
+    
+    
     
     
 
@@ -156,8 +160,49 @@ class DownloadEWarrantyListViewController: BaseViewController, eWarrantyDelegate
     
     
     @IBAction func addWarranryButton(_ sender: Any) {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SelectProductEWarrantyListViewController") as! SelectProductEWarrantyListViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SelectProductEWarrantyListViewController") as! SelectProductEWarrantyListViewController
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+//                if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "0" == "5" && UserDefaults.standard.string(forKey: "QRCode") ?? "0" == "1"{
+//                    DispatchQueue.main.async{
+//        //                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
+//        //                vc!.delegate = self
+//        //                vc!.titleInfo = ""
+//        //                vc!.descriptionInfo = "Your daily uploading limit exceeded"
+//        //                vc!.modalPresentationStyle = .overCurrentContext
+//        //                vc!.modalTransitionStyle = .crossDissolve
+//        //                self.present(vc!, animated: true, completion: nil)
+//                    }
+//                    return
+//
+//             }else{
+                 if AVCaptureDevice.authorizationStatus(for: AVMediaType.video) ==  AVAuthorizationStatus.authorized {
+                     DispatchQueue.main.async {
+                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CP_Scanner_VC") as? CP_Scanner_VC
+                         vc?.selectedindex = 1
+                         self.navigationController?.pushViewController(vc!, animated: true)
+                     }
+                 } else {
+                     DispatchQueue.main.async {
+                         AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted: Bool) -> Void in
+                             if granted == true {
+                                 DispatchQueue.main.async{
+                                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CP_Scanner_VC") as? CP_Scanner_VC
+                                    vc?.selectedindex = 1
+                                     self.navigationController?.pushViewController(vc!, animated: true)
+                                 }
+                             } else {
+                                 DispatchQueue.main.async{
+                                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CP_NeedCameraAccess_VC") as? CP_NeedCameraAccess_VC
+                                     vc?.selectedindex = 1
+                                     self.navigationController?.pushViewController(vc!, animated: true)
+                                 }
+                             }
+                         })
+                     }
+                 }
+//            }
+        
     }
     
     @IBAction func backButton(_ sender: Any) {

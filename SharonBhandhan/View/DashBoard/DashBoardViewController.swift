@@ -16,7 +16,9 @@ import AVFoundation
 import KSImageCarousel
 import Lottie
 
-class DashBoardViewController: BaseViewController, popUpDelegate {
+class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate {
+    func popUpAlertDidTap2(_ vc: PopUp2ViewController) {}
+    
 
     @IBOutlet var bannerView: ImageSlideshow!
     @IBOutlet var pointsView: UIView!
@@ -176,8 +178,59 @@ class DashBoardViewController: BaseViewController, popUpDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func scanQRCode(_ sender: Any) {
-        if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "0" == "5" && UserDefaults.standard.string(forKey: "QRCode") ?? "0" == "1"{
-            DispatchQueue.main.async{
+//        if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "0" == "5" && UserDefaults.standard.string(forKey: "QRCode") ?? "0" == "1"{
+//            DispatchQueue.main.async{
+////                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
+////                vc!.delegate = self
+////                vc!.titleInfo = ""
+////                vc!.descriptionInfo = "Your daily uploading limit exceeded"
+////                vc!.modalPresentationStyle = .overCurrentContext
+////                vc!.modalTransitionStyle = .crossDissolve
+////                self.present(vc!, animated: true, completion: nil)
+//            }
+//            return
+//
+//     }else{
+//         if AVCaptureDevice.authorizationStatus(for: AVMediaType.video) ==  AVAuthorizationStatus.authorized {
+//             DispatchQueue.main.async {
+//                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CP_Scanner_VC") as? CP_Scanner_VC
+//                 vc?.selectedindex = 1
+//                 self.navigationController?.pushViewController(vc!, animated: true)
+//             }
+//         } else {
+//             DispatchQueue.main.async {
+//                 AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted: Bool) -> Void in
+//                     if granted == true {
+//                         DispatchQueue.main.async{
+//                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CP_Scanner_VC") as? CP_Scanner_VC
+//                            vc?.selectedindex = 1
+//                             self.navigationController?.pushViewController(vc!, animated: true)
+//                         }
+//                     } else {
+//                         DispatchQueue.main.async{
+//                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CP_NeedCameraAccess_VC") as? CP_NeedCameraAccess_VC
+//                             vc?.selectedindex = 1
+//                             self.navigationController?.pushViewController(vc!, animated: true)
+//                         }
+//                     }
+//                 })
+//             }
+//         }
+//    }
+        
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ScanOrUpload_VC") as! ScanOrUpload_VC
+        vc.itsFrom = "ScanCode"
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
+        
+    }
+    @IBAction func uploadCode(_ sender: Any) {
+//        print(UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "0")
+//        print(UserDefaults.standard.string(forKey: "QRCode") ?? "6")
+//
+//        if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "0" == "5" && UserDefaults.standard.string(forKey: "QRCode") ?? "0" == "1"{
+//            DispatchQueue.main.async{
 //                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
 //                vc!.delegate = self
 //                vc!.titleInfo = ""
@@ -185,79 +238,44 @@ class DashBoardViewController: BaseViewController, popUpDelegate {
 //                vc!.modalPresentationStyle = .overCurrentContext
 //                vc!.modalTransitionStyle = .crossDissolve
 //                self.present(vc!, animated: true, completion: nil)
-            }
-            return
-
-     }else{
-         if AVCaptureDevice.authorizationStatus(for: AVMediaType.video) ==  AVAuthorizationStatus.authorized {
-             DispatchQueue.main.async {
-                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CP_Scanner_VC") as? CP_Scanner_VC
-                 vc?.selectedindex = 1
-                 self.navigationController?.pushViewController(vc!, animated: true)
-             }
-         } else {
-             DispatchQueue.main.async {
-                 AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted: Bool) -> Void in
-                     if granted == true {
-                         DispatchQueue.main.async{
-                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CP_Scanner_VC") as? CP_Scanner_VC
-                            vc?.selectedindex = 1
-                             self.navigationController?.pushViewController(vc!, animated: true)
-                         }
-                     } else {
-                         DispatchQueue.main.async{
-                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CP_NeedCameraAccess_VC") as? CP_NeedCameraAccess_VC
-                             vc?.selectedindex = 1
-                             self.navigationController?.pushViewController(vc!, animated: true)
-                         }
-                     }
-                 })
-             }
-         }
-    }
-    }
-    @IBAction func uploadCode(_ sender: Any) {
-        print(UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "0")
-        print(UserDefaults.standard.string(forKey: "QRCode") ?? "6")
-
-        if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "0" == "5" && UserDefaults.standard.string(forKey: "QRCode") ?? "0" == "1"{
-            DispatchQueue.main.async{
-                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
-                vc!.delegate = self
-                vc!.titleInfo = ""
-                vc!.descriptionInfo = "Your daily uploading limit exceeded"
-                vc!.modalPresentationStyle = .overCurrentContext
-                vc!.modalTransitionStyle = .crossDissolve
-                self.present(vc!, animated: true, completion: nil)
-            }
-            return
-
-     }else{
-         if AVCaptureDevice.authorizationStatus(for: AVMediaType.video) ==  AVAuthorizationStatus.authorized {
-             DispatchQueue.main.async {
-                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CP_Scanner_VC") as? CP_Scanner_VC
-                vc?.selectedindex = 2
-                 self.navigationController?.pushViewController(vc!, animated: true)
-             }
-         } else {
-             DispatchQueue.main.async {
-                 AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted: Bool) -> Void in
-                     if granted == true {
-                         DispatchQueue.main.async{
-                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CP_Scanner_VC") as? CP_Scanner_VC
-                             vc?.selectedindex = 2
-                             self.navigationController?.pushViewController(vc!, animated: true)
-                         }
-                     } else {
-                         DispatchQueue.main.async{
-                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CP_NeedCameraAccess_VC") as? CP_NeedCameraAccess_VC
-                             vc?.selectedindex = 2
-                             self.navigationController?.pushViewController(vc!, animated: true)
-                         }
-                     }
-                 })
-             }}
-     }
+//            }
+//            return
+//
+//     }else{
+//         if AVCaptureDevice.authorizationStatus(for: AVMediaType.video) ==  AVAuthorizationStatus.authorized {
+//             DispatchQueue.main.async {
+//                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CP_Scanner_VC") as? CP_Scanner_VC
+//                vc?.selectedindex = 2
+//                 self.navigationController?.pushViewController(vc!, animated: true)
+//             }
+//         } else {
+//             DispatchQueue.main.async {
+//                 AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted: Bool) -> Void in
+//                     if granted == true {
+//                         DispatchQueue.main.async{
+//                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CP_Scanner_VC") as? CP_Scanner_VC
+//                             vc?.selectedindex = 2
+//                             self.navigationController?.pushViewController(vc!, animated: true)
+//                         }
+//                     } else {
+//                         DispatchQueue.main.async{
+//                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CP_NeedCameraAccess_VC") as? CP_NeedCameraAccess_VC
+//                             vc?.selectedindex = 2
+//                             self.navigationController?.pushViewController(vc!, animated: true)
+//                         }
+//                     }
+//                 })
+//             }}
+//     }
+        
+        
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ScanOrUpload_VC") as! ScanOrUpload_VC
+        vc.itsFrom = "UploadCode"
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
+        
+        
 }
     @IBAction func generate_EWarrenty(_ sender: Any) {
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DownloadEWarrantyListViewController") as! DownloadEWarrantyListViewController
@@ -374,7 +392,7 @@ class DashBoardViewController: BaseViewController, popUpDelegate {
     // Api:-
     
     func bannerImagesAPI() {
-        let parameters = ["ObjImageGallery":["AlbumCategoryID":"1"]]
+        let parameters : [String : Any] = ["ObjImageGallery":["AlbumCategoryID":"1"]]
         print(parameters)
         self.vm.dashboardImagesAPICall(parameters: parameters) { response in
             self.bannerImagesArray = response?.objImageGalleryList ?? []
@@ -385,7 +403,7 @@ class DashBoardViewController: BaseViewController, popUpDelegate {
     }
     
     func dashboardAPI() {
-        let parameters = [
+        let parameters : [String : Any] = [
             "ActorId":"\(userID)"
         ]
         print(parameters)

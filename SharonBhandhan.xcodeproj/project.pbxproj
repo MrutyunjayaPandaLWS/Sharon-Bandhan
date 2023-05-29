@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8425C6E729F9248B007E6F29 /* GenerateEwarrantyListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425C6E629F9248B007E6F29 /* GenerateEwarrantyListingViewModel.swift */; };
+		8425C6EA29F92515007E6F29 /* MyprofileDetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425C6E929F92515007E6F29 /* MyprofileDetailsModels.swift */; };
+		8425C6EC29F9254D007E6F29 /* GenerateSubmissionEwarrantyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425C6EB29F9254D007E6F29 /* GenerateSubmissionEwarrantyModels.swift */; };
 		8452CB9D29E3D3120018CCE1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8452CB9F29E3D3120018CCE1 /* Localizable.strings */; };
 		84540A9329E187E600CEE692 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540A9229E187E600CEE692 /* AppDelegate.swift */; };
 		84540A9529E187E600CEE692 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540A9429E187E600CEE692 /* SceneDelegate.swift */; };
@@ -119,9 +122,6 @@
 		84540BDF29E18AD800CEE692 /* RedemptionPlannerDetails_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540B6D29E18AD700CEE692 /* RedemptionPlannerDetails_VC.swift */; };
 		84540BE029E18AD800CEE692 /* RedemptionPlanner_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540B6F29E18AD700CEE692 /* RedemptionPlanner_TVC.swift */; };
 		84540BE129E18AD800CEE692 /* RedemptionPlanner_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540B7029E18AD700CEE692 /* RedemptionPlanner_VC.swift */; };
-		84540BE229E18AD800CEE692 /* HistoryNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540B7229E18AD700CEE692 /* HistoryNotificationsViewController.swift */; };
-		84540BE329E18AD800CEE692 /* HistoryNotificationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84540B7329E18AD700CEE692 /* HistoryNotificationsTableViewCell.xib */; };
-		84540BE429E18AD800CEE692 /* HistoryNotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540B7429E18AD700CEE692 /* HistoryNotificationsTableViewCell.swift */; };
 		84540BE529E18AD800CEE692 /* SidemenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540B7629E18AD700CEE692 /* SidemenuTableViewCell.swift */; };
 		84540BE629E18AD800CEE692 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540B7729E18AD700CEE692 /* SideMenuViewController.swift */; };
 		84540BE729E18AD800CEE692 /* SidemenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84540B7829E18AD700CEE692 /* SidemenuTableViewCell.xib */; };
@@ -274,6 +274,16 @@
 		84540D6A29E18E1500CEE692 /* MyCommonFunctionalUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540D5F29E18E1400CEE692 /* MyCommonFunctionalUtilities.swift */; };
 		84540D6B29E18E1500CEE692 /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540D6029E18E1400CEE692 /* WebClient.swift */; };
 		84540D6C29E18E1500CEE692 /* URLMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540D6129E18E1400CEE692 /* URLMethods.swift */; };
+		847EB14329F7F388004AF0D8 /* CodeGenuineModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EB14229F7F388004AF0D8 /* CodeGenuineModels.swift */; };
+		847EB14829F806C5004AF0D8 /* GenerateEWarrantyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847EB14529F806C2004AF0D8 /* GenerateEWarrantyTableViewCell.xib */; };
+		847EB14929F806C5004AF0D8 /* GenerateEWarrantyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EB14629F806C3004AF0D8 /* GenerateEWarrantyTableViewCell.swift */; };
+		847EB14A29F806C5004AF0D8 /* GnerateEWarrantyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EB14729F806C5004AF0D8 /* GnerateEWarrantyViewController.swift */; };
+		8482D09A2A22076900D6B696 /* QrUsegereport1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482D0982A22076800D6B696 /* QrUsegereport1.swift */; };
+		8482D09B2A22076900D6B696 /* EWarrentyScannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482D0992A22076900D6B696 /* EWarrentyScannerModel.swift */; };
+		849E84A42A177553006F0ED8 /* HistoryNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E84A12A177550006F0ED8 /* HistoryNotificationsViewController.swift */; };
+		849E84A52A177553006F0ED8 /* HistoryNotificationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849E84A22A177551006F0ED8 /* HistoryNotificationsTableViewCell.xib */; };
+		849E84A62A177553006F0ED8 /* HistoryNotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E84A32A177553006F0ED8 /* HistoryNotificationsTableViewCell.swift */; };
+		849E84A92A1795F1006F0ED8 /* ProfileImageUpdateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E84A82A1795F1006F0ED8 /* ProfileImageUpdateModel.swift */; };
 		84A0519F29E523EA0025D800 /* CP_NeedCameraAccess_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A0519E29E523EA0025D800 /* CP_NeedCameraAccess_VC.swift */; };
 		84A051A429E524080025D800 /* CP_CodesScanned_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A051A129E524080025D800 /* CP_CodesScanned_TVC.swift */; };
 		84A051A529E524080025D800 /* CP_Scanner_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A051A229E524080025D800 /* CP_Scanner_VC.swift */; };
@@ -330,6 +340,9 @@
 /* Begin PBXFileReference section */
 		049A65600A4EA0C1BD1516BD /* Pods-SharonBhandhan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharonBhandhan.release.xcconfig"; path = "Target Support Files/Pods-SharonBhandhan/Pods-SharonBhandhan.release.xcconfig"; sourceTree = "<group>"; };
 		2CFFFCA1C451857E52319146 /* Pods-SharonBhandhan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharonBhandhan.debug.xcconfig"; path = "Target Support Files/Pods-SharonBhandhan/Pods-SharonBhandhan.debug.xcconfig"; sourceTree = "<group>"; };
+		8425C6E629F9248B007E6F29 /* GenerateEwarrantyListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateEwarrantyListingViewModel.swift; sourceTree = "<group>"; };
+		8425C6E929F92515007E6F29 /* MyprofileDetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyprofileDetailsModels.swift; sourceTree = "<group>"; };
+		8425C6EB29F9254D007E6F29 /* GenerateSubmissionEwarrantyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateSubmissionEwarrantyModels.swift; sourceTree = "<group>"; };
 		8452CB9529E3D2C10018CCE1 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Main.strings; sourceTree = "<group>"; };
 		8452CB9629E3D2C10018CCE1 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8452CB9729E3D2D20018CCE1 /* bn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bn; path = bn.lproj/Main.strings; sourceTree = "<group>"; };
@@ -455,9 +468,6 @@
 		84540B6D29E18AD700CEE692 /* RedemptionPlannerDetails_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedemptionPlannerDetails_VC.swift; sourceTree = "<group>"; };
 		84540B6F29E18AD700CEE692 /* RedemptionPlanner_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedemptionPlanner_TVC.swift; sourceTree = "<group>"; };
 		84540B7029E18AD700CEE692 /* RedemptionPlanner_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedemptionPlanner_VC.swift; sourceTree = "<group>"; };
-		84540B7229E18AD700CEE692 /* HistoryNotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNotificationsViewController.swift; sourceTree = "<group>"; };
-		84540B7329E18AD700CEE692 /* HistoryNotificationsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryNotificationsTableViewCell.xib; sourceTree = "<group>"; };
-		84540B7429E18AD700CEE692 /* HistoryNotificationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNotificationsTableViewCell.swift; sourceTree = "<group>"; };
 		84540B7629E18AD700CEE692 /* SidemenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidemenuTableViewCell.swift; sourceTree = "<group>"; };
 		84540B7729E18AD700CEE692 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		84540B7829E18AD700CEE692 /* SidemenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SidemenuTableViewCell.xib; sourceTree = "<group>"; };
@@ -610,6 +620,16 @@
 		84540D5F29E18E1400CEE692 /* MyCommonFunctionalUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCommonFunctionalUtilities.swift; sourceTree = "<group>"; };
 		84540D6029E18E1400CEE692 /* WebClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebClient.swift; sourceTree = "<group>"; };
 		84540D6129E18E1400CEE692 /* URLMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLMethods.swift; sourceTree = "<group>"; };
+		847EB14229F7F388004AF0D8 /* CodeGenuineModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGenuineModels.swift; sourceTree = "<group>"; };
+		847EB14529F806C2004AF0D8 /* GenerateEWarrantyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenerateEWarrantyTableViewCell.xib; sourceTree = "<group>"; };
+		847EB14629F806C3004AF0D8 /* GenerateEWarrantyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateEWarrantyTableViewCell.swift; sourceTree = "<group>"; };
+		847EB14729F806C5004AF0D8 /* GnerateEWarrantyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnerateEWarrantyViewController.swift; sourceTree = "<group>"; };
+		8482D0982A22076800D6B696 /* QrUsegereport1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrUsegereport1.swift; sourceTree = "<group>"; };
+		8482D0992A22076900D6B696 /* EWarrentyScannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EWarrentyScannerModel.swift; sourceTree = "<group>"; };
+		849E84A12A177550006F0ED8 /* HistoryNotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNotificationsViewController.swift; sourceTree = "<group>"; };
+		849E84A22A177551006F0ED8 /* HistoryNotificationsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryNotificationsTableViewCell.xib; sourceTree = "<group>"; };
+		849E84A32A177553006F0ED8 /* HistoryNotificationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNotificationsTableViewCell.swift; sourceTree = "<group>"; };
+		849E84A82A1795F1006F0ED8 /* ProfileImageUpdateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageUpdateModel.swift; sourceTree = "<group>"; };
 		84A0519E29E523EA0025D800 /* CP_NeedCameraAccess_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CP_NeedCameraAccess_VC.swift; sourceTree = "<group>"; };
 		84A051A129E524080025D800 /* CP_CodesScanned_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CP_CodesScanned_TVC.swift; sourceTree = "<group>"; };
 		84A051A229E524080025D800 /* CP_Scanner_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CP_Scanner_VC.swift; sourceTree = "<group>"; };
@@ -668,6 +688,22 @@
 				D0F6E6A16AFF1848A5F11A1D /* Pods_SharonBhandhan.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8425C6E529F9247B007E6F29 /* GenerateEwarrantyListingViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8425C6E629F9248B007E6F29 /* GenerateEwarrantyListingViewModel.swift */,
+			);
+			path = GenerateEwarrantyListingViewModel;
+			sourceTree = "<group>";
+		};
+		8425C6E829F92509007E6F29 /* MyprofileDetailsModels */ = {
+			isa = PBXGroup;
+			children = (
+				8425C6E929F92515007E6F29 /* MyprofileDetailsModels.swift */,
+			);
+			path = MyprofileDetailsModels;
 			sourceTree = "<group>";
 		};
 		84540A8629E187E600CEE692 = {
@@ -729,6 +765,10 @@
 		84540AC529E18A4F00CEE692 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8482D0952A21FA8700D6B696 /* E-WarrentyScannerModel */,
+				849E84A72A1795CE006F0ED8 /* ProfileImageUpdateModel */,
+				8425C6E829F92509007E6F29 /* MyprofileDetailsModels */,
+				847EB14129F7F37A004AF0D8 /* CodeGenuineModels */,
 				84540CAC29E18B0400CEE692 /* AddedToCartModels */,
 				84540CA029E18B0300CEE692 /* AddedToPlannerModels */,
 				84540CDF29E18B0500CEE692 /* AreaListModels */,
@@ -770,6 +810,7 @@
 				84540CEB29E18B0500CEE692 /* StateList */,
 				84540CF029E18B0500CEE692 /* Sync Status Models */,
 				84540C9429E18B0300CEE692 /* UserIsActive */,
+				8425C6EB29F9254D007E6F29 /* GenerateSubmissionEwarrantyModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -777,6 +818,7 @@
 		84540AC629E18A5600CEE692 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				847EB14429F806A7004AF0D8 /* GenerateEWarrantyView */,
 				84A051AA29E526470025D800 /* PopUpView */,
 				84A051A029E524080025D800 /* ScanORUploadView */,
 				84A0519D29E523EA0025D800 /* NeedCameraAccessVC */,
@@ -807,8 +849,8 @@
 				84540B6629E18AD700CEE692 /* Profile */,
 				84540B3329E18AD600CEE692 /* RedemptionCatalogues */,
 				84540B6B29E18AD700CEE692 /* RedemptionPlannerDetails */,
+				849E84A02A17354C006F0ED8 /* Tab bar */,
 				84540B7529E18AD700CEE692 /* SideMenu */,
-				84540B5E29E18AD700CEE692 /* Tabbar_VC.swift */,
 				84540B3029E18AD600CEE692 /* TaxRelatedPopupViewController.swift */,
 				84540B0A29E18AD600CEE692 /* Terms&Conditions */,
 				84540B6829E18AD700CEE692 /* UniqueFeatures */,
@@ -820,6 +862,7 @@
 		84540AC729E18A5F00CEE692 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8425C6E529F9247B007E6F29 /* GenerateEwarrantyListingViewModel */,
 				84A051A729E525640025D800 /* ScannerVM */,
 				84540C5329E18AEF00CEE692 /* AddFollower */,
 				84540C1B29E18AEE00CEE692 /* CatalogueDetails */,
@@ -1104,8 +1147,8 @@
 		84540B2D29E18AD600CEE692 /* CreateNewQuery */ = {
 			isa = PBXGroup;
 			children = (
-				84540B2E29E18AD600CEE692 /* customerqueryTableViewCell.swift */,
 				84540B2F29E18AD600CEE692 /* CreateNewQueryViewController.swift */,
+				84540B2E29E18AD600CEE692 /* customerqueryTableViewCell.swift */,
 			);
 			path = CreateNewQuery;
 			sourceTree = "<group>";
@@ -1151,8 +1194,8 @@
 		84540B3829E18AD600CEE692 /* MyCart */ = {
 			isa = PBXGroup;
 			children = (
-				84540B3929E18AD600CEE692 /* MyCart_TVC.swift */,
 				84540B3A29E18AD600CEE692 /* MyCart_VC.swift */,
+				84540B3929E18AD600CEE692 /* MyCart_TVC.swift */,
 			);
 			path = MyCart;
 			sourceTree = "<group>";
@@ -1247,9 +1290,9 @@
 		84540B5429E18AD700CEE692 /* MyRedemption */ = {
 			isa = PBXGroup;
 			children = (
-				84540B5529E18AD700CEE692 /* MyRedemptionsTableViewCell.xib */,
-				84540B5629E18AD700CEE692 /* MyRedemptionsTableViewCell.swift */,
 				84540B5729E18AD700CEE692 /* MyRedemptionsListViewController.swift */,
+				84540B5629E18AD700CEE692 /* MyRedemptionsTableViewCell.swift */,
+				84540B5529E18AD700CEE692 /* MyRedemptionsTableViewCell.xib */,
 			);
 			path = MyRedemption;
 			sourceTree = "<group>";
@@ -1336,9 +1379,9 @@
 		84540B7129E18AD700CEE692 /* HistoryNotifications */ = {
 			isa = PBXGroup;
 			children = (
-				84540B7229E18AD700CEE692 /* HistoryNotificationsViewController.swift */,
-				84540B7329E18AD700CEE692 /* HistoryNotificationsTableViewCell.xib */,
-				84540B7429E18AD700CEE692 /* HistoryNotificationsTableViewCell.swift */,
+				849E84A32A177553006F0ED8 /* HistoryNotificationsTableViewCell.swift */,
+				849E84A22A177551006F0ED8 /* HistoryNotificationsTableViewCell.xib */,
+				849E84A12A177550006F0ED8 /* HistoryNotificationsViewController.swift */,
 			);
 			path = HistoryNotifications;
 			sourceTree = "<group>";
@@ -1346,8 +1389,8 @@
 		84540B7529E18AD700CEE692 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				84540B7629E18AD700CEE692 /* SidemenuTableViewCell.swift */,
 				84540B7729E18AD700CEE692 /* SideMenuViewController.swift */,
+				84540B7629E18AD700CEE692 /* SidemenuTableViewCell.swift */,
 				84540B7829E18AD700CEE692 /* SidemenuTableViewCell.xib */,
 			);
 			path = SideMenu;
@@ -2302,6 +2345,49 @@
 			path = CommonUtilities;
 			sourceTree = "<group>";
 		};
+		847EB14129F7F37A004AF0D8 /* CodeGenuineModels */ = {
+			isa = PBXGroup;
+			children = (
+				847EB14229F7F388004AF0D8 /* CodeGenuineModels.swift */,
+			);
+			path = CodeGenuineModels;
+			sourceTree = "<group>";
+		};
+		847EB14429F806A7004AF0D8 /* GenerateEWarrantyView */ = {
+			isa = PBXGroup;
+			children = (
+				847EB14729F806C5004AF0D8 /* GnerateEWarrantyViewController.swift */,
+				847EB14629F806C3004AF0D8 /* GenerateEWarrantyTableViewCell.swift */,
+				847EB14529F806C2004AF0D8 /* GenerateEWarrantyTableViewCell.xib */,
+			);
+			path = GenerateEWarrantyView;
+			sourceTree = "<group>";
+		};
+		8482D0952A21FA8700D6B696 /* E-WarrentyScannerModel */ = {
+			isa = PBXGroup;
+			children = (
+				8482D0992A22076900D6B696 /* EWarrentyScannerModel.swift */,
+				8482D0982A22076800D6B696 /* QrUsegereport1.swift */,
+			);
+			path = "E-WarrentyScannerModel";
+			sourceTree = "<group>";
+		};
+		849E84A02A17354C006F0ED8 /* Tab bar */ = {
+			isa = PBXGroup;
+			children = (
+				84540B5E29E18AD700CEE692 /* Tabbar_VC.swift */,
+			);
+			path = "Tab bar";
+			sourceTree = "<group>";
+		};
+		849E84A72A1795CE006F0ED8 /* ProfileImageUpdateModel */ = {
+			isa = PBXGroup;
+			children = (
+				849E84A82A1795F1006F0ED8 /* ProfileImageUpdateModel.swift */,
+			);
+			path = ProfileImageUpdateModel;
+			sourceTree = "<group>";
+		};
 		84A0519D29E523EA0025D800 /* NeedCameraAccessVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -2503,15 +2589,16 @@
 				84540BE729E18AD800CEE692 /* SidemenuTableViewCell.xib in Resources */,
 				84540BA229E18AD800CEE692 /* SelectProductEWarrantyListTableViewCell.xib in Resources */,
 				84540BCF29E18AD800CEE692 /* MyRedemptionsTableViewCell.xib in Resources */,
+				847EB14829F806C5004AF0D8 /* GenerateEWarrantyTableViewCell.xib in Resources */,
 				84540BAA29E18AD800CEE692 /* otherInfoTableViewCell.xib in Resources */,
 				84540BAD29E18AD800CEE692 /* otherImageTableViewCell.xib in Resources */,
 				84540AEB29E18AAE00CEE692 /* uniqueFeatures.html in Resources */,
-				84540BE329E18AD800CEE692 /* HistoryNotificationsTableViewCell.xib in Resources */,
 				84540BAC29E18AD800CEE692 /* senderInfoTableViewCell.xib in Resources */,
 				8452CB9D29E3D3120018CCE1 /* Localizable.strings in Resources */,
 				84540BB329E18AD800CEE692 /* otherInfoImageTableViewCell.xib in Resources */,
 				84540BA629E18AD800CEE692 /* DownloadListTableViewCell.xib in Resources */,
 				84540BEA29E18AD800CEE692 /* MyEarningsTableViewCell.xib in Resources */,
+				849E84A52A177553006F0ED8 /* HistoryNotificationsTableViewCell.xib in Resources */,
 				84540BA929E18AD800CEE692 /* senderInfoImageTableViewCell.xib in Resources */,
 				84540B8F29E18AD800CEE692 /* DreamGiftTableViewCell.xib in Resources */,
 				84A7BB7E29E3F4E500896FA1 /* GoogleService-Info.plist in Resources */,
@@ -2628,6 +2715,8 @@
 				84540C7529E18AF000CEE692 /* OffersListViewModel.swift in Sources */,
 				84A051AF29E526570025D800 /* PopUp2ViewController.swift in Sources */,
 				84540BCC29E18AD800CEE692 /* CodeSubmissionPopUp.swift in Sources */,
+				849E84A92A1795F1006F0ED8 /* ProfileImageUpdateModel.swift in Sources */,
+				849E84A62A177553006F0ED8 /* HistoryNotificationsTableViewCell.swift in Sources */,
 				84540D6829E18E1500CEE692 /* ServiceError.swift in Sources */,
 				84540D1229E18B0600CEE692 /* AddToPlannerModel.swift in Sources */,
 				84540D6C29E18E1500CEE692 /* URLMethods.swift in Sources */,
@@ -2643,6 +2732,7 @@
 				84540D2429E18B0600CEE692 /* CityListModels.swift in Sources */,
 				84540BEC29E18AD800CEE692 /* MyEarningsViewController.swift in Sources */,
 				84540D0D29E18B0600CEE692 /* RedemptionCategoryModels.swift in Sources */,
+				849E84A42A177553006F0ED8 /* HistoryNotificationsViewController.swift in Sources */,
 				84540C7A29E18AF000CEE692 /* CodeStatusViewModel.swift in Sources */,
 				84540D6729E18E1500CEE692 /* ApiUrls.swift in Sources */,
 				84540D4B29E18B0600CEE692 /* SendSMSModel.swift in Sources */,
@@ -2691,6 +2781,7 @@
 				84540B8D29E18AD800CEE692 /* DreamGiftTableViewCell.swift in Sources */,
 				84540D6929E18E1500CEE692 /* RequestMethod.swift in Sources */,
 				84540AEF29E18AAE00CEE692 /* PersistanceService.swift in Sources */,
+				847EB14929F806C5004AF0D8 /* GenerateEWarrantyTableViewCell.swift in Sources */,
 				84540D4429E18B0600CEE692 /* NewChatSubmission.swift in Sources */,
 				84540C5E29E18AF000CEE692 /* LoginViewModel.swift in Sources */,
 				84540D2629E18B0600CEE692 /* LstPushHistoryJson.swift in Sources */,
@@ -2706,11 +2797,13 @@
 				84540C7029E18AF000CEE692 /* RedemptionsCatalogueListViewModel.swift in Sources */,
 				84540D2E29E18B0600CEE692 /* RemoveGiftModels.swift in Sources */,
 				84540BCE29E18AD800CEE692 /* CodesListTVC.swift in Sources */,
+				8482D09A2A22076900D6B696 /* QrUsegereport1.swift in Sources */,
 				84540D1E29E18B0600CEE692 /* NewQuerySubmission.swift in Sources */,
 				84540D0329E18B0600CEE692 /* ObjActivityDetailsJsonList.swift in Sources */,
 				84540D0029E18B0600CEE692 /* LstEWarranty2.swift in Sources */,
 				84540C7B29E18AF000CEE692 /* ProfileViewModel.swift in Sources */,
 				84540C8529E18AF000CEE692 /* FollowerListViewModel.swift in Sources */,
+				847EB14A29F806C5004AF0D8 /* GnerateEWarrantyViewController.swift in Sources */,
 				84540D3D29E18B0600CEE692 /* ObjCatalogueRedemReqList.swift in Sources */,
 				84540D3729E18B0600CEE692 /* ObjImageGalleryList.swift in Sources */,
 				84540D1C29E18B0600CEE692 /* RemoveCartModel.swift in Sources */,
@@ -2729,6 +2822,7 @@
 				84540D2729E18B0600CEE692 /* MyProfileModels.swift in Sources */,
 				84540BC629E18AD800CEE692 /* DropDownVC.swift in Sources */,
 				84540BDB29E18AD800CEE692 /* CreateNewFollowerViewController.swift in Sources */,
+				847EB14329F7F388004AF0D8 /* CodeGenuineModels.swift in Sources */,
 				84540ADF29E18AAE00CEE692 /* CircularProgressBar.swift in Sources */,
 				84540B9B29E18AD800CEE692 /* GetpanDetails.swift in Sources */,
 				84540D0B29E18B0600CEE692 /* ScannedandUploadCodesModels.swift in Sources */,
@@ -2748,7 +2842,6 @@
 				84540D0A29E18B0600CEE692 /* UserStatusModels.swift in Sources */,
 				84540D1129E18B0600CEE692 /* ObjQueryResponseJsonList.swift in Sources */,
 				84540C8729E18AF000CEE692 /* ForgotPasswordViewModel.swift in Sources */,
-				84540BE429E18AD800CEE692 /* HistoryNotificationsTableViewCell.swift in Sources */,
 				84540BD529E18AD800CEE692 /* FilterByStatusPopUpVC.swift in Sources */,
 				84540AE429E18AAE00CEE692 /* TapGestureExtension.swift in Sources */,
 				84540D0129E18B0600CEE692 /* DownloadEWarranty.swift in Sources */,
@@ -2777,9 +2870,9 @@
 				84540BC729E18AD800CEE692 /* DropDownTVC.swift in Sources */,
 				84540D4629E18B0600CEE692 /* QrUsegereport.swift in Sources */,
 				84540BCA29E18AD800CEE692 /* ScannedCodes_VC.swift in Sources */,
+				8482D09B2A22076900D6B696 /* EWarrentyScannerModel.swift in Sources */,
 				84540B9E29E18AD800CEE692 /* TermsAndConditionsVC.swift in Sources */,
 				84540D2329E18B0600CEE692 /* CityList.swift in Sources */,
-				84540BE229E18AD800CEE692 /* HistoryNotificationsViewController.swift in Sources */,
 				84540AE529E18AAE00CEE692 /* ImageExtension.swift in Sources */,
 				84540BCB29E18AD800CEE692 /* ScannedCode_TVC.swift in Sources */,
 				84540D4329E18B0600CEE692 /* StateList.swift in Sources */,
@@ -2798,6 +2891,7 @@
 				84540AE029E18AAE00CEE692 /* Date+Extension.swift in Sources */,
 				84540C7929E18AF000CEE692 /* CodeSummaryViewModel.swift in Sources */,
 				84540D6529E18E1500CEE692 /* Reachability.swift in Sources */,
+				8425C6E729F9248B007E6F29 /* GenerateEwarrantyListingViewModel.swift in Sources */,
 				84540D3F29E18B0600CEE692 /* PlannerListModels.swift in Sources */,
 				84540B9729E18AD800CEE692 /* PanModels.swift in Sources */,
 				84540BAB29E18AD800CEE692 /* senderInfoTableViewCell.swift in Sources */,
@@ -2813,6 +2907,7 @@
 				84540AE729E18AAE00CEE692 /* ViewExtension.swift in Sources */,
 				84540C7829E18AF000CEE692 /* SyncStatusViewModel.swift in Sources */,
 				84540D4C29E18B0600CEE692 /* E_WarrantyListingModel.swift in Sources */,
+				8425C6EC29F9254D007E6F29 /* GenerateSubmissionEwarrantyModels.swift in Sources */,
 				84540D1729E18B0600CEE692 /* MyCartModels.swift in Sources */,
 				84540C6129E18AF000CEE692 /* CreateNewQueryViewModel.swift in Sources */,
 				84540D6629E18E1500CEE692 /* Reach.swift in Sources */,
@@ -2825,6 +2920,7 @@
 				84540D2B29E18B0600CEE692 /* LstCustomerIdentityInfo.swift in Sources */,
 				84540BE929E18AD800CEE692 /* CodeStatusTVC.swift in Sources */,
 				84540D0229E18B0600CEE692 /* LstScannedCode.swift in Sources */,
+				8425C6EA29F92515007E6F29 /* MyprofileDetailsModels.swift in Sources */,
 				84540D2229E18B0600CEE692 /* MemberVerificationModels.swift in Sources */,
 				84540BD929E18AD800CEE692 /* FollowerListViewController.swift in Sources */,
 				84540C5F29E18AF000CEE692 /* ChatListViewModel.swift in Sources */,
@@ -3060,11 +3156,15 @@
 				DEVELOPMENT_TEAM = 2HG885J5KS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SharonBhandhan/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Sharon Bandhan Need to Access the camera to upload profile Image and Customer support";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Sharon Bhandhan Application\" wants to determine your location to understand you are a genuine customer, tagged to a Century Retailer Location.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Sharon Bandhan Need to Access the Photo Library to upload profile Image  and Customer support";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3094,11 +3194,15 @@
 				DEVELOPMENT_TEAM = 2HG885J5KS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SharonBhandhan/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Sharon Bandhan Need to Access the camera to upload profile Image and Customer support";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Sharon Bhandhan Application\" wants to determine your location to understand you are a genuine customer, tagged to a Century Retailer Location.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Sharon Bandhan Need to Access the Photo Library to upload profile Image  and Customer support";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

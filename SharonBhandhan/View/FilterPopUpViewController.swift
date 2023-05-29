@@ -12,7 +12,9 @@ protocol FilterDelegate {
 }
 
 
-class FilterPopUpViewController: BaseViewController, DateSelectedDelegate, popUpDelegate, StatusDelegate{
+class FilterPopUpViewController: BaseViewController, DateSelectedDelegate, StatusDelegate, popUpDelegate{
+    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
+    
     func selectStatus(_ vc: FilterByStatusPopUpVC) {
       
         self.selectedStatusId = vc.statusId
@@ -24,7 +26,6 @@ class FilterPopUpViewController: BaseViewController, DateSelectedDelegate, popUp
         
     }
     
-    func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
     
     func acceptDate(_ vc: DOBVC) {
         if vc.isComeFrom == "1"{

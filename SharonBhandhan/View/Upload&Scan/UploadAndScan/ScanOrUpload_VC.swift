@@ -15,11 +15,13 @@ import AVFoundation
 import CoreLocation
 import CoreData
 import Firebase
+import Lottie
 
 class ScanOrUpload_VC: BaseViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UNUserNotificationCenterDelegate, CLLocationManagerDelegate, UITextFieldDelegate, popUpDelegate {
     func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
     
 
+    @IBOutlet weak var scanAnimationView: LottieAnimationView!
     @IBOutlet var codeCountView: UIView!
     @IBOutlet var countLabel: UILabel!
     @IBOutlet var scannerView: UIView!

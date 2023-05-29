@@ -10,8 +10,9 @@ import Toast_Swift
 protocol submitQRDelegate: class {
     func DidTap(_ vc: SubmitQRCodesViewController)
 }
-class SubmitQRCodesViewController: SP_Base_VC, UITextFieldDelegate, PopUpDelegate {
-    func popUpAlertDidTap(_ vc: PopUp2ViewController) {}
+class SubmitQRCodesViewController: BaseViewController, UITextFieldDelegate, PopUpDelegate {
+    func popUpAlertDidTap2(_ vc: PopUp2ViewController) {}
+    
     
 
     @IBOutlet weak var currentAddress: UITextField!
