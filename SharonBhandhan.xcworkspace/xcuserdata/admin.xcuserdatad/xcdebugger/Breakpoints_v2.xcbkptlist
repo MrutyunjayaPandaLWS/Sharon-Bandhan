@@ -3,4 +3,278 @@
    uuid = "08D853A8-A23E-4D1B-81A0-A91C79B6BABA"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A0E934B5-0793-404A-B44B-585A6AF4B605"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharonBhandhan/ViewModel/ScannerVM/ScannerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "codeGenuineAPI(code:parameter:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A0E934B5-0793-404A-B44B-585A6AF4B605 - 3688b05f85c08cbf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;SharonBhandhan.EWarrentyScannerModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.ScannerViewModel.codeGenuineAPI(code: Swift.String, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/ViewModel/ScannerVM/ScannerViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "3912">
+               </Location>
+               <Location
+                  uuid = "A0E934B5-0793-404A-B44B-585A6AF4B605 - f8d507e56fe3a0ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;SharonBhandhan.EWarrentyScannerModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.ScannerViewModel.codeGenuineAPI(code: Swift.String, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/ViewModel/ScannerVM/ScannerViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "180">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C3E2241-36DD-4059-A3A8-96154CEC2688"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharonBhandhan/View/GenerateEWarrantyView/GnerateEWarrantyViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "DidTap(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5C3E2241-36DD-4059-A3A8-96154CEC2688 - 632025fcf71fda94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.GnerateEWarrantyViewController.DidTap(SharonBhandhan.SubmitQRCodesViewController) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/GenerateEWarrantyView/GnerateEWarrantyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "5C3E2241-36DD-4059-A3A8-96154CEC2688 - 632025fcf71fdad6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.GnerateEWarrantyViewController.DidTap(SharonBhandhan.SubmitQRCodesViewController) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/GenerateEWarrantyView/GnerateEWarrantyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "4680">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23CBA969-22AC-4187-99DD-548E6B6D475A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharonBhandhan/View/GenerateEWarrantyView/GnerateEWarrantyViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "selfDidTap(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "23CBA969-22AC-4187-99DD-548E6B6D475A - efeb6c8939324d0f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.GnerateEWarrantyViewController.selfDidTap(SharonBhandhan.Popup4ViewController) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/GenerateEWarrantyView/GnerateEWarrantyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "23CBA969-22AC-4187-99DD-548E6B6D475A - efeb6c8939324c45"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.GnerateEWarrantyViewController.selfDidTap(SharonBhandhan.Popup4ViewController) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/GenerateEWarrantyView/GnerateEWarrantyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "13524">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30582CE4-EA3C-4840-B3D0-8EAF84B68BBE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharonBhandhan/View/GenerateEWarrantyView/GnerateEWarrantyViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "GenerateBtn(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "30582CE4-EA3C-4840-B3D0-8EAF84B68BBE - 9545d1262df7af0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.GnerateEWarrantyViewController.GenerateBtn(SharonBhandhan.GenerateEWarrantyTableViewCell) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/GenerateEWarrantyView/GnerateEWarrantyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "800">
+               </Location>
+               <Location
+                  uuid = "30582CE4-EA3C-4840-B3D0-8EAF84B68BBE - 9545d1262df7ae12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.GnerateEWarrantyViewController.GenerateBtn(SharonBhandhan.GenerateEWarrantyTableViewCell) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/GenerateEWarrantyView/GnerateEWarrantyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "916">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C94D0C22-0915-4B6C-8554-04EC2EB332DE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharonBhandhan/ViewModel/ScannerVM/ScannerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "codeGenuineAPI(code:parameter:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C94D0C22-0915-4B6C-8554-04EC2EB332DE - 3688b05f85c09ec6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;SharonBhandhan.EWarrentyScannerModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.ScannerViewModel.codeGenuineAPI(code: Swift.String, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/ViewModel/ScannerVM/ScannerViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "9748">
+               </Location>
+               <Location
+                  uuid = "C94D0C22-0915-4B6C-8554-04EC2EB332DE - c807e2f7b4e87a23"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #10 (SharonBhandhan.QrUsegereport1) -&gt; Swift.Bool in closure #1 (Swift.Optional&lt;SharonBhandhan.EWarrentyScannerModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.ScannerViewModel.codeGenuineAPI(code: Swift.String, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/ViewModel/ScannerVM/ScannerViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23693085-9649-46AB-B34E-7DBDAB9C6C93"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharonBhandhan/View/DashBoard/DashBoardViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F17A3A33-3E0D-4E30-BBD8-1F6092322DA8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharonBhandhan/View/SideMenu/SideMenuViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
+            landmarkName = "dashboardAPI()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

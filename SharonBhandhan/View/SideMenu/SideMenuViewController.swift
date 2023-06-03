@@ -37,9 +37,9 @@ class SideMenuViewController: BaseViewController, popUpDelegate {
     var sideMenuListArray =  [MenuMaster]()
     var parameters: JSON?
                                  
-    var sideMenuListArray1 = ["Home","Scan QR Code","Upload QR Code","Generate E-warranty","My dream gift","Redemption catelogue","My Earning","My Redemption","Redemption Planner" ,"Offers and Promotions","My Benefits","Unique Features","Lodge Query","Helpline Call","Terms and condition"]
+    var sideMenuListArray1 = ["Home","Scan QR Code","Upload QR Code","Code Status","Generate E-warranty","My dream gift","Redemption catelogue","My Earning","My Redemption","Redemption Planner" ,"Offers and Promotions","My Benefits","Unique Features","Lodge Query","Helpline Call","Terms and condition"]
 //    var sideMenyImagesArray = ["home 2", "qr 2", "uploadalt 2", "time-interval 2", "certificatealt 2", "gift 2", "bxs-coin-stack 2", "reademailalt 2", "calendar3-fill 2", "bxs-offer 2", "thumbs-up-solid 2", "social-buffer 2", "query 2", "headset 2", "document-text-sharp 2"]
-    var sideMenuListImageArray = ["home 2","qr 2","uploadalt 2","certificatealt 2","gift 2","card-giftcard 2","bxs-coin-stack 2","reademailalt 2","calendar3-fill 2","bxs-offer 2","thumbs-up-solid 2","social-buffer 2","query 2","headset 2","document-text-sharp 2"]
+    var sideMenuListImageArray = ["home 2","qr 2","uploadalt 2","time-interval 2","certificatealt 2","gift 2","card-giftcard 2","bxs-coin-stack 2","reademailalt 2","calendar3-fill 2","bxs-offer 2","thumbs-up-solid 2","social-buffer 2","query 2","headset 2","document-text-sharp 2"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -588,7 +588,7 @@ extension SideMenuViewController : UITableViewDelegate, UITableViewDataSource{
                 vc.modalTransitionStyle = .crossDissolve
                 vc.modalPresentationStyle = .overFullScreen
                 self.present(vc, animated: true, completion: nil)
-            }else if sideMenuListArray1[indexPath.row] == ""{
+            }else if sideMenuListArray1[indexPath.row] == "Code Status"{
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CodeStatusListVC") as! CodeStatusListVC
                 vc.fromSideMenu = "SideMenu"
                 self.navigationController?.pushViewController(vc, animated: true)

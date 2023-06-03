@@ -406,6 +406,7 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
         let parameters : [String : Any] = [
             "ActorId":"\(userID)"
         ]
+
         print(parameters)
         self.vm.dashboardAPICall(parameters: parameters) { response in
             if response?.activeStatus == false {
@@ -432,6 +433,8 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
             } else {
                 DispatchQueue.main.async {
                     print(response?.lstCustomerFeedBackJsonApi?[0].loyaltyId ?? "")
+                    UserDefaults.standard.setValue(response?.lstCustomerFeedBackJsonApi?[0].customerTypeId ?? "-1", forKey: "CUSTTYPE")
+                    print(response?.lstCustomerFeedBackJsonApi?[0].customerTypeId, "customer type id")
                     UserDefaults.standard.setValue(response?.lstCustomerFeedBackJsonApi?[0].loyaltyId ?? "", forKey: "LoyaltyID")
                     UserDefaults.standard.setValue(response?.objCustomerDashboardList?[0].redeemablePointsBalance ?? 0, forKey: "RedeemablePointBalance")
                     UserDefaults.standard.setValue(response?.lstCustomerFeedBackJsonApi?[0].firstName, forKey: "FirstName")

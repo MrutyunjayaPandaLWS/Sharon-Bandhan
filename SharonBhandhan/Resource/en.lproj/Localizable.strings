@@ -13,15 +13,15 @@
 "emnEnterMobileNumberToGetStartedKEY" = "शुरू करने के लिए अपना मोबाइल नंबर दर्ज करें!";
 "emnSendOTPKEY" = "SEND OTP/ओटीपी भेजें";
 //FORGOTPASSWORD VC
-"fpForgotPasswordKEY" = "Forgot password? / पासवर्ड भूल गए?";
+"fpForgotPasswordKEY" = "Forgot password?";
 "fpEnterYourRegisterdMobileNumberKEY" = "Enter your registered mobile number";
-"fpSubmitKEY" = "Submit / सबमिट";
+"fpSubmitKEY" = "Submit";
 //LOGIN VC
 "lForgotPasswordKEY" = "Forgot password? / पासवर्ड भूल गए?";
 "lTermsAndConditionsKEY" = "Terms & Conditions";
 "lDeclineKEY" = "DECLINE";
 "lAcceptKEY" = "ACCEPT";
-"lLoginKEY" = "Login / लॉग इन करें";
+"lLoginKEY" = "Login";
 "lpasswordKEY" = "Enter password";
 "lmobilenumberKEY" = "Enter Mobile number";
 //VERIFY MOBILE NUMBER VC

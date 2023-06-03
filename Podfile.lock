@@ -123,7 +123,7 @@ DEPENDENCIES:
   - Crashlytics (~> 3.14.0)
   - DPOTPView
   - Firebase/Analytics
-  - Firebase/CoreOnly
+  - Firebase/Core
   - Firebase/Messaging
   - GoogleAnalytics
   - ImageSlideshow/Alamofire
@@ -190,6 +190,6 @@ SPEC CHECKSUMS:
   SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 14850fd06da0632d7dc180a4d46e0a8c5955925a
+PODFILE CHECKSUM: da538e232fe6dd7a7e6b7aabf229841104185d1d
 
 COCOAPODS: 1.12.0

@@ -53,13 +53,16 @@ class MyRedemptionsListViewController: BaseViewController, FilterDelegate{
     func languagelocalization(){
         if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
             self.header.text = "My Redemptions"
-            
+            self.redemablePointsTitle.text  = "Redeemable Points"
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
             self.header.text = "मेरे मोचन"
+            self.redemablePointsTitle.text  = "रिडीमेंबल पॉइंट्स"
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
             self.header.text = "আমার মুক্তি"
+            self.redemablePointsTitle.text  = "Redeemable Points"
         }else{
             self.header.text = "నా విమోచనాలు"
+            self.redemablePointsTitle.text  = "Redeemable Points"
         }
     }
     

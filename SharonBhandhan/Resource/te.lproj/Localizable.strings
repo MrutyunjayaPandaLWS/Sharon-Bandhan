@@ -13,15 +13,15 @@
 "emnEnterMobileNumberToGetStartedKEY" = "ప్రారంభించడానికి మీ మొబైల్ నెంబర్ను నమోదు చేయండి!";
 "emnSendOTPKEY" = "SEND OTP/OTP పంపండి";
 //FORGOTPASSWORD VC
-"fpForgotPasswordKEY" = "Forgot password?/పాస్వర్డ్ మర్చిపోయాను";
+"fpForgotPasswordKEY" = "పాస్వర్డ్ మర్చిపోయాను";
 "fpEnterYourRegisterdMobileNumberKEY" = "మీ నమోదిత మొబైల్ నంబర్‌ను నమోదు చేయండి";
-"fpSubmitKEY" = "Submit/సమర్పించండి";
+"fpSubmitKEY" = "సమర్పించండి";
 //LOGIN VC
 "lForgotPasswordKEY" = "Forgot password?/పాస్వర్డ్ మర్చిపోయాను";
 "lTermsAndConditionsKEY" = "నిబంధనలు & షరతులు";
 "lDeclineKEY" = "క్షీణత";
 "lAcceptKEY" = "అంగీకరించండి";
-"lLoginKEY" = "Login / లాగిన్";
+"lLoginKEY" = "లాగిన్";
 "lpasswordKEY" = "పాస్వర్డ్ టైప్ చేయండి";
 "lmobilenumberKEY" = "మొబైల్ నంబర్‌ను నమోదు చేయండి";
 //VERIFY MOBILE NUMBER VC

@@ -286,9 +286,7 @@
 		849E84A92A1795F1006F0ED8 /* ProfileImageUpdateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E84A82A1795F1006F0ED8 /* ProfileImageUpdateModel.swift */; };
 		84A0519F29E523EA0025D800 /* CP_NeedCameraAccess_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A0519E29E523EA0025D800 /* CP_NeedCameraAccess_VC.swift */; };
 		84A051A429E524080025D800 /* CP_CodesScanned_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A051A129E524080025D800 /* CP_CodesScanned_TVC.swift */; };
-		84A051A529E524080025D800 /* CP_Scanner_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A051A229E524080025D800 /* CP_Scanner_VC.swift */; };
 		84A051A629E524080025D800 /* SubmitQRCodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A051A329E524080025D800 /* SubmitQRCodesViewController.swift */; };
-		84A051A929E525720025D800 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A051A829E525720025D800 /* ScannerViewModel.swift */; };
 		84A051AF29E526570025D800 /* PopUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A051AB29E526550025D800 /* PopUp2ViewController.swift */; };
 		84A051B029E526570025D800 /* Popup3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A051AC29E526560025D800 /* Popup3ViewController.swift */; };
 		84A051B129E526570025D800 /* PopUp1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A051AD29E526570025D800 /* PopUp1ViewController.swift */; };
@@ -296,6 +294,9 @@
 		84A7BB7E29E3F4E500896FA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84A7BB7D29E3F4E500896FA1 /* GoogleService-Info.plist */; };
 		84A7BBB129E420E100896FA1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7BBB029E420E100896FA1 /* NotificationService.swift */; };
 		84A7BBB529E420E100896FA1 /* NotificationServices.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 84A7BBAE29E420E100896FA1 /* NotificationServices.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84BE6B0C2A25B9C800100D24 /* CP_Scanner_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE6B0B2A25B9C800100D24 /* CP_Scanner_VC.swift */; };
+		84BE6B0E2A25BA2100100D24 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE6B0D2A25BA2100100D24 /* ScannerViewModel.swift */; };
+		84BE6B112A25F9C900100D24 /* ewarrentSubmissionModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE6B102A25F9C900100D24 /* ewarrentSubmissionModels.swift */; };
 		ED15B7245CBD1966022C21C8 /* Pods_SharonBhandhan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F6E6A16AFF1848A5F11A1D /* Pods_SharonBhandhan.framework */; };
 /* End PBXBuildFile section */
 
@@ -632,9 +633,7 @@
 		849E84A82A1795F1006F0ED8 /* ProfileImageUpdateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageUpdateModel.swift; sourceTree = "<group>"; };
 		84A0519E29E523EA0025D800 /* CP_NeedCameraAccess_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CP_NeedCameraAccess_VC.swift; sourceTree = "<group>"; };
 		84A051A129E524080025D800 /* CP_CodesScanned_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CP_CodesScanned_TVC.swift; sourceTree = "<group>"; };
-		84A051A229E524080025D800 /* CP_Scanner_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CP_Scanner_VC.swift; sourceTree = "<group>"; };
 		84A051A329E524080025D800 /* SubmitQRCodesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitQRCodesViewController.swift; sourceTree = "<group>"; };
-		84A051A829E525720025D800 /* ScannerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
 		84A051AB29E526550025D800 /* PopUp2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUp2ViewController.swift; sourceTree = "<group>"; };
 		84A051AC29E526560025D800 /* Popup3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popup3ViewController.swift; sourceTree = "<group>"; };
 		84A051AD29E526570025D800 /* PopUp1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUp1ViewController.swift; sourceTree = "<group>"; };
@@ -646,6 +645,9 @@
 		84A7BBB029E420E100896FA1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		84A7BBB229E420E100896FA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A7BBB929E4213000896FA1 /* SharonBhandhan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SharonBhandhan.entitlements; sourceTree = "<group>"; };
+		84BE6B0B2A25B9C800100D24 /* CP_Scanner_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CP_Scanner_VC.swift; sourceTree = "<group>"; };
+		84BE6B0D2A25BA2100100D24 /* ScannerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
+		84BE6B102A25F9C900100D24 /* ewarrentSubmissionModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ewarrentSubmissionModels.swift; sourceTree = "<group>"; };
 		D0F6E6A16AFF1848A5F11A1D /* Pods_SharonBhandhan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharonBhandhan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -765,6 +767,7 @@
 		84540AC529E18A4F00CEE692 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				84BE6B0F2A25F9A900100D24 /* E-Warrenty SubmissionModels */,
 				8482D0952A21FA8700D6B696 /* E-WarrentyScannerModel */,
 				849E84A72A1795CE006F0ED8 /* ProfileImageUpdateModel */,
 				8425C6E829F92509007E6F29 /* MyprofileDetailsModels */,
@@ -2400,7 +2403,7 @@
 			isa = PBXGroup;
 			children = (
 				84A051A129E524080025D800 /* CP_CodesScanned_TVC.swift */,
-				84A051A229E524080025D800 /* CP_Scanner_VC.swift */,
+				84BE6B0B2A25B9C800100D24 /* CP_Scanner_VC.swift */,
 				84A051A329E524080025D800 /* SubmitQRCodesViewController.swift */,
 			);
 			path = ScanORUploadView;
@@ -2409,7 +2412,7 @@
 		84A051A729E525640025D800 /* ScannerVM */ = {
 			isa = PBXGroup;
 			children = (
-				84A051A829E525720025D800 /* ScannerViewModel.swift */,
+				84BE6B0D2A25BA2100100D24 /* ScannerViewModel.swift */,
 			);
 			path = ScannerVM;
 			sourceTree = "<group>";
@@ -2441,6 +2444,14 @@
 				84A7BBB229E420E100896FA1 /* Info.plist */,
 			);
 			path = NotificationServices;
+			sourceTree = "<group>";
+		};
+		84BE6B0F2A25F9A900100D24 /* E-Warrenty SubmissionModels */ = {
+			isa = PBXGroup;
+			children = (
+				84BE6B102A25F9C900100D24 /* ewarrentSubmissionModels.swift */,
+			);
+			path = "E-Warrenty SubmissionModels";
 			sourceTree = "<group>";
 		};
 		B256F1D7222F1C7F1565C7AD /* Pods */ = {
@@ -2702,6 +2713,7 @@
 				84540BBF29E18AD800CEE692 /* MyCart_VC.swift in Sources */,
 				84540BD329E18AD800CEE692 /* DreamGiftPopUpViewController.swift in Sources */,
 				84540BA129E18AD800CEE692 /* SelectProductEWarrantyListViewController.swift in Sources */,
+				84BE6B0E2A25BA2100100D24 /* ScannerViewModel.swift in Sources */,
 				84540BB029E18AD800CEE692 /* otherImageTableViewCell.swift in Sources */,
 				84540B9029E18AD800CEE692 /* DreamGiftDetailsViewController.swift in Sources */,
 				84A051B229E526570025D800 /* Popup4ViewController.swift in Sources */,
@@ -2751,7 +2763,6 @@
 				84540D3629E18B0600CEE692 /* OffersandPromotionsVM.swift in Sources */,
 				84540BD129E18AD800CEE692 /* MyRedemptionsListViewController.swift in Sources */,
 				84540A9D29E187E600CEE692 /* SharonBhandhan.xcdatamodeld in Sources */,
-				84A051A529E524080025D800 /* CP_Scanner_VC.swift in Sources */,
 				84540C6F29E18AF000CEE692 /* CatalogueDetailsViewModel.swift in Sources */,
 				84540BE529E18AD800CEE692 /* SidemenuTableViewCell.swift in Sources */,
 				84540D4229E18B0600CEE692 /* StateListModels.swift in Sources */,
@@ -2846,6 +2857,7 @@
 				84540AE429E18AAE00CEE692 /* TapGestureExtension.swift in Sources */,
 				84540D0129E18B0600CEE692 /* DownloadEWarranty.swift in Sources */,
 				84540BB729E18AD800CEE692 /* SelectquerytopicInListingTableViewCell.swift in Sources */,
+				84BE6B0C2A25B9C800100D24 /* CP_Scanner_VC.swift in Sources */,
 				84540C6329E18AF000CEE692 /* LanguageViewModel.swift in Sources */,
 				84540C6929E18AF000CEE692 /* DashBoardLanguageViewModel.swift in Sources */,
 				84540C7129E18AF000CEE692 /* PrivacyPolicyViewModel.swift in Sources */,
@@ -2880,6 +2892,7 @@
 				84540C6A29E18AF000CEE692 /* Terms_ConditionsViewModel.swift in Sources */,
 				84540BC529E18AD800CEE692 /* Products_TVC.swift in Sources */,
 				84540BD429E18AD800CEE692 /* DashboardLanguagePopUpVC.swift in Sources */,
+				84BE6B112A25F9C900100D24 /* ewarrentSubmissionModels.swift in Sources */,
 				84540BBA29E18AD800CEE692 /* TaxRelatedPopupViewController.swift in Sources */,
 				84540D2D29E18B0600CEE692 /* QueryListingModels.swift in Sources */,
 				84540D2829E18B0600CEE692 /* LstCustomerJson.swift in Sources */,
@@ -2924,7 +2937,6 @@
 				84540D2229E18B0600CEE692 /* MemberVerificationModels.swift in Sources */,
 				84540BD929E18AD800CEE692 /* FollowerListViewController.swift in Sources */,
 				84540C5F29E18AF000CEE692 /* ChatListViewModel.swift in Sources */,
-				84A051A929E525720025D800 /* ScannerViewModel.swift in Sources */,
 				84540BC329E18AD800CEE692 /* Catalogue_CVC.swift in Sources */,
 				84540C5D29E18AF000CEE692 /* DownloadEWarrantyListViewModel.swift in Sources */,
 				84540C8029E18AF000CEE692 /* UniqueFeaturesViewModel.swift in Sources */,

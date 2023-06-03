@@ -14,14 +14,14 @@
 "emnEnterMobileNumberToGetStartedKEY" = "शुरू करने के लिए अपना मोबाइल नंबर दर्ज करें!";
 "emnSendOTPKEY" = "SEND OTP/ओटीपी भेजें";
 //FORGOTPASSWORD VC
-"fpForgotPasswordKEY" = "Forgot password? / पासवर्ड भूल गए?";
+"fpForgotPasswordKEY" = "पासवर्ड भूल गए?";
 "fpEnterYourRegisterdMobileNumberKEY" = "अपना पंजीकृत मोबाइल नंबर दर्ज करें";
-"fpSubmitKEY" = "Submit / सबमिट";
+"fpSubmitKEY" = "सबमिट";
 //LOGIN VC
 "lTermsAndConditionsKEY" = "नियम एवं शर्तें";
 "lDeclineKEY" = "अस्वीकार करें";
 "lAcceptKEY" = "स्वीकार करें";
-"lLoginKEY" = "Login / लॉग इन करें";
+"lLoginKEY" = "लॉग इन करें";
 "lpasswordKEY" = "पास वर्ड दर्ज करें";
 "lmobilenumberKEY" = "मोबाइल नंबरर्ड दर्ज करें";
 

@@ -240,8 +240,8 @@ extension DreamGiftListingViewController : UITableViewDelegate, UITableViewDataS
         cell?.giftCreatedDate.text = convertedFormat
         
         let desiredDate = (self.VM.myDreamGiftListArray[indexPath.row].jDesiredDate ?? "").split(separator: " ")
-        let desiredDateFormat = convertDateFormater(String(desiredDate[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")
-        cell?.desiredDate.text = desiredDateFormat
+//        let desiredDateFormat = convertDateFormater(String(desiredDate[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")
+        cell?.desiredDate.text = "\(desiredDate[0])"//desiredDateFormat
         cell?.pointsRequired.text = "\(self.VM.myDreamGiftListArray[indexPath.row].pointsRequired ?? 0)"
         let balance = Double(self.VM.myDreamGiftListArray[indexPath.row].pointsBalance ?? 0)
         let pointRequired = Double(self.VM.myDreamGiftListArray[indexPath.row].pointsRequired ?? 0)

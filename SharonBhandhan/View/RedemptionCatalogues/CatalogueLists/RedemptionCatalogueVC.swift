@@ -75,17 +75,17 @@ class RedemptionCatalogueVC: BaseViewController, AddedToCartOrPlannerDelegate, p
     func languagelocalization(){
         if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
             self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "en")
-            self.pointsHeadingLabel.text = "Points"
+            self.pointsHeadingLabel.text = "Redeemable Points"
             searchProductTF.attributedPlaceholder = NSAttributedString(string: "Search Product Name", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
             
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
             self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "hi")
-            self.pointsHeadingLabel.text = "पॉइंट्स"
+            self.pointsHeadingLabel.text = "रिडीमेंबल पॉइंट्स"
             searchProductTF.attributedPlaceholder = NSAttributedString(string: "उत्पाद का नाम खोजें", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
             
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
             self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "bn")
-            self.pointsHeadingLabel.text = "পয়েন্টস"
+            self.pointsHeadingLabel.text = "রিডিমেবল পয়েন্ট"
             searchProductTF.attributedPlaceholder = NSAttributedString(string: "পণ্যের নাম অনুসন্ধান করুন", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
         }else{
             self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "te")
