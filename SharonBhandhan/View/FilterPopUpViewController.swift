@@ -148,9 +148,9 @@ class FilterPopUpViewController: BaseViewController, DateSelectedDelegate, Statu
             fromdateButton.setTitle("ewFromDatemKEY".localizableString(loc: "hi"), for: .normal)
             toDateButton.setTitle("ewToDateKEY".localizableString(loc: "hi"), for: .normal)
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            filterButton.setTitle("ewFilterKEY".localizableString(loc: "bn"), for: .normal)
-            fromdateButton.setTitle("ewFromDatemKEY".localizableString(loc: "bn"), for: .normal)
-            toDateButton.setTitle("ewToDateKEY".localizableString(loc: "bn"), for: .normal)
+            filterButton.setTitle("ewFilterKEY".localizableString(loc: "ta-IN"), for: .normal)
+            fromdateButton.setTitle("ewFromDatemKEY".localizableString(loc: "ta-IN"), for: .normal)
+            toDateButton.setTitle("ewToDateKEY".localizableString(loc: "ta-IN"), for: .normal)
         }else{
             filterButton.setTitle("ewFilterKEY".localizableString(loc: "te"), for: .normal)
             fromdateButton.setTitle("ewFromDatemKEY".localizableString(loc: "te"), for: .normal)

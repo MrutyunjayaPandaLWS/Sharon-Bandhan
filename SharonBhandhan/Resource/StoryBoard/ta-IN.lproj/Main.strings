@@ -1,0 +1,1317 @@
+
+/* Class = "UILabel"; text = "కు షారోన్"; ObjectID = "04p-Xy-ITs"; */
+"04p-Xy-ITs.text" = "కు షారోన్";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "052-Gf-veZ"; */
+"052-Gf-veZ.text" = "0";
+
+/* Class = "UILabel"; text = "District"; ObjectID = "07U-ZP-BwN"; */
+"07U-ZP-BwN.text" = "District";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "0Hb-0M-S2N"; */
+"0Hb-0M-S2N.text" = "Points";
+
+/* Class = "UILabel"; text = "Need Camera Access"; ObjectID = "0L4-vp-N5I"; */
+"0L4-vp-N5I.text" = "Need Camera Access";
+
+/* Class = "UIButton"; normalTitle = "Select City"; ObjectID = "0MK-UI-SL0"; */
+"0MK-UI-SL0.normalTitle" = "Select City";
+
+/* Class = "UITextView"; text = "*  Tax Deduction at Source (TDS) will be applicable on redemption value, once the total amount crosses points worth Rs 20000 :     - 10 % if PAN number available.     - 20 % if PAN number not available  *  TDS will be deducted once the product is Delivered to the customer.  *  TDS once deducted will not be reversed and will be paid to the Govt. of India."; ObjectID = "0OE-Sg-tKx"; */
+"0OE-Sg-tKx.text" = "*  Tax Deduction at Source (TDS) will be applicable on redemption value, once the total amount crosses points worth Rs 20000 :     - 10 % if PAN number available.     - 20 % if PAN number not available  *  TDS will be deducted once the product is Delivered to the customer.  *  TDS once deducted will not be reversed and will be paid to the Govt. of India.";
+
+/* Class = "UILabel"; text = "PAN Number"; ObjectID = "0YU-wJ-Zac"; */
+"0YU-wJ-Zac.text" = "PAN Number";
+
+/* Class = "UILabel"; text = "TDS applicable @ "; ObjectID = "0af-1E-QgG"; */
+"0af-1E-QgG.text" = "TDS applicable @ ";
+
+/* Class = "UILabel"; text = "Pan Verification"; ObjectID = "0gs-jy-G6q"; */
+"0gs-jy-G6q.text" = "Pan Verification";
+
+/* Class = "UILabel"; text = "Redeemable Points"; ObjectID = "0gz-4B-IZl"; */
+"0gz-4B-IZl.text" = "Redeemable Points";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "0kS-pc-G8K"; */
+"0kS-pc-G8K.text" = "-";
+
+/* Class = "UILabel"; text = "Redemption Details"; ObjectID = "18X-t7-L9q"; */
+"18X-t7-L9q.text" = "Redemption Details";
+
+/* Class = "UIButton"; normalTitle = "Terms & Conditions"; ObjectID = "1WJ-0X-5AY"; */
+"1WJ-0X-5AY.normalTitle" = "Terms & Conditions";
+
+/* Class = "UILabel"; text = "শ্যারনে "; ObjectID = "1Xk-Ha-0Fs"; */
+"1Xk-Ha-0Fs.text" = "শ্যারনে ";
+
+/* Class = "UIButton"; normalTitle = "GENERATE E-WARRANTY"; ObjectID = "1ch-vC-QMk"; */
+"1ch-vC-QMk.normalTitle" = "GENERATE E-WARRANTY";
+
+/* Class = "UITextField"; placeholder = "Enter Mobile Number"; ObjectID = "1lZ-EN-3c3"; */
+"1lZ-EN-3c3.placeholder" = "Enter Mobile Number";
+
+/* Class = "UILabel"; text = "Scanned Codes"; ObjectID = "1lZ-lm-vPj"; */
+"1lZ-lm-vPj.text" = "Scanned Codes";
+
+/* Class = "UILabel"; text = "आपका स्वागत है"; ObjectID = "1qn-lT-2oL"; */
+"1qn-lT-2oL.text" = "आपका स्वागत है";
+
+/* Class = "UIButton"; normalTitle = "Remove"; ObjectID = "1uK-AR-HOR"; */
+"1uK-AR-HOR.normalTitle" = "Remove";
+
+/* Class = "UIButton"; normalTitle = "Code Status"; ObjectID = "27W-uU-jAE"; */
+"27W-uU-jAE.normalTitle" = "Code Status";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2A2-wD-CHq"; */
+"2A2-wD-CHq.text" = "Label";
+
+/* Class = "UILabel"; text = "Mobile No"; ObjectID = "2AV-Ck-UL3"; */
+"2AV-Ck-UL3.text" = "Mobile No";
+
+/* Class = "UILabel"; text = "শ্যারনে "; ObjectID = "2CQ-Tg-zYy"; */
+"2CQ-Tg-zYy.text" = "শ্যারনে ";
+
+/* Class = "UILabel"; text = "Add Follower"; ObjectID = "2Hc-yE-7wh"; */
+"2Hc-yE-7wh.text" = "Add Follower";
+
+/* Class = "UILabel"; text = "My Account"; ObjectID = "2JR-8a-tvE"; */
+"2JR-8a-tvE.text" = "My Account";
+
+/* Class = "UITabBarItem"; title = "Code Status"; ObjectID = "2UT-vc-gYt"; */
+"2UT-vc-gYt.title" = "Code Status";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2az-Xc-AvO"; */
+"2az-Xc-AvO.text" = "Label";
+
+/* Class = "UILabel"; text = "Plant Name :"; ObjectID = "2bP-rP-RAW"; */
+"2bP-rP-RAW.text" = "Plant Name :";
+
+/* Class = "UILabel"; text = "অ"; ObjectID = "2ea-6D-ZQa"; */
+"2ea-6D-ZQa.text" = "অ";
+
+/* Class = "UIButton"; configuration.title = "Decline"; ObjectID = "2lr-rT-g5d"; */
+"2lr-rT-g5d.configuration.title" = "Decline";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2lr-rT-g5d"; */
+"2lr-rT-g5d.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Native State"; ObjectID = "2pQ-B3-f5s"; */
+"2pQ-B3-f5s.text" = "Native State";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "31I-zy-gjP"; */
+"31I-zy-gjP.text" = "Label";
+
+/* Class = "UILabel"; text = "Query Details"; ObjectID = "3F2-BD-iVN"; */
+"3F2-BD-iVN.text" = "Query Details";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "3KT-Sn-SwO"; */
+"3KT-Sn-SwO.text" = "-";
+
+/* Class = "UILabel"; text = "Redemption Planner Details"; ObjectID = "3M1-Ag-4Cm"; */
+"3M1-Ag-4Cm.text" = "Redemption Planner Details";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "3i6-8O-NmQ"; */
+"3i6-8O-NmQ.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Redeemable Points"; ObjectID = "3ra-jq-bja"; */
+"3ra-jq-bja.text" = "Redeemable Points";
+
+/* Class = "UILabel"; text = "Thickness :"; ObjectID = "3uU-ur-8BO"; */
+"3uU-ur-8BO.text" = "Thickness :";
+
+/* Class = "UILabel"; text = "Upload Code"; ObjectID = "3zT-D7-ZU0"; */
+"3zT-D7-ZU0.text" = "Upload Code";
+
+/* Class = "UILabel"; text = "10-08-2022"; ObjectID = "3zj-AW-uaM"; */
+"3zj-AW-uaM.text" = "10-08-2022";
+
+/* Class = "UILabel"; text = "Add Follower"; ObjectID = "4M9-3m-6K6"; */
+"4M9-3m-6K6.text" = "Add Follower";
+
+/* Class = "UILabel"; text = "Qunatity"; ObjectID = "4qb-Vt-DcQ"; */
+"4qb-Vt-DcQ.text" = "Qunatity";
+
+/* Class = "UILabel"; text = "v 1.1.42"; ObjectID = "51Z-JD-A88"; */
+"51Z-JD-A88.text" = "v 1.1.42";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "53k-D6-F45"; */
+"53k-D6-F45.normalTitle" = "Yes";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "55F-Mh-PKk"; */
+"55F-Mh-PKk.text" = "Label";
+
+/* Class = "UILabel"; text = "Pin"; ObjectID = "58n-Cd-T8C"; */
+"58n-Cd-T8C.text" = "Pin";
+
+/* Class = "UILabel"; text = "Sync Status"; ObjectID = "5Co-xu-GnK"; */
+"5Co-xu-GnK.text" = "Sync Status";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "5It-AM-tHC"; */
+"5It-AM-tHC.text" = "Notifications";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "5WZ-96-Tff"; */
+"5WZ-96-Tff.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "  GENERATE  E-WARRANTY"; ObjectID = "5k6-HL-Oqb"; */
+"5k6-HL-Oqb.normalTitle" = "  GENERATE  E-WARRANTY";
+
+/* Class = "UILabel"; text = "Profile"; ObjectID = "60R-Ob-sbN"; */
+"60R-Ob-sbN.text" = "Profile";
+
+/* Class = "UILabel"; text = "GIVE A MISSED CALL ON"; ObjectID = "623-As-bbT"; */
+"623-As-bbT.text" = "GIVE A MISSED CALL ON";
+
+/* Class = "UILabel"; text = "Select Your Topic"; ObjectID = "6Cw-0Z-J6p"; */
+"6Cw-0Z-J6p.text" = "Select Your Topic";
+
+/* Class = "UILabel"; text = "Bengali"; ObjectID = "6Ef-2s-x33"; */
+"6Ef-2s-x33.text" = "Bengali";
+
+/* Class = "UILabel"; text = "Member since Oct 2021"; ObjectID = "6Fj-Wp-dMg"; */
+"6Fj-Wp-dMg.text" = "Member since Oct 2021";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "6NY-JE-LgF"; */
+"6NY-JE-LgF.text" = "City";
+
+/* Class = "UILabel"; text = "DOB : 01/01/0001"; ObjectID = "6SH-sl-q4t"; */
+"6SH-sl-q4t.text" = "DOB : 01/01/0001";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "6Uo-he-92T"; */
+"6Uo-he-92T.text" = "0";
+
+/* Class = "UILabel"; text = "&"; ObjectID = "6ni-3u-1sg"; */
+"6ni-3u-1sg.text" = "&";
+
+/* Class = "UILabel"; text = "স্বাগতম"; ObjectID = "6t2-8s-lex"; */
+"6t2-8s-lex.text" = "স্বাগতম";
+
+/* Class = "UIButton"; normalTitle = "LOGIN"; ObjectID = "6y1-QQ-pLl"; */
+"6y1-QQ-pLl.normalTitle" = "LOGIN";
+
+/* Class = "UILabel"; text = "Redeemable Points as on Today"; ObjectID = "7DZ-hS-9og"; */
+"7DZ-hS-9og.text" = "Redeemable Points as on Today";
+
+/* Class = "UILabel"; text = "Product Name :"; ObjectID = "7oa-Tr-zd4"; */
+"7oa-Tr-zd4.text" = "Product Name :";
+
+/* Class = "UIButton"; configuration.title = "Add To Planner"; ObjectID = "7vk-cb-8fW"; */
+"7vk-cb-8fW.configuration.title" = "Add To Planner";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "7vk-cb-8fW"; */
+"7vk-cb-8fW.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "My Benefits"; ObjectID = "7zY-b3-tcn"; */
+"7zY-b3-tcn.text" = "My Benefits";
+
+/* Class = "UILabel"; text = "00:59"; ObjectID = "80s-3F-eGk"; */
+"80s-3F-eGk.text" = "00:59";
+
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "8Wy-uq-kRf"; */
+"8Wy-uq-kRf.text" = "Welcome";
+
+/* Class = "UILabel"; text = "English"; ObjectID = "8eK-B8-G54"; */
+"8eK-B8-G54.text" = "English";
+
+/* Class = "UIButton"; normalTitle = "Browse Image"; ObjectID = "8m4-Uu-Pzj"; */
+"8m4-Uu-Pzj.normalTitle" = "Browse Image";
+
+/* Class = "UITextField"; placeholder = " Search Product Name "; ObjectID = "9W0-CI-tru"; */
+"9W0-CI-tru.placeholder" = " Search Product Name ";
+
+/* Class = "UIButton"; normalTitle = "From Date"; ObjectID = "9eb-nb-Y5k"; */
+"9eb-nb-Y5k.normalTitle" = "From Date";
+
+/* Class = "UITabBarItem"; title = "Sync Status"; ObjectID = "9nC-a6-gW0"; */
+"9nC-a6-gW0.title" = "Sync Status";
+
+/* Class = "UILabel"; text = "Add E-Warranty"; ObjectID = "9vq-fr-2NU"; */
+"9vq-fr-2NU.text" = "Add E-Warranty";
+
+/* Class = "UILabel"; text = "asasdfadsfadfadsfadsfasdfadsfadsfadfadfsadsfadsfadfdafadfadsfdaf"; ObjectID = "A2D-UV-O5P"; */
+"A2D-UV-O5P.text" = "asasdfadsfadfadsfadsfasdfadsfadsfadfadfsadsfadsfadfdafadfadsfdaf";
+
+/* Class = "UILabel"; text = "12:23:33"; ObjectID = "AHp-un-4Bc"; */
+"AHp-un-4Bc.text" = "12:23:33";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "ALG-Rf-kme"; */
+"ALG-Rf-kme.normalTitle" = "OK";
+
+/* Class = "UILabel"; text = "It looks like your privacy settings are preventing us from accessing your camera to do barcode scanning. Click on \"Grant Access\" to allow permit scanning."; ObjectID = "AfK-8b-ZDe"; */
+"AfK-8b-ZDe.text" = "It looks like your privacy settings are preventing us from accessing your camera to do barcode scanning. Click on \"Grant Access\" to allow permit scanning.";
+
+/* Class = "UILabel"; text = "కు షారోన్"; ObjectID = "ApQ-AG-p6C"; */
+"ApQ-AG-p6C.text" = "కు షారోన్";
+
+/* Class = "UILabel"; text = "अ"; ObjectID = "Axr-VC-Eda"; */
+"Axr-VC-Eda.text" = "अ";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "B0Y-86-t2N"; */
+"B0Y-86-t2N.normalTitle" = "No";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "BOC-fO-UGa"; */
+"BOC-fO-UGa.text" = "-";
+
+/* Class = "UILabel"; text = "My Earning"; ObjectID = "BRI-dy-mSn"; */
+"BRI-dy-mSn.text" = "My Earning";
+
+/* Class = "UILabel"; text = "State"; ObjectID = "BU8-V3-3X5"; */
+"BU8-V3-3X5.text" = "State";
+
+/* Class = "UIButton"; normalTitle = "Add To Planner"; ObjectID = "Btq-Xm-4KD"; */
+"Btq-Xm-4KD.normalTitle" = "Add To Planner";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "C3C-8B-ncZ"; */
+"C3C-8B-ncZ.text" = "0";
+
+/* Class = "UILabel"; text = "Zip"; ObjectID = "CEW-mm-rfI"; */
+"CEW-mm-rfI.text" = "Zip";
+
+/* Class = "UILabel"; text = "Terms & Conditions"; ObjectID = "CMH-D7-j8o"; */
+"CMH-D7-j8o.text" = "Terms & Conditions";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "CTl-4m-447"; */
+"CTl-4m-447.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "Telugu"; ObjectID = "CVC-Wk-VaR"; */
+"CVC-Wk-VaR.text" = "Telugu";
+
+/* Class = "UILabel"; text = "Redemption Planner Summery"; ObjectID = "CWD-7l-5ct"; */
+"CWD-7l-5ct.text" = "Redemption Planner Summery";
+
+/* Class = "UILabel"; text = "తెలుగు"; ObjectID = "Ch0-5A-FZn"; */
+"Ch0-5A-FZn.text" = "తెలుగు";
+
+/* Class = "UILabel"; text = "A"; ObjectID = "DOw-JW-Q5A"; */
+"DOw-JW-Q5A.text" = "A";
+
+/* Class = "UILabel"; text = "Pending"; ObjectID = "DQA-KY-27X"; */
+"DQA-KY-27X.text" = "Pending";
+
+/* Class = "UILabel"; text = "Unique Features"; ObjectID = "Dhr-8w-ghe"; */
+"Dhr-8w-ghe.text" = "Unique Features";
+
+/* Class = "UILabel"; text = "Customer PAN Details have been submitted for verification !"; ObjectID = "Dor-DP-lEN"; */
+"Dor-DP-lEN.text" = "Customer PAN Details have been submitted for verification !";
+
+/* Class = "UIButton"; normalTitle = "My Account"; ObjectID = "Ds2-gu-ZrL"; */
+"Ds2-gu-ZrL.normalTitle" = "My Account";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "DxV-Ia-8Qh"; */
+"DxV-Ia-8Qh.text" = "-";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "ELi-gL-l0l"; */
+"ELi-gL-l0l.text" = "Address";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "EMk-Xt-sTY"; */
+"EMk-Xt-sTY.text" = "-";
+
+/* Class = "UILabel"; text = "XXXXXX"; ObjectID = "ESZ-Vf-Yz3"; */
+"ESZ-Vf-Yz3.text" = "XXXXXX";
+
+/* Class = "UILabel"; text = "10 %"; ObjectID = "EXh-kI-7Pn"; */
+"EXh-kI-7Pn.text" = "10 %";
+
+/* Class = "UILabel"; text = "Customer Name"; ObjectID = "Edd-Fa-bra"; */
+"Edd-Fa-bra.text" = "Customer Name";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "Ega-mk-8fV"; */
+"Ega-mk-8fV.text" = "Points";
+
+/* Class = "UITextField"; placeholder = "Enter Mobile"; ObjectID = "EkV-R2-ht7"; */
+"EkV-R2-ht7.placeholder" = "Enter Mobile";
+
+/* Class = "UILabel"; text = "Redemption Catalogue"; ObjectID = "Elo-dK-6ED"; */
+"Elo-dK-6ED.text" = "Redemption Catalogue";
+
+/* Class = "UITextView"; text = "1. The points can be redeemed on some CenturyPly products (refer to the points table or ask CPIL representative for details). New products, if added, will be intimated. \n2. Enrolling for this Program by submitting the duly filled and signed enrolment form to the Century Executive is mandatory and will be deemed as acceptance of these terms and conditions. The reward points accumulation shall start only after member registration into CenturyProClub.\n 3. There is no upper limit on the accumulation of the reward points and the accumulation is correlated to the purchase of Century products.  4. Gifts under the Program cannot be exchanged with credit note or in cash. CPIL will not be responsible for respective product warranty/functionality. Warranty/guarantee will be as per the rules of the manufacturing company.  5. All types of cars/two-wheelers/vehicles (in case they are part of the gift items) are ex-showroom basis. Taxes, insurance, documentation charges or difference in showroom prices and other expenses for accessories will have to be borne by the member. The ex-showroom price is subject to a maximum of value equivalent of points. The decision regarding the quantum of reimbursement of ex-showroom price solely rests with CPIL.  6. The company may change, amend, alter, reduce or withdraw the Program at any time, without giving any reason or prior notice. In the event of withdrawal of the Program by the company, the members will have to mandatorily redeem the accumulated reward points within a period of 1 (one) year from the date of withdrawal of the Program and opt for a gift from the eligible gift options.  7. The company will not be liable for any loss or damage, whether direct or indirect, caused to members due to withdrawal or change in the Program.  8. CPIL would do best to deliver the same item as shown in the catalogue. However, in extreme cases, when the product is not available or the model has been withdrawn, the Company reserves the right to substitute the same with some other gift of equivalent value, at its sole discretion.  9. Gifts to be given may not be as per the exact pictures or models shown, but will be replaced by those in similar points range, available during the time of redemption.  10. Images of gifts shown in the Program document are only for representation purposes and the actual colour/brand/model of the same may vary in case of non-availability. The company’s decision in this regard shall be final and binding on the members and no dispute will be entertained in this regard.  11. The gift(s) will be delivered within 30 working days from the date of approval. However, the company will not be responsible for delay in delivery of gift due to non-availability of stock or for any other reason beyond its control.  12. CPIL reserves the right to change points mentioned against each item at any point of time of the scheme. For example, CPIL may decide to increase the points for any item if price for the item increases. However CPIL will not decrease the points in case the price for the item decreases.  13. In case of any conflict or illegitimate claims, the company’s decision will be final and binding. All disputes related to the same will be resolved through arbitration as per the jurisdiction of Kolkata courts.  14. Scan of material in the dealer location to be invalid.  15. Special priced product to be ineligible for Proclub banking.  I agree to receive SMSs, emails, phone calls or Whatsapp messages, related to the  program, or related to Century Plyboards (India) Ltd., from time-to-time."; ObjectID = "EvP-SZ-m1K"; */
+"EvP-SZ-m1K.text" = "1. The points can be redeemed on some CenturyPly products (refer to the points table or ask CPIL representative for details). New products, if added, will be intimated. \n2. Enrolling for this Program by submitting the duly filled and signed enrolment form to the Century Executive is mandatory and will be deemed as acceptance of these terms and conditions. The reward points accumulation shall start only after member registration into CenturyProClub.\n 3. There is no upper limit on the accumulation of the reward points and the accumulation is correlated to the purchase of Century products.  4. Gifts under the Program cannot be exchanged with credit note or in cash. CPIL will not be responsible for respective product warranty/functionality. Warranty/guarantee will be as per the rules of the manufacturing company.  5. All types of cars/two-wheelers/vehicles (in case they are part of the gift items) are ex-showroom basis. Taxes, insurance, documentation charges or difference in showroom prices and other expenses for accessories will have to be borne by the member. The ex-showroom price is subject to a maximum of value equivalent of points. The decision regarding the quantum of reimbursement of ex-showroom price solely rests with CPIL.  6. The company may change, amend, alter, reduce or withdraw the Program at any time, without giving any reason or prior notice. In the event of withdrawal of the Program by the company, the members will have to mandatorily redeem the accumulated reward points within a period of 1 (one) year from the date of withdrawal of the Program and opt for a gift from the eligible gift options.  7. The company will not be liable for any loss or damage, whether direct or indirect, caused to members due to withdrawal or change in the Program.  8. CPIL would do best to deliver the same item as shown in the catalogue. However, in extreme cases, when the product is not available or the model has been withdrawn, the Company reserves the right to substitute the same with some other gift of equivalent value, at its sole discretion.  9. Gifts to be given may not be as per the exact pictures or models shown, but will be replaced by those in similar points range, available during the time of redemption.  10. Images of gifts shown in the Program document are only for representation purposes and the actual colour/brand/model of the same may vary in case of non-availability. The company’s decision in this regard shall be final and binding on the members and no dispute will be entertained in this regard.  11. The gift(s) will be delivered within 30 working days from the date of approval. However, the company will not be responsible for delay in delivery of gift due to non-availability of stock or for any other reason beyond its control.  12. CPIL reserves the right to change points mentioned against each item at any point of time of the scheme. For example, CPIL may decide to increase the points for any item if price for the item increases. However CPIL will not decrease the points in case the price for the item decreases.  13. In case of any conflict or illegitimate claims, the company’s decision will be final and binding. All disputes related to the same will be resolved through arbitration as per the jurisdiction of Kolkata courts.  14. Scan of material in the dealer location to be invalid.  15. Special priced product to be ineligible for Proclub banking.  I agree to receive SMSs, emails, phone calls or Whatsapp messages, related to the  program, or related to Century Plyboards (India) Ltd., from time-to-time.";
+
+/* Class = "UILabel"; text = "Product points"; ObjectID = "EwC-Dk-9ei"; */
+"EwC-Dk-9ei.text" = "Product points";
+
+/* Class = "UILabel"; text = "No Data Found !!"; ObjectID = "Eyf-5S-ndq"; */
+"Eyf-5S-ndq.text" = "No Data Found !!";
+
+/* Class = "UILabel"; text = "Choose"; ObjectID = "F60-HQ-hW3"; */
+"F60-HQ-hW3.text" = "Choose";
+
+/* Class = "UILabel"; text = "No data found !"; ObjectID = "F6X-aL-K93"; */
+"F6X-aL-K93.text" = "No data found !";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "FHT-OS-0ZC"; */
+"FHT-OS-0ZC.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "New password has been sent to your Registered Mobile Number"; ObjectID = "FXl-QN-I7z"; */
+"FXl-QN-I7z.text" = "New password has been sent to your Registered Mobile Number";
+
+/* Class = "UILabel"; text = "5000"; ObjectID = "FhT-pd-iqN"; */
+"FhT-pd-iqN.text" = "5000";
+
+/* Class = "UILabel"; text = "XXXXX"; ObjectID = "FrT-80-fvc"; */
+"FrT-80-fvc.text" = "XXXXX";
+
+/* Class = "UILabel"; text = "বাংলা"; ObjectID = "G6z-mu-OX0"; */
+"G6z-mu-OX0.text" = "বাংলা";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "GAj-KW-KBY"; */
+"GAj-KW-KBY.normalTitle" = "No";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "GdQ-yn-Bbh"; */
+"GdQ-yn-Bbh.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Submit Query"; ObjectID = "Ggh-sp-iEj"; */
+"Ggh-sp-iEj.normalTitle" = "Submit Query";
+
+/* Class = "UILabel"; text = "No data found !"; ObjectID = "GiA-7h-PMx"; */
+"GiA-7h-PMx.text" = "No data found !";
+
+/* Class = "UIButton"; normalTitle = "Proceed to Checkout"; ObjectID = "Gnp-tk-7YE"; */
+"Gnp-tk-7YE.normalTitle" = "Proceed to Checkout";
+
+/* Class = "UILabel"; text = "E - Warranty"; ObjectID = "GtR-er-KKM"; */
+"GtR-er-KKM.text" = "E - Warranty";
+
+/* Class = "UIButton"; normalTitle = "Select Profession"; ObjectID = "HEf-1C-Sae"; */
+"HEf-1C-Sae.normalTitle" = "Select Profession";
+
+/* Class = "UILabel"; text = "your language"; ObjectID = "HMR-yC-JFB"; */
+"HMR-yC-JFB.text" = "your language";
+
+/* Class = "UILabel"; text = "TDS Points"; ObjectID = "HO3-xp-PyD"; */
+"HO3-xp-PyD.text" = "TDS Points";
+
+/* Class = "UIButton"; normalTitle = "Resend OTP"; ObjectID = "HQV-FT-p7X"; */
+"HQV-FT-p7X.normalTitle" = "Resend OTP";
+
+/* Class = "UITextField"; placeholder = "Enter Username"; ObjectID = "HVM-hg-3NL"; */
+"HVM-hg-3NL.placeholder" = "Enter Username";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "HWH-ei-vNL"; */
+"HWH-ei-vNL.text" = "0";
+
+/* Class = "UILabel"; text = "QR Code is submitted successfully"; ObjectID = "HWL-A6-erx"; */
+"HWL-A6-erx.text" = "QR Code is submitted successfully";
+
+/* Class = "UILabel"; text = "Edit Address"; ObjectID = "HaL-TX-9XU"; */
+"HaL-TX-9XU.text" = "Edit Address";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "HrQ-lv-4GB"; */
+"HrQ-lv-4GB.text" = "Points";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "Htz-k1-K1h"; */
+"Htz-k1-K1h.text" = "-";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "I6p-gv-eKv"; */
+"I6p-gv-eKv.text" = "0";
+
+/* Class = "UILabel"; text = "+91-8955177400"; ObjectID = "Io8-ia-Ky6"; */
+"Io8-ia-Ky6.text" = "+91-8955177400";
+
+/* Class = "UILabel"; text = "Redeemable points as on today xxxxx"; ObjectID = "JAV-4G-y1p"; */
+"JAV-4G-y1p.text" = "Redeemable points as on today xxxxx";
+
+/* Class = "UILabel"; text = "Customer Name"; ObjectID = "JAX-vd-Gdu"; */
+"JAX-vd-Gdu.text" = "Customer Name";
+
+/* Class = "UIButton"; normalTitle = "Filter"; ObjectID = "JS2-VU-DvS"; */
+"JS2-VU-DvS.normalTitle" = "Filter";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JVQ-qe-Z4d"; */
+"JVQ-qe-Z4d.text" = "Label";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "Jar-ZW-2fa"; */
+"Jar-ZW-2fa.text" = "1";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "JgD-R7-0X1"; */
+"JgD-R7-0X1.text" = "-";
+
+/* Class = "UILabel"; text = "Average points to be earned per month"; ObjectID = "K4d-wS-I4n"; */
+"K4d-wS-I4n.text" = "Average points to be earned per month";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "KGG-sC-aG3"; */
+"KGG-sC-aG3.text" = "0";
+
+/* Class = "UILabel"; text = "Name : _"; ObjectID = "KPl-y1-eHe"; */
+"KPl-y1-eHe.text" = "Name : _";
+
+/* Class = "UILabel"; text = "No Data Found !!"; ObjectID = "KZB-pf-72x"; */
+"KZB-pf-72x.text" = "No Data Found !!";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "KcJ-Ic-GOL"; */
+"KcJ-Ic-GOL.text" = "City";
+
+/* Class = "UIButton"; normalTitle = "Self"; ObjectID = "KoU-zc-fiz"; */
+"KoU-zc-fiz.normalTitle" = "Self";
+
+/* Class = "UIButton"; normalTitle = "Select State"; ObjectID = "KvG-HM-f1B"; */
+"KvG-HM-f1B.normalTitle" = "Select State";
+
+/* Class = "UIButton"; normalTitle = "Forgot password ?"; ObjectID = "L44-yq-Cie"; */
+"L44-yq-Cie.normalTitle" = "Forgot password ?";
+
+/* Class = "UILabel"; text = "స్వాగతం"; ObjectID = "L56-0M-Hdt"; */
+"L56-0M-Hdt.text" = "స్వాగతం";
+
+/* Class = "UILabel"; text = "Category \\ Electronics"; ObjectID = "L8D-rS-wE3"; */
+"L8D-rS-wE3.text" = "Category \\ Electronics";
+
+/* Class = "UILabel"; text = "24 Jun 2021"; ObjectID = "LJW-xu-gjN"; */
+"LJW-xu-gjN.text" = "24 Jun 2021";
+
+/* Class = "UILabel"; text = "back to Login"; ObjectID = "LVp-jo-q1q"; */
+"LVp-jo-q1q.text" = "back to Login";
+
+/* Class = "UILabel"; text = "Unique Code :"; ObjectID = "LcB-c8-hwk"; */
+"LcB-c8-hwk.text" = "Unique Code :";
+
+/* Class = "UILabel"; text = "Helpline Call"; ObjectID = "Lgk-z6-FL3"; */
+"Lgk-z6-FL3.text" = "Helpline Call";
+
+/* Class = "UIButton"; normalTitle = "Remove"; ObjectID = "LiG-1k-f1b"; */
+"LiG-1k-f1b.normalTitle" = "Remove";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "Lll-Sq-iDm"; */
+"Lll-Sq-iDm.text" = "-";
+
+/* Class = "UILabel"; text = "My  Dream Gift"; ObjectID = "LtR-ts-CwQ"; */
+"LtR-ts-CwQ.text" = "My  Dream Gift";
+
+/* Class = "UILabel"; text = "Dream gift details"; ObjectID = "M0E-Pj-d2S"; */
+"M0E-Pj-d2S.text" = "Dream gift details";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "MN2-9g-sxM"; */
+"MN2-9g-sxM.text" = "Points";
+
+/* Class = "UILabel"; text = "Query Summary :"; ObjectID = "MYo-AP-j5J"; */
+"MYo-AP-j5J.text" = "Query Summary :";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "N1Y-hQ-bsg"; */
+"N1Y-hQ-bsg.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Bengali"; ObjectID = "N4h-F2-K1t"; */
+"N4h-F2-K1t.text" = "Bengali";
+
+/* Class = "UILabel"; text = "Country"; ObjectID = "N8p-43-F0y"; */
+"N8p-43-F0y.text" = "Country";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "NLH-BE-qvG"; */
+"NLH-BE-qvG.text" = "Address";
+
+/* Class = "UIButton"; normalTitle = "Back to Dashboard"; ObjectID = "NSX-fW-k7n"; */
+"NSX-fW-k7n.normalTitle" = "Back to Dashboard";
+
+/* Class = "UILabel"; text = "6100"; ObjectID = "NYD-Vb-jdH"; */
+"NYD-Vb-jdH.text" = "6100";
+
+/* Class = "UILabel"; text = "Helpline Call"; ObjectID = "Ndn-kI-FIY"; */
+"Ndn-kI-FIY.text" = "Helpline Call";
+
+/* Class = "UILabel"; text = "Hindi"; ObjectID = "OOB-9P-yKA"; */
+"OOB-9P-yKA.text" = "Hindi";
+
+/* Class = "UILabel"; text = "Country"; ObjectID = "Ojr-Iy-yRg"; */
+"Ojr-Iy-yRg.text" = "Country";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "OvL-kf-hHV"; */
+"OvL-kf-hHV.text" = "Name";
+
+/* Class = "UITextField"; placeholder = "Enter Name"; ObjectID = "PYK-WR-bq6"; */
+"PYK-WR-bq6.placeholder" = "Enter Name";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "Pov-Es-yxQ"; */
+"Pov-Es-yxQ.text" = "Date";
+
+/* Class = "UILabel"; text = "Kindly upload your PAN details!"; ObjectID = "PwD-YG-h4g"; */
+"PwD-YG-h4g.text" = "Kindly upload your PAN details!";
+
+/* Class = "UILabel"; text = "Enter QR code in the above field and submit."; ObjectID = "Q1W-M9-qc8"; */
+"Q1W-M9-qc8.text" = "Enter QR code in the above field and submit.";
+
+/* Class = "UILabel"; text = "012345678912"; ObjectID = "QJz-dE-YwM"; */
+"QJz-dE-YwM.text" = "012345678912";
+
+/* Class = "UIButton"; normalTitle = "Scan QR Code"; ObjectID = "QV5-yN-vJW"; */
+"QV5-yN-vJW.normalTitle" = "Scan QR Code";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "QZ0-Bl-ZQR"; */
+"QZ0-Bl-ZQR.text" = "Label";
+
+/* Class = "UILabel"; text = "Mobile *"; ObjectID = "R2R-Fb-dyF"; */
+"R2R-Fb-dyF.text" = "Mobile *";
+
+/* Class = "UILabel"; text = "Created Date"; ObjectID = "RTy-lp-dW9"; */
+"RTy-lp-dW9.text" = "Created Date";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "RWD-gL-5AH"; */
+"RWD-gL-5AH.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "RWl-4w-xW6"; */
+"RWl-4w-xW6.text" = "-";
+
+/* Class = "UILabel"; text = "Name *"; ObjectID = "Rdg-K0-Jpn"; */
+"Rdg-K0-Jpn.text" = "Name *";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "Rfw-ro-oFe"; */
+"Rfw-ro-oFe.text" = "Points";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Rvd-6N-r9k"; */
+"Rvd-6N-r9k.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "Code Status"; ObjectID = "Ryz-BG-fQy"; */
+"Ryz-BG-fQy.text" = "Code Status";
+
+/* Class = "UIButton"; normalTitle = "Ok"; ObjectID = "SEn-t8-IPl"; */
+"SEn-t8-IPl.normalTitle" = "Ok";
+
+/* Class = "UILabel"; text = "  request for anything"; ObjectID = "ST9-93-gts"; */
+"ST9-93-gts.text" = "  request for anything";
+
+/* Class = "UILabel"; text = "E-Warranty"; ObjectID = "Scd-87-1TN"; */
+"Scd-87-1TN.text" = "E-Warranty";
+
+/* Class = "UILabel"; text = "XXXXXX"; ObjectID = "SqN-wL-Qr8"; */
+"SqN-wL-Qr8.text" = "XXXXXX";
+
+/* Class = "UILabel"; text = "Do you want to submit without  PAN attachment ?"; ObjectID = "Szg-s4-SGY"; */
+"Szg-s4-SGY.text" = "Do you want to submit without  PAN attachment ?";
+
+/* Class = "UIButton"; normalTitle = "SEND OTP"; ObjectID = "T43-v3-MQk"; */
+"T43-v3-MQk.normalTitle" = "SEND OTP";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "T9E-eg-Sof"; */
+"T9E-eg-Sof.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "Accept"; ObjectID = "TCg-vP-urT"; */
+"TCg-vP-urT.normalTitle" = "Accept";
+
+/* Class = "UILabel"; text = "Place a QR Code inside the view finder rectangle  to scan it."; ObjectID = "TDs-Bx-A6W"; */
+"TDs-Bx-A6W.text" = "Place a QR Code inside the view finder rectangle  to scan it.";
+
+/* Class = "UILabel"; text = "Count :"; ObjectID = "TQe-C8-idO"; */
+"TQe-C8-idO.text" = "Count :";
+
+/* Class = "UILabel"; text = "आपका स्वागत है"; ObjectID = "Ti3-ea-xee"; */
+"Ti3-ea-xee.text" = "आपका स्वागत है";
+
+/* Class = "UIButton"; normalTitle = "Others"; ObjectID = "TrX-I1-xHU"; */
+"TrX-I1-xHU.normalTitle" = "Others";
+
+/* Class = "UILabel"; text = "Redeemable Points"; ObjectID = "Tsy-yq-IRZ"; */
+"Tsy-yq-IRZ.text" = "Redeemable Points";
+
+/* Class = "UILabel"; text = "Pan Details"; ObjectID = "UFG-pg-LCx"; */
+"UFG-pg-LCx.text" = "Pan Details";
+
+/* Class = "UILabel"; text = "Pan Details"; ObjectID = "UM0-b8-ZYK"; */
+"UM0-b8-ZYK.text" = "Pan Details";
+
+/* Class = "UILabel"; text = "No Data Found !!"; ObjectID = "URu-rB-LCX"; */
+"URu-rB-LCX.text" = "No Data Found !!";
+
+/* Class = "UIButton"; normalTitle = "Proceed to Checkout"; ObjectID = "UwI-X2-e9h"; */
+"UwI-X2-e9h.normalTitle" = "Proceed to Checkout";
+
+/* Class = "UILabel"; text = " E-Warranty"; ObjectID = "VD0-f0-4UB"; */
+"VD0-f0-4UB.text" = " E-Warranty";
+
+/* Class = "UILabel"; text = "Query Summary"; ObjectID = "VIm-0r-rnP"; */
+"VIm-0r-rnP.text" = "Query Summary";
+
+/* Class = "UILabel"; text = "Average earning required per month"; ObjectID = "VZS-Kp-Cei"; */
+"VZS-Kp-Cei.text" = "Average earning required per month";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "Vd6-Bw-izo"; */
+"Vd6-Bw-izo.text" = "-";
+
+/* Class = "UILabel"; text = "Pan Details"; ObjectID = "VgS-nT-w6s"; */
+"VgS-nT-w6s.text" = "Pan Details";
+
+/* Class = "UILabel"; text = "Pending"; ObjectID = "VqD-cn-dC9"; */
+"VqD-cn-dC9.text" = "Pending";
+
+/* Class = "UITextField"; text = "1"; ObjectID = "VxD-bs-5Tj"; */
+"VxD-bs-5Tj.text" = "1";
+
+/* Class = "UILabel"; text = "Select Date Range ti check your E-warranty"; ObjectID = "W7Y-4Y-Jlo"; */
+"W7Y-4Y-Jlo.text" = "Select Date Range ti check your E-warranty";
+
+/* Class = "UILabel"; text = "Follower"; ObjectID = "WGU-37-dGE"; */
+"WGU-37-dGE.text" = "Follower";
+
+/* Class = "UILabel"; text = "Offers & Promotions"; ObjectID = "WKO-7y-onv"; */
+"WKO-7y-onv.text" = "Offers & Promotions";
+
+/* Class = "UILabel"; text = "Lodge Query"; ObjectID = "WLM-DM-gjR"; */
+"WLM-DM-gjR.text" = "Lodge Query";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "WRZ-Wn-qvI"; */
+"WRZ-Wn-qvI.text" = "Email";
+
+/* Class = "UILabel"; text = "  Select Topic"; ObjectID = "Wbo-bK-zh9"; */
+"Wbo-bK-zh9.text" = "  Select Topic";
+
+/* Class = "UILabel"; text = "Redemption Planner"; ObjectID = "Wev-Zb-Ust"; */
+"Wev-Zb-Ust.text" = "Redemption Planner";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "WfV-gf-1uS"; */
+"WfV-gf-1uS.text" = "Points";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "WtC-Qc-hRs"; */
+"WtC-Qc-hRs.text" = "-";
+
+/* Class = "UILabel"; text = "10 %"; ObjectID = "Wti-nw-YOT"; */
+"Wti-nw-YOT.text" = "10 %";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "WxN-sc-geb"; */
+"WxN-sc-geb.normalTitle" = "-";
+
+/* Class = "UILabel"; text = "স্বাগতম"; ObjectID = "XIz-bS-eZG"; */
+"XIz-bS-eZG.text" = "স্বাগতম";
+
+/* Class = "UILabel"; text = "Mobile"; ObjectID = "XJS-A3-iaG"; */
+"XJS-A3-iaG.text" = "Mobile";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "XJm-6g-PxG"; */
+"XJm-6g-PxG.text" = "-";
+
+/* Class = "UILabel"; text = "Total Points"; ObjectID = "XWn-YS-qjW"; */
+"XWn-YS-qjW.text" = "Total Points";
+
+/* Class = "UILabel"; text = "XXXXXX"; ObjectID = "Xdq-kZ-j5e"; */
+"Xdq-kZ-j5e.text" = "XXXXXX";
+
+/* Class = "UILabel"; text = "For any questions and queries on the Sharon Bandhan Loyalty Program please give a miss call on the following number"; ObjectID = "Xzm-K6-T09"; */
+"Xzm-K6-T09.text" = "For any questions and queries on the Sharon Bandhan Loyalty Program please give a miss call on the following number";
+
+/* Class = "UILabel"; text = "Didn't receive OTP Code ?"; ObjectID = "Xzz-EP-45B"; */
+"Xzz-EP-45B.text" = "Didn't receive OTP Code ?";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "YCX-Ob-9At"; */
+"YCX-Ob-9At.normalTitle" = "OK";
+
+/* Class = "UIButton"; normalTitle = "  Delete Account"; ObjectID = "YDe-mF-QTx"; */
+"YDe-mF-QTx.normalTitle" = "  Delete Account";
+
+/* Class = "UIButton"; normalTitle = "Add to Cart"; ObjectID = "YQW-hz-lJj"; */
+"YQW-hz-lJj.normalTitle" = "Add to Cart";
+
+/* Class = "UIButton"; normalTitle = "  Code Status"; ObjectID = "Yb8-gO-3cq"; */
+"Yb8-gO-3cq.normalTitle" = "  Code Status";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "Yca-6d-Dkx"; */
+"Yca-6d-Dkx.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "Added To Cart"; ObjectID = "Yf3-Lm-ukK"; */
+"Yf3-Lm-ukK.normalTitle" = "Added To Cart";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "Ymh-eX-Efk"; */
+"Ymh-eX-Efk.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ypr-F7-uii"; */
+"Ypr-F7-uii.text" = "Label";
+
+/* Class = "UILabel"; text = "Follower category *"; ObjectID = "Z3M-Fe-tww"; */
+"Z3M-Fe-tww.text" = "Follower category *";
+
+/* Class = "UILabel"; text = "Customer PAN Details have been submitted for verification !"; ObjectID = "Z6B-0p-Pd5"; */
+"Z6B-0p-Pd5.text" = "Customer PAN Details have been submitted for verification !";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "Z9W-mW-lrP"; */
+"Z9W-mW-lrP.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "Redeem"; ObjectID = "ZZz-7I-bPa"; */
+"ZZz-7I-bPa.normalTitle" = "Redeem";
+
+/* Class = "UIButton"; normalTitle = "Scan Again"; ObjectID = "Zky-Bd-mqJ"; */
+"Zky-Bd-mqJ.normalTitle" = "Scan Again";
+
+/* Class = "UILabel"; text = "Expected redemption"; ObjectID = "ZlO-kN-4RN"; */
+"ZlO-kN-4RN.text" = "Expected redemption";
+
+/* Class = "UILabel"; text = "Mobile *"; ObjectID = "Zt4-LM-WxA"; */
+"Zt4-LM-WxA.text" = "Mobile *";
+
+/* Class = "UILabel"; text = "My  Redemptions"; ObjectID = "a9C-lr-la3"; */
+"a9C-lr-la3.text" = "My  Redemptions";
+
+/* Class = "UILabel"; text = "PAN Number : _"; ObjectID = "aAx-3O-gaK"; */
+"aAx-3O-gaK.text" = "PAN Number : _";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "aFy-zu-zIu"; */
+"aFy-zu-zIu.text" = "-";
+
+/* Class = "UILabel"; text = "Total Points"; ObjectID = "aH8-2n-pQn"; */
+"aH8-2n-pQn.text" = "Total Points";
+
+/* Class = "UILabel"; text = "Points required to redeem"; ObjectID = "aRX-Fv-doT"; */
+"aRX-Fv-doT.text" = "Points required to redeem";
+
+/* Class = "UILabel"; text = "QR code is Submitted Successfully. Check the status of the code in  status report."; ObjectID = "aoF-NZ-UFp"; */
+"aoF-NZ-UFp.text" = "QR code is Submitted Successfully. Check the status of the code in  status report.";
+
+/* Class = "UITextField"; placeholder = "Enter Your Code"; ObjectID = "asO-Ph-uZi"; */
+"asO-Ph-uZi.placeholder" = "Enter Your Code";
+
+/* Class = "UILabel"; text = "No data found !"; ObjectID = "asp-7E-cJe"; */
+"asp-7E-cJe.text" = "No data found !";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "avC-p6-1yh"; */
+"avC-p6-1yh.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "Congratulations you are almost near to win this existing Dream Gift"; ObjectID = "awN-Kc-v5a"; */
+"awN-Kc-v5a.text" = "Congratulations you are almost near to win this existing Dream Gift";
+
+/* Class = "UILabel"; text = "Click here to see your QR Codes"; ObjectID = "b82-oz-buJ"; */
+"b82-oz-buJ.text" = "Click here to see your QR Codes";
+
+/* Class = "UILabel"; text = "Created Date"; ObjectID = "b9S-fX-gfl"; */
+"b9S-fX-gfl.text" = "Created Date";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "bPp-15-E4k"; */
+"bPp-15-E4k.normalTitle" = "+";
+
+/* Class = "UITextField"; placeholder = "Enter Email"; ObjectID = "bZO-YJ-RTB"; */
+"bZO-YJ-RTB.placeholder" = "Enter Email";
+
+/* Class = "UITextField"; placeholder = "Enter the 12 digit Code"; ObjectID = "bbK-Hc-sE6"; */
+"bbK-Hc-sE6.placeholder" = "Enter the 12 digit Code";
+
+/* Class = "UILabel"; text = "Pending"; ObjectID = "bdR-y6-otT"; */
+"bdR-y6-otT.text" = "Pending";
+
+/* Class = "UILabel"; text = "Login to continue"; ObjectID = "bgj-kv-ewh"; */
+"bgj-kv-ewh.text" = "Login to continue";
+
+/* Class = "UILabel"; text = "Code Details"; ObjectID = "bhD-bT-Ixe"; */
+"bhD-bT-Ixe.text" = "Code Details";
+
+/* Class = "UILabel"; text = "All Status"; ObjectID = "bqv-ti-zHI"; */
+"bqv-ti-zHI.text" = "All Status";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "buH-8l-q1l"; */
+"buH-8l-q1l.normalTitle" = "Save";
+
+/* Class = "UIButton"; configuration.title = "View"; ObjectID = "c10-Js-OVQ"; */
+"c10-Js-OVQ.configuration.title" = "View";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "c10-Js-OVQ"; */
+"c10-Js-OVQ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "हिन्दी"; ObjectID = "cAs-f7-3hz"; */
+"cAs-f7-3hz.text" = "हिन्दी";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "cL1-6a-1WX"; */
+"cL1-6a-1WX.text" = "0";
+
+/* Class = "UILabel"; text = "to Sharon"; ObjectID = "cQF-fr-RCN"; */
+"cQF-fr-RCN.text" = "to Sharon";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "cRA-Je-QJk"; */
+"cRA-Je-QJk.normalTitle" = "Yes";
+
+/* Class = "UILabel"; text = "Hindi"; ObjectID = "cRH-bV-5yD"; */
+"cRH-bV-5yD.text" = "Hindi";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "cTy-vB-7ls"; */
+"cTy-vB-7ls.text" = "0";
+
+/* Class = "UITextField"; placeholder = "Enter name"; ObjectID = "cZ9-oy-w8c"; */
+"cZ9-oy-w8c.placeholder" = "Enter name";
+
+/* Class = "UILabel"; text = "Redeemable Points"; ObjectID = "cnH-C1-xhd"; */
+"cnH-C1-xhd.text" = "Redeemable Points";
+
+/* Class = "UIButton"; normalTitle = "SCAN AGAIN"; ObjectID = "cxT-Sc-du7"; */
+"cxT-Sc-du7.normalTitle" = "SCAN AGAIN";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "cxX-sG-br3"; */
+"cxX-sG-br3.text" = "Label";
+
+/* Class = "UILabel"; text = "Default Address"; ObjectID = "dDU-k2-A2r"; */
+"dDU-k2-A2r.text" = "Default Address";
+
+/* Class = "UIButton"; normalTitle = "Rise Ticket"; ObjectID = "dPh-KP-Ic8"; */
+"dPh-KP-Ic8.normalTitle" = "Rise Ticket";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "dfb-Jp-BJQ"; */
+"dfb-Jp-BJQ.text" = "Points";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "diu-5q-Lay"; */
+"diu-5q-Lay.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "To Date"; ObjectID = "djK-fy-hmt"; */
+"djK-fy-hmt.normalTitle" = "To Date";
+
+/* Class = "UIButton"; normalTitle = "Accept"; ObjectID = "dr4-ut-gLP"; */
+"dr4-ut-gLP.normalTitle" = "Accept";
+
+/* Class = "UILabel"; text = "Upload Code"; ObjectID = "dtd-5R-UIB"; */
+"dtd-5R-UIB.text" = "Upload Code";
+
+/* Class = "UIButton"; normalTitle = "Generate E-Warranty"; ObjectID = "dv1-DS-VlI"; */
+"dv1-DS-VlI.normalTitle" = "Generate E-Warranty";
+
+/* Class = "UILabel"; text = "XXXXX"; ObjectID = "e1S-gg-B5d"; */
+"e1S-gg-B5d.text" = "XXXXX";
+
+/* Class = "UIButton"; normalTitle = "Logout"; ObjectID = "eBE-xU-bBr"; */
+"eBE-xU-bBr.normalTitle" = "Logout";
+
+/* Class = "UILabel"; text = "28-04-2022 04.49.41 PM"; ObjectID = "eQ7-CA-dJo"; */
+"eQ7-CA-dJo.text" = "28-04-2022 04.49.41 PM";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "eR5-qi-8wc"; */
+"eR5-qi-8wc.text" = "0";
+
+/* Class = "UILabel"; text = "We send a OTP to your Number"; ObjectID = "eVS-JW-utW"; */
+"eVS-JW-utW.text" = "We send a OTP to your Number";
+
+/* Class = "UILabel"; text = "Category \\ Electronics"; ObjectID = "eZy-qy-euj"; */
+"eZy-qy-euj.text" = "Category \\ Electronics";
+
+/* Class = "UILabel"; text = "Descriptions"; ObjectID = "edQ-DL-co6"; */
+"edQ-DL-co6.text" = "Descriptions";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "eho-bA-Zqf"; */
+"eho-bA-Zqf.text" = "-";
+
+/* Class = "UILabel"; text = "XXXXX"; ObjectID = "elP-oP-ZdF"; */
+"elP-oP-ZdF.text" = "XXXXX";
+
+/* Class = "UILabel"; text = "Forgot password ?"; ObjectID = "euw-Mg-xSQ"; */
+"euw-Mg-xSQ.text" = "Forgot password ?";
+
+/* Class = "UILabel"; text = "Dream Gift"; ObjectID = "ew3-po-D6V"; */
+"ew3-po-D6V.text" = "Dream Gift";
+
+/* Class = "UITextField"; placeholder = "Enter your PAN Number"; ObjectID = "eyj-l4-G8K"; */
+"eyj-l4-G8K.placeholder" = "Enter your PAN Number";
+
+/* Class = "UILabel"; text = "0123456789012"; ObjectID = "fVd-QH-yvL"; */
+"fVd-QH-yvL.text" = "0123456789012";
+
+/* Class = "UILabel"; text = "No data found !!"; ObjectID = "feY-G2-5ch"; */
+"feY-G2-5ch.text" = "No data found !!";
+
+/* Class = "UILabel"; text = "No data found !!"; ObjectID = "gC2-Sw-Tk2"; */
+"gC2-Sw-Tk2.text" = "No data found !!";
+
+/* Class = "UITextField"; placeholder = "Enter Address"; ObjectID = "gGj-tM-zeQ"; */
+"gGj-tM-zeQ.placeholder" = "Enter Address";
+
+/* Class = "UIButton"; normalTitle = "X"; ObjectID = "gHY-rE-wgp"; */
+"gHY-rE-wgp.normalTitle" = "X";
+
+/* Class = "UILabel"; text = "OTP *"; ObjectID = "gL7-vd-FkC"; */
+"gL7-vd-FkC.text" = "OTP *";
+
+/* Class = "UILabel"; text = "Product name : -"; ObjectID = "gdb-9U-B1v"; */
+"gdb-9U-B1v.text" = "Product name : -";
+
+/* Class = "UILabel"; text = "Dream gift"; ObjectID = "gu3-5P-5b4"; */
+"gu3-5P-5b4.text" = "Dream gift";
+
+/* Class = "UILabel"; text = "No Data Found !!"; ObjectID = "hWn-CJ-HIb"; */
+"hWn-CJ-HIb.text" = "No Data Found !!";
+
+/* Class = "UILabel"; text = "All"; ObjectID = "hcd-EH-bca"; */
+"hcd-EH-bca.text" = "All";
+
+/* Class = "UILabel"; text = "Address *"; ObjectID = "hrz-H5-SVB"; */
+"hrz-H5-SVB.text" = "Address *";
+
+/* Class = "UIButton"; normalTitle = "Select City"; ObjectID = "i3e-6P-dWy"; */
+"i3e-6P-dWy.normalTitle" = "Select City";
+
+/* Class = "UILabel"; text = "Chat"; ObjectID = "iSg-Eu-cch"; */
+"iSg-Eu-cch.text" = "Chat";
+
+/* Class = "UILabel"; text = "Telugu"; ObjectID = "iTB-LO-eVq"; */
+"iTB-LO-eVq.text" = "Telugu";
+
+/* Class = "UITextField"; placeholder = "Enter Mobile Number"; ObjectID = "ilW-Q6-Qz3"; */
+"ilW-Q6-Qz3.placeholder" = "Enter Mobile Number";
+
+/* Class = "UILabel"; text = "Category \\ Electronics"; ObjectID = "iq9-Hj-xq2"; */
+"iq9-Hj-xq2.text" = "Category \\ Electronics";
+
+/* Class = "UILabel"; text = "OTP Verification"; ObjectID = "jHY-IQ-feS"; */
+"jHY-IQ-feS.text" = "OTP Verification";
+
+/* Class = "UILabel"; text = "200000"; ObjectID = "jKY-GZ-8Ys"; */
+"jKY-GZ-8Ys.text" = "200000";
+
+/* Class = "UIButton"; normalTitle = "Upload"; ObjectID = "jda-Wr-yku"; */
+"jda-Wr-yku.normalTitle" = "Upload";
+
+/* Class = "UILabel"; text = "Redeemable Points"; ObjectID = "jdd-Ai-r4A"; */
+"jdd-Ai-r4A.text" = "Redeemable Points";
+
+/* Class = "UITextField"; placeholder = "Enter Password"; ObjectID = "jxc-vG-CS7"; */
+"jxc-vG-CS7.placeholder" = "Enter Password";
+
+/* Class = "UILabel"; text = "Pref.Language"; ObjectID = "k7D-PK-3Dq"; */
+"k7D-PK-3Dq.text" = "Pref.Language";
+
+/* Class = "UILabel"; text = "No Data Found !!"; ObjectID = "kCz-cY-XN5"; */
+"kCz-cY-XN5.text" = "No Data Found !!";
+
+/* Class = "UILabel"; text = "State"; ObjectID = "kUw-oV-zGe"; */
+"kUw-oV-zGe.text" = "State";
+
+/* Class = "UILabel"; text = "GIVE A MISSED CALL ON"; ObjectID = "ka5-Dh-v1g"; */
+"ka5-Dh-v1g.text" = "GIVE A MISSED CALL ON";
+
+/* Class = "UITextView"; text = "-"; ObjectID = "l1h-8C-mie"; */
+"l1h-8C-mie.text" = "-";
+
+/* Class = "UILabel"; text = "OTP will Receive within"; ObjectID = "lFi-uK-ntg"; */
+"lFi-uK-ntg.text" = "OTP will Receive within";
+
+/* Class = "UILabel"; text = "Desired Date"; ObjectID = "lde-Az-V2B"; */
+"lde-Az-V2B.text" = "Desired Date";
+
+/* Class = "UILabel"; text = "your language"; ObjectID = "lq9-Pu-COT"; */
+"lq9-Pu-COT.text" = "your language";
+
+/* Class = "UIButton"; normalTitle = "Select Status"; ObjectID = "lzy-9N-t7v"; */
+"lzy-9N-t7v.normalTitle" = "Select Status";
+
+/* Class = "UILabel"; text = "Points Required"; ObjectID = "mDr-f1-zdO"; */
+"mDr-f1-zdO.text" = "Points Required";
+
+/* Class = "UILabel"; text = "918955177400"; ObjectID = "mEL-g0-jGu"; */
+"mEL-g0-jGu.text" = "918955177400";
+
+/* Class = "UILabel"; text = "Open new Ticket"; ObjectID = "mJO-5O-8zC"; */
+"mJO-5O-8zC.text" = "Open new Ticket";
+
+/* Class = "UIButton"; normalTitle = "  Sync Status"; ObjectID = "mPK-xL-jXR"; */
+"mPK-xL-jXR.normalTitle" = "  Sync Status";
+
+/* Class = "UILabel"; text = "Terms of Use"; ObjectID = "mTq-AI-PZ8"; */
+"mTq-AI-PZ8.text" = "Terms of Use";
+
+/* Class = "UILabel"; text = "200000"; ObjectID = "mXk-O6-w5G"; */
+"mXk-O6-w5G.text" = "200000";
+
+/* Class = "UILabel"; text = "English"; ObjectID = "mdn-4I-pcX"; */
+"mdn-4I-pcX.text" = "English";
+
+/* Class = "UILabel"; text = "Pending"; ObjectID = "mfP-0e-xof"; */
+"mfP-0e-xof.text" = "Pending";
+
+/* Class = "UILabel"; text = "Area"; ObjectID = "mqh-SQ-u94"; */
+"mqh-SQ-u94.text" = "Area";
+
+/* Class = "UILabel"; text = "Enter Mobile Number"; ObjectID = "muy-9T-Ag2"; */
+"muy-9T-Ag2.text" = "Enter Mobile Number";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "nEV-cG-jf5"; */
+"nEV-cG-jf5.text" = "Email";
+
+/* Class = "UIButton"; normalTitle = "ADD TO PLANNER"; ObjectID = "nGS-Gv-rpQ"; */
+"nGS-Gv-rpQ.normalTitle" = "ADD TO PLANNER";
+
+/* Class = "UILabel"; text = "Terms and Conditions"; ObjectID = "nYf-Y0-XuS"; */
+"nYf-Y0-XuS.text" = "Terms and Conditions";
+
+/* Class = "UILabel"; text = "Bronze"; ObjectID = "nfI-PJ-P9r"; */
+"nfI-PJ-P9r.text" = "Bronze";
+
+/* Class = "UILabel"; text = "शेरोन में"; ObjectID = "nhV-df-jhM"; */
+"nhV-df-jhM.text" = "शेरोन में";
+
+/* Class = "UILabel"; text = "PLATINUM"; ObjectID = "nnP-6E-gYQ"; */
+"nnP-6E-gYQ.text" = "PLATINUM";
+
+/* Class = "UILabel"; text = "Default Address"; ObjectID = "nwB-8H-iWC"; */
+"nwB-8H-iWC.text" = "Default Address";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "nwl-zW-YUa"; */
+"nwl-zW-YUa.text" = "0";
+
+/* Class = "UILabel"; text = "No data found !"; ObjectID = "nzH-OC-CCL"; */
+"nzH-OC-CCL.text" = "No data found !";
+
+/* Class = "UILabel"; text = "Add E-Warrenty"; ObjectID = "oHf-V9-HEQ"; */
+"oHf-V9-HEQ.text" = "Add E-Warrenty";
+
+/* Class = "UIButton"; normalTitle = "Details"; ObjectID = "oPH-IL-V7d"; */
+"oPH-IL-V7d.normalTitle" = "Details";
+
+/* Class = "UIButton"; normalTitle = "From Date"; ObjectID = "oUU-8F-aGc"; */
+"oUU-8F-aGc.normalTitle" = "From Date";
+
+/* Class = "UIButton"; configuration.title = "Added To Cart"; ObjectID = "okr-om-4Fx"; */
+"okr-om-4Fx.configuration.title" = "Added To Cart";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "okr-om-4Fx"; */
+"okr-om-4Fx.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "ADD FOLLOWER"; ObjectID = "owh-77-BzA"; */
+"owh-77-BzA.normalTitle" = "ADD FOLLOWER";
+
+/* Class = "UILabel"; text = "TDS applicable @ "; ObjectID = "p1b-Fy-fYS"; */
+"p1b-Fy-fYS.text" = "TDS applicable @ ";
+
+/* Class = "UILabel"; text = "Dream gift name"; ObjectID = "pKo-gR-Atq"; */
+"pKo-gR-Atq.text" = "Dream gift name";
+
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "pbA-rR-68u"; */
+"pbA-rR-68u.text" = "Welcome";
+
+/* Class = "UILabel"; text = "My Redemptions"; ObjectID = "pef-Xq-tLN"; */
+"pef-Xq-tLN.text" = "My Redemptions";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "pfl-q4-pFp"; */
+"pfl-q4-pFp.text" = "0";
+
+/* Class = "UILabel"; text = "Membership ID"; ObjectID = "po7-Ks-HNT"; */
+"po7-Ks-HNT.text" = "Membership ID";
+
+/* Class = "UIButton"; normalTitle = "Filter"; ObjectID = "pqk-Cf-QHu"; */
+"pqk-Cf-QHu.normalTitle" = "Filter";
+
+/* Class = "UILabel"; text = "Your Dream Gift"; ObjectID = "q1O-K4-E2P"; */
+"q1O-K4-E2P.text" = "Your Dream Gift";
+
+/* Class = "UITextField"; placeholder = "Write Query here ..."; ObjectID = "q1e-u7-3xp"; */
+"q1e-u7-3xp.placeholder" = "Write Query here ...";
+
+/* Class = "UIButton"; normalTitle = "Save Changes"; ObjectID = "q5T-TS-Dxp"; */
+"q5T-TS-Dxp.normalTitle" = "Save Changes";
+
+/* Class = "UIButton"; normalTitle = "Redeem Now"; ObjectID = "qCs-pV-ujr"; */
+"qCs-pV-ujr.normalTitle" = "Redeem Now";
+
+/* Class = "UILabel"; text = "TDS points"; ObjectID = "qIL-D0-nI7"; */
+"qIL-D0-nI7.text" = "TDS points";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "qRn-S0-OCJ"; */
+"qRn-S0-OCJ.text" = "0";
+
+/* Class = "UILabel"; text = "Status :"; ObjectID = "qaJ-hs-cZc"; */
+"qaJ-hs-cZc.text" = "Status :";
+
+/* Class = "UILabel"; text = "English"; ObjectID = "qj0-2I-brc"; */
+"qj0-2I-brc.text" = "English";
+
+/* Class = "UILabel"; text = "to Sharon"; ObjectID = "qkk-Q2-dzk"; */
+"qkk-Q2-dzk.text" = "to Sharon";
+
+/* Class = "UIButton"; normalTitle = "Validate"; ObjectID = "qoY-MB-h0S"; */
+"qoY-MB-h0S.normalTitle" = "Validate";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "r08-yl-xtF"; */
+"r08-yl-xtF.text" = "Points";
+
+/* Class = "UIButton"; normalTitle = "Decline"; ObjectID = "rDZ-Sx-F50"; */
+"rDZ-Sx-F50.normalTitle" = "Decline";
+
+/* Class = "UILabel"; text = "Redemption Catalogue"; ObjectID = "rKz-cb-Hf8"; */
+"rKz-cb-Hf8.text" = "Redemption Catalogue";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "raS-ZF-kAU"; */
+"raS-ZF-kAU.text" = "City";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "raU-9R-jON"; */
+"raU-9R-jON.text" = "-";
+
+/* Class = "UILabel"; text = "Desired Date"; ObjectID = "rge-6b-PKn"; */
+"rge-6b-PKn.text" = "Desired Date";
+
+/* Class = "UIButton"; normalTitle = "To Date"; ObjectID = "rhj-sw-ms6"; */
+"rhj-sw-ms6.normalTitle" = "To Date";
+
+/* Class = "UILabel"; text = "Privacy Policy"; ObjectID = "roz-Wk-299"; */
+"roz-Wk-299.text" = "Privacy Policy";
+
+/* Class = "UILabel"; text = "అ"; ObjectID = "rpC-Uu-GHq"; */
+"rpC-Uu-GHq.text" = "అ";
+
+/* Class = "UITextField"; placeholder = "Enter Username Mobile Number"; ObjectID = "rpH-Kh-eUr"; */
+"rpH-Kh-eUr.placeholder" = "Enter Username Mobile Number";
+
+/* Class = "UILabel"; text = "No Data Found !!"; ObjectID = "rrh-ox-6wA"; */
+"rrh-ox-6wA.text" = "No Data Found !!";
+
+/* Class = "UILabel"; text = "Date of MFG :"; ObjectID = "s0N-z8-CC3"; */
+"s0N-z8-CC3.text" = "Date of MFG :";
+
+/* Class = "UILabel"; text = "Size :"; ObjectID = "sBl-WB-Y2z"; */
+"sBl-WB-Y2z.text" = "Size :";
+
+/* Class = "UILabel"; text = "New password has been sent to your Registered Mobile Number"; ObjectID = "sNQ-5s-yFS"; */
+"sNQ-5s-yFS.text" = "New password has been sent to your Registered Mobile Number";
+
+/* Class = "UILabel"; text = "QR Code is not available for your location"; ObjectID = "sOa-JY-Nba"; */
+"sOa-JY-Nba.text" = "QR Code is not available for your location";
+
+/* Class = "UILabel"; text = "Offers & Promotions Name"; ObjectID = "sT1-PK-Neg"; */
+"sT1-PK-Neg.text" = "Offers & Promotions Name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "sYG-e0-4te"; */
+"sYG-e0-4te.text" = "Label";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "skM-ij-oG0"; */
+"skM-ij-oG0.text" = "0";
+
+/* Class = "UILabel"; text = "No data found !!"; ObjectID = "tXV-LF-OKI"; */
+"tXV-LF-OKI.text" = "No data found !!";
+
+/* Class = "UILabel"; text = "The app is unable to access the services as the system is down for maintenance!  Please try after sometime."; ObjectID = "tj5-Dd-qKS"; */
+"tj5-Dd-qKS.text" = "The app is unable to access the services as the system is down for maintenance!  Please try after sometime.";
+
+/* Class = "UILabel"; text = "Privacy Policy"; ObjectID = "tm1-ce-s9m"; */
+"tm1-ce-s9m.text" = "Privacy Policy";
+
+/* Class = "UIButton"; normalTitle = "PAN Attachment"; ObjectID = "toQ-4R-GIb"; */
+"toQ-4R-GIb.normalTitle" = "PAN Attachment";
+
+/* Class = "UIButton"; normalTitle = "Redeem"; ObjectID = "tst-dg-S7S"; */
+"tst-dg-S7S.normalTitle" = "Redeem";
+
+/* Class = "UILabel"; text = "My Cart"; ObjectID = "tux-ib-3Zh"; */
+"tux-ib-3Zh.text" = "My Cart";
+
+/* Class = "UILabel"; text = "6100"; ObjectID = "u4x-7c-BVo"; */
+"u4x-7c-BVo.text" = "6100";
+
+/* Class = "UILabel"; text = "స్వాగతం"; ObjectID = "u53-5F-EVf"; */
+"u53-5F-EVf.text" = "స్వాగతం";
+
+/* Class = "UILabel"; text = "Profile"; ObjectID = "uC3-YS-z0g"; */
+"uC3-YS-z0g.text" = "Profile";
+
+/* Class = "UIButton"; normalTitle = "Privacy Policy"; ObjectID = "uR3-oz-06S"; */
+"uR3-oz-06S.normalTitle" = "Privacy Policy";
+
+/* Class = "UIButton"; normalTitle = "Added To Planner"; ObjectID = "uXg-UD-LZk"; */
+"uXg-UD-LZk.normalTitle" = "Added To Planner";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "uaA-2Z-UIn"; */
+"uaA-2Z-UIn.text" = "-";
+
+/* Class = "UILabel"; text = "My QR Codes"; ObjectID = "ueW-DJ-89Z"; */
+"ueW-DJ-89Z.text" = "My QR Codes";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ufx-p7-aDz"; */
+"ufx-p7-aDz.text" = "Label";
+
+/* Class = "UILabel"; text = "Select Language"; ObjectID = "uug-da-voq"; */
+"uug-da-voq.text" = "Select Language";
+
+/* Class = "UILabel"; text = "Offers & Promotions"; ObjectID = "v6h-NF-0y3"; */
+"v6h-NF-0y3.text" = "Offers & Promotions";
+
+/* Class = "UILabel"; text = "Name *"; ObjectID = "v9o-WQ-URt"; */
+"v9o-WQ-URt.text" = "Name *";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "vBx-OD-fAE"; */
+"vBx-OD-fAE.text" = "-";
+
+/* Class = "UILabel"; text = "Please submit your query using this form"; ObjectID = "vKk-Y3-KpV"; */
+"vKk-Y3-KpV.text" = "Please submit your query using this form";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "vUD-2m-ytP"; */
+"vUD-2m-ytP.text" = "Points";
+
+/* Class = "UILabel"; text = "TDS points"; ObjectID = "vYf-O1-7ZI"; */
+"vYf-O1-7ZI.text" = "TDS points";
+
+/* Class = "UIButton"; normalTitle = "Decline"; ObjectID = "vhe-aW-jn9"; */
+"vhe-aW-jn9.normalTitle" = "Decline";
+
+/* Class = "UIButton"; configuration.title = "Added To Planner"; ObjectID = "vsK-eF-sMA"; */
+"vsK-eF-sMA.configuration.title" = "Added To Planner";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "vsK-eF-sMA"; */
+"vsK-eF-sMA.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Select Area"; ObjectID = "w1k-VJ-bUu"; */
+"w1k-VJ-bUu.normalTitle" = "Select Area";
+
+/* Class = "UILabel"; text = "Successful"; ObjectID = "w1p-Z7-aWy"; */
+"w1p-Z7-aWy.text" = "Successful";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "w3x-Kk-9pU"; */
+"w3x-Kk-9pU.text" = "-";
+
+/* Class = "UILabel"; text = "शेरोन में"; ObjectID = "wC8-Sm-MiT"; */
+"wC8-Sm-MiT.text" = "शेरोन में";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "wFt-8r-XdR"; */
+"wFt-8r-XdR.text" = "-";
+
+/* Class = "UILabel"; text = "Genuine Sharon Ply Product"; ObjectID = "wIe-5k-k8h"; */
+"wIe-5k-k8h.text" = "Genuine Sharon Ply Product";
+
+/* Class = "UILabel"; text = "You Have Redeemed your Product Successfukky"; ObjectID = "wKy-aw-RS7"; */
+"wKy-aw-RS7.text" = "You Have Redeemed your Product Successfukky";
+
+/* Class = "UILabel"; text = "Product Description"; ObjectID = "wOL-4Y-KyU"; */
+"wOL-4Y-KyU.text" = "Product Description";
+
+/* Class = "UILabel"; text = "New password has been sent to your Registered Mobile Number"; ObjectID = "wRs-Wq-M1M"; */
+"wRs-Wq-M1M.text" = "New password has been sent to your Registered Mobile Number";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "x1D-p6-woP"; */
+"x1D-p6-woP.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Accept"; ObjectID = "xAt-fh-Hzx"; */
+"xAt-fh-Hzx.configuration.title" = "Accept";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xAt-fh-Hzx"; */
+"xAt-fh-Hzx.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "xG9-fw-YPj"; */
+"xG9-fw-YPj.text" = "Email";
+
+/* Class = "UILabel"; text = "Code Summary"; ObjectID = "xIq-9Q-h77"; */
+"xIq-9Q-h77.text" = "Code Summary";
+
+/* Class = "UILabel"; text = "2019-30-12"; ObjectID = "xNT-fA-7IK"; */
+"xNT-fA-7IK.text" = "2019-30-12";
+
+/* Class = "UILabel"; text = "Customer name"; ObjectID = "xky-2f-HgC"; */
+"xky-2f-HgC.text" = "Customer name";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "y10-ui-oGw"; */
+"y10-ui-oGw.text" = "-";
+
+/* Class = "UILabel"; text = "No data found !"; ObjectID = "yMf-ay-0WD"; */
+"yMf-ay-0WD.text" = "No data found !";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "yrC-uR-R2G"; */
+"yrC-uR-R2G.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "Grant Access"; ObjectID = "z0i-kE-4hk"; */
+"z0i-kE-4hk.normalTitle" = "Grant Access";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "zBy-X5-xJe"; */
+"zBy-X5-xJe.text" = "-";
+
+/* Class = "UILabel"; text = "RR-1234-01"; ObjectID = "zJM-H5-9Gq"; */
+"zJM-H5-9Gq.text" = "RR-1234-01";
+
+/* Class = "UILabel"; text = "My dreamgift product name"; ObjectID = "zJg-Mo-I0H"; */
+"zJg-Mo-I0H.text" = "My dreamgift product name";
+
+/* Class = "UILabel"; text = "E-Warranty generated for"; ObjectID = "zZv-o0-JhD"; */
+"zZv-o0-JhD.text" = "E-Warranty generated for";
+
+/* Class = "UILabel"; text = "Choose"; ObjectID = "zdx-pZ-Wth"; */
+"zdx-pZ-Wth.text" = "Choose";
+
+/* Class = "UILabel"; text = "Code Status"; ObjectID = "zgP-g5-42Z"; */
+"zgP-g5-42Z.text" = "Code Status";
+
+/* Class = "UITextField"; placeholder = "Enter OTP"; ObjectID = "zhm-K8-K2Y"; */
+"zhm-K8-K2Y.placeholder" = "Enter OTP";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "ziT-8g-zae"; */
+"ziT-8g-zae.text" = "-";
+
+/* Class = "UILabel"; text = "Lodge  Query"; ObjectID = "zwn-KG-Tc1"; */
+"zwn-KG-Tc1.text" = "Lodge  Query";

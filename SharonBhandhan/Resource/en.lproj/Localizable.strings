@@ -23,7 +23,7 @@
 "lAcceptKEY" = "ACCEPT";
 "lLoginKEY" = "Login";
 "lpasswordKEY" = "Enter password";
-"lmobilenumberKEY" = "Enter Mobile number";
+"lmobilenumberKEY" = "Mobile No /Membership ID";
 //VERIFY MOBILE NUMBER VC
 "vmnResendOTPKEY" = "Resend OTP/ओटीपी दोबारा भेजें";
 "vmnSubmitKEY" = "Submit/सबमिट";
@@ -43,16 +43,16 @@
 "mpPreferredLanguageKEY" = "Preferred Language";
 "mpNativeStateKEY" = "Native State";
 //REGISTRATION VC
-"rMobileKEY" = "Mobile/मोबाइल";
-"rNameKEY" = "Name/नाम";
-"rEmailKEY" = "Email/ईमेल";
-"rAddressKEY" = "Address/पता";
-"rStateKEY" = "State/राज्य";
-"rCityKEY" = "City/शहर";
-"rPinKEY" = "Pincode/पिन कोड";
-"rDistrictKEY" = "District/जिला";
-"rPreferredLanguageKEY" = "Preferred Language/पसंदीदा भाषा";
-"rNativeStateKEY" = "Native State/मूल राज्य";
+"rMobileKEY" = "Mobile";
+"rNameKEY" = "Name";
+"rEmailKEY" = "Email";
+"rAddressKEY" = "Address";
+"rStateKEY" = "Stateय";
+"rCityKEY" = "City";
+"rPinKEY" = "Pincode";
+"rDistrictKEY" = "District";
+"rPreferredLanguageKEY" = "Preferred Language";
+"rNativeStateKEY" = "Native State";
 "rOKKEY" = "OK";
 "rSelectStateKEY" = "Select State";
 "rSelectCityKEY" = "Select City";

@@ -106,7 +106,7 @@ class SideMenuViewController: BaseViewController, popUpDelegate {
     }
     
     @IBAction func missedCall(_ sender: Any) {
-        if let phoneCallURL = URL(string: "tel://\(+918955177400)") {
+        if let phoneCallURL = URL(string: "tel://\(+917845858414)") {
             
             let application:UIApplication = UIApplication.shared
             if (application.canOpenURL(phoneCallURL)) {
@@ -286,7 +286,7 @@ class SideMenuViewController: BaseViewController, popUpDelegate {
                     self.memberSince.text = "నుండి సభ్యుడు: \(response?.objCustomerDashboardList?[0].memberSince ?? "")"
                 }
                 let customerImage = String(response?.lstCustomerFeedBackJsonApi?[0].customerImage ?? "").dropFirst()
-                self.profileImageView.sd_setImage(with: URL(string: PROMO_IMG + "\(customerImage)"), placeholderImage: UIImage(named: "icons8-test-account-96"))
+                self.profileImageView.sd_setImage(with: URL(string: customerImageURL + "\(customerImage)"), placeholderImage: UIImage(named: "icons8-test-account-96"))
                 self.tierNameLabel.text = response?.lstCustomerFeedBackJsonApi?[0].customerGrade ?? ""
                 if response?.lstCustomerFeedBackJsonApi?[0].customerGrade ?? "" == "Bronze" {
                     self.tierImageView.image = UIImage(named: "grade1")
@@ -310,6 +310,7 @@ class SideMenuViewController: BaseViewController, popUpDelegate {
              "MenuSourceId": 3,
              "UserType": "CUSTOMER"
         ] as [String:Any]
+        print(parameters)
         self.vm.menuList(parameters: parameters) { response in
             let tempData = response?.menuMaster ?? []
             self.vm.menuListArray.removeAll()
@@ -348,8 +349,190 @@ extension SideMenuViewController : UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "SidemenuTableViewCell") as? SidemenuTableViewCell
         
         if self.vm.menuListArray.count == 0{
-            cell?.sideMenuLabel.text = sideMenuListArray1[indexPath.row]
+            //cell?.sideMenuLabel.text = sideMenuListArray1[indexPath.row]
             cell?.sideMenuImageView.image = UIImage(named: sideMenuListImageArray[indexPath.row])
+            
+            //var sideMenuListArray1 = ["Home","Scan QR Code","Upload QR Code","Code Status","Generate E-warranty","My dream gift","Redemption catelogue","My Earning","My Redemption","Redemption Planner" ,"Offers and Promotions","My Benefits","Unique Features","Lodge Query","Helpline Call","Terms and condition"]
+            if indexPath.row == 0{
+                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    cell?.sideMenuLabel.text = "Home"
+                    
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    cell?.sideMenuLabel.text = "गृह"
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    cell?.sideMenuLabel.text = "বাড়ি"
+                }else{
+                    cell?.sideMenuLabel.text = "హోమ్"
+                }
+            }else if indexPath.row == 1{
+                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    cell?.sideMenuLabel.text = "Scan QR Code"
+    
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    cell?.sideMenuLabel.text = "स्कैन क्यू आर कोड"
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    cell?.sideMenuLabel.text = "QR কোড স্ক্যান করুন"
+                }else{
+                    cell?.sideMenuLabel.text = "QR కోడ్‌ని స్కాన్ చేయండి"
+                }
+            }else if indexPath.row == 2{
+                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    cell?.sideMenuLabel.text = "Upload Code"
+    
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    cell?.sideMenuLabel.text = "अपलोड कोड"
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    cell?.sideMenuLabel.text = "আপলোড কোড"
+                }else{
+                    cell?.sideMenuLabel.text = "అప్‌లోడ్ కోడ్"
+                }
+            }else if indexPath.row == 3{
+                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    cell?.sideMenuLabel.text = "Code Status"
+    
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    cell?.sideMenuLabel.text = "कोड स्थिति"
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    cell?.sideMenuLabel.text = "কোড স্ট্যাটাস"
+                }else{
+                    cell?.sideMenuLabel.text = "కోడ్ స్థితి"
+                }
+            }else if indexPath.row == 4{
+                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    cell?.sideMenuLabel.text = "Generate E-warranty Certificate"
+    
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    cell?.sideMenuLabel.text = "ई-वारंटी प्रमाणपत्र जेनरेट करें"
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    cell?.sideMenuLabel.text = "ই-ওয়ারেন্টি শংসাপত্র তৈরি করুন"
+                }else{
+                    cell?.sideMenuLabel.text = "ఇ-వారంటీ సర్టిఫికెట్‌ని రూపొందించండి"
+                }
+            }else if indexPath.row == 5{
+                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    cell?.sideMenuLabel.text = "My Dream Gift"
+    
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    cell?.sideMenuLabel.text = "माई ड्रीम गिफ्ट"
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    cell?.sideMenuLabel.text = "আমার স্বপ্ন উপহার"
+                }else{
+                    cell?.sideMenuLabel.text = "నా డ్రీమ్ గిఫ్ట్"
+                }
+            }else if indexPath.row == 6 {
+                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    cell?.sideMenuLabel.text = "Redemption Catalogue"
+    
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    cell?.sideMenuLabel.text = "मोचन कैटलॉग"
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    cell?.sideMenuLabel.text = "রিডেম্পশন ক্যাটালগ"
+                }else{
+                    cell?.sideMenuLabel.text = "విముక్తి కేటలాగ్"
+                }
+            }else if indexPath.row == 7 {
+                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    cell?.sideMenuLabel.text = "My Earning"
+    
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    cell?.sideMenuLabel.text = "मेरी कमाई"
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    cell?.sideMenuLabel.text = "আমার উপার্জন"
+                }else{
+                    cell?.sideMenuLabel.text = "నా ఎర్నింగ్"
+                }
+            }else if indexPath.row == 8{
+                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    cell?.sideMenuLabel.text = "My Redemptions"
+    
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    cell?.sideMenuLabel.text = "मेरे मोचन"
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    cell?.sideMenuLabel.text = "আমার রিডেম্পশন"
+                }else{
+                    cell?.sideMenuLabel.text = "నా విముక్తి"
+                }
+            }else if indexPath.row == 9{
+                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    cell?.sideMenuLabel.text = "Redemption Planner"
+    
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    cell?.sideMenuLabel.text = "मोचन योजनाकार"
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    cell?.sideMenuLabel.text = "রিডেম্পশন প্ল্যানার"
+                }else{
+                    cell?.sideMenuLabel.text = "విముక్తి ప్లానర్"
+                }
+            }else if indexPath.row == 10{
+                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    cell?.sideMenuLabel.text = "Offers and Promotions"
+    
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    cell?.sideMenuLabel.text = "प्रस्ताव और प्रचार"
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    cell?.sideMenuLabel.text = "অফার এবং প্রচার"
+                }else{
+                    cell?.sideMenuLabel.text = "ఆఫర్‌లు మరియు ప్రమోషన్‌లు"
+                }
+            }else if indexPath.row == 11{
+                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    cell?.sideMenuLabel.text = "My Benefits"
+    
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    cell?.sideMenuLabel.text = "मेरे लाभ"
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    cell?.sideMenuLabel.text = "আমার উপকারিতা"
+                }else{
+                    cell?.sideMenuLabel.text = "నా ప్రయోజనాలు"
+                }
+            }else if indexPath.row == 12{
+                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    cell?.sideMenuLabel.text = "Unique Features"
+    
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    cell?.sideMenuLabel.text = "अद्वितीय विशेषताएं"
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    cell?.sideMenuLabel.text = "অনন্য বৈশিষ্ট্য"
+                }else{
+                    cell?.sideMenuLabel.text = "విశిష్ట ఫీచర్లు"
+                }
+            }else if indexPath.row == 13{
+                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    cell?.sideMenuLabel.text = "Lodge Query"
+    
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    cell?.sideMenuLabel.text = "लॉज क्वेरी"
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    cell?.sideMenuLabel.text = "লজ কোয়েরি"
+                }else{
+                    cell?.sideMenuLabel.text = "లాడ్జ్ క్వెరీ"
+                }
+            }else if indexPath.row == 14{
+                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    cell?.sideMenuLabel.text = "Helpline Call"
+    
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    cell?.sideMenuLabel.text = "हेल्पलाइन कॉल"
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    cell?.sideMenuLabel.text = "হেল্পলাইন কল"
+                }else{
+                    cell?.sideMenuLabel.text = "హెల్ప్‌లైన్ కాల్"
+                }
+            }else if indexPath.row == 15{
+                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    cell?.sideMenuLabel.text = "Terms & Conditions"
+    
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    cell?.sideMenuLabel.text = "नियम एवं शर्तें"
+                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    cell?.sideMenuLabel.text = "নিয়ম ও শর্তাবলী"
+                }else{
+                    cell?.sideMenuLabel.text = "నిబంధనలు & షరతులు"
+                }
+            }
+           
+            
+            
         }else{
                     if self.vm.menuListArray[indexPath.row].idMenu ?? 0  == 397{
                         //Home

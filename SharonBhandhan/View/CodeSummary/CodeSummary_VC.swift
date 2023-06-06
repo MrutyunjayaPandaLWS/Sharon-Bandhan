@@ -44,7 +44,7 @@ class CodeSummary_VC: BaseViewController {
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
             self.codeSummaryLabel.text = "कोड सारांश"
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.codeSummaryLabel.text = "কোড সারাংশ"
+            self.codeSummaryLabel.text = "குறியீடு சுருக்கம்"
         }else{
             self.codeSummaryLabel.text = "కోడ్ సారాంశం"
         }

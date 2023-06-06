@@ -132,7 +132,7 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
              }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                  vc!.descriptionInfo = "आपको रिडीम करने की अनुमति नहीं है। कृपया अपने व्यवस्थापक से संपर्क करें"
             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                vc!.descriptionInfo = "আপনি রিডিম করতে পারবেন না। অনুগ্রহ করে আপনার প্রশাসকের সাথে যোগাযোগ করুন"
+                vc!.descriptionInfo = "ரிடீம் செய்ய உங்களுக்கு அனுமதி இல்லை .தயவுசெய்து உங்கள் நிர்வாகியைத் தொடர்பு கொள்ளவும்"
             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
                 vc!.descriptionInfo = "రీడీమ్ చేసుకోవడానికి మీకు అనుమతి లేదు .దయచేసి మీ నిర్వాహకుడిని సంప్రదించండి"
               }
@@ -294,7 +294,7 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
             panDeatilsl.text = "Pan Details"
             dreamGift.text = "My Dream Gift"
             maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "en")
-//            scanAndUploadImg.image = UIImage(named: "english")
+            scanAndUploadImg.image = UIImage(named: "Group 5912")
             eWarranty.text = "E - Warranty"
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
             points.text = "hpPointsKEY".localizableString(loc: "hi");
@@ -306,20 +306,20 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
             redemptionCatalogue.text = "hpRedemptionCatalogueKEY".localizableString(loc: "hi");
             dreamGift.text = "माई ड्रीम गिफ्ट"
             maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "hi")
-//            scanAndUploadImg.image = UIImage(named: "hindi")
+            scanAndUploadImg.image = UIImage(named: "Group 6556")
             eWarranty.text = "ई - वारंटी"
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            points.text = "hpPointsKEY".localizableString(loc: "bn");
-            panDeatilsl.text = "panDetails".localizableString(loc: "bn")
-            tierNameLabel.text = "hpTierKEY".localizableString(loc: "bn");
-            lodgequery.text = "hpLodgeQueryKEY".localizableString(loc: "bn");
-            myredemptions.text = "hpMyRedemptionsKEY".localizableString(loc: "bn");
-            helplinecall.text = "hpHelpLineCallKEY".localizableString(loc: "bn");
-            redemptionCatalogue.text = "hpRedemptionCatalogueKEY".localizableString(loc: "bn");
-            dreamGift.text = "আমার স্বপ্নের উপহার"
-            maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "bn")
-//            scanAndUploadImg.image = UIImage(named: "bengali")
-            eWarranty.text = "ই - ওয়ারেন্টি"
+            points.text = "hpPointsKEY".localizableString(loc: "ta-IN");
+            panDeatilsl.text = "panDetails".localizableString(loc: "ta-IN")
+            tierNameLabel.text = "hpTierKEY".localizableString(loc: "ta-IN");
+            lodgequery.text = "hpLodgeQueryKEY".localizableString(loc: "ta-IN");
+            myredemptions.text = "hpMyRedemptionsKEY".localizableString(loc: "ta-IN");
+            helplinecall.text = "hpHelpLineCallKEY".localizableString(loc: "ta-IN");
+            redemptionCatalogue.text = "hpRedemptionCatalogueKEY".localizableString(loc: "ta-IN");
+            dreamGift.text = "என் கனவு பரிசு"
+            maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "ta-IN")
+            scanAndUploadImg.image = UIImage(named: "Group 6557")
+            eWarranty.text = "மின் - உத்தரவாதம்"
         }else{
             points.text = "hpPointsKEY".localizableString(loc: "te");
             panDeatilsl.text = "panDetails".localizableString(loc: "te")
@@ -330,7 +330,7 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
             redemptionCatalogue.text = "hpRedemptionCatalogueKEY".localizableString(loc: "te");
             dreamGift.text = "నా డ్రీమ్ గిఫ్ట్"
             maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "te")
-//            scanAndUploadImg.image = UIImage(named: "telugu")
+            scanAndUploadImg.image = UIImage(named: "Group 6558")
             eWarranty.text = "ఇ - వారంటీ"
         }
     }
@@ -421,7 +421,7 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
                      }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                          vc!.descriptionInfo = "आपका खाता निष्क्रिय कर दिया गया है कृपया व्यवस्थापक से संपर्क करें"
                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "আপনার অ্যাকাউন্ট নিষ্ক্রিয় করা হয়েছে অনুগ্রহ করে প্রশাসকের সাথে চেক করুন৷"
+                        vc!.descriptionInfo = "உங்கள் கணக்கு செயலிழக்கப்பட்டது, நிர்வாகியுடன் சரிபார்க்கவும்"
                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
                         vc!.descriptionInfo = "మీ ఖాతా నిష్క్రియం చేయబడింది, దయచేసి నిర్వాహకుడిని సంప్రదించండి"
                       }
@@ -492,7 +492,7 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
                      }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                          vc!.descriptionInfo = "आपका खाता निष्क्रिय कर दिया गया है कृपया व्यवस्थापक से संपर्क करें"
                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "আপনার অ্যাকাউন্ট নিষ্ক্রিয় করা হয়েছে অনুগ্রহ করে প্রশাসকের সাথে চেক করুন৷"
+                        vc!.descriptionInfo = "உங்கள் கணக்கு செயலிழக்கப்பட்டது, நிர்வாகியுடன் சரிபார்க்கவும்"
                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
                         vc!.descriptionInfo = "మీ ఖాతా నిష్క్రియం చేయబడింది, దయచేసి నిర్వాహకుడిని సంప్రదించండి"
                       }
@@ -555,7 +555,7 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
                         // Present the controller
                         self.present(alertController, animated: true, completion: nil)
                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        let alertController = UIAlertController(title: "নতুন আপডেট উপলব্ধ!", message: "আপডেট ডাউনলোড করার জন্য উপলব্ধ. সর্বশেষ আপডেট ডাউনলোড করলে আপনি সেঞ্চুরি প্রো ক্লাব অ্যাপের সর্বশেষ বৈশিষ্ট্য, উন্নতি এবং বাগ ফিক্স পাবেন", preferredStyle: .alert)
+                        let alertController = UIAlertController(title: "புதிய புதுப்பிப்பு கிடைக்கிறது!", message: "பதிவிறக்கம் செய்ய புதுப்பிப்பு உள்ளது. சமீபத்திய புதுப்பிப்பைப் பதிவிறக்கினால், செஞ்சுரி ப்ரோ கிளப் பயன்பாட்டின் சமீபத்திய அம்சங்கள், மேம்பாடுகள் மற்றும் பிழைத் திருத்தங்கள் ஆகியவற்றைப் பெறுவீர்கள்", preferredStyle: .alert)
                         
                         // Create the actions
                         let okAction = UIAlertAction(title: "এখন হালনাগাদ করুন", style: UIAlertAction.Style.default) {
@@ -614,7 +614,7 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                             self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "hi")
                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                            self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "bn")
+                            self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "ta-IN")
                         }else{
                             self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "te")
                         }

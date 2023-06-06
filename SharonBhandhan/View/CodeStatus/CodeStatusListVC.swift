@@ -65,7 +65,7 @@ class CodeStatusListVC: BaseViewController, CheckBoxSelectionDelegate, FilterDel
         fetchDetails()
         languagelocalization()
         self.querySummary.removeAll()
-        self.headerCheckBox.setImage(UIImage(named: "rectangle-2"), for: .normal)
+        self.headerCheckBox.setImage(UIImage(named: "Rectangle 2763"), for: .normal)
         
       
 //            guard let tracker = GAI.sharedInstance().defaultTracker else { return }
@@ -100,10 +100,10 @@ class CodeStatusListVC: BaseViewController, CheckBoxSelectionDelegate, FilterDel
             self.nodatafound.text = "डेटा नहीं मिला !!"
             
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.headerText.text = "কোড স্ট্যাটাস"
-            self.codeStatusBTN.setTitle(" কোড স্ট্যাটাস", for: .normal)
-            self.syncStatusBTN.setTitle(" সিঙ্ক স্থিতি", for: .normal)
-            self.nodatafound.text = "কোন তথ্য পাওয়া যায়নি!!"
+            self.headerText.text = "குறியீடு நிலை"
+            self.codeStatusBTN.setTitle(" குறியீடு நிலை", for: .normal)
+            self.syncStatusBTN.setTitle(" ஒத்திசைவு நிலை", for: .normal)
+            self.nodatafound.text = "வேறு தகவல்கள் இல்லை !!"
             
         }else{
             self.headerText.text = "కోడ్ స్థితి"
@@ -115,7 +115,7 @@ class CodeStatusListVC: BaseViewController, CheckBoxSelectionDelegate, FilterDel
     
     @IBAction func headerCheckBoxBTN(_ sender: Any) {
         
-        if self.headerCheckBox.currentImage == UIImage(named: "check-box-with-check-sign-2") {
+        if self.headerCheckBox.currentImage == UIImage(named: "Group 6467") {
             self.codesCollectionsArray.removeAll()
             self.querySummary.removeAll()
             for data in self.selectedDataArray{
@@ -126,7 +126,7 @@ class CodeStatusListVC: BaseViewController, CheckBoxSelectionDelegate, FilterDel
                 self.headerNotes.isHidden = true
                 self.codesCollectionsArray.append(SelectedCodeModels(uplodedCode: data.uploadedCode, codeStatus: data.codeStatus, codeUploadedDate: data.codeUploadedDate, isSelected: data.isSelected))
             }
-            self.headerCheckBox.setImage(UIImage(named: "rectangle-2"), for: .normal)
+            self.headerCheckBox.setImage(UIImage(named: "Rectangle 2763"), for: .normal)
         } else {
             self.codesCollectionsArray.removeAll()
             self.querySummary.removeAll()
@@ -147,7 +147,7 @@ class CodeStatusListVC: BaseViewController, CheckBoxSelectionDelegate, FilterDel
             }
             print(self.querySummary.count, "Query Summary")
         
-            self.headerCheckBox.setImage(UIImage(named: "check-box-with-check-sign-2"), for: .normal)
+            self.headerCheckBox.setImage(UIImage(named: "Group 6467"), for: .normal)
         }
         self.codeStatusListTableView.reloadData()
     }
@@ -219,7 +219,7 @@ class CodeStatusListVC: BaseViewController, CheckBoxSelectionDelegate, FilterDel
 
     @IBAction func codeStatusListBTN(_ sender: Any) {
         self.codesCollectionsArray.removeAll()
-        
+        self.headerText.text = "Code Status"
         self.codeStatusBTN.backgroundColor =  UIColor(red: 192/255, green: 7/255, blue: 34/255, alpha: 1.0)
         self.syncStatusBTN.backgroundColor =  UIColor(red: 92/255, green: 92/255, blue: 109/255, alpha: 1.0)
         self.isSelected = 1
@@ -228,6 +228,8 @@ class CodeStatusListVC: BaseViewController, CheckBoxSelectionDelegate, FilterDel
     
     }
     @IBAction func syncStatusListBTN(_ sender: Any) {
+        
+        self.headerText.text = "Sync Status"
         self.syncStatusBTN.backgroundColor =  UIColor(red: 192/255, green: 7/255, blue: 34/255, alpha: 1.0)
         self.codeStatusBTN.backgroundColor =  UIColor(red: 92/255, green: 92/255, blue: 109/255, alpha: 1.0)
         syncCodeLists()
@@ -236,7 +238,7 @@ class CodeStatusListVC: BaseViewController, CheckBoxSelectionDelegate, FilterDel
 //        if filterArray.count > 1{
 //            self.headerCheckBox.setImage(UIImage(named: "check-box-with-check-sign-2"), for: .normal)
 //        }else{
-            self.headerCheckBox.setImage(UIImage(named: "rectangle-2"), for: .normal)
+            self.headerCheckBox.setImage(UIImage(named: "Rectangle 2763"), for: .normal)
 //        }
         self.syncStatusView.isHidden = false
         self.headerQuestionMark.isHidden = true
@@ -283,9 +285,9 @@ class CodeStatusListVC: BaseViewController, CheckBoxSelectionDelegate, FilterDel
     func checkBoxSelection(_ cell: CodeStatusTVC) {
         guard let tappedIndexPath = codeStatusListTableView.indexPath(for: cell) else{return}
         if cell.checkBoxBTN.tag == tappedIndexPath.row{
-            if cell.checkBoxBTN.currentImage == UIImage(named: "check-box-with-check-sign-2"){
+            if cell.checkBoxBTN.currentImage == UIImage(named: "Group 6467"){
                 self.codesCollectionsArray[tappedIndexPath.row].isSelected = 0
-                cell.checkBoxBTN.setImage(UIImage(named: "rectangle-2"), for: .normal)
+                cell.checkBoxBTN.setImage(UIImage(named: "Rectangle 2763"), for: .normal)
                 let filterArray = self.codesCollectionsArray.filter{$0.isSelected == 1}
                 if let index = self.querySummary.firstIndex(of: self.codesCollectionsArray[tappedIndexPath.row].uploadedCode ?? ""){
                     self.querySummary.remove(at: index)
@@ -297,10 +299,10 @@ class CodeStatusListVC: BaseViewController, CheckBoxSelectionDelegate, FilterDel
                     self.headerQuestionMark.isHidden = true
                     self.headerNotes.isHidden = true
                 }
-                self.headerCheckBox.setImage(UIImage(named: "rectangle-2"), for: .normal)
+                self.headerCheckBox.setImage(UIImage(named: "Rectangle 2763"), for: .normal)
                 print("After Remove Selected Query", self.querySummary.count)
             }else{
-                cell.checkBoxBTN.setImage(UIImage(named: "check-box-with-check-sign-2"), for: .normal)
+                cell.checkBoxBTN.setImage(UIImage(named: "Group 6467"), for: .normal)
                 self.codesCollectionsArray[tappedIndexPath.row].isSelected = 1
                 let filterArray = self.codesCollectionsArray.filter{$0.isSelected == 0}
                 self.querySummary.append(self.codesCollectionsArray[tappedIndexPath.row].uploadedCode ?? "")
@@ -308,12 +310,12 @@ class CodeStatusListVC: BaseViewController, CheckBoxSelectionDelegate, FilterDel
                 if filterArray.count > 0{
                     self.headerQuestionMark.isHidden = false
                     self.headerNotes.isHidden = false
-                    self.headerCheckBox.setImage(UIImage(named: "rectangle-2"), for: .normal)
+                    self.headerCheckBox.setImage(UIImage(named: "Rectangle 2763"), for: .normal)
                     
                 }else{
                     self.headerQuestionMark.isHidden = false
                     self.headerNotes.isHidden = false
-                    self.headerCheckBox.setImage(UIImage(named: "check-box-with-check-sign-2"), for: .normal)
+                    self.headerCheckBox.setImage(UIImage(named: "Group 6467"), for: .normal)
                     
                 }
                
@@ -466,9 +468,9 @@ extension CodeStatusListVC: UITableViewDelegate, UITableViewDataSource{
             cell?.uploadedDate.text = self.codesCollectionsArray[indexPath.row].codeUploadedDate ?? ""
             cell?.checkBoxBTN.tag = indexPath.row
             if self.codesCollectionsArray[indexPath.row].isSelected ?? 0 == 1 {
-                cell?.checkBoxBTN.setImage(UIImage(named: "check-box-with-check-sign-2"), for: .normal)
+                cell?.checkBoxBTN.setImage(UIImage(named: "Group 6467"), for: .normal)
             } else {
-                cell?.checkBoxBTN.setImage(UIImage(named: "rectangle-2"), for: .normal)
+                cell?.checkBoxBTN.setImage(UIImage(named: "Rectangle 2763"), for: .normal)
             }
             if self.codesCollectionsArray[indexPath.row].codeStatus ?? "" == "Valid Code" {
                 cell?.codeStatusImage.image = UIImage(named: "ic_status_success")

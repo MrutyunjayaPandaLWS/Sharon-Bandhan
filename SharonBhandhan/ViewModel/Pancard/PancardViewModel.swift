@@ -37,10 +37,10 @@ class PancardViewModel{
                                 self.VC?.pannumber.text = "पैन नंबर : \(result?.lstPanDetails![0].panId ?? "")"
                                 
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                             //   self.headerTitle.text = "PanVerification".localizableString(loc: "bn")
-                                self.VC?.dobLabel.text = "জন্ম তারিখ : \(result?.lstPanDetails![0].dOB ?? "")"
-                                self.VC?.nameofPerson.text = "ব্যক্তির নাম : \(result?.lstPanDetails![0].panName ?? "")"
-                                self.VC?.pannumber.text = "প্যান নম্বর : \(result?.lstPanDetails![0].panId ?? "")"
+                             //   self.headerTitle.text = "PanVerification".localizableString(loc: "ta-IN")
+                                self.VC?.dobLabel.text = "பிறந்த தேதி: \(result?.lstPanDetails![0].dOB ?? "")"
+                                self.VC?.nameofPerson.text = "நபர் பெயர்: \(result?.lstPanDetails![0].panName ?? "")"
+                                self.VC?.pannumber.text = "பான் எண்: \(result?.lstPanDetails![0].panId ?? "")"
                             }else{
                                 
                            //     self.headerTitle.text = "PanVerification".localizableString(loc: "te")
@@ -72,7 +72,7 @@ class PancardViewModel{
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                                 self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "hi")
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "bn")
+                                self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "ta-IN")
                             }else{
                                 self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "te")
                             }
@@ -92,7 +92,7 @@ class PancardViewModel{
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                                 self.VC?.validateButtonn.setTitle("verify".localizableString(loc: "hi"), for: .normal)
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                self.VC?.validateButtonn.setTitle("verify".localizableString(loc: "bn"), for: .normal)
+                                self.VC?.validateButtonn.setTitle("verify".localizableString(loc: "ta-IN"), for: .normal)
                             }else{
                                 self.VC?.validateButtonn.setTitle("verify".localizableString(loc: "te"), for: .normal)
                             }
@@ -103,7 +103,7 @@ class PancardViewModel{
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                                 self.VC?.successmeassage.text = "customerPANVerified".localizableString(loc: "hi")
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                self.VC?.successmeassage.text = "customerPANVerified".localizableString(loc: "bn")
+                                self.VC?.successmeassage.text = "customerPANVerified".localizableString(loc: "ta-IN")
                             }else{
                                 self.VC?.successmeassage.text = "customerPANVerified".localizableString(loc: "te")
                             }
@@ -124,7 +124,7 @@ class PancardViewModel{
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                                 self.VC?.validateButtonn.setTitle("verify".localizableString(loc: "hi"), for: .normal)
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                self.VC?.validateButtonn.setTitle("verify".localizableString(loc: "bn"), for: .normal)
+                                self.VC?.validateButtonn.setTitle("verify".localizableString(loc: "ta-IN"), for: .normal)
                             }else{
                                 self.VC?.validateButtonn.setTitle("verify".localizableString(loc: "te"), for: .normal)
                             }
@@ -206,7 +206,7 @@ class PancardViewModel{
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                                 self.VC?.validateButtonn.setTitle("verify".localizableString(loc: "hi"), for: .normal)
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                self.VC?.validateButtonn.setTitle("verify".localizableString(loc: "bn"), for: .normal)
+                                self.VC?.validateButtonn.setTitle("verify".localizableString(loc: "ta-IN"), for: .normal)
                             }else{
                                 self.VC?.validateButtonn.setTitle("verify".localizableString(loc: "te"), for: .normal)
                             }
@@ -227,7 +227,7 @@ class PancardViewModel{
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                                 self.VC?.alertTypeWithoutAction(alertheading: "", alertMessage: "validPanNum".localizableString(loc: "hi"), buttonTitle: "rOKKEY".localizableString(loc: "hi"))
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                self.VC?.alertTypeWithoutAction(alertheading: "", alertMessage: "validPanNum".localizableString(loc: "bn"), buttonTitle: "rOKKEY".localizableString(loc: "bn"))
+                                self.VC?.alertTypeWithoutAction(alertheading: "", alertMessage: "validPanNum".localizableString(loc: "ta-IN"), buttonTitle: "rOKKEY".localizableString(loc: "ta-IN"))
                             }else{
                                 self.VC?.alertTypeWithoutAction(alertheading: "", alertMessage: "validPanNum".localizableString(loc: "te"), buttonTitle: "rOKKEY".localizableString(loc: "te"))
                             }
@@ -248,7 +248,7 @@ class PancardViewModel{
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                                 self.VC?.validateButtonn.setTitle("verify".localizableString(loc: "hi"), for: .normal)
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                self.VC?.validateButtonn.setTitle("verify".localizableString(loc: "bn"), for: .normal)
+                                self.VC?.validateButtonn.setTitle("verify".localizableString(loc: "ta-IN"), for: .normal)
                             }else{
                                 self.VC?.validateButtonn.setTitle("verify".localizableString(loc: "te"), for: .normal)
                             }
@@ -300,7 +300,7 @@ class PancardViewModel{
                                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                                     self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "hi")
                                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                    self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "bn")
+                                    self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "ta-IN")
                                 }else{
                                     self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "te")
                                 }
@@ -312,7 +312,7 @@ class PancardViewModel{
                                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                                     self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "hi")
                                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                    self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "bn")
+                                    self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "ta-IN")
                                 }else{
                                     self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "te")
                                 }
@@ -324,7 +324,7 @@ class PancardViewModel{
                                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                                     self.VC?.successmeassage.text = "PanSaveFailed".localizableString(loc: "hi")
                                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                    self.VC?.successmeassage.text = "PanSaveFailed".localizableString(loc: "bn")
+                                    self.VC?.successmeassage.text = "PanSaveFailed".localizableString(loc: "ta-IN")
                                 }else{
                                     self.VC?.successmeassage.text = "PanSaveFailed".localizableString(loc: "te")
                                 }

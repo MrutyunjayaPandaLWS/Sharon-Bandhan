@@ -54,10 +54,10 @@ class Products_TVC: UITableViewCell{
             self.addedToPlanner.setTitle("नियोजक में जोड़ा गया", for: .normal)
             
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.addToCartButton.setTitle("view".localizableString(loc: "bn"), for: .normal)
-            self.addedToCart.setTitle("rcAddedToCartKEY".localizableString(loc: "bn"), for: .normal)
-            self.addToPlanner.setTitle("প্ল্যানারে যোগ করুন", for: .normal)
-            self.addedToPlanner.setTitle("প্ল্যানারে যোগ করা হয়েছে", for: .normal)
+            self.addToCartButton.setTitle("view".localizableString(loc: "ta-IN"), for: .normal)
+            self.addedToCart.setTitle("rcAddedToCartKEY".localizableString(loc: "ta-IN"), for: .normal)
+            self.addToPlanner.setTitle("திட்டமிடுபவருக்குச் சேர்க்கவும்", for: .normal)
+            self.addedToPlanner.setTitle("பிளானரில் சேர்க்கப்பட்டது", for: .normal)
             
         }else{
             self.addToCartButton.setTitle("view".localizableString(loc: "te"), for: .normal)

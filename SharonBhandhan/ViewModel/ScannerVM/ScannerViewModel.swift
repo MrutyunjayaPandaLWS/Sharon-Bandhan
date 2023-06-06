@@ -429,6 +429,16 @@ class ScannerViewModel: PopUpDelegate{
                                     self.vc!.captureSession.stopRunning()
                                 }
                             }
+                        }else if splittedArray[0] == "-1"{
+                            DispatchQueue.main.async{
+                                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
+                                vc!.delegate = self
+                                vc!.titleInfo = ""
+                                vc!.descriptionInfo = "Please enter the valid code"
+                                vc!.modalPresentationStyle = .overCurrentContext
+                                vc!.modalTransitionStyle = .crossDissolve
+                                self.vc!.present(vc!, animated: true, completion: nil)
+                            }
                         }else{
                             self.appendDatatoListing(data: self.codeGenuineResponse!, StatusID: String(splittedArray[0]), scratchcode: code)
                             DispatchQueue.main.async {

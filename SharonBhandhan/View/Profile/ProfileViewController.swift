@@ -109,16 +109,16 @@ class ProfileViewController: BaseViewController {
             self.prefLanguage.text = "mpPreferredLanguageKEY".localizableString(loc: "hi")
             
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.header.text = "আমার অ্যাকাউন্ট"
-            self.nativeState.text = "rNativeStateKEY".localizableString(loc: "bn")
-            self.zip.text = "mpPinKEY".localizableString(loc: "bn")
-            self.city.text = "rCityKEY".localizableString(loc: "bn")
-            self.state.text = "rStateKEY".localizableString(loc: "bn")
-            self.address.text = "rAddressKEY".localizableString(loc: "bn")
-            self.email.text = "rEmailKEY".localizableString(loc: "bn")
-            self.mobile.text = "rMobileKEY".localizableString(loc: "bn")
-            self.districtLbl.text = "mpDistrictKEY".localizableString(loc: "bn")
-            self.prefLanguage.text = "mpPreferredLanguageKEY".localizableString(loc: "bn")
+            self.header.text = "என் கணக்கு"
+            self.nativeState.text = "rNativeStateKEY".localizableString(loc: "ta-IN")
+            self.zip.text = "mpPinKEY".localizableString(loc: "ta-IN")
+            self.city.text = "rCityKEY".localizableString(loc: "ta-IN")
+            self.state.text = "rStateKEY".localizableString(loc: "ta-IN")
+            self.address.text = "rAddressKEY".localizableString(loc: "ta-IN")
+            self.email.text = "rEmailKEY".localizableString(loc: "ta-IN")
+            self.mobile.text = "rMobileKEY".localizableString(loc: "ta-IN")
+            self.districtLbl.text = "mpDistrictKEY".localizableString(loc: "ta-IN")
+            self.prefLanguage.text = "mpPreferredLanguageKEY".localizableString(loc: "ta-IN")
             
         }else{
             self.header.text = "నా ఖాతా"
@@ -162,7 +162,7 @@ class ProfileViewController: BaseViewController {
                 self.stopLoading()
                 let profileDetails = response?.getCustomerDetailsMobileAppResult?.lstCustomerJson ?? []
                 let customerImage = String(profileDetails[0].profilePicture ?? "").dropFirst()
-                self.profileImg.sd_setImage(with: URL(string: PROMO_IMG + "\(customerImage)"), placeholderImage: UIImage(named: "icons8-test-account-96"))
+                self.profileImg.sd_setImage(with: URL(string: customerImageURL + "\(customerImage)"), placeholderImage: UIImage(named: "icons8-test-account-96"))
                 self.name.text = profileDetails[0].firstName ?? "-"
                 self.mobileTF.text = profileDetails[0].mobile ?? "-"
                 self.emailTF.text = profileDetails[0].email ?? "-"

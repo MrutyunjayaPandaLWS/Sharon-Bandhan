@@ -51,22 +51,22 @@ class HelplineViewController: UIViewController {
 //    }
     func languagelocalization(){
         if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.informationLbl.text = "For any questions and queries on the CenturyPly Loyalty Program. Please give a miss call on the following number"
+            self.informationLbl.text = "For any questions and queries on the Sharon Bandhan Loyalty Program. Please give a miss call on the following number"
             self.callInfo.text = "GIVE A MISSED CALL ON"
             self.header.text = "Helpline Call"
 
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.informationLbl.text = "सेंचुरीप्लाई लॉयल्टी प्रोग्राम पर किसी भी प्रश्न और प्रश्न के लिए। कृपया निम्नलिखित नंबर पर मिस कॉल दें"
+            self.informationLbl.text = "शेरोन बंधन वफादारी कार्यक्रम पर किसी भी प्रश्न और पूछताछ के लिए। कृपया नीचे दिए गए नंबर पर मिस कॉल दें"
             self.callInfo.text = "मिस्ड कॉल ऑन करें"
             self.header.text = "हेल्पलाइन कॉल"
             
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.informationLbl.text = "সেঞ্চুরিপ্লাই লয়্যালটি প্রোগ্রামে যেকোনো প্রশ্ন এবং প্রশ্নের জন্য। অনুগ্রহ করে নিচের নাম্বারে একটি মিস কল দিন"
+            self.informationLbl.text = "শ্যারন বন্ধন লয়্যালটি প্রোগ্রামে যেকোনো প্রশ্ন এবং প্রশ্নের জন্য। অনুগ্রহ করে নিচের নাম্বারে একটি মিস কল দিন"
             self.callInfo.text = "একটি মিসড কল দিন"
             self.header.text = "হেল্পলাইন কল"
             
         }else{
-            self.informationLbl.text = "సెంచరీప్లై లాయల్టీ ప్రోగ్రామ్‌లో ఏవైనా ప్రశ్నలు మరియు ప్రశ్నల కోసం. దయచేసి కింది నంబర్‌కు మిస్ కాల్ ఇవ్వండి"
+            self.informationLbl.text = "షారన్ బంధన్ లాయల్టీ ప్రోగ్రామ్‌లో ఏవైనా ప్రశ్నలు మరియు సందేహాల కోసం. దయచేసి కింది నంబర్‌కు మిస్ కాల్ ఇవ్వండి"
             self.callInfo.text = "మిస్డ్ కాల్ ఇవ్వండి"
             self.header.text = "హెల్ప్‌లైన్ కాల్"
         }
@@ -81,7 +81,7 @@ class HelplineViewController: UIViewController {
     }
     
     @IBAction func missedCallButton(_ sender: Any) {
-        if let phoneCallURL = URL(string: "tel://\(+918955177400)") {
+        if let phoneCallURL = URL(string: "tel://\(+917845858414)") {
             
             let application:UIApplication = UIApplication.shared
             if (application.canOpenURL(phoneCallURL)) {

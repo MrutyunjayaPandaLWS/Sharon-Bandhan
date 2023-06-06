@@ -44,16 +44,16 @@
 "mpPreferredLanguageKEY" = "पसंदीदा भाषा";
 "mpNativeStateKEY" = "मूल राज्य";
 //REGISTRATION VC
-"rMobileKEY" = "Mobile/मोबाइल";
-"rNameKEY" = "Name/नाम";
-"rEmailKEY" = "Email/ईमेल";
-"rAddressKEY" = "Address/पता";
-"rStateKEY" = "State/राज्य";
-"rCityKEY" = "City/शहर";
-"rPinKEY" = "Pincode/पिन कोड";
-"rDistrictKEY" = "District/जिला";
-"rPreferredLanguageKEY" = "Preferred Language/पसंदीदा भाषा";
-"rNativeStateKEY" = "Native State/मूल राज्य";
+"rMobileKEY" = "मोबाइल";
+"rNameKEY" = "नाम";
+"rEmailKEY" = "ईमेल";
+"rAddressKEY" = "पता";
+"rStateKEY" = "राज्य";
+"rCityKEY" = "शहर";
+"rPinKEY" = "पिन कोड";
+"rDistrictKEY" = "जिला";
+"rPreferredLanguageKEY" = "पसंदीदा भाषा";
+"rNativeStateKEY" = "मूल राज्य";
 "rOKKEY" = "ठीक";
 "rSelectStateKEY" = "राज्य चुनें";
 "rSelectCityKEY" = "शहर चुनें";

@@ -118,16 +118,16 @@ class PancardViewController: BaseViewController, UITextFieldDelegate, UIImagePic
             self.kindlyUploadLbl.text = "kindlyUploadDetails".localizableString(loc: "hi")
             
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.headerTitle.text = "PanVerification".localizableString(loc: "bn")
-            self.successmeassage.text = "customerPANDetails".localizableString(loc: "bn")
-            self.myPanDetails.text = "myPanDetails".localizableString(loc: "bn")
-            self.myProfile.text = "myProfile".localizableString(loc: "bn")
-            self.saveButton.setTitle("Save".localizableString(loc: "bn"), for: .normal)
-            self.panattachment.setTitle("PANAttachment".localizableString(loc: "bn"), for: .normal)
-            self.validateButtonn.setTitle("Validate".localizableString(loc: "bn"), for: .normal)
-            self.panNumberTF.placeholder = "enterPanNum".localizableString(loc: "bn")
-            self.panNumberLbl.text = "PANnumbeer".localizableString(loc: "bn")
-            self.kindlyUploadLbl.text = "kindlyUploadDetails".localizableString(loc: "bn")
+            self.headerTitle.text = "PanVerification".localizableString(loc: "ta-IN")
+            self.successmeassage.text = "customerPANDetails".localizableString(loc: "ta-IN")
+            self.myPanDetails.text = "myPanDetails".localizableString(loc: "ta-IN")
+            self.myProfile.text = "myProfile".localizableString(loc: "ta-IN")
+            self.saveButton.setTitle("Save".localizableString(loc: "ta-IN"), for: .normal)
+            self.panattachment.setTitle("PANAttachment".localizableString(loc: "ta-IN"), for: .normal)
+            self.validateButtonn.setTitle("Validate".localizableString(loc: "ta-IN"), for: .normal)
+            self.panNumberTF.placeholder = "enterPanNum".localizableString(loc: "ta-IN")
+            self.panNumberLbl.text = "PANnumbeer".localizableString(loc: "ta-IN")
+            self.kindlyUploadLbl.text = "kindlyUploadDetails".localizableString(loc: "ta-IN")
         }else{
             
             self.headerTitle.text = "PanVerification".localizableString(loc: "te")

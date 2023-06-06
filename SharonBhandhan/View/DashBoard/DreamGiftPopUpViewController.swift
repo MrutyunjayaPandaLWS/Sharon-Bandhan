@@ -48,10 +48,10 @@ class DreamGiftPopUpViewController: BaseViewController {
             self.redeemablePts.text = "రీడీమ్ చేయదగిన పాయింట్లు"
             self.ptsRequiredtoRedeem.text = "రిడీమ్ చేయడానికి అవసరమైన పాయింట్లు"
         } else {
-            self.yourDreamGift.text = "আপনার স্বপ্ন উপহার"
-            self.productPts.text = "পণ্য পয়েন্ট"
-            self.redeemablePts.text = "রিডিমেবল পয়েন্ট"
-            self.ptsRequiredtoRedeem.text = "রিডিম করার জন্য প্রয়োজনীয় পয়েন্ট"
+            self.yourDreamGift.text = "உங்கள் கனவு பரிசு"
+            self.productPts.text = "தயாரிப்பு புள்ளிகள்"
+            self.redeemablePts.text = "மீட்டெடுக்கக்கூடிய புள்ளிகள்"
+            self.ptsRequiredtoRedeem.text = "ரிடீம் செய்ய வேண்டிய புள்ளிகள்"
         }
     }
     

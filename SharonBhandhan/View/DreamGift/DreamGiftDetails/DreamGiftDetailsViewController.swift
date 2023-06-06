@@ -85,7 +85,7 @@ class DreamGiftDetailsViewController: BaseViewController, popUpDelegate {
         let receivedImage = giftImage
               print(receivedImage)
               let totalImgURL = productCatalogueImgURL + receivedImage
-        dreamGiftImage.sd_setImage(with: URL(string: totalImgURL), placeholderImage: UIImage(named: "ic_default_img"))
+        dreamGiftImage.sd_setImage(with: URL(string: totalImgURL), placeholderImage: UIImage(named: "backgroundImage 1"))
 //        //if pointsBalance <= ((Int(pointsRequires) ?? 0) + Int(self.tdsvalue)){
 //        if ((Int(pointsRequires) ?? 0) + Int(tdsvalue)) <= Int(pointsBalance){
 //            print(pointsRequired,"pointsRequired")
@@ -203,16 +203,16 @@ class DreamGiftDetailsViewController: BaseViewController, popUpDelegate {
             self.removeBTN.setTitle("हटाना", for: .normal)
             self.tdsPts.text = "टीडीएस अंक"
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.redeemablePointsAsOnToday.text = "আজকের মতো পুনর্নির্ধারণযোগ্য পয়েন্ট \(pointsBalance)"
-            self.header.text = "স্বপ্নের উপহারের বিবরণ"
-            self.existingDate.text = "তৈরীর তারিখ"
-            self.expireDate.text = "কাঙ্খিত তারিখ"
-            self.ptsRequired.text = "পয়েন্ট প্রয়োজন"
-            self.avgPointsTitleLbl.text = "প্রতি মাসে গড় পয়েন্ট অর্জন করতে হবে"
-            self.expectedRedemption.text = "প্রত্যাশিত রিডেম্পশন"
-            self.redeemBTN.setTitle("এখন খালাস", for: .normal)
-            self.removeBTN.setTitle("অপসারণ", for: .normal)
-            self.tdsPts.text = "টিডিএস পয়েন্ট"
+            self.redeemablePointsAsOnToday.text = "இன்று வரை பெறக்கூடிய புள்ளிகள் \(pointsBalance)"
+            self.header.text = "கனவு பரிசு விவரங்கள்"
+            self.existingDate.text = "உருவாக்கப்பட்ட தேதி"
+            self.expireDate.text = "விரும்பிய தேதி"
+            self.ptsRequired.text = "தேவையான புள்ளிகள்"
+            self.avgPointsTitleLbl.text = "ஒரு மாதத்திற்கு சராசரி புள்ளிகளைப் பெற வேண்டும்"
+            self.expectedRedemption.text = "எதிர்பார்க்கப்படும் மீட்பு"
+            self.redeemBTN.setTitle("இப்போது மீட்டுக்கொள்ளவும்", for: .normal)
+            self.removeBTN.setTitle("அகற்று", for: .normal)
+            self.tdsPts.text = "TDS புள்ளிகள்"
             
         }else{
             self.redeemablePointsAsOnToday.text = "ఈ రోజు నాటికి రీడిమబల్ పాయింట్ \(pointsBalance)"
@@ -238,15 +238,15 @@ class DreamGiftDetailsViewController: BaseViewController, popUpDelegate {
         ] as [String: Any]
         print(parameters)
         self.VM.myDreamGiftDetails(parameters: parameters) { response in
-            print(response?.lstDreamGift?[0].earlyExpectedDate ?? "")
-        
-            self.avgPoints1.text = "\(response?.lstDreamGift?[0].avgEarningPoints ?? 0)"
-            self.avgPoints2.text = "\(response?.lstDreamGift?[0].earlyExpectedPoints ?? 0)"
-            self.avgPoints3.text = "\(response?.lstDreamGift?[0].lateExpectedPoints ?? 0)"
-            self.possibleDate1.text = "\(response?.lstDreamGift?[0].lateExpectedDate ?? "")"
-            self.possibleDate2.text = "\(response?.lstDreamGift?[0].earlyExpectedDate ?? "")"
-            self.possibledate3.text = "\(response?.lstDreamGift?[0].lateExpectedDate ?? "")"
-            
+            //print(response?.lstDreamGift?[0].earlyExpectedDate ?? "")
+            if self.VM.myDreamGiftDetailsArray.count > 0 {
+                self.avgPoints1.text = "\(response?.lstDreamGift?[0].avgEarningPoints ?? 0)"
+                self.avgPoints2.text = "\(response?.lstDreamGift?[0].earlyExpectedPoints ?? 0)"
+                self.avgPoints3.text = "\(response?.lstDreamGift?[0].lateExpectedPoints ?? 0)"
+                self.possibleDate1.text = "\(response?.lstDreamGift?[0].lateExpectedDate ?? "")"
+                self.possibleDate2.text = "\(response?.lstDreamGift?[0].earlyExpectedDate ?? "")"
+                self.possibledate3.text = "\(response?.lstDreamGift?[0].lateExpectedDate ?? "")"
+            }
         }
     }
     

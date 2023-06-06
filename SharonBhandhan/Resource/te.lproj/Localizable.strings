@@ -43,16 +43,16 @@
 "mpPreferredLanguageKEY" = "ఇష్టపడే భాష";
 "mpNativeStateKEY" = "స్థానిక రాష్ట్రం";
 //REGISTRATION VC
-"rMobileKEY" = "Mobile/మొబైల్";
-"rNameKEY" = "Name/పేరు";
-"rEmailKEY" = "Email/ఇ-మెయిల్";
-"rAddressKEY" = "Address/చిరునామా";
-"rStateKEY" = "State/రాష్ట్రం";
-"rCityKEY" = "City/నగరం";
-"rPinKEY" = "Pincode/పిన్ కోడ్";
-"rDistrictKEY" = "District/జిల్లా";
-"rPreferredLanguageKEY" = "Preferred Language/ఇష్టపడే భాష";
-"rNativeStateKEY" = "Native State/స్థానిక రాష్ట్రం";
+"rMobileKEY" = "మొబైల్";
+"rNameKEY" = "పేరు";
+"rEmailKEY" = "ఇ-మెయిల్";
+"rAddressKEY" = "చిరునామా";
+"rStateKEY" = "రాష్ట్రం";
+"rCityKEY" = "నగరం";
+"rPinKEY" = "పిన్ కోడ్";
+"rDistrictKEY" = "జిల్లా";
+"rPreferredLanguageKEY" = "ఇష్టపడే భాష";
+"rNativeStateKEY" = "స్థానిక రాష్ట్రం";
 "rOKKEY" = "OK";
 "rSelectStateKEY" = "రాష్ట్రం ఎంచుకోండి";
 "rSelectCityKEY" = "నగరాన్ని ఎంచుకోండి";

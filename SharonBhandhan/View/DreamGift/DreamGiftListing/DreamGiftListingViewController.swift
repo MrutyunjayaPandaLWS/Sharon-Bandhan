@@ -301,13 +301,14 @@ extension DreamGiftListingViewController : UITableViewDelegate, UITableViewDataS
         vc.giftName = self.VM.myDreamGiftListArray[indexPath.row].dreamGiftName ?? ""
         vc.tdsvalue = Double(self.VM.myDreamGiftListArray[indexPath.row].tdsPoints ?? 0)
         vc.giftType = self.VM.myDreamGiftListArray[indexPath.row].giftType ?? ""
+        //vc.giftImage = self.VM.myDreamGiftListArray[indexPath.row].
         let createdDate = (self.VM.myDreamGiftListArray[indexPath.row].jCreatedDate ?? "").split(separator: " ")
         let convertedFormat = convertDateFormater(String(createdDate[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")
         vc.addedDate = convertedFormat
         
         let desiredDate = (self.VM.myDreamGiftListArray[indexPath.row].jDesiredDate ?? "").split(separator: " ")
-        let desiredDateFormat = convertDateFormater(String(desiredDate[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")
-        vc.expiredDate = desiredDateFormat
+        //let desiredDateFormat = convertDateFormater(String(desiredDate[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")
+        vc.expiredDate = String(desiredDate[0])
         vc.pointsRequires = "\(self.VM.myDreamGiftListArray[indexPath.row].pointsRequired ?? 0)"
         vc.avgEarningPoints = "\(self.VM.myDreamGiftListArray[indexPath.row].avgEarningPoints ?? 0)"
         vc.pointsBalance = self.VM.myDreamGiftListArray[indexPath.row].pointsBalance ?? 0

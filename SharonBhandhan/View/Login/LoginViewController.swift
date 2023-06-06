@@ -66,13 +66,13 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
             self.loginBTN.setTitle("lLoginKEY".localizableString(loc: "hi"), for: .normal)
             
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.loginToContinue.text = "চালিয়ে যেতে লগইন করুন"
-            self.userNameTF.placeholder = "lmobilenumberKEY".localizableString(loc: "bn")
-            self.passwordTF.placeholder = "lpasswordKEY".localizableString(loc: "bn")
-            self.forgetBTN.setTitle("fpForgotPasswordKEY".localizableString(loc: "bn"), for: .normal)
-            self.termsLbl.text = "lTermsAndConditionsKEY".localizableString(loc: "bn")
-            self.privacyLbl.text = "গোপনীয়তা নীতি"
-            self.loginBTN.setTitle("lLoginKEY".localizableString(loc: "bn"), for: .normal)
+            self.loginToContinue.text = "தொடர உள்நுழைக"
+            self.userNameTF.placeholder = "lmobilenumberKEY".localizableString(loc: "ta-IN")
+            self.passwordTF.placeholder = "lpasswordKEY".localizableString(loc: "ta-IN")
+            self.forgetBTN.setTitle("fpForgotPasswordKEY".localizableString(loc: "ta-IN"), for: .normal)
+            self.termsLbl.text = "lTermsAndConditionsKEY".localizableString(loc: "ta-IN")
+            self.privacyLbl.text = "தனியுரிமைக் கொள்கை"
+            self.loginBTN.setTitle("lLoginKEY".localizableString(loc: "ta-IN"), for: .normal)
         }else{
             self.loginToContinue.text = "కొనసాగించడానికి లాగిన్ చేయండి"
             self.userNameTF.placeholder = "lmobilenumberKEY".localizableString(loc: "te")
@@ -110,7 +110,7 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                             vc!.descriptionInfo = "सदस्यता आईडी मौजूद नहीं है"
                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                            vc!.descriptionInfo = "সদস্যতা আইডি বিদ্যমান নেই"
+                            vc!.descriptionInfo = "உறுப்பினர் ஐடி இல்லை"
                         }else{
                             vc!.descriptionInfo = "సభ్యత్వ ID ఉనికిలో లేదు"
                         }
@@ -148,7 +148,7 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                  }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                      vc!.descriptionInfo = "कृपया सदस्यता आईडी दर्ज करें"
                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "মেম্বারশিপ আইডি লিখুন"
+                    vc!.descriptionInfo = "உறுப்பினர் ஐடியை உள்ளிடவும்"
                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
                     vc!.descriptionInfo = "దయచేసి సభ్యత్వ IDని నమోదు చేయండి"
                   }
@@ -167,7 +167,7 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                  }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                      vc!.descriptionInfo = "कृपया पासवर्ड दर्ज करें"
                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "অনুগ্রহ করে পাসওয়ার্ড দিন"
+                    vc!.descriptionInfo = "கடவுச்சொல்லை உள்ளிடவும்"
                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
                     vc!.descriptionInfo = "దయచేసి పాస్‌వర్డ్‌ను నమోదు చేయండి"
                   }
@@ -187,7 +187,7 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                  }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                      vc!.descriptionInfo = "कृपया नियम और शर्तें स्वीकार करें"
                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "নিয়ম এবং শর্তাবলী স্বীকার করুন"
+                    vc!.descriptionInfo = "விதிமுறைகள் மற்றும் நிபந்தனைகளை ஏற்கவும்"
                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
                     vc!.descriptionInfo = "దయచేసి నిబంధనలు మరియు షరతులను అంగీకరించండి"
                   }
@@ -245,7 +245,7 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                      }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                          vc!.descriptionInfo = "पासवर्ड गलत है!"
                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "পাসওয়ার্ড বৈধ নয়!"
+                        vc!.descriptionInfo = "கடவுச்சொல் தவறானது!"
                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
                         vc!.descriptionInfo = "పాస్వర్డ్ చెల్లదు!"
                       }
@@ -265,7 +265,7 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                      }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                          vc!.descriptionInfo = "आपका खाता सत्यापन लंबित है! कृपया अपने व्यवस्थापक से संपर्क करें।"
                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "আপনার অ্যাকাউন্ট যাচাইকরণ মুলতুবি আছে! অনুগ্রহ করে আপনার প্রশাসকের সাথে যোগাযোগ করুন।"
+                        vc!.descriptionInfo = "உங்கள் கணக்கு சரிபார்ப்பு நிலுவையில் உள்ளது! தயவுசெய்து உங்கள் நிர்வாகியைத் தொடர்பு கொள்ளவும்."
                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
                         vc!.descriptionInfo = "మీ ఖాతా ధృవీకరణ పెండింగ్‌లో ఉంది! దయచేసి మీ నిర్వాహకుడిని సంప్రదించండి."
                       }
@@ -309,7 +309,7 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                      }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
                          vc!.descriptionInfo = "आपका खाता सक्रिय नहीं किया गया है! कृपया अपना खाता सक्रिय करें।"
                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "আপনার অ্যাকাউন্ট সক্রিয় করা হয় না! অনুগ্রহ করে আপনার অ্যাকাউন্ট সক্রিয় করুন."
+                        vc!.descriptionInfo = "உங்கள் கணக்கு செயல்படுத்தப்படவில்லை! தயவுசெய்து உங்கள் கணக்கை செயல்படுத்தவும்."
                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
                         vc!.descriptionInfo = "మీ ఖాతా యాక్టివేట్ కాలేదు! దయచేసి మీ ఖాతాను సక్రియం చేయండి."
                       }

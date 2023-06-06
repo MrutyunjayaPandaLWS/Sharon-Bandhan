@@ -84,9 +84,9 @@ class RedemptionCatalogueVC: BaseViewController, AddedToCartOrPlannerDelegate, p
             searchProductTF.attributedPlaceholder = NSAttributedString(string: "उत्पाद का नाम खोजें", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
             
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "bn")
-            self.pointsHeadingLabel.text = "রিডিমেবল পয়েন্ট"
-            searchProductTF.attributedPlaceholder = NSAttributedString(string: "পণ্যের নাম অনুসন্ধান করুন", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
+            self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "ta-IN")
+            self.pointsHeadingLabel.text = "மீட்டெடுக்கக்கூடிய புள்ளிகள்"
+            searchProductTF.attributedPlaceholder = NSAttributedString(string: "தயாரிப்பு பெயரைத் தேடுங்கள்", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
         }else{
             self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "te")
             self.pointsHeadingLabel.text = "రీడీమ్ చేయగల పాయింట్లు"

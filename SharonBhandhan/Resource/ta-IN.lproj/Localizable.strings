@@ -1,0 +1,409 @@
+/*
+Localizable.strings
+CenturyProClubApplication
+
+Created by Arokia IT on 2/5/20.
+Copyright © 2020 Ltd.Technologies.WeMakeAppz. All rights reserved.
+*/
+//INITIAL VIEW
+"ivWanttoregisterKEY" = "பதிவு செய்ய வேண்டுமா?";
+"ivAlreadyAMemberKEY" = "நீங்கள் ஏற்கனவே உறுப்பினரா?";
+//ENTER MOBILE NUMBER VC
+"emnEnterMobileNumberToGetStartedKEY" = "தொடங்க உங்கள் மொபைல் எண்ணை உள்ளிடவும்!";
+"emnSendOTPKEY" = "OTP ஐ அனுப்பு";
+//FORGOTPASSWORD VC
+"fpForgotPasswordKEY" ="கடவுச்சொல்லை மறந்துவிட்டீர்களா?";
+"fpEnterYourRegisterdMobileNumberKEY" ="உங்கள் பதிவு செய்யப்பட்ட மொபைல் எண்ணை உள்ளிடவும்";
+"fpSubmitKEY" = "சமர்ப்பி";
+//LOGIN VC
+"lForgotPasswordKEY" ="கடவுச்சொல்லை மறந்துவிட்டீர்களா?";
+"lTermsAndConditionsKEY" = "விதிமுறை";
+"lDeclineKEY" ="நிராகரி";
+"lAcceptKEY" ="ஏற்றுக்கொள்";
+"lLoginKEY" = "உள்நுழைய";
+"lpasswordKEY" ="கடவுச்சொல்லை உள்ளிடவும்";
+"lmobilenumberKEY" = "மொபைல் எண்ணை உள்ளிடவும்";
+//VERIFY MOBILE NUMBER VC
+"vmnResendOTPKEY" ="ஓடிபியை மீண்டும் அனுப்பு";
+"vmnSubmitKEY" ="சமர்ப்பி";
+"vmnSecondsRemainingKEY" = "விநாடிகள் மீதமுள்ளன";
+//MY PROFILE VC
+"mpMyProfileKEY" ="என் சுயவிவரம்";
+"mpGeneralInformationKEY" = "பொதுவான செய்தி";
+"mpNameKEY" = "பெயர்";
+"mpMobileNumberKEY" = "கைபேசி எண்";
+"mpEmailIDKEY" = "மின்னஞ்சல் முகவரி";
+"mpAddressKEY" ="முகவரி";
+"mpCountryKEY" ="நாடு";
+"mpStateKEY" = "நிலை";
+"mpCityKEY" ="நகரம்";
+"mpDistrictKEY" = "மாவட்டம்";
+"mpPinKEY" ="பின்";
+"mpPreferredLanguageKEY" = "விருப்பமான மொழி";
+"mpNativeStateKEY" = "சொந்த மாநிலம்";
+//REGISTRATION VC
+"rMobileKEY" ="கைபேசி";
+"rNameKEY" ="பெயர்";
+"rEmailKEY" = "மின்னஞ்சல்";
+"rAddressKEY" ="முகவரி";
+"rStateKEY" ="நிலை";
+"rCityKEY" ="நகரம்";
+"rPinKEY" ="அஞ்சல் குறியீடு";
+"rDistrictKEY" ="மாவட்டம்";
+"rPreferredLanguageKEY" ="விருப்பமான மொழி";
+"rNativeStateKEY" = "சொந்த மாநிலம்";
+"rOKKEY" ="சரி";
+"rSelectStateKEY" ="மாநிலத்தைத் தேர்ந்தெடு";
+"rSelectCityKEY" ="நகரைத் தேர்ந்தெடு";
+"rSelectPreferredLanguageKEY" = "விருப்பமான மொழியை தேர்ந்தெடு";
+"rSelectNativeStateKEY" = "சொந்த மாநிலத்தைத் தேர்ந்தெடு";
+//HOMEPAGE VC
+"hpWelcomeKEY" = "வரவேற்பு";
+"hpQRCodeisSubmittedSuccessfullyKEY" = "QR குறியீடு வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது.";
+"hpChecktheStatusOfCodeInTheReportKEY" = "குறியீடு நிலை அறிக்கையில் குறியீட்டின் நிலையைச் சரிபார்க்கவும்";
+"hpStatusKEY" = "நிலை";
+"hpScanAgainKEY" ="மீண்டும் ஸ்கேன்";
+"hpRaiseTicketKEY" ="டிக்கெட் உயர்த்தவும்";
+"hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY" ="பராமரிப்பிற்காக சிஸ்டம் செயலிழந்துள்ளதால், ஆப்ஸால் சேவைகளை அணுக முடியவில்லை!. சிறிது நேரம் கழித்து முயற்சிக்கவும்.";
+"hpMembershipIDKEY" = "உறுப்பினர் ஐடி";
+"hpPointsKEY" ="புள்ளிகள்";
+"panDetails" ="பான் விவரங்கள்";
+"hpTierKEY" = "அடுக்கு";
+"hpScanCodeKEY" ="ஸ்கேன் குறியீடு";
+"hpUploadCodeKEY" = "பதிவேற்ற குறியீடு";
+"hpRedemptionCatalogueKEY" ="ரிடெம்ப்ஷன் கேடலாக்";
+"hpHelpLineCallKEY" ="உதவி அழைப்பு";
+"hpMyRedemptionsKEY" = "எனது மீட்பு";
+"hpLodgeQueryKEY" ="லாட்ஜ் வினவல்";
+//SIDEMENU VC
+"smMemberSinceKEY" ="உறுப்பினர் முதல்";
+"smPointsKEY" ="புள்ளிகள்";
+"smMembershipIDKEY" ="உறுப்பினர் ஐடி";
+"smAnyQueriesGiveAMissedCallOnKEY" = "(எந்த வினவல்களும்  +91-7845858414 என்ற எண்ணில் மிஸ்டு கால் கொடுக்கவும்)";
+//REDEMPTION CATALOGUE VC
+"rcRedemptionCatalogueKEY" = "மீட்பு பட்டியல்";
+"rcCategoryKEY" ="வகை";
+"rcPointsKEY" ="புள்ளிகள்";
+"rcAddToPlannerKEY" = "விருப்பப்பட்டியலில் சேர்";
+"rcAddToCartKEY" = "பெட்டகத்தில் சேர்";
+"rcAddedToCartKEY" ="வண்டியில் சேர்க்கப்பட்டது";
+"rcAddedToPlannerKEY" ="விருப்பப்பட்டியலில் சேர்க்கப்பட்டது";
+//UPLOAD CODE
+"ucEnterYourCodeKEY" ="குறியீட்டை உள்ளிடுக";
+"ucCloseKEY" ="நெருக்கமான";
+"ucQRCodeIsSubmittedSuccessfullyKEY" ="QR குறியீடு வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது.";
+"ucCheckTheStatusOfTheCodeInTheStatusReportKEY" = "குறியீடு நிலை அறிக்கையில் குறியீட்டின் நிலையைச் சரிபார்க்கவும்";
+"ucStatusKEY" ="நிலை";
+"ucScanAgainKEY" = "மீண்டும் பதிவேற்று";
+"ucRaiseTicketKEY" = "டிக்கெட்டை உயர்த்தவும்";
+"ucSubmitKEY" ="சமர்ப்பி";
+"ucUpLoadCodeKEY" = "பதிவேற்ற குறியீடு";
+//MY REDEMPTIONVC
+"mrMyCatalogueRedemptionsKEY" ="எனது பட்டியல் மீட்புகள்";
+"mrFromDateKEY" ="தேதியிலிருந்து";
+"mrToDateKEY" ="இன்றுவரை";
+"mrFilterKEY" = "வடிகட்டி";
+"mrSelectDateKEY" ="தேர்வு தேதி";
+"mrNoSearchResultFoundKEY" = "தேடல் முடிவு கிடைக்கவில்லை";
+"mrCancelKEY" ="ரத்துசெய்";
+"mrConfirmKEY" ="உறுதிப்படுத்து";
+//OFFERS AND MARKETING VC
+"opOffersAndMarketingKEY" ="சலுகைகள் மற்றும் விளம்பரங்கள்";
+"opNoPromotionresultFoundKEY" ="விளம்பர முடிவு எதுவும் கிடைக்கவில்லை";
+"opViewKEY" ="பார்வை";
+"opReserveKEY" = "ரிசர்வ்";
+"opClaimKEY" ="உரிமைகோரல்";
+"opCommentHereKEY" = "கருத்து";
+//TERMS AND CONDITIONS VC
+"tcTermsAndConditionsKEY" = "விதிமுறைகள் மற்றும் நிபந்தனைகள்";
+//HELPLINE CALL VC
+"hcHelplineCallKEY" = "உதவி அழைப்பு";
+"hcForAnyQuestionandQueriesKEY" = "ஷரோன் பந்தன் லாயல்டி திட்டத்தில் ஏதேனும் கேள்விகள் மற்றும் வினவல்களுக்கு பின்வரும் எண்ணிற்கு மிஸ் கால் கொடுக்கவும்";
+// UNIQUE FEATURE VC
+"ufUniqueFeaturesKEY" = "தனிப்பட்ட அம்சங்கள்";
+//MY EARNING VC
+"meMyEarning" = "எனது வருவாய்";
+"meFromDateKEY" = "தேதியிலிருந்து";
+"meDateRange" = "தயவுசெய்து தேதி வரம்பைத் தேர்ந்தெடுக்கவும்";
+"meToDateKEY" = "இன்றுவரை";
+"meFilterKEY" ="வடிகட்டி";
+"meSelectDateKEY" ="தேர்வு தேதி";
+"meNoSearchResultFoundKEY" ="தேடல் முடிவு கிடைக்கவில்லை";
+"meCancelKEY" = "ரத்துசெய்";
+"meConfirmKEY" = "உறுதிப்படுத்து";
+"meTransactionDateKEY" = "பரிவர்த்தனை தேதி :";
+"meQRCodeKEY" ="க்யு ஆர் குறியீடு :";
+"meEarningQuantityKEY" ="சம்பாதிப்பு புள்ளிகள்:";
+//LODGE QUERY VC
+"lqPleaseSubmitYourQueryUsingThisFormKEY" = "இந்தப் படிவத்தைப் பயன்படுத்தி உங்கள் வினவலைச் சமர்ப்பிக்கவும்";
+"lqSelectYourTopic" ="உங்கள் தலைப்பைத் தேர்ந்தெடுக்கவும்";
+"lqQuerySummary" = "வினவல் சுருக்கம்";
+"lqQueryDetails" ="வினவல் விவரங்கள்";
+"lqBrowseImageKEY" = "உலாவு படத்தை";
+"lqSubmitKEY" ="சமர்ப்பி";
+"lqCenturyProclubExecutiveWillCallYouAsSoonasWeReceiveYourQueryKEY" = "உங்கள் வினவலை நாங்கள் பெற்றவுடன் ஷரோன் பந்தன் உங்களை அழைப்பார்";
+"lqOpenNewTicketKEY" = "புதிய டிக்கெட்டை திற";
+//REDEMPTIONCATALOGUE DETAILS VC
+"rcdRedemptionCatalogueKEY" = "மீட்பு பட்டியல்";
+"rcdCategoryKEY" = "வகை";
+"rcdPointsperproductKEY" = "புள்ளிகள்";
+"rcdTotalPointsKEY" = "மொத்த புள்ளிகள்";
+"rcdAddTpPlannerKEY" = "விருப்பப்பட்டியலில் சேர்";
+"rcdAddedtoPlannerKEY" = "விருப்பப்பட்டியலில் சேர்க்கப்பட்டது";
+"rcdAddtocartKEY" = "பெட்டகத்தில் சேர்";
+"rcdAddedtoCartKEY" = "வண்டியில் சேர்க்கப்பட்டது";
+"rcdDescriptionsKEY" = "விளக்கம்";
+"rcdOtherInformationsKEY" = "பிற தகவல்கள்";
+"rcdProductCodeKEY" = "தயாரிப்பு குறியீடு";
+"rcdDelivaryTypeKEY" = "டெலிவரி வகை";
+"rcdT&C" = "";
+//MY BENEFITS VC
+"mbMyBenefitsKEY" = "எனது நன்மைகள்";
+//FIREBASESCANNER VC
+"fcScanQRCodeKEY" = "QR குறியீட்டை ஸ்கேன் செய்";
+"fcPlaceAQRCodeInsideTheViewFinderRectangleToScanITKEY" = "வியூ ஃபைண்டரின் உள்ளே QR குறியீட்டை வைக்கவும்";
+//CHECKOUTVC
+"coSuccess!!KEY" = "வெற்றி!";
+"coYourRedemptionItemWillBeDeliveredToYouAtEarliestKEY" = "உங்கள் மீட்புப் பொருள் விரைவில் உங்களுக்கு வழங்கப்படும்";
+"coAnyQueriesRegardingTheRedemptionServicesKEY" = "மீட்பு சேவைகள் தொடர்பான ஏதேனும் கேள்விகள். 91-7845858414 என்ற எண்ணில் தவறவிட்ட அழைப்பை வழங்கவும் ";
+"coEditAddressKEY" = "முகவரியைத் திருத்து";
+"coDefaultAddressKEY" = "இயல்புநிலை முகவரி";
+"coProceedKEY" = "தொடரவும்";
+"coOTPKEY" = "OTP";
+"coRedendOTPKEY" = "ஓடிபியை மீண்டும் அனுப்பு";
+"coSubmitKEY" = "சமர்ப்பி";
+"coSecondsRemainingKEY" = "விநாடிகள் மீதமுள்ளவை";
+//EDITADDRESS VC
+"eaNameKEY" = "பெயர்";
+"eaMobileKEY" = "கைபேசி";
+"eaEmailKEY" = "மின்னஞ்சல்";
+"eaAddressKEY" = "முகவரி";
+"eaStateKEY" = "நிலை";
+"eaCityKEY" = "நகரம்";
+"eaPinKEY" = "பின்";
+"eaDistrictKEY" = "மாவட்டம்";
+"eaSubmitKEY" = "சமர்ப்பி";
+"eaEditAddressKEY" = "முகவரியைத் திருத்து";
+"eaSelectStateKEY" = "மாநிலத்தைத் தேர்ந்தெடு";
+"eaSelectCityKEY" = "நகரைத் தேர்ந்தெடு";
+//MY CART VC
+"mcMyCartKEY" = "என் வண்டி";
+"mcPointsPerPorductKEY" = "புள்ளிகள்/தயாரிப்பு";
+"mcTotalPointsKEY" = "மொத்த புள்ளிகள்";
+"mcCheckOutKEY" = "சரிபார்";
+//CUSTOMER QUERY LISTING VC
+"cqlLodgeQueryKEY" = "லாட்ஜ் வினவல்";
+"cqlResolvedKEY" = "தீர்ந்தது";
+"cqlPendingKEY" = "நிலுவையில் உள்ளது";
+"cqlREopenKEY" = "மீண்டும் திற";
+"cqlClosedKEY" = "மூடப்பட்டது";
+"cqlSelectTopicToLodgeQueryKEY" = "வினவல் பதிவு செய்ய தலைப்பைத் தேர்ந்தெடுக்கவும்";
+//WISHLIST LISTING VC
+"selectyourlanguageKEYq" = "உங்கள் மொழியைத் தேர்ந்தெடுக்கவும்";
+"checkoutkey" = "Checkout";
+"wlWishlistKEY" = "மீட்பு திட்டமிடுபவர்";
+"wlProductNameKEY" = "பொருளின் பெயர்";
+"wlCategoryKEY" = "வகை";
+"wlPointsKEY" = "புள்ளிகள்";
+"wlRedeemKEY" = "REDEEM";
+"wlDetailsKEY" = "விவரங்கள்";
+"wlExpectedRedemptionDateKEY" = "எதிர்பார்க்கப்பட்ட மீட்பு தேதி";
+//WISHLIST DETAILS
+"wdPlannerDetailsKEY" = "ரிடெம்ஷன் பிளானர் விவரங்கள்";
+"wdNeedKEY" = "தேவை";
+"wdPointstoRedeemTheProductKEY" = "தயாரிப்பை மீட்டெடுப்பதற்கான புள்ளிகள்";
+"wdRemoveKEY" = "நீக்கு";
+"wdRedeemKEY" = "REDEEM";
+"wdWishlistSummaryKEY" = "ரிடெம்ஷன் பிளானர் சுருக்கம்";
+//CODESTATUS VC
+"csCodeStatusKEY" = "குறியீடு நிலை";
+"csSyncKEY" = "ஒத்திசைவு";
+"csClaerKEY" = "தெளிவு";
+"csCodeKEY" = "குறியீடு";
+"csDateKEY" = "தேதி";
+//DREAM GIFT VC
+"mdgMyDreamGiftKEY" = "எனது கனவு பரிசு";
+"mdgRedeemKEY" = "REDEEM";
+"mdgDetailsKEY" = "விவரங்கள்";
+"mdgDetailsbuttonKEY" = "விவரங்கள்";
+"mdgRemoveKEY" = "நீக்கு";
+"mdgNeedKEY" = "தேவை";
+"mdgPoitsToRedeemTheProductKEY" = "தயாரிப்பை மீட்டெடுப்பதற்கான புள்ளிகள்";
+"mdgAveragepointsToBeEarnedPerMonthKEY" = "மாதம் சம்பாதிக்க வேண்டிய சராசரி புள்ளிகள்";
+"DesiredDateKEY" = "விரும்பிய தேதி";
+//FOLLOWER VC
+"fFollowerKEY" = "பின்தொடர்பவர்";
+"fMembershipIDKEY" = "உறுப்பினர் ஐடி";
+"fNameKEY" = "பெயர்";
+"fMobileKEY" = "கைபேசி";
+"fSendSMSKEY" = "எஸ்எம்எஸ் அனுப்பு";
+"fAddFollowerKEY" = "பின்தொடர்பவரைச் சேர்";
+"fEnterMobileNumberKEY" = "மொபைல் எண்ணை உள்ளிடவும்";
+"fEnterMobileNumberHereKEY" = "மொபைல் எண்ணை இங்கே உள்ளிடவும்";
+"fSendOTPKEY" = "OTP ஐ அனுப்பு";
+"fotpKEY" = "OTP";
+//EWARRENTY VC
+"ewEWarrentyCertificateKEY" = "மின் உத்தரவாதச் சான்றிதழ்";
+"ewFromDatemKEY" = "தேதியிலிருந்து";
+"enterFromDate" = "தேதியிலிருந்து உள்ளிடவும்";
+"enterToDate" = "தேதி வரை உள்ளிடவும்";
+"endDateKEY" = "தேதியிலிருந்து தேதி வரை அதிகமாக இருக்கக்கூடாது";
+"ewToDateKEY" = "இன்றுவரை";
+"ewFilterKEY" = "வடிகட்டி";
+"ewSelectStateKEY" = "மாநிலத்தைத் தேர்ந்தெடு";
+"ewCancelKEY" = "ரத்துசெய்";
+"ewConfirmKEY" = "உறுதிப்படுத்து";
+"ewDownloadPDFandShareKEY" = "இ-உத்தரவாத PDF ஐப் பதிவிறக்கி பகிரவும்";
+"ewCustomerNameKEY" = "வாடிக்கையாளர் பெயர்";
+"ewMobileNumberKEY" = "கைபேசி எண்";
+"ewEmailIDKEY" = "மின்னஞ்சல் முகவரி";
+"ewAddressKEY" = "முகவரி";
+"ewSelectCityKEY" = "நகரம்";
+"ewSelectAreaKEY" = "பகுதி";
+"ewGenerateEWarrentyKEY" = "மின் உத்தரவாதச் சான்றிதழை உருவாக்கு";
+"ewDownloadandShareEwarrentyPDFKEY" = "இ-உத்தரவாத PDF ஐப் பதிவிறக்கி பகிரவும்";
+"ewEwarrentyCertificateKEY" = "ஈ உத்தரவாதச் சான்றிதழ்";
+"ewCodeBankingDateKEY" = "குறியீட்டு வங்கி தேதி";
+"ewBrandKEY" = "பிராண்ட்";
+"ewProductKEY" = "தயாரிப்பு";
+"ewTotalQRCodesKEY" = "மொத்த QR குறியீடு";
+"ewAreaKEY" = "பகுதி";
+"ewEnterQuantityKEY" = "அளவை உள்ளிடவும்*";
+"ewNextKEY" = "Next";
+//MY REDEMPTIONS DETAILS
+"mrdMyCatalogueredemptionsKEY" = "எனது பட்டியல் மீட்புகள்";
+"mrdCategoryKEY" = "வகை";
+"mrdPointsperproductKEY" = "புள்ளிகள்/தயாரிப்பு";
+"mrdtotalPointsKEY" = "மொத்த புள்ளிகள்";
+"mrdDescriptionsKEY" = "விளக்கங்கள்";
+"mrdOtherInformationsKEY" = "பிற தகவல்கள்";
+"mrdProductCodeKEY" = "தயாரிப்பு குறியீடு";
+"mrdDelivaryTypeKEY" = "டெலிவரி வகை";
+//ACCESS CAMERA VC
+"acAccessCameraKEY" = "அணுகல் கேமரா";
+"acEnableCameraKEY" = "கேமராவை இயக்கு";
+"acQRCodeScannerRequiresKEY" = "QR குறியீடு ஸ்கேனருக்கு ஷரோன் பந்தன் குறியீட்டை ஸ்கேன் செய்ய கேமரா அனுமதி தேவை.";
+//CODE STATUS //CodeStatusViewController
+"NoDataFoundKEY" = "வேறு தகவல்கள் இல்லை";
+
+//UPLOAD CODE // UploadCodeVC
+"UploadKEY" = "பதிவேற்றம்";
+"RaiseTicketKEY" = "டிக்கெட் உயர்த்தவும்";
+"EnterYourCodeKEY" = "குறியீட்டை உள்ளிடுக";
+"OKKey" = "Ok";
+"SureWantToRemoveKEY" = "நீங்கள் நிச்சயமாக அகற்ற விரும்புகிறீர்களா";
+"YesKey" = "ஆம்";
+"NoKey" = "இல்லை";
+"SubmitCodeKey" = "உங்கள் குறியீட்டை சமர்ப்பிக்கவும்";
+"Enter12DigitsKey" = "தயவுசெய்து 12 இலக்கக் குறியீட்டை உள்ளிடவும்";
+
+//Code sync status // CodeSyncingStatusVC // CodeSummaryFilterVC
+"CodeSYNCKey" = "குறியீடு ஒத்திசைவு நிலை";
+"CodeSummaryKey" = "குறியீடு சுருக்கம்";
+"ToDateKey" = "இன்றுவரை";
+"FromDateKey" = "தேதியிலிருந்து";
+"FilterKey" = "வடிகட்டி";
+"DateOrStausKey" = "தயவுசெய்து தேதி அல்லது நிலையைத் தேர்ந்தெடுக்கவும்";
+"SelectToDateKey" = "தயவுசெய்து தேதியைத் தேர்ந்தெடுக்கவும்";
+"ToDateGreaterFromDateKey" = "இன்று தேதியிலிருந்து தேதியை விட அதிகமாக இருக்க வேண்டும்";
+"CountKey" = "எண்ணிக்கை";
+"SelectDateKey" = "தேர்வு தேதி";
+"CancelKey" = "ரத்துசெய்";
+"ConfirmKey" = "உறுதிப்படுத்து";
+
+//E-warranty certhificate
+"EWarrantyKey" = "மின் உத்தரவாதச் சான்றிதழ்கள்";
+"ResetKey" = "மீட்டமை";
+"NoEWarrantyKey" = "மின்-உத்தரவாத முடிவு கிடைக்கவில்லை";
+"DateForCodeDisplayeKey" = "குறியீடுகள் காண்பிக்க தேதியிலிருந்து தேதி மற்றும் தேதி வரை தேர்ந்தெடுக்கவும்";
+
+//My dream gift
+"CreatedDateKey" = "உருவாக்கப்பட்ட தேதி";
+"okKey" = "சரி";
+"NotAllowedRedeemKey" = "உங்களுக்கு ரிடீம் செய்ய அனுமதி இல்லை. உங்கள் நிர்வாகியைத் தொடர்பு கொள்ளவும்";
+"NoDreamGiftKey" = "கனவு பரிசு கிடைக்கவில்லை";
+
+// Add follower
+"AlertKey" = "எச்சரிக்கை";
+"InvalidPasswordKey" = "தவறான கடவுச்சொல்";
+"FollowerCategoryKey" = "பின்தொடர்பவர் வகையைத் தேர்ந்தெடு";
+"NoFollowersFoundKey" = "இந்த நேரத்தில் பின்தொடர்பவர்கள் யாரும் இல்லை புதிய பின்தொடர்பவரை சேர்க்க ' ' ஐ கிளிக் செய்யவும்";
+
+//Redemption catelogue
+"addedToCartKey" = "வண்டியில் சேர்க்கப்பட்டது";
+"EnterAllFieldsKey" = "எல்லா புலங்களையும் உள்ளிடவும்";
+"AlreadyPlannerAddedKey" = "உங்கள் மீட்புத் திட்டத்தில் தயாரிப்பு ஏற்கனவே சேர்க்கப்பட்டுள்ளது";
+"PlannerAddedKey" = "உங்கள் ரிடெம்ப்ஷன் பிளானரில் தயாரிப்பு சேர்க்கப்பட்டது";
+"NotAllowedToRedeemKey" = "உங்களுக்கு ரிடீம் செய்ய அனுமதி இல்லை. உங்கள் நிர்வாகியைத் தொடர்பு கொள்ளவும்.";
+
+//My earning
+"SelectDateRangeKey" = "தேர்வு தேதி வரம்பை";
+"QRCodeKey" = "க்யு ஆர் குறியீடு";
+
+//My redemption
+"NoSearchResultKey" = "தேடல் முடிவு கிடைக்கவில்லை!";
+"GiftTypeKey" = "பரிசு வகை";
+
+//Scan code
+"RaiseTicketKey" = "டிக்கெட் உயர்த்தவும்";
+
+//Lodge query
+"WriteQueryHereKey" = "கேள்வியை இங்கே எழுது";
+"OpenNewTicketKey" = "புதிய டிக்கெட்டை திற";
+
+//Forgot password
+"EnterValidNumberKey" = "சரியான கைபேசி எண்ணை தரவும்";
+"MemberExistKey" = "உறுப்பினர் இல்லை";
+
+//Help line call
+"ExecutiveCallKey" = "உங்கள் தவறிய அழைப்பை நாங்கள் பெற்றவுடன் ஷரோன் பந்தன் நிர்வாகி உங்களை அழைப்பார்!";
+"MissedCallOnKey" = "ஒரு மிஸ்டு கால் கொடுங்கள்";
+
+//Registration
+"OTPDoesNotMatchKey" = "உள்ளிட்ட OTP பொருந்தவில்லை";
+"ResendOTPKey" = "ஓடிபியை மீண்டும் அனுப்பு";
+
+//Notifications
+"NotificationsKey" = "அறிவிப்புகள்";
+
+//Dashboard
+"AccessDeniedKey" = "தற்போது இந்த மெனுவிற்கான அணுகல் உங்களிடம் இல்லை. தயவு செய்து 91-8955177400 என்ற எண்ணில் நிர்வாகி அல்லது தொடர்பு மையத்தைத் தொடர்பு கொள்ளவும்.";
+
+"enterScratchCode" = "கீறல் குறியீட்டை உள்ளிடவும்.";
+"alreadySubmittedKey" = "இந்த குறியீடு ஏற்கனவே சமர்ப்பிக்கப்பட்டது.";
+"PlzSelectFromDateKey" = "தயவுசெய்து தேதியிலிருந்து தேர்ந்தெடுக்கவும்";
+"PlzEnterOTPKey" = "தயவுசெய்து OTP ஐ உள்ளிடவும்!";
+"view" = "பார்வை";
+
+
+"QRCodeSubmitted" = "QR குறியீடு வெற்றிகரமாகச் சமர்ப்பிக்கப்பட்டது. நிலை அறிக்கையில் குறியீட்டின் நிலையைச் சரிபார்க்கவும்.";
+"CodeScannedSuccess" = "குறியீடு வெற்றிகரமாக ஸ்கேன் செய்யப்பட்டது";
+"myPan" = "எனது பான்";
+"myProfile" = "என் சுயவிவரம்";
+"myPanDetails" = "எனது பான் விவரங்கள்";
+"enterPanNum" = "உங்கள் பான் எண்ணை உள்ளிடவும்";
+"view" = "பார்வை";
+"ptsBalance" = "புள்ளி இருப்பு";
+"tdsPts" = "டிடிஎஸ் புள்ளிகள்";
+"TDS" = "டிடிஎஸ்";
+"plzEnterPAN" = "தயவுசெய்து உங்கள் பான் எண்ணை உள்ளிடவும்";
+"validPanNum" = "சரியான PAN எண்ணை உள்ளிடவும்!";
+"douWantSubmit" = "பான் இணைப்பு இல்லாமல் சமர்ப்பிக்க விரும்புகிறீர்களா?";
+"PanSaveFailed" = "பான் கார்டு விவரங்களை சேமிக்க முடியவில்லை!";
+"panDetailsSaved" = "பான் கார்டு விவரங்கள் வெற்றிகரமாக சேமிக்கப்பட்டன!";
+"panDetailsSubmitted" = "உங்கள் PAN விவரங்கள் சரிபார்ப்பிற்காக சமர்ப்பிக்கப்பட்டுள்ளன!";
+"panVerified" = "உங்கள் PAN விவரங்கள் சரிபார்க்கப்பட்டன!";
+"techincalErr" = "தொழில்நுட்ப பிழை!";
+
+"PanVerification" = "பான் சரிபார்ப்பு";
+"kindlyUploadDetails" = "தயவுசெய்து உங்கள் பான் விவரங்களை பதிவேற்றவும்";
+"PANnumbeer" = "பான் எண்";
+"Validate" = "சரிபார்";
+"DOB" = "பிறந்த தேதி : ";
+"PANAttachment" = "PAN இணைப்பு";
+"customerPANDetails" = "வாடிக்கையாளர் பான் விவரங்கள் சரிபார்ப்பிற்காக சமர்ப்பிக்கப்பட்டுள்ளன!";
+"Save" = "சேமி";
+"personName" = "நபர் பெயர் :";
+"customerPANVerified" = "வாடிக்கையாளர் பான் விவரங்கள் சரிபார்க்கப்பட்டன!";
+"verify" = "சரிபார்";
+"savingPancarFailed" = "பான் கார்டைச் சேமிப்பதில் தோல்வி. சிறிது நேரம் கழித்து முயற்சிக்கவும்";

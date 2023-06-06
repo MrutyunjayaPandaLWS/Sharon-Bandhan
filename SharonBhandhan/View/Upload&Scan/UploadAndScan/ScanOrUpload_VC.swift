@@ -1070,7 +1070,7 @@ class ScanOrUpload_VC: BaseViewController, AVCaptureVideoDataOutputSampleBufferD
 
                     }else{
                         if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                            let alertVC = UIAlertController(title: "Century Ply Application need Camera permission for Scanning Codes", message: "Allow Camera Access", preferredStyle: .alert)
+                            let alertVC = UIAlertController(title: "Sharon Bandhan Application need Camera permission for Scanning Codes", message: "Allow Camera Access", preferredStyle: .alert)
                             let okAction = UIAlertAction(title: "Allow", style: UIAlertAction.Style.default) {
                                 UIAlertAction in
                                 UIApplication.shared.open(URL.init(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)

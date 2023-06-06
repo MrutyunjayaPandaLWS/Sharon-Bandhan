@@ -54,10 +54,10 @@ class ForgotPasswordViewController: BaseViewController, UITextFieldDelegate, pop
             backToLogin.text = "लॉगिन पर वापस जाएं"
             
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            forgetPwdTitle.text = "fpForgotPasswordKEY".localizableString(loc: "bn")
-            userNameTF.placeholder = "fpEnterYourRegisterdMobileNumberKEY".localizableString(loc: "bn")
-            submitBTN.setTitle("fpSubmitKEY".localizableString(loc: "bn"), for: .normal)
-            backToLogin.text = "প্রবেশ করতে পেছান"
+            forgetPwdTitle.text = "fpForgotPasswordKEY".localizableString(loc: "ta-IN")
+            userNameTF.placeholder = "fpEnterYourRegisterdMobileNumberKEY".localizableString(loc: "ta-IN")
+            submitBTN.setTitle("fpSubmitKEY".localizableString(loc: "ta-IN"), for: .normal)
+            backToLogin.text = "மீண்டும் உள்நுழைய"
         }else{
             forgetPwdTitle.text = "fpForgotPasswordKEY".localizableString(loc: "te")
             userNameTF.placeholder = "fpEnterYourRegisterdMobileNumberKEY".localizableString(loc: "te")

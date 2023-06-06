@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2581A7592A2B505900087308 /* T&C-Sharon-Telugu.html in Resources */ = {isa = PBXBuildFile; fileRef = 2581A7552A2B505600087308 /* T&C-Sharon-Telugu.html */; };
+		2581A75A2A2B505900087308 /* T&C-Sharon-Hindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 2581A7562A2B505700087308 /* T&C-Sharon-Hindi.html */; };
+		2581A75B2A2B505900087308 /* T&C-Sharon-Tamil.html in Resources */ = {isa = PBXBuildFile; fileRef = 2581A7572A2B505800087308 /* T&C-Sharon-Tamil.html */; };
+		2581A75C2A2B505900087308 /* T&C-Sharon-English.html in Resources */ = {isa = PBXBuildFile; fileRef = 2581A7582A2B505900087308 /* T&C-Sharon-English.html */; };
 		8425C6E729F9248B007E6F29 /* GenerateEwarrantyListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425C6E629F9248B007E6F29 /* GenerateEwarrantyListingViewModel.swift */; };
 		8425C6EA29F92515007E6F29 /* MyprofileDetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425C6E929F92515007E6F29 /* MyprofileDetailsModels.swift */; };
 		8425C6EC29F9254D007E6F29 /* GenerateSubmissionEwarrantyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425C6EB29F9254D007E6F29 /* GenerateSubmissionEwarrantyModels.swift */; };
@@ -340,6 +344,13 @@
 
 /* Begin PBXFileReference section */
 		049A65600A4EA0C1BD1516BD /* Pods-SharonBhandhan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharonBhandhan.release.xcconfig"; path = "Target Support Files/Pods-SharonBhandhan/Pods-SharonBhandhan.release.xcconfig"; sourceTree = "<group>"; };
+		2581A7552A2B505600087308 /* T&C-Sharon-Telugu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "T&C-Sharon-Telugu.html"; sourceTree = "<group>"; };
+		2581A7562A2B505700087308 /* T&C-Sharon-Hindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "T&C-Sharon-Hindi.html"; sourceTree = "<group>"; };
+		2581A7572A2B505800087308 /* T&C-Sharon-Tamil.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "T&C-Sharon-Tamil.html"; sourceTree = "<group>"; };
+		2581A7582A2B505900087308 /* T&C-Sharon-English.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "T&C-Sharon-English.html"; sourceTree = "<group>"; };
+		258BF9662A2DDD20009174D9 /* ta-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ta-IN"; path = "ta-IN.lproj/Main.strings"; sourceTree = "<group>"; };
+		258BF9672A2DDD22009174D9 /* ta-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ta-IN"; path = "ta-IN.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		258BF9682A2DDD24009174D9 /* ta-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ta-IN"; path = "ta-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2CFFFCA1C451857E52319146 /* Pods-SharonBhandhan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharonBhandhan.debug.xcconfig"; path = "Target Support Files/Pods-SharonBhandhan/Pods-SharonBhandhan.debug.xcconfig"; sourceTree = "<group>"; };
 		8425C6E629F9248B007E6F29 /* GenerateEwarrantyListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateEwarrantyListingViewModel.swift; sourceTree = "<group>"; };
 		8425C6E929F92515007E6F29 /* MyprofileDetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyprofileDetailsModels.swift; sourceTree = "<group>"; };
@@ -939,6 +950,10 @@
 		84540AD629E18AAE00CEE692 /* HTML Files */ = {
 			isa = PBXGroup;
 			children = (
+				2581A7582A2B505900087308 /* T&C-Sharon-English.html */,
+				2581A7562A2B505700087308 /* T&C-Sharon-Hindi.html */,
+				2581A7572A2B505800087308 /* T&C-Sharon-Tamil.html */,
+				2581A7552A2B505600087308 /* T&C-Sharon-Telugu.html */,
 				84540AD729E18AAE00CEE692 /* uniqueFeatures.html */,
 				84540AD829E18AAE00CEE692 /* century-proclub-t&c.html */,
 			);
@@ -2576,6 +2591,7 @@
 				hi,
 				bn,
 				te,
+				"ta-IN",
 			);
 			mainGroup = 84540A8629E187E600CEE692;
 			productRefGroup = 84540A9029E187E600CEE692 /* Products */;
@@ -2598,6 +2614,8 @@
 				84540B9329E18AD800CEE692 /* OffersTableViewCell.xib in Resources */,
 				84540BD829E18AD800CEE692 /* AddFollowerTableViewCell.xib in Resources */,
 				84540BE729E18AD800CEE692 /* SidemenuTableViewCell.xib in Resources */,
+				2581A75B2A2B505900087308 /* T&C-Sharon-Tamil.html in Resources */,
+				2581A75C2A2B505900087308 /* T&C-Sharon-English.html in Resources */,
 				84540BA229E18AD800CEE692 /* SelectProductEWarrantyListTableViewCell.xib in Resources */,
 				84540BCF29E18AD800CEE692 /* MyRedemptionsTableViewCell.xib in Resources */,
 				847EB14829F806C5004AF0D8 /* GenerateEWarrantyTableViewCell.xib in Resources */,
@@ -2612,9 +2630,11 @@
 				849E84A52A177553006F0ED8 /* HistoryNotificationsTableViewCell.xib in Resources */,
 				84540BA929E18AD800CEE692 /* senderInfoImageTableViewCell.xib in Resources */,
 				84540B8F29E18AD800CEE692 /* DreamGiftTableViewCell.xib in Resources */,
+				2581A7592A2B505900087308 /* T&C-Sharon-Telugu.html in Resources */,
 				84A7BB7E29E3F4E500896FA1 /* GoogleService-Info.plist in Resources */,
 				84540AA229E187E900CEE692 /* LaunchScreen.storyboard in Resources */,
 				84540A9F29E187E900CEE692 /* Assets.xcassets in Resources */,
+				2581A75A2A2B505900087308 /* T&C-Sharon-Hindi.html in Resources */,
 				84540A9A29E187E600CEE692 /* Main.storyboard in Resources */,
 				84540BB429E18AD800CEE692 /* senderImageTableViewCell.xib in Resources */,
 				84540AEC29E18AAE00CEE692 /* century-proclub-t&c.html in Resources */,
@@ -3009,6 +3029,7 @@
 				8452CBA029E3D3160018CCE1 /* bn */,
 				8452CBA129E3D3160018CCE1 /* te */,
 				8452CBA229E3D3170018CCE1 /* hi */,
+				258BF9682A2DDD24009174D9 /* ta-IN */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -3020,6 +3041,7 @@
 				8452CB9529E3D2C10018CCE1 /* hi */,
 				8452CB9729E3D2D20018CCE1 /* bn */,
 				8452CB9929E3D2E30018CCE1 /* te */,
+				258BF9662A2DDD20009174D9 /* ta-IN */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -3031,6 +3053,7 @@
 				8452CB9629E3D2C10018CCE1 /* hi */,
 				8452CB9829E3D2D20018CCE1 /* bn */,
 				8452CB9A29E3D2E30018CCE1 /* te */,
+				258BF9672A2DDD22009174D9 /* ta-IN */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

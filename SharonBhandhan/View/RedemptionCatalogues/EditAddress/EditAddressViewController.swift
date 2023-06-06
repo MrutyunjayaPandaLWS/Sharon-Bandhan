@@ -112,19 +112,19 @@ class EditAddressViewController: BaseViewController, UITextFieldDelegate, Select
             
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
             
-            self.header.text = "ঠিকানা সম্পাদনা করুন"
-            self.defaultAddress.text = "ডিফল্ট ঠিকানা"
+            self.header.text = "முகவரியைத் திருத்தவும்"
+            self.defaultAddress.text = "இயல்புநிலை முகவரி"
  
-            self.country.text = "দেশ"
+            self.country.text = "நாடு"
             
-            self.name.text = "eaNameKEY".localizableString(loc: "bn")
-            self.mobile.text = "eaMobileKEY".localizableString(loc: "bn")
-            self.email.text = "eaEmailKEY".localizableString(loc: "bn")
-            self.address.text = "eaAddressKEY".localizableString(loc: "bn")
-            self.state.text = "eaStateKEY".localizableString(loc: "bn")
-            self.city.text = "eaCityKEY".localizableString(loc: "bn")
-            self.zip.text = "eaPinKEY".localizableString(loc: "bn")
-            self.saveChanges.setTitle("coProceedKEY".localizableString(loc: "bn"), for: .normal)
+            self.name.text = "eaNameKEY".localizableString(loc: "ta-IN")
+            self.mobile.text = "eaMobileKEY".localizableString(loc: "ta-IN")
+            self.email.text = "eaEmailKEY".localizableString(loc: "ta-IN")
+            self.address.text = "eaAddressKEY".localizableString(loc: "ta-IN")
+            self.state.text = "eaStateKEY".localizableString(loc: "ta-IN")
+            self.city.text = "eaCityKEY".localizableString(loc: "ta-IN")
+            self.zip.text = "eaPinKEY".localizableString(loc: "ta-IN")
+            self.saveChanges.setTitle("coProceedKEY".localizableString(loc: "ta-IN"), for: .normal)
         }else{
             
             self.header.text = "చిరునామాను సవరించండి"

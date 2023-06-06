@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 import Firebase
+import AudioToolbox
+import CoreLocation
 
 class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, UNUserNotificationCenterDelegate, closeCodesDelegate, UITextFieldDelegate, PopUpDelegate, PopUpDelegate2{
     func popUpAlertDidTap2(_ vc: PopUp2ViewController) {}
@@ -37,6 +39,10 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
     @IBOutlet var uploadCodeView: UIView!
     @IBOutlet var scanCodeView: UIView!
     @IBOutlet weak var backBtnView: UIView!
+    @IBOutlet var uploadAndScanView: UIView!
+    @IBOutlet var scanOutBTN: UIButton!
+    @IBOutlet var uploadCodeOutBTN: UIButton!
+    
     
     var scannerVM = ScannerViewModel()
     let userID = UserDefaults.standard.value(forKey: "UserID") ?? -1
@@ -142,11 +148,70 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
     }
     @objc func maxUploadLimit(notification: Notification){
         self.isscannedOnce = true
-//                                                self.session.startRunning()
+//      self.session.startRunning()
         self.shadowView.isHidden = true
     }
 
+    @IBAction func scaningQRCodeNewModelActBTN(_ sender: Any) {
+        
+        self.generateEWarrantyBottom.isHidden = true
+        self.codetableView.delegate = self
+        self.codetableView.dataSource = self
+        self.scannerVM.vc = self
+        self.codeTF.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(alertPopUpMessage), name: Notification.Name("alertPopUp"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(popUpMessageInvalidCode), name: Notification.Name("InvalidQRCode"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(alertMsgPopUp), name: Notification.Name("alertMessagePopuP"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(scannedCodeLimit), name: Notification.Name("maxiLimitReached"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(maxUploadLimit), name: Notification.Name("maxiUploadLimiReached"), object: nil)
+        InitialSetups()
 
+        
+        DispatchQueue.main.async {
+//            self.selectedindex = 1
+            if AVCaptureDevice.authorizationStatus(for: .video) ==  .authorized {
+                //  self.scanImage12.isHidden = true
+                self.startLiveVideo()
+            } else {
+                AVCaptureDevice.requestAccess(for: .video, completionHandler: { (granted: Bool) in
+                    if granted {
+                        //  self.scanImage12.isHidden = true
+                        //  self.scannerImage.isHidden = false
+                        self.startLiveVideo()
+                    } else {
+                        //self.scanImage12.isHidden = false
+                        //self.scannerImage.isHidden = true
+                        DispatchQueue.main.async {
+                            UIApplication.shared.openURL(URL(string: UIApplication.openSettingsURLString)!)
+                        }
+                    }
+                })
+            }
+            self.scanoruploadLabel.text = "Scan QR Code"
+            self.scanAgain.setTitle("SCAN AGAIN", for: .normal)
+            self.scannerImage.isHidden = false
+            //self.scanImage12.isHidden = true
+            self.scanCodeView.isHidden = false
+            self.uploadCodeView.isHidden = true
+            DispatchQueue.main.async {
+                self.captureSession.startRunning()
+            }
+        }
+    }
+    
+    @IBAction func uploadQRCodeNEWModelActBTN(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.selectedindex = 2
+            self.scanoruploadLabel.text = "Upload Code"
+            self.scanAgain.setTitle("UPLOAD AGAIN", for: .normal)
+            self.scannerImage.isHidden = true
+            //   self.scanImage12.isHidden = false
+            self.captureSession.stopRunning()
+            self.uploadCodeView.isHidden = false
+            self.scanCodeView.isHidden = true
+        }
+    }
     @IBAction func uploadCodeButton(_ sender: Any) {
         if codeTF.text ?? "" == ""{
             DispatchQueue.main.async{
@@ -164,6 +229,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
             var list3 = [QrUsegereport1]()
             list3 = self.scannerVM.tempStoreCodesArray
             //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
+            print(UserDefaults.standard.string(forKey: "CUSTTYPE"),"sdkjdkj")
             if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
                 print(list3.count)
                 if list3.count >= 10{
@@ -817,7 +883,7 @@ extension CP_Scanner_VC{
                 "ActorId": "\(userID)",
                 "SCRATCH_CODE": code
         ]
-        
+        print(parameter,"dksjhdk")
         self.scannerVM.codeGenuineAPI(code: code, parameter: parameter)
     }
 }
