@@ -8,6 +8,7 @@
 import UIKit
 import Lottie
 import SDWebImage
+import LanguageManager_iOS
 //import Kingfisher
 //import Firebase
 
@@ -79,17 +80,19 @@ class HistoryNotificationsViewController: BaseViewController, notificationDelgat
     }
     
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.header.text = "Notification"
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.header.text = "अधिसूचना"
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.header.text = "বিজ্ঞপ্তি"
-        }else{
-            self.header.text = "నోటిఫికేషన్"
-        }
+        self.header.text = "NotificationsKey".localiz()
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.header.text = "NotificationsKey".localiz()
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.header.text = "अधिसूचना"
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.header.text = "বিজ্ঞপ্তি"
+//        }else{
+//            self.header.text = "నోటిఫికేషన్"
+//        }
     }
     
     func notificationListApi(){

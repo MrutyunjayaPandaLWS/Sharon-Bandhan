@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import LanguageManager_iOS
 
 class ForgotPasswordViewController: BaseViewController, UITextFieldDelegate, popUpDelegate {
     func popupAlertDidTap(_ vc: PopupAlertOne_VC) {
@@ -39,31 +40,37 @@ class ForgotPasswordViewController: BaseViewController, UITextFieldDelegate, pop
     }
     
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            forgetPwdTitle.text = "fpForgotPasswordKEY".localizableString(loc: "en")
-            userNameTF.placeholder = "fpEnterYourRegisterdMobileNumberKEY".localizableString(loc: "en")
-            submitBTN.setTitle("fpSubmitKEY".localizableString(loc: "en"), for: .normal)
-            backToLogin.text = "back To Login"
-            
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            forgetPwdTitle.text = "fpForgotPasswordKEY".localizableString(loc: "hi")
-            userNameTF.placeholder = "fpEnterYourRegisterdMobileNumberKEY".localizableString(loc: "hi")
-            submitBTN.setTitle("fpSubmitKEY".localizableString(loc: "hi"), for: .normal)
-            
-            backToLogin.text = "लॉगिन पर वापस जाएं"
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            forgetPwdTitle.text = "fpForgotPasswordKEY".localizableString(loc: "ta-IN")
-            userNameTF.placeholder = "fpEnterYourRegisterdMobileNumberKEY".localizableString(loc: "ta-IN")
-            submitBTN.setTitle("fpSubmitKEY".localizableString(loc: "ta-IN"), for: .normal)
-            backToLogin.text = "மீண்டும் உள்நுழைய"
-        }else{
-            forgetPwdTitle.text = "fpForgotPasswordKEY".localizableString(loc: "te")
-            userNameTF.placeholder = "fpEnterYourRegisterdMobileNumberKEY".localizableString(loc: "te")
-            submitBTN.setTitle("fpSubmitKEY".localizableString(loc: "te"), for: .normal)
-            backToLogin.text = "తిరిగి లాగిన్‌కి"
-        }
+        
+        forgetPwdTitle.text = "fpForgotPasswordKEY".localiz()
+        userNameTF.placeholder = "fpEnterYourRegisterdMobileNumberKEY".localiz()
+        submitBTN.setTitle("fpSubmitKEY".localiz(), for: .normal)
+        backToLogin.text = "back To Login".localiz()
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            forgetPwdTitle.text = "fpForgotPasswordKEY".localiz()
+//            userNameTF.placeholder = "fpEnterYourRegisterdMobileNumberKEY".localiz()
+//            submitBTN.setTitle("fpSubmitKEY".localiz(), for: .normal)
+//            backToLogin.text = "back To Login".localiz()
+//
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            forgetPwdTitle.text = "fpForgotPasswordKEY".localizableString(loc: "hi")
+//            userNameTF.placeholder = "fpEnterYourRegisterdMobileNumberKEY".localizableString(loc: "hi")
+//            submitBTN.setTitle("fpSubmitKEY".localizableString(loc: "hi"), for: .normal)
+//
+//            backToLogin.text = "लॉगिन पर वापस जाएं"
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            forgetPwdTitle.text = "fpForgotPasswordKEY".localizableString(loc: "ta-IN")
+//            userNameTF.placeholder = "fpEnterYourRegisterdMobileNumberKEY".localizableString(loc: "ta-IN")
+//            submitBTN.setTitle("fpSubmitKEY".localizableString(loc: "ta-IN"), for: .normal)
+//            backToLogin.text = "மீண்டும் உள்நுழைய"
+//        }else{
+//            forgetPwdTitle.text = "fpForgotPasswordKEY".localizableString(loc: "te")
+//            userNameTF.placeholder = "fpEnterYourRegisterdMobileNumberKEY".localizableString(loc: "te")
+//            submitBTN.setTitle("fpSubmitKEY".localizableString(loc: "te"), for: .normal)
+//            backToLogin.text = "తిరిగి లాగిన్‌కి"
+//        }
     }
     
     @IBAction func submitButton(_ sender: Any) {
@@ -72,16 +79,17 @@ class ForgotPasswordViewController: BaseViewController, UITextFieldDelegate, pop
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Please Enter Membership ID"
-                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                     vc!.descriptionInfo = "कृपया सदस्यता आईडी दर्ज करें"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "সদস্যতা আইডি লিখুন দয়া করে"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "దయచేసి సభ్యత్వ IDని నమోదు చేయండి"
-                  }
+                vc!.descriptionInfo = "Please Enter Membership ID".localiz()
+//
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "Please Enter Membership ID".localiz()
+//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                     vc!.descriptionInfo = "कृपया सदस्यता आईडी दर्ज करें"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "সদস্যতা আইডি লিখুন দয়া করে"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "దయచేసి సభ్యత్వ IDని నమోదు చేయండి"
+//                  }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -95,16 +103,18 @@ class ForgotPasswordViewController: BaseViewController, UITextFieldDelegate, pop
                         vc!.delegate = self
                         vc!.titleInfo = ""
                         self.isSuccess = 1
+                        vc!.descriptionInfo = "New password sent to the registered mobile number!".localiz()
                         
-                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                            vc!.descriptionInfo = "New password sent to the registered mobile number!"
-                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                             vc!.descriptionInfo = "पंजीकृत मोबाइल नंबर पर भेजा गया नया पासवर्ड!"
-                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                            vc!.descriptionInfo = "নিবন্ধিত মোবাইল নম্বরে পাঠানো নতুন পাসওয়ার্ড!"
-                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                            vc!.descriptionInfo = "రిజిస్టర్డ్ మొబైల్ నంబర్‌కు కొత్త పాస్‌వర్డ్ పంపబడింది!"
-                          }
+                        
+//                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                            vc!.descriptionInfo = "New password sent to the registered mobile number!".localiz()
+//                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                             vc!.descriptionInfo = "पंजीकृत मोबाइल नंबर पर भेजा गया नया पासवर्ड!"
+//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                            vc!.descriptionInfo = "নিবন্ধিত মোবাইল নম্বরে পাঠানো নতুন পাসওয়ার্ড!"
+//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                            vc!.descriptionInfo = "రిజిస్టర్డ్ మొబైల్ నంబర్‌కు కొత్త పాస్‌వర్డ్ పంపబడింది!"
+//                          }
                         vc!.modalPresentationStyle = .overCurrentContext
                         vc!.modalTransitionStyle = .crossDissolve
                         self.present(vc!, animated: true, completion: nil)
@@ -116,16 +126,18 @@ class ForgotPasswordViewController: BaseViewController, UITextFieldDelegate, pop
                         vc!.delegate = self
                         vc!.titleInfo = ""
                         self.isSuccess = 0
-                       
-                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                            vc!.descriptionInfo = "Something went erong Please try again later!"
-                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                             vc!.descriptionInfo = "कुछ गलत हो गया है। कृपया बाद में दोबारा प्रयास करें!"
-                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                            vc!.descriptionInfo = "কিছু ভুল হয়েছে। পরে আবার চেষ্টা করুন!"
-                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                            vc!.descriptionInfo = "ఏదో తప్పు జరిగినది. దయచేసి కాసేపు ఆగక ప్రయత్నించండి!"
-                          }
+                        vc!.descriptionInfo = "Something went wrong please try again later.".localiz()
+                        
+//
+//                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                            vc!.descriptionInfo = "Something went erong Please try again later!"
+//                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                             vc!.descriptionInfo = "कुछ गलत हो गया है। कृपया बाद में दोबारा प्रयास करें!"
+//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                            vc!.descriptionInfo = "কিছু ভুল হয়েছে। পরে আবার চেষ্টা করুন!"
+//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                            vc!.descriptionInfo = "ఏదో తప్పు జరిగినది. దయచేసి కాసేపు ఆగక ప్రయత్నించండి!"
+//                          }
                         vc!.modalPresentationStyle = .overCurrentContext
                         vc!.modalTransitionStyle = .crossDissolve
                         self.present(vc!, animated: true, completion: nil)
@@ -144,16 +156,18 @@ class ForgotPasswordViewController: BaseViewController, UITextFieldDelegate, pop
                     vc!.delegate = self
                     vc!.titleInfo = ""
                     self.isSuccess = 0
+                    vc!.descriptionInfo = "MembershipID doesn't exists".localiz()
                     
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "MembershipID doesn't exists"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "सदस्यता आईडी मौजूद नहीं है"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "সদস্যতা আইডি বিদ্যমান নেই"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "సభ్యత్వ ID ఉనికిలో లేదు"
-                      }
+                    
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "MembershipID doesn't exists"
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "सदस्यता आईडी मौजूद नहीं है"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "সদস্যতা আইডি বিদ্যমান নেই"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "సభ్యత్వ ID ఉనికిలో లేదు"
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)

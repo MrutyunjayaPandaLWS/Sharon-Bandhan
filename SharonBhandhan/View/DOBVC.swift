@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import LanguageManager_iOS
+
 protocol DateSelectedDelegate {
     func acceptDate(_ vc: DOBVC)
     func declineDate(_ vc: DOBVC)
@@ -27,20 +29,22 @@ class DOBVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.cancel.setTitle("Decline", for: .normal)
-            self.confirm.setTitle("Accept", for: .normal)
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.cancel.setTitle("मना करना", for: .normal)
-            self.confirm.setTitle("स्वीकार करना", for: .normal)
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.cancel.setTitle("প্রত্যাখ্যান", for: .normal)
-            self.confirm.setTitle("গ্রহণ করুন", for: .normal)
-        }else{
-            self.cancel.setTitle("తిరస్కరించు", for: .normal)
-            self.confirm.setTitle("అంగీకరించు", for: .normal)
-        }
+        self.cancel.setTitle("lDeclineKEY".localiz(), for: .normal)
+        self.confirm.setTitle("lAcceptKEY".localiz(), for: .normal)
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.cancel.setTitle("Decline", for: .normal)
+//            self.confirm.setTitle("Accept", for: .normal)
+//            
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.cancel.setTitle("मना करना", for: .normal)
+//            self.confirm.setTitle("स्वीकार करना", for: .normal)
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.cancel.setTitle("প্রত্যাখ্যান", for: .normal)
+//            self.confirm.setTitle("গ্রহণ করুন", for: .normal)
+//        }else{
+//            self.cancel.setTitle("తిరస్కరించు", for: .normal)
+//            self.confirm.setTitle("అంగీకరించు", for: .normal)
+//        }
         
     }
     

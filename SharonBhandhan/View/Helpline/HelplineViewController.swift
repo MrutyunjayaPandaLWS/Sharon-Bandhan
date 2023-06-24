@@ -8,7 +8,7 @@
 import UIKit
 import Lottie
 import Firebase
-
+import LanguageManager_iOS
 
 class HelplineViewController: UIViewController {
     
@@ -50,26 +50,30 @@ class HelplineViewController: UIViewController {
 //
 //    }
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.informationLbl.text = "For any questions and queries on the Sharon Bandhan Loyalty Program. Please give a miss call on the following number"
-            self.callInfo.text = "GIVE A MISSED CALL ON"
-            self.header.text = "Helpline Call"
-
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.informationLbl.text = "शेरोन बंधन वफादारी कार्यक्रम पर किसी भी प्रश्न और पूछताछ के लिए। कृपया नीचे दिए गए नंबर पर मिस कॉल दें"
-            self.callInfo.text = "मिस्ड कॉल ऑन करें"
-            self.header.text = "हेल्पलाइन कॉल"
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.informationLbl.text = "শ্যারন বন্ধন লয়্যালটি প্রোগ্রামে যেকোনো প্রশ্ন এবং প্রশ্নের জন্য। অনুগ্রহ করে নিচের নাম্বারে একটি মিস কল দিন"
-            self.callInfo.text = "একটি মিসড কল দিন"
-            self.header.text = "হেল্পলাইন কল"
-            
-        }else{
-            self.informationLbl.text = "షారన్ బంధన్ లాయల్టీ ప్రోగ్రామ్‌లో ఏవైనా ప్రశ్నలు మరియు సందేహాల కోసం. దయచేసి కింది నంబర్‌కు మిస్ కాల్ ఇవ్వండి"
-            self.callInfo.text = "మిస్డ్ కాల్ ఇవ్వండి"
-            self.header.text = "హెల్ప్‌లైన్ కాల్"
-        }
+        self.informationLbl.text = "queryQuestion info".localiz()
+        self.callInfo.text = "MissedCallOnKey".localiz()
+        self.header.text = "hcHelplineCallKEY".localiz()
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.informationLbl.text = "For any questions and queries on the Sharon Bandhan Loyalty Program. Please give a miss call on the following number"
+//            self.callInfo.text = "GIVE A MISSED CALL ON"
+//            self.header.text = "Helpline Call"
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.informationLbl.text = "शेरोन बंधन वफादारी कार्यक्रम पर किसी भी प्रश्न और पूछताछ के लिए। कृपया नीचे दिए गए नंबर पर मिस कॉल दें"
+//            self.callInfo.text = "मिस्ड कॉल ऑन करें"
+//            self.header.text = "हेल्पलाइन कॉल"
+//            
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.informationLbl.text = "শ্যারন বন্ধন লয়্যালটি প্রোগ্রামে যেকোনো প্রশ্ন এবং প্রশ্নের জন্য। অনুগ্রহ করে নিচের নাম্বারে একটি মিস কল দিন"
+//            self.callInfo.text = "একটি মিসড কল দিন"
+//            self.header.text = "হেল্পলাইন কল"
+//            
+//        }else{
+//            self.informationLbl.text = "షారన్ బంధన్ లాయల్టీ ప్రోగ్రామ్‌లో ఏవైనా ప్రశ్నలు మరియు సందేహాల కోసం. దయచేసి కింది నంబర్‌కు మిస్ కాల్ ఇవ్వండి"
+//            self.callInfo.text = "మిస్డ్ కాల్ ఇవ్వండి"
+//            self.header.text = "హెల్ప్‌లైన్ కాల్"
+//        }
     }
     @IBAction func backButton(_ sender: Any) {
         if self.fromSideMenu == "SideMenu"{

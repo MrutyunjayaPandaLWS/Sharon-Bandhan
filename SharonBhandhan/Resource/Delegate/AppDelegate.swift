@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
     var slider : SlideMenuController!
     var nav : UINavigationController!
     var gcmMessageIDKey = "gcm.message_id"
+    var languageStatus =  UserDefaults.standard.string(forKey: "LanguageLocalizable") ?? "0"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         URLCache.shared.removeAllCachedResponses()
@@ -32,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
         RunLoop.current.run(until: Date(timeIntervalSinceNow: 4.0))
         let isUserLoggedIn: Bool = UserDefaults.standard.bool(forKey: "IsloggedIn?")
         print(isUserLoggedIn)
+        setLanguage()
         IQKeyboardManager.shared.enable = true
         if isUserLoggedIn {
             self.setHomeAsRootViewController()
@@ -63,6 +65,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
         }
         return true
     }
+    
+    func setLanguage(){
+        
+        if languageStatus == "1"{
+            LanguageManager.shared.setLanguage(language: .en)
+        }else if languageStatus == "2"{
+            LanguageManager.shared.setLanguage(language: .hi)
+        }else if languageStatus == "3"{
+            LanguageManager.shared.setLanguage(language: .taIN)
+        }else if languageStatus == "4"{
+            LanguageManager.shared.setLanguage(language: .te)
+        }else{
+            LanguageManager.shared.setLanguage(language: .en)
+        }
+        
+    }
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
     {
         completionHandler([.alert, .badge, .sound])
@@ -74,6 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
 
     }
     func setHomeAsRootViewController(){
+        setLanguage()
         let leftVC = storyboard.instantiateViewController(withIdentifier: "SideMenuViewController") as! SideMenuViewController
         let homeVC = storyboard.instantiateViewController(withIdentifier: "DashBoardViewController") as! DashBoardViewController
         slider = SlideMenuController(mainViewController: homeVC, leftMenuViewController: leftVC)
@@ -84,6 +103,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
     }
      
     func setInitialViewAsRootViewController(){
+        setLanguage()
         let mainStoryboard = UIStoryboard(name: "Main" , bundle: nil)
         let initialVC = mainStoryboard.instantiateViewController(withIdentifier: "LanguageViewController") as! LanguageViewController
         UserDefaults.standard.set("1", forKey: "LanguageLocalizable")

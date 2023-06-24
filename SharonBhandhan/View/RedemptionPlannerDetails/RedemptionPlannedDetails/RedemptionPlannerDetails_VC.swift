@@ -9,6 +9,8 @@ import UIKit
 import SDWebImage
 import Firebase
 import Toast_Swift
+import LanguageManager_iOS
+
 class RedemptionPlannerDetails_VC: BaseViewController, popUpDelegate {
     func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
     
@@ -112,16 +114,18 @@ class RedemptionPlannerDetails_VC: BaseViewController, popUpDelegate {
             redeemButton.isEnabled = false
             congratulationsImageView.isHidden = true
             infoDetailsLbl.isHidden = false
-            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                infoDetailsLbl.text = "You need \(requiredPoints) more redeemable points to redeem this product"
-            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                infoDetailsLbl.text = "आप की जरूरत है \(requiredPoints) इस उत्पाद को भुनाने के लिए अधिक रिडीम करने योग्य अंक"
-            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                infoDetailsLbl.text = "তোমার দরকার \(requiredPoints) এই পণ্যটি খালাস করার জন্য আরও খালাসযোগ্য পয়েন্ট"
-            }else{
-                infoDetailsLbl.text = "నీకు అవసరం \(requiredPoints) ఈ ఉత్పత్తిని రీడీమ్ చేయడానికి మరిన్ని రీడీమ్ చేయగల పాయింట్‌లు"
-            }
+            infoDetailsLbl.text = "\("You need".localiz()) \(requiredPoints) \("more redeemable points to redeem this product".localiz())"
             
+//            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                infoDetailsLbl.text = "\("You need".localiz()) \(requiredPoints) \("more redeemable points to redeem this product".localiz())"
+//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                infoDetailsLbl.text = "आप की जरूरत है \(requiredPoints) इस उत्पाद को भुनाने के लिए अधिक रिडीम करने योग्य अंक"
+//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                infoDetailsLbl.text = "তোমার দরকার \(requiredPoints) এই পণ্যটি খালাস করার জন্য আরও খালাসযোগ্য পয়েন্ট"
+//            }else{
+//                infoDetailsLbl.text = "నీకు అవసరం \(requiredPoints) ఈ ఉత్పత్తిని రీడీమ్ చేయడానికి మరిన్ని రీడీమ్ చేయగల పాయింట్‌లు"
+//            }
+//
             redeemButton.backgroundColor = UIColor(red: 209/255, green: 209/255, blue: 214/255, alpha: 1.0)
             //        }else{
             //            congratulationsImageView.isHidden = false
@@ -144,59 +148,73 @@ class RedemptionPlannerDetails_VC: BaseViewController, popUpDelegate {
         
     }
 func languagelocalization(){
-    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-        giftLabel.text = "Your expected redemption of \(productName) is in \(averageLesserDate)"
-        self.redemptionPlannerTitleLabel.text = "Redemption Planner Details"
-        self.pointHeading.text = "Points"
-        self.redeemButton.setTitle("Redeem", for: .normal)
-        self.removeButton.setTitle("Remove", for: .normal)
-        self.redemptionPlannerSummaryHEadingLabel.text = "Redemption Planner Summary"
-        self.todayRedemablePoinsHEading.text = "Redeemable Points as on Today"
-        self.todayRedemablePoinsHEading.text = "Points"
-        self.avgEarningsLabel.text = "Average earning required per month"
-        self.monthlyHeadingLabel.text = "Points"
-        self.tdsPts.text = "TDS points"
-        self.tdsApplicable.text = "TDS applicable @"
-    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-        giftLabel.text = "आपका अपेक्षित मोचन \(productName) में है \(averageLesserDate)"
-        self.redemptionPlannerTitleLabel.text = "मोचन योजनाकार विवरण"
-        self.pointHeading.text = "पॉइंट्स"
-        self.redeemButton.setTitle("भुनाना", for: .normal)
-        self.removeButton.setTitle("हटाना", for: .normal)
-        self.redemptionPlannerSummaryHEadingLabel.text = "मोचन योजनाकार सारांश"
-        self.todayRedemablePoinsHEading.text = "आज के अनुसार रिडीम करने योग्य अंक"
-        self.todayRedemablePoinsHEading.text = "पॉइंट्स"
-        self.avgEarningsLabel.text = "प्रति माह औसत कमाई की आवश्यकता"
-        self.monthlyHeadingLabel.text = "पॉइंट्स"
-        self.tdsPts.text = "टीडीएस अंक"
-        self.tdsApplicable.text = "टीडीएस लागू @"
-    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-        giftLabel.text = "আপনার প্রত্যাশিত খালাস \(productName) মধ্যে আছে \(averageLesserDate)"
-        self.redemptionPlannerTitleLabel.text = "রিডেম্পশন প্ল্যানারের বিবরণ"
-        self.pointHeading.text = "পয়েন্ট"
-        self.redeemButton.setTitle("রিডিম", for: .normal)
-        self.removeButton.setTitle("অপসারণ", for: .normal)
-        self.redemptionPlannerSummaryHEadingLabel.text = "রিডেম্পশন প্ল্যানার সারাংশ"
-        self.todayRedemablePoinsHEading.text = "আজকের মত রিডিমেবল পয়েন্ট"
-        self.todayRedemablePoinsHEading.text = "পয়েন্ট"
-        self.avgEarningsLabel.text = "প্রতি মাসে গড় উপার্জন প্রয়োজন"
-        self.monthlyHeadingLabel.text = "পয়েন্ট"
-        self.tdsPts.text = "টিডিএস পয়েন্ট"
-        self.tdsApplicable.text = "টিডিএস প্রযোজ্য @"
-    }else{
-        giftLabel.text = "మీరు ఆశించిన విముక్తి \(productName) లో ఉంది \(averageLesserDate)"
-        self.redemptionPlannerTitleLabel.text = "విముక్తి ప్లానర్ వివరాలు"
-        self.pointHeading.text = "వపాయింట్లు"
-        self.redeemButton.setTitle("రీడీమ్ చేయండి", for: .normal)
-        self.removeButton.setTitle("తొలగించు", for: .normal)
-        self.redemptionPlannerSummaryHEadingLabel.text = "విముక్తి ప్లానర్ సారాంశం"
-        self.todayRedemablePoinsHEading.text = "నేటికి రీడీమ్ చేయగల పాయింట్‌లు"
-        self.todayRedemablePoinsHEading.text = "వపాయింట్లు"
-        self.avgEarningsLabel.text = "నెలకు సగటు సంపాదన అవసరం"
-        self.monthlyHeadingLabel.text = "వపాయింట్లు"
-        self.tdsPts.text = "TDS పాయింట్లు"
-        self.tdsApplicable.text = "TDS వర్తిస్తుంది @"
-    }
+    giftLabel.text = "\("Your expected redemption of".localiz()) \(productName) \("is in".localiz()) \(averageLesserDate)"
+    self.redemptionPlannerTitleLabel.text = "wdPlannerDetailsKEY".localiz()
+    self.pointHeading.text = "wlPointsKEY".localiz()
+    self.redeemButton.setTitle("Redeem".localiz(), for: .normal)
+    self.removeButton.setTitle("Remove".localiz(), for: .normal)
+    self.redemptionPlannerSummaryHEadingLabel.text = "wdWishlistSummaryKEY".localiz()
+    self.todayRedemablePoinsHEading.text = "Redeemable points as on today".localiz()
+    self.todayRedemablePoinsHEading.text = "hpPointsKEY".localiz()
+    self.avgEarningsLabel.text = "Average earning required per month".localiz()
+    self.monthlyHeadingLabel.text = "hpPointsKEY".localiz()
+    self.tdsPts.text = "TDS points"
+    self.tdsApplicable.text = "\("TDS applicable".localiz()) @"
+    
+    
+//    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//        giftLabel.text = "\("Your expected redemption of".localiz()) \(productName) \("is in".localiz()) \(averageLesserDate)"
+//        self.redemptionPlannerTitleLabel.text = "wdPlannerDetailsKEY".localiz()
+//        self.pointHeading.text = "wlPointsKEY".localiz()
+//        self.redeemButton.setTitle("Redeem".localiz(), for: .normal)
+//        self.removeButton.setTitle("Remove".localiz(), for: .normal)
+//        self.redemptionPlannerSummaryHEadingLabel.text = "wdWishlistSummaryKEY".localiz()
+//        self.todayRedemablePoinsHEading.text = "Redeemable points as on today".localiz()
+//        self.todayRedemablePoinsHEading.text = "hpPointsKEY".localiz()
+//        self.avgEarningsLabel.text = "Average earning required per month".localiz()
+//        self.monthlyHeadingLabel.text = "hpPointsKEY".localiz()
+//        self.tdsPts.text = "TDS points"
+//        self.tdsApplicable.text = "\("TDS applicable".localiz()) @"
+//    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//        giftLabel.text = "आपका अपेक्षित मोचन \(productName) में है \(averageLesserDate)"
+//        self.redemptionPlannerTitleLabel.text = "मोचन योजनाकार विवरण"
+//        self.pointHeading.text = "पॉइंट्स"
+//        self.redeemButton.setTitle("भुनाना", for: .normal)
+//        self.removeButton.setTitle("हटाना", for: .normal)
+//        self.redemptionPlannerSummaryHEadingLabel.text = "मोचन योजनाकार सारांश"
+//        self.todayRedemablePoinsHEading.text = "आज के अनुसार रिडीम करने योग्य अंक"
+//        self.todayRedemablePoinsHEading.text = "पॉइंट्स"
+//        self.avgEarningsLabel.text = "प्रति माह औसत कमाई की आवश्यकता"
+//        self.monthlyHeadingLabel.text = "पॉइंट्स"
+//        self.tdsPts.text = "टीडीएस अंक"
+//        self.tdsApplicable.text = "टीडीएस लागू @"
+//    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//        giftLabel.text = "আপনার প্রত্যাশিত খালাস \(productName) মধ্যে আছে \(averageLesserDate)"
+//        self.redemptionPlannerTitleLabel.text = "রিডেম্পশন প্ল্যানারের বিবরণ"
+//        self.pointHeading.text = "পয়েন্ট"
+//        self.redeemButton.setTitle("রিডিম", for: .normal)
+//        self.removeButton.setTitle("অপসারণ", for: .normal)
+//        self.redemptionPlannerSummaryHEadingLabel.text = "রিডেম্পশন প্ল্যানার সারাংশ"
+//        self.todayRedemablePoinsHEading.text = "আজকের মত রিডিমেবল পয়েন্ট"
+//        self.todayRedemablePoinsHEading.text = "পয়েন্ট"
+//        self.avgEarningsLabel.text = "প্রতি মাসে গড় উপার্জন প্রয়োজন"
+//        self.monthlyHeadingLabel.text = "পয়েন্ট"
+//        self.tdsPts.text = "টিডিএস পয়েন্ট"
+//        self.tdsApplicable.text = "টিডিএস প্রযোজ্য @"
+//    }else{
+//        giftLabel.text = "మీరు ఆశించిన విముక్తి \(productName) లో ఉంది \(averageLesserDate)"
+//        self.redemptionPlannerTitleLabel.text = "విముక్తి ప్లానర్ వివరాలు"
+//        self.pointHeading.text = "వపాయింట్లు"
+//        self.redeemButton.setTitle("రీడీమ్ చేయండి", for: .normal)
+//        self.removeButton.setTitle("తొలగించు", for: .normal)
+//        self.redemptionPlannerSummaryHEadingLabel.text = "విముక్తి ప్లానర్ సారాంశం"
+//        self.todayRedemablePoinsHEading.text = "నేటికి రీడీమ్ చేయగల పాయింట్‌లు"
+//        self.todayRedemablePoinsHEading.text = "వపాయింట్లు"
+//        self.avgEarningsLabel.text = "నెలకు సగటు సంపాదన అవసరం"
+//        self.monthlyHeadingLabel.text = "వపాయింట్లు"
+//        self.tdsPts.text = "TDS పాయింట్లు"
+//        self.tdsApplicable.text = "TDS వర్తిస్తుంది @"
+//    }
 }
 
 @IBAction func backButton(_ sender: Any) {
@@ -219,16 +237,16 @@ func languagelocalization(){
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Gift product is already added in the Redeem list"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                    vc!.descriptionInfo = "उपहार उत्पाद पहले से ही रिडीम सूची में जोड़ा जा चुका है"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "উপহার পণ্য ইতিমধ্যেই রিডিম তালিকায় যোগ করা হয়েছে"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "బహుమతి ఉత్పత్తి ఇప్పటికే రీడీమ్ జాబితాలో జోడించబడింది"
-                }
+                vc!.descriptionInfo = "Gift product is already added in the Redeem list".localiz()
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "Gift product is already added in the Redeem list".localiz()
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                    vc!.descriptionInfo = "उपहार उत्पाद पहले से ही रिडीम सूची में जोड़ा जा चुका है"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "উপহার পণ্য ইতিমধ্যেই রিডিম তালিকায় যোগ করা হয়েছে"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "బహుమతి ఉత్పత్తి ఇప్పటికే రీడీమ్ జాబితాలో జోడించబడింది"
+//                }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -238,9 +256,9 @@ func languagelocalization(){
             print(self.pointBalance)
             if self.totalCartValue <= Int(self.pointBalance) ?? 0 {
                 if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == -3{
-                    self.view.makeToast("Your PAN Details are pending,Please contact your administrator!", duration: 2.0, position: .bottom)
+                    self.view.makeToast("Your PAN Details are pending,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
                 }else if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == -4{
-                    self.view.makeToast("Your PAN Details are rejected,Please contact your administrator!", duration: 2.0, position: .bottom)
+                    self.view.makeToast("Your PAN Details are rejected,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
                 }else if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == 1{
                     let calcValue = self.totalCartValue + Int(productPoints + Int(applicabletds))
                     if calcValue <= Int(self.pointBalance) ?? 0{
@@ -259,22 +277,24 @@ func languagelocalization(){
                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                             vc!.delegate = self
                             vc!.titleInfo = ""
-                            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                                vc!.descriptionInfo = "Insufficent Point Balance"
-                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                                vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
-                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
-                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                                vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
-                            }
+                            vc!.descriptionInfo = "Insufficent Point Balance".localiz()
+                            
+//                            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                                vc!.descriptionInfo = "Insufficent Point Balance".localiz()
+//                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                                vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
+//                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                                vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
+//                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                                vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
+//                            }
                             vc!.modalPresentationStyle = .overCurrentContext
                             vc!.modalTransitionStyle = .crossDissolve
                             self.present(vc!, animated: true, completion: nil)
                         }
                     }
                 }else{
-                    self.view.makeToast("Insufficient point balance to redeem!", duration: 2.0, position: .bottom)
+                    self.view.makeToast("Insufficient point balance to redeem!".localiz(), duration: 2.0, position: .bottom)
                 }
                 
                 
@@ -284,15 +304,17 @@ func languagelocalization(){
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Insufficent Point Balance"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                        vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
-                    }
+                    vc!.descriptionInfo = "Insufficent Point Balance".localiz()
+                    
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Insufficent Point Balance".localiz()
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                        vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
+//                    }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
@@ -349,16 +371,16 @@ func addToCartApi(){
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Product has been added to Cart"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                    vc!.descriptionInfo = "उत्पाद कार्ट में जोड़ दिया गया है"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "পণ্য কার্টে যোগ করা হয়েছে"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "ఉత్పత్తి కార్ట్‌కి జోడించబడింది"
-                }
+                vc!.descriptionInfo = "Product has been added to Cart".localiz()
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "Product has been added to Cart".localiz()
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                    vc!.descriptionInfo = "उत्पाद कार्ट में जोड़ दिया गया है"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "পণ্য কার্টে যোগ করা হয়েছে"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "ఉత్పత్తి కార్ట్‌కి జోడించబడింది"
+//                }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -368,15 +390,17 @@ func addToCartApi(){
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Something went wrong!"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                    vc!.descriptionInfo = "कुछ गलत हो गया!"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "কিছু ভুল হয়েছে!"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "ఎక్కడో తేడ జరిగింది!"
-                }
+                vc!.descriptionInfo = "Something went wrong please try again later.".localiz()
+                
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "Something went wrong please try again later.".localiz()
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                    vc!.descriptionInfo = "कुछ गलत हो गया!"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "কিছু ভুল হয়েছে!"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "ఎక్కడో తేడ జరిగింది!"
+//                }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -405,15 +429,17 @@ func removeProductInPlanner(){
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Something went wrong!"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                    vc!.descriptionInfo = "कुछ गलत हो गया!"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "কিছু ভুল হয়েছে!"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "ఎక్కడో తేడ జరిగింది!"
-                }
+                vc!.descriptionInfo = "Something went wrong please try again later.".localiz()
+                
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "Something went wrong please try again later.".localiz()
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                    vc!.descriptionInfo = "कुछ गलत हो गया!"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "কিছু ভুল হয়েছে!"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "ఎక్కడో తేడ జరిగింది!"
+//                }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 protocol RedemptionPlannerDelegate{
     func removeProduct(_ cell: RedemptionPlanner_TVC)
@@ -32,32 +33,38 @@ class RedemptionPlanner_TVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.desireDateHeadingLabel.text = "Redemption Planner"
-            self.pointsHeadingLabel.text = "Points"
-            self.desireDateHeadingLabel.text = "Desired Date"
-            self.details.setTitle("Details", for: .normal)
-            self.productRedeemBTN.setTitle("Redeem", for: .normal)
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.desireDateHeadingLabel.text = "मोचन योजनाकार"
-            self.pointsHeadingLabel.text = "पॉइंट्स"
-            self.desireDateHeadingLabel.text = "वांछित तारीख"
-            self.details.setTitle("विवरण", for: .normal)
-            self.productRedeemBTN.setTitle("भुनाना", for: .normal)
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.desireDateHeadingLabel.text = "রিডেম্পশন প্ল্যানার"
-            self.pointsHeadingLabel.text = "পয়েন্ট"
-            self.desireDateHeadingLabel.text = "কাঙ্খিত তারিখ"
-            self.details.setTitle("বিস্তারিত", for: .normal)
-            self.productRedeemBTN.setTitle("রিডিম", for: .normal)
-        }else{
-            self.desireDateHeadingLabel.text = "విముక్తి ప్లానర్"
-            self.pointsHeadingLabel.text = "పాయింట్లు"
-            self.desireDateHeadingLabel.text = "కోరుకున్న తేదీ"
-            self.details.setTitle("వివరాలు", for: .normal)
-            self.productRedeemBTN.setTitle("విమోచించు", for: .normal)
-        }
+        self.desireDateHeadingLabel.text = "wlWishlistKEY".localiz()
+        self.pointsHeadingLabel.text = "wlPointsKEY".localiz()
+        self.desireDateHeadingLabel.text = "DesiredDateKEY".localiz()
+        self.details.setTitle("mdgDetailsKEY".localiz(), for: .normal)
+        self.productRedeemBTN.setTitle("Redeem".localiz(), for: .normal)
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.desireDateHeadingLabel.text = "wlWishlistKEY".localiz()
+//            self.pointsHeadingLabel.text = "wlPointsKEY".localiz()
+//            self.desireDateHeadingLabel.text = "DesiredDateKEY".localiz()
+//            self.details.setTitle("mdgDetailsKEY".localiz(), for: .normal)
+//            self.productRedeemBTN.setTitle("Redeem".localiz(), for: .normal)
+//            
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.desireDateHeadingLabel.text = "मोचन योजनाकार"
+//            self.pointsHeadingLabel.text = "पॉइंट्स"
+//            self.desireDateHeadingLabel.text = "वांछित तारीख"
+//            self.details.setTitle("विवरण", for: .normal)
+//            self.productRedeemBTN.setTitle("भुनाना", for: .normal)
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.desireDateHeadingLabel.text = "রিডেম্পশন প্ল্যানার"
+//            self.pointsHeadingLabel.text = "পয়েন্ট"
+//            self.desireDateHeadingLabel.text = "কাঙ্খিত তারিখ"
+//            self.details.setTitle("বিস্তারিত", for: .normal)
+//            self.productRedeemBTN.setTitle("রিডিম", for: .normal)
+//        }else{
+//            self.desireDateHeadingLabel.text = "విముక్తి ప్లానర్"
+//            self.pointsHeadingLabel.text = "పాయింట్లు"
+//            self.desireDateHeadingLabel.text = "కోరుకున్న తేదీ"
+//            self.details.setTitle("వివరాలు", for: .normal)
+//            self.productRedeemBTN.setTitle("విమోచించు", for: .normal)
+//        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

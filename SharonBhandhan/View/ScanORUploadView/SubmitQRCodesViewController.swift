@@ -7,6 +7,8 @@
 
 import UIKit
 import Toast_Swift
+import LanguageManager_iOS
+
 protocol submitQRDelegate: class {
     func DidTap(_ vc: SubmitQRCodesViewController)
 }
@@ -14,7 +16,12 @@ class SubmitQRCodesViewController: BaseViewController, UITextFieldDelegate, PopU
     func popUpAlertDidTap2(_ vc: PopUp2ViewController) {}
     
     
-
+    @IBOutlet weak var addressTitleLbl: UILabel!
+    @IBOutlet weak var emailTitleLbl: UILabel!
+    @IBOutlet weak var mobileNumberTitleLbl: UILabel!
+    @IBOutlet weak var customerNameTitleLbl: UILabel!
+    @IBOutlet weak var customerDetailsTitleLbl: UILabel!
+    @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var currentAddress: UITextField!
     @IBOutlet weak var emailID: UITextField!
     @IBOutlet weak var mobileNumber: UITextField!
@@ -31,8 +38,23 @@ class SubmitQRCodesViewController: BaseViewController, UITextFieldDelegate, PopU
         super.viewDidLoad()
         self.mobileNumber.delegate = self
         self.customername.delegate = self
-
+        localization()
     }
+    
+    private func localization(){
+        customerDetailsTitleLbl.text = "Enter Customer Details".localiz()
+        customerNameTitleLbl.text = "ewCustomerNameKEY".localiz()
+        customername.placeholder = "Enter Customer Name".localiz()
+        mobileNumberTitleLbl.text = "Customer Mobile Number".localiz()
+        mobileNumber.placeholder = "Enter the Mobile Number".localiz()
+        emailTitleLbl.text = "Cutomer Email".localiz()
+        emailID.placeholder = "Enter the email address".localiz()
+        addressTitleLbl.text = "Customer Address".localiz()
+        currentAddress.placeholder = "Enter the address details".localiz()
+        submitBtn.setTitle("fpSubmitKEY".localiz(), for: .normal)
+        
+    }
+    
     @IBAction func mobileNumber(_ sender: Any) {
         
     }
@@ -66,7 +88,7 @@ class SubmitQRCodesViewController: BaseViewController, UITextFieldDelegate, PopU
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                vc!.descriptionInfo = "Enter Customer Name"
+                vc!.descriptionInfo = "Enter Customer Name".localiz()
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -78,7 +100,7 @@ class SubmitQRCodesViewController: BaseViewController, UITextFieldDelegate, PopU
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                vc!.descriptionInfo = "Enter valid First Name"
+                vc!.descriptionInfo = "Enter valid First Name".localiz()
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -90,7 +112,7 @@ class SubmitQRCodesViewController: BaseViewController, UITextFieldDelegate, PopU
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                vc!.descriptionInfo = "Enter Mobile Number"
+                vc!.descriptionInfo = "fEnterMobileNumberKEY".localiz()
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -102,7 +124,7 @@ class SubmitQRCodesViewController: BaseViewController, UITextFieldDelegate, PopU
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                vc!.descriptionInfo = "Enter valid Mobile Number"
+                vc!.descriptionInfo = "EnterValidNumberKey".localiz()
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -114,7 +136,7 @@ class SubmitQRCodesViewController: BaseViewController, UITextFieldDelegate, PopU
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                vc!.descriptionInfo = "Enter EmailID"
+                vc!.descriptionInfo = "Enter EmailID".localiz()
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -126,7 +148,7 @@ class SubmitQRCodesViewController: BaseViewController, UITextFieldDelegate, PopU
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                vc!.descriptionInfo = "Enter valid EmailID"
+                vc!.descriptionInfo = "Enter valid EmailID".localiz()
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -138,7 +160,7 @@ class SubmitQRCodesViewController: BaseViewController, UITextFieldDelegate, PopU
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                vc!.descriptionInfo = "Enter Address"
+                vc!.descriptionInfo = "Enter Address".localiz()
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)

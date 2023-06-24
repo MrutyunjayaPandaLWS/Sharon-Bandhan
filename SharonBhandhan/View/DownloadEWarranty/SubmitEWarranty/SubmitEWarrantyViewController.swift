@@ -11,6 +11,7 @@ import PDFKit
 import Alamofire
 import Lottie
 import Firebase
+import LanguageManager_iOS
 
 class SubmitEWarrantyViewController: BaseViewController, SelectedItemDelegate, UITextFieldDelegate, UIDocumentInteractionControllerDelegate, popUpDelegate{
     func popupAlertDidTap(_ vc: PopupAlertOne_VC) {
@@ -69,72 +70,86 @@ class SubmitEWarrantyViewController: BaseViewController, SelectedItemDelegate, U
         
     }
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.header.text = "Add E-Warranty"
-            self.name.text = "Name *"
-            self.mobile.text = "Mobile *"
-            self.email.text = "Email"
-            self.address.text = "Address *"
-            self.city.text = "City"
-            self.area.text = "Area"
-            self.nameTF.placeholder = "Enter Name"
-            self.mobileNumberTF.placeholder = "Enter Mobile"
-            self.emailTF.placeholder = "Enter Email"
-            self.addressTF.placeholder = "Enter Address"
-            self.generateE_warranty.setTitle("Generate E-Warranty", for: .normal)
-            self.cityButton.setTitle("Select City", for: .normal)
-            self.areaButton.setTitle("Select Area", for: .normal)
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.header.text = "ई-वारंटी जोड़ें"
-            self.name.text = "नाम *"
-            self.mobile.text = "मोबाइल *"
-            self.email.text = "ईमेल"
-            self.address.text = "पता *"
-            self.city.text = "शहर"
-            self.area.text = "क्षेत्र"
-            self.nameTF.placeholder = "नाम दर्ज करें"
-            self.mobileNumberTF.placeholder = "मोबाइल दर्ज करें"
-            self.emailTF.placeholder = "ईमेल दर्ज करें"
-            self.addressTF.placeholder = "पता दर्ज करें"
-            self.generateE_warranty.setTitle("ई-वारंटी जनरेट करें", for: .normal)
-            self.cityButton.setTitle("शहर चुनें", for: .normal)
-            self.areaButton.setTitle("क्षेत्र चुनें", for: .normal)
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            
-            self.header.text = "ই-ওয়ারেন্টি যোগ করুন"
-            self.name.text = "নাম *"
-            self.mobile.text = "মুঠোফোন *"
-            self.email.text = "ইমেইল"
-            self.address.text = "ঠিকানা *"
-            self.city.text = "শহর"
-            self.area.text = "এলাকা"
-            self.nameTF.placeholder = "নাম লিখুন"
-            self.mobileNumberTF.placeholder = "মোবাইলে প্রবেশ করুন"
-            self.emailTF.placeholder = "ইমেইল প্রদান করুন"
-            self.addressTF.placeholder = "ঠিকানা লিখুন"
-            self.generateE_warranty.setTitle("ই-ওয়ারেন্টি জেনারেট করুন", for: .normal)
-            self.cityButton.setTitle("সিটি নির্বাচন করুন", for: .normal)
-            self.areaButton.setTitle("এলাকা নির্বাচন করুন৷", for: .normal)
-            
-        }else{
-        
-            self.header.text = "ఇ-వారెంటీని జోడించండి"
-            self.name.text = "పేరు *"
-            self.mobile.text = "మొబైల్ *"
-            self.email.text = "ఇమెయిల్"
-            self.address.text = "చిరునామా *"
-            self.city.text = "నగరం"
-            self.area.text = "ప్రాంతం"
-            self.nameTF.placeholder = "పేరు నమోదు చేయండి"
-            self.mobileNumberTF.placeholder = "మొబైల్‌ని నమోదు చేయండి"
-            self.emailTF.placeholder = "ఇమెయిల్ నమోదు చేయండి"
-            self.addressTF.placeholder = "చిరునామాను నమోదు చేయండి"
-            self.generateE_warranty.setTitle("E-వారెంటీని రూపొందించండి", for: .normal)
-            self.cityButton.setTitle("సిటీని ఎంచుకోండి", for: .normal)
-            self.areaButton.setTitle("ఏరియాను ఎంచుకోండి", for: .normal)
-        }
+        self.header.text = "Add E-Warranty".localiz()
+        self.name.text = "\("rNameKEY".localiz()) *"
+        self.mobile.text = "\("rMobileKEY".localiz()) *"
+        self.email.text = "rEmailKEY".localiz()
+        self.address.text = "\("rAddressKEY".localiz()) *"
+        self.city.text = "rCityKEY".localiz()
+        self.area.text = "ewSelectAreaKEY".localiz()
+        self.nameTF.placeholder = "Enter Name".localiz()
+        self.mobileNumberTF.placeholder = "fEnterMobileNumberKEY".localiz()
+        self.emailTF.placeholder = "Enter EmailID".localiz()
+        self.addressTF.placeholder = "Enter Address".localiz()
+        self.generateE_warranty.setTitle("Generate E-Warranty".localiz(), for: .normal)
+        self.cityButton.setTitle("rSelectCityKEY".localiz(), for: .normal)
+        self.areaButton.setTitle("Select Area".localiz(), for: .normal)
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.header.text = "Add E-Warranty".localiz()
+//            self.name.text = "\("rNameKEY".localiz()) *"
+//            self.mobile.text = "\("rMobileKEY".localiz()) *"
+//            self.email.text = "rEmailKEY".localiz()
+//            self.address.text = "\("rAddressKEY".localiz()) *"
+//            self.city.text = "rCityKEY".localiz()
+//            self.area.text = "ewSelectAreaKEY".localiz()
+//            self.nameTF.placeholder = "Enter Name".localiz()
+//            self.mobileNumberTF.placeholder = "fEnterMobileNumberKEY".localiz()
+//            self.emailTF.placeholder = "Enter EmailID".localiz()
+//            self.addressTF.placeholder = "Enter Address".localiz()
+//            self.generateE_warranty.setTitle("Generate E-Warranty".localiz(), for: .normal)
+//            self.cityButton.setTitle("rSelectCityKEY".localiz(), for: .normal)
+//            self.areaButton.setTitle("Select Area".localiz(), for: .normal)
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.header.text = "ई-वारंटी जोड़ें"
+//            self.name.text = "नाम *"
+//            self.mobile.text = "मोबाइल *"
+//            self.email.text = "ईमेल"
+//            self.address.text = "पता *"
+//            self.city.text = "शहर"
+//            self.area.text = "क्षेत्र"
+//            self.nameTF.placeholder = "नाम दर्ज करें"
+//            self.mobileNumberTF.placeholder = "मोबाइल दर्ज करें"
+//            self.emailTF.placeholder = "ईमेल दर्ज करें"
+//            self.addressTF.placeholder = "पता दर्ज करें"
+//            self.generateE_warranty.setTitle("ई-वारंटी जनरेट करें", for: .normal)
+//            self.cityButton.setTitle("शहर चुनें", for: .normal)
+//            self.areaButton.setTitle("क्षेत्र चुनें", for: .normal)
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//
+//            self.header.text = "ই-ওয়ারেন্টি যোগ করুন"
+//            self.name.text = "নাম *"
+//            self.mobile.text = "মুঠোফোন *"
+//            self.email.text = "ইমেইল"
+//            self.address.text = "ঠিকানা *"
+//            self.city.text = "শহর"
+//            self.area.text = "এলাকা"
+//            self.nameTF.placeholder = "নাম লিখুন"
+//            self.mobileNumberTF.placeholder = "মোবাইলে প্রবেশ করুন"
+//            self.emailTF.placeholder = "ইমেইল প্রদান করুন"
+//            self.addressTF.placeholder = "ঠিকানা লিখুন"
+//            self.generateE_warranty.setTitle("ই-ওয়ারেন্টি জেনারেট করুন", for: .normal)
+//            self.cityButton.setTitle("সিটি নির্বাচন করুন", for: .normal)
+//            self.areaButton.setTitle("এলাকা নির্বাচন করুন৷", for: .normal)
+//
+//        }else{
+//
+//            self.header.text = "ఇ-వారెంటీని జోడించండి"
+//            self.name.text = "పేరు *"
+//            self.mobile.text = "మొబైల్ *"
+//            self.email.text = "ఇమెయిల్"
+//            self.address.text = "చిరునామా *"
+//            self.city.text = "నగరం"
+//            self.area.text = "ప్రాంతం"
+//            self.nameTF.placeholder = "పేరు నమోదు చేయండి"
+//            self.mobileNumberTF.placeholder = "మొబైల్‌ని నమోదు చేయండి"
+//            self.emailTF.placeholder = "ఇమెయిల్ నమోదు చేయండి"
+//            self.addressTF.placeholder = "చిరునామాను నమోదు చేయండి"
+//            self.generateE_warranty.setTitle("E-వారెంటీని రూపొందించండి", for: .normal)
+//            self.cityButton.setTitle("సిటీని ఎంచుకోండి", for: .normal)
+//            self.areaButton.setTitle("ఏరియాను ఎంచుకోండి", for: .normal)
+//        }
     }
     
     
@@ -159,7 +174,7 @@ class SubmitEWarrantyViewController: BaseViewController, SelectedItemDelegate, U
     }
     
     @IBAction func nackButton(_ sender: Any) {
-        if generateE_warranty.currentTitle == "Generate E-Warranty"{
+        if generateE_warranty.currentTitle == "Generate E-Warranty".localiz(){
             self.navigationController?.popViewController(animated: true)
         }else{
             for controller in self.navigationController!.viewControllers as Array {
@@ -172,20 +187,21 @@ class SubmitEWarrantyViewController: BaseViewController, SelectedItemDelegate, U
     
     @IBAction func generateE_warranty(_ sender: Any) {
         
-        if generateE_warranty.currentTitle == "Generate E-Warranty" {
+        if generateE_warranty.currentTitle == "Generate E-Warranty".localiz() {
             if self.nameTF.text?.count == 0 {
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Enter Name"
-                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                     vc!.descriptionInfo = "नाम दर्ज करें"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "নাম লিখুন"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "పేరు నమోదు చేయండి"
-                  }
+                vc!.descriptionInfo = "Enter Name".localiz()
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "Enter Name"
+//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                     vc!.descriptionInfo = "नाम दर्ज करें"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "নাম লিখুন"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "పేరు నమోదు చేయండి"
+//                  }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -193,15 +209,16 @@ class SubmitEWarrantyViewController: BaseViewController, SelectedItemDelegate, U
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Enter Mobile Number"
-                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                     vc!.descriptionInfo = "मोबाइल नंबर डालें"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "মোবাইল নম্বর লিখুন"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "మొబైల్ నంబర్ ఎంటర్ చేయండి"
-                  }
+                vc!.descriptionInfo = "fEnterMobileNumberKEY".localiz()
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "fEnterMobileNumberKEY".localiz()
+//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                     vc!.descriptionInfo = "मोबाइल नंबर डालें"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "মোবাইল নম্বর লিখুন"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "మొబైల్ నంబర్ ఎంటర్ చేయండి"
+//                  }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -209,15 +226,16 @@ class SubmitEWarrantyViewController: BaseViewController, SelectedItemDelegate, U
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Enter Valid Mobile Number"
-                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                     vc!.descriptionInfo = "वैध मोबाइल नंबर दर्ज करें"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "বৈধ মোবাইল নম্বর লিখুন"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "చెల్లుబాటయ్యే మొబైల్ నంబర్‌ని నమోదు చేయండిr"
-                  }
+                vc!.descriptionInfo = "EnterValidNumberKey".localiz()
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "Enter Valid Mobile Number"
+//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                     vc!.descriptionInfo = "वैध मोबाइल नंबर दर्ज करें"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "বৈধ মোবাইল নম্বর লিখুন"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "చెల్లుబాటయ్యే మొబైల్ నంబర్‌ని నమోదు చేయండిr"
+//                  }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -264,16 +282,16 @@ class SubmitEWarrantyViewController: BaseViewController, SelectedItemDelegate, U
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Enter Address"
-                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                     vc!.descriptionInfo = "पता दर्ज करें"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "ঠিকানা লিখুন"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "చిరునామా నమోదు చేయండి"
-                  }
+                vc!.descriptionInfo = "Enter Address".localiz()
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "Enter Address"
+//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                     vc!.descriptionInfo = "पता दर्ज करें"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "ঠিকানা লিখুন"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "చిరునామా నమోదు చేయండి"
+//                  }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -321,7 +339,8 @@ class SubmitEWarrantyViewController: BaseViewController, SelectedItemDelegate, U
             
            
         } else {
-            if generateE_warranty.currentTitle == "Download E-Warranty" || generateE_warranty.currentTitle == "ई-वारंटी डाउनलोड करें" || generateE_warranty.currentTitle == "ই-ওয়ারেন্টি ডাউনলোড করুন" || generateE_warranty.currentTitle == "ఇ-వారెంటీని డౌన్‌లోడ్ చేయండి"{
+//           if generateE_warranty.currentTitle == "Download E-Warranty" || generateE_warranty.currentTitle == "ई-वारंटी डाउनलोड करें" || generateE_warranty.currentTitle == "ই-ওয়ারেন্টি ডাউনলোড করুন" || generateE_warranty.currentTitle == "ఇ-వారెంటీని డౌన్‌లోడ్ చేయండి"
+            if generateE_warranty.currentTitle == "Download E-Warranty".localiz(){
                 downloadEWarrantyApiCall()
             }
         }
@@ -407,15 +426,16 @@ class SubmitEWarrantyViewController: BaseViewController, SelectedItemDelegate, U
                 vc!.delegate = self
                 vc!.titleInfo = ""
                 vc!.itsComeFrom = "DownloadEWarranty"
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "E-Warranty details saved successfully."
-                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                     vc!.descriptionInfo = "ई-वारंटी विवरण सफलतापूर्वक सहेजा गया।"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "ই-ওয়ারেন্টির বিবরণ সফলভাবে সংরক্ষিত হয়েছে।"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "E-వారెంటీ వివరాలు విజయవంతంగా సేవ్ చేయబడ్డాయి."
-                  }
+                vc!.descriptionInfo = "E-Warranty details saved successfully".localiz()
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "E-Warranty details saved successfully."
+//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                     vc!.descriptionInfo = "ई-वारंटी विवरण सफलतापूर्वक सहेजा गया।"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "ই-ওয়ারেন্টির বিবরণ সফলভাবে সংরক্ষিত হয়েছে।"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "E-వారెంటీ వివరాలు విజయవంతంగా సేవ్ చేయబడ్డాయి."
+//                  }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -427,33 +447,34 @@ class SubmitEWarrantyViewController: BaseViewController, SelectedItemDelegate, U
                 self.areaButton.isEnabled = false
                 self.ewarrantyID = response?.lstEWarranty?[0].eWarrantyID ?? 0
                 self.productId = response?.lstEWarranty?[0].productId ?? 0
-
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    self.generateE_warranty.setTitle("Download E-Warranty", for: .normal)
-                    
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                    self.generateE_warranty.setTitle("ई-वारंटी डाउनलोड करें", for: .normal)
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    self.generateE_warranty.setTitle("ই-ওয়ারেন্টি ডাউনলোড করুন", for: .normal)
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    self.generateE_warranty.setTitle("ఇ-వారెంటీని డౌన్‌లోడ్ చేయండి", for: .normal)
-                }
+                self.generateE_warranty.setTitle("Download E-Warranty".localiz(), for: .normal)
+                
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    self.generateE_warranty.setTitle("Download E-Warranty".localiz(), for: .normal)
+//
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                    self.generateE_warranty.setTitle("ई-वारंटी डाउनलोड करें", for: .normal)
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    self.generateE_warranty.setTitle("ই-ওয়ারেন্টি ডাউনলোড করুন", for: .normal)
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    self.generateE_warranty.setTitle("ఇ-వారెంటీని డౌన్‌లోడ్ చేయండి", for: .normal)
+//                }
                 
             } else {
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-               
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Something went wrong please try again later."
-                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                     vc!.descriptionInfo = "कुछ गलत हुआ कृपया बाद में पुन: प्रयास करें।"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "কিছু ভুল হয়েছে। পরে আবার চেষ্টা করুন."
-                    
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "ఏదో తప్పు జరిగినది. దయచేసి కాసేపు ఆగక ప్రయత్నించండి."
-                  }
+                vc!.descriptionInfo = "Something went wrong please try again later.".localiz()
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "Something went wrong please try again later.".localiz()
+//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                     vc!.descriptionInfo = "कुछ गलत हुआ कृपया बाद में पुन: प्रयास करें।"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "কিছু ভুল হয়েছে। পরে আবার চেষ্টা করুন."
+//
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "ఏదో తప్పు జరిగినది. దయచేసి కాసేపు ఆగక ప్రయత్నించండి."
+//                  }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -488,16 +509,17 @@ class SubmitEWarrantyViewController: BaseViewController, SelectedItemDelegate, U
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
+                vc!.descriptionInfo = "No Attachment found to download E-Warranty".localiz()
                 
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "No Attachment found to download E-Warranty"
-                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                     vc!.descriptionInfo = "ई-वारंटी डाउनलोड करने के लिए कोई अटैचमेंट नहीं मिला"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "ই-ওয়্যারেন্টি ডাউনলোড করার জন্য কোন সংযুক্তি পাওয়া যায়নি"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "E-వారంటీని డౌన్‌లోడ్ చేయడానికి జోడింపు కనుగొనబడలేదు"
-                  }
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "No Attachment found to download E-Warranty".localiz()
+//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                     vc!.descriptionInfo = "ई-वारंटी डाउनलोड करने के लिए कोई अटैचमेंट नहीं मिला"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "ই-ওয়্যারেন্টি ডাউনলোড করার জন্য কোন সংযুক্তি পাওয়া যায়নি"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "E-వారంటీని డౌన్‌లోడ్ చేయడానికి జోడింపు కనుగొనబడలేదు"
+//                  }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)

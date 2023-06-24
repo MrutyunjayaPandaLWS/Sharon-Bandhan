@@ -9,6 +9,8 @@ import UIKit
 import SDWebImage
 import CoreData
 import Firebase
+import LanguageManager_iOS
+
 class RedemptionCatalogueVC: BaseViewController, AddedToCartOrPlannerDelegate, popUpDelegate{
     func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
     
@@ -73,25 +75,30 @@ class RedemptionCatalogueVC: BaseViewController, AddedToCartOrPlannerDelegate, p
     }
  
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "en")
-            self.pointsHeadingLabel.text = "Redeemable Points"
-            searchProductTF.attributedPlaceholder = NSAttributedString(string: "Search Product Name", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "hi")
-            self.pointsHeadingLabel.text = "रिडीमेंबल पॉइंट्स"
-            searchProductTF.attributedPlaceholder = NSAttributedString(string: "उत्पाद का नाम खोजें", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "ta-IN")
-            self.pointsHeadingLabel.text = "மீட்டெடுக்கக்கூடிய புள்ளிகள்"
-            searchProductTF.attributedPlaceholder = NSAttributedString(string: "தயாரிப்பு பெயரைத் தேடுங்கள்", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
-        }else{
-            self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "te")
-            self.pointsHeadingLabel.text = "రీడీమ్ చేయగల పాయింట్లు"
-            searchProductTF.attributedPlaceholder = NSAttributedString(string: "శోధన ఉత్పత్తి పేరు", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
-        }
+        self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localiz()
+        self.pointsHeadingLabel.text = "Redeemable Points".localiz()
+        searchProductTF.attributedPlaceholder = NSAttributedString(string: "Search Product Name".localiz(), attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
+        
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "en")
+//            self.pointsHeadingLabel.text = "Redeemable Points"
+//            searchProductTF.attributedPlaceholder = NSAttributedString(string: "Search Product Name", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "hi")
+//            self.pointsHeadingLabel.text = "रिडीमेंबल पॉइंट्स"
+//            searchProductTF.attributedPlaceholder = NSAttributedString(string: "उत्पाद का नाम खोजें", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "ta-IN")
+//            self.pointsHeadingLabel.text = "மீட்டெடுக்கக்கூடிய புள்ளிகள்"
+//            searchProductTF.attributedPlaceholder = NSAttributedString(string: "தயாரிப்பு பெயரைத் தேடுங்கள்", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
+//        }else{
+//            self.redemptionCatalogueHeadingLabel.text = "rcRedemptionCatalogueKEY".localizableString(loc: "te")
+//            self.pointsHeadingLabel.text = "రీడీమ్ చేయగల పాయింట్లు"
+//            searchProductTF.attributedPlaceholder = NSAttributedString(string: "శోధన ఉత్పత్తి పేరు", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
+//        }
     }
     
     @IBAction func searchProductEditingChanged(_ sender: Any) {
@@ -314,16 +321,17 @@ class RedemptionCatalogueVC: BaseViewController, AddedToCartOrPlannerDelegate, p
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
+                    vc!.descriptionInfo = "Product has been added to Cart".localiz()
                     
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Product has been added to Cart"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "उत्पाद कार्ट में जोड़ दिया गया है"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "পণ্য কার্টে যোগ করা হয়েছে"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "ఉత్పత్తి కార్ట్‌కి జోడించబడింది"
-                      }
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Product has been added to Cart"
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "उत्पाद कार्ट में जोड़ दिया गया है"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "পণ্য কার্টে যোগ করা হয়েছে"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "ఉత్పత్తి కార్ట్‌కి జోడించబడింది"
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
@@ -333,16 +341,17 @@ class RedemptionCatalogueVC: BaseViewController, AddedToCartOrPlannerDelegate, p
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
+                    vc!.descriptionInfo = "Something went wrong please try again later.".localiz()
                     
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Something went wrong!"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "कुछ गलत हो गया!"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "কিছু ভুল হয়েছে!"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "ఎక్కడో తేడ జరిగింది!"
-                      }
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Something went wrong!"
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "कुछ गलत हो गया!"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "কিছু ভুল হয়েছে!"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "ఎక్కడో తేడ జరిగింది!"
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
@@ -396,16 +405,16 @@ class RedemptionCatalogueVC: BaseViewController, AddedToCartOrPlannerDelegate, p
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                   
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Product has been added to Planner List"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "उत्पाद को योजनाकार सूची में जोड़ा गया है"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "পণ্য পরিকল্পনাকারী তালিকা যোগ করা হয়েছে"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "ఉత్పత్తి ప్లానర్ జాబితాకు జోడించబడింది"
-                      }
+                    vc!.descriptionInfo = "Product has been added into Planner List".localiz()
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Product has been added to Planner List"
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "उत्पाद को योजनाकार सूची में जोड़ा गया है"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "পণ্য পরিকল্পনাকারী তালিকা যোগ করা হয়েছে"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "ఉత్పత్తి ప్లానర్ జాబితాకు జోడించబడింది"
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
@@ -415,16 +424,16 @@ class RedemptionCatalogueVC: BaseViewController, AddedToCartOrPlannerDelegate, p
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                   
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Something went wrong!"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "कुछ गलत हो गया!"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "কিছু ভুল হয়েছে!"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "ఎక్కడో తేడ జరిగింది!"
-                      }
+                    vc!.descriptionInfo = "Something went wrong please try again later.".localiz()
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Something went wrong!"
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "कुछ गलत हो गया!"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "কিছু ভুল হয়েছে!"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "ఎక్కడో తేడ జరిగింది!"
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)

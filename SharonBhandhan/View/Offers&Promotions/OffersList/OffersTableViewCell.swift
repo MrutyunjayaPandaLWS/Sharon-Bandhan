@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 protocol OffersandPromotionsDelegate{
     
@@ -23,17 +24,18 @@ class OffersTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
-            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                self.viewBTN.setTitle("View", for: .normal)
-                
-            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                self.viewBTN.setTitle("देखना", for: .normal)
-                
-            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                self.viewBTN.setTitle("দেখুন", for: .normal)
-            }else{
-                self.viewBTN.setTitle("వీక్షించండి", for: .normal)
-            }
+        self.viewBTN.setTitle("view".localiz(), for: .normal)
+//            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                self.viewBTN.setTitle("view".localiz(), for: .normal)
+//
+//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                self.viewBTN.setTitle("देखना", for: .normal)
+//
+//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                self.viewBTN.setTitle("দেখুন", for: .normal)
+//            }else{
+//                self.viewBTN.setTitle("వీక్షించండి", for: .normal)
+//            }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

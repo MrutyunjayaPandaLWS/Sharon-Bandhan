@@ -8,6 +8,7 @@
 import UIKit
 import Lottie
 import Firebase
+import LanguageManager_iOS
 
 class MyEarningsViewController: BaseViewController, FilterDelegate {
     
@@ -47,16 +48,17 @@ class MyEarningsViewController: BaseViewController, FilterDelegate {
     }
     
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.myEarning.text = "My Earning"
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.myEarning.text = "मेरी कमाई"
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.myEarning.text = "আমার উপার্জন"
-        }else{
-            self.myEarning.text = "నా సంపాదన"
-        }
+        self.myEarning.text = "meMyEarning".localiz()
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.myEarning.text = "meMyEarning".localiz()
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.myEarning.text = "मेरी कमाई"
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.myEarning.text = "আমার উপার্জন"
+//        }else{
+//            self.myEarning.text = "నా సంపాదన"
+//        }
     }
     
 //    func playAnimation(){
@@ -159,15 +161,17 @@ extension MyEarningsViewController : UITableViewDelegate, UITableViewDataSource{
         let dateFormatted = convertDateFormater(String(receivedDate[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")
         cell?.myEarnedDate.text = "\(dateFormatted)"
         if self.VM.myEarningListArray[indexPath.row].invoiceNo ?? "" == "--"{
-            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                cell?.giftId.text = "Reward Adjusted"
-            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                cell?.giftId.text = "इनाम समायोजित"
-            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                cell?.giftId.text = "পুরষ্কার সামঞ্জস্য করা হয়েছে"
-            }else{
-                cell?.giftId.text = "రివార్డ్ సర్దుబాటు చేయబడింది"
-            }
+            cell?.giftId.text = "Reward Adjusted".localiz()
+            
+//            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                cell?.giftId.text = "Reward Adjusted"
+//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                cell?.giftId.text = "इनाम समायोजित"
+//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                cell?.giftId.text = "পুরষ্কার সামঞ্জস্য করা হয়েছে"
+//            }else{
+//                cell?.giftId.text = "రివార్డ్ సర్దుబాటు చేయబడింది"
+//            }
             
         }else {
             cell?.giftId.text = self.VM.myEarningListArray[indexPath.row].invoiceNo ?? ""

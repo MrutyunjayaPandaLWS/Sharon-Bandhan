@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import LanguageManager_iOS
 
 class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextFieldDelegate, popUpDelegate{
     func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
@@ -46,42 +47,51 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
       
     }
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.loginToContinue.text = "Login to continue"
-            self.userNameTF.placeholder = "lmobilenumberKEY".localizableString(loc: "en")
-            self.passwordTF.placeholder = "lpasswordKEY".localizableString(loc: "en")
-            self.forgetBTN.setTitle("fpForgotPasswordKEY".localizableString(loc: "en"), for: .normal)
-            self.termsLbl.text = "lTermsAndConditionsKEY".localizableString(loc: "en")
-            self.privacyLbl.text = "Privacy Policy"
-            self.loginBTN.setTitle("lLoginKEY".localizableString(loc: "en"), for: .normal)
-            
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.loginToContinue.text = "जारी रखने के लिए लॉगिन करें"
-            self.userNameTF.placeholder = "lmobilenumberKEY".localizableString(loc: "hi")
-            self.passwordTF.placeholder = "lpasswordKEY".localizableString(loc: "hi")
-            self.forgetBTN.setTitle("fpForgotPasswordKEY".localizableString(loc: "hi"), for: .normal)
-            self.termsLbl.text = "lTermsAndConditionsKEY".localizableString(loc: "hi")
-            self.privacyLbl.text = "गोपनीयता नीति"
-            self.loginBTN.setTitle("lLoginKEY".localizableString(loc: "hi"), for: .normal)
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.loginToContinue.text = "தொடர உள்நுழைக"
-            self.userNameTF.placeholder = "lmobilenumberKEY".localizableString(loc: "ta-IN")
-            self.passwordTF.placeholder = "lpasswordKEY".localizableString(loc: "ta-IN")
-            self.forgetBTN.setTitle("fpForgotPasswordKEY".localizableString(loc: "ta-IN"), for: .normal)
-            self.termsLbl.text = "lTermsAndConditionsKEY".localizableString(loc: "ta-IN")
-            self.privacyLbl.text = "தனியுரிமைக் கொள்கை"
-            self.loginBTN.setTitle("lLoginKEY".localizableString(loc: "ta-IN"), for: .normal)
-        }else{
-            self.loginToContinue.text = "కొనసాగించడానికి లాగిన్ చేయండి"
-            self.userNameTF.placeholder = "lmobilenumberKEY".localizableString(loc: "te")
-            self.passwordTF.placeholder = "lpasswordKEY".localizableString(loc: "te")
-            self.forgetBTN.setTitle("fpForgotPasswordKEY".localizableString(loc: "te"), for: .normal)
-            self.termsLbl.text = "lTermsAndConditionsKEY".localizableString(loc: "te")
-            self.privacyLbl.text = "గోప్యతా విధానం"
-            self.loginBTN.setTitle("lLoginKEY".localizableString(loc: "te"), for: .normal)
-        }
+        
+        self.loginToContinue.text = "Login to continue".localiz()
+        self.userNameTF.placeholder = "lmobilenumberKEY".localiz()
+        self.passwordTF.placeholder = "lpasswordKEY".localiz()
+        self.forgetBTN.setTitle("fpForgotPasswordKEY".localiz(), for: .normal)
+        self.termsLbl.text = "lTermsAndConditionsKEY".localiz()
+        self.privacyLbl.text = "Privacy Policy".localiz()
+        self.loginBTN.setTitle("lLoginKEY".localiz(), for: .normal)
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.loginToContinue.text = "Login to continue"
+//            self.userNameTF.placeholder = "lmobilenumberKEY".localizableString(loc: "en")
+//            self.passwordTF.placeholder = "lpasswordKEY".localizableString(loc: "en")
+//            self.forgetBTN.setTitle("fpForgotPasswordKEY".localizableString(loc: "en"), for: .normal)
+//            self.termsLbl.text = "lTermsAndConditionsKEY".localizableString(loc: "en")
+//            self.privacyLbl.text = "Privacy Policy"
+//            self.loginBTN.setTitle("lLoginKEY".localizableString(loc: "en"), for: .normal)
+//
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.loginToContinue.text = "जारी रखने के लिए लॉगिन करें"
+//            self.userNameTF.placeholder = "lmobilenumberKEY".localizableString(loc: "hi")
+//            self.passwordTF.placeholder = "lpasswordKEY".localizableString(loc: "hi")
+//            self.forgetBTN.setTitle("fpForgotPasswordKEY".localizableString(loc: "hi"), for: .normal)
+//            self.termsLbl.text = "lTermsAndConditionsKEY".localizableString(loc: "hi")
+//            self.privacyLbl.text = "गोपनीयता नीति"
+//            self.loginBTN.setTitle("lLoginKEY".localizableString(loc: "hi"), for: .normal)
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.loginToContinue.text = "தொடர உள்நுழைக"
+//            self.userNameTF.placeholder = "lmobilenumberKEY".localizableString(loc: "ta-IN")
+//            self.passwordTF.placeholder = "lpasswordKEY".localizableString(loc: "ta-IN")
+//            self.forgetBTN.setTitle("fpForgotPasswordKEY".localizableString(loc: "ta-IN"), for: .normal)
+//            self.termsLbl.text = "lTermsAndConditionsKEY".localizableString(loc: "ta-IN")
+//            self.privacyLbl.text = "தனியுரிமைக் கொள்கை"
+//            self.loginBTN.setTitle("lLoginKEY".localizableString(loc: "ta-IN"), for: .normal)
+//        }else{
+//            self.loginToContinue.text = "కొనసాగించడానికి లాగిన్ చేయండి"
+//            self.userNameTF.placeholder = "lmobilenumberKEY".localizableString(loc: "te")
+//            self.passwordTF.placeholder = "lpasswordKEY".localizableString(loc: "te")
+//            self.forgetBTN.setTitle("fpForgotPasswordKEY".localizableString(loc: "te"), for: .normal)
+//            self.termsLbl.text = "lTermsAndConditionsKEY".localizableString(loc: "te")
+//            self.privacyLbl.text = "గోప్యతా విధానం"
+//            self.loginBTN.setTitle("lLoginKEY".localizableString(loc: "te"), for: .normal)
+//        }
     }
     
     
@@ -105,15 +115,17 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                         vc!.delegate = self
                         vc!.titleInfo = ""
-                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                            vc!.descriptionInfo = "MembershipID doesn't exists"
-                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                            vc!.descriptionInfo = "सदस्यता आईडी मौजूद नहीं है"
-                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                            vc!.descriptionInfo = "உறுப்பினர் ஐடி இல்லை"
-                        }else{
-                            vc!.descriptionInfo = "సభ్యత్వ ID ఉనికిలో లేదు"
-                        }
+                        vc!.descriptionInfo = "MembershipID doesn't exists".localiz()
+                        
+//                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                            vc!.descriptionInfo = "MembershipID doesn't exists"
+//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                            vc!.descriptionInfo = "सदस्यता आईडी मौजूद नहीं है"
+//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                            vc!.descriptionInfo = "உறுப்பினர் ஐடி இல்லை"
+//                        }else{
+//                            vc!.descriptionInfo = "సభ్యత్వ ID ఉనికిలో లేదు"
+//                        }
                         
                         vc!.modalPresentationStyle = .overCurrentContext
                         vc!.modalTransitionStyle = .crossDissolve
@@ -143,15 +155,17 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Please Enter the Membership ID"
-                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                     vc!.descriptionInfo = "कृपया सदस्यता आईडी दर्ज करें"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "உறுப்பினர் ஐடியை உள்ளிடவும்"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "దయచేసి సభ్యత్వ IDని నమోదు చేయండి"
-                  }
+                vc!.descriptionInfo = "Please Enter the Membership ID".localiz()
+                
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "Please Enter the Membership ID".localiz()
+//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                     vc!.descriptionInfo = "कृपया सदस्यता आईडी दर्ज करें"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "உறுப்பினர் ஐடியை உள்ளிடவும்"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "దయచేసి సభ్యత్వ IDని నమోదు చేయండి"
+//                  }
                 
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
@@ -162,15 +176,17 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Please Enter the Password"
-                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                     vc!.descriptionInfo = "कृपया पासवर्ड दर्ज करें"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "கடவுச்சொல்லை உள்ளிடவும்"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "దయచేసి పాస్‌వర్డ్‌ను నమోదు చేయండి"
-                  }
+                vc!.descriptionInfo = "Please Enter the Password".localiz()
+                
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "Please Enter the Password".localiz()
+//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                     vc!.descriptionInfo = "कृपया पासवर्ड दर्ज करें"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "கடவுச்சொல்லை உள்ளிடவும்"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "దయచేసి పాస్‌వర్డ్‌ను నమోదు చేయండి"
+//                  }
                
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
@@ -181,16 +197,18 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Please Accept Terms and conditons"
-
-                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                     vc!.descriptionInfo = "कृपया नियम और शर्तें स्वीकार करें"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "விதிமுறைகள் மற்றும் நிபந்தனைகளை ஏற்கவும்"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "దయచేసి నిబంధనలు మరియు షరతులను అంగీకరించండి"
-                  }
+                vc!.descriptionInfo = "Please Accept Terms and conditons".localiz()
+                
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "Please Accept Terms and conditons".localiz()
+//
+//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                     vc!.descriptionInfo = "कृपया नियम और शर्तें स्वीकार करें"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "விதிமுறைகள் மற்றும் நிபந்தனைகளை ஏற்கவும்"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "దయచేసి నిబంధనలు మరియు షరతులను అంగీకరించండి"
+//                  }
                
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
@@ -240,15 +258,16 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Password is invalid!"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "पासवर्ड गलत है!"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "கடவுச்சொல் தவறானது!"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "పాస్వర్డ్ చెల్లదు!"
-                      }
+                    vc!.descriptionInfo = "InvalidPasswordKey".localiz()
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Password is invalid!"
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "पासवर्ड गलत है!"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "கடவுச்சொல் தவறானது!"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "పాస్వర్డ్ చెల్లదు!"
+//                      }
                     
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
@@ -260,15 +279,17 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Your account is verification pending! Kindly contact your administrator."
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "आपका खाता सत्यापन लंबित है! कृपया अपने व्यवस्थापक से संपर्क करें।"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "உங்கள் கணக்கு சரிபார்ப்பு நிலுவையில் உள்ளது! தயவுசெய்து உங்கள் நிர்வாகியைத் தொடர்பு கொள்ளவும்."
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "మీ ఖాతా ధృవీకరణ పెండింగ్‌లో ఉంది! దయచేసి మీ నిర్వాహకుడిని సంప్రదించండి."
-                      }
+                    vc!.descriptionInfo = "account is verification pending".localiz()
+                    
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "account is verification pending".localiz()
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "आपका खाता सत्यापन लंबित है! कृपया अपने व्यवस्थापक से संपर्क करें।"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "உங்கள் கணக்கு சரிபார்ப்பு நிலுவையில் உள்ளது! தயவுசெய்து உங்கள் நிர்வாகியைத் தொடர்பு கொள்ளவும்."
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "మీ ఖాతా ధృవీకరణ పెండింగ్‌లో ఉంది! దయచేసి మీ నిర్వాహకుడిని సంప్రదించండి."
+//                      }
                    
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
@@ -304,15 +325,17 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Your account is not activated! Kindly activate your account."
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "आपका खाता सक्रिय नहीं किया गया है! कृपया अपना खाता सक्रिय करें।"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "உங்கள் கணக்கு செயல்படுத்தப்படவில்லை! தயவுசெய்து உங்கள் கணக்கை செயல்படுத்தவும்."
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "మీ ఖాతా యాక్టివేట్ కాలేదు! దయచేసి మీ ఖాతాను సక్రియం చేయండి."
-                      }
+                    vc!.descriptionInfo = "Your account is not activated! Kindly activate your account.".localiz()
+                    
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Your account is not activated! Kindly activate your account."
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "आपका खाता सक्रिय नहीं किया गया है! कृपया अपना खाता सक्रिय करें।"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "உங்கள் கணக்கு செயல்படுத்தப்படவில்லை! தயவுசெய்து உங்கள் கணக்கை செயல்படுத்தவும்."
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "మీ ఖాతా యాక్టివేట్ కాలేదు! దయచేసి మీ ఖాతాను సక్రియం చేయండి."
+//                      }
                     
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
@@ -320,13 +343,15 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                     self.stopLoading()
                 }
             }
-//            else if response?.userList?[0].verifiedStatus ?? 0 != 1 && response?.userList?[0].isUserActive ?? 0 != 1 {
-//                DispatchQueue.main.async{
-//                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
-//                    vc!.delegate = self
-//                    vc!.titleInfo = ""
+            else if (response?.userList?[0].verifiedStatus ?? 0) == 2{
+                DispatchQueue.main.async{
+                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
+                    vc!.delegate = self
+                    vc!.titleInfo = ""
+                    vc!.descriptionInfo = "Your account verification is failed !".localiz()
+                    
 //                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                        vc!.descriptionInfo = "Your account is not activated! Kindly activate your account."
+//                        vc!.descriptionInfo = "Your account verification is failed !".localiz()
 //                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
 //                         vc!.descriptionInfo = "आपका खाता सक्रिय नहीं किया गया है! कृपया अपना खाता सक्रिय करें।"
 //                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
@@ -334,29 +359,31 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
 //                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
 //                        vc!.descriptionInfo = "మీ ఖాతా యాక్టివేట్ కాలేదు! దయచేసి మీ ఖాతాను సక్రియం చేయండి."
 //                      }
-//
-//
-//                    vc!.modalPresentationStyle = .overCurrentContext
-//                    vc!.modalTransitionStyle = .crossDissolve
-//                    self.present(vc!, animated: true, completion: nil)
-//                    self.stopLoading()
-//                }
-//            }
+
+
+                    vc!.modalPresentationStyle = .overCurrentContext
+                    vc!.modalTransitionStyle = .crossDissolve
+                    self.present(vc!, animated: true, completion: nil)
+                    self.stopLoading()
+                }
+            }
             else if response?.userList?[0].isUserActive ?? 0 == 0 {
 //                else if response?.userList?[0].verifiedStatus ?? 0 == 1 && response?.userList?[0].isUserActive ?? 0 == 0 {
                 DispatchQueue.main.async{
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Your account has been deactivated! Kindly contact the administrator or contact center at +91-8955177400."
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "आपका खाता निष्क्रिय कर दिया गया है! कृपया व्यवस्थापक या संपर्क केंद्र से +91-8955177400 पर संपर्क करें।"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "আপনার অ্যাকাউন্ট নিষ্ক্রিয় করা হয়েছে! অনুগ্রহ করে প্রশাসক বা যোগাযোগ কেন্দ্রের সাথে +91-8955177400 এ যোগাযোগ করুন।"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "మీ ఖాతా డీయాక్టివేట్ చేయబడింది! దయచేసి నిర్వాహకుడిని లేదా సంప్రదింపు కేంద్రాన్ని +91-8955177400లో సంప్రదించండి."
-                      }
+                    vc!.descriptionInfo = "Your account has been deactivated! Kindly contact the administrator or contact center at +91-8955177400.".localiz()
+                    
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Your account has been deactivated! Kindly contact the administrator or contact center at +91-8955177400."
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "आपका खाता निष्क्रिय कर दिया गया है! कृपया व्यवस्थापक या संपर्क केंद्र से +91-8955177400 पर संपर्क करें।"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "আপনার অ্যাকাউন্ট নিষ্ক্রিয় করা হয়েছে! অনুগ্রহ করে প্রশাসক বা যোগাযোগ কেন্দ্রের সাথে +91-8955177400 এ যোগাযোগ করুন।"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "మీ ఖాతా డీయాక్టివేట్ చేయబడింది! దయచేసి నిర్వాహకుడిని లేదా సంప్రదింపు కేంద్రాన్ని +91-8955177400లో సంప్రదించండి."
+//                      }
                     
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
@@ -369,15 +396,17 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Your account has been deactivated! Kindly contact the administrator or contact center at +91-8955177400."
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "आपका खाता निष्क्रिय कर दिया गया है! कृपया व्यवस्थापक या संपर्क केंद्र से +91-8955177400 पर संपर्क करें।"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "আপনার অ্যাকাউন্ট নিষ্ক্রিয় করা হয়েছে! অনুগ্রহ করে প্রশাসক বা যোগাযোগ কেন্দ্রের সাথে +91-8955177400 এ যোগাযোগ করুন।"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "మీ ఖాతా డీయాక్టివేట్ చేయబడింది! దయచేసి నిర్వాహకుడిని లేదా సంప్రదింపు కేంద్రాన్ని +91-8955177400లో సంప్రదించండి."
-                      }
+                    vc!.descriptionInfo = "Your account has been deactivated! Kindly contact the administrator or contact center at +91-8955177400.".localiz()
+                    
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Your account has been deactivated! Kindly contact the administrator or contact center at +91-8955177400."
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "आपका खाता निष्क्रिय कर दिया गया है! कृपया व्यवस्थापक या संपर्क केंद्र से +91-8955177400 पर संपर्क करें।"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "আপনার অ্যাকাউন্ট নিষ্ক্রিয় করা হয়েছে! অনুগ্রহ করে প্রশাসক বা যোগাযোগ কেন্দ্রের সাথে +91-8955177400 এ যোগাযোগ করুন।"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "మీ ఖాతా డీయాక్టివేట్ చేయబడింది! దయచేసి నిర్వాహకుడిని లేదా సంప్రదింపు కేంద్రాన్ని +91-8955177400లో సంప్రదించండి."
+//                      }
                     
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
@@ -424,15 +453,17 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                         vc!.delegate = self
                         vc!.titleInfo = ""
-                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                            vc!.descriptionInfo = "Something went wrong please tryagain later!"
-                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                             vc!.descriptionInfo = "कुछ गलत हो गया है। कृपया बाद में दोबारा प्रयास करें!"
-                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                            vc!.descriptionInfo = "কিছু ভুল হয়েছে। পরে আবার চেষ্টা করুন!"
-                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                            vc!.descriptionInfo = "ఏదో తప్పు జరిగినది. దయచేసి కాసేపు ఆగక ప్రయత్నించండి!"
-                          }
+                        vc!.descriptionInfo = "Something went wrong please try again later.".localiz()
+                        
+//                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                            vc!.descriptionInfo = "Something went wrong please tryagain later!"
+//                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                             vc!.descriptionInfo = "कुछ गलत हो गया है। कृपया बाद में दोबारा प्रयास करें!"
+//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                            vc!.descriptionInfo = "কিছু ভুল হয়েছে। পরে আবার চেষ্টা করুন!"
+//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                            vc!.descriptionInfo = "ఏదో తప్పు జరిగినది. దయచేసి కాసేపు ఆగక ప్రయత్నించండి!"
+//                          }
                         
                         vc!.modalPresentationStyle = .overCurrentContext
                         vc!.modalTransitionStyle = .crossDissolve

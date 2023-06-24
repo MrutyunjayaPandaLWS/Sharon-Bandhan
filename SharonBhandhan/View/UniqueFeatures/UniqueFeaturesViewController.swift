@@ -8,38 +8,53 @@
 import UIKit
 import WebKit
 import Firebase
+import LanguageManager_iOS
 class UniqueFeaturesViewController: UIViewController {
-
+    
     @IBOutlet var webView: WKWebView!
     @IBOutlet weak var header: UILabel!
     var fromSideMenu = ""
+    var selectedlanguage = UserDefaults.standard.string(forKey: "LanguageLocalizable") ?? ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let filePath = Bundle.main.url(forResource: "uniqueFeatures", withExtension: "html") {
-            let request = NSURLRequest(url: filePath)
-            webView.load(request as URLRequest)
-        }
-        
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            header.text = "Unique features"
-              }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                  header.text = "नियमएवंशर्तें"
-              }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                  header.text = "ఏకైకలక్షణాలు"
-              }else{
-                  header.text = "অনন্য বৈশিষ্ট"
-              }
+        header.text = "ufUniqueFeaturesKEY".localiz()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        guard let tracker = GAI.sharedInstance().defaultTracker else { return }
-//        tracker.set(kGAIScreenName, value: "Unique Features")
-//
-//        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
-//        tracker.send(builder.build() as [NSObject : AnyObject])
-
+        localization()
+    }
+    
+    private func localization(){
         
+        if selectedlanguage == "1"{
+            if let filePath = Bundle.main.url(forResource: "SB-Uniq-Cust-Eng", withExtension: "html") {
+                let request = NSURLRequest(url: filePath)
+                webView.load(request as URLRequest)
+            }
+            
+        }else if selectedlanguage == "2"{
+            if let filePath = Bundle.main.url(forResource: "SB-Uniq-Cust-Hindi", withExtension: "html") {
+                let request = NSURLRequest(url: filePath)
+                webView.load(request as URLRequest)
+            }
+        }else if selectedlanguage == "3"{
+            if let filePath = Bundle.main.url(forResource: "SB-Uniq-Cust-Tamil", withExtension: "html") {
+                let request = NSURLRequest(url: filePath)
+                webView.load(request as URLRequest)
+            }
+        }else if selectedlanguage == "4"{
+            if let filePath = Bundle.main.url(forResource: "SB-Uniq-Cust-Telungu", withExtension: "html") {
+                let request = NSURLRequest(url: filePath)
+                webView.load(request as URLRequest)
+            }
+        }else{
+            if let filePath = Bundle.main.url(forResource: "SB-Uniq-Cust-Eng", withExtension: "html") {
+                let request = NSURLRequest(url: filePath)
+                webView.load(request as URLRequest)
+            }
+        }
     }
     
     @IBAction func backButton(_ sender: Any) {

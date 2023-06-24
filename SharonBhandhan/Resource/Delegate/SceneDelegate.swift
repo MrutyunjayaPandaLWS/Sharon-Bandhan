@@ -9,6 +9,7 @@ import UIKit
 import IQKeyboardManagerSwift
 import SlideMenuControllerSwift
 import Firebase
+import LanguageManager_iOS
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -17,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     var slider : SlideMenuController!
     var nav : UINavigationController!
-
+    var languageStatus =  UserDefaults.standard.string(forKey: "LanguageLocalizable") ?? "0"
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
@@ -28,6 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let isUserLoggedIn: Bool = UserDefaults.standard.bool(forKey: "IsloggedIn?")
         print(isUserLoggedIn)
         IQKeyboardManager.shared.enable = true
+        setLanguage()
         if isUserLoggedIn {
             self.setHomeAsRootViewController()
         } else {
@@ -35,7 +37,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
     }
     
+    
+    func setLanguage(){
+        
+        if languageStatus == "1"{
+            LanguageManager.shared.setLanguage(language: .en)
+        }else if languageStatus == "2"{
+            LanguageManager.shared.setLanguage(language: .hi)
+        }else if languageStatus == "3"{
+            LanguageManager.shared.setLanguage(language: .taIN)
+        }else if languageStatus == "4"{
+            LanguageManager.shared.setLanguage(language: .te)
+        }else{
+            LanguageManager.shared.setLanguage(language: .en)
+        }
+        
+    }
     func setHomeAsRootViewController(){
+        setLanguage()
         let leftVC = storyboard.instantiateViewController(withIdentifier: "SideMenuViewController") as! SideMenuViewController
         let homeVC = storyboard.instantiateViewController(withIdentifier: "DashBoardViewController") as! DashBoardViewController
         slider = SlideMenuController(mainViewController: homeVC, leftMenuViewController: leftVC)
@@ -45,6 +64,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
     }
     func setInitialViewAsRootViewController(){
+        setLanguage()
         let mainStoryboard = UIStoryboard(name: "Main" , bundle: nil)
         let initialVC = mainStoryboard.instantiateViewController(withIdentifier: "LanguageViewController") as! LanguageViewController
         nav = UINavigationController(rootViewController: initialVC)

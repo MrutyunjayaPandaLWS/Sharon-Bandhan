@@ -93,54 +93,65 @@ class PancardViewController: BaseViewController, UITextFieldDelegate, UIImagePic
     
     
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.headerTitle.text = "PanVerification".localizableString(loc: "en")
-            self.successmeassage.text = "customerPANDetails".localizableString(loc: "en")
-            self.myPanDetails.text = "myPanDetails".localizableString(loc: "en")
-            self.myProfile.text = "myProfile".localizableString(loc: "en")
-            self.saveButton.setTitle("Save".localizableString(loc: "en"), for: .normal)
-            self.panattachment.setTitle("PANAttachment".localizableString(loc: "en"), for: .normal)
-            self.validateButtonn.setTitle("Validate".localizableString(loc: "en"), for: .normal)
-            self.panNumberTF.placeholder = "enterPanNum".localizableString(loc: "en")
-            self.panNumberLbl.text = "PANnumbeer".localizableString(loc: "en")
-            self.kindlyUploadLbl.text = "kindlyUploadDetails".localizableString(loc: "en")
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.headerTitle.text = "PanVerification".localizableString(loc: "hi")
-            self.successmeassage.text = "customerPANDetails".localizableString(loc: "hi")
-            self.myPanDetails.text = "myPanDetails".localizableString(loc: "hi")
-            self.myProfile.text = "myProfile".localizableString(loc: "hi")
-            self.saveButton.setTitle("Save".localizableString(loc: "hi"), for: .normal)
-            self.panattachment.setTitle("PANAttachment".localizableString(loc: "hi"), for: .normal)
-            self.validateButtonn.setTitle("Validate".localizableString(loc: "hi"), for: .normal)
-            self.panNumberTF.placeholder = "enterPanNum".localizableString(loc: "hi")
-            self.panNumberLbl.text = "PANnumbeer".localizableString(loc: "hi")
-            self.kindlyUploadLbl.text = "kindlyUploadDetails".localizableString(loc: "hi")
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.headerTitle.text = "PanVerification".localizableString(loc: "ta-IN")
-            self.successmeassage.text = "customerPANDetails".localizableString(loc: "ta-IN")
-            self.myPanDetails.text = "myPanDetails".localizableString(loc: "ta-IN")
-            self.myProfile.text = "myProfile".localizableString(loc: "ta-IN")
-            self.saveButton.setTitle("Save".localizableString(loc: "ta-IN"), for: .normal)
-            self.panattachment.setTitle("PANAttachment".localizableString(loc: "ta-IN"), for: .normal)
-            self.validateButtonn.setTitle("Validate".localizableString(loc: "ta-IN"), for: .normal)
-            self.panNumberTF.placeholder = "enterPanNum".localizableString(loc: "ta-IN")
-            self.panNumberLbl.text = "PANnumbeer".localizableString(loc: "ta-IN")
-            self.kindlyUploadLbl.text = "kindlyUploadDetails".localizableString(loc: "ta-IN")
-        }else{
-            
-            self.headerTitle.text = "PanVerification".localizableString(loc: "te")
-            self.successmeassage.text = "customerPANDetails".localizableString(loc: "te")
-            self.myPanDetails.text = "myPanDetails".localizableString(loc: "te")
-            self.myProfile.text = "myProfile".localizableString(loc: "te")
-            self.saveButton.setTitle("Save".localizableString(loc: "te"), for: .normal)
-            self.panattachment.setTitle("PANAttachment".localizableString(loc: "te"), for: .normal)
-            self.validateButtonn.setTitle("Validate".localizableString(loc: "te"), for: .normal)
-            self.panNumberTF.placeholder = "enterPanNum".localizableString(loc: "te")
-            self.panNumberLbl.text = "PANnumbeer".localizableString(loc: "te")
-            self.kindlyUploadLbl.text = "kindlyUploadDetails".localizableString(loc: "te")
-        }
+        self.headerTitle.text = "PanVerification".localiz()
+        self.successmeassage.text = "customerPANDetails".localiz()
+        self.myPanDetails.text = "myPanDetails".localiz()
+        self.myProfile.text = "myProfile".localiz()
+        self.saveButton.setTitle("Save".localiz(), for: .normal)
+        self.panattachment.setTitle("PANAttachment".localiz(), for: .normal)
+        self.validateButtonn.setTitle("Validate".localiz(), for: .normal)
+        self.panNumberTF.placeholder = "enterPanNum".localiz()
+        self.panNumberLbl.text = "PANnumbeer".localiz()
+        self.kindlyUploadLbl.text = "kindlyUploadDetails".localiz()
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.headerTitle.text = "PanVerification".localizableString(loc: "en")
+//            self.successmeassage.text = "customerPANDetails".localizableString(loc: "en")
+//            self.myPanDetails.text = "myPanDetails".localizableString(loc: "en")
+//            self.myProfile.text = "myProfile".localizableString(loc: "en")
+//            self.saveButton.setTitle("Save".localizableString(loc: "en"), for: .normal)
+//            self.panattachment.setTitle("PANAttachment".localizableString(loc: "en"), for: .normal)
+//            self.validateButtonn.setTitle("Validate".localizableString(loc: "en"), for: .normal)
+//            self.panNumberTF.placeholder = "enterPanNum".localizableString(loc: "en")
+//            self.panNumberLbl.text = "PANnumbeer".localizableString(loc: "en")
+//            self.kindlyUploadLbl.text = "kindlyUploadDetails".localizableString(loc: "en")
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.headerTitle.text = "PanVerification".localizableString(loc: "hi")
+//            self.successmeassage.text = "customerPANDetails".localizableString(loc: "hi")
+//            self.myPanDetails.text = "myPanDetails".localizableString(loc: "hi")
+//            self.myProfile.text = "myProfile".localizableString(loc: "hi")
+//            self.saveButton.setTitle("Save".localizableString(loc: "hi"), for: .normal)
+//            self.panattachment.setTitle("PANAttachment".localizableString(loc: "hi"), for: .normal)
+//            self.validateButtonn.setTitle("Validate".localizableString(loc: "hi"), for: .normal)
+//            self.panNumberTF.placeholder = "enterPanNum".localizableString(loc: "hi")
+//            self.panNumberLbl.text = "PANnumbeer".localizableString(loc: "hi")
+//            self.kindlyUploadLbl.text = "kindlyUploadDetails".localizableString(loc: "hi")
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.headerTitle.text = "PanVerification".localizableString(loc: "ta-IN")
+//            self.successmeassage.text = "customerPANDetails".localizableString(loc: "ta-IN")
+//            self.myPanDetails.text = "myPanDetails".localizableString(loc: "ta-IN")
+//            self.myProfile.text = "myProfile".localizableString(loc: "ta-IN")
+//            self.saveButton.setTitle("Save".localizableString(loc: "ta-IN"), for: .normal)
+//            self.panattachment.setTitle("PANAttachment".localizableString(loc: "ta-IN"), for: .normal)
+//            self.validateButtonn.setTitle("Validate".localizableString(loc: "ta-IN"), for: .normal)
+//            self.panNumberTF.placeholder = "enterPanNum".localizableString(loc: "ta-IN")
+//            self.panNumberLbl.text = "PANnumbeer".localizableString(loc: "ta-IN")
+//            self.kindlyUploadLbl.text = "kindlyUploadDetails".localizableString(loc: "ta-IN")
+//        }else{
+//
+//            self.headerTitle.text = "PanVerification".localizableString(loc: "te")
+//            self.successmeassage.text = "customerPANDetails".localizableString(loc: "te")
+//            self.myPanDetails.text = "myPanDetails".localizableString(loc: "te")
+//            self.myProfile.text = "myProfile".localizableString(loc: "te")
+//            self.saveButton.setTitle("Save".localizableString(loc: "te"), for: .normal)
+//            self.panattachment.setTitle("PANAttachment".localizableString(loc: "te"), for: .normal)
+//            self.validateButtonn.setTitle("Validate".localizableString(loc: "te"), for: .normal)
+//            self.panNumberTF.placeholder = "enterPanNum".localizableString(loc: "te")
+//            self.panNumberLbl.text = "PANnumbeer".localizableString(loc: "te")
+//            self.kindlyUploadLbl.text = "kindlyUploadDetails".localizableString(loc: "te")
+//        }
     }
     
     @IBAction func saveButton(_ sender: Any) {
@@ -157,15 +168,17 @@ class PancardViewController: BaseViewController, UITextFieldDelegate, UIImagePic
             print(parameter)
             self.vm.pancardSaveApi(parameters: parameter)
         }else{
-            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                alertTypeWithoutAction(alertheading: "", alertMessage: "Pan attachment required", buttonTitle: "Ok")
-            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                alertTypeWithoutAction(alertheading: "", alertMessage: "पैन अटैचमेंट आवश्यक है", buttonTitle: "ठीक")
-            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                alertTypeWithoutAction(alertheading: "", alertMessage: "প্যান সংযুক্তি প্রয়োজন", buttonTitle: "ওকে")
-            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                alertTypeWithoutAction(alertheading: "", alertMessage: "పాన్ అటాచ్మెంట్ అవసరం", buttonTitle: "సరే")
-            }
+            alertTypeWithoutAction(alertheading: "", alertMessage: "Pan attachment required".localiz(), buttonTitle: "OKKey".localiz())
+            
+//            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                alertTypeWithoutAction(alertheading: "", alertMessage: "Pan attachment required", buttonTitle: "Ok")
+//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                alertTypeWithoutAction(alertheading: "", alertMessage: "पैन अटैचमेंट आवश्यक है", buttonTitle: "ठीक")
+//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                alertTypeWithoutAction(alertheading: "", alertMessage: "প্যান সংযুক্তি প্রয়োজন", buttonTitle: "ওকে")
+//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                alertTypeWithoutAction(alertheading: "", alertMessage: "పాన్ అటాచ్మెంట్ అవసరం", buttonTitle: "సరే")
+//            }
 //            let alertController = UIAlertController(title: "", message: "Do you want to submit without PAN attachment?", preferredStyle: .alert)
 //            let okAction = UIAlertAction(title: "Yes", style: UIAlertAction.Style.default) {
 //                UIAlertAction in

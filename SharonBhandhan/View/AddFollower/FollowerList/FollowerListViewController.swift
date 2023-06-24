@@ -7,9 +7,13 @@
 
 import UIKit
 import Lottie
+import LanguageManager_iOS
+
+
 class FollowerListViewController: BaseViewController {
     
   
+    @IBOutlet weak var headerLbl: UILabel!
     @IBOutlet weak var animationLottieView: LottieAnimationView!
     @IBOutlet weak var followertableView: UITableView!
     
@@ -20,6 +24,10 @@ class FollowerListViewController: BaseViewController {
         self.lottieAnimation(animationView: self.animationLottieView)
         self.followertableView.delegate = self
         self.followertableView.dataSource = self
+    }
+    
+    private func localization(){
+        headerLbl.text = "fFollowerKEY".localiz()
     }
     
  

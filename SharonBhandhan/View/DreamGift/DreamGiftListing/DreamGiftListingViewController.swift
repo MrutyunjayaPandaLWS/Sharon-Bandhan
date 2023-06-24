@@ -4,6 +4,8 @@ import SDWebImage
 import Alamofire
 import Firebase
 import Toast_Swift
+import LanguageManager_iOS
+
 class DreamGiftListingViewController: BaseViewController, AddOrRemoveGiftDelegate, popUpDelegate{
 
     @IBOutlet weak var animationLottieView: LottieAnimationView!
@@ -50,15 +52,16 @@ class DreamGiftListingViewController: BaseViewController, AddOrRemoveGiftDelegat
     }
     
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.header.text = "Dream Gift"
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.header.text = "सपना उपहार"
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.header.text = "স্বপ্নের উপহার"
-        }else{
-            self.header.text = "డ్రీం గిఫ్ట్"
-        }
+        self.header.text = "Dream Gift".localiz()
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.header.text = "Dream Gift".localiz()
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.header.text = "सपना उपहार"
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.header.text = "স্বপ্নের উপহার"
+//        }else{
+//            self.header.text = "డ్రీం గిఫ్ట్"
+//        }
     }
     
     @objc func afterRemovedProducts(){
@@ -99,9 +102,9 @@ class DreamGiftListingViewController: BaseViewController, AddOrRemoveGiftDelegat
             }else if self.verifiedStatus == 1{
                 print(UserDefaults.standard.integer(forKey: "DreamGiftIsRedeemable"))
                 if UserDefaults.standard.integer(forKey: "DreamGiftIsRedeemable") == -3{
-                    self.view.makeToast("Your PAN Details are pending,Please contact your administrator!", duration: 2.0, position: .bottom)
+                    self.view.makeToast("Your PAN Details are pending,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
                 }else if UserDefaults.standard.integer(forKey: "DreamGiftIsRedeemable") == -4{
-                    self.view.makeToast("Your PAN Details are rejected,Please contact your administrator!", duration: 2.0, position: .bottom)
+                    self.view.makeToast("Your PAN Details are rejected,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
                 }else if UserDefaults.standard.integer(forKey: "DreamGiftIsRedeemable") == 1{
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ShippingAddress_VC") as! ShippingAddress_VC
                     vc.redemptionTypeId = 3
@@ -114,7 +117,7 @@ class DreamGiftListingViewController: BaseViewController, AddOrRemoveGiftDelegat
                     
                     self.navigationController?.pushViewController(vc, animated: true)
                 }else{
-                    self.view.makeToast("Insufficient point balance to redeem!", duration: 2.0, position: .bottom)
+                    self.view.makeToast("Insufficient point balance to redeem!".localiz(), duration: 2.0, position: .bottom)
                 }
               
             }
@@ -181,15 +184,16 @@ class DreamGiftListingViewController: BaseViewController, AddOrRemoveGiftDelegat
                     vc!.delegate = self
                     vc!.titleInfo = ""
                     vc!.itsComeFrom = "DreamGift"
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Dream Gift has been removed successfully"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "ड्रीम गिफ्ट सफलतापूर्वक हटा दिया गया है"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "স্বপ্ন উপহার সফলভাবে সরানো হয়েছে"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "డ్రీమ్ గిఫ్ట్ విజయవంతంగా తీసివేయబడింది"
-                      }
+                    vc!.descriptionInfo = "Dream Gift has been removed successfully".localiz()
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Dream Gift has been removed successfully"
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "ड्रीम गिफ्ट सफलतापूर्वक हटा दिया गया है"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "স্বপ্ন উপহার সফলভাবে সরানো হয়েছে"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "డ్రీమ్ గిఫ్ట్ విజయవంతంగా తీసివేయబడింది"
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
@@ -200,15 +204,16 @@ class DreamGiftListingViewController: BaseViewController, AddOrRemoveGiftDelegat
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Dream Gift has been removed failed"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "ड्रीम गिफ्ट को हटा दिया गया है विफल"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "ড্রিম গিফট ব্যর্থ হয়েছে"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "డ్రీమ్ గిఫ్ట్ తీసివేయబడింది విఫలమైంది"
-                      }
+                    vc!.descriptionInfo = "Dream Gift has been removed failed".localiz()
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Dream Gift has been removed failed"
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "ड्रीम गिफ्ट को हटा दिया गया है विफल"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "ড্রিম গিফট ব্যর্থ হয়েছে"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "డ్రీమ్ గిఫ్ట్ తీసివేయబడింది విఫలమైంది"
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)

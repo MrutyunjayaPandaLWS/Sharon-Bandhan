@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 import UserNotifications
 import Firebase
+import LanguageManager_iOS
 
 class CustomerQueryListingViewController: BaseViewController,UNUserNotificationCenterDelegate{
   
@@ -70,15 +71,17 @@ class CustomerQueryListingViewController: BaseViewController,UNUserNotificationC
     }
     
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.lodgequery.text = "Lodge Query"
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.lodgequery.text = "लॉज क्वेरी"
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.lodgequery.text = "লজ প্রশ্ন"
-        }else{
-            self.lodgequery.text = "లాడ్జ్ ప్రశ్న"
-        }
+        self.lodgequery.text = "cqlLodgeQueryKEY".localiz()
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.lodgequery.text = "Lodge Query"
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.lodgequery.text = "लॉज क्वेरी"
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.lodgequery.text = "লজ প্রশ্ন"
+//        }else{
+//            self.lodgequery.text = "లాడ్జ్ ప్రశ్న"
+//        }
     }
     
         

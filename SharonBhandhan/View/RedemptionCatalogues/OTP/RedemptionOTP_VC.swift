@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import DPOTPView
+import LanguageManager_iOS
 
 
 class RedemptionOTP_VC: BaseViewController,UITextFieldDelegate, popUpDelegate {
@@ -112,37 +113,44 @@ class RedemptionOTP_VC: BaseViewController,UITextFieldDelegate, popUpDelegate {
     }
     
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.otpVerificationLabel.text = "OTP Verification"
-            self.weSendOtpLabel.text = "We send a OTP to your Number"
-            self.otpWithinLabel.text = "OTP will Receive within"
-            self.didntReciveLabel.text = "Didn't receive OTP Code?"
-            self.resendOTPButton.setTitle("Resend OTP", for: .normal)
-            self.submitBTN.setTitle("Submit", for: .normal)
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.otpVerificationLabel.text = "ओटीपी सत्यापन"
-            self.weSendOtpLabel.text = "हम आपके नंबर पर एक ओटीपी भेजते हैं"
-            self.otpWithinLabel.text = "ओटीपी के भीतर प्राप्त होगा"
-            self.didntReciveLabel.text = "ओटीपी कोड प्राप्त नहीं हुआ?"
-            self.resendOTPButton.setTitle("ओटीपी पुनः भेजें", for: .normal)
-            self.submitBTN.setTitle("प्रस्तुत", for: .normal)
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.otpVerificationLabel.text = "ওটিপি ভেরিফিকেশন"
-            self.weSendOtpLabel.text = "আমরা আপনার নাম্বারে একটি ওটিপি পাঠাই"
-            self.otpWithinLabel.text = "ওটিপি এর মধ্যেই পাবেন"
-            self.didntReciveLabel.text = "OTP কোড পাননি?"
-            self.resendOTPButton.setTitle("OTP আবার পাঠান", for: .normal)
-            self.submitBTN.setTitle("জমা দিন", for: .normal)
-        }else{
-            self.otpVerificationLabel.text = "OTP ధృవీకరణ"
-            self.weSendOtpLabel.text = "మేము మీ నంబర్‌కి OTPని పంపుతాము"
-            self.otpWithinLabel.text = "లోపల OTP అందుతుంది"
-            self.didntReciveLabel.text = "OTP కోడ్ అందలేదా?"
-            self.resendOTPButton.setTitle("OTP ను మళ్ళీ పంపు", for: .normal)
-            self.submitBTN.setTitle("సమర్పించండి", for: .normal)
-        }
+        self.otpVerificationLabel.text = "OTP Verification".localiz()
+        self.weSendOtpLabel.text = "We send a OTP to your Number".localiz()
+        self.otpWithinLabel.text = "OTP will Receive within".localiz()
+        self.didntReciveLabel.text = "Didn't receive OTP Code?".localiz()
+        self.resendOTPButton.setTitle("ResendOTPKey".localiz(), for: .normal)
+        self.submitBTN.setTitle("fpSubmitKEY".localiz(), for: .normal)
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.otpVerificationLabel.text = "OTP Verification"
+//            self.weSendOtpLabel.text = "We send a OTP to your Number"
+//            self.otpWithinLabel.text = "OTP will Receive within"
+//            self.didntReciveLabel.text = "Didn't receive OTP Code?"
+//            self.resendOTPButton.setTitle("Resend OTP", for: .normal)
+//            self.submitBTN.setTitle("Submit", for: .normal)
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.otpVerificationLabel.text = "ओटीपी सत्यापन"
+//            self.weSendOtpLabel.text = "हम आपके नंबर पर एक ओटीपी भेजते हैं"
+//            self.otpWithinLabel.text = "ओटीपी के भीतर प्राप्त होगा"
+//            self.didntReciveLabel.text = "ओटीपी कोड प्राप्त नहीं हुआ?"
+//            self.resendOTPButton.setTitle("ओटीपी पुनः भेजें", for: .normal)
+//            self.submitBTN.setTitle("प्रस्तुत", for: .normal)
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.otpVerificationLabel.text = "ওটিপি ভেরিফিকেশন"
+//            self.weSendOtpLabel.text = "আমরা আপনার নাম্বারে একটি ওটিপি পাঠাই"
+//            self.otpWithinLabel.text = "ওটিপি এর মধ্যেই পাবেন"
+//            self.didntReciveLabel.text = "OTP কোড পাননি?"
+//            self.resendOTPButton.setTitle("OTP আবার পাঠান", for: .normal)
+//            self.submitBTN.setTitle("জমা দিন", for: .normal)
+//        }else{
+//            self.otpVerificationLabel.text = "OTP ధృవీకరణ"
+//            self.weSendOtpLabel.text = "మేము మీ నంబర్‌కి OTPని పంపుతాము"
+//            self.otpWithinLabel.text = "లోపల OTP అందుతుంది"
+//            self.didntReciveLabel.text = "OTP కోడ్ అందలేదా?"
+//            self.resendOTPButton.setTitle("OTP ను మళ్ళీ పంపు", for: .normal)
+//            self.submitBTN.setTitle("సమర్పించండి", for: .normal)
+//        }
     }
  
  
@@ -165,7 +173,6 @@ class RedemptionOTP_VC: BaseViewController,UITextFieldDelegate, popUpDelegate {
                 self.count = 60
                 self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
             }
-      
         }
         
     }
@@ -365,15 +372,17 @@ class RedemptionOTP_VC: BaseViewController,UITextFieldDelegate, popUpDelegate {
                                 vc!.itsComeFrom = "RedemptionFailed"
                                 self.stopLoading()
                                 self.timer.invalidate()
-                                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                                    vc!.descriptionInfo = "Redemption Failed"
-                                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                                     vc!.descriptionInfo = "मोचन विफल"
-                                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                    vc!.descriptionInfo = "রিডিম্পশন ব্যর্থ হয়েছে"
-                                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                                    vc!.descriptionInfo = "విముక్తి విఫలమైంది"
-                                  }
+                                vc!.descriptionInfo = "Redemption Failed".localiz()
+                                
+//                                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                                    vc!.descriptionInfo = "Redemption Failed"
+//                                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                                     vc!.descriptionInfo = "मोचन विफल"
+//                                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                                    vc!.descriptionInfo = "রিডিম্পশন ব্যর্থ হয়েছে"
+//                                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                                    vc!.descriptionInfo = "విముక్తి విఫలమైంది"
+//                                  }
                                 vc!.modalPresentationStyle = .overFullScreen
                                 vc!.modalTransitionStyle = .crossDissolve
                                 self.present(vc!, animated: true, completion: nil)
@@ -392,16 +401,17 @@ class RedemptionOTP_VC: BaseViewController,UITextFieldDelegate, popUpDelegate {
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
+                    vc!.descriptionInfo = "InValid OTP".localiz()
                     
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "InValid OTP"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "अमान्य ओटीपी"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "অবৈধ ওটিপি৷"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "చెల్లని OTP"
-                      }
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "InValid OTP"
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "अमान्य ओटीपी"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "অবৈধ ওটিপি৷"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "చెల్లని OTP"
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
@@ -413,16 +423,16 @@ class RedemptionOTP_VC: BaseViewController,UITextFieldDelegate, popUpDelegate {
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                    
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Please Enter Correct OTP"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "कृपया सही ओटीपी दर्ज करें"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "দয়া করে সঠিক ওটিপি লিখুন"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "దయచేసి సరైన OTPని ఎంటర్ చేయండి"
-                      }
+                    vc!.descriptionInfo = "Please Enter Correct OTP".localiz()
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Please Enter Correct OTP"
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "कृपया सही ओटीपी दर्ज करें"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "দয়া করে সঠিক ওটিপি লিখুন"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "దయచేసి సరైన OTPని ఎంటర్ చేయండి"
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
@@ -432,16 +442,17 @@ class RedemptionOTP_VC: BaseViewController,UITextFieldDelegate, popUpDelegate {
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
+                    vc!.descriptionInfo = "Enter Valid OTP".localiz()
                     
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Enter Valid OTP"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "वैध ओटीपी दर्ज करें"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "বৈধ ওটিপি লিখুন"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "చెల్లుబాటు అయ్యే OTPని ఎంటర్ చేయండి"
-                      }
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Enter Valid OTP".localiz()
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "वैध ओटीपी दर्ज करें"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "বৈধ ওটিপি লিখুন"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "చెల్లుబాటు అయ్యే OTPని ఎంటర్ చేయండి"
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)

@@ -7,35 +7,35 @@
 
 import UIKit
 import WebKit
+import LanguageManager_iOS
 
 class TermsAndConditionsVC: BaseViewController {
     
     @IBOutlet weak var header: UILabel!
     //@IBOutlet weak var termsAndConditionsTV: UITextView!
-    @IBOutlet var termsAndCondWebKit: UIWebView!
+    @IBOutlet weak var termsAndCondWebKit: WKWebView!
     var fromSideMenu = ""
+    var languageStatus =  UserDefaults.standard.string(forKey: "LanguageLocalizable") ?? "0"
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        DispatchQueue.main.async {
-            self.stopLoading()
-            if self.header.text == "Terms & Conditions"{
-                self.termsAndCondWebKit.loadRequest(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "T&C-Sharon-English", ofType: "html")!) as URL) as URLRequest)
-            }else if self.header.text == "नियम एवं शर्तें" {
-                self.termsAndCondWebKit.loadRequest(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "T&C-Sharon-Hindi", ofType: "html")!) as URL) as URLRequest)
-            }else if self.header.text == "விதிமுறைகளும் நிபந்தனைகளும்" {
-                self.termsAndCondWebKit.loadRequest(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "T&C-Sharon-Tamil", ofType: "html")!) as URL) as URLRequest)
-            }else if self.header.text == "నిబంధనలు & షరతులు" {
-                self.termsAndCondWebKit.loadRequest(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "T&C-Sharon-Telugu", ofType: "html")!) as URL) as URLRequest)
-            }else{
-                self.termsAndCondWebKit.loadRequest(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "T&C-Sharon-English", ofType: "html")!) as URL) as URLRequest)
-            }
-           
-        }
+        localization()
     }
     
-    func localization(){
-        
+    private func localization(){
+        self.header.text = "lTermsAndConditionsKEY".localiz()
+        DispatchQueue.main.async {
+            if self.languageStatus == "1"{
+                self.termsAndCondWebKit.load(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "T&C-Sharon-English", ofType: "html")!) as URL) as URLRequest)
+            }else if self.languageStatus == "2"{
+                self.termsAndCondWebKit.load(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "T&C-Sharon-Hindi", ofType: "html")!) as URL) as URLRequest)
+            }else if self.languageStatus == "3"{
+                self.termsAndCondWebKit.load(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "T&C-Sharon-Tamil", ofType: "html")!) as URL) as URLRequest)
+            }else if self.languageStatus == "4"{
+                self.termsAndCondWebKit.load(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "T&C-Sharon-Telugu", ofType: "html")!) as URL) as URLRequest)
+            }else{
+                self.termsAndCondWebKit.load(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "T&C-Sharon-English", ofType: "html")!) as URL) as URLRequest)
+            }
+        }
     }
     
     

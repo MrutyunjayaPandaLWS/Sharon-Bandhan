@@ -9,6 +9,7 @@
 import Foundation
 import AVFoundation
 import Firebase
+import LanguageManager_iOS
 
 
 class ScannerViewModel: PopUpDelegate{
@@ -61,7 +62,7 @@ class ScannerViewModel: PopUpDelegate{
                         let splittedArray = unsplitedresponse.split(separator: "~")
                         print(splittedArray[0])
                         if splittedArray[0] == "1"{
-                           DispatchQueue.main.async {
+                            DispatchQueue.main.async {
                                 self.vc!.productname.text = self.codeGenuineResponse?.qrUsegereport?[0].productName ?? ""
                                 self.vc!.plantName.text = self.codeGenuineResponse?.plantName ?? ""
                                 self.vc!.thickness.text = self.codeGenuineResponse?.qrUsegereport?[0].thickness ?? ""
@@ -77,20 +78,20 @@ class ScannerViewModel: PopUpDelegate{
                                 self.appendDatatoListing(data: self.codeGenuineResponse!, StatusID: String(splittedArray[0]), scratchcode: code)
                                 self.appendGenuineSendDatatoListing(data: self.codeGenuineResponse!, StatusID:  String(splittedArray[0]))
                                 if self.validStoreCodesArray.count == 0{
-
+                                    
                                     self.vc!.generateEwarranty.isHidden = true
                                     self.vc!.generateEWarrantyBottom.isHidden = true
                                 }else{
                                     if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
-                                    //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
+                                        //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
                                         self.vc!.generateEwarranty.isHidden = true
                                         self.vc!.generateEWarrantyBottom.isHidden = true
-
+                                        
                                     }else{
                                         self.vc!.generateEwarranty.isHidden = false
                                         self.vc!.generateEWarrantyBottom.isHidden = false
                                     }
-
+                                    
                                 }
                                 self.vc!.codetableView.reloadData()
                                 if self.tempStoreCodesArray.count == 0{
@@ -100,258 +101,211 @@ class ScannerViewModel: PopUpDelegate{
                                 }
                                 if self.vc!.selectedindex == 1{
                                     self.vc!.isscannedOnce = true
-    //                                self.vc!.session.startRunning()
+                                    //                                self.vc!.session.startRunning()
                                 }else{
                                     self.vc!.isscannedOnce = true
                                     self.vc!.captureSession.stopRunning()
                                 }
-
+                                
                             }
-
+                            
                         }else if splittedArray[0] == "4"{
-                            var list3 = [QrUsegereport1]()
-                            list3 = self.tempStoreCodesArray.filter{ ($0.scratchCode == "\(code)") }
-                            print(list3.count)
-                            if list3.count ==  0 {
-//                                self.vc?.alertmsg(msg: "\(splittedArray[1])", title: "")
-                                self.vc?.alertWithAction(title: "", message: "\(splittedArray[1])")
-                            }
-                            self.appendDatatoListing(data: self.codeGenuineResponse!, StatusID: String(splittedArray[0]), scratchcode: code)
-                            self.appendGenuineSendDatatoListing(data: self.codeGenuineResponse!, StatusID:  String(splittedArray[0]))
-                            if self.validStoreCodesArray.count == 0{
-                                DispatchQueue.main.async {
-                                    self.vc!.generateEwarranty.isHidden = false
-                                    self.vc!.generateEWarrantyBottom.isHidden = true
-                                }
-                            }else{
-                                //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
-                                if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
-                                    DispatchQueue.main.async {
-                                        self.vc!.generateEwarranty.isHidden = true
-                                            self.vc!.generateEWarrantyBottom.isHidden = true
-                                    }
-                           
-                                    
-                                }else{
-                                    DispatchQueue.main.async {
-                                        self.vc!.generateEwarranty.isHidden = false
-                                        self.vc!.generateEWarrantyBottom.isHidden = false
-                                    }
-                                    
-                                }
-                            }
-                            DispatchQueue.main.async {
-                                self.vc!.codetableView.reloadData()
-                            }
-                           
-                            if self.tempStoreCodesArray.count == 0{
-                                self.vc!.codeDetails.isHidden = true
-                            }else{
-                                self.vc!.codeDetails.isHidden = false
-                            }
                             
-                            self.vc!.shadowView.isHidden = true
-                            if self.vc!.selectedindex == 1{
-                                self.vc!.isscannedOnce = true
-//                                self.vc!.session.startRunning()
-                            }else{
-                                self.vc!.isscannedOnce = true
-                                DispatchQueue.main.async {
-                                    self.vc?.captureSession.stopRunning()
-                                }
-
-                            }
-
-                        }else if splittedArray[0] == "-2"{
-                            var list3 = [QrUsegereport1]()
-                            self.checkMessage = String(splittedArray[1])
-                            if splittedArray[1] == "Kindly check download menu for the e-warranty" {
+                            DispatchQueue.main.async {
+                                var list3 = [QrUsegereport1]()
                                 list3 = self.tempStoreCodesArray.filter{ ($0.scratchCode == "\(code)") }
+                                print(list3.count)
                                 if list3.count ==  0 {
+                                    //                                self.vc?.alertmsg(msg: "\(splittedArray[1])", title: "")
                                     self.vc?.alertWithAction(title: "", message: "\(splittedArray[1])")
-//                                    self.vc!.alertmsg(msg: "\(splittedArray[1])", title: "")
                                 }
-                            } else {
-                                list3 = self.tempStoreCodesArray.filter{ ($0.scratchCode == "\(code)") }
-                                if list3.count ==  0 {
-                                    self.vc?.alertWithAction(title: "", message: "\(splittedArray[1]) " + "\(self.codeGenuineResponse?.qrUsegereport?[0].memberName ?? "")")
-//                                    self.vc?.alertmsg(msg: "\(splittedArray[1]) " + "\(self.codeGenuineResponse.membername ?? "")", title: "")
-                                }
-                            }
-
-                            DispatchQueue.main.async {
-                                self.vc!.productname.text = self.codeGenuineResponse?.qrUsegereport?[0].productName ?? ""
-                                self.vc!.plantName.text = self.codeGenuineResponse?.plantName ?? ""
-                                self.vc!.thickness.text = self.codeGenuineResponse?.qrUsegereport?[0].thickness ?? ""
-                                self.vc!.size.text = self.codeGenuineResponse?.qrUsegereport?[0].size ?? ""
-                                if self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "" != "" && self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "" != nil && self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "" != "-"{
-                                    self.vc!.dateofMfg.text = self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "01/01/0001 00:00:00" //self.dateformatterFunc(stringDate: self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "01/01/0001 00:00:00")
-                                }else{
-                                    self.vc!.dateofMfg.text = "-"
-                                }
-                                self.vc!.uniqueCode.text = self.codeGenuineResponse?.qrUsegereport?[0].scratchCode ?? ""
                                 self.appendDatatoListing(data: self.codeGenuineResponse!, StatusID: String(splittedArray[0]), scratchcode: code)
-                            }
-                            
-
-                            if self.validStoreCodesArray.count == 0{
-                                DispatchQueue.main.async {
-                                    self.vc!.generateEwarranty.isHidden = true
-                                    self.vc!.generateEWarrantyBottom.isHidden = true
-                                }
-                               
-
-                            }else{
-                                //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
-                                if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
-                                    
-                                    DispatchQueue.main.async {
-                                        self.vc!.generateEwarranty.isHidden = true
-                                            self.vc!.generateEWarrantyBottom.isHidden = true
-                                    }
-                                    
-                                
-
-                                }else{
-                                    DispatchQueue.main.async {
-                                        self.vc!.generateEwarranty.isHidden = true
-                                        self.vc!.generateEWarrantyBottom.isHidden = false
-                                    }
-                                    
-                                    
-                                    
-                                }
-                                
-                            }
-                            
-                            self.vc!.codetableView.reloadData()
-                            if self.tempStoreCodesArray.count == 0{
-                                self.vc!.codeDetails.isHidden = true
-                            }else{
-                                self.vc!.codeDetails.isHidden = false
-                            }
-                            if self.vc!.selectedindex == 1{
-                                self.vc!.isscannedOnce = true
-//                                self.vc!.session.startRunning()
-                            }else{
-                                self.vc!.isscannedOnce = true
-                                DispatchQueue.main.async {
-                                    self.vc?.captureSession.stopRunning()
-
-                                }
-                            }
-                        }else if splittedArray[0] == "3"{
-                            var list3 = [QrUsegereport1]()
-                            list3 = self.tempStoreCodesArray.filter{ ($0.scratchCode == "\(code)") }
-                            print(list3.count)
-                            if list3.count ==  0 {
-                                self.vc?.alertWithAction(title: "", message: "\(splittedArray[1])")
-//                                self.vc?.alertmsg(msg: "\(splittedArray[1])", title: "")
-                            }
-
-                            self.appendDatatoListing(data: self.codeGenuineResponse!, StatusID: String(splittedArray[0]), scratchcode: code)
-                            DispatchQueue.main.async {
-                                self.vc!.statusLabel.text = "\(splittedArray[1])"
-                                self.message = "\(splittedArray[1])"
+                                self.appendGenuineSendDatatoListing(data: self.codeGenuineResponse!, StatusID:  String(splittedArray[0]))
                                 if self.validStoreCodesArray.count == 0{
-                                    self.vc!.generateEwarranty.isHidden = true
+                                    self.vc!.generateEwarranty.isHidden = false
                                     self.vc!.generateEWarrantyBottom.isHidden = true
                                 }else{
                                     //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
                                     if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
-                                    self.vc!.generateEwarranty.isHidden = true
+                                        self.vc!.generateEwarranty.isHidden = true
                                         self.vc!.generateEWarrantyBottom.isHidden = true
-
                                     }else{
                                         self.vc!.generateEwarranty.isHidden = false
                                         self.vc!.generateEWarrantyBottom.isHidden = false
                                     }
-                                    
                                 }
-
                                 self.vc!.codetableView.reloadData()
                                 if self.tempStoreCodesArray.count == 0{
                                     self.vc!.codeDetails.isHidden = true
                                 }else{
                                     self.vc!.codeDetails.isHidden = false
                                 }
-                            }
-                            DispatchQueue.main.async {
+                                
                                 self.vc!.shadowView.isHidden = true
-                            }
-                           
-                            if self.vc!.selectedindex == 1{
-                                self.vc!.isscannedOnce = true
-//                                self.vc!.session.startRunning()
-                            }else{
-                                self.vc!.isscannedOnce = true
-                                DispatchQueue.main.async {
+                                if self.vc!.selectedindex == 1{
+                                    self.vc!.isscannedOnce = true
+                                    //                                self.vc!.session.startRunning()
+                                }else{
+                                    self.vc!.isscannedOnce = true
                                     self.vc?.captureSession.stopRunning()
                                 }
                             }
-                        }else if splittedArray[0] == "5"{
-                            var list3 = [QrUsegereport1]()
-                            list3 = self.tempStoreCodesArray.filter{ ($0.scratchCode == "\(code)") }
-                            print(list3.count)
-                            if list3.count ==  0 {
-                                self.vc?.alertWithAction(title: "", message: "\(splittedArray[1])")
-//                                self.vc?.alertmsg(msg: "\(splittedArray[1])", title: "")
-                            }
-                            self.appendDatatoListing(data: self.codeGenuineResponse!, StatusID: String(splittedArray[0]), scratchcode: code)
-                            self.vc!.statusLabel.text = "\(splittedArray[1])"
-                            self.message2 = "\(splittedArray[1])"
-
-
-                            if self.validStoreCodesArray.count == 0{
+                            
+                        }else if splittedArray[0] == "-2"{
+                            DispatchQueue.main.async {
+                                var list3 = [QrUsegereport1]()
+                                self.checkMessage = String(splittedArray[1])
+                                if splittedArray[1] == "Kindly check download menu for the e-warranty" {
+                                    list3 = self.tempStoreCodesArray.filter{ ($0.scratchCode == "\(code)") }
+                                    if list3.count ==  0 {
+                                        self.vc?.alertWithAction(title: "", message: "\(splittedArray[1])")
+                                        //                                    self.vc!.alertmsg(msg: "\(splittedArray[1])", title: "")
+                                    }
+                                } else {
+                                    list3 = self.tempStoreCodesArray.filter{ ($0.scratchCode == "\(code)") }
+                                    if list3.count ==  0 {
+                                        self.vc?.alertWithAction(title: "", message: "\(splittedArray[1]) " + "\(self.codeGenuineResponse?.qrUsegereport?[0].memberName ?? "")")
+                                        //                                    self.vc?.alertmsg(msg: "\(splittedArray[1]) " + "\(self.codeGenuineResponse.membername ?? "")", title: "")
+                                    }
+                                }
+                                
                                 DispatchQueue.main.async {
+                                    self.vc!.productname.text = self.codeGenuineResponse?.qrUsegereport?[0].productName ?? ""
+                                    self.vc!.plantName.text = self.codeGenuineResponse?.plantName ?? ""
+                                    self.vc!.thickness.text = self.codeGenuineResponse?.qrUsegereport?[0].thickness ?? ""
+                                    self.vc!.size.text = self.codeGenuineResponse?.qrUsegereport?[0].size ?? ""
+                                    if self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "" != "" && self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "" != nil && self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "" != "-"{
+                                        self.vc!.dateofMfg.text = self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "01/01/0001 00:00:00" //self.dateformatterFunc(stringDate: self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "01/01/0001 00:00:00")
+                                    }else{
+                                        self.vc!.dateofMfg.text = "-"
+                                    }
+                                    self.vc!.uniqueCode.text = self.codeGenuineResponse?.qrUsegereport?[0].scratchCode ?? ""
+                                    self.appendDatatoListing(data: self.codeGenuineResponse!, StatusID: String(splittedArray[0]), scratchcode: code)
+                                }
+                                
+                                
+                                if self.validStoreCodesArray.count == 0{
                                     self.vc!.generateEwarranty.isHidden = true
                                     self.vc!.generateEWarrantyBottom.isHidden = true
-
-                                }
-                            }else{
-                                //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
-                                if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
-                                    DispatchQueue.main.async {
-                                        self.vc!.generateEwarranty.isHidden = true
-                                            self.vc!.generateEWarrantyBottom.isHidden = true
-                                    }
-                               
-
                                 }else{
-                                    DispatchQueue.main.async {
+                                    //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
+                                    if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
+                                        self.vc!.generateEwarranty.isHidden = true
+                                        self.vc!.generateEWarrantyBottom.isHidden = true
+                                    }else{
                                         self.vc!.generateEwarranty.isHidden = true
                                         self.vc!.generateEWarrantyBottom.isHidden = false
                                     }
                                     
                                 }
-                            
-                            }
-                            
-                            self.vc!.codetableView.reloadData()
-                            if self.tempStoreCodesArray.count == 0{
-                                self.vc!.codeDetails.isHidden = true
+                                self.vc!.codetableView.reloadData()
+                                if self.tempStoreCodesArray.count == 0{
+                                    self.vc!.codeDetails.isHidden = true
                                 }else{
-                                self.vc!.codeDetails.isHidden = false
+                                    self.vc!.codeDetails.isHidden = false
+                                }
+                                if self.vc!.selectedindex == 1{
+                                    self.vc!.isscannedOnce = true
+                                    //                                self.vc!.session.startRunning()
+                                }else{
+                                    self.vc!.isscannedOnce = true
+                                    self.vc?.captureSession.stopRunning()
+                                }
                             }
-                            
-                            
-                            self.vc!.shadowView.isHidden = true
-                            if self.vc!.selectedindex == 1{
-                                self.vc!.isscannedOnce = true
-//                                self.vc!.session.startRunning()
-                            }else{
-                                self.vc!.isscannedOnce = true
-                                DispatchQueue.main.async {
-                                    self.vc!.captureSession.stopRunning()
+                        }else if splittedArray[0] == "3"{
+                            DispatchQueue.main.async {
+                                var list3 = [QrUsegereport1]()
+                                list3 = self.tempStoreCodesArray.filter{ ($0.scratchCode == "\(code)") }
+                                print(list3.count)
+                                if list3.count ==  0 {
+                                    self.vc?.alertWithAction(title: "", message: "\(splittedArray[1])")
+                                    //                                self.vc?.alertmsg(msg: "\(splittedArray[1])", title: "")
                                 }
                                 
+                                self.appendDatatoListing(data: self.codeGenuineResponse!, StatusID: String(splittedArray[0]), scratchcode: code)
+                                DispatchQueue.main.async {
+                                    self.vc!.statusLabel.text = "\(splittedArray[1])"
+                                    self.message = "\(splittedArray[1])"
+                                    if self.validStoreCodesArray.count == 0{
+                                        self.vc!.generateEwarranty.isHidden = true
+                                        self.vc!.generateEWarrantyBottom.isHidden = true
+                                    }else{
+                                        //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
+                                        if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
+                                            self.vc!.generateEwarranty.isHidden = true
+                                            self.vc!.generateEWarrantyBottom.isHidden = true
+                                            
+                                        }else{
+                                            self.vc!.generateEwarranty.isHidden = false
+                                            self.vc!.generateEWarrantyBottom.isHidden = false
+                                        }
+                                    }
+                                    self.vc!.codetableView.reloadData()
+                                    if self.tempStoreCodesArray.count == 0{
+                                        self.vc!.codeDetails.isHidden = true
+                                    }else{
+                                        self.vc!.codeDetails.isHidden = false
+                                    }
+                                }
+                                DispatchQueue.main.async {
+                                    self.vc!.shadowView.isHidden = true
+                                }
+                                
+                                if self.vc!.selectedindex == 1{
+                                    self.vc!.isscannedOnce = true
+                                    //                                self.vc!.session.startRunning()
+                                }else{
+                                    self.vc!.isscannedOnce = true
+                                    DispatchQueue.main.async {
+                                        self.vc?.captureSession.stopRunning()
+                                    }
+                                }
+                            }
+                        }else if splittedArray[0] == "5"{
+                            DispatchQueue.main.async {
+                                var list3 = [QrUsegereport1]()
+                                list3 = self.tempStoreCodesArray.filter{ ($0.scratchCode == "\(code)") }
+                                print(list3.count)
+                                if list3.count ==  0 {
+                                    self.vc?.alertWithAction(title: "", message: "\(splittedArray[1])")
+                                    //                                self.vc?.alertmsg(msg: "\(splittedArray[1])", title: "")
+                                }
+                                self.appendDatatoListing(data: self.codeGenuineResponse!, StatusID: String(splittedArray[0]), scratchcode: code)
+                                self.vc!.statusLabel.text = "\(splittedArray[1])"
+                                self.message2 = "\(splittedArray[1])"
+                                if self.validStoreCodesArray.count == 0{
+                                    self.vc!.generateEwarranty.isHidden = true
+                                    self.vc!.generateEWarrantyBottom.isHidden = true
+                                }else{
+                                    //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
+                                    if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
+                                        self.vc!.generateEwarranty.isHidden = true
+                                        self.vc!.generateEWarrantyBottom.isHidden = true
+                                    }else{
+                                        self.vc!.generateEwarranty.isHidden = true
+                                        self.vc!.generateEWarrantyBottom.isHidden = false
+                                    }
+                                }
+                                self.vc!.codetableView.reloadData()
+                                if self.tempStoreCodesArray.count == 0{
+                                    self.vc!.codeDetails.isHidden = true
+                                }else{
+                                    self.vc!.codeDetails.isHidden = false
+                                }
+                                self.vc!.shadowView.isHidden = true
+                                if self.vc!.selectedindex == 1{
+                                    self.vc!.isscannedOnce = true
+                                    //                                self.vc!.session.startRunning()
+                                }else{
+                                    self.vc!.isscannedOnce = true
+                                    self.vc!.captureSession.stopRunning()
+                                }
                             }
                         }else if splittedArray[0] == "6"{
-                            //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7" {
-                            if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
-                            if self.vc!.selectedindex == 1 {
-                                    
-                                    DispatchQueue.main.async{
+                            DispatchQueue.main.async {
+                                //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7" {
+                                if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
+                                    if self.vc!.selectedindex == 1 {
                                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                                         vc!.delegate = self
                                         vc!.titleInfo = ""
@@ -360,11 +314,7 @@ class ScannerViewModel: PopUpDelegate{
                                         vc!.modalPresentationStyle = .overCurrentContext
                                         vc!.modalTransitionStyle = .crossDissolve
                                         self.vc!.present(vc!, animated: true, completion: nil)
-                                    }
-                                    
-                                } else if self.vc!.selectedindex == 2 {
-                                    
-                                    DispatchQueue.main.async{
+                                    } else if self.vc!.selectedindex == 2 {
                                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                                         vc!.delegate = self
                                         vc!.titleInfo = ""
@@ -376,112 +326,84 @@ class ScannerViewModel: PopUpDelegate{
                                     }
                                 }
                             }
-
                         }else if splittedArray[0] == "-3"{
-                            self.appendDatatoListing(data: self.codeGenuineResponse!, StatusID: String(splittedArray[0]), scratchcode: code)
-                            self.vc!.statusLabel.text = "You are not entitled to this product"
-
-                            if self.validStoreCodesArray.count == 0{
-                                DispatchQueue.main.async {
-                                    self.vc!.generateEwarranty.isHidden = true
-                                    self.vc!.generateEWarrantyBottom.isHidden = true
-                                }
-                                
-                                
-
-                            }else{
-                                if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
-                                //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
-                                    DispatchQueue.main.async {
+                            DispatchQueue.main.async {
+                                self.appendDatatoListing(data: self.codeGenuineResponse!, StatusID: String(splittedArray[0]), scratchcode: code)
+                                let message4 = "You are not entitled to this product"
+                                self.vc!.statusLabel.text = message4
+                                self.vc?.alertWithAction(title: "", message: message4.localiz())
+                                if self.validStoreCodesArray.count == 0{
                                         self.vc!.generateEwarranty.isHidden = true
                                         self.vc!.generateEWarrantyBottom.isHidden = true
-                                    }
-                                    
-
                                 }else{
-                                    DispatchQueue.main.async {
+                                    if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
+                                        //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
+                                        self.vc!.generateEwarranty.isHidden = true
+                                        self.vc!.generateEWarrantyBottom.isHidden = true
+                                    }else{
                                         self.vc!.generateEwarranty.isHidden = true
                                         self.vc!.generateEWarrantyBottom.isHidden = false
                                     }
-                                    
                                 }
-
-                            }
-
-                            self.vc!.codetableView.reloadData()
-                            if self.tempStoreCodesArray.count == 0{
-                                self.vc!.codeDetails.isHidden = true
-                            }else{
-                                self.vc!.codeDetails.isHidden = false
-                            }
-
-
-                            self.vc!.shadowView.isHidden = true
-                            if self.vc!.selectedindex == 1{
-                                self.vc!.isscannedOnce = true
-                                DispatchQueue.main.asyncAfter(deadline: .now()+1.0, execute: {
+                                
+                                
+                                self.vc!.codetableView.reloadData()
+                                if self.tempStoreCodesArray.count == 0{
+                                    self.vc!.codeDetails.isHidden = true
+                                }else{
+                                    self.vc!.codeDetails.isHidden = false
+                                }
+                                self.vc!.shadowView.isHidden = true
+                                if self.vc!.selectedindex == 1{
+                                    self.vc!.isscannedOnce = true
                                     self.vc!.captureSession.startRunning()
-                                })
-                               
-                            }else{
-                                self.vc!.isscannedOnce = true
-                                DispatchQueue.main.async {
+                                }else{
+                                    self.vc!.isscannedOnce = true
                                     self.vc!.captureSession.stopRunning()
                                 }
                             }
+                            
                         }else if splittedArray[0] == "-1"{
                             DispatchQueue.main.async{
                                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                                 vc!.delegate = self
                                 vc!.titleInfo = ""
-                                vc!.descriptionInfo = "Please enter the valid code"
+                                vc!.descriptionInfo = "Please enter the valid code".localiz()
+                                vc!.itsFrom = "ScannerAlertPopUp"
                                 vc!.modalPresentationStyle = .overCurrentContext
                                 vc!.modalTransitionStyle = .crossDissolve
                                 self.vc!.present(vc!, animated: true, completion: nil)
                             }
                         }else{
-                            self.appendDatatoListing(data: self.codeGenuineResponse!, StatusID: String(splittedArray[0]), scratchcode: code)
                             DispatchQueue.main.async {
-                                self.vc!.statusLabel.text = "Not a Sharon Ply Genuine Product"
-                            }
+                            self.appendDatatoListing(data: self.codeGenuineResponse!, StatusID: String(splittedArray[0]), scratchcode: code)
+                                let errorMessage = "Not a Sharon Ply Genuine Product"
+                                self.vc!.statusLabel.text = errorMessage
                             print(self.validStoreCodesArray.count, "Valid Store Codes")
+                                self.vc?.alertWithAction(title: "", message: errorMessage.localiz())
                             if self.validStoreCodesArray.count == 0{
-                                DispatchQueue.main.async {
                                     self.vc!.generateEwarranty.isHidden = true
                                     self.vc!.generateEWarrantyBottom.isHidden = true
-                                }
-                                
-
                             }else{
                                 if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5"{
-                                //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
-                                    DispatchQueue.main.async {
+                                    //if UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "5" || UserDefaults.standard.string(forKey: "CUSTTYPE") ?? "-1" == "7"{
                                         self.vc!.generateEwarranty.isHidden = true
                                         self.vc!.generateEWarrantyBottom.isHidden = true
-
-                                    }
-                                    
                                 }else{
-                                    DispatchQueue.main.async {
                                         self.vc!.generateEwarranty.isHidden = true
                                         self.vc!.generateEWarrantyBottom.isHidden = false
-                                    }
-                                    
-                                    
                                 }
-
+                                
                             }
-                            DispatchQueue.main.async {
                                 self.vc!.codetableView.reloadData()
-                            }
                             
                             if self.tempStoreCodesArray.count == 0{
                                 self.vc!.codeDetails.isHidden = true
                             }else{
                                 self.vc!.codeDetails.isHidden = false
                             }
-
-
+                            
+                            
                             self.vc!.shadowView.isHidden = true
                             if self.vc!.selectedindex == 1{
                                 self.vc!.isscannedOnce = true
@@ -491,23 +413,21 @@ class ScannerViewModel: PopUpDelegate{
                                 
                             }else{
                                 self.vc!.isscannedOnce = true
-                                DispatchQueue.main.async {
                                     self.vc!.captureSession.stopRunning()
-                                }
                             }
                         }
+                    }
                     }else{
                         DispatchQueue.main.async{
                             self.vc!.stopLoading()
                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                             vc!.delegate = self
                             vc!.titleInfo = ""
-                            vc!.itsFrom = ""
-                            vc!.descriptionInfo = "Not a Sharon Ply Genuine Product"
+                            vc!.itsFrom = "ScannerAlertPopUp"
+                            vc!.descriptionInfo = "Not a Sharon Ply Genuine Product".localiz()
                             vc!.modalPresentationStyle = .overCurrentContext
                             vc!.modalTransitionStyle = .crossDissolve
                             self.vc!.present(vc!, animated: true, completion: nil)
-                        }
                         self.vc!.shadowView.isHidden = true
                         if self.vc!.selectedindex == 1{
                             self.vc!.isscannedOnce = true
@@ -516,11 +436,9 @@ class ScannerViewModel: PopUpDelegate{
                             })
                         }else{
                             self.vc!.isscannedOnce = true
-                            DispatchQueue.main.async {
                                 self.vc!.captureSession.stopRunning()
-                            }
-                            
                         }
+                    }
                     }
                     DispatchQueue.main.async {
                         self.vc?.codeTF.text = ""
@@ -567,12 +485,12 @@ class ScannerViewModel: PopUpDelegate{
             }
         }else{
             let filterdArray = self.tempStoreCodesArray.filter { $0.scratchCode == scratchcode}
-            print(data.qrUsegereport?[0].memberName ?? "")
             if filterdArray.count == 0{
                 guard data.qrUsegereport?.count != 0 else{
                     print("qrcode data is empty-3")
                     return
                 }
+                print(data.qrUsegereport?[0].memberName ?? "")
                 var genuineData : QrUsegereport1 = (data.qrUsegereport?[0])!
                 genuineData.scratchCode = scratchcode
                 genuineData.codeStatusWiseCount = 1
@@ -601,7 +519,7 @@ class ScannerViewModel: PopUpDelegate{
                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                         vc!.delegate = self
                         vc!.titleInfo = ""
-                        vc!.descriptionInfo = "Code is already scanned"
+                        vc!.descriptionInfo = "Code is already scanned".localiz()
                         vc!.modalPresentationStyle = .overCurrentContext
                         vc!.modalTransitionStyle = .crossDissolve
                         self.vc!.present(vc!, animated: true, completion: nil)
@@ -617,7 +535,7 @@ class ScannerViewModel: PopUpDelegate{
                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                         vc!.delegate = self
                         vc!.titleInfo = ""
-                        vc!.descriptionInfo = "Code is already uploaded"
+                        vc!.descriptionInfo = "Code is already uploaded".localiz()
                         vc!.modalPresentationStyle = .overCurrentContext
                         vc!.modalTransitionStyle = .crossDissolve
                         self.vc!.present(vc!, animated: true, completion: nil)

@@ -8,6 +8,7 @@
 import UIKit
 import SDWebImage
 import Firebase
+import LanguageManager_iOS
 
 class OffersDetailsViewController: BaseViewController {
     @IBOutlet weak var offersImg: UIImageView!
@@ -48,16 +49,18 @@ class OffersDetailsViewController: BaseViewController {
         
     }
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.header.text = "Offers & Promotions"
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.header.text = "ऑफ़र और प्रचार"
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.header.text = "অফার এবং প্রচার"
-        }else{
-            self.header.text = "ఆఫర్‌లు & ప్రమోషన్‌లు"
-        }
+        self.header.text = "opOffersAndMarketingKEY".localiz()
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.header.text = "opOffersAndMarketingKEY".localiz()
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.header.text = "ऑफ़र और प्रचार"
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.header.text = "অফার এবং প্রচার"
+//        }else{
+//            self.header.text = "ఆఫర్‌లు & ప్రమోషన్‌లు"
+//        }
     }
     
     @IBAction func backBTN(_ sender: Any) {

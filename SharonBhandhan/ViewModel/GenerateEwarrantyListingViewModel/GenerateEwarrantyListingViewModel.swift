@@ -7,13 +7,23 @@
 //
 
 import UIKit
-
+import LanguageManager_iOS
 
 
 class GenerateEwarrantyListingViewModel: PopUpDelegate{
-    func popUpAlertDidTap2(_ vc: PopUp2ViewController) {}
+    func popUpAlertDidTap2(_ vc: PopUp2ViewController) {
+        if vc.itsFrom == "EwarrantySuccess"{
+            for controller in (self.vc?.navigationController!.viewControllers)! as Array {
+                if controller.isKind(of: DownloadEWarrantyListViewController.self) {
+                    self.vc?.navigationController!.popToViewController(controller, animated: true)
+                    break
+                }
+            }
+        }
+        
+    }
     
-    func popUpAlertDidTap(_ vc: PopUp2ViewController) {}
+//    func popUpAlertDidTap(_ vc: PopUp2ViewController) {}
     
     
     var vc:GnerateEWarrantyViewController?
@@ -48,7 +58,7 @@ class GenerateEwarrantyListingViewModel: PopUpDelegate{
                             vc!.delegate = self
                             vc!.titleInfo = ""
                             vc!.itsFrom = "EwarrantySuccess"
-                            vc!.descriptionInfo = "E-Warranty generated successfully.You can download the E-Warranty in Download E-warranty Section"
+                            vc!.descriptionInfo = "E-Warranty generated successfully.You can download the E-Warranty in Download E-warranty Section".localiz()
                             vc!.modalPresentationStyle = .overCurrentContext
                             vc!.modalTransitionStyle = .crossDissolve
                             self.vc!.present(vc!, animated: true, completion: nil)
@@ -60,7 +70,7 @@ class GenerateEwarrantyListingViewModel: PopUpDelegate{
                             self.vc!.stopLoading()
                             vc!.titleInfo = ""
                             vc!.itsFrom = "EwarrantyFailed"
-                            vc!.descriptionInfo = "E-Warranty generation failed.Please try after sometime"
+                            vc!.descriptionInfo = "E-Warranty generation failed.Please try after sometime".localiz()
                             vc!.modalPresentationStyle = .overCurrentContext
                             vc!.modalTransitionStyle = .crossDissolve
                             self.vc!.present(vc!, animated: true, completion: nil)

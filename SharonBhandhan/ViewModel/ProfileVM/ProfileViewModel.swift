@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 class ProfileViewModel: popUpDelegate{
     func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
@@ -13,7 +14,8 @@ class ProfileViewModel: popUpDelegate{
 
     weak var VC: ProfileViewController?
     var requestAPIs = RestAPI_Requests()
-    
+    var userID = UserDefaults.standard.string(forKey: "UserID") ?? ""
+    var loyaltyID  = UserDefaults.standard.string(forKey: "LoyaltyID") ?? ""
     
     func myProifleDetails(parameters: JSON, completion: @escaping (MyProfileModels?) -> ()){
         self.VC?.startLoading()
@@ -46,13 +48,16 @@ class ProfileViewModel: popUpDelegate{
         DispatchQueue.main.async {
               self.VC?.startLoading()
          }
+
+        
         let parameters = [
-            "ActorId": "\(UserDefaults.standard.string(forKey: "UserID") ?? "")",
+            "ActorId": "\(userID)",
             "ObjCustomerJson": [
                 "DisplayImage": "\(base64)",
-                "LoyaltyId": "\(UserDefaults.standard.string(forKey: "LoyaltyID") ?? "")"
+                "LoyaltyId": "\(loyaltyID)"
             ]
         ]as [String : Any]
+        
         print(parameters,"imageAPI")
         self.requestAPIs.imageSavingAPI(parameters: parameters) { (result, error) in
             if error == nil{
@@ -65,7 +70,7 @@ class ProfileViewModel: popUpDelegate{
                                 vc!.delegate = self
                                 vc!.titleInfo = ""
                                 vc!.itsComeFrom = "MyProfileImage"
-                                vc!.descriptionInfo = "Profile image updated successfully"
+                                vc!.descriptionInfo = "Profile image updated successfully".localiz()
                                 vc!.modalPresentationStyle = .overFullScreen
                                 vc!.modalTransitionStyle = .crossDissolve
                                 self.VC?.present(vc!, animated: true, completion: nil)
@@ -77,7 +82,7 @@ class ProfileViewModel: popUpDelegate{
                                 vc!.delegate = self
                                 vc!.titleInfo = ""
                                 vc!.itsComeFrom = "MyProfileImage"
-                                vc!.descriptionInfo = "Profile image update Failed"
+                                vc!.descriptionInfo = "Profile image update Failed".localiz()
                                 vc!.modalPresentationStyle = .overFullScreen
                                 vc!.modalTransitionStyle = .crossDissolve
                                 self.VC?.present(vc!, animated: true, completion: nil)

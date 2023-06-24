@@ -12,6 +12,7 @@ import PDFKit
 import Alamofire
 import Firebase
 import AVFoundation
+import LanguageManager_iOS
 
 
 class DownloadEWarrantyListViewController: BaseViewController, eWarrantyDelegate, UIDocumentInteractionControllerDelegate, popUpDelegate{
@@ -62,15 +63,17 @@ class DownloadEWarrantyListViewController: BaseViewController, eWarrantyDelegate
     }
     
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.header.text = "E-Warranty"
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.header.text = "ई-वारंटी"
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.header.text = "ই-ওয়ারেন্টি"
-        }else{
-            self.header.text = "ఇ-వారంటీ"
-        }
+        self.header.text = "E-Warranty".localiz()
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.header.text = "E-Warranty"
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.header.text = "ई-वारंटी"
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.header.text = "ই-ওয়ারেন্টি"
+//        }else{
+//            self.header.text = "ఇ-వారంటీ"
+//        }
     }
     func e_warrantyAPICall() {
         let parameters = ["ActionType":2,"CustomerID": userID]
@@ -116,16 +119,16 @@ class DownloadEWarrantyListViewController: BaseViewController, eWarrantyDelegate
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "No Attachment found to download E-Warranty"
-                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                     vc!.descriptionInfo = "ई-वारंटी डाउनलोड करने के लिए कोई अटैचमेंट नहीं मिला"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "ই-ওয়্যারেন্টি ডাউনলোড করার জন্য কোন সংযুক্তি পাওয়া যায়নি"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "E-వారంటీని డౌన్‌లోడ్ చేయడానికి జోడింపు కనుగొనబడలేదు"
-                  }
+                vc!.descriptionInfo = "No Attachment found to download E-Warranty".localiz()
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "No Attachment found to download E-Warranty".localiz()
+//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                     vc!.descriptionInfo = "ई-वारंटी डाउनलोड करने के लिए कोई अटैचमेंट नहीं मिला"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "ই-ওয়্যারেন্টি ডাউনলোড করার জন্য কোন সংযুক্তি পাওয়া যায়নি"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "E-వారంటీని డౌన్‌లోడ్ చేయడానికి జోడింపు కనుగొనబడలేదు"
+//                  }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)

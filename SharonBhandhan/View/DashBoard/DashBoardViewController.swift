@@ -127,15 +127,16 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
             vc!.delegate = self
             vc!.titleInfo = ""
             vc!.itsComeFrom = "AccountVerification"
-            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                vc!.descriptionInfo = "You are not allowled to redeem .Please contact your administrator"
-             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                 vc!.descriptionInfo = "आपको रिडीम करने की अनुमति नहीं है। कृपया अपने व्यवस्थापक से संपर्क करें"
-            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                vc!.descriptionInfo = "ரிடீம் செய்ய உங்களுக்கு அனுமதி இல்லை .தயவுசெய்து உங்கள் நிர்வாகியைத் தொடர்பு கொள்ளவும்"
-            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                vc!.descriptionInfo = "రీడీమ్ చేసుకోవడానికి మీకు అనుమతి లేదు .దయచేసి మీ నిర్వాహకుడిని సంప్రదించండి"
-              }
+            vc!.descriptionInfo = "NotAllowedRedeemKey".localiz()
+//            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                vc!.descriptionInfo = "You are not allowled to redeem .Please contact your administrator"
+//             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                 vc!.descriptionInfo = "आपको रिडीम करने की अनुमति नहीं है। कृपया अपने व्यवस्थापक से संपर्क करें"
+//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                vc!.descriptionInfo = "ரிடீம் செய்ய உங்களுக்கு அனுமதி இல்லை .தயவுசெய்து உங்கள் நிர்வாகியைத் தொடர்பு கொள்ளவும்"
+//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                vc!.descriptionInfo = "రీడీమ్ చేసుకోవడానికి మీకు అనుమతి లేదు .దయచేసి మీ నిర్వాహకుడిని సంప్రదించండి"
+//              }
             vc!.modalPresentationStyle = .overCurrentContext
             vc!.modalTransitionStyle = .crossDissolve
             self.present(vc!, animated: true, completion: nil)
@@ -284,55 +285,68 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
     }
     
     func languageLocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            points.text = "hpPointsKEY".localizableString(loc: "en");
-            tierNameLabel.text = "hpTierKEY".localizableString(loc: "en");
-            lodgequery.text = "Lodge Query"
-            myredemptions.text = "My Redemption"
-            helplinecall.text = "Helpline Call"
-            redemptionCatalogue.text = "Redemption Catalogue"
-            panDeatilsl.text = "Pan Details"
-            dreamGift.text = "My Dream Gift"
-            maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "en")
-            scanAndUploadImg.image = UIImage(named: "Group 5912")
-            eWarranty.text = "E - Warranty"
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            points.text = "hpPointsKEY".localizableString(loc: "hi");
-            panDeatilsl.text = "panDetails".localizableString(loc: "hi")
-            tierNameLabel.text = "hpTierKEY".localizableString(loc: "hi");
-            lodgequery.text = "hpLodgeQueryKEY".localizableString(loc: "hi");
-            myredemptions.text = "hpMyRedemptionsKEY".localizableString(loc: "hi");
-            helplinecall.text = "hpHelpLineCallKEY".localizableString(loc: "hi");
-            redemptionCatalogue.text = "hpRedemptionCatalogueKEY".localizableString(loc: "hi");
-            dreamGift.text = "माई ड्रीम गिफ्ट"
-            maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "hi")
-            scanAndUploadImg.image = UIImage(named: "Group 6556")
-            eWarranty.text = "ई - वारंटी"
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            points.text = "hpPointsKEY".localizableString(loc: "ta-IN");
-            panDeatilsl.text = "panDetails".localizableString(loc: "ta-IN")
-            tierNameLabel.text = "hpTierKEY".localizableString(loc: "ta-IN");
-            lodgequery.text = "hpLodgeQueryKEY".localizableString(loc: "ta-IN");
-            myredemptions.text = "hpMyRedemptionsKEY".localizableString(loc: "ta-IN");
-            helplinecall.text = "hpHelpLineCallKEY".localizableString(loc: "ta-IN");
-            redemptionCatalogue.text = "hpRedemptionCatalogueKEY".localizableString(loc: "ta-IN");
-            dreamGift.text = "என் கனவு பரிசு"
-            maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "ta-IN")
-            scanAndUploadImg.image = UIImage(named: "Group 6557")
-            eWarranty.text = "மின் - உத்தரவாதம்"
-        }else{
-            points.text = "hpPointsKEY".localizableString(loc: "te");
-            panDeatilsl.text = "panDetails".localizableString(loc: "te")
-            tierNameLabel.text = "hpTierKEY".localizableString(loc: "te");
-            lodgequery.text = "hpLodgeQueryKEY".localizableString(loc: "te");
-            myredemptions.text = "hpMyRedemptionsKEY".localizableString(loc: "te");
-            helplinecall.text = "hpHelpLineCallKEY".localizableString(loc: "te");
-            redemptionCatalogue.text = "hpRedemptionCatalogueKEY".localizableString(loc: "te");
-            dreamGift.text = "నా డ్రీమ్ గిఫ్ట్"
-            maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "te")
-            scanAndUploadImg.image = UIImage(named: "Group 6558")
-            eWarranty.text = "ఇ - వారంటీ"
-        }
+        
+        points.text = "hpPointsKEY".localizableString(loc: "en");
+        tierNameLabel.text = "hpTierKEY".localizableString(loc: "en");
+        lodgequery.text = "hpLodgeQueryKEY".localiz()
+        myredemptions.text = "hpMyRedemptionsKEY".localiz()
+        helplinecall.text = "hpHelpLineCallKEY".localiz()
+        redemptionCatalogue.text = "rcRedemptionCatalogueKEY".localiz()
+        panDeatilsl.text = "panDetails".localiz()
+        dreamGift.text = "mdgMyDreamGiftKEY".localiz()
+        maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localiz()
+        scanAndUploadImg.image = UIImage(named: "Group 5912")
+        eWarranty.text = "EWarranty".localiz()
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            points.text = "hpPointsKEY".localizableString(loc: "en");
+//            tierNameLabel.text = "hpTierKEY".localizableString(loc: "en");
+//            lodgequery.text = "hpLodgeQueryKEY"
+//            myredemptions.text = "hpMyRedemptionsKEY"
+//            helplinecall.text = "hpHelpLineCallKEY"
+//            redemptionCatalogue.text = "Redemption Catalogue"
+//            panDeatilsl.text = "panDetails"
+//            dreamGift.text = "mdgMyDreamGiftKEY"
+//            maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "en")
+//            scanAndUploadImg.image = UIImage(named: "Group 5912")
+//            eWarranty.text = "EWarranty"
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            points.text = "hpPointsKEY".localizableString(loc: "hi");
+//            panDeatilsl.text = "panDetails".localizableString(loc: "hi")
+//            tierNameLabel.text = "hpTierKEY".localizableString(loc: "hi");
+//            lodgequery.text = "hpLodgeQueryKEY".localizableString(loc: "hi");
+//            myredemptions.text = "hpMyRedemptionsKEY".localizableString(loc: "hi");
+//            helplinecall.text = "hpHelpLineCallKEY".localizableString(loc: "hi");
+//            redemptionCatalogue.text = "hpRedemptionCatalogueKEY".localizableString(loc: "hi");
+//            dreamGift.text = "माई ड्रीम गिफ्ट"
+//            maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "hi")
+//            scanAndUploadImg.image = UIImage(named: "Group 6556")
+//            eWarranty.text = "ई - वारंटी"
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            points.text = "hpPointsKEY".localizableString(loc: "ta-IN");
+//            panDeatilsl.text = "panDetails".localizableString(loc: "ta-IN")
+//            tierNameLabel.text = "hpTierKEY".localizableString(loc: "ta-IN");
+//            lodgequery.text = "hpLodgeQueryKEY".localizableString(loc: "ta-IN");
+//            myredemptions.text = "hpMyRedemptionsKEY".localizableString(loc: "ta-IN");
+//            helplinecall.text = "hpHelpLineCallKEY".localizableString(loc: "ta-IN");
+//            redemptionCatalogue.text = "hpRedemptionCatalogueKEY".localizableString(loc: "ta-IN");
+//            dreamGift.text = "என் கனவு பரிசு"
+//            maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "ta-IN")
+//            scanAndUploadImg.image = UIImage(named: "Group 6557")
+//            eWarranty.text = "மின் - உத்தரவாதம்"
+//        }else{
+//            points.text = "hpPointsKEY".localizableString(loc: "te");
+//            panDeatilsl.text = "panDetails".localizableString(loc: "te")
+//            tierNameLabel.text = "hpTierKEY".localizableString(loc: "te");
+//            lodgequery.text = "hpLodgeQueryKEY".localizableString(loc: "te");
+//            myredemptions.text = "hpMyRedemptionsKEY".localizableString(loc: "te");
+//            helplinecall.text = "hpHelpLineCallKEY".localizableString(loc: "te");
+//            redemptionCatalogue.text = "hpRedemptionCatalogueKEY".localizableString(loc: "te");
+//            dreamGift.text = "నా డ్రీమ్ గిఫ్ట్"
+//            maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "te")
+//            scanAndUploadImg.image = UIImage(named: "Group 6558")
+//            eWarranty.text = "ఇ - వారంటీ"
+//        }
     }
     
     func ImageSetups(){
@@ -416,15 +430,16 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
                     vc!.titleInfo = ""
                     self.isActive = false
                     vc!.itsComeFrom = "DeactivateAccount"
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Your account is deactivated please check with the administrator"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "आपका खाता निष्क्रिय कर दिया गया है कृपया व्यवस्थापक से संपर्क करें"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "உங்கள் கணக்கு செயலிழக்கப்பட்டது, நிர்வாகியுடன் சரிபார்க்கவும்"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "మీ ఖాతా నిష్క్రియం చేయబడింది, దయచేసి నిర్వాహకుడిని సంప్రదించండి"
-                      }
+                    vc!.descriptionInfo = "account_deactivated_check_with_the_administrator".localiz()
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "account_deactivated_check_with_the_administrator".localiz()
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "आपका खाता निष्क्रिय कर दिया गया है कृपया व्यवस्थापक से संपर्क करें"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "உங்கள் கணக்கு செயலிழக்கப்பட்டது, நிர்வாகியுடன் சரிபார்க்கவும்"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "మీ ఖాతా నిష్క్రియం చేయబడింది, దయచేసి నిర్వాహకుడిని సంప్రదించండి"
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
@@ -487,15 +502,16 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
                     vc!.delegate = self
                     vc!.titleInfo = ""
                     vc!.itsComeFrom = "DeactivateAccount"
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Your account is deactivated please check with the administrator"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "आपका खाता निष्क्रिय कर दिया गया है कृपया व्यवस्थापक से संपर्क करें"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "உங்கள் கணக்கு செயலிழக்கப்பட்டது, நிர்வாகியுடன் சரிபார்க்கவும்"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "మీ ఖాతా నిష్క్రియం చేయబడింది, దయచేసి నిర్వాహకుడిని సంప్రదించండి"
-                      }
+                    vc!.descriptionInfo = "account_deactivated_check_with_the_administrator".localiz()
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Your account is deactivated please check with the administrator"
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "आपका खाता निष्क्रिय कर दिया गया है कृपया व्यवस्थापक से संपर्क करें"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "உங்கள் கணக்கு செயலிழக்கப்பட்டது, நிர்வாகியுடன் சரிபார்க்கவும்"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "మీ ఖాతా నిష్క్రియం చేయబడింది, దయచేసి నిర్వాహకుడిని సంప్రదించండి"
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
@@ -527,60 +543,74 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
                 print(appStore)
                 print(appstoreid)
                 if appStore>installed {
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        let alertController = UIAlertController(title: "New update Available!", message: "Update is available to download. Downloading the latest update you will get the latest features, improvements and bug fixes of Century Pro Club App", preferredStyle: .alert)
+                    
+                    let alertController = UIAlertController(title: "New update Available!".localiz(), message: "force update message".localiz(), preferredStyle: .alert)
+                    
+                    // Create the actions
+                    let okAction = UIAlertAction(title: "Update Now".localiz(), style: UIAlertAction.Style.default) {
+                        UIAlertAction in
+                        UIApplication.shared.openURL(NSURL(string: "\(trackUrl)")! as URL)
                         
-                        // Create the actions
-                        let okAction = UIAlertAction(title: "Update Now", style: UIAlertAction.Style.default) {
-                            UIAlertAction in
-                            UIApplication.shared.openURL(NSURL(string: "\(trackUrl)")! as URL)
-                            
-                        }
-                        //                     Add the actions
-                        alertController.addAction(okAction)
-                        // Present the controller
-                        self.present(alertController, animated: true, completion: nil)
-                        
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                        let alertController = UIAlertController(title: "नया अद्यतन उपलब्ध!", message: "अपडेट डाउनलोड करने के लिए उपलब्ध है। नवीनतम अपडेट को डाउनलोड करने पर आपको सेंचुरी प्रो क्लब ऐप की नवीनतम सुविधाएं, सुधार और बग फिक्स मिलेंगे", preferredStyle: .alert)
-                        
-                        // Create the actions
-                        let okAction = UIAlertAction(title: "अभी अद्यतन करें", style: UIAlertAction.Style.default) {
-                            UIAlertAction in
-                            UIApplication.shared.openURL(NSURL(string: "\(trackUrl)")! as URL)
-                            
-                        }
-                        //                     Add the actions
-                        alertController.addAction(okAction)
-                        // Present the controller
-                        self.present(alertController, animated: true, completion: nil)
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        let alertController = UIAlertController(title: "புதிய புதுப்பிப்பு கிடைக்கிறது!", message: "பதிவிறக்கம் செய்ய புதுப்பிப்பு உள்ளது. சமீபத்திய புதுப்பிப்பைப் பதிவிறக்கினால், செஞ்சுரி ப்ரோ கிளப் பயன்பாட்டின் சமீபத்திய அம்சங்கள், மேம்பாடுகள் மற்றும் பிழைத் திருத்தங்கள் ஆகியவற்றைப் பெறுவீர்கள்", preferredStyle: .alert)
-                        
-                        // Create the actions
-                        let okAction = UIAlertAction(title: "এখন হালনাগাদ করুন", style: UIAlertAction.Style.default) {
-                            UIAlertAction in
-                            UIApplication.shared.openURL(NSURL(string: "\(trackUrl)")! as URL)
-                            
-                        }
-                        //                     Add the actions
-                        alertController.addAction(okAction)
-                        // Present the controller
-                        self.present(alertController, animated: true, completion: nil)
-                    }else{
-                        let alertController = UIAlertController(title: "క్రొత్త నవీకరణ అందుబాటులో ఉంది!", message: "డౌన్‌లోడ్ చేసుకోవడానికి అప్‌డేట్ అందుబాటులో ఉంది. తాజా అప్‌డేట్‌ను డౌన్‌లోడ్ చేయడం ద్వారా మీరు సెంచరీ ప్రో క్లబ్ యాప్ యొక్క తాజా ఫీచర్‌లు, మెరుగుదలలు మరియు బగ్ పరిష్కారాలను పొందుతారు", preferredStyle: .alert)
-                        
-                        // Create the actions
-                        let okAction = UIAlertAction(title: "ఇప్పుడే నవీకరించండి", style: UIAlertAction.Style.default) {
-                            UIAlertAction in
-                            UIApplication.shared.openURL(NSURL(string: "\(trackUrl)")! as URL)
-                            
-                        }
-                        //                     Add the actions
-                        alertController.addAction(okAction)
-                        // Present the controller
-                        self.present(alertController, animated: true, completion: nil)
                     }
+                    //                     Add the actions
+                    alertController.addAction(okAction)
+                    // Present the controller
+                    self.present(alertController, animated: true, completion: nil)
+                    
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        let alertController = UIAlertController(title: "New update Available!".localiz(), message: "force update message".localiz(), preferredStyle: .alert)
+//
+//                        // Create the actions
+//                        let okAction = UIAlertAction(title: "Update Now".localiz(), style: UIAlertAction.Style.default) {
+//                            UIAlertAction in
+//                            UIApplication.shared.openURL(NSURL(string: "\(trackUrl)")! as URL)
+//
+//                        }
+//                        //                     Add the actions
+//                        alertController.addAction(okAction)
+//                        // Present the controller
+//                        self.present(alertController, animated: true, completion: nil)
+//
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                        let alertController = UIAlertController(title: "नया अद्यतन उपलब्ध!", message: "अपडेट डाउनलोड करने के लिए उपलब्ध है। नवीनतम अपडेट को डाउनलोड करने पर आपको सेंचुरी प्रो क्लब ऐप की नवीनतम सुविधाएं, सुधार और बग फिक्स मिलेंगे", preferredStyle: .alert)
+//
+//                        // Create the actions
+//                        let okAction = UIAlertAction(title: "अभी अद्यतन करें", style: UIAlertAction.Style.default) {
+//                            UIAlertAction in
+//                            UIApplication.shared.openURL(NSURL(string: "\(trackUrl)")! as URL)
+//
+//                        }
+//                        //                     Add the actions
+//                        alertController.addAction(okAction)
+//                        // Present the controller
+//                        self.present(alertController, animated: true, completion: nil)
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        let alertController = UIAlertController(title: "புதிய புதுப்பிப்பு கிடைக்கிறது!", message: "பதிவிறக்கம் செய்ய புதுப்பிப்பு உள்ளது. சமீபத்திய புதுப்பிப்பைப் பதிவிறக்கினால், செஞ்சுரி ப்ரோ கிளப் பயன்பாட்டின் சமீபத்திய அம்சங்கள், மேம்பாடுகள் மற்றும் பிழைத் திருத்தங்கள் ஆகியவற்றைப் பெறுவீர்கள்", preferredStyle: .alert)
+//
+//                        // Create the actions
+//                        let okAction = UIAlertAction(title: "এখন হালনাগাদ করুন", style: UIAlertAction.Style.default) {
+//                            UIAlertAction in
+//                            UIApplication.shared.openURL(NSURL(string: "\(trackUrl)")! as URL)
+//
+//                        }
+//                        //                     Add the actions
+//                        alertController.addAction(okAction)
+//                        // Present the controller
+//                        self.present(alertController, animated: true, completion: nil)
+//                    }else{
+//                        let alertController = UIAlertController(title: "క్రొత్త నవీకరణ అందుబాటులో ఉంది!", message: "డౌన్‌లోడ్ చేసుకోవడానికి అప్‌డేట్ అందుబాటులో ఉంది. తాజా అప్‌డేట్‌ను డౌన్‌లోడ్ చేయడం ద్వారా మీరు సెంచరీ ప్రో క్లబ్ యాప్ యొక్క తాజా ఫీచర్‌లు, మెరుగుదలలు మరియు బగ్ పరిష్కారాలను పొందుతారు", preferredStyle: .alert)
+//
+//                        // Create the actions
+//                        let okAction = UIAlertAction(title: "ఇప్పుడే నవీకరించండి", style: UIAlertAction.Style.default) {
+//                            UIAlertAction in
+//                            UIApplication.shared.openURL(NSURL(string: "\(trackUrl)")! as URL)
+//
+//                        }
+//                        //                     Add the actions
+//                        alertController.addAction(okAction)
+//                        // Present the controller
+//                        self.present(alertController, animated: true, completion: nil)
+//                    }
                        
                 }else{
                     print("no updates")
@@ -609,15 +639,16 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
                     print(isMaintenanceValue)
                     DispatchQueue.main.async {
                         self.stopLoading()
-                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                            self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "en")
-                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                            self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "hi")
-                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                            self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "ta-IN")
-                        }else{
-                            self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "te")
-                        }
+                        self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localiz()
+//                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                            self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localiz()
+//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                            self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "hi")
+//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                            self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "ta-IN")
+//                        }else{
+//                            self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "te")
+//                        }
                         self.maintenanceView.isHidden = false
                     }
                 }else if isMaintenanceValue == "0"{

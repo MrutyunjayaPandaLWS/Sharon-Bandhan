@@ -9,6 +9,7 @@ import UIKit
 import Lottie
 import SDWebImage
 import Firebase
+import LanguageManager_iOS
 
 class OffersListViewController: BaseViewController, OffersandPromotionsDelegate{
     
@@ -50,26 +51,30 @@ class OffersListViewController: BaseViewController, OffersandPromotionsDelegate{
     }
     
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-          
-            self.header.text = "Offers & Promotions"
-            self.noDataFound.text = "No Data Found !!"
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-          
-            self.header.text = "ऑफ़र और प्रचार"
-            self.noDataFound.text = "कोई डेटा नहीं मिला !!"
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-          
-            self.header.text = "অফার এবং প্রচার"
-            self.noDataFound.text = "কোন ডেটা পাওয়া যায়নি!!"
-            
-        }else{
-          
-            self.header.text = "ఆఫర్‌లు & ప్రమోషన్‌లు"
-            self.noDataFound.text = "డేటా కనుగొనబడలేదు !!"
-        }
+        
+        self.header.text = "opOffersAndMarketingKEY".localiz()
+        self.noDataFound.text = "NoDataFoundKEY".localiz()
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//
+//            self.header.text = "opOffersAndMarketingKEY".localiz()
+//            self.noDataFound.text = "NoDataFoundKEY".localiz()
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//
+//            self.header.text = "ऑफ़र और प्रचार"
+//            self.noDataFound.text = "कोई डेटा नहीं मिला !!"
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//
+//            self.header.text = "অফার এবং প্রচার"
+//            self.noDataFound.text = "কোন ডেটা পাওয়া যায়নি!!"
+//
+//        }else{
+//
+//            self.header.text = "ఆఫర్‌లు & ప్రమోషన్‌లు"
+//            self.noDataFound.text = "డేటా కనుగొనబడలేదు !!"
+//        }
     }
     
 //    func playAnimation(){

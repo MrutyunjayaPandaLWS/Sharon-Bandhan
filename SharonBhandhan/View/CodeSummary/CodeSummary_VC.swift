@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import LanguageManager_iOS
 
 class CodeSummary_VC: BaseViewController {
 
@@ -38,16 +39,17 @@ class CodeSummary_VC: BaseViewController {
         
     }
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.codeSummaryLabel.text = "Code Summary"
-
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.codeSummaryLabel.text = "कोड सारांश"
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.codeSummaryLabel.text = "குறியீடு சுருக்கம்"
-        }else{
-            self.codeSummaryLabel.text = "కోడ్ సారాంశం"
-        }
+        self.codeSummaryLabel.text = "CodeSummaryKey".localiz()
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.codeSummaryLabel.text = "CodeSummaryKey".localiz()
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.codeSummaryLabel.text = "कोड सारांश"
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.codeSummaryLabel.text = "குறியீடு சுருக்கம்"
+//        }else{
+//            self.codeSummaryLabel.text = "కోడ్ సారాంశం"
+//        }
     }
     
     @IBAction func backButton(_ sender: Any) {

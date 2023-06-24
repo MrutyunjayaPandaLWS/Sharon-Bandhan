@@ -9,6 +9,8 @@ import UIKit
 import SDWebImage
 import Firebase
 import Toast_Swift
+import LanguageManager_iOS
+
 class RedemptionPlanner_VC: BaseViewController, RedemptionPlannerDelegate, popUpDelegate{
     func popupAlertDidTap(_ vc: PopupAlertOne_VC) {
     }
@@ -57,19 +59,22 @@ class RedemptionPlanner_VC: BaseViewController, RedemptionPlannerDelegate, popUp
 
     }
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.redemptionPlannerTitleLabel.text = "Redemption Planner"
-            self.addToPlannerBTN.setTitle("ADD TO PLANNER", for: .normal)
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.redemptionPlannerTitleLabel.text = "मोचन योजनाकार"
-            self.addToPlannerBTN.setTitle("योजनाकार में जोड़ें", for: .normal)
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.redemptionPlannerTitleLabel.text = "রিডেম্পশন প্ল্যানার"
-            self.addToPlannerBTN.setTitle("প্ল্যানার যোগ করুন", for: .normal)
-        }else{
-            self.redemptionPlannerTitleLabel.text = "విముక్తి ప్లానర్"
-            self.addToPlannerBTN.setTitle("ప్లానర్‌కు జోడించు", for: .normal)
-        }
+        self.redemptionPlannerTitleLabel.text = "wlWishlistKEY".localiz()
+        self.addToPlannerBTN.setTitle("Add To Planner".localiz(), for: .normal)
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.redemptionPlannerTitleLabel.text = "wlWishlistKEY".localiz()
+//            self.addToPlannerBTN.setTitle("Add To Planner".localiz(), for: .normal)
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.redemptionPlannerTitleLabel.text = "मोचन योजनाकार"
+//            self.addToPlannerBTN.setTitle("योजनाकार में जोड़ें", for: .normal)
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.redemptionPlannerTitleLabel.text = "রিডেম্পশন প্ল্যানার"
+//            self.addToPlannerBTN.setTitle("প্ল্যানার যোগ করুন", for: .normal)
+//        }else{
+//            self.redemptionPlannerTitleLabel.text = "విముక్తి ప్లానర్"
+//            self.addToPlannerBTN.setTitle("ప్లానర్‌కు జోడించు", for: .normal)
+//        }
     }
     
     
@@ -127,16 +132,17 @@ class RedemptionPlanner_VC: BaseViewController, RedemptionPlannerDelegate, popUp
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                   
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Gift product is already added in the Redeem list"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "उपहार उत्पाद पहले से ही रिडीम सूची में जोड़ा जा चुका है"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "উপহার পণ্য ইতিমধ্যেই রিডিম তালিকায় যোগ করা হয়েছে"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "బహుమతి ఉత్పత్తి ఇప్పటికే రీడీమ్ జాబితాలో జోడించబడింది"
-                      }
+                    vc!.descriptionInfo = "Gift product is already added in the Redeem list".localiz()
+                    
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Gift product is already added in the Redeem list".localiz()
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "उपहार उत्पाद पहले से ही रिडीम सूची में जोड़ा जा चुका है"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "উপহার পণ্য ইতিমধ্যেই রিডিম তালিকায় যোগ করা হয়েছে"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "బహుమతి ఉత్పత్తి ఇప్పటికే రీడీమ్ జాబితాలో జోడించబడింది"
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
@@ -155,14 +161,14 @@ class RedemptionPlanner_VC: BaseViewController, RedemptionPlannerDelegate, popUp
                             
                         }else if self.verifiedStatus == 1{
                             if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == -3{
-                                self.view.makeToast("Your PAN Details are pending,Please contact your administrator!", duration: 2.0, position: .bottom)
+                                self.view.makeToast("Your PAN Details are pending,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
                             }else if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == -4{
-                                self.view.makeToast("Your PAN Details are rejected,Please contact your administrator!", duration: 2.0, position: .bottom)
+                                self.view.makeToast("Your PAN Details are rejected,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
                             }else if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == 1{
                                 self.selectedPlannerID = self.VM.myPlannerListArray[tappedIndex.row].catalogueId ?? 0
                                 addToCartApi()
                             }else{
-                                self.view.makeToast("Insufficient point balance to redeem!", duration: 2.0, position: .bottom)
+                                self.view.makeToast("Insufficient point balance to redeem!".localiz(), duration: 2.0, position: .bottom)
                             }
                         }
                         
@@ -171,16 +177,18 @@ class RedemptionPlanner_VC: BaseViewController, RedemptionPlannerDelegate, popUp
                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                             vc!.delegate = self
                             vc!.titleInfo = ""
+                            vc!.descriptionInfo = "Insufficent Point Balance".localiz()
                             
-                            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                                vc!.descriptionInfo = "Insufficent Point Balance"
-                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                                 vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
-                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
-                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                                vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
-                              }
+                            
+//                            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                                vc!.descriptionInfo = "Insufficent Point Balance".localiz()
+//                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                                 vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
+//                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                                vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
+//                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                                vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
+//                              }
                             vc!.modalPresentationStyle = .overCurrentContext
                             vc!.modalTransitionStyle = .crossDissolve
                             self.present(vc!, animated: true, completion: nil)
@@ -191,15 +199,17 @@ class RedemptionPlanner_VC: BaseViewController, RedemptionPlannerDelegate, popUp
                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                         vc!.delegate = self
                         vc!.titleInfo = ""
-                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                            vc!.descriptionInfo = "Insufficent Point Balance"
-                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                             vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
-                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                            vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
-                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                            vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
-                          }
+                        vc!.descriptionInfo = "Insufficent Point Balance".localiz()
+                        
+//                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                            vc!.descriptionInfo = "Insufficent Point Balance".localiz()
+//                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                             vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
+//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                            vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
+//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                            vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
+//                          }
                         vc!.modalPresentationStyle = .overCurrentContext
                         vc!.modalTransitionStyle = .crossDissolve
                         self.present(vc!, animated: true, completion: nil)
@@ -275,16 +285,18 @@ class RedemptionPlanner_VC: BaseViewController, RedemptionPlannerDelegate, popUp
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Something went wrong please try again later."
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "कुछ गलत हुआ कृपया बाद में पुन: प्रयास करें।"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "কিছু ভুল হয়েছে। পরে আবার চেষ্টা করুন."
-                        
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "ఏదో తప్పు జరిగినది. దయచేసి కాసేపు ఆగక ప్రయత్నించండి."
-                      }
+                    vc!.descriptionInfo = "Something went wrong please try again later.".localiz()
+                    
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Something went wrong please try again later.".localiz()
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "कुछ गलत हुआ कृपया बाद में पुन: प्रयास करें।"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "কিছু ভুল হয়েছে। পরে আবার চেষ্টা করুন."
+//
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "ఏదో తప్పు జరిగినది. దయచేసి కాసేపు ఆగక ప్రయత్నించండి."
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
@@ -313,16 +325,18 @@ class RedemptionPlanner_VC: BaseViewController, RedemptionPlannerDelegate, popUp
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Something went wrong please try again later."
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "कुछ गलत हुआ कृपया बाद में पुन: प्रयास करें।"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "কিছু ভুল হয়েছে। পরে আবার চেষ্টা করুন."
-                        
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "ఏదో తప్పు జరిగినది. దయచేసి కాసేపు ఆగక ప్రయత్నించండి."
-                      }
+                    vc!.descriptionInfo = "Something went wrong please try again later.".localiz()
+                    
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Something went wrong please try again later.".localiz()
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "कुछ गलत हुआ कृपया बाद में पुन: प्रयास करें।"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "কিছু ভুল হয়েছে। পরে আবার চেষ্টা করুন."
+//                        
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "ఏదో తప్పు జరిగినది. దయచేసి కాసేపు ఆగక ప్రయత్నించండి."
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)

@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 import Firebase
+import LanguageManager_iOS
 
 class CodeStatusListVC: BaseViewController, CheckBoxSelectionDelegate, FilterDelegate {
    
@@ -87,30 +88,36 @@ class CodeStatusListVC: BaseViewController, CheckBoxSelectionDelegate, FilterDel
     }
    
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.headerText.text = "Code Status"
-            self.codeStatusBTN.setTitle(" Code Status", for: .normal)
-            self.syncStatusBTN.setTitle(" Sync Status", for: .normal)
-            self.nodatafound.text = "No Data Found !!"
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.headerText.text = "कोड स्थिति"
-            self.codeStatusBTN.setTitle(" कोड स्थिति", for: .normal)
-            self.syncStatusBTN.setTitle(" सिंक स्थिति", for: .normal)
-            self.nodatafound.text = "डेटा नहीं मिला !!"
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.headerText.text = "குறியீடு நிலை"
-            self.codeStatusBTN.setTitle(" குறியீடு நிலை", for: .normal)
-            self.syncStatusBTN.setTitle(" ஒத்திசைவு நிலை", for: .normal)
-            self.nodatafound.text = "வேறு தகவல்கள் இல்லை !!"
-            
-        }else{
-            self.headerText.text = "కోడ్ స్థితి"
-            self.codeStatusBTN.setTitle(" కోడ్ స్థితి", for: .normal)
-            self.syncStatusBTN.setTitle(" సమకాలీకరణ స్థితి", for: .normal)
-            self.nodatafound.text = "డేటా దొరకలేదు !!"
-        }
+        self.headerText.text = "csCodeStatusKEY".localiz()
+        self.codeStatusBTN.setTitle("csCodeStatusKEY".localiz(), for: .normal)
+        self.syncStatusBTN.setTitle("Sync Status".localiz(), for: .normal)
+        self.nodatafound.text = "NoDataFoundKEY".localiz()
+        
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.headerText.text = "Code Status"
+//            self.codeStatusBTN.setTitle(" Code Status", for: .normal)
+//            self.syncStatusBTN.setTitle(" Sync Status", for: .normal)
+//            self.nodatafound.text = "No Data Found !!"
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.headerText.text = "कोड स्थिति"
+//            self.codeStatusBTN.setTitle(" कोड स्थिति", for: .normal)
+//            self.syncStatusBTN.setTitle(" सिंक स्थिति", for: .normal)
+//            self.nodatafound.text = "डेटा नहीं मिला !!"
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.headerText.text = "குறியீடு நிலை"
+//            self.codeStatusBTN.setTitle(" குறியீடு நிலை", for: .normal)
+//            self.syncStatusBTN.setTitle(" ஒத்திசைவு நிலை", for: .normal)
+//            self.nodatafound.text = "வேறு தகவல்கள் இல்லை !!"
+//
+//        }else{
+//            self.headerText.text = "కోడ్ స్థితి"
+//            self.codeStatusBTN.setTitle(" కోడ్ స్థితి", for: .normal)
+//            self.syncStatusBTN.setTitle(" సమకాలీకరణ స్థితి", for: .normal)
+//            self.nodatafound.text = "డేటా దొరకలేదు !!"
+//        }
     }
     
     @IBAction func headerCheckBoxBTN(_ sender: Any) {
@@ -219,7 +226,7 @@ class CodeStatusListVC: BaseViewController, CheckBoxSelectionDelegate, FilterDel
 
     @IBAction func codeStatusListBTN(_ sender: Any) {
         self.codesCollectionsArray.removeAll()
-        self.headerText.text = "Code Status"
+        self.headerText.text = "csCodeStatusKEY".localiz()
         self.codeStatusBTN.backgroundColor =  UIColor(red: 192/255, green: 7/255, blue: 34/255, alpha: 1.0)
         self.syncStatusBTN.backgroundColor =  UIColor(red: 92/255, green: 92/255, blue: 109/255, alpha: 1.0)
         self.isSelected = 1
@@ -229,7 +236,7 @@ class CodeStatusListVC: BaseViewController, CheckBoxSelectionDelegate, FilterDel
     }
     @IBAction func syncStatusListBTN(_ sender: Any) {
         
-        self.headerText.text = "Sync Status"
+        self.headerText.text = "Sync Status".localiz()
         self.syncStatusBTN.backgroundColor =  UIColor(red: 192/255, green: 7/255, blue: 34/255, alpha: 1.0)
         self.codeStatusBTN.backgroundColor =  UIColor(red: 92/255, green: 92/255, blue: 109/255, alpha: 1.0)
         syncCodeLists()

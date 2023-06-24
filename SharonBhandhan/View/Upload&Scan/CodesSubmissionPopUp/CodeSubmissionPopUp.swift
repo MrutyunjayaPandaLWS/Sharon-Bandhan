@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import LanguageManager_iOS
 
 class CodeSubmissionPopUp: BaseViewController{
 
@@ -32,27 +33,32 @@ class CodeSubmissionPopUp: BaseViewController{
         self.dismiss(animated: true, completion: nil)
     }
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.popUpMsg.text = "QR code is Submitted Successfully. Check the status of the code in  status report."
-            self.codeStatusBTN.setTitle("Code Status", for: .normal)
-            self.uploadagain.setTitle("Scan Again", for: .normal)
-            self.raiseTicketsBTN.setTitle("Raise Ticket", for: .normal)
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.popUpMsg.text = "क्यूआर कोड सफलतापूर्वक सबमिट किया गया है। स्थिति रिपोर्ट में कोड की स्थिति की जाँच करें।"
-            self.codeStatusBTN.setTitle("कोड स्थिति", for: .normal)
-            self.uploadagain.setTitle("फिर से अपलोड करें", for: .normal)
-            self.raiseTicketsBTN.setTitle("टिकट बढ़ाएं", for: .normal)
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.popUpMsg.text = "QR কোড সফলভাবে জমা দেওয়া হয়েছে। স্ট্যাটাস রিপোর্টে কোডের স্থিতি পরীক্ষা করুন।"
-            self.codeStatusBTN.setTitle("কোড স্ট্যাটাস", for: .normal)
-            self.uploadagain.setTitle("আবার আপলোড", for: .normal)
-            self.raiseTicketsBTN.setTitle("টিকিট বাড়ান", for: .normal)
-        }else{
-            self.popUpMsg.text = "QR కోడ్ విజయవంతంగా సమర్పించబడింది. స్థితి నివేదికలో కోడ్ స్థితిని తనిఖీ చేయండి."
-            self.codeStatusBTN.setTitle("కోడ్ స్థితి", for: .normal)
-            self.uploadagain.setTitle("మళ్లీ అప్‌లోడ్ చేయి", for: .normal)
-            self.raiseTicketsBTN.setTitle("టికెట్ పెంచండి", for: .normal)
-        }
+        self.popUpMsg.text = "QR code is Submitted Successfully. Check the status of the code in  status report.".localiz()
+        self.codeStatusBTN.setTitle("csCodeStatusKEY".localiz(), for: .normal)
+        self.uploadagain.setTitle("Scan_Again".localiz(), for: .normal)
+        self.raiseTicketsBTN.setTitle("RaiseTicketKey".localiz(), for: .normal)
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.popUpMsg.text = "QR code is Submitted Successfully. Check the status of the code in  status report.".localiz()
+//            self.codeStatusBTN.setTitle("csCodeStatusKEY".localiz(), for: .normal)
+//            self.uploadagain.setTitle("Scan_Again".localiz(), for: .normal)
+//            self.raiseTicketsBTN.setTitle("RaiseTicketKey".localiz(), for: .normal)
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.popUpMsg.text = "क्यूआर कोड सफलतापूर्वक सबमिट किया गया है। स्थिति रिपोर्ट में कोड की स्थिति की जाँच करें।"
+//            self.codeStatusBTN.setTitle("कोड स्थिति", for: .normal)
+//            self.uploadagain.setTitle("फिर से अपलोड करें", for: .normal)
+//            self.raiseTicketsBTN.setTitle("टिकट बढ़ाएं", for: .normal)
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.popUpMsg.text = "QR কোড সফলভাবে জমা দেওয়া হয়েছে। স্ট্যাটাস রিপোর্টে কোডের স্থিতি পরীক্ষা করুন।"
+//            self.codeStatusBTN.setTitle("কোড স্ট্যাটাস", for: .normal)
+//            self.uploadagain.setTitle("আবার আপলোড", for: .normal)
+//            self.raiseTicketsBTN.setTitle("টিকিট বাড়ান", for: .normal)
+//        }else{
+//            self.popUpMsg.text = "QR కోడ్ విజయవంతంగా సమర్పించబడింది. స్థితి నివేదికలో కోడ్ స్థితిని తనిఖీ చేయండి."
+//            self.codeStatusBTN.setTitle("కోడ్ స్థితి", for: .normal)
+//            self.uploadagain.setTitle("మళ్లీ అప్‌లోడ్ చేయి", for: .normal)
+//            self.raiseTicketsBTN.setTitle("టికెట్ పెంచండి", for: .normal)
+//        }
     }
     
 

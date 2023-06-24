@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import LanguageManager_iOS
 
 class LanguageViewController: UIViewController {
 
@@ -39,26 +40,32 @@ class LanguageViewController: UIViewController {
         }
 
     
+
+    
     @IBAction func englishLanguage(_ sender: Any) {
         UserDefaults.standard.set("1", forKey: "LanguageLocalizable")
+        LanguageManager.shared.setLanguage(language: .en)
         UserDefaults.standard.synchronize()
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func hindiLanguage(_ sender: Any) {
         UserDefaults.standard.set("2", forKey: "LanguageLocalizable")
+        LanguageManager.shared.setLanguage(language: .hi)
         UserDefaults.standard.synchronize()
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func banglaLanguaga(_ sender: Any) {
         UserDefaults.standard.set("3", forKey: "LanguageLocalizable")
+        LanguageManager.shared.setLanguage(language: .taIN)
         UserDefaults.standard.synchronize()
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func teluguLanguage(_ sender: Any) {
         UserDefaults.standard.set("4", forKey: "LanguageLocalizable")
+        LanguageManager.shared.setLanguage(language: .te)
         UserDefaults.standard.synchronize()
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         self.navigationController?.pushViewController(vc, animated: true)

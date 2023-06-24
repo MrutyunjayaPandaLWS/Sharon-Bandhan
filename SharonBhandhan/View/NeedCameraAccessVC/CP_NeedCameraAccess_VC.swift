@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import Toast_Swift
+import LanguageManager_iOS
 
 class CP_NeedCameraAccess_VC: BaseViewController {
     var selectedindex = 0
@@ -54,11 +55,11 @@ class CP_NeedCameraAccess_VC: BaseViewController {
     func alertToEncourageCameraAccessInitially() {
         let alert = UIAlertController(
             title: "IMPORTANT",
-            message: "Camera access required for Scanning QR Codes",
+            message: "Camera access required for Scanning QR Codes".localiz(),
             preferredStyle: UIAlertController.Style.alert
         )
         alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Allow Camera", style: .cancel, handler: { (alert) -> Void in
+        alert.addAction(UIAlertAction(title: "Allow Camera".localiz(), style: .cancel, handler: { (alert) -> Void in
             UIApplication.shared.openURL(URL(string: UIApplication.openSettingsURLString)!)
         }))
         self.present(alert, animated: true, completion: nil)

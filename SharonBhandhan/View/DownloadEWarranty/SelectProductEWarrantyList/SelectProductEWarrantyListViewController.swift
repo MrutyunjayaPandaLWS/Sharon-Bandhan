@@ -8,6 +8,7 @@
 import UIKit
 import Lottie
 import Firebase
+import LanguageManager_iOS
 
 class SelectProductEWarrantyListViewController: BaseViewController, DateSelectedDelegate, quantityDelegate, popUpDelegate {
    
@@ -112,39 +113,44 @@ class SelectProductEWarrantyListViewController: BaseViewController, DateSelected
     }
     
     @IBAction func filterButton(_ sender: Any) {
-        if fromdateButton.currentTitle == "From Date" || fromdateButton.currentTitle == "की तिथि से" || fromdateButton.currentTitle == "তারিখ হইতে" || fromdateButton.currentTitle == "తేదీ నుండి" {
+        
+//        if fromdateButton.currentTitle == "mrFromDateKEY" || fromdateButton.currentTitle == "की तिथि से" || fromdateButton.currentTitle == "তারিখ হইতে" || fromdateButton.currentTitle == "తేదీ నుండి"
+            if fromdateButton.currentTitle == "mrFromDateKEY".localiz(){
             DispatchQueue.main.async{
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Select From Date"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                    vc!.descriptionInfo = "दिनांक से चुनें"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "তারিখ থেকে নির্বাচন করুন"
-                }else{
-                    vc!.descriptionInfo = "తేదీ నుండి ఎంచుకోండి"
-                }
+                vc!.descriptionInfo = "PlzSelectFromDateKey".localiz()
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "Select From Date"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                    vc!.descriptionInfo = "दिनांक से चुनें"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "তারিখ থেকে নির্বাচন করুন"
+//                }else{
+//                    vc!.descriptionInfo = "తేదీ నుండి ఎంచుకోండి"
+//                }
                 
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
             }
-        }else if toDateButton.currentTitle == "To Date" || toDateButton.currentTitle == "तारीख तक" || toDateButton.currentTitle == "এখন পর্যন্ত" || toDateButton.currentTitle == "ఇప్పటి వరకు" {
+            }else if toDateButton.currentTitle == "mrToDateKEY".localiz(){
+//                 || toDateButton.currentTitle == "तारीख तक" || toDateButton.currentTitle == "এখন পর্যন্ত" || toDateButton.currentTitle == "ఇప్పటి వరకు"
             DispatchQueue.main.async{
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Select To Date"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                    vc!.descriptionInfo = "तिथि करने के लिए चुनें"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "টু ডেট নির্বাচন করুন"
-                }else{
-                    vc!.descriptionInfo = "తేదీని ఎంచుకోండి"
-                }
+                vc!.descriptionInfo = "SelectToDateKey".localiz()
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "Select To Date"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                    vc!.descriptionInfo = "तिथि करने के लिए चुनें"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "টু ডেট নির্বাচন করুন"
+//                }else{
+//                    vc!.descriptionInfo = "తేదీని ఎంచుకోండి"
+//                }
                
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
@@ -156,16 +162,16 @@ class SelectProductEWarrantyListViewController: BaseViewController, DateSelected
             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
             vc!.delegate = self
             vc!.titleInfo = ""
-           
-            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                vc!.descriptionInfo = "To date should be greater than from date."
-             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                 vc!.descriptionInfo = "आज तक की तारीख से बड़ी होनी चाहिए।"
-            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                vc!.descriptionInfo = "তারিখ থেকে তারিখ থেকে বড় হওয়া উচিত।"
-            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                vc!.descriptionInfo = "తేదీ నుండి తేదీ కంటే ఎక్కువగా ఉండాలి."
-              }
+            vc!.descriptionInfo = "ToDateGreaterFromDateKey".localiz()
+//            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                vc!.descriptionInfo = "ToDateGreaterFromDateKey".localiz()
+//             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                 vc!.descriptionInfo = "आज तक की तारीख से बड़ी होनी चाहिए।"
+//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                vc!.descriptionInfo = "তারিখ থেকে তারিখ থেকে বড় হওয়া উচিত।"
+//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                vc!.descriptionInfo = "తేదీ నుండి తేదీ కంటే ఎక్కువగా ఉండాలి."
+//              }
             vc!.modalPresentationStyle = .overCurrentContext
             vc!.modalTransitionStyle = .crossDissolve
             self.present(vc!, animated: true, completion: nil)
@@ -214,35 +220,42 @@ class SelectProductEWarrantyListViewController: BaseViewController, DateSelected
     }
     
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            header.text = "Add E-Warranty"
-            filterBTN.setTitle("Filter", for: .normal)
-            fromdateButton.setTitle("From Date", for: .normal)
-            toDateButton.setTitle("To Date", for: .normal)
-            infoLbl.text = "Select date range to check your E-Warranty"
-            nextButton.setTitle("Next", for: .normal)
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            header.text = "ई-वारंटी जोड़ें"
-            filterBTN.setTitle("फ़िल्टर", for: .normal)
-            fromdateButton.setTitle("की तिथि से", for: .normal)
-            toDateButton.setTitle("तारीख तक", for: .normal)
-            infoLbl.text = "अपनी ई-वारंटी जांचने के लिए दिनांक सीमा चुनें"
-            nextButton.setTitle("अगला", for: .normal)
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            header.text = "ই-ওয়ারেন্টি যোগ করুন"
-            filterBTN.setTitle("ছাঁকনি", for: .normal)
-            fromdateButton.setTitle("তারিখ হইতে", for: .normal)
-            toDateButton.setTitle("এখন পর্যন্ত", for: .normal)
-            infoLbl.text = "আপনার ই-ওয়ারেন্টি চেক করতে তারিখের সীমা নির্বাচন করুন"
-            nextButton.setTitle("পরের", for: .normal)
-        }else{
-            header.text = "ఇ-వారెంటీని జోడించండి"
-            filterBTN.setTitle("ఫిల్టర్ చేయండి", for: .normal)
-            fromdateButton.setTitle("తేదీ నుండి", for: .normal)
-            toDateButton.setTitle("ఇప్పటి వరకు", for: .normal)
-            infoLbl.text = "మీ E-వారెంటీని తనిఖీ చేయడానికి తేదీ పరిధిని ఎంచుకోండి"
-            nextButton.setTitle("తదుపరి", for: .normal)
-        }
+        header.text = "Add E-Warranty".localiz()
+        filterBTN.setTitle("FilterKey".localiz(), for: .normal)
+        fromdateButton.setTitle("mrFromDateKEY".localiz(), for: .normal)
+        toDateButton.setTitle("mrToDateKEY".localiz(), for: .normal)
+        infoLbl.text = "Select date range to check your E-Warranty".localiz()
+        nextButton.setTitle("ewNextKEY".localiz(), for: .normal)
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            header.text = "Add E-Warranty"
+//            filterBTN.setTitle("Filter", for: .normal)
+//            fromdateButton.setTitle("From Date", for: .normal)
+//            toDateButton.setTitle("To Date", for: .normal)
+//            infoLbl.text = "Select date range to check your E-Warranty"
+//            nextButton.setTitle("Next", for: .normal)
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            header.text = "ई-वारंटी जोड़ें"
+//            filterBTN.setTitle("फ़िल्टर", for: .normal)
+//            fromdateButton.setTitle("की तिथि से", for: .normal)
+//            toDateButton.setTitle("तारीख तक", for: .normal)
+//            infoLbl.text = "अपनी ई-वारंटी जांचने के लिए दिनांक सीमा चुनें"
+//            nextButton.setTitle("अगला", for: .normal)
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            header.text = "ই-ওয়ারেন্টি যোগ করুন"
+//            filterBTN.setTitle("ছাঁকনি", for: .normal)
+//            fromdateButton.setTitle("তারিখ হইতে", for: .normal)
+//            toDateButton.setTitle("এখন পর্যন্ত", for: .normal)
+//            infoLbl.text = "আপনার ই-ওয়ারেন্টি চেক করতে তারিখের সীমা নির্বাচন করুন"
+//            nextButton.setTitle("পরের", for: .normal)
+//        }else{
+//            header.text = "ఇ-వారెంటీని జోడించండి"
+//            filterBTN.setTitle("ఫిల్టర్ చేయండి", for: .normal)
+//            fromdateButton.setTitle("తేదీ నుండి", for: .normal)
+//            toDateButton.setTitle("ఇప్పటి వరకు", for: .normal)
+//            infoLbl.text = "మీ E-వారెంటీని తనిఖీ చేయడానికి తేదీ పరిధిని ఎంచుకోండి"
+//            nextButton.setTitle("తదుపరి", for: .normal)
+//        }
     }
     
     //Delegate:-
@@ -290,15 +303,17 @@ class SelectProductEWarrantyListViewController: BaseViewController, DateSelected
                     vc!.delegate = self
                     vc!.titleInfo = ""
                     vc!.itsComeFrom = "enteredCount"
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Only 1 product we can add"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "केवल 1 उत्पाद हम जोड़ सकते हैं"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "আমরা শুধুমাত্র 1 পণ্য যোগ করতে পারেন"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "మేము జోడించగల 1 ఉత్పత్తి మాత్రమే"
-                      }
+                    vc!.descriptionInfo = "Only 1 product we can add".localiz()
+                    
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Only 1 product we can add"
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "केवल 1 उत्पाद हम जोड़ सकते हैं"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "আমরা শুধুমাত্র 1 পণ্য যোগ করতে পারেন"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "మేము జోడించగల 1 ఉత్పత్తి మాత్రమే"
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
@@ -315,16 +330,16 @@ class SelectProductEWarrantyListViewController: BaseViewController, DateSelected
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                   
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Quantity should not exceed."
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "मात्रा अधिक नहीं होनी चाहिए।"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "পরিমাণের বেশি হওয়া উচিত নয়।"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "పరిమాణం మించకూడదు."
-                      }
+                    vc!.descriptionInfo = "Quantity should not exceed.".localiz()
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Quantity should not exceed."
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "मात्रा अधिक नहीं होनी चाहिए।"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "পরিমাণের বেশি হওয়া উচিত নয়।"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "పరిమాణం మించకూడదు."
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
@@ -336,16 +351,17 @@ class SelectProductEWarrantyListViewController: BaseViewController, DateSelected
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                   
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Quantity should not be zero."
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "मात्रा शून्य नहीं होनी चाहिए।"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "পরিমাণ শূন্য হওয়া উচিত নয়।"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "పరిమాణం సున్నా కాకూడదు."
-                      }
+                    vc!.descriptionInfo = "Quantity should not be zero.".localiz()
+
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Quantity should not be zero.".localiz()
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "मात्रा शून्य नहीं होनी चाहिए।"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "পরিমাণ শূন্য হওয়া উচিত নয়।"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "పరిమాణం సున్నా కాకూడదు."
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
@@ -375,16 +391,16 @@ class SelectProductEWarrantyListViewController: BaseViewController, DateSelected
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-               
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Quantity should not be zero."
-                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                     vc!.descriptionInfo = "मात्रा शून्य नहीं होनी चाहिए।"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "পরিমাণ শূন্য হওয়া উচিত নয়।"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "పరిమాణం సున్నా కాకూడదు."
-                  }
+                vc!.descriptionInfo = "Quantity should not be zero.".localiz()
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "Quantity should not be zero."
+//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                     vc!.descriptionInfo = "मात्रा शून्य नहीं होनी चाहिए।"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "পরিমাণ শূন্য হওয়া উচিত নয়।"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "పరిమాణం సున్నా కాకూడదు."
+//                  }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -397,16 +413,16 @@ class SelectProductEWarrantyListViewController: BaseViewController, DateSelected
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
-               
-                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                    vc!.descriptionInfo = "Quantity should not exceed."
-                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                     vc!.descriptionInfo = "मात्रा अधिक नहीं होनी चाहिए।"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                    vc!.descriptionInfo = "পরিমাণের বেশি হওয়া উচিত নয়।"
-                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                    vc!.descriptionInfo = "పరిమాణం మించకూడదు."
-                  }
+                vc!.descriptionInfo = "Quantity should not exceed.".localiz()
+//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                    vc!.descriptionInfo = "Quantity should not exceed."
+//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                     vc!.descriptionInfo = "मात्रा अधिक नहीं होनी चाहिए।"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                    vc!.descriptionInfo = "পরিমাণের বেশি হওয়া উচিত নয়।"
+//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                    vc!.descriptionInfo = "పరిమాణం మించకూడదు."
+//                  }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)

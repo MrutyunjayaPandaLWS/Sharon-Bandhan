@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2581A7592A2B505900087308 /* T&C-Sharon-Telugu.html in Resources */ = {isa = PBXBuildFile; fileRef = 2581A7552A2B505600087308 /* T&C-Sharon-Telugu.html */; };
-		2581A75A2A2B505900087308 /* T&C-Sharon-Hindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 2581A7562A2B505700087308 /* T&C-Sharon-Hindi.html */; };
-		2581A75B2A2B505900087308 /* T&C-Sharon-Tamil.html in Resources */ = {isa = PBXBuildFile; fileRef = 2581A7572A2B505800087308 /* T&C-Sharon-Tamil.html */; };
-		2581A75C2A2B505900087308 /* T&C-Sharon-English.html in Resources */ = {isa = PBXBuildFile; fileRef = 2581A7582A2B505900087308 /* T&C-Sharon-English.html */; };
+		840DF5572A305DC4004C3E26 /* T&C-Sharon-English.html in Resources */ = {isa = PBXBuildFile; fileRef = 840DF5562A305DC4004C3E26 /* T&C-Sharon-English.html */; };
+		840DF55B2A305DD4004C3E26 /* T&C-Sharon-Hindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 840DF5582A305DD2004C3E26 /* T&C-Sharon-Hindi.html */; };
+		840DF55C2A305DD4004C3E26 /* T&C-Sharon-Tamil.html in Resources */ = {isa = PBXBuildFile; fileRef = 840DF5592A305DD3004C3E26 /* T&C-Sharon-Tamil.html */; };
+		840DF55D2A305DD4004C3E26 /* T&C-Sharon-Telugu.html in Resources */ = {isa = PBXBuildFile; fileRef = 840DF55A2A305DD4004C3E26 /* T&C-Sharon-Telugu.html */; };
 		8425C6E729F9248B007E6F29 /* GenerateEwarrantyListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425C6E629F9248B007E6F29 /* GenerateEwarrantyListingViewModel.swift */; };
 		8425C6EA29F92515007E6F29 /* MyprofileDetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425C6E929F92515007E6F29 /* MyprofileDetailsModels.swift */; };
 		8425C6EC29F9254D007E6F29 /* GenerateSubmissionEwarrantyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425C6EB29F9254D007E6F29 /* GenerateSubmissionEwarrantyModels.swift */; };
+		8441C1542A31BC560030BBEF /* SB-Uniq-Cust-Tamil.html in Resources */ = {isa = PBXBuildFile; fileRef = 8441C1502A31BC530030BBEF /* SB-Uniq-Cust-Tamil.html */; };
+		8441C1552A31BC560030BBEF /* SB-Uniq-Cust-Telungu.html in Resources */ = {isa = PBXBuildFile; fileRef = 8441C1512A31BC540030BBEF /* SB-Uniq-Cust-Telungu.html */; };
+		8441C1562A31BC560030BBEF /* SB-Uniq-Cust-Hindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 8441C1522A31BC550030BBEF /* SB-Uniq-Cust-Hindi.html */; };
+		8441C1572A31BC560030BBEF /* SB-Uniq-Cust-Eng.html in Resources */ = {isa = PBXBuildFile; fileRef = 8441C1532A31BC560030BBEF /* SB-Uniq-Cust-Eng.html */; };
 		8452CB9D29E3D3120018CCE1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8452CB9F29E3D3120018CCE1 /* Localizable.strings */; };
 		84540A9329E187E600CEE692 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540A9229E187E600CEE692 /* AppDelegate.swift */; };
 		84540A9529E187E600CEE692 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540A9429E187E600CEE692 /* SceneDelegate.swift */; };
@@ -344,17 +348,21 @@
 
 /* Begin PBXFileReference section */
 		049A65600A4EA0C1BD1516BD /* Pods-SharonBhandhan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharonBhandhan.release.xcconfig"; path = "Target Support Files/Pods-SharonBhandhan/Pods-SharonBhandhan.release.xcconfig"; sourceTree = "<group>"; };
-		2581A7552A2B505600087308 /* T&C-Sharon-Telugu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "T&C-Sharon-Telugu.html"; sourceTree = "<group>"; };
-		2581A7562A2B505700087308 /* T&C-Sharon-Hindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "T&C-Sharon-Hindi.html"; sourceTree = "<group>"; };
-		2581A7572A2B505800087308 /* T&C-Sharon-Tamil.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "T&C-Sharon-Tamil.html"; sourceTree = "<group>"; };
-		2581A7582A2B505900087308 /* T&C-Sharon-English.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "T&C-Sharon-English.html"; sourceTree = "<group>"; };
 		258BF9662A2DDD20009174D9 /* ta-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ta-IN"; path = "ta-IN.lproj/Main.strings"; sourceTree = "<group>"; };
 		258BF9672A2DDD22009174D9 /* ta-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ta-IN"; path = "ta-IN.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		258BF9682A2DDD24009174D9 /* ta-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ta-IN"; path = "ta-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2CFFFCA1C451857E52319146 /* Pods-SharonBhandhan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharonBhandhan.debug.xcconfig"; path = "Target Support Files/Pods-SharonBhandhan/Pods-SharonBhandhan.debug.xcconfig"; sourceTree = "<group>"; };
+		840DF5562A305DC4004C3E26 /* T&C-Sharon-English.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "T&C-Sharon-English.html"; sourceTree = "<group>"; };
+		840DF5582A305DD2004C3E26 /* T&C-Sharon-Hindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "T&C-Sharon-Hindi.html"; sourceTree = "<group>"; };
+		840DF5592A305DD3004C3E26 /* T&C-Sharon-Tamil.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "T&C-Sharon-Tamil.html"; sourceTree = "<group>"; };
+		840DF55A2A305DD4004C3E26 /* T&C-Sharon-Telugu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "T&C-Sharon-Telugu.html"; sourceTree = "<group>"; };
 		8425C6E629F9248B007E6F29 /* GenerateEwarrantyListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateEwarrantyListingViewModel.swift; sourceTree = "<group>"; };
 		8425C6E929F92515007E6F29 /* MyprofileDetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyprofileDetailsModels.swift; sourceTree = "<group>"; };
 		8425C6EB29F9254D007E6F29 /* GenerateSubmissionEwarrantyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateSubmissionEwarrantyModels.swift; sourceTree = "<group>"; };
+		8441C1502A31BC530030BBEF /* SB-Uniq-Cust-Tamil.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "SB-Uniq-Cust-Tamil.html"; sourceTree = "<group>"; };
+		8441C1512A31BC540030BBEF /* SB-Uniq-Cust-Telungu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "SB-Uniq-Cust-Telungu.html"; sourceTree = "<group>"; };
+		8441C1522A31BC550030BBEF /* SB-Uniq-Cust-Hindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "SB-Uniq-Cust-Hindi.html"; sourceTree = "<group>"; };
+		8441C1532A31BC560030BBEF /* SB-Uniq-Cust-Eng.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "SB-Uniq-Cust-Eng.html"; sourceTree = "<group>"; };
 		8452CB9529E3D2C10018CCE1 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Main.strings; sourceTree = "<group>"; };
 		8452CB9629E3D2C10018CCE1 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8452CB9729E3D2D20018CCE1 /* bn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bn; path = bn.lproj/Main.strings; sourceTree = "<group>"; };
@@ -719,6 +727,17 @@
 			path = MyprofileDetailsModels;
 			sourceTree = "<group>";
 		};
+		8441C14F2A31BC330030BBEF /* Unique Feature HTML */ = {
+			isa = PBXGroup;
+			children = (
+				8441C1532A31BC560030BBEF /* SB-Uniq-Cust-Eng.html */,
+				8441C1522A31BC550030BBEF /* SB-Uniq-Cust-Hindi.html */,
+				8441C1502A31BC530030BBEF /* SB-Uniq-Cust-Tamil.html */,
+				8441C1512A31BC540030BBEF /* SB-Uniq-Cust-Telungu.html */,
+			);
+			path = "Unique Feature HTML";
+			sourceTree = "<group>";
+		};
 		84540A8629E187E600CEE692 = {
 			isa = PBXGroup;
 			children = (
@@ -914,6 +933,7 @@
 			isa = PBXGroup;
 			children = (
 				84A7BB7D29E3F4E500896FA1 /* GoogleService-Info.plist */,
+				8441C14F2A31BC330030BBEF /* Unique Feature HTML */,
 				84540D5429E18E1400CEE692 /* Networking */,
 				84540D5129E18C5700CEE692 /* CoreData */,
 				84540D5029E18B6800CEE692 /* StoryBoard */,
@@ -950,10 +970,10 @@
 		84540AD629E18AAE00CEE692 /* HTML Files */ = {
 			isa = PBXGroup;
 			children = (
-				2581A7582A2B505900087308 /* T&C-Sharon-English.html */,
-				2581A7562A2B505700087308 /* T&C-Sharon-Hindi.html */,
-				2581A7572A2B505800087308 /* T&C-Sharon-Tamil.html */,
-				2581A7552A2B505600087308 /* T&C-Sharon-Telugu.html */,
+				840DF5562A305DC4004C3E26 /* T&C-Sharon-English.html */,
+				840DF5582A305DD2004C3E26 /* T&C-Sharon-Hindi.html */,
+				840DF5592A305DD3004C3E26 /* T&C-Sharon-Tamil.html */,
+				840DF55A2A305DD4004C3E26 /* T&C-Sharon-Telugu.html */,
 				84540AD729E18AAE00CEE692 /* uniqueFeatures.html */,
 				84540AD829E18AAE00CEE692 /* century-proclub-t&c.html */,
 			);
@@ -2614,9 +2634,11 @@
 				84540B9329E18AD800CEE692 /* OffersTableViewCell.xib in Resources */,
 				84540BD829E18AD800CEE692 /* AddFollowerTableViewCell.xib in Resources */,
 				84540BE729E18AD800CEE692 /* SidemenuTableViewCell.xib in Resources */,
-				2581A75B2A2B505900087308 /* T&C-Sharon-Tamil.html in Resources */,
-				2581A75C2A2B505900087308 /* T&C-Sharon-English.html in Resources */,
+				8441C1552A31BC560030BBEF /* SB-Uniq-Cust-Telungu.html in Resources */,
+				840DF55C2A305DD4004C3E26 /* T&C-Sharon-Tamil.html in Resources */,
 				84540BA229E18AD800CEE692 /* SelectProductEWarrantyListTableViewCell.xib in Resources */,
+				8441C1542A31BC560030BBEF /* SB-Uniq-Cust-Tamil.html in Resources */,
+				8441C1572A31BC560030BBEF /* SB-Uniq-Cust-Eng.html in Resources */,
 				84540BCF29E18AD800CEE692 /* MyRedemptionsTableViewCell.xib in Resources */,
 				847EB14829F806C5004AF0D8 /* GenerateEWarrantyTableViewCell.xib in Resources */,
 				84540BAA29E18AD800CEE692 /* otherInfoTableViewCell.xib in Resources */,
@@ -2630,13 +2652,15 @@
 				849E84A52A177553006F0ED8 /* HistoryNotificationsTableViewCell.xib in Resources */,
 				84540BA929E18AD800CEE692 /* senderInfoImageTableViewCell.xib in Resources */,
 				84540B8F29E18AD800CEE692 /* DreamGiftTableViewCell.xib in Resources */,
-				2581A7592A2B505900087308 /* T&C-Sharon-Telugu.html in Resources */,
 				84A7BB7E29E3F4E500896FA1 /* GoogleService-Info.plist in Resources */,
 				84540AA229E187E900CEE692 /* LaunchScreen.storyboard in Resources */,
+				8441C1562A31BC560030BBEF /* SB-Uniq-Cust-Hindi.html in Resources */,
+				840DF55D2A305DD4004C3E26 /* T&C-Sharon-Telugu.html in Resources */,
 				84540A9F29E187E900CEE692 /* Assets.xcassets in Resources */,
-				2581A75A2A2B505900087308 /* T&C-Sharon-Hindi.html in Resources */,
 				84540A9A29E187E600CEE692 /* Main.storyboard in Resources */,
+				840DF55B2A305DD4004C3E26 /* T&C-Sharon-Hindi.html in Resources */,
 				84540BB429E18AD800CEE692 /* senderImageTableViewCell.xib in Resources */,
+				840DF5572A305DC4004C3E26 /* T&C-Sharon-English.html in Resources */,
 				84540AEC29E18AAE00CEE692 /* century-proclub-t&c.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3186,9 +3210,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SharonBhandhan/SharonBhandhan.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2HG885J5KS;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2HG885J5KS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SharonBhandhan/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sharon Bandhan Need to Access the camera to upload profile Image and Customer support";
@@ -3209,6 +3235,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBandhan_Adhoc;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3224,9 +3251,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SharonBhandhan/SharonBhandhan.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2HG885J5KS;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2HG885J5KS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SharonBhandhan/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sharon Bandhan Need to Access the camera to upload profile Image and Customer support";
@@ -3247,6 +3276,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBandhan_Adhoc;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3333,9 +3363,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2HG885J5KS;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2HG885J5KS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotificationServices/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NotificationServices;
@@ -3349,6 +3381,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhan.NotificationServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBhandhan_NotificationServices_Adhoc;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -3360,9 +3394,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2HG885J5KS;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2HG885J5KS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotificationServices/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NotificationServices;
@@ -3376,6 +3412,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhan.NotificationServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBhandhan_NotificationServices_Adhoc;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

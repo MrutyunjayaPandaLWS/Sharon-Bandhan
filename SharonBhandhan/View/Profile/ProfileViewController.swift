@@ -10,6 +10,8 @@ import Photos
 import AVFoundation
 import SDWebImage
 import Firebase
+import LanguageManager_iOS
+
 class ProfileViewController: BaseViewController {
   
     @IBOutlet weak var profileImg: UIImageView!
@@ -83,55 +85,66 @@ class ProfileViewController: BaseViewController {
         }
     
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.header.text = "My Account"
-            self.nativeState.text = "rNativeStateKEY".localizableString(loc: "en")
-            self.zip.text = "mpPinKEY".localizableString(loc: "en")
-            self.city.text = "rCityKEY".localizableString(loc: "en")
-            self.state.text = "rStateKEY".localizableString(loc: "en")
-            self.address.text = "rAddressKEY".localizableString(loc: "en")
-            self.email.text = "rEmailKEY".localizableString(loc: "en")
-            self.mobile.text = "rMobileKEY".localizableString(loc: "en")
-            self.districtLbl.text = "mpDistrictKEY".localizableString(loc: "en")
-            self.prefLanguage.text = "mpPreferredLanguageKEY".localizableString(loc: "en")
-            
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.header.text = "मेरा खाता"
-            self.nativeState.text = "rNativeStateKEY".localizableString(loc: "hi")
-            self.zip.text = "mpPinKEY".localizableString(loc: "hi")
-            self.city.text = "rCityKEY".localizableString(loc: "hi")
-            self.state.text = "rStateKEY".localizableString(loc: "hi")
-            self.address.text = "rAddressKEY".localizableString(loc: "hi")
-            self.email.text = "rEmailKEY".localizableString(loc: "hi")
-            self.mobile.text = "rMobileKEY".localizableString(loc: "hi")
-            self.districtLbl.text = "mpDistrictKEY".localizableString(loc: "hi")
-            self.prefLanguage.text = "mpPreferredLanguageKEY".localizableString(loc: "hi")
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.header.text = "என் கணக்கு"
-            self.nativeState.text = "rNativeStateKEY".localizableString(loc: "ta-IN")
-            self.zip.text = "mpPinKEY".localizableString(loc: "ta-IN")
-            self.city.text = "rCityKEY".localizableString(loc: "ta-IN")
-            self.state.text = "rStateKEY".localizableString(loc: "ta-IN")
-            self.address.text = "rAddressKEY".localizableString(loc: "ta-IN")
-            self.email.text = "rEmailKEY".localizableString(loc: "ta-IN")
-            self.mobile.text = "rMobileKEY".localizableString(loc: "ta-IN")
-            self.districtLbl.text = "mpDistrictKEY".localizableString(loc: "ta-IN")
-            self.prefLanguage.text = "mpPreferredLanguageKEY".localizableString(loc: "ta-IN")
-            
-        }else{
-            self.header.text = "నా ఖాతా"
-            self.nativeState.text = "rNativeStateKEY".localizableString(loc: "te")
-            self.zip.text = "mpPinKEY".localizableString(loc: "te")
-            self.city.text = "rCityKEY".localizableString(loc: "te")
-            self.state.text = "rStateKEY".localizableString(loc: "te")
-            self.address.text = "rAddressKEY".localizableString(loc: "te")
-            self.email.text = "rEmailKEY".localizableString(loc: "te")
-            self.mobile.text = "rMobileKEY".localizableString(loc: "te")
-            self.districtLbl.text = "mpDistrictKEY".localizableString(loc: "te")
-            self.prefLanguage.text = "mpPreferredLanguageKEY".localizableString(loc: "te")
-        }
+        self.header.text = "My Account".localiz()
+        self.nativeState.text = "rNativeStateKEY".localiz()
+        self.zip.text = "mpPinKEY".localiz()
+        self.city.text = "rCityKEY".localiz()
+        self.state.text = "rStateKEY".localiz()
+        self.address.text = "rAddressKEY".localiz()
+        self.email.text = "rEmailKEY".localiz()
+        self.mobile.text = "rMobileKEY".localiz()
+        self.districtLbl.text = "mpDistrictKEY".localiz()
+        self.prefLanguage.text = "mpPreferredLanguageKEY".localiz()
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.header.text = "My Account"
+//            self.nativeState.text = "rNativeStateKEY".localizableString(loc: "en")
+//            self.zip.text = "mpPinKEY".localizableString(loc: "en")
+//            self.city.text = "rCityKEY".localizableString(loc: "en")
+//            self.state.text = "rStateKEY".localizableString(loc: "en")
+//            self.address.text = "rAddressKEY".localizableString(loc: "en")
+//            self.email.text = "rEmailKEY".localizableString(loc: "en")
+//            self.mobile.text = "rMobileKEY".localizableString(loc: "en")
+//            self.districtLbl.text = "mpDistrictKEY".localizableString(loc: "en")
+//            self.prefLanguage.text = "mpPreferredLanguageKEY".localizableString(loc: "en")
+//
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.header.text = "मेरा खाता"
+//            self.nativeState.text = "rNativeStateKEY".localizableString(loc: "hi")
+//            self.zip.text = "mpPinKEY".localizableString(loc: "hi")
+//            self.city.text = "rCityKEY".localizableString(loc: "hi")
+//            self.state.text = "rStateKEY".localizableString(loc: "hi")
+//            self.address.text = "rAddressKEY".localizableString(loc: "hi")
+//            self.email.text = "rEmailKEY".localizableString(loc: "hi")
+//            self.mobile.text = "rMobileKEY".localizableString(loc: "hi")
+//            self.districtLbl.text = "mpDistrictKEY".localizableString(loc: "hi")
+//            self.prefLanguage.text = "mpPreferredLanguageKEY".localizableString(loc: "hi")
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.header.text = "என் கணக்கு"
+//            self.nativeState.text = "rNativeStateKEY".localizableString(loc: "ta-IN")
+//            self.zip.text = "mpPinKEY".localizableString(loc: "ta-IN")
+//            self.city.text = "rCityKEY".localizableString(loc: "ta-IN")
+//            self.state.text = "rStateKEY".localizableString(loc: "ta-IN")
+//            self.address.text = "rAddressKEY".localizableString(loc: "ta-IN")
+//            self.email.text = "rEmailKEY".localizableString(loc: "ta-IN")
+//            self.mobile.text = "rMobileKEY".localizableString(loc: "ta-IN")
+//            self.districtLbl.text = "mpDistrictKEY".localizableString(loc: "ta-IN")
+//            self.prefLanguage.text = "mpPreferredLanguageKEY".localizableString(loc: "ta-IN")
+//
+//        }else{
+//            self.header.text = "నా ఖాతా"
+//            self.nativeState.text = "rNativeStateKEY".localizableString(loc: "te")
+//            self.zip.text = "mpPinKEY".localizableString(loc: "te")
+//            self.city.text = "rCityKEY".localizableString(loc: "te")
+//            self.state.text = "rStateKEY".localizableString(loc: "te")
+//            self.address.text = "rAddressKEY".localizableString(loc: "te")
+//            self.email.text = "rEmailKEY".localizableString(loc: "te")
+//            self.mobile.text = "rMobileKEY".localizableString(loc: "te")
+//            self.districtLbl.text = "mpDistrictKEY".localizableString(loc: "te")
+//            self.prefLanguage.text = "mpPreferredLanguageKEY".localizableString(loc: "te")
+//        }
     }
     @IBAction func profileButton(_ sender: Any) {
         

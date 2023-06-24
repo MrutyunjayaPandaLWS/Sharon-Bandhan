@@ -11,6 +11,7 @@ import AVFoundation
 import Firebase
 import AudioToolbox
 import CoreLocation
+import LanguageManager_iOS
 
 class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, UNUserNotificationCenterDelegate, closeCodesDelegate, UITextFieldDelegate, PopUpDelegate, PopUpDelegate2{
     func popUpAlertDidTap2(_ vc: PopUp2ViewController) {}
@@ -52,6 +53,9 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
     let captureMetadataOutput = AVCaptureMetadataOutput()
     var isscannedOnce = true
     var selectedindex = 0
+    var firstScanned = true
+    var color1 = #colorLiteral(red: 1, green: 0.8769283891, blue: 0, alpha: 0.25)
+    var color2 = #colorLiteral(red: 1, green: 0.8769283891, blue: 0, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,8 +94,8 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                         }
                     })
                 }
-                self.scanoruploadLabel.text = "Scan QR Code"
-                self.scanAgain.setTitle("SCAN AGAIN", for: .normal)
+                self.scanoruploadLabel.text = "fcScanQRCodeKEY".localiz()
+                self.scanAgain.setTitle("SCAN AGAIN".localiz(), for: .normal)
                 self.scannerImage.isHidden = false
                 //self.scanImage12.isHidden = true
                 self.scanCodeView.isHidden = false
@@ -101,8 +105,8 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                 }
                 
             } else if self.selectedindex == 2 {
-                self.scanoruploadLabel.text = "Upload Code"
-                self.scanAgain.setTitle("UPLOAD AGAIN", for: .normal)
+                self.scanoruploadLabel.text = "hpUploadCodeKEY".localiz()
+                self.scanAgain.setTitle("UPLOAD AGAIN".localiz(), for: .normal)
                 self.scannerImage.isHidden = true
              //   self.scanImage12.isHidden = false
                 self.captureSession.stopRunning()
@@ -153,60 +157,59 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
     }
 
     @IBAction func scaningQRCodeNewModelActBTN(_ sender: Any) {
-        
-        self.generateEWarrantyBottom.isHidden = true
-        self.codetableView.delegate = self
-        self.codetableView.dataSource = self
-        self.scannerVM.vc = self
-        self.codeTF.delegate = self
-        NotificationCenter.default.addObserver(self, selector: #selector(alertPopUpMessage), name: Notification.Name("alertPopUp"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(popUpMessageInvalidCode), name: Notification.Name("InvalidQRCode"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(alertMsgPopUp), name: Notification.Name("alertMessagePopuP"), object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(scannedCodeLimit), name: Notification.Name("maxiLimitReached"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(maxUploadLimit), name: Notification.Name("maxiUploadLimiReached"), object: nil)
-        InitialSetups()
-
-        
         DispatchQueue.main.async {
-//            self.selectedindex = 1
             if AVCaptureDevice.authorizationStatus(for: .video) ==  .authorized {
-                //  self.scanImage12.isHidden = true
-                self.startLiveVideo()
+                self.selectedindex = 1
+                if self.firstScanned{
+                    self.startLiveVideo()
+                }else{
+                    DispatchQueue.main.async {
+                        self.scanOutBTN.backgroundColor = self.color2
+                        self.uploadCodeOutBTN.backgroundColor = self.color1
+                        self.uploadCodeOutBTN.setTitleColor(UIColor.darkGray, for: .normal)
+                        self.scanOutBTN.setTitleColor(UIColor.black, for: .normal)
+                        self.captureSession.startRunning()
+                    }
+                }
+               
             } else {
                 AVCaptureDevice.requestAccess(for: .video, completionHandler: { (granted: Bool) in
                     if granted {
-                        //  self.scanImage12.isHidden = true
-                        //  self.scannerImage.isHidden = false
-                        self.startLiveVideo()
+                        self.selectedindex = 1
+                        if self.firstScanned{
+                            self.startLiveVideo()
+                        }else{
+                            DispatchQueue.main.async {
+                                self.captureSession.startRunning()
+                            }
+                        }
                     } else {
-                        //self.scanImage12.isHidden = false
-                        //self.scannerImage.isHidden = true
                         DispatchQueue.main.async {
                             UIApplication.shared.openURL(URL(string: UIApplication.openSettingsURLString)!)
                         }
                     }
                 })
             }
-            self.scanoruploadLabel.text = "Scan QR Code"
-            self.scanAgain.setTitle("SCAN AGAIN", for: .normal)
+            self.scanoruploadLabel.text = "fcScanQRCodeKEY".localiz()
+            self.scanAgain.setTitle("SCAN AGAIN".localiz(), for: .normal)
             self.scannerImage.isHidden = false
             //self.scanImage12.isHidden = true
             self.scanCodeView.isHidden = false
             self.uploadCodeView.isHidden = true
-            DispatchQueue.main.async {
-                self.captureSession.startRunning()
-            }
         }
     }
     
     @IBAction func uploadQRCodeNEWModelActBTN(_ sender: Any) {
         DispatchQueue.main.async {
             self.selectedindex = 2
-            self.scanoruploadLabel.text = "Upload Code"
-            self.scanAgain.setTitle("UPLOAD AGAIN", for: .normal)
+            self.scanoruploadLabel.text = "hpUploadCodeKEY".localiz()
+            self.scanAgain.setTitle("UPLOAD AGAIN".localiz(), for: .normal)
             self.scannerImage.isHidden = true
             //   self.scanImage12.isHidden = false
+            self.scanOutBTN.backgroundColor = self.color1
+            self.uploadCodeOutBTN.backgroundColor = self.color2
+            self.uploadCodeOutBTN.setTitleColor(UIColor.black, for: .normal)
+            self.scanOutBTN.setTitleColor(UIColor.darkGray, for: .normal)
             self.captureSession.stopRunning()
             self.uploadCodeView.isHidden = false
             self.scanCodeView.isHidden = true
@@ -218,7 +221,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                 vc!.delegate = self
                 vc!.titleInfo = ""
-                vc!.descriptionInfo = "Please Enter code"
+                vc!.descriptionInfo = "Please Enter code".localiz()
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -238,7 +241,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                             vc!.delegate = self
                             vc!.titleInfo = ""
-                            vc!.descriptionInfo = "Your daily uploading limit exceeded"
+                            vc!.descriptionInfo = "Your daily uploading limit exceeded".localiz()
                             vc!.modalPresentationStyle = .overCurrentContext
                             vc!.modalTransitionStyle = .crossDissolve
                             self.present(vc!, animated: true, completion: nil)
@@ -252,7 +255,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                             vc!.delegate = self
                             vc!.titleInfo = ""
-                            vc!.descriptionInfo = "Your daily uploading limit exceeded"
+                            vc!.descriptionInfo = "Your daily uploading limit exceeded".localiz()
                             vc!.modalPresentationStyle = .overCurrentContext
                             vc!.modalTransitionStyle = .crossDissolve
                             self.present(vc!, animated: true, completion: nil)
@@ -277,7 +280,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                                 vc!.delegate = self
                                 vc!.titleInfo = ""
-                                vc!.descriptionInfo = "Code is already scanned"
+                                vc!.descriptionInfo = "Code is already scanned".localiz()
                                 vc!.modalPresentationStyle = .overCurrentContext
                                 vc!.modalTransitionStyle = .crossDissolve
                                 self.present(vc!, animated: true, completion: nil)
@@ -291,7 +294,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                                 vc!.delegate = self
                                 vc!.titleInfo = ""
-                                vc!.descriptionInfo = "Code is already uploaded"
+                                vc!.descriptionInfo = "Code is already uploaded".localiz()
                                 vc!.modalPresentationStyle = .overCurrentContext
                                 vc!.modalTransitionStyle = .crossDissolve
                                 self.present(vc!, animated: true, completion: nil)
@@ -318,7 +321,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                             vc!.delegate = self
                             vc!.titleInfo = ""
-                            vc!.descriptionInfo = "Code is already scanned"
+                            vc!.descriptionInfo = "Code is already scanned".localiz()
                             vc!.modalPresentationStyle = .overCurrentContext
                             vc!.modalTransitionStyle = .crossDissolve
                             self.present(vc!, animated: true, completion: nil)
@@ -334,7 +337,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                             vc!.delegate = self
                             vc!.titleInfo = ""
-                            vc!.descriptionInfo = "Code is already uploaded"
+                            vc!.descriptionInfo = "Code is already uploaded".localiz()
                             vc!.modalPresentationStyle = .overCurrentContext
                             vc!.modalTransitionStyle = .crossDissolve
                             self.present(vc!, animated: true, completion: nil)
@@ -361,17 +364,20 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
     }
     
     @IBAction func scanAgain(_ sender: Any) {
-        self.scannerVM.codeGenuineResponse?.plantCode = ""
-        self.scannerVM.codeGenuineResponse?.plantName = ""
-        self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].printDate = ""
-        self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].productId = 0
-        self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].productName = ""
-        self.scannerVM.codeGenuineResponse?.returnMessage = ""
-        self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].scratchCode = ""
-        self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].thickness = ""
-        self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].size = ""
-        self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].brandId = 0
-        self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].memberName = ""
+        
+        if self.scannerVM.codeGenuineResponse?.qrUsegereport?.count != 0{
+            self.scannerVM.codeGenuineResponse?.plantCode = ""
+            self.scannerVM.codeGenuineResponse?.plantName = ""
+            self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].printDate = ""
+            self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].productId = 0
+            self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].productName = ""
+            self.scannerVM.codeGenuineResponse?.returnMessage = ""
+            self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].scratchCode = ""
+            self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].thickness = ""
+            self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].size = ""
+            self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].brandId = 0
+            self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].memberName = ""
+        }
         DispatchQueue.main.asyncAfter(deadline: .now()+1.0, execute: {
             self.isscannedOnce = true
             self.captureSession.startRunning()
@@ -439,7 +445,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                             vc!.delegate = self
                             vc!.titleInfo = ""
                             vc!.itsFrom = "Scanner"
-                            vc!.discriptionInfo = "Are you sure want to exit without generating E-Warranty?"
+                            vc!.discriptionInfo = "Are you sure want to exit without generating E-Warranty?".localiz()
                             vc!.modalPresentationStyle = .overCurrentContext
                             vc!.modalTransitionStyle = .crossDissolve
                             self.present(vc!, animated: true, completion: nil)
@@ -484,6 +490,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                 self.videoPreviewLayer?.frame = self.scanCodeView.layer.bounds
                 self.scanCodeView.layer.addSublayer(self.videoPreviewLayer!)
                 self.captureSession.startRunning()
+                self.firstScanned = false
                 self.isscannedOnce = true
 
             } catch {
@@ -528,7 +535,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                                     vc!.delegate = self
                                     vc!.titleInfo = ""
-                                    vc!.descriptionInfo = "Your daily Scanning limit exceeded"
+                                    vc!.descriptionInfo = "Your daily Scanning limit exceeded".localiz()
                                     vc!.modalPresentationStyle = .overCurrentContext
                                     vc!.modalTransitionStyle = .crossDissolve
                                     self.present(vc!, animated: true, completion: nil)
@@ -544,7 +551,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                                     vc!.delegate = self
                                     vc!.titleInfo = ""
-                                    vc!.descriptionInfo = "Your daily Scanning limit exceeded"
+                                    vc!.descriptionInfo = "Your daily Scanning limit exceeded".localiz()
                                     vc!.modalPresentationStyle = .overCurrentContext
                                     vc!.modalTransitionStyle = .crossDissolve
                                     self.present(vc!, animated: true, completion: nil)
@@ -568,7 +575,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                                         vc!.delegate = self
                                         vc!.titleInfo = ""
-                                        vc!.descriptionInfo = "Code is already scanned"
+                                        vc!.descriptionInfo = "Code is already scanned".localiz()
                                         vc!.modalPresentationStyle = .overCurrentContext
                                         vc!.modalTransitionStyle = .crossDissolve
                                         self.present(vc!, animated: true, completion: nil)
@@ -584,7 +591,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                                         vc!.delegate = self
                                         vc!.titleInfo = ""
-                                        vc!.descriptionInfo = "Code is already uploaded"
+                                        vc!.descriptionInfo = "Code is already uploaded".localiz()
                                         vc!.modalPresentationStyle = .overCurrentContext
                                         vc!.modalTransitionStyle = .crossDissolve
                                         self.present(vc!, animated: true, completion: nil)
@@ -609,7 +616,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                                     vc!.delegate = self
                                     vc!.titleInfo = ""
-                                    vc!.descriptionInfo = "Code is already scanned"
+                                    vc!.descriptionInfo = "Code is already scanned".localiz()
                                     vc!.modalPresentationStyle = .overCurrentContext
                                     vc!.modalTransitionStyle = .crossDissolve
                                     self.present(vc!, animated: true, completion: nil)
@@ -625,7 +632,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
                                     vc!.delegate = self
                                     vc!.titleInfo = ""
-                                    vc!.descriptionInfo = "Code is already uploaded"
+                                    vc!.descriptionInfo = "Code is already uploaded".localiz()
                                     vc!.modalPresentationStyle = .overCurrentContext
                                     vc!.modalTransitionStyle = .crossDissolve
                                     self.present(vc!, animated: true, completion: nil)
@@ -660,7 +667,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
             vc!.delegate = self
             vc!.titleInfo = ""
             vc!.itsFrom = "ValidateQRCode"
-            vc!.descriptionInfo = "Invalid QR code ! QR code should be 12 character"
+            vc!.descriptionInfo = "Invalid QR code ! QR code should be 12 character".localiz()
             vc!.modalPresentationStyle = .overCurrentContext
             vc!.modalTransitionStyle = .crossDissolve
             self.present(vc!, animated: true, completion: nil)
@@ -866,7 +873,7 @@ extension CP_Scanner_VC : UITableViewDelegate, UITableViewDataSource{
                 vc!.delegate = self
                 vc!.titleInfo = ""
                 vc!.itsFrom = ""
-                vc!.descriptionInfo = "Not a Sharon Ply Genuine Product"
+                vc!.descriptionInfo = "Not a Sharon Ply Genuine Product".localiz()
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)

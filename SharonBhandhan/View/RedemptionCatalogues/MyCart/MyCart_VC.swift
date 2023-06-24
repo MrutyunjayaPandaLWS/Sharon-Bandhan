@@ -9,6 +9,7 @@ import UIKit
 import SDWebImage
 import Firebase
 import Toast_Swift
+import LanguageManager_iOS
 
 class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
     func popupAlertDidTap(_ vc: PopupAlertOne_VC) {
@@ -56,25 +57,29 @@ class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
 //        tracker.send(builder.build() as [NSObject : AnyObject])
     }
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.myCartTitleLabel.text = "My Cart"
-            self.totalPointsHeadingLabel.text = "Total Points"
-            self.proceedToCheckoutButton.setTitle("PROCESS TO CHECKOUT", for: .normal)
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.myCartTitleLabel.text = "मेरी गाड़ी"
-            self.totalPointsHeadingLabel.text = "कुल अंक"
-            self.proceedToCheckoutButton.setTitle("चेकआउट करने की प्रक्रिया", for: .normal)
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.myCartTitleLabel.text = "আমার কার্ট"
-            self.totalPointsHeadingLabel.text = "মোট পয়েন্ট"
-            self.proceedToCheckoutButton.setTitle("চেকআউট করার প্রক্রিয়া", for: .normal)
-            
-        }else{
-            self.myCartTitleLabel.text = "నా కార్ట్"
-            self.totalPointsHeadingLabel.text = "మొత్తం పాయింట్లు"
-            self.proceedToCheckoutButton.setTitle("చెక్అవుట్ చేయడానికి ప్రక్రియ", for: .normal)
-        }
+        self.myCartTitleLabel.text = "mcMyCartKEY".localiz()
+        self.totalPointsHeadingLabel.text = "mcTotalPointsKEY".localiz()
+        self.proceedToCheckoutButton.setTitle("PROCESS TO CHECKOUT".localiz(), for: .normal)
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.myCartTitleLabel.text = "My Cart"
+//            self.totalPointsHeadingLabel.text = "Total Points"
+//            self.proceedToCheckoutButton.setTitle("PROCESS TO CHECKOUT", for: .normal)
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.myCartTitleLabel.text = "मेरी गाड़ी"
+//            self.totalPointsHeadingLabel.text = "कुल अंक"
+//            self.proceedToCheckoutButton.setTitle("चेकआउट करने की प्रक्रिया", for: .normal)
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.myCartTitleLabel.text = "আমার কার্ট"
+//            self.totalPointsHeadingLabel.text = "মোট পয়েন্ট"
+//            self.proceedToCheckoutButton.setTitle("চেকআউট করার প্রক্রিয়া", for: .normal)
+//
+//        }else{
+//            self.myCartTitleLabel.text = "నా కార్ట్"
+//            self.totalPointsHeadingLabel.text = "మొత్తం పాయింట్లు"
+//            self.proceedToCheckoutButton.setTitle("చెక్అవుట్ చేయడానికి ప్రక్రియ", for: .normal)
+//        }
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -92,9 +97,9 @@ class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
             
         }else if self.verifiedStatus == 1{
             if UserDefaults.standard.integer(forKey: "IsRedeemable") == -3{
-                self.view.makeToast("Your PAN Details are pending,Please contact your administrator!", duration: 2.0, position: .bottom)
+                self.view.makeToast("Your PAN Details are pending,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
             }else if UserDefaults.standard.integer(forKey: "IsRedeemable") == -4{
-                self.view.makeToast("Your PAN Details are rejected,Please contact your administrator!", duration: 2.0, position: .bottom)
+                self.view.makeToast("Your PAN Details are rejected,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
             }else if UserDefaults.standard.integer(forKey: "IsRedeemable") == 1{
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ShippingAddress_VC") as! ShippingAddress_VC
                 vc.totalPoint = finalPoints
@@ -130,16 +135,17 @@ class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                         vc!.delegate = self
                         vc!.titleInfo = ""
+                        vc!.descriptionInfo = "Insufficent Point Balance".localiz()
                         
-                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                            vc!.descriptionInfo = "Insufficient Point Balance"
-                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                             vc!.descriptionInfo = "अपर्याप्त प्वाइंट बैलेंस"
-                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                            vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
-                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                            vc!.descriptionInfo = "తగినంత పాయింట్ బ్యాలెన్స్ లేదు"
-                          }
+//                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                            vc!.descriptionInfo = "Insufficient Point Balance"
+//                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                             vc!.descriptionInfo = "अपर्याप्त प्वाइंट बैलेंस"
+//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                            vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
+//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                            vc!.descriptionInfo = "తగినంత పాయింట్ బ్యాలెన్స్ లేదు"
+//                          }
                         vc!.modalPresentationStyle = .overCurrentContext
                         vc!.modalTransitionStyle = .crossDissolve
                         self.present(vc!, animated: true, completion: nil)
@@ -178,15 +184,17 @@ class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                             vc!.delegate = self
                             vc!.titleInfo = ""
-                            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                                vc!.descriptionInfo = "Insufficient Point Balance"
-                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                                 vc!.descriptionInfo = "अपर्याप्त प्वाइंट बैलेंस"
-                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
-                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                                vc!.descriptionInfo = "తగినంత పాయింట్ బ్యాలెన్స్ లేదు"
-                              }
+                            vc!.descriptionInfo = "Insufficent Point Balance".localiz()
+                            
+//                            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                                vc!.descriptionInfo = "Insufficient Point Balance"
+//                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                                 vc!.descriptionInfo = "अपर्याप्त प्वाइंट बैलेंस"
+//                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                                vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
+//                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                                vc!.descriptionInfo = "తగినంత పాయింట్ బ్యాలెన్స్ లేదు"
+//                              }
                             vc!.modalPresentationStyle = .overCurrentContext
                             vc!.modalTransitionStyle = .crossDissolve
                             self.present(vc!, animated: true, completion: nil)
@@ -305,16 +313,16 @@ class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                         vc!.delegate = self
                         vc!.titleInfo = ""
-                        
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Product has been removed from Cart"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "कार्ट से उत्पाद हटा दिया गया है"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "পণ্য কার্ট থেকে সরানো হয়েছে"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "కార్ట్ నుండి ఉత్పత్తి తీసివేయబడింది"
-                      }
+                    vc!.descriptionInfo = "Product has been removed from Cart".localiz()
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Product has been removed from Cart"
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "कार्ट से उत्पाद हटा दिया गया है"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "পণ্য কার্ট থেকে সরানো হয়েছে"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "కార్ట్ నుండి ఉత్పత్తి తీసివేయబడింది"
+//                      }
                         vc!.modalPresentationStyle = .overCurrentContext
                         vc!.modalTransitionStyle = .crossDissolve
                         self.present(vc!, animated: true, completion: nil)
@@ -326,15 +334,17 @@ class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Something went wrong!"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "कुछ गलत हो गया!"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "কিছু ভুল হয়েছে!"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "ఎక్కడో తేడ జరిగింది!"
-                      }
+                    vc!.descriptionInfo = "Something went wrong please try again later.".localiz()
+                    
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Something went wrong!"
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "कुछ गलत हो गया!"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "কিছু ভুল হয়েছে!"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "ఎక్కడో తేడ జరిగింది!"
+//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)

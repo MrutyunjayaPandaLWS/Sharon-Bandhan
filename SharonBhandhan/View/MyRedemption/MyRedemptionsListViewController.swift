@@ -9,6 +9,7 @@ import UIKit
 import Lottie
 import SDWebImage
 import Firebase
+import LanguageManager_iOS
 
 class MyRedemptionsListViewController: BaseViewController, FilterDelegate{
     
@@ -51,19 +52,22 @@ class MyRedemptionsListViewController: BaseViewController, FilterDelegate{
     }
     
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.header.text = "My Redemptions"
-            self.redemablePointsTitle.text  = "Redeemable Points"
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.header.text = "मेरे मोचन"
-            self.redemablePointsTitle.text  = "रिडीमेंबल पॉइंट्स"
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.header.text = "আমার মুক্তি"
-            self.redemablePointsTitle.text  = "Redeemable Points"
-        }else{
-            self.header.text = "నా విమోచనాలు"
-            self.redemablePointsTitle.text  = "Redeemable Points"
-        }
+        self.header.text = "My Redemptions".localiz()
+        self.redemablePointsTitle.text  = "Redeemable Points".localiz()
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.header.text = "My Redemptions".localiz()
+//            self.redemablePointsTitle.text  = "Redeemable Points".localiz()
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.header.text = "मेरे मोचन"
+//            self.redemablePointsTitle.text  = "रिडीमेंबल पॉइंट्स"
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.header.text = "আমার মুক্তি"
+//            self.redemablePointsTitle.text  = "Redeemable Points"
+//        }else{
+//            self.header.text = "నా విమోచనాలు"
+//            self.redemablePointsTitle.text  = "Redeemable Points"
+//        }
     }
     
   
@@ -236,23 +240,26 @@ extension MyRedemptionsListViewController : UITableViewDelegate, UITableViewData
             cell?.productStatus.borderColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
         }
 
-            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                cell?.productStatus.text = "Pending"
-                cell?.productRefNo.text = "REF# \(self.VM.myRedemptionList[indexPath.row].redemptionRefno ?? "-")"
-                cell?.productCateogory.text = "Category: \(self.VM.myRedemptionList[indexPath.row].categoryName ?? "-")"
-            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                cell?.productStatus.text = "लंबित"
-                cell?.productRefNo.text = "संदर्भ# \(self.VM.myRedemptionList[indexPath.row].redemptionRefno ?? "-")"
-                cell?.productCateogory.text = "श्रेणी: \(self.VM.myRedemptionList[indexPath.row].categoryName ?? "-")"
-            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                cell?.productStatus.text = "বিচারাধীন"
-                cell?.productRefNo.text = "রেফারেন্স# \(self.VM.myRedemptionList[indexPath.row].redemptionRefno ?? "-")"
-                cell?.productCateogory.text = "ক্যাটাগরি: \(self.VM.myRedemptionList[indexPath.row].categoryName ?? "-")"
-            }else{
-//                cell?.productStatus.text = "పెండింగ్‌లో"
-                cell?.productRefNo.text = "రిఎఫ్# \(self.VM.myRedemptionList[indexPath.row].redemptionRefno ?? "-")"
-                cell?.productCateogory.text = "వర్గం: \(self.VM.myRedemptionList[indexPath.row].categoryName ?? "-")"
-            }
+        cell?.productRefNo.text = "\("REF".localiz())# \(self.VM.myRedemptionList[indexPath.row].redemptionRefno ?? "-")"
+        cell?.productCateogory.text = "\("rcCategoryKEY".localiz()) : \(self.VM.myRedemptionList[indexPath.row].categoryName ?? "-")"
+        
+//            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+////                cell?.productStatus.text = "Pending"
+//                cell?.productRefNo.text = "\("REF".localiz())# \(self.VM.myRedemptionList[indexPath.row].redemptionRefno ?? "-")"
+//                cell?.productCateogory.text = "\("rcCategoryKEY".localiz()) : \(self.VM.myRedemptionList[indexPath.row].categoryName ?? "-")"
+//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+////                cell?.productStatus.text = "लंबित"
+//                cell?.productRefNo.text = "संदर्भ# \(self.VM.myRedemptionList[indexPath.row].redemptionRefno ?? "-")"
+//                cell?.productCateogory.text = "श्रेणी: \(self.VM.myRedemptionList[indexPath.row].categoryName ?? "-")"
+//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+////                cell?.productStatus.text = "বিচারাধীন"
+//                cell?.productRefNo.text = "রেফারেন্স# \(self.VM.myRedemptionList[indexPath.row].redemptionRefno ?? "-")"
+//                cell?.productCateogory.text = "ক্যাটাগরি: \(self.VM.myRedemptionList[indexPath.row].categoryName ?? "-")"
+//            }else{
+////                cell?.productStatus.text = "పెండింగ్‌లో"
+//                cell?.productRefNo.text = "రిఎఫ్# \(self.VM.myRedemptionList[indexPath.row].redemptionRefno ?? "-")"
+//                cell?.productCateogory.text = "వర్గం: \(self.VM.myRedemptionList[indexPath.row].categoryName ?? "-")"
+//            }
            
         
         let receivedImage = self.VM.myRedemptionList[indexPath.row].productImage ?? ""

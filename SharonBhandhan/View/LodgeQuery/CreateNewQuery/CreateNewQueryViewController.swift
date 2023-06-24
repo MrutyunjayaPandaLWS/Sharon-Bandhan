@@ -11,6 +11,7 @@ import AVFoundation
 import SDWebImage
 import CoreData
 import Firebase
+import LanguageManager_iOS
 
 class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource, popUpDelegate{
     func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
@@ -139,45 +140,54 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
     }
     
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.ldgequery.text = "Add Lodge Query"
-            self.pleasesubmityourqueryusingthisform.text = "Please submit your query using this form"
-            self.selectyourtopiclabel.text = "Select Your Topic"
-            self.querysummarylabel.text = "Query Summary"
-            self.querydetails.text = "Query Details"
-            self.browseimage.setTitle("Browse Image", for: .normal)
-            self.submitbtn.setTitle("Submit Query", for: .normal)
-            self.cancelbutton.setTitle("Cancel", for: .normal)
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.ldgequery.text = "लॉज पूछताछ जोड़ें"
-            self.pleasesubmityourqueryusingthisform.text = "कृपया इस फॉर्म का उपयोग करके अपना प्रश्न सबमिट करें"
-            self.selectyourtopiclabel.text = "अपना विषय चुनें"
-            self.querysummarylabel.text = "प्रश्न सारांश"
-            self.querydetails.text = "क्वेरी विवरण"
-            self.browseimage.setTitle("छवि ब्राउज़ करें", for: .normal)
-            self.submitbtn.setTitle("क्वेरी सबमिट करें", for: .normal)
-            self.cancelbutton.setTitle("रद्द करना", for: .normal)
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.ldgequery.text = "লজ কোয়েরি যোগ করুন"
-            self.pleasesubmityourqueryusingthisform.text = "এই ফর্ম ব্যবহার করে আপনার ক্যোয়ারী জমা দিন"
-            self.selectyourtopiclabel.text = "আপনার বিষয় নির্বাচন করুন"
-            self.querysummarylabel.text = "প্রশ্নের সারাংশ"
-            self.querydetails.text = "ক্যোয়ারী বিবরণ"
-            self.browseimage.setTitle("ইমেজ ব্রাউজ করুন", for: .normal)
-            self.submitbtn.setTitle("ক্যোয়ারী জমা দিন", for: .normal)
-            self.cancelbutton.setTitle("বাতিল করুন", for: .normal)
-        }else{
-            self.ldgequery.text = "లాడ్జ్ క్వెరీని జోడించండి"
-            self.pleasesubmityourqueryusingthisform.text = "దయచేసి ఈ ఫారమ్‌ని ఉపయోగించి మీ ప్రశ్నను సమర్పించండి"
-            self.selectyourtopiclabel.text = "మీ అంశాన్ని ఎంచుకోండి"
-            self.querysummarylabel.text = "ప్రశ్న సంగ్రహము"
-            self.querydetails.text = "క్వెరీ వివరాలు"
-            self.browseimage.setTitle("చిత్రాన్ని బ్రౌజ్ చేయండి", for: .normal)
-            self.submitbtn.setTitle("క్వెరీని సమర్పించండి", for: .normal)
-            self.cancelbutton.setTitle("రద్దు చేయి", for: .normal)
-        }
+        self.ldgequery.text = "Add Lodge Query".localiz()
+        self.pleasesubmityourqueryusingthisform.text = "lqPleaseSubmitYourQueryUsingThisFormKEY".localiz()
+        self.selectyourtopiclabel.text = "lqSelectYourTopic".localiz()
+        self.querysummarylabel.text = "lqQuerySummary".localiz()
+        self.querydetails.text = "lqQueryDetails".localiz()
+        self.browseimage.setTitle("lqBrowseImageKEY".localiz(), for: .normal)
+        self.submitbtn.setTitle("Submit Query".localiz(), for: .normal)
+        self.cancelbutton.setTitle("CancelKey".localiz(), for: .normal)
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.ldgequery.text = "Add Lodge Query"
+//            self.pleasesubmityourqueryusingthisform.text = "Please submit your query using this form"
+//            self.selectyourtopiclabel.text = "Select Your Topic"
+//            self.querysummarylabel.text = "Query Summary"
+//            self.querydetails.text = "Query Details"
+//            self.browseimage.setTitle("Browse Image", for: .normal)
+//            self.submitbtn.setTitle("Submit Query", for: .normal)
+//            self.cancelbutton.setTitle("Cancel", for: .normal)
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.ldgequery.text = "लॉज पूछताछ जोड़ें"
+//            self.pleasesubmityourqueryusingthisform.text = "कृपया इस फॉर्म का उपयोग करके अपना प्रश्न सबमिट करें"
+//            self.selectyourtopiclabel.text = "अपना विषय चुनें"
+//            self.querysummarylabel.text = "प्रश्न सारांश"
+//            self.querydetails.text = "क्वेरी विवरण"
+//            self.browseimage.setTitle("छवि ब्राउज़ करें", for: .normal)
+//            self.submitbtn.setTitle("क्वेरी सबमिट करें", for: .normal)
+//            self.cancelbutton.setTitle("रद्द करना", for: .normal)
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.ldgequery.text = "লজ কোয়েরি যোগ করুন"
+//            self.pleasesubmityourqueryusingthisform.text = "এই ফর্ম ব্যবহার করে আপনার ক্যোয়ারী জমা দিন"
+//            self.selectyourtopiclabel.text = "আপনার বিষয় নির্বাচন করুন"
+//            self.querysummarylabel.text = "প্রশ্নের সারাংশ"
+//            self.querydetails.text = "ক্যোয়ারী বিবরণ"
+//            self.browseimage.setTitle("ইমেজ ব্রাউজ করুন", for: .normal)
+//            self.submitbtn.setTitle("ক্যোয়ারী জমা দিন", for: .normal)
+//            self.cancelbutton.setTitle("বাতিল করুন", for: .normal)
+//        }else{
+//            self.ldgequery.text = "లాడ్జ్ క్వెరీని జోడించండి"
+//            self.pleasesubmityourqueryusingthisform.text = "దయచేసి ఈ ఫారమ్‌ని ఉపయోగించి మీ ప్రశ్నను సమర్పించండి"
+//            self.selectyourtopiclabel.text = "మీ అంశాన్ని ఎంచుకోండి"
+//            self.querysummarylabel.text = "ప్రశ్న సంగ్రహము"
+//            self.querydetails.text = "క్వెరీ వివరాలు"
+//            self.browseimage.setTitle("చిత్రాన్ని బ్రౌజ్ చేయండి", for: .normal)
+//            self.submitbtn.setTitle("క్వెరీని సమర్పించండి", for: .normal)
+//            self.cancelbutton.setTitle("రద్దు చేయి", for: .normal)
+//        }
     }
     @objc func querySubmissions(){
         if self.isFrom == 3{
@@ -413,16 +423,16 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                    vc!.delegate = self
                    vc!.titleInfo = ""
-                  
-                   if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                       vc!.descriptionInfo = "Select a Query Topic"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                        vc!.descriptionInfo = "एक प्रश्न विषय का चयन करें"
-                   }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                       vc!.descriptionInfo = "একটি ক্যোয়ারী বিষয় নির্বাচন করুন"
-                   }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                       vc!.descriptionInfo = "ప్రశ్న అంశాన్ని ఎంచుకోండి"
-                     }
+                   vc!.descriptionInfo = "Select a Query Topic".localiz()
+//                   if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                       vc!.descriptionInfo = "Select a Query Topic"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                        vc!.descriptionInfo = "एक प्रश्न विषय का चयन करें"
+//                   }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                       vc!.descriptionInfo = "একটি ক্যোয়ারী বিষয় নির্বাচন করুন"
+//                   }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                       vc!.descriptionInfo = "ప్రశ్న అంశాన్ని ఎంచుకోండి"
+//                     }
                    vc!.modalPresentationStyle = .overFullScreen
                    vc!.modalTransitionStyle = .crossDissolve
                    self.present(vc!, animated: true, completion: nil)
@@ -433,16 +443,17 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                    vc!.delegate = self
                    vc!.titleInfo = ""
-                  
-                   if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                       vc!.descriptionInfo = "Query summary is Empty"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                        vc!.descriptionInfo = "क्वेरी सारांश खाली है"
-                   }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                       vc!.descriptionInfo = "প্রশ্নের সারাংশ খালি"
-                   }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                       vc!.descriptionInfo = "ప్రశ్న సారాంశం ఖాళీగా ఉంది"
-                     }
+                   vc!.descriptionInfo = "Query summary is Empty".localiz()
+                   
+//                   if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                       vc!.descriptionInfo = "Query summary is Empty"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                        vc!.descriptionInfo = "क्वेरी सारांश खाली है"
+//                   }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                       vc!.descriptionInfo = "প্রশ্নের সারাংশ খালি"
+//                   }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                       vc!.descriptionInfo = "ప్రశ్న సారాంశం ఖాళీగా ఉంది"
+//                     }
                    vc!.modalPresentationStyle = .overFullScreen
                    vc!.modalTransitionStyle = .crossDissolve
                    self.present(vc!, animated: true, completion: nil)
@@ -454,16 +465,17 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                    vc!.delegate = self
                    vc!.titleInfo = ""
+                   vc!.descriptionInfo = "Query Details is empty".localiz()
                    
-                   if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                       vc!.descriptionInfo = "Query Details is empty"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                        vc!.descriptionInfo = "क्वेरी विवरण खाली है"
-                   }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                       vc!.descriptionInfo = "ক্যোয়ারী বিবরণ খালি আছে"
-                   }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                       vc!.descriptionInfo = "ప్రశ్న వివరాలు ఖాళీగా ఉన్నాయి"
-                     }
+//                   if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                       vc!.descriptionInfo = "Query Details is empty"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                        vc!.descriptionInfo = "क्वेरी विवरण खाली है"
+//                   }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                       vc!.descriptionInfo = "ক্যোয়ারী বিবরণ খালি আছে"
+//                   }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                       vc!.descriptionInfo = "ప్రశ్న వివరాలు ఖాళీగా ఉన్నాయి"
+//                     }
                    vc!.modalPresentationStyle = .overFullScreen
                    vc!.modalTransitionStyle = .crossDissolve
                    self.present(vc!, animated: true, completion: nil)
@@ -529,15 +541,17 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
                     vc!.titleInfo = ""
                     vc!.itsComeFrom = "QuerySubmission"
                     self.clearTable2()
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Query submitted successfully"
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "क्वेरी सफलतापूर्वक सबमिट की गई"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "প্রশ্ন সফলভাবে জমা দেওয়া হয়েছে"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "ప్రశ్న విజయవంతంగా సమర్పించబడింది"
-                      }
+                    vc!.descriptionInfo = "Query submitted successfully".localiz()
+                    
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Query submitted successfully"
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "क्वेरी सफलतापूर्वक सबमिट की गई"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "প্রশ্ন সফলভাবে জমা দেওয়া হয়েছে"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "ప్రశ్న విజయవంతంగా సమర్పించబడింది"
+//                      }
                     vc!.modalPresentationStyle = .overFullScreen
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
@@ -548,16 +562,18 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
                     vc!.delegate = self
                     vc!.titleInfo = ""
                     vc!.itsComeFrom = "QuerySubmission"
-                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                        vc!.descriptionInfo = "Something went wrong please try again later."
-                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                         vc!.descriptionInfo = "कुछ गलत हुआ कृपया बाद में पुन: प्रयास करें।"
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                        vc!.descriptionInfo = "কিছু ভুল হয়েছে। পরে আবার চেষ্টা করুন."
-                        
-                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-                        vc!.descriptionInfo = "ఏదో తప్పు జరిగినది. దయచేసి కాసేపు ఆగక ప్రయత్నించండి."
-                      }
+                    vc!.descriptionInfo = "Something went wrong please try again later.".localiz()
+                    
+//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//                        vc!.descriptionInfo = "Something went wrong please try again later."
+//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//                         vc!.descriptionInfo = "कुछ गलत हुआ कृपया बाद में पुन: प्रयास करें।"
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//                        vc!.descriptionInfo = "কিছু ভুল হয়েছে। পরে আবার চেষ্টা করুন."
+//
+//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+//                        vc!.descriptionInfo = "ఏదో తప్పు జరిగినది. దయచేసి కాసేపు ఆగక ప్రయత్నించండి."
+//                      }
                     vc!.modalPresentationStyle = .overFullScreen
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)

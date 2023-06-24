@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import LanguageManager_iOS
 
 protocol PrivacyPolicyDelegate: AnyObject {
     func acceptDidTap(_ vc: PrivacyPolicyViewController)
@@ -33,10 +34,14 @@ class PrivacyPolicyViewController: UIViewController {
 //        tracker.send(builder.build() as [NSObject : AnyObject])
     }
     func languagelocalization(){
+        self.header.setTitle("Privacy Policy".localiz(), for: .normal)
+        self.decline.setTitle("lDeclineKEY".localiz(), for: .normal)
+        self.accept.setTitle("lAcceptKEY".localiz(), for: .normal)
+        
         if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.header.setTitle("Privacy Policy", for: .normal)
-            self.decline.setTitle("Decline", for: .normal)
-            self.accept.setTitle("Accept", for: .normal)
+//            self.header.setTitle("Privacy Policy".localiz(), for: .normal)
+//            self.decline.setTitle("lDeclineKEY".localiz(), for: .normal)
+//            self.accept.setTitle("lAcceptKEY".localiz(), for: .normal)
             self.privacyPolicyTV.text = """
 1. The points can be redeemed on some CenturyPly products (refer to the points table or ask CPIL representative for details). New products, if added, will be intimated.
              
@@ -73,9 +78,10 @@ I agree to receive SMSs, emails, phone calls or Whatsapp messages, related to th
 
             
 """
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{ self.header.setTitle("गोपनीयता नीति", for: .normal)
-            self.decline.setTitle("अस्वीकार करें", for: .normal)
-            self.accept.setTitle("स्वीकार करें", for: .normal)
+        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.header.setTitle("गोपनीयता नीति", for: .normal)
+//            self.decline.setTitle("अस्वीकार करें", for: .normal)
+//            self.accept.setTitle("स्वीकार करें", for: .normal)
             self.privacyPolicyTV.text = """
 1. पॉइंट्स को कुछ सेंचुरीप्लाई उत्पादों पर भुनाया जा सकता है (पॉइंट टेबल देखें या विवरण के लिए सीपीआईएल प्रतिनिधि से पूछें)। नए उत्पाद, यदि जोड़े जाते हैं, तो सूचित किया जाएगा।
 2. सेंचुरी एक्जीक्यूटिव को विधिवत भरा और हस्ताक्षरित नामांकन फॉर्म जमा करके इस कार्यक्रम के लिए नामांकन अनिवार्य है और इन नियमों और शर्तों की स्वीकृति के रूप में समझा जाएगा। सेंचुरीप्रोक्लब में सदस्य के पंजीकरण के बाद ही रिवॉर्ड पॉइंट का संचय शुरू होगा।
@@ -95,9 +101,9 @@ I agree to receive SMSs, emails, phone calls or Whatsapp messages, related to th
             
 """
         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.header.setTitle("গোপনীয়তা নীতি", for: .normal)
-            self.decline.setTitle("অস্বীকার", for: .normal)
-            self.accept.setTitle("স্বীকার", for: .normal)
+//            self.header.setTitle("গোপনীয়তা নীতি", for: .normal)
+//            self.decline.setTitle("অস্বীকার", for: .normal)
+//            self.accept.setTitle("স্বীকার", for: .normal)
             self.privacyPolicyTV.text = """
 1. পয়েন্টগুলি কিছু সেঞ্চুরিপ্লাই পণ্যগুলিতে রিডিম করা যেতে পারে (পয়েন্ট টেবিল পড়ুন বা বিস্তারিত জানতে CPIL প্রতিনিধিকে জিজ্ঞাসা করুন)। নতুন পণ্য, যোগ করা হলে, অবহিত করা হবে.
 2. সেঞ্চুরি এক্সিকিউটিভের কাছে যথাযথভাবে পূরণ করা এবং স্বাক্ষরিত তালিকাভুক্তি ফর্ম জমা দিয়ে এই প্রোগ্রামের জন্য নথিভুক্ত করা বাধ্যতামূলক এবং এই শর্তাবলীর স্বীকৃতি হিসাবে গণ্য করা হবে৷ সেঞ্চুরিপ্রোক্লাবে সদস্য নিবন্ধনের পরেই পুরস্কার পয়েন্ট সংগ্রহ শুরু হবে।
@@ -117,9 +123,9 @@ I agree to receive SMSs, emails, phone calls or Whatsapp messages, related to th
             
 """
         }else{
-            self.header.setTitle("గోప్యతా విధానం", for: .normal)
-            self.decline.setTitle("క్షీణత", for: .normal)
-            self.accept.setTitle("అంగీకరించండి", for: .normal)
+//            self.header.setTitle("గోప్యతా విధానం", for: .normal)
+//            self.decline.setTitle("క్షీణత", for: .normal)
+//            self.accept.setTitle("అంగీకరించండి", for: .normal)
             self.privacyPolicyTV.text = """
 1. కొన్ని CenturyPly ఉత్పత్తులపై పాయింట్‌లను రీడీమ్ చేయవచ్చు (పాయింట్‌ల పట్టికను చూడండి లేదా వివరాల కోసం CPIL ప్రతినిధిని అడగండి). కొత్త ఉత్పత్తులు జోడించబడితే, తెలియజేయబడుతుంది.
 2. సెంచరీ ఎగ్జిక్యూటివ్‌కు సక్రమంగా పూరించిన మరియు సంతకం చేసిన ఎన్‌రోల్‌మెంట్ ఫారమ్‌ను సమర్పించడం ద్వారా ఈ ప్రోగ్రామ్ కోసం నమోదు చేసుకోవడం తప్పనిసరి మరియు ఈ నిబంధనలు మరియు షరతులకు అంగీకారంగా పరిగణించబడుతుంది. సెంచరీప్రోక్లబ్‌లో సభ్యుల నమోదు తర్వాత మాత్రమే రివార్డ్ పాయింట్ల సేకరణ ప్రారంభమవుతుంది.

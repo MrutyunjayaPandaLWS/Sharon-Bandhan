@@ -8,20 +8,19 @@
 import UIKit
 import Toast_Swift
 import Firebase
+import LanguageManager_iOS
 
 class GnerateEWarrantyViewController: BaseViewController, GenerateEwarrantyDelegate,UITableViewDelegate, UITableViewDataSource, Popup4Delegate, submitQRDelegate, PopUpDelegate2{
     func didTapYesButton(_ vc: Popup3ViewController) {}
     
     func DidTap(_ vc: SubmitQRCodesViewController) {
         self.dismiss(animated: true)
-//        self.EWarrantyViewModel.soapMessage(codeDetails: CodesArray, ActorId: userID, Address: vc.selectedaddress ?? "", AreaId: self.EWarrantyViewModel.myprofiledetails.locationID ?? "-1", CityId: self.selectedCityID, CustomerName: vc.selectedcustomerName ?? "", EmailId: vc.selectedemailid ?? "", MobileNum: vc.selectedmobilenumber ?? "", StateId: self.selectedStateID, productId: self.tempStoreCodesArray[self.indexpathrow].ProductId ?? "", count: self.tempStoreCodesArray[self.indexpathrow].codeCount ?? 0)
         eWarrentySubmission(codeDetails: CodesArray, ActorId: userID , Address: vc.selectedaddress , AreaId: "\(self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].locationId ?? -1)", CityId: self.selectedCityID, CustomerName: vc.selectedcustomerName , EmailId: vc.selectedemailid , MobileNum: vc.selectedmobilenumber , StateId: self.selectedStateID, productId: self.tempStoreCodesArray[self.indexpathrow].productId ?? 0, count: self.tempStoreCodesArray[self.indexpathrow].codeStatusWiseCount ?? 0)
-//        self.EWarrantyViewModel.EwarrantSubmissionAPI(indexpath:self.indexpathrow)
     }
     
     func othersDidTap(_ vc: Popup4ViewController) {
         self.dismiss(animated: true)
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SubmitQRCodesViewController") as! SubmitQRCodesViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SubmitEWarrantyViewController") as! SubmitQRCodesViewController
         vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
         vc.delegate = self
@@ -29,15 +28,14 @@ class GnerateEWarrantyViewController: BaseViewController, GenerateEwarrantyDeleg
     }
     
     func selfDidTap(_ vc: Popup4ViewController) {
-//        self.EWarrantyViewModel.soapMessage(codeDetails: CodesArray, ActorId: userID, Address: self.EWarrantyViewModel.myprofiledetails.Address ?? "", AreaId: self.EWarrantyViewModel.myprofiledetails.locationID ?? "-1", CityId: self.selectedCityID, CustomerName: self.EWarrantyViewModel.myprofiledetails.firstname ?? "", EmailId: self.EWarrantyViewModel.myprofiledetails.EmailId ?? "", MobileNum: self.EWarrantyViewModel.myprofiledetails.MobileNo ?? "", StateId: self.selectedStateID, productId: self.tempStoreCodesArray[self.indexpathrow].ProductId ?? "", count: self.tempStoreCodesArray[self.indexpathrow].codeCount ?? 0)
         
         eWarrentySubmission(codeDetails: CodesArray, ActorId: userID , Address: self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].address1 ?? "", AreaId: "\(self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].locationId ?? -1)", CityId: self.selectedCityID, CustomerName: self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].firstName ?? "", EmailId: self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].email ?? "", MobileNum: self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].mobile ?? "", StateId: self.selectedStateID, productId: self.tempStoreCodesArray[self.indexpathrow].productId ?? 0, count: self.tempStoreCodesArray[self.indexpathrow].codeStatusWiseCount ?? 0)
         
-        
-//        self.EWarrantyViewModel.EwarrantSubmissionAPI(indexpath:self.indexpathrow)
     }
     
 
+    @IBOutlet weak var noDataFoundLbl: UILabel!
+    @IBOutlet weak var headerLbl: UILabel!
     @IBOutlet weak var generateTableView: UITableView!
     @IBOutlet weak var back: UIButton!
     @IBOutlet weak var backBTNview: UIView!
@@ -79,7 +77,17 @@ class GnerateEWarrantyViewController: BaseViewController, GenerateEwarrantyDeleg
 //
 //        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
 //        tracker.send(builder.build() as [NSObject : AnyObject])
+        localization()
     }
+    
+    private func localization(){
+        
+        headerLbl.text = "E-Warrenty".localiz()
+        noDataFoundLbl.text = "NoDataFoundKEY".localiz()
+        
+    }
+    
+    
     @objc func alertPopUpMessage(notification: Notification){
          self.navigationController?.popToRootViewController(animated: true)
      }
@@ -103,7 +111,7 @@ class GnerateEWarrantyViewController: BaseViewController, GenerateEwarrantyDeleg
             vc.delegate = self
             vc.titleInfo = ""
             vc.itsFrom = "GenerateWarranty"
-            vc.discriptionInfo = "Are you sure want to exit without generating E-Warranty?"
+            vc.discriptionInfo = "Are you sure want to exit without generating E-Warranty?".localiz()
             vc.modalPresentationStyle = .overCurrentContext
             vc.modalTransitionStyle = .crossDissolve
             self.present(vc, animated: true, completion: nil)
@@ -112,9 +120,8 @@ class GnerateEWarrantyViewController: BaseViewController, GenerateEwarrantyDeleg
     func GenerateBtn(_ cell: GenerateEWarrantyTableViewCell) {
         guard let tappedIndexPath = generateTableView.indexPath(for: cell) else { return }
         
-        if UserDefaults.standard.string(forKey: "CUSTTYPE") == "1" || UserDefaults.standard.string(forKey: "CUSTTYPE") == "8"{
+        if UserDefaults.standard.string(forKey: "CUSTTYPE") == "1" || UserDefaults.standard.string(forKey: "CUSTTYPE") == "5"{
             print(tempStoreCodesArray.count)
-//            self.EWarrantyViewModel.soapMessage(codeDetails: CodesArray, ActorId: userID, Address: self.EWarrantyViewModel.myprofiledetails.Address ?? "", AreaId: self.EWarrantyViewModel.myprofiledetails.locationID ?? "-1", CityId: self.selectedCityID, CustomerName: self.EWarrantyViewModel.myprofiledetails.firstname ?? "", EmailId: self.EWarrantyViewModel.myprofiledetails.EmailId ?? "", MobileNum: self.EWarrantyViewModel.myprofiledetails.MobileNo ?? "", StateId: self.selectedStateID, productId: self.tempStoreCodesArray[tappedIndexPath.row].ProductId ?? "", count: self.tempStoreCodesArray[tappedIndexPath.row].codeCount ?? 0)
             eWarrentySubmission(codeDetails: CodesArray, ActorId: userID, Address: self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].address1 ?? "", AreaId: "\(self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].locationId ?? -1)", CityId: self.selectedCityID, CustomerName: self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].firstName ?? "", EmailId: self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].email ?? "", MobileNum: self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].mobile ?? "", StateId: self.selectedStateID, productId: self.tempStoreCodesArray[tappedIndexPath.row].productId ?? 0, count: self.tempStoreCodesArray[tappedIndexPath.row].codeStatusWiseCount ?? 0)
             
 //            self.EWarrantyViewModel.EwarrantSubmissionAPI(indexpath:tappedIndexPath.row)
@@ -189,6 +196,7 @@ extension GnerateEWarrantyViewController{
             
 
         ]
+        print(parameter,"e-warrwnty submission")
         self.EWarrantyViewModel.EwarrantSubmissionAPI(indexpath:self.indexpathrow,parameter: parameter)
     }
     

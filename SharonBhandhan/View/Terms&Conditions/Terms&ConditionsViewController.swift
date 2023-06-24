@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 import WebKit
-
+import LanguageManager_iOS
 protocol TermsAndConditionDelegate: class {
     func acceptDidTap(_ vc: Terms_ConditionsViewController)
 }
@@ -20,7 +20,8 @@ class Terms_ConditionsViewController: BaseViewController, PrivacyPolicyDelegate 
         self.delegate?.acceptDidTap(self)
     }
     
-    @IBOutlet var termsAndCondWebView: UIWebView!
+   
+    @IBOutlet weak var termsAndCondWebView: WKWebView!
     
     @IBOutlet var termsAndConditionsTV: UITextView!
     @IBOutlet weak var header: GradientButton!
@@ -28,7 +29,7 @@ class Terms_ConditionsViewController: BaseViewController, PrivacyPolicyDelegate 
     @IBOutlet weak var decline: GradientButton!
     @IBOutlet weak var accept: GradientButton!
     
-    
+    var languageStatus =  UserDefaults.standard.string(forKey: "LanguageLocalizable") ?? "0"
     var delegate: TermsAndConditionDelegate!
     var boolResult:Bool?
     
@@ -36,16 +37,37 @@ class Terms_ConditionsViewController: BaseViewController, PrivacyPolicyDelegate 
         super.viewDidLoad()
        // termsAndConditionsTV.textAlignment = .justified
        // languagelocalization()
-        DispatchQueue.main.async {
-            self.stopLoading()
-            self.termsAndCondWebView.loadRequest(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "century-proclub-t&c", ofType: "html")!) as URL) as URLRequest)
-        }
+//        DispatchQueue.main.async {
+//            self.stopLoading()
+//            self.termsAndCondWebView.load(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "century-proclub-t&c", ofType: "html")!) as URL) as URLRequest)
+//        }
 //        guard let tracker = GAI.sharedInstance().defaultTracker else { return }
 //        tracker.set(kGAIScreenName, value: "Terms and Conditions")
 //
 //        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
 //        tracker.send(builder.build() as [NSObject : AnyObject])
     }
+    
+    private func localization(){
+        self.header.setTitle("lTermsAndConditionsKEY".localiz(), for: .normal)
+        self.decline.setTitle("lDeclineKEY".localiz(), for: .normal)
+        self.accept.setTitle("lAcceptKEY".localiz(), for: .normal)
+        
+        DispatchQueue.main.async {
+            if self.languageStatus == "1"{
+                self.termsAndCondWebView.load(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "T&C-Sharon-English", ofType: "html")!) as URL) as URLRequest)
+            }else if self.languageStatus == "2"{
+                self.termsAndCondWebView.load(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "T&C-Sharon-Hindi", ofType: "html")!) as URL) as URLRequest)
+            }else if self.languageStatus == "3"{
+                self.termsAndCondWebView.load(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "T&C-Sharon-Tamil", ofType: "html")!) as URL) as URLRequest)
+            }else if self.languageStatus == "4"{
+                self.termsAndCondWebView.load(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "T&C-Sharon-Telugu", ofType: "html")!) as URL) as URLRequest)
+            }else{
+                self.termsAndCondWebView.load(NSURLRequest(url: NSURL(fileURLWithPath: Bundle.main.path(forResource: "T&C-Sharon-English", ofType: "html")!) as URL) as URLRequest)
+            }
+        }
+    }
+    
     
 //    func languagelocalization(){
 //        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{

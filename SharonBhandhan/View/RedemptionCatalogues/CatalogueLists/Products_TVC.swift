@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 protocol AddedToCartOrPlannerDelegate{
     func addToCart(_ cell: Products_TVC)
     func addToPlanner(_ cell: Products_TVC)
@@ -42,29 +43,35 @@ class Products_TVC: UITableViewCell{
     }
     
     func languagelocalization(){
-        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.addToCartButton.setTitle("view".localizableString(loc: "en"), for: .normal)
-            self.addedToCart.setTitle("rcAddedToCartKEY".localizableString(loc: "en"), for: .normal)
-            self.addToPlanner.setTitle("Add To Planner", for: .normal)
-            self.addedToPlanner.setTitle("Added To Planner", for: .normal)
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-            self.addToCartButton.setTitle("view".localizableString(loc: "hi"), for: .normal)
-            self.addedToCart.setTitle("rcAddedToCartKEY".localizableString(loc: "hi"), for: .normal)
-            self.addToPlanner.setTitle("प्लानर में जोड़ें", for: .normal)
-            self.addedToPlanner.setTitle("नियोजक में जोड़ा गया", for: .normal)
-            
-        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-            self.addToCartButton.setTitle("view".localizableString(loc: "ta-IN"), for: .normal)
-            self.addedToCart.setTitle("rcAddedToCartKEY".localizableString(loc: "ta-IN"), for: .normal)
-            self.addToPlanner.setTitle("திட்டமிடுபவருக்குச் சேர்க்கவும்", for: .normal)
-            self.addedToPlanner.setTitle("பிளானரில் சேர்க்கப்பட்டது", for: .normal)
-            
-        }else{
-            self.addToCartButton.setTitle("view".localizableString(loc: "te"), for: .normal)
-            self.addedToCart.setTitle("rcAddedToCartKEY".localizableString(loc: "te"), for: .normal)
-            self.addToPlanner.setTitle("ప్లానర్‌కి జోడించు", for: .normal)
-            self.addedToPlanner.setTitle("ప్లానర్‌కి చేర్చబడింది", for: .normal)
-        }
+        
+        self.addToCartButton.setTitle("view".localiz(), for: .normal)
+        self.addedToCart.setTitle("rcAddedToCartKEY".localiz(), for: .normal)
+        self.addToPlanner.setTitle("Add To Planner".localiz(), for: .normal)
+        self.addedToPlanner.setTitle("Added To Planner".localiz(), for: .normal)
+        
+//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+//            self.addToCartButton.setTitle("view".localizableString(loc: "en"), for: .normal)
+//            self.addedToCart.setTitle("rcAddedToCartKEY".localizableString(loc: "en"), for: .normal)
+//            self.addToPlanner.setTitle("Add To Planner", for: .normal)
+//            self.addedToPlanner.setTitle("Added To Planner", for: .normal)
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+//            self.addToCartButton.setTitle("view".localizableString(loc: "hi"), for: .normal)
+//            self.addedToCart.setTitle("rcAddedToCartKEY".localizableString(loc: "hi"), for: .normal)
+//            self.addToPlanner.setTitle("प्लानर में जोड़ें", for: .normal)
+//            self.addedToPlanner.setTitle("नियोजक में जोड़ा गया", for: .normal)
+//
+//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+//            self.addToCartButton.setTitle("view".localizableString(loc: "ta-IN"), for: .normal)
+//            self.addedToCart.setTitle("rcAddedToCartKEY".localizableString(loc: "ta-IN"), for: .normal)
+//            self.addToPlanner.setTitle("திட்டமிடுபவருக்குச் சேர்க்கவும்", for: .normal)
+//            self.addedToPlanner.setTitle("பிளானரில் சேர்க்கப்பட்டது", for: .normal)
+//
+//        }else{
+//            self.addToCartButton.setTitle("view".localizableString(loc: "te"), for: .normal)
+//            self.addedToCart.setTitle("rcAddedToCartKEY".localizableString(loc: "te"), for: .normal)
+//            self.addToPlanner.setTitle("ప్లానర్‌కి జోడించు", for: .normal)
+//            self.addedToPlanner.setTitle("ప్లానర్‌కి చేర్చబడింది", for: .normal)
+//        }
     }
     
     @IBAction func addToCartButton(_ sender: Any) {
