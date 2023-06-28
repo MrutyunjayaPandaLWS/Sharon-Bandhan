@@ -27,17 +27,30 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
     @IBOutlet var tierNameLabel: UILabel!
     @IBOutlet var tierImageView: UIImageView!
     @IBOutlet weak var points: UILabel!
-    @IBOutlet weak var redemptionCatalogue: UILabel!
-    @IBOutlet weak var myredemptions: UILabel!
-    @IBOutlet weak var lodgequery: UILabel!
-    @IBOutlet weak var helplinecall: UILabel!
-    @IBOutlet weak var dreamGift: UILabel!
-    @IBOutlet weak var eWarranty: UILabel!
+//    @IBOutlet weak var redemptionCatalogue: UILabel!
+//    @IBOutlet weak var myredemptions: UILabel!
+//    @IBOutlet weak var lodgequery: UILabel!
+//    @IBOutlet weak var helplinecall: UILabel!
+//    @IBOutlet weak var dreamGift: UILabel!
+//    @IBOutlet weak var eWarranty: UILabel!
+    
+    @IBOutlet weak var nameLbl: UILabel!
+    
+    @IBOutlet weak var statusMessagaeLbl: UILabel!
+    
+    @IBOutlet weak var memberhipIdHeadingLbl: UILabel!
+    
+    @IBOutlet weak var membershipIDDataLbl: UILabel!
+    
+    @IBOutlet weak var pointBalanceDataLbl: UILabel!
+    
+    @IBOutlet weak var pointBalanceHeadingLbl: UILabel!
     @IBOutlet weak var maintenanceLbl: UILabel!
     @IBOutlet weak var maintenanceView: UIView!
-    @IBOutlet weak var scanAndUploadImg: UIImageView!
+//    @IBOutlet weak var scanAndUploadImg: UIImageView!
     @IBOutlet weak var panDeatilsl: UILabel!
     
+    @IBOutlet weak var collectionViewScrollData: UICollectionView!
     
     
     let pageIndicator = UIPageControl()
@@ -48,19 +61,23 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
     var isActive = true
     var isCalled = false
     var bannerImagesArray = [ObjImageGalleryList]()
+    var dashboardCatagoryImage = ["Group 5908","Group 5909","Group 5334","Group 5335","question-circle 2","__TEMP__SVG__ 1"]
+    var dashboardCatagoryContentArray = ["E-Warranty","My Dream Gift","My Redemption","Redemption Catalogue","Lodge Query","Helpline"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.vm.VC = self
+        
+        self.collectionViewScrollData.delegate = self
+        self.collectionViewScrollData.dataSource = self
+        
+        
         self.bannerImagesAPI()
         NotificationCenter.default.addObserver(self, selector: #selector(checkVerificationStatus), name: Notification.Name.verificationStatus, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(deactivateAccount), name: Notification.Name.deactivatedAcc, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(codeStatus), name: Notification.Name.optionView, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(checkUserStatus), name: Notification.Name.userIsActive, object: nil)
-        NotificationCenter.default.addObserver(self,
-                                       selector: #selector(refreshlanguageValues),
-                                       name:NSNotification.Name(rawValue: "languagerefreshRequired"),
-                                       object: nil)
+        NotificationCenter.default.addObserver(self,selector: #selector(refreshlanguageValues),name:NSNotification.Name(rawValue: "languagerefreshRequired"),object: nil)
         
     }
     @IBAction func pandetailsButton(_ sender: Any) {
@@ -69,10 +86,10 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    override func viewWillLayoutSubviews() {
-        self.pointsView.layer.cornerRadius = self.pointsView.frame.size.height / 2
-        self.tierView.layer.cornerRadius = self.tierView.frame.size.height / 2
-    }
+//    override func viewWillLayoutSubviews() {
+//        self.pointsView.layer.cornerRadius = self.pointsView.frame.size.height / 2
+//        self.tierView.layer.cornerRadius = self.tierView.frame.size.height / 2
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -286,17 +303,17 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
     
     func languageLocalization(){
         
-        points.text = "hpPointsKEY".localizableString(loc: "en");
-        tierNameLabel.text = "hpTierKEY".localizableString(loc: "en");
-        lodgequery.text = "hpLodgeQueryKEY".localiz()
-        myredemptions.text = "hpMyRedemptionsKEY".localiz()
-        helplinecall.text = "hpHelpLineCallKEY".localiz()
-        redemptionCatalogue.text = "rcRedemptionCatalogueKEY".localiz()
-        panDeatilsl.text = "panDetails".localiz()
-        dreamGift.text = "mdgMyDreamGiftKEY".localiz()
-        maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localiz()
-        scanAndUploadImg.image = UIImage(named: "Group 5912")
-        eWarranty.text = "EWarranty".localiz()
+        self.points.text = "hpPointsKEY".localizableString(loc: "en");
+        self.tierNameLabel.text = "hpTierKEY".localizableString(loc: "en");
+//        self.lodgequery.text = "hpLodgeQueryKEY".localiz()
+//        myredemptions.text = "hpMyRedemptionsKEY".localiz()
+//        helplinecall.text = "hpHelpLineCallKEY".localiz()
+//        self.redemptionCatalogue.text = "rcRedemptionCatalogueKEY".localiz()
+        self.panDeatilsl.text = "panDetails".localiz()
+//        self.dreamGift.text = "mdgMyDreamGiftKEY".localiz()
+        self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localiz()
+//        scanAndUploadImg.image = UIImage(named: "Group 5912")
+//        eWarranty.text = "EWarranty".localiz()
         
 //        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
 //            points.text = "hpPointsKEY".localizableString(loc: "en");
@@ -461,12 +478,19 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
                     UserDefaults.standard.set(response?.lstCustomerFeedBackJsonApi?[0].verifiedStatus ?? 0, forKey: "VerifiedStatus")
                     self.pointsLabel.text = String(response?.objCustomerDashboardList?[0].redeemablePointsBalance ?? 0)
                     self.tierNameLabel.text = response?.lstCustomerFeedBackJsonApi?[0].customerGrade ?? ""
+                    self.nameLbl.text = response?.lstCustomerFeedBackJsonApi?[0].firstName ?? ""
+                    self.membershipIDDataLbl.text = response?.lstCustomerFeedBackJsonApi?[0].loyaltyId ?? ""
+                    self.pointBalanceDataLbl.text = "  \(response?.objCustomerDashboardList?[0].redeemablePointsBalance ?? 0)"
+                    
                     if response?.lstCustomerFeedBackJsonApi?[0].customerGrade ?? "" == "Bronze" {
                         self.tierImageView.image = UIImage(named: "grade1")
+                        self.statusMessagaeLbl.text = "Bronze"
                     } else if response?.lstCustomerFeedBackJsonApi?[0].customerGrade ?? "" == "Gold" {
                         self.tierImageView.image = UIImage(named: "grade2")
+                        self.statusMessagaeLbl.text = "Gold"
                     } else if response?.lstCustomerFeedBackJsonApi?[0].customerGrade ?? "" == "Silver" {
                         self.tierImageView.image = UIImage(named: "grade3")
+                        self.statusMessagaeLbl.text = "Silver"
                     } else {
                         self.tierImageView.image = UIImage(named: "grade3")
                     }
@@ -706,5 +730,60 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
                 print ("There was an error")
             }
         }
+    
+}
+
+
+extension DashBoardViewController : UICollectionViewDelegate,UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dashboardCatagoryContentArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DashboardCollectCell", for: indexPath) as! DashboardCollectCell
+        cell.imageInCell.image = UIImage(named: self.dashboardCatagoryImage[indexPath.row])
+        cell.messageCell.text = self.dashboardCatagoryContentArray[indexPath.row]
+        return cell
+        
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        print("JSGAGUSGs")
+//
+//    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//            collectionview.deselectItem(at: indexPath, animated: true)
+//     }
+    
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.item == 0{
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DownloadEWarrantyListViewController") as! DownloadEWarrantyListViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+
+        }else if indexPath.item == 1{
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DreamGiftListingViewController") as! DreamGiftListingViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+
+        }else if indexPath.item == 2{
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MyRedemptionsListViewController") as! MyRedemptionsListViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+
+        }else if indexPath.item == 3{
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RedemptionCatalogueVC") as! RedemptionCatalogueVC
+            self.navigationController?.pushViewController(vc, animated: true)
+
+        }else if indexPath.item == 4{
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CustomerQueryListingViewController") as! CustomerQueryListingViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else if indexPath.item == 5{
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HelplineViewController") as! HelplineViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+
+        }else{
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HelplineViewController") as! HelplineViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
     
 }

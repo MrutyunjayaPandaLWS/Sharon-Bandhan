@@ -282,6 +282,7 @@
 		84540D6A29E18E1500CEE692 /* MyCommonFunctionalUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540D5F29E18E1400CEE692 /* MyCommonFunctionalUtilities.swift */; };
 		84540D6B29E18E1500CEE692 /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540D6029E18E1400CEE692 /* WebClient.swift */; };
 		84540D6C29E18E1500CEE692 /* URLMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84540D6129E18E1400CEE692 /* URLMethods.swift */; };
+		846FB9932A46E9DD00071B57 /* DashboardCollectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846FB9922A46E9DD00071B57 /* DashboardCollectCell.swift */; };
 		847EB14329F7F388004AF0D8 /* CodeGenuineModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EB14229F7F388004AF0D8 /* CodeGenuineModels.swift */; };
 		847EB14829F806C5004AF0D8 /* GenerateEWarrantyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847EB14529F806C2004AF0D8 /* GenerateEWarrantyTableViewCell.xib */; };
 		847EB14929F806C5004AF0D8 /* GenerateEWarrantyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EB14629F806C3004AF0D8 /* GenerateEWarrantyTableViewCell.swift */; };
@@ -640,6 +641,7 @@
 		84540D5F29E18E1400CEE692 /* MyCommonFunctionalUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCommonFunctionalUtilities.swift; sourceTree = "<group>"; };
 		84540D6029E18E1400CEE692 /* WebClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebClient.swift; sourceTree = "<group>"; };
 		84540D6129E18E1400CEE692 /* URLMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLMethods.swift; sourceTree = "<group>"; };
+		846FB9922A46E9DD00071B57 /* DashboardCollectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectCell.swift; sourceTree = "<group>"; };
 		847EB14229F7F388004AF0D8 /* CodeGenuineModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGenuineModels.swift; sourceTree = "<group>"; };
 		847EB14529F806C2004AF0D8 /* GenerateEWarrantyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenerateEWarrantyTableViewCell.xib; sourceTree = "<group>"; };
 		847EB14629F806C3004AF0D8 /* GenerateEWarrantyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateEWarrantyTableViewCell.swift; sourceTree = "<group>"; };
@@ -1341,6 +1343,7 @@
 				84540B5929E18AD700CEE692 /* DashBoardViewController.swift */,
 				84540B5A29E18AD700CEE692 /* DreamGiftPopUpViewController.swift */,
 				84540B5B29E18AD700CEE692 /* DashboardLanguagePopUpVC.swift */,
+				846FB9922A46E9DD00071B57 /* DashboardCollectCell.swift */,
 			);
 			path = DashBoard;
 			sourceTree = "<group>";
@@ -2793,6 +2796,7 @@
 				84540D6729E18E1500CEE692 /* ApiUrls.swift in Sources */,
 				84540D4B29E18B0600CEE692 /* SendSMSModel.swift in Sources */,
 				84540D2C29E18B0600CEE692 /* ObjCustomerAllQueryJsonList.swift in Sources */,
+				846FB9932A46E9DD00071B57 /* DashboardCollectCell.swift in Sources */,
 				84540C6D29E18AF000CEE692 /* RedemptionOTPVM.swift in Sources */,
 				84540BA529E18AD800CEE692 /* DownloadListTableViewCell.swift in Sources */,
 				84540D2029E18B0600CEE692 /* LstRewardTransactionBasedonProduct.swift in Sources */,
@@ -3210,7 +3214,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SharonBhandhan/SharonBhandhan.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -3235,7 +3239,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBandhan_Adhoc;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBhandhan_Dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3251,7 +3255,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SharonBhandhan/SharonBhandhan.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -3276,7 +3280,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBandhan_Adhoc;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBhandhan_Dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3363,7 +3367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -3382,7 +3386,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhan.NotificationServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBhandhan_NotificationServices_Adhoc;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBhandhan_Notification_Dev;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -3394,7 +3398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -3413,7 +3417,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhan.NotificationServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBhandhan_NotificationServices_Adhoc;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBhandhan_Notification_Dev;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
