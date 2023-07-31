@@ -81,7 +81,7 @@ class RedemptionPlannerDetails_VC: BaseViewController, popUpDelegate {
         //self.tdsprice.text = "\(tdspercentage1)%"
         points.text = "\(productPoints)"
         let totalImgURL = productCatalogueImgURL + productImage
-        productImageView.sd_setImage(with: URL(string: totalImgURL), placeholderImage: UIImage(named: "ic_default_img"))
+        productImageView.sd_setImage(with: URL(string: totalImgURL), placeholderImage: UIImage(named: "Group 6524"))
         self.todayPoints.text = "\(pointBalance)"
         self.monthlyPointsLabel.text = redeemableAverageEarning
         //        if (productPoints + Int(applicabletds)) > Int(pointBalance)!  {
@@ -115,17 +115,7 @@ class RedemptionPlannerDetails_VC: BaseViewController, popUpDelegate {
             congratulationsImageView.isHidden = true
             infoDetailsLbl.isHidden = false
             infoDetailsLbl.text = "\("You need".localiz()) \(requiredPoints) \("more redeemable points to redeem this product".localiz())"
-            
-//            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                infoDetailsLbl.text = "\("You need".localiz()) \(requiredPoints) \("more redeemable points to redeem this product".localiz())"
-//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                infoDetailsLbl.text = "आप की जरूरत है \(requiredPoints) इस उत्पाद को भुनाने के लिए अधिक रिडीम करने योग्य अंक"
-//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                infoDetailsLbl.text = "তোমার দরকার \(requiredPoints) এই পণ্যটি খালাস করার জন্য আরও খালাসযোগ্য পয়েন্ট"
-//            }else{
-//                infoDetailsLbl.text = "నీకు అవసరం \(requiredPoints) ఈ ఉత్పత్తిని రీడీమ్ చేయడానికి మరిన్ని రీడీమ్ చేయగల పాయింట్‌లు"
-//            }
-//
+
             redeemButton.backgroundColor = UIColor(red: 209/255, green: 209/255, blue: 214/255, alpha: 1.0)
             //        }else{
             //            congratulationsImageView.isHidden = false
@@ -220,112 +210,120 @@ func languagelocalization(){
 @IBAction func backButton(_ sender: Any) {
     self.navigationController?.popViewController(animated: true)
 }
-@IBAction func redeemButton(_ sender: Any) {
-    myCartList()
-    if self.verifiedStatus == 6 || self.verifiedStatus == 4{
-        if self.checkAccountStatus == "1"{
-            NotificationCenter.default.post(name: .verificationStatus, object: nil)
+    @IBAction func redeemButton(_ sender: Any) {
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
         }else{
-            NotificationCenter.default.post(name: .verificationStatus, object: nil)
-        }
-        
-    }else if self.verifiedStatus == 1{
-        
-        let filterCategory = self.VM.myCartListArray.filter { $0.catalogueId == selectedCatalogueID}
-        if filterCategory.count > 0{
-            DispatchQueue.main.async{
-                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
-                vc!.delegate = self
-                vc!.titleInfo = ""
-                vc!.descriptionInfo = "Gift product is already added in the Redeem list".localiz()
-//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                    vc!.descriptionInfo = "Gift product is already added in the Redeem list".localiz()
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                    vc!.descriptionInfo = "उपहार उत्पाद पहले से ही रिडीम सूची में जोड़ा जा चुका है"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                    vc!.descriptionInfo = "উপহার পণ্য ইতিমধ্যেই রিডিম তালিকায় যোগ করা হয়েছে"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                    vc!.descriptionInfo = "బహుమతి ఉత్పత్తి ఇప్పటికే రీడీమ్ జాబితాలో జోడించబడింది"
-//                }
-                vc!.modalPresentationStyle = .overCurrentContext
-                vc!.modalTransitionStyle = .crossDissolve
-                self.present(vc!, animated: true, completion: nil)
-            }
-        }else{
-            print(self.totalCartValue)
-            print(self.pointBalance)
-            if self.totalCartValue <= Int(self.pointBalance) ?? 0 {
-                if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == -3{
-                    self.view.makeToast("Your PAN Details are pending,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
-                }else if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == -4{
-                    self.view.makeToast("Your PAN Details are rejected,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
-                }else if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == 1{
-                    let calcValue = self.totalCartValue + Int(productPoints + Int(applicabletds))
-                    if calcValue <= Int(self.pointBalance) ?? 0{
-                        if self.verifiedStatus == 6 || self.verifiedStatus == 4{
-                            if self.checkAccountStatus == "1"{
-                                NotificationCenter.default.post(name: .verificationStatus, object: nil)
-                            }else{
-                                NotificationCenter.default.post(name: .verificationStatus, object: nil)
-                            }
-                            
-                        }else if self.verifiedStatus == 1{
-                            addToCartApi()
-                        }
-                    }else{
-                        DispatchQueue.main.async{
-                            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
-                            vc!.delegate = self
-                            vc!.titleInfo = ""
-                            vc!.descriptionInfo = "Insufficent Point Balance".localiz()
-                            
-//                            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                                vc!.descriptionInfo = "Insufficent Point Balance".localiz()
-//                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                                vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
-//                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                                vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
-//                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                                vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
-//                            }
-                            vc!.modalPresentationStyle = .overCurrentContext
-                            vc!.modalTransitionStyle = .crossDissolve
-                            self.present(vc!, animated: true, completion: nil)
-                        }
-                    }
-                }else{
-                    self.view.makeToast("Insufficient point balance to redeem!".localiz(), duration: 2.0, position: .bottom)
-                }
-                
-                
-
+        myCartList()
+        if self.verifiedStatus == 6 || self.verifiedStatus == 4{
+            if self.checkAccountStatus == "1"{
+                NotificationCenter.default.post(name: .verificationStatus, object: nil)
             }else{
+                NotificationCenter.default.post(name: .verificationStatus, object: nil)
+            }
+            
+        }else if self.verifiedStatus == 1{
+            
+            let filterCategory = self.VM.myCartListArray.filter { $0.catalogueId == selectedCatalogueID}
+            if filterCategory.count > 0{
                 DispatchQueue.main.async{
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                     vc!.delegate = self
                     vc!.titleInfo = ""
-                    vc!.descriptionInfo = "Insufficent Point Balance".localiz()
-                    
-//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                        vc!.descriptionInfo = "Insufficent Point Balance".localiz()
-//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                        vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
-//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                        vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
-//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                        vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
-//                    }
+                    vc!.descriptionInfo = "Gift product is already added in the Redeem list".localiz()
+                    //                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    //                    vc!.descriptionInfo = "Gift product is already added in the Redeem list".localiz()
+                    //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    //                    vc!.descriptionInfo = "उपहार उत्पाद पहले से ही रिडीम सूची में जोड़ा जा चुका है"
+                    //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    //                    vc!.descriptionInfo = "উপহার পণ্য ইতিমধ্যেই রিডিম তালিকায় যোগ করা হয়েছে"
+                    //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+                    //                    vc!.descriptionInfo = "బహుమతి ఉత్పత్తి ఇప్పటికే రీడీమ్ జాబితాలో జోడించబడింది"
+                    //                }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
                 }
+            }else{
+                print(self.totalCartValue)
+                print(self.pointBalance)
+                if self.totalCartValue <= Int(self.pointBalance) ?? 0 {
+                    if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == -3{
+                        self.view.makeToast("Your PAN Details are pending,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
+                    }else if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == -4{
+                        self.view.makeToast("Your PAN Details are rejected,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
+                    }else if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == 1{
+                        let calcValue = self.totalCartValue + Int(productPoints + Int(applicabletds))
+                        if calcValue <= Int(self.pointBalance) ?? 0{
+                            if self.verifiedStatus == 6 || self.verifiedStatus == 4{
+                                if self.checkAccountStatus == "1"{
+                                    NotificationCenter.default.post(name: .verificationStatus, object: nil)
+                                }else{
+                                    NotificationCenter.default.post(name: .verificationStatus, object: nil)
+                                }
+                                
+                            }else if self.verifiedStatus == 1{
+                                addToCartApi()
+                            }
+                        }else{
+                            DispatchQueue.main.async{
+                                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
+                                vc!.delegate = self
+                                vc!.titleInfo = ""
+                                vc!.descriptionInfo = "Insufficent Point Balance".localiz()
+                                
+                                //                            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                                //                                vc!.descriptionInfo = "Insufficent Point Balance".localiz()
+                                //                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                                //                                vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
+                                //                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                                //                                vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
+                                //                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+                                //                                vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
+                                //                            }
+                                vc!.modalPresentationStyle = .overCurrentContext
+                                vc!.modalTransitionStyle = .crossDissolve
+                                self.present(vc!, animated: true, completion: nil)
+                            }
+                        }
+                    }else{
+                        self.view.makeToast("Insufficient point balance to redeem!".localiz(), duration: 2.0, position: .bottom)
+                    }
+                    
+                    
+                    
+                }else{
+                    DispatchQueue.main.async{
+                        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
+                        vc!.delegate = self
+                        vc!.titleInfo = ""
+                        vc!.descriptionInfo = "Insufficent Point Balance".localiz()
+                        
+                        //                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                        //                        vc!.descriptionInfo = "Insufficent Point Balance".localiz()
+                        //                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                        //                        vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
+                        //                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                        //                        vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
+                        //                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+                        //                        vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
+                        //                    }
+                        vc!.modalPresentationStyle = .overCurrentContext
+                        vc!.modalTransitionStyle = .crossDissolve
+                        self.present(vc!, animated: true, completion: nil)
+                    }
+                }
+                
             }
-            
         }
     }
 }
 @IBAction func removeButton(_ sender: Any) {
-    removeProductInPlanner()
+    if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+        self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+    }else{
+        removeProductInPlanner()
+    }
 }
 
 

@@ -1,9 +1,7 @@
 /*
-  Localizable.strings
-  
+Localizable.strings
 
-  Created by ADMIN on 02/05/2022.
-  
+Created by ADMIN on 02/05/2022.
 */
 
 /* Class = "UILabel"; text = "Offers and Promotions"; ObjectID = "00f-n8-xwQ"; */
@@ -28,7 +26,7 @@
 //VERIFY MOBILE NUMBER VC
 "vmnResendOTPKEY" = "Resend OTP/ओटीपी दोबारा भेजें";
 "vmnSubmitKEY" = "Submit/सबमिट";
-"vmnSecondsRemainingKEY" = "कुछ सेकंड बचा हुआ है  ";
+"vmnSecondsRemainingKEY" = "कुछ सेकंड बचा हुआ है ";
 //MY PROFILE VC
 "mpMyProfileKEY" = "मेरी प्रोफाइल";
 "mpGeneralInformationKEY" = "सामान्य जानकारी";
@@ -66,9 +64,9 @@
 "hpChecktheStatusOfCodeInTheReportKEY" = "स्टेटस रिपोर्ट में कोड की स्थिति की जाँच करें";
 "hpStatusKEY" = "स्टेटस";
 "hpScanAgainKEY" = "फिर से\n स्कैन करें";
-"hpRaiseTicketKEY" = " Raise\nticket";
+"hpRaiseTicketKEY" = " एक टिकट उठाएँ";
 "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY" = "एप्लिकेशन सेवाओं तक पहुंचने में असमर्थ है क्योंकि सिस्टम रखरखाव के लिए नीचे है! कृपया कुछ समय बाद प्रयास करें।";
-"hpMembershipIDKEY" = "मेम्बरशिपआईडी";
+"hpMembershipIDKEY" = "मेम्बरशिप आईडी";
 "hpPointsKEY" = "प्वाइंट्स";
 "panDetails" = "पान विवरण";
 "hpTierKEY" = "टियर";
@@ -94,7 +92,7 @@
 //UPLOAD CODE
 "ucEnterYourCodeKEY" = "अपना कोड दर्ज करें";
 "ucCloseKEY" = "बंद करें";
-"ucQRCodeIsSubmittedSuccessfullyKEY" = "QR कोड सफलतापूर्वक सबमिट किया गया है";
+"ucQRCodeIsSubmittedSuccessfullyKEY" = "क्यूआर कोड सफलतापूर्वक सबमिट किया गया है";
 "ucCheckTheStatusOfTheCodeInTheStatusReportKEY" = "स्टेटस रिपोर्ट में कोड की स्थिति की जाँच करें";
 "ucStatusKEY" = "स्टेटस";
 "ucScanAgainKEY" = "फिर से\n स्कैन करें";
@@ -125,6 +123,7 @@
 // UNIQUE FEATURE VC
 "ufUniqueFeaturesKEY" = "अनन्य विशेषताएं";
 //MY EARNING VC
+"meMyEarning" = "मेरी कमाई";
 "meFromDateKEY" = "तारीख से";
 "enterFromDate" = "दिनांक से दर्ज करें";
 "enterToDate" = "तिथि दर्ज करें";
@@ -200,7 +199,7 @@
 "mcTotalPointsKEY" = "कुल पॉइंट्स";
 "mcCheckOutKEY" = "चेक आउट";
 //CUSTOMER QUERY LISTING VC
-"cqlLodgeQueryKEY" = "Lodge Query";
+"cqlLodgeQueryKEY" = "लॉज क्वेरी";
 "cqlResolvedKEY" = "Resolved";
 "cqlPendingKEY" = "अपूर्ण";
 "cqlREopenKEY" = "Re-Open";
@@ -300,17 +299,17 @@
 "Enter12DigitsKey" = "कृपया १२ अंकों का कोड दर्ज करें";
 
 //Code sync status
- "CodeSYNCKey" = "कोड सिंक स्थिति";
+"CodeSYNCKey" = "कोड सिंक स्थिति";
 "CodeSummaryKey" = "कोड सारांश";
 "ToDateKey" = "तारीख तक";
 "FromDateKey" = "तारीख से";
 "FilterKey" = "फ़िल्टर";
 "DateOrStausKey" = "कृपया तिथि या स्थिति चुनें";
 "SelectToDateKey" = "कृपया दिनांक तक चुनें";
- "ToDateGreaterFromDateKey" = "आज तक तारीख से बड़ा होना चाहिए";
+"ToDateGreaterFromDateKey" = "आज तक तारीख से बड़ा होना चाहिए";
 "CountKey" = "गिनती";
 "SelectDateKey" = "तारीख़ चुनें";
- "CancelKey" = "रद्द करें";
+"CancelKey" = "रद्द करें";
 "ConfirmKey" = "पुष्टि करें";
 
 //E-warranty certhificate
@@ -334,13 +333,13 @@
 
 //Redemption catelogue
 "addedToCartKey" = "कार्ट में जोड़ा गया";
- "EnterAllFieldsKey" = "सभी फ़ील्ड दर्ज करें";
-"AlreadyPlannerAddedKey"  = "उत्पाद आपके रिडेम्पशन प्लानर में पहले ही जोड़ा जा चुका है";
+"EnterAllFieldsKey" = "सभी फ़ील्ड दर्ज करें";
+"AlreadyPlannerAddedKey" = "उत्पाद आपके रिडेम्पशन प्लानर में पहले ही जोड़ा जा चुका है";
 "PlannerAddedKey" = "उत्पाद को आपके रिडेम्पशन प्लानर में जोड़ दिया गया है";
 "NotAllowedToRedeemKey" = "आपको रिडीम करने की अनुमति नहीं है। कृपया अपने व्यवस्थापक से संपर्क करें।";
 
 //My earning
- "SelectDateRangeKey" = "दिनांक सीमा चुनें";
+"SelectDateRangeKey" = "दिनांक सीमा चुनें";
 "QRCodeKey" = "क्यूआर कोड";
 
 //My redemption
@@ -410,170 +409,192 @@
 "customerPANVerified" = "ग्राहक पैन विवरण सत्यापित किया गया है!";
 "verify" = "सत्यापित करना";
 "savingPancarFailed" = "पैनकार्ड सहेजना विफल रहा. कुछ देर बाद कोशिश करें";
+"Points Balance" = "अंक संतुलन";
 
 // MARK: - NEW
-"E-Warrenty" = "E-Warrenty";
-"Are you sure want to exit without generating E-Warranty?" = "Are you sure want to exit without generating E-Warranty?";
-"E-Warranty generated successfully.You can download the E-Warranty in Download E-warranty Section" = "E-Warranty generated successfully.You can download the E-Warranty in Download E-warranty Section";
-"E-Warranty generation failed.Please try after sometime" = "E-Warranty generation failed.Please try after sometime";
-"UPLOAD AGAIN" = "UPLOAD AGAIN";
-"SCAN AGAIN" = "SCAN AGAIN";
-"Please Enter code" = "Please Enter code";
-"Your daily uploading limit exceeded" = "Your daily uploading limit exceeded";
-"Code is already scanned" = "Code is already scanned";
-"Code is already uploaded" = "Code is already uploaded";
-"Your daily Scanning limit exceeded" = "Your daily Scanning limit exceeded";
-"Invalid QR code ! QR code should be 12 character" = "Invalid QR code ! QR code should be 12 character";
-"Not a Sharon Ply Genuine Product" = "Not a Sharon Ply Genuine Product";
-"You are not entitled to this product" = "You are not entitled to this product";
-"Please enter the valid code" = "Please enter the valid code";
-"Enter Customer Name" = "Enter Customer Name";
-"Enter valid First Name" = "Enter valid First Name";
-"Enter EmailID" = "Enter EmailID";
-"Enter valid EmailID" = "Enter valid EmailID";
-"Enter Address" = "Enter Address";
-"Enter Customer Details" = "Enter Customer Details";
-"Customer Mobile Number" = "Customer Mobile Number";
-"Enter the Mobile Number" = "Enter the Mobile Number";
-"Cutomer Email" = "Cutomer Email";
-"Enter the email address" = "Enter the email address";
-"Customer Address" = "Customer Address";
-"Enter the address details" = "Enter the address details";
- "Camera access required for Scanning QR Codes" = "Camera access required for Scanning QR Codes";
-"Allow Camera" = "Allow Camera";
-"Sync Status" = "Sync Status";
-"EWarranty" = "E - Warranty";
-"account_deactivated_check_with_the_administrator" = "Your account is deactivated please check with the administrator";
-"New update Available!" = "New update Available!";
-"force update message" = "Update is available to download. Downloading the latest update you will get the latest features, improvements and bug fixes of Century Pro Club App";
-"Update Now" = "Update Now";
+"E-Warrenty" ="ई-वारंटी";
+"Are you sure want to exit without generating E-Warranty?" = "क्या आप निश्चित रूप से ई-वारंटी उत्पन्न किए बिना बाहर निकलना चाहते हैं?";
+"E-Warranty generated successfully.You can download the E-Warranty in Download E-warranty Section" = "ई-वारंटी सफलतापूर्वक उत्पन्न हुई। आप ई-वारंटी को डाउनलोड ई-वारंटी अनुभाग में डाउनलोड कर सकते हैं";
+"E-Warranty generation failed.Please try after sometime" = "ई-वारंटी बनाना विफल रहा। कृपया कुछ समय बाद प्रयास करें";
+"UPLOAD AGAIN" = "फिर से अपलोड करें";
+"SCAN AGAIN" = "फिर से स्कैन करें";
+"Please Enter code" = "कृपया कोड दर्ज करें";
+"Your daily uploading limit exceeded" = "आपकी दैनिक अपलोडिंग सीमा पार हो गई है";
+"Code is already scanned" = "कोड पहले से ही स्कैन है";
+"Code is already uploaded" = "कोड पहले ही अपलोड हो चुका है";
+"Your daily Scanning limit exceeded" = "आपकी दैनिक स्कैन करने की सीमा पार हो गई";
+"Invalid QR code ! QR code should be 12 character" = "अमान्य क्यूआर कोड! क्यूआर कोड 12 वर्ण का होना चाहिए";
+"Not a Sharon Ply Genuine Product" = "नॉट ए शेरोन प्लाई जेन्युइन प्रोडक्ट";
+"You are not entitled to this product" = "आप इस उत्पाद के हकदार नहीं हैं";
+"Please enter the valid code" = "कृपया मान्य कोड दर्ज करें";
+"Enter Customer Name" = "ग्राहक का नाम दर्ज करें";
+"Enter valid First Name" = "मान्य प्रथम नाम दर्ज करें";
+"Enter EmailID" = "ईमेल आईडी दर्ज करें";
+"Enter valid EmailID" = "मान्य ईमेल आईडी दर्ज करें";
+"Enter Address" = "पता दर्ज करें";
+"Enter Customer Details" ="ग्राहक विवरण दर्ज करें";
+"Customer Mobile Number" = "ग्राहक मोबाइल नंबर";
+"Enter the Mobile Number" = "मोबाइल नंबर दर्ज करें";
+"Cutomer Email" = "ग्राहक ईमेल";
+"Enter the email address" = "ईमेल पता दर्ज करें";
+"Customer Address" = "ग्राहक पता";
+"Enter the address details" = "पता विवरण दर्ज करें";
+"Camera access required for Scanning QR Codes" = "क्यूआर कोड स्कैन करने के लिए कैमरा एक्सेस आवश्यक";
+"Allow Camera" = "कैमरे को अनुमति दें";
+"Sync Status" = "सिंक स्थिति";
+"EWarranty" = "ई - वारंटी";
+"account_deactivated_check_with_the_administrator" = "आपका खाता निष्क्रिय कर दिया गया है, कृपया व्यवस्थापक से संपर्क करें";
+"New update Available!" ="नया अपडेट उपलब्ध!";
+"force update message" = "अपडेट डाउनलोड करने के लिए उपलब्ध है। नवीनतम अपडेट डाउनलोड करने से आपको शेरोनबंधन ऐप की नवीनतम सुविधाएं, सुधार और बग फिक्स मिलेंगे";
+"Update Now" = "अभी अपडेट करें";
 
-"Your Dream Gift" = "Your Dream Gift";
-"Product Points" = "Product Points";
-"Redeemable Points" = "Redeemable Points";
-"Points required to redeem" = "Points required to redeem";
+"Your Dream Gift" = "आपके सपनों का उपहार";
+"Product Points" = "उत्पाद बिंदु";
+"Redeemable Points" = "रिडीमेबल पॉइंट्स";
+"Points required to redeem" = "रिडीम करने के लिए आवश्यक पॉइंट्स";
 
-"Add E-Warranty" = "Add E-Warranty";
-"Enter Name" = "Enter Name";
-"Generate E-Warranty" = "Generate E-Warranty";
-"Select Area" = "Select Area";
-"Download E-Warranty" = "Download E-Warranty";
+"Add E-Warranty" = "ई-वारंटी जोड़ें";
+"Enter Name" = "नाम दर्ज करें";
+"Generate E-Warranty" = "ई-वारंटी उत्पन्न करें";
+"Select Area" = "क्षेत्र चुनें";
+"Download E-Warranty" = "ई-वारंटी डाउनलोड करें";
 
-"E-Warranty details saved successfully" = "E-Warranty details saved successfully.";
-"Something went wrong please try again later." = "Something went wrong please try again later !";
+"E-Warranty details saved successfully" = "ई-वारंटी विवरण सफलतापूर्वक सहेजे गए।";
+"Something went wrong please try again later." = "कुछ गलत हो गया कृपया बाद में पुनः प्रयास करें!";
 
-"No Attachment found to download E-Warranty" = "No Attachment found to download E-Warranty";
-"Select date range to check your E-Warranty" = "Select date range to check your E-Warranty";
-"Only 1 product we can add" = "Only 1 product we can add";
-"Quantity should not exceed." = "Quantity should not exceed.";
-"Quantity should not be zero." = "Quantity should not be zero.";
-"E-Warranty" = "E-Warranty";
-"Generated Date" = "Generated Date";
-"Points Required" = "Points Required";
-"Dream Gift" = "Dream Gift";
+"No Attachment found to download E-Warranty" = "ई-वारंटी डाउनलोड करने के लिए कोई अनुलग्नक नहीं मिला";
+"Select date range to check your E-Warranty" = "अपनी ई-वारंटी की जांच के लिए तिथि सीमा का चयन करें";
+"Only 1 product we can add" = "केवल 1 उत्पाद हम जोड़ सकते हैं";
+"Quantity should not exceed." = "मात्रा अधिक नहीं होनी चाहिए।";
+"Quantity should not be zero." = "मात्रा शून्य नहीं होनी चाहिए।";
+"E-Warranty" = "ई-वारंटी";
+"Generated Date" = "उत्पन्न तिथि";
+"Points Required" = "अंक आवश्यक";
+"Dream Gift" = "ड्रीम गिफ्ट";
 
-"Your PAN Details are pending,Please contact your administrator!" = "Your PAN Details are pending,Please contact your administrator!";
-"Your PAN Details are rejected,Please contact your administrator!" = "Your PAN Details are rejected,Please contact your administrator!";
-"Insufficient point balance to redeem!" = "Insufficient point balance to redeem!";
-"Dream Gift has been removed successfully" = "Dream Gift has been removed successfully";
-"Dream Gift has been removed failed" = "Dream Gift has been removed failed";
-"Congratulations! you are eligible to win this existing Dream Gift" = "Congratulations! you are eligible to win this existing Dream Gift";
-"Congratulations! You are almost near to win this existing Dream Gift." = "Congratulations! You are almost near to win this existing Dream Gift.";
-"Redeemable points as on today" = "Redeemable points as on today";
-"Dream Gift Details" = "Dream Gift Details";
-"Expected Redemption" = "Expected Redemption";
-"Redeem Now" = "Redeem Now";
-"Remove" = "Remove";
-"back To Login" = "back To Login";
-"Please Enter Membership ID" = "Please Enter Membership ID";
-"New password sent to the registered mobile number!" = "New password sent to the registered mobile number!";
- 
-"MembershipID doesn't exists" = "MembershipID doesn't exists";
-"queryQuestion info" = "For any questions and queries on the Sharon Bandhan Loyalty Program. Please give a miss call on the following number";
-"Add Lodge Query" = "Add Lodge Query";
-"Submit Query" = "Submit Query";
-"Select a Query Topic" = "Select a Query Topic";
-"Query summary is Empty" = "Query summary is Empty";
-"Query Details is empty" = "Query Details is empty";
-"Query submitted successfully" = "Query submitted successfully";
-"Login to continue" = "Login to continue";
-"Privacy Policy" = "Privacy Policy";
-"Please Enter the Membership ID" = "Please Enter the Membership ID";
-"Please Enter the Password" = "Please Enter the Password";
-"Please Accept Terms and conditons" = "Please Accept Terms and conditons";
-"account is verification pending" = "Your account is verification pending! Kindly contact your administrator.";
-"Your account is not activated! Kindly activate your account." = "Your account is not activated! Kindly activate your account.";
-"Your account verification is failed !" = "Your account verification is failed !";
-"Your account has been deactivated! Kindly contact the administrator or contact center at +91-8955177400." = "Your account has been deactivated! Kindly contact the administrator or contact center at +91-8955177400.";
+"Your PAN Details are pending,Please contact your administrator!" = "आपका पैन विवरण लंबित है, कृपया अपने व्यवस्थापक से संपर्क करें!";
+"Your PAN Details are rejected,Please contact your administrator!" = "आपका पैन विवरण अस्वीकृत कर दिया गया है, कृपया अपने व्यवस्थापक से संपर्क करें!";
+"Insufficient point balance to redeem!" = "रिडीम करने के लिए अपर्याप्त पॉइंट बैलेंस!";
+"Dream Gift has been removed successfully" = "ड्रीम गिफ्ट सफलतापूर्वक हटा दिया गया है";
+"Dream Gift has been removed failed" = "ड्रीम गिफ्ट को हटा दिया गया है";
+"Congratulations! you are eligible to win this existing Dream Gift" = "बधाई हो! आप इस मौजूदा ड्रीम उपहार को जीतने के योग्य हैं";
+"Congratulations! You are almost near to win this existing Dream Gift." = "बधाई हो! आप इस मौजूदा ड्रीम गिफ्ट को जीतने के करीब हैं।";
+"Redeemable points as on today" = "आज के रूप में प्रतिदेय अंक";
+"Dream Gift Details" = "ड्रीम गिफ्ट डिटेल्स";
+"Expected Redemption" = "अपेक्षित रिडेम्पशन";
+"Redeem Now" = "अभी रिडीम करें";
+"Remove" = "निकालें";
+"back To Login" = "बैक टू लॉगइन";
+"Please Enter Membership ID" = "कृपया सदस्यता आईडी दर्ज करें";
+"New password sent to the registered mobile number!" = "पंजीकृत मोबाइल नंबर पर नया पासवर्ड भेजा गया!";
+"MembershipID doesn't exists" = "सदस्यताआईडी मौजूद नहीं है";
+"queryQuestion info" = "शेरोन बंधन लॉयल्टी प्रोग्राम पर किसी भी प्रश्न और पूछताछ के लिए। कृपया निम्नलिखित नंबर पर मिस कॉल दें";
+"Add Lodge Query" = "लॉज क्वेरी जोड़ें";
+"Submit Query" = "क्वेरी सबमिट करें";
+"Select a Query Topic" = "एक क्वेरी विषय चुनें";
+"Query summary is Empty" = "क्वेरी सारांश रिक्त है";
+"Query Details is empty" = "क्वेरी विवरण रिक्त है";
+"Query submitted successfully" = "क्वेरी सफलतापूर्वक सबमिट की गई";
+"Login to continue" = "जारी रखने के लिए लॉगिन करें";
+"Privacy Policy" = "गोपनीयता नीति";
+"Please Enter the Membership ID" = "कृपया सदस्यता आईडी दर्ज करें";
+"Please Enter the Password" = "कृपया पासवर्ड दर्ज करें";
+"Please Accept Terms and conditons" = "कृपया नियम और शर्तें स्वीकार करें";
+"account is verification pending" = "आपके खाते का सत्यापन लंबित है! कृपया अपने व्यवस्थापक से संपर्क करें.";
+"Your account is not activated! Kindly activate your account." = "आपका खाता सक्रिय नहीं है! कृपया अपना खाता सक्रिय करें.";
+"Your account verification is failed !" = "आपका खाता सत्यापन विफल हो गया है !";
+"Your account has been deactivated! Kindly contact the administrator or contact center at +91-8955177400." = "आपका खाता निष्क्रिय कर दिया गया है! कृपया व्यवस्थापक या संपर्क केंद्र से +91-8955177400 पर संपर्क करें.";
 
-"Reward Adjusted" = "Reward Adjusted";
-"My Redemptions" = "My Redemptions";
+"Reward Adjusted" = "पुरस्कार समायोजित";
+"My Redemptions" = "मेरा रिडीम्पशन";
 "REF" = "REF";
-"Pan attachment required" = "Pan attachment required";
-"Need Gallary access" = "Need Gallary access";
-"Allow Gallery access" = "Allow Gallery access";
-"Allow" = "Allow";
-"DisAllow" = "DisAllow";
-"My Account" = "My Account";
-"Profile image updated successfully" = "Profile image updated successfully";
-"Profile image update Failed" = "Profile image update Failed";
-"Add To Planner" = "Add To Planner";
-"Added To Planner" = "Added To Planner";
-"Redemption Details" = "Redemption Details";
-"Quantity" = "Quantity";
-"TDS applicable" = "TDS applicable";
-"Insufficent Point Balance" = "Insufficient Point Balance";
-"Product has been added to Cart" = "Product has been added to Cart";
-"Product has been added into Planner List" = "Product has been added into Planner List";
-"You have redeemed your product successfully" = "You have redeemed your product successfully";
-"Back To Dashboard" = "Back To Dashboard";
-"PROCESS TO CHECKOUT" = "PROCEED TO CHECKOUT";
-"Product has been removed from Cart" = "Product has been removed from Cart";
-"Select Country" = "Select Country";
-"No Internet" = "No Internet";
-"Enter Pin" = "Enter Pin";
-"Enter Valid Zip" = "Enter Valid Zip";
-"OTP Verification" = "OTP Verification";
-"We send a OTP to your Number" = "We send a OTP to your Number";
-"OTP will Receive within" = "OTP will Receive within";
-"Didn't receive OTP Code?" = "Didn't receive OTP Code?";
-"Redemption Failed" = "Redemption Failed";
-"InValid OTP" = "InValid OTP";
-"Please Enter Correct OTP" = "Please Enter Correct OTP";
-"Enter Valid OTP" = "Enter Valid OTP";
-"Shipping address requires: State,City,Address,Pin code and Mobile Number,details,Click on 'Edit' to edit and add details" = "Shipping address requires: State,City,Address,Pin code and Mobile Number,details,Click on 'Edit' to edit and add details";
-"Search Product Name" = "Search Product Name";
-"You need" = "You need";
-"more redeemable points to redeem this product" = "more redeemable points to redeem this product";
-"Your expected redemption of" = "Your expected redemption of";
+"Pan attachment required" = "पैन अटैचमेंट आवश्यक है";
+"Need Gallary access" = "गैलरी एक्सेस की आवश्यकता है";
+"Allow Gallery access" = "गैलरी पहुंच की अनुमति दें";
+"Allow" = "अनुमति देना";
+"DisAllow" = "अनुमति न दें";
+"My Account" = "मेरी प्रोफाइल";
+"Profile image updated successfully" = "प्रोफ़ाइल छवि सफलतापूर्वक अपडेट की गई";
+"Profile image update Failed" = "प्रोफ़ाइल छवि अद्यतन विफल रहा";
+"Add To Planner" = "प्लानर में जोड़ें";
+"Added To Planner" = "प्लानर में जोड़ा गया";
+"Redemption Details" = "रिडीम्पशन विवरण";
+"Quantity" = "मात्रा";
+"TDS applicable" = "टीडीएस लागू";
+"Insufficent Point Balance" = "अपर्याप्त बिंदु संतुलन";
+"Product has been added to Cart" = "उत्पाद को कार्ट में जोड़ दिया गया है";
+"Product has been added into Planner List" = "उत्पाद को प्लानर सूची में जोड़ दिया गया है";
+"You have redeemed your product successfully" = "आपने अपना उत्पाद सफलतापूर्वक भुना लिया है";
+"Back To Dashboard" = "डैशबोर्ड पर वापस जाएँ";
+"PROCESS TO CHECKOUT" = "चेक आउट करने के लिए आगे बढ़ें";
+"Product has been removed from Cart" = "उत्पाद को कार्ट से हटा दिया गया है";
+"Select Country" = "देश चुनें";
+"No Internet" = "कोई इंटरनेट नहीं";
+"Enter Pin" = "पिन दर्ज करें";
+"Enter Valid Zip" = "वैध ज़िप दर्ज करें";
+"OTP Verification" = "ओटीपी सत्यापन";
+"We send a OTP to your Number" = "ओटीपी वे हम आपके नंबररिफिकेशन पर एक ओटीपी भेजते हैं";
+"OTP will Receive within" = "ओटीपी भीतर प्राप्त होगा";
+"Didn't receive OTP Code?" = "ओटीपी कोड प्राप्त नहीं हुआ?";
+"Redemption Failed" = "रिडीम्पशन विफल";
+"InValid OTP" = "अमान्य ओटीपी";
+"Please Enter Correct OTP" = "कृपया सही ओटीपी दर्ज करें";
+"Enter Valid OTP" = "वैध ओटीपी दर्ज करें";
+"Shipping address requires: State,City,Address,Pin code and Mobile Number,details,Click on 'Edit' to edit and add details" = "शिपिंग पते की आवश्यकता है: राज्य, शहर, पता, पिन कोड और मोबाइल नंबर, विवरण, संपादित करने और विवरण जोड़ने के लिए 'संपादित करें' पर क्लिक करें";
+"Search Product Name" = "उत्पाद का नाम खोजें";
+"You need" = "आप की जरूरत है";
+"more redeemable points to redeem this product" = "इस उत्पाद को भुनाने के लिए अधिक प्रतिदेय अंक";
+"Your expected redemption of" = "आपकी अपेक्षित मुक्ति";
 "is in" = "is in";
-"Redeem" = "Redeem";
-"Average earning required per month" = "Average earning required per month";
-"Gift product is already added in the Redeem list" = "Gift product is already added in the Redeem list";
-"No Internet. Please check your internet connection" = "No Internet. Please check your internet connection";
-"Are you sure you really want to delete your account?" = "Are you sure you really want to delete your account?";
-"Account deleted successfully" = "Account deleted successfully";
-"Logout" = "Logout";
-"Delete Account" = "Delete Account";
-"Home" = "Home";
-"Upload Code" = "Upload Code";
-"My QR Codes" = "My QR Codes";
+"Redeem" = "भुनाना";
+"Average earning required per month" = "प्रति माह औसत कमाई आवश्यक है";
+"Gift product is already added in the Redeem list" = "रिडीम सूची में उपहार उत्पाद पहले से ही जोड़ा गया है";
+"No Internet. Please check your internet connection" = "कोई इंटरनेट नहीं। कृपया अपने इंटरनेट कनेक्शन की जाँच करें";
+"Are you sure you really want to delete your account?" = "क्या आप वाकई अपना खाता हटाना चाहते हैं?";
+"Account deleted successfully" = "खाता सफलतापूर्वक हटा दिया गया";
+"Logout" = "लॉग आउट";
+"Delete Account" = "खाता हटा दो";
+"Home" = "होम";
+"Upload Code" = "अपलोड कोड";
+"My QR Codes" = "मेरे क्यूआर कोड";
 
-"Submit without scan Upload QR" = "Submit without scan Upload QR";
-"Please scan/upload QR code" = "Please scan/upload QR code";
-"QR code is Submitted Successfully. Check the status of the code in  status report." = "QR code is Submitted Successfully. Check the status of the code in  status report.";
-"Scan_Again" = "Scan Again";
-"Place a QR Code inside the view finder rectangle to scan it." = "Place a QR Code inside the view finder rectangle  to scan it.";
-"Enter QR code in the above field and submit." = "Enter QR code in the above field and submit.";
+"Submit without scan Upload QR" = "स्कैन के बिना सबमिट करें क्यूआर अपलोड करें";
+"Please scan/upload QR code" = "कृपया क्यूआर कोड स्कैन/अपलोड करें";
+"QR code is Submitted Successfully. Check the status of the code in status report." = "क्यूआर कोड सफलतापूर्वक सबमिट हो गया है। स्थिति रिपोर्ट में कोड की स्थिति जांचें.";
+"Scan_Again" = "फिर से स्कैन करें";
+"Place a QR Code inside the view finder rectangle to scan it." = "इसे स्कैन करने के लिए दृश्य खोजक आयत के अंदर एक क्यूआर  कोड रखें.";
+"Enter QR code in the above field and submit." = "उपरोक्त फ़ील्ड में क्यूआर कोड दर्ज करें और सबमिट करें।";
 
-"Click here to see your QR Codes" = "Click here to see your QR Codes";
-"Upload QR Code" = "Upload QR Code";
-"QR Code Submission Failed" = "QR Code Submission Failed";
-"Offline scanning limit exceeded. Sync pending codes in Wifi/Mobile data or Clear processed codes ." = "Offline scanning limit exceeded. Sync pending codes in Wifi/Mobile data or Clear processed codes .";
-"QR Code length should be 12" = "QR Code length should be 12";
-"Enter the QR Code" = "Enter the QR Code";
-"Enable Location Services" = "Enable Location Services";
-"QR Code scanning requires Location Access" = "QR Code scanning requires Location Access";
-"Settings" = "Settings";
-"Sharon Bandhan Application need Camera permission for Scanning Codes" = "Sharon Bandhan Application need Camera permission for Scanning Codes";
-"Allow Camera Access" = "Allow Camera Access";
+"Click here to see your QR Codes" = "अपने क्यूआर कोड देखने के लिए यहां क्लिक करें";
+"Upload QR Code" = "QR कोड अपलोड करें";
+"QR Code Submission Failed" = "क्यूआर कोड सबमिशन विफल";
+"Offline scanning limit exceeded. Sync pending codes in Wifi/Mobile data or Clear processed codes ." = "ऑफ़लाइन स्कैनिंग सीमा पार हो गई. वाईफ़ाई/मोबाइल डेटा में लंबित कोड सिंक करें या संसाधित कोड साफ़ करें .";
+"QR Code length should be 12" = "क्यूआर कोड की लंबाई 12 होनी चाहिए";
+"Enter the QR Code" = "क्यूआरकोड दर्ज करें";
+"Enable Location Services" = "लोकेशन सेवाओं को सक्षम करें";
+"QR Code scanning requires Location Access" = "क्यूआर कोड स्कैनिंग के लिए लोकेशन एक्सेस की आवश्यकता होती है";
+"Settings" = "समायोजन";
+"Sharon Bandhan Application need Camera permission for Scanning Codes" = "शेरोन बंधन एप्लिकेशन को स्कैनिंग कोड के लिए कैमरा अनुमति की आवश्यकता है";
+"Allow Camera Access" = "कैमरा एक्सेस की अनुमति दें";
+"Scan QR Code" = "क्यूआर कोड स्कैन करें";
+
+
+"Ask Help ?" = "सहायता माँगें ?";
+"Raise a ticket our team will connect you soon" = "टिकट उठाएँ हमारी टीम जल्द ही आपसे जुड़ेगी";
+"Raise a Ticket" = "एक टिकट उठाएँ";
+
+
+"Online scanning limit exceeded. Sync pending codes in Wifi/Mobile data or Clear processed codes ." = "ऑनलाइन स्कैनिंग सीमा पार हो गई. वाई-फ़ाई/मोबाइल डेटा में लंबित कोड सिंक करें या संसाधित कोड साफ़ करें";
+"PAN INFORMATION" = "पैन जानकारी";
+
+
+"Receive Benefits Upon Joining" = "शामिल होने पर लाभ प्राप्त करें l";
+"Earn Points for your purchase" = "अपनी खरीदारी के लिए अंक अर्जित करें l";
+"Redeem Reward points for Attractive Gift Items" = "आकर्षक उपहार आइटम के लिए रिवॉर्ड पॉइंट रिडीम करें l";
+"Redemption Planner - Journey to Redeem your Dream Products" = "मोचन योजनाकार - अपने सपनों के उपहार को साकार करने की यात्रा l";
+"Interactive Mobile App & Website" = "इंटरएक्टिव मोबाइल ऐप और वेबसाइट l";
+"Become a SharonBandhan Member and Be a Winner" = "शेरोन बन्धन के सदस्य बनें और विजेता बनें l";
+
+//MARK: - New
+"Currently, No Offers and Promotions are running." = "Currently, No Offers and Promotions are running.";
+"Please upload the relevant images only." = "Please upload the relevant images only.";

@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
     var slider : SlideMenuController!
     var nav : UINavigationController!
     var gcmMessageIDKey = "gcm.message_id"
-    var languageStatus =  UserDefaults.standard.string(forKey: "LanguageLocalizable") ?? "0"
+   
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         URLCache.shared.removeAllCachedResponses()
@@ -67,7 +67,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
     }
     
     func setLanguage(){
-        
+        var languageStatus =  UserDefaults.standard.string(forKey: "LanguageLocalizable") ?? "0"
+        print(languageStatus,"language status")
         if languageStatus == "1"{
             LanguageManager.shared.setLanguage(language: .en)
         }else if languageStatus == "2"{
@@ -106,7 +107,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
         setLanguage()
         let mainStoryboard = UIStoryboard(name: "Main" , bundle: nil)
         let initialVC = mainStoryboard.instantiateViewController(withIdentifier: "LanguageViewController") as! LanguageViewController
-        UserDefaults.standard.set("1", forKey: "LanguageLocalizable")
+//        UserDefaults.standard.set("1", forKey: "LanguageLocalizable")
         nav = UINavigationController(rootViewController: initialVC)
         nav.modalPresentationStyle = .overCurrentContext
         nav.modalTransitionStyle = .partialCurl

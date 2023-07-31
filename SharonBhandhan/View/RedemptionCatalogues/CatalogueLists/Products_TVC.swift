@@ -48,7 +48,7 @@ class Products_TVC: UITableViewCell{
         self.addedToCart.setTitle("rcAddedToCartKEY".localiz(), for: .normal)
         self.addToPlanner.setTitle("Add To Planner".localiz(), for: .normal)
         self.addedToPlanner.setTitle("Added To Planner".localiz(), for: .normal)
-        
+        self.pointsHeadingLabel.text = "hpPointsKEY".localiz()
 //        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
 //            self.addToCartButton.setTitle("view".localizableString(loc: "en"), for: .normal)
 //            self.addedToCart.setTitle("rcAddedToCartKEY".localizableString(loc: "en"), for: .normal)

@@ -407,6 +407,7 @@
 "customerPANVerified" = "গ্রাহক প্যান বিবরণ যাচাই করা হয়েছে!";
 "verify" = "যাচাই করুন";
 "savingPancarFailed" = "প্যানকার্ড সংরক্ষণ করা ব্যর্থ হয়েছে৷ কিছুক্ষণ পর চেষ্টা করুন";
+"Points Balance" = "Points Balance";
 
 // MARK: - NEW
 "E-Warrenty" = "E-Warrenty";
@@ -574,3 +575,21 @@
 "Settings" = "Settings";
 "Sharon Bandhan Application need Camera permission for Scanning Codes" = "Sharon Bandhan Application need Camera permission for Scanning Codes";
 "Allow Camera Access" = "Allow Camera Access";
+
+"Ask Help ?" = "Ask Help ?";
+"Raise a ticket our team will connect you soon" = "Raise a ticket our team will connect you soon";
+"Raise a Ticket" = "Raise a Ticket";
+
+"Online scanning limit exceeded. Sync pending codes in Wifi/Mobile data or Clear processed codes ." = "Online scanning limit exceeded. Sync pending codes in Wifi/Mobile data or Clear processed codes .";
+"PAN INFORMATION" = "PAN INFORMATION";
+
+
+"Receive Benefits Upon Joining" = "Receive Benefits Upon Joining";
+"Earn Points for your purchase" = "Earn Points for your purchase";
+"Redeem Reward points for Attractive Gift Items" = "Redeem Reward points for Attractive Gift Items";
+"Redemption Planner - Journey to Redeem your Dream Products" = "Redemption Planner - Journey to Redeem your Dream Products";
+"Interactive Mobile App & Website" = "Interactive Mobile App & Website";
+"Become a SharonBandhan Member and Be a Winner" = "Become a SharonBandhan Member and Be a Winner";
+
+"Currently, No Offers and Promotions are running." = "Currently, No Offers and Promotions are running.";
+"Please upload the relevant images only." = "Please upload the relevant images only.";

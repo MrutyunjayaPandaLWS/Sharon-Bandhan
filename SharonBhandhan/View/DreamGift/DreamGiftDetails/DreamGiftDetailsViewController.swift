@@ -66,6 +66,7 @@ class DreamGiftDetailsViewController: BaseViewController, popUpDelegate {
     var isRedeemableStatus = UserDefaults.standard.integer(forKey: "DreamGiftIsRedeemable")
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.VM.VC = self
         giftDetailsAPi()
         languagelocalization()
         print(isRedeemable,"redeemPoints")
@@ -257,51 +258,58 @@ class DreamGiftDetailsViewController: BaseViewController, popUpDelegate {
         print(parameters)
         self.VM.myDreamGiftDetails(parameters: parameters) { response in
             //print(response?.lstDreamGift?[0].earlyExpectedDate ?? "")
-            if self.VM.myDreamGiftDetailsArray.count > 0 {
+//            if self.VM.myDreamGiftDetailsArray.count > 0 {
                 self.avgPoints1.text = "\(response?.lstDreamGift?[0].avgEarningPoints ?? 0)"
                 self.avgPoints2.text = "\(response?.lstDreamGift?[0].earlyExpectedPoints ?? 0)"
                 self.avgPoints3.text = "\(response?.lstDreamGift?[0].lateExpectedPoints ?? 0)"
                 self.possibleDate1.text = "\(response?.lstDreamGift?[0].lateExpectedDate ?? "")"
                 self.possibleDate2.text = "\(response?.lstDreamGift?[0].earlyExpectedDate ?? "")"
                 self.possibledate3.text = "\(response?.lstDreamGift?[0].lateExpectedDate ?? "")"
-            }
+//            }
         }
     }
     
     @IBAction func redeemNowButton(_ sender: Any) {
-        if self.verifiedStatus == 6 || self.verifiedStatus == 4{
-            if self.checkAccountStatus == "1"{
-                NotificationCenter.default.post(name: .verificationStatus, object: nil)
-            }else{
-                NotificationCenter.default.post(name: .verificationStatus, object: nil)
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            if self.verifiedStatus == 6 || self.verifiedStatus == 4{
+                if self.checkAccountStatus == "1"{
+                    NotificationCenter.default.post(name: .verificationStatus, object: nil)
+                }else{
+                    NotificationCenter.default.post(name: .verificationStatus, object: nil)
+                }
+                
+            }else if self.verifiedStatus == 1{
+                if UserDefaults.standard.integer(forKey: "DreamGiftIsRedeemable") == -3{
+                    self.view.makeToast("Your PAN Details are pending,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
+                }else if UserDefaults.standard.integer(forKey: "DreamGiftIsRedeemable") == -4{
+                    self.view.makeToast("Your PAN Details are rejected,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
+                }else if UserDefaults.standard.integer(forKey: "DreamGiftIsRedeemable") == 1{
+                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ShippingAddress_VC") as! ShippingAddress_VC
+                    vc.redemptionTypeId = 3
+                    //vc.totalPoints = Int(pointsRequires) ?? 0
+                    vc.totalPoint = ((Int(pointsRequires) ?? 0) + Int(self.tdsvalue))
+                    vc.dreamGiftID = Int(selectedDreamGiftId) ?? 0
+                    vc.giftName = giftName
+                    vc.contractorName = contractorName
+                    vc.giftStatusId = selectedGiftStatusID
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }else{
+                    self.view.makeToast("Insufficient point balance to redeem!".localiz(), duration: 2.0, position: .bottom)
+                }
+                
             }
-            
-        }else if self.verifiedStatus == 1{
-            if UserDefaults.standard.integer(forKey: "DreamGiftIsRedeemable") == -3{
-                self.view.makeToast("Your PAN Details are pending,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
-            }else if UserDefaults.standard.integer(forKey: "DreamGiftIsRedeemable") == -4{
-                self.view.makeToast("Your PAN Details are rejected,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
-            }else if UserDefaults.standard.integer(forKey: "DreamGiftIsRedeemable") == 1{
-                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ShippingAddress_VC") as! ShippingAddress_VC
-                vc.redemptionTypeId = 3
-                //vc.totalPoints = Int(pointsRequires) ?? 0
-                vc.totalPoint = ((Int(pointsRequires) ?? 0) + Int(self.tdsvalue))
-                vc.dreamGiftID = Int(selectedDreamGiftId) ?? 0
-                vc.giftName = giftName
-                vc.contractorName = contractorName
-                vc.giftStatusId = selectedGiftStatusID
-                self.navigationController?.pushViewController(vc, animated: true)
-            }else{
-                self.view.makeToast("Insufficient point balance to redeem!".localiz(), duration: 2.0, position: .bottom)
-            }
-  
         }
-        
        
     }
     
     @IBAction func removeButton(_ sender: Any) {
-        removeDreamGift()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            removeDreamGift()
+        }
     }
     
     func removeDreamGift(){

@@ -15,22 +15,28 @@ class GnerateEWarrantyViewController: BaseViewController, GenerateEwarrantyDeleg
     
     func DidTap(_ vc: SubmitQRCodesViewController) {
         self.dismiss(animated: true)
-        eWarrentySubmission(codeDetails: CodesArray, ActorId: userID , Address: vc.selectedaddress , AreaId: "\(self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].locationId ?? -1)", CityId: self.selectedCityID, CustomerName: vc.selectedcustomerName , EmailId: vc.selectedemailid , MobileNum: vc.selectedmobilenumber , StateId: self.selectedStateID, productId: self.tempStoreCodesArray[self.indexpathrow].productId ?? 0, count: self.tempStoreCodesArray[self.indexpathrow].codeStatusWiseCount ?? 0)
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            eWarrentySubmission(codeDetails: CodesArray, ActorId: userID , Address: vc.selectedaddress , AreaId: "\(self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].locationId ?? -1)", CityId: self.selectedCityID, CustomerName: vc.selectedcustomerName , EmailId: vc.selectedemailid , MobileNum: vc.selectedmobilenumber , StateId: self.selectedStateID, productId: self.tempStoreCodesArray[self.indexpathrow].productId ?? 0, count: self.tempStoreCodesArray[self.indexpathrow].codeStatusWiseCount ?? 0)
+        }
     }
     
     func othersDidTap(_ vc: Popup4ViewController) {
         self.dismiss(animated: true)
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SubmitEWarrantyViewController") as! SubmitQRCodesViewController
-        vc.modalPresentationStyle = .overFullScreen
-        vc.modalTransitionStyle = .crossDissolve
-        vc.delegate = self
-            self.present(vc, animated: true, completion: nil)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SubmitQRCodesViewController") as? SubmitQRCodesViewController
+        vc?.modalPresentationStyle = .overFullScreen
+        vc?.modalTransitionStyle = .crossDissolve
+        vc?.delegate = self
+            self.present(vc!, animated: true, completion: nil)
     }
     
     func selfDidTap(_ vc: Popup4ViewController) {
-        
-        eWarrentySubmission(codeDetails: CodesArray, ActorId: userID , Address: self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].address1 ?? "", AreaId: "\(self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].locationId ?? -1)", CityId: self.selectedCityID, CustomerName: self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].firstName ?? "", EmailId: self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].email ?? "", MobileNum: self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].mobile ?? "", StateId: self.selectedStateID, productId: self.tempStoreCodesArray[self.indexpathrow].productId ?? 0, count: self.tempStoreCodesArray[self.indexpathrow].codeStatusWiseCount ?? 0)
-        
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            eWarrentySubmission(codeDetails: CodesArray, ActorId: userID , Address: self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].address1 ?? "", AreaId: "\(self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].locationId ?? -1)", CityId: self.selectedCityID, CustomerName: self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].firstName ?? "", EmailId: self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].email ?? "", MobileNum: self.EWarrantyViewModel.myprofiledetails?.getCustomerDetailsMobileAppResult?.lstCustomerJson?[0].mobile ?? "", StateId: self.selectedStateID, productId: self.tempStoreCodesArray[self.indexpathrow].productId ?? 0, count: self.tempStoreCodesArray[self.indexpathrow].codeStatusWiseCount ?? 0)
+        }
     }
     
 
@@ -64,7 +70,11 @@ class GnerateEWarrantyViewController: BaseViewController, GenerateEwarrantyDeleg
         NotificationCenter.default.addObserver(self, selector: #selector(ewarrantyFailed), name: Notification.Name("generateEWarrantyFailed"), object: nil)
         self.EWarrantyViewModel.vc = self
 //        self.EWarrantyViewModel.ApicallingMethod(userID: userID as! Int)
-        profileData()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            profileData()
+        }
         generateTableView.delegate = self
         generateTableView.dataSource = self
         self.generateTableView.reloadData()

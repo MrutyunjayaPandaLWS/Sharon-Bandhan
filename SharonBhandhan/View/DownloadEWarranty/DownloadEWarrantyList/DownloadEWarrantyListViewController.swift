@@ -39,6 +39,7 @@ class DownloadEWarrantyListViewController: BaseViewController, eWarrantyDelegate
         super.viewDidLoad()
         self.vm.VC = self
         noDataFound.isHidden = true
+        animationLottieView.isHidden = true
         self.ewarrantytableView.register(UINib(nibName: "DownloadListTableViewCell", bundle: nil), forCellReuseIdentifier: "DownloadListTableViewCell")
 
         self.ewarrantytableView.delegate = self
@@ -81,11 +82,13 @@ class DownloadEWarrantyListViewController: BaseViewController, eWarrantyDelegate
             self.E_warrantyListArray = response?.lstEWarranty ?? []
             DispatchQueue.main.async {
                 if self.E_warrantyListArray.count != 0 {
-                    self.noDataFound.isHidden = true
+//                    self.noDataFound.isHidden = true
+                    self.animationLottieView.isHidden = true
                     self.ewarrantytableView.isHidden = false
                     self.ewarrantytableView.reloadData()
                 }else{
-                    self.noDataFound.isHidden = false
+//                    self.noDataFound.isHidden = false
+                    self.animationLottieView.isHidden = false
                     self.ewarrantytableView.isHidden = true
                 }
                 

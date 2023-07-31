@@ -30,7 +30,11 @@ class MyEarningsViewController: BaseViewController, FilterDelegate {
         self.VM.VC = self
         self.EarningstableView.register(UINib(nibName: "MyEarningsTableViewCell", bundle: nil), forCellReuseIdentifier: "MyEarningsTableViewCell")
         noDataFound.isHidden = true
-        myEarningListApi()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            myEarningListApi()
+        }
         self.EarningstableView.delegate = self
         self.EarningstableView.dataSource = self
         

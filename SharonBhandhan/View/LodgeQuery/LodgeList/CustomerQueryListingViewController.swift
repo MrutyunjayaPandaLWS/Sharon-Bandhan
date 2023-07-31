@@ -38,15 +38,22 @@ class CustomerQueryListingViewController: BaseViewController,UNUserNotificationC
         self.nodatafoundLbl.isHidden = true
     }
     override func viewWillAppear(_ animated: Bool) {
-
-//            topview.backgroundColor = UIColor.red
-            topview.isHidden = false
-            self.querylistingTableview.isHidden = false
+        
+        //            topview.backgroundColor = UIColor.red
+        
+        querylistingTableview.delegate = self
+        querylistingTableview.dataSource = self
+        querylistingTableview.separatorStyle = .none
+        topview.isHidden = false
+        self.querylistingTableview.isHidden = false
+        self.VM.queryListingArray.removeAll()
+        self.querylistingTableview.reloadData()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
             queryListApi()
-            querylistingTableview.delegate = self
-            querylistingTableview.dataSource = self
-            querylistingTableview.separatorStyle = .none
-            languagelocalization()
+        }
+        languagelocalization()
 //        
 //            guard let tracker = GAI.sharedInstance().defaultTracker else { return }
 //            tracker.set(kGAIScreenName, value: "Customer Query")
@@ -72,16 +79,6 @@ class CustomerQueryListingViewController: BaseViewController,UNUserNotificationC
     
     func languagelocalization(){
         self.lodgequery.text = "cqlLodgeQueryKEY".localiz()
-        
-//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//            self.lodgequery.text = "Lodge Query"
-//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//            self.lodgequery.text = "लॉज क्वेरी"
-//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//            self.lodgequery.text = "লজ প্রশ্ন"
-//        }else{
-//            self.lodgequery.text = "లాడ్జ్ ప్రశ్న"
-//        }
     }
     
         
@@ -121,7 +118,6 @@ class CustomerQueryListingViewController: BaseViewController,UNUserNotificationC
                     self.querylistingTableview.isHidden = false
                     self.querylistingTableview.reloadData()
                     NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification1033(notification:)), name: Notification.Name("NotificationIdentifier103-3"), object: nil)
-
                 }else{
                     self.querylistingTableview.isHidden = true
                     self.nodatafoundLbl.isHidden = false
@@ -129,9 +125,7 @@ class CustomerQueryListingViewController: BaseViewController,UNUserNotificationC
                     //self.nodatafoundLbl.isHidden = false
                 self.stopLoading()
             }
-            
         }
-        
     }
     
  
@@ -153,6 +147,14 @@ extension CustomerQueryListingViewController:  UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "querylistingTableViewCell", for: indexPath) as! querylistingTableViewCell
             cell.querystatus.text = VM.queryListingArray[indexPath.section].ticketStatus ?? ""
+        let ticketStatus = VM.queryListingArray[indexPath.section].ticketStatus ?? ""
+        if ticketStatus == "Closed"{
+            cell.querystatus.backgroundColor = .red
+        }else if ticketStatus == "Resolved"{
+            cell.querystatus.backgroundColor = .systemGreen
+        }else{
+            cell.querystatus.backgroundColor = .systemOrange
+        }
             cell.selectionStyle = .none
             cell.querycode.text = VM.queryListingArray[indexPath.section].customerTicketRefNo ?? ""
             cell.querydetails.text = "  \(VM.queryListingArray[indexPath.section].helpTopic ?? "")"
@@ -160,16 +162,16 @@ extension CustomerQueryListingViewController:  UITableViewDelegate, UITableViewD
             let querydateAndTimeArray = querydateAndTime.components(separatedBy: " ")
             cell.querydate.text = querydateAndTimeArray[0]
             cell.querytime.text = querydateAndTimeArray[1]
-            if CustomerTicketID == CustomerTicketIDchatvc{
-                let centerviewcontroller = self.storyboard1.instantiateViewController(withIdentifier: "ChatListViewController") as! ChatListViewController
-                print(VM.queryListingArray[indexPath.section].customerTicketID!)
-                centerviewcontroller.CustomerTicketIDchatvc = "\(VM.queryListingArray[indexPath.section].customerTicketID ?? 0)"
-                centerviewcontroller.helptopicid = "\(VM.queryListingArray[indexPath.section].helpTopicID ?? 0)"
-                centerviewcontroller.querysummary = VM.queryListingArray[indexPath.section].querySummary ?? ""
-                centerviewcontroller.helptopicdetails = VM.queryListingArray[indexPath.section].helpTopic ?? ""
-                centerviewcontroller.querydetails = "  \(VM.queryListingArray[indexPath.section].queryDetails ?? "")"
-                self.navigationController?.pushViewController(centerviewcontroller, animated: true)
-            }
+//            if CustomerTicketID == CustomerTicketIDchatvc{
+//                let centerviewcontroller = self.storyboard1.instantiateViewController(withIdentifier: "ChatListViewController") as! ChatListViewController
+//                print(VM.queryListingArray[indexPath.section].customerTicketID!)
+//                centerviewcontroller.CustomerTicketIDchatvc = "\(VM.queryListingArray[indexPath.section].customerTicketID ?? 0)"
+//                centerviewcontroller.helptopicid = "\(VM.queryListingArray[indexPath.section].helpTopicID ?? 0)"
+//                centerviewcontroller.querysummary = VM.queryListingArray[indexPath.section].querySummary ?? ""
+//                centerviewcontroller.helptopicdetails = VM.queryListingArray[indexPath.section].helpTopic ?? ""
+//                centerviewcontroller.querydetails = "  \(VM.queryListingArray[indexPath.section].queryDetails ?? "")"
+//                self.navigationController?.pushViewController(centerviewcontroller, animated: true)
+//            }
             return cell
        
        
@@ -182,6 +184,9 @@ extension CustomerQueryListingViewController:  UITableViewDelegate, UITableViewD
             let centerviewcontroller = self.storyboard1.instantiateViewController(withIdentifier: "ChatListViewController") as! ChatListViewController
             print(VM.queryListingArray[indexPath.section].customerTicketID ?? 0)
             centerviewcontroller.CustomerTicketIDchatvc = "\(VM.queryListingArray[indexPath.section].customerTicketID ?? 0)"
+        if (VM.queryListingArray[indexPath.section].ticketStatus ?? "") == "Closed"{
+            centerviewcontroller.messageTFStatus = true
+        }
             centerviewcontroller.helptopicid = "\(VM.queryListingArray[indexPath.section].helpTopicID ?? 0)"
             centerviewcontroller.querysummary = VM.queryListingArray[indexPath.section].querySummary ?? ""
             centerviewcontroller.helptopicdetails = VM.queryListingArray[indexPath.section].helpTopic ?? ""

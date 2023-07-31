@@ -18,7 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     var slider : SlideMenuController!
     var nav : UINavigationController!
-    var languageStatus =  UserDefaults.standard.string(forKey: "LanguageLocalizable") ?? "0"
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
@@ -39,7 +38,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     
     func setLanguage(){
-        
+        var languageStatus =  UserDefaults.standard.string(forKey: "LanguageLocalizable")
+        print(languageStatus,"language status")
         if languageStatus == "1"{
             LanguageManager.shared.setLanguage(language: .en)
         }else if languageStatus == "2"{

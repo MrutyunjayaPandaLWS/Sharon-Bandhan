@@ -52,7 +52,7 @@ class ProfileViewModel: popUpDelegate{
         
         let parameters = [
             "ActorId": "\(userID)",
-            "ObjCustomerJson": [
+            "ObjCustomer": [
                 "DisplayImage": "\(base64)",
                 "LoyaltyId": "\(loyaltyID)"
             ]

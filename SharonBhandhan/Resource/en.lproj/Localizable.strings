@@ -1,10 +1,9 @@
-
 /*
-  Localizable.strings
-  CenturyProClubApplication
+Localizable.strings
+CenturyProClubApplication
 
-  Created by Arokia IT on 2/5/20.
-  Copyright © 2020 Ltd.Technologies.WeMakeAppz. All rights reserved.
+Created by Arokia IT on 2/5/20.
+Copyright © 2020 Ltd.Technologies.WeMakeAppz. All rights reserved.
 */
 //INITIAL VIEW
 "ivWanttoregisterKEY" = "रजिस्टर करना चाहते हैं?";
@@ -39,7 +38,7 @@
 "mpStateKEY" = "State";
 "mpCityKEY" = "City";
 "mpDistrictKEY" = "District";
-"mpPinKEY" = "Pin";
+"mpPinKEY" = "Pin Code";
 "mpPreferredLanguageKEY" = "Preferred Language";
 "mpNativeStateKEY" = "Native State";
 //REGISTRATION VC
@@ -95,7 +94,7 @@
 "ucQRCodeIsSubmittedSuccessfullyKEY" = "QR Code is submitted successfully.";
 "ucCheckTheStatusOfTheCodeInTheStatusReportKEY" = "Check the status of the code in code status report";
 "ucStatusKEY" = "Status";
-"ucScanAgainKEY" = "Upload\n  again";
+"ucScanAgainKEY" = "Upload\n again";
 "ucRaiseTicketKEY" = " Raise\nticket";
 "ucSubmitKEY" = "SUBMIT";
 "ucUpLoadCodeKEY" = "UPLOAD CODE";
@@ -118,12 +117,12 @@
 //TERMS AND CONDITIONS VC
 "tcTermsAndConditionsKEY" = "Terms and Conditions";
 //HELPLINE CALL VC
-"hcHelplineCallKEY" = "Helpline Call";
+"hcHelplineCallKEY" = "Helpline";
 "hcForAnyQuestionandQueriesKEY" = "For any question and queries on the CenturyProClub loyalty Program please give a miss call on the following number";
 // UNIQUE FEATURE VC
 "ufUniqueFeaturesKEY" = "Unique Features";
 //MY EARNING VC
-"meMyEarning" = "My Earning";
+"meMyEarning" = "My Earnings";
 "meFromDateKEY" = "From Date";
 "meDateRange" = "Please select date range";
 "meToDateKEY" = "To Date";
@@ -138,7 +137,7 @@
 //LODGE QUERY VC
 "lqPleaseSubmitYourQueryUsingThisFormKEY" = "Please submit your query using this form";
 "lqSelectYourTopic" = "Select your Topic";
-"lqQuerySummary" = "Query Summary";
+"lqQuerySummary" = "Query Subject";
 "lqQueryDetails" = "Query Details";
 "lqBrowseImageKEY" = "Browse Image";
 "lqSubmitKEY" = "SUBMIT";
@@ -161,7 +160,7 @@
 //MY BENEFITS VC
 "mbMyBenefitsKEY" = "My Benefits";
 //FIREBASESCANNER VC
-"fcScanQRCodeKEY" = "Scan QR Code";
+"fcScanQRCodeKEY" = "SCAN QR CODE";
 "fcPlaceAQRCodeInsideTheViewFinderRectangleToScanITKEY" = "Place a QR Code inside the view finder";
 //CHECKOUTVC
 "coSuccess!!KEY" = "Success !!";
@@ -284,7 +283,7 @@
 "acAccessCameraKEY" = "Access Camera";
 "acEnableCameraKEY" = "Enable Camera";
 "acQRCodeScannerRequiresKEY" = "QR Code scanner requires camera permission to start scanning CenturyProClub Code.";
-//CODE STATUS  //CodeStatusViewController
+//CODE STATUS //CodeStatusViewController
 "NoDataFoundKEY" = "No data found";
 
 //UPLOAD CODE // UploadCodeVC
@@ -298,18 +297,18 @@
 "SubmitCodeKey" = "Submit your code";
 "Enter12DigitsKey" = "Please enter 12 digit code";
 
-//Code sync status // CodeSyncingStatusVC  // CodeSummaryFilterVC
- "CodeSYNCKey" = "Code sync status";
+//Code sync status // CodeSyncingStatusVC // CodeSummaryFilterVC
+"CodeSYNCKey" = "Code sync status";
 "CodeSummaryKey" = "Code summary";
 "ToDateKey" = "To date";
 "FromDateKey" = "From date";
 "FilterKey" = "Filter";
 "DateOrStausKey" = "Please select date or status";
 "SelectToDateKey" = "Please select to date";
- "ToDateGreaterFromDateKey" = "To date should be greater than from date";
+"ToDateGreaterFromDateKey" = "To date should be greater than from date";
 "CountKey" = "Count";
 "SelectDateKey" = "Select date";
- "CancelKey" = "Cancel";
+"CancelKey" = "Cancel";
 "ConfirmKey" = "Confirm";
 
 //E-warranty certhificate
@@ -332,13 +331,13 @@
 
 //Redemption catelogue
 "addedToCartKey" = "added to cart";
- "EnterAllFieldsKey" = "Enter all fields";
-"AlreadyPlannerAddedKey"  = "Product is already added to your Redemption planner";
+"EnterAllFieldsKey" = "Enter all fields";
+"AlreadyPlannerAddedKey" = "Product is already added to your Redemption planner";
 "PlannerAddedKey" = "Product has been added to your Redemption planner";
 "NotAllowedToRedeemKey" = "You are not allowed to redeem.Please contact your administrator.";
 
 //My earning
- "SelectDateRangeKey" = "Select date range";
+"SelectDateRangeKey" = "Select date range";
 "QRCodeKey" = "QR code";
 
 //My redemption
@@ -439,7 +438,7 @@
 "Enter the email address" = "Enter the email address";
 "Customer Address" = "Customer Address";
 "Enter the address details" = "Enter the address details";
- "Camera access required for Scanning QR Codes" = "Camera access required for Scanning QR Codes";
+"Camera access required for Scanning QR Codes" = "Camera access required for Scanning QR Codes";
 "Allow Camera" = "Allow Camera";
 "Sync Status" = "Sync Status";
 "EWarranty" = "E - Warranty";
@@ -457,7 +456,7 @@
 "Enter Name" = "Enter Name";
 "Generate E-Warranty" = "Generate E-Warranty";
 "Select Area" = "Select Area";
-"Download E-Warranty" = "Download E-Warranty";
+"Download E-Warranty" = "Download";
 
 "E-Warranty details saved successfully" = "E-Warranty details saved successfully.";
 "Something went wrong please try again later." = "Something went wrong please try again later !";
@@ -487,10 +486,9 @@
 "back To Login" = "back To Login";
 "Please Enter Membership ID" = "Please Enter Membership ID";
 "New password sent to the registered mobile number!" = "New password sent to the registered mobile number!";
- 
 "MembershipID doesn't exists" = "MembershipID doesn't exists";
-"queryQuestion info" = "For any questions and queries on the Sharon Bandhan Loyalty Program. Please give a miss call on the following number";
-"Add Lodge Query" = "Add Lodge Query";
+"queryQuestion info" = "For any questions and queries on the SharonBandhan Program, Please give a missed call to the below given number.";
+"Add Lodge Query" = "Lodge Query";
 "Submit Query" = "Submit Query";
 "Select a Query Topic" = "Select a Query Topic";
 "Query summary is Empty" = "Query summary is Empty";
@@ -561,9 +559,9 @@
 
 "Submit without scan Upload QR" = "Submit without scan Upload QR";
 "Please scan/upload QR code" = "Please scan/upload QR code";
-"QR code is Submitted Successfully. Check the status of the code in  status report." = "QR code is Submitted Successfully. Check the status of the code in  status report.";
+"QR code is Submitted Successfully. Check the status of the code in status report." = "QR code is Submitted Successfully. Check the status of the code in status report.";
 "Scan_Again" = "Scan Again";
-"Place a QR Code inside the view finder rectangle to scan it." = "Place a QR Code inside the view finder rectangle  to scan it.";
+"Place a QR Code inside the view finder rectangle to scan it." = "Place a QR Code inside the view finder rectangle to scan it.";
 "Enter QR code in the above field and submit." = "Enter QR code in the above field and submit.";
 
 "Click here to see your QR Codes" = "Click here to see your QR Codes";
@@ -577,3 +575,26 @@
 "Settings" = "Settings";
 "Sharon Bandhan Application need Camera permission for Scanning Codes" = "Sharon Bandhan Application need Camera permission for Scanning Codes";
 "Allow Camera Access" = "Allow Camera Access";
+
+
+
+"Points Balance" = "Points Balance";
+"Scan QR Code" = "Scan QR Code";
+
+"Ask Help ?" = "Ask Help ?";
+"Raise a ticket our team will connect you soon" = "Raise a ticket our team will connect you soon";
+"Raise a Ticket" = "Raise a Ticket";
+"Online scanning limit exceeded. Sync pending codes in Wifi/Mobile data or Clear processed codes ." = "Online scanning limit exceeded. Sync pending codes in Wifi/Mobile data or Clear processed codes .";
+
+
+"PAN INFORMATION" = "PAN INFORMATION";
+"Receive Benefits Upon Joining" = "Receive Benefits Upon Joining";
+"Earn Points for your purchase" = "Earn Points for your purchase";
+"Redeem Reward points for Attractive Gift Items" = "Redeem Reward points for Attractive Gift Items";
+"Redemption Planner - Journey to Redeem your Dream Products" = "Redemption Planner - Journey to Redeem your Dream Products";
+"Interactive Mobile App & Website" = "Interactive Mobile App & Website";
+"Become a SharonBandhan Member and Be a Winner" = "Become a SharonBandhan Member and Be a Winner";
+
+//MARK: - NEW
+"Currently, No Offers and Promotions are running." = "Currently, No Offers and Promotions are running.";
+"Please upload the relevant images only." = "Please upload the relevant images only.";

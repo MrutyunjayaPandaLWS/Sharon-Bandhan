@@ -64,7 +64,7 @@ class ScannerViewModel: PopUpDelegate{
                         if splittedArray[0] == "1"{
                             DispatchQueue.main.async {
                                 self.vc!.productname.text = self.codeGenuineResponse?.qrUsegereport?[0].productName ?? ""
-                                self.vc!.plantName.text = self.codeGenuineResponse?.plantName ?? ""
+                                self.vc!.plantName.text = self.codeGenuineResponse?.qrUsegereport?[0].locationName ?? ""
                                 self.vc!.thickness.text = self.codeGenuineResponse?.qrUsegereport?[0].thickness ?? ""
                                 self.vc!.size.text = self.codeGenuineResponse?.qrUsegereport?[0].size ?? ""
                                 self.vc!.uniqueCode.text = self.codeGenuineResponse?.qrUsegereport?[0].scratchCode ?? ""
@@ -171,7 +171,7 @@ class ScannerViewModel: PopUpDelegate{
                                 
                                 DispatchQueue.main.async {
                                     self.vc!.productname.text = self.codeGenuineResponse?.qrUsegereport?[0].productName ?? ""
-                                    self.vc!.plantName.text = self.codeGenuineResponse?.plantName ?? ""
+                                    self.vc!.plantName.text = self.codeGenuineResponse?.qrUsegereport?[0].locationName ?? ""
                                     self.vc!.thickness.text = self.codeGenuineResponse?.qrUsegereport?[0].thickness ?? ""
                                     self.vc!.size.text = self.codeGenuineResponse?.qrUsegereport?[0].size ?? ""
                                     if self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "" != "" && self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "" != nil && self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "" != "-"{
@@ -363,18 +363,21 @@ class ScannerViewModel: PopUpDelegate{
                                 }
                             }
                             
-                        }else if splittedArray[0] == "-1"{
-                            DispatchQueue.main.async{
-                                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
-                                vc!.delegate = self
-                                vc!.titleInfo = ""
-                                vc!.descriptionInfo = "Please enter the valid code".localiz()
-                                vc!.itsFrom = "ScannerAlertPopUp"
-                                vc!.modalPresentationStyle = .overCurrentContext
-                                vc!.modalTransitionStyle = .crossDissolve
-                                self.vc!.present(vc!, animated: true, completion: nil)
-                            }
-                        }else{
+                        }
+//                        else if splittedArray[0] == "-1"{
+//                            DispatchQueue.main.async{
+//                                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopUp2ViewController") as? PopUp2ViewController
+//                                vc!.delegate = self
+//                                vc!.titleInfo = ""
+//                                vc!.descriptionInfo = "Please enter the valid code".localiz()
+//                                vc!.itsFrom = "ScannerAlertPopUp"
+//                                vc!.modalPresentationStyle = .overCurrentContext
+//                                vc!.modalTransitionStyle = .crossDissolve
+//                                self.vc!.present(vc!, animated: true, completion: nil)
+//                            }
+//                        }
+                    else
+                        {
                             DispatchQueue.main.async {
                             self.appendDatatoListing(data: self.codeGenuineResponse!, StatusID: String(splittedArray[0]), scratchcode: code)
                                 let errorMessage = "Not a Sharon Ply Genuine Product"

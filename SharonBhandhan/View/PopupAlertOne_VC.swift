@@ -23,6 +23,7 @@ class PopupAlertOne_VC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.descriptionn.text = descriptionInfo
         self.ok.setTitle("rOKKEY".localiz(), for: .normal)
 //        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{

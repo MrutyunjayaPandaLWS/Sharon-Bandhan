@@ -18,7 +18,8 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
     
     
     
-       @IBOutlet weak var querydetails: UILabel!
+    @IBOutlet weak var uploadImagInfoLbl: UILabel!
+    @IBOutlet weak var querydetails: UILabel!
        @IBOutlet weak var querysummarylabel: UILabel!
        @IBOutlet weak var selectyourtopiclabel: UILabel!
        @IBOutlet weak var pleasesubmityourqueryusingthisform: UILabel!
@@ -30,8 +31,9 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
       
 
        @IBOutlet weak var browseimage: UIButton!
-       @IBOutlet weak var textviewforquerysummary: UITextView!
-       @IBOutlet weak var tableviewtopics: UITableView!
+
+    @IBOutlet weak var textviewforquerysummary: UITextField!
+    @IBOutlet weak var tableviewtopics: UITableView!
        @IBOutlet weak var titleview: UIView!
        @IBOutlet weak var tableandcancelbtn: UIView!
        @IBOutlet weak var submitbtn: UIButton!
@@ -39,7 +41,8 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
        @IBOutlet weak var topicnamelabel: UILabel!
        @IBOutlet weak var titledisplaylabel: UILabel!
        @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
-       @IBOutlet weak var querysummarytf: UITextView!
+       
+    @IBOutlet weak var querysummarytf: UITextField!
     
     @IBOutlet weak var mainViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var selectionButton: UIButton!
@@ -65,11 +68,14 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
            super.viewDidLoad()
            print("Its From",isFrom)
            languagelocalization()
-           mainViewHeightConstraint.constant = 459
-           imageHeightConstraint.constant = 0
-           
+//           mainViewHeightConstraint.constant = 459
+//           imageHeightConstraint.constant = 0
+           uploadImagInfoLbl.isHidden = false
            picker.delegate = self
-           self.imageHeightConstraint.constant = 0
+           
+           let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: textviewforquerysummary.frame.width, height: textviewforquerysummary.frame.height))
+           textviewforquerysummary.setLeftPaddingPoints(10)
+//           self.imageHeightConstraint.constant = 0
            cancelbutton.layer.shadowColor = UIColor.black.cgColor
            cancelbutton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
            cancelbutton.layer.shadowOpacity = 0.2
@@ -82,21 +88,21 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
            tableandcancelbtn.isHidden = true
            self.selectionButton.isHidden = false
            helpTopicListApi()
-//           self.querysummarytf.delegate = self as! UITextFieldDelegate
-           self.textviewforquerysummary.delegate = self as! UITextViewDelegate
+           self.querysummarytf.delegate = self
+           self.textviewforquerysummary.delegate = self
            
            NotificationCenter.default.addObserver(self, selector: #selector(querySubmissions), name: Notification.Name.querySubmission, object: nil)
            if self.isFrom == 2{
                fetchDetails()
-               self.querysummarytf.isEditable = true
+               self.querysummarytf.isEnabled = true
                self.querysummarytf.isUserInteractionEnabled = true
            }else if self.isFrom == 3{
-               self.querysummarytf.isEditable = true
+               self.querysummarytf.isEnabled = true
                self.querysummarytf.isUserInteractionEnabled = true
            }else if self.isFrom == 10{
                self.querySummaryDetails = ""
                self.querysummarytf.isUserInteractionEnabled = true
-               self.querysummarytf.isEditable = false
+               self.querysummarytf.isEnabled = false
                for code in self.selectedCodesArray{
                    self.querySummaryDetails = self.querySummaryDetails + "\(code)"
                }
@@ -140,6 +146,7 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
     }
     
     func languagelocalization(){
+        self.uploadImagInfoLbl.text = "Please upload the relevant images only.".localiz()
         self.ldgequery.text = "Add Lodge Query".localiz()
         self.pleasesubmityourqueryusingthisform.text = "lqPleaseSubmitYourQueryUsingThisFormKEY".localiz()
         self.selectyourtopiclabel.text = "lqSelectYourTopic".localiz()
@@ -347,8 +354,9 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
                 let imageData = selectedImage.resized(withPercentage: 0.1)
                 let imageData1: NSData = imageData!.pngData()! as NSData
                 self.ProfileImageView.image = selectedImage
-                self.imageHeightConstraint.constant = 180
-                mainViewHeightConstraint.constant = 659
+                uploadImagInfoLbl.isHidden = true
+//                self.imageHeightConstraint.constant = 180
+//                mainViewHeightConstraint.constant = 659
                 self.strdata1 = imageData1.base64EncodedString(options: .lineLength64Characters)
                 picker.dismiss(animated: true, completion: nil)
 //                self.dismiss(animated: true, completion: nil)
@@ -510,6 +518,24 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
         }
         
     }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        var maxLength = 50
+        if textField == querysummarytf{
+            maxLength = 30
+            let currentString: NSString = (self.querysummarytf.text ?? "") as NSString
+            let newString: NSString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            return newString.length <= maxLength
+        }else{
+            maxLength = 50
+            let currentString: NSString = (self.textviewforquerysummary.text ?? "") as NSString
+            let newString: NSString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            return newString.length <= maxLength
+        }
+        
     }
     
     // submission Api

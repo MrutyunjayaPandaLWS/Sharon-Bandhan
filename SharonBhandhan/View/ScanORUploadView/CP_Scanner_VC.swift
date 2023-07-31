@@ -43,7 +43,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
     @IBOutlet var uploadAndScanView: UIView!
     @IBOutlet var scanOutBTN: UIButton!
     @IBOutlet var uploadCodeOutBTN: UIButton!
-    
+    @IBOutlet weak var submitOutBtn: UIButton!
     
     var scannerVM = ScannerViewModel()
     let userID = UserDefaults.standard.value(forKey: "UserID") ?? -1
@@ -94,7 +94,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                         }
                     })
                 }
-                self.scanoruploadLabel.text = "fcScanQRCodeKEY".localiz()
+                self.scanoruploadLabel.text = "Scan QR Code".localiz()
                 self.scanAgain.setTitle("SCAN AGAIN".localiz(), for: .normal)
                 self.scannerImage.isHidden = false
                 //self.scanImage12.isHidden = true
@@ -105,7 +105,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                 }
                 
             } else if self.selectedindex == 2 {
-                self.scanoruploadLabel.text = "hpUploadCodeKEY".localiz()
+                self.scanoruploadLabel.text = "Upload Code".localiz()
                 self.scanAgain.setTitle("UPLOAD AGAIN".localiz(), for: .normal)
                 self.scannerImage.isHidden = true
              //   self.scanImage12.isHidden = false
@@ -122,6 +122,13 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
 //
 //        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
 //        tracker.send(builder.build() as [NSObject : AnyObject])
+        localization()
+    }
+    
+    private func localization(){
+        submitOutBtn.setTitle("fpSubmitKEY".localiz(), for: .normal)
+        scanOutBTN.setTitle("Scan QR Code".localiz(), for: .normal)
+        uploadCodeOutBTN.setTitle("Upload Code".localiz(), for: .normal)
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -190,7 +197,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
                     }
                 })
             }
-            self.scanoruploadLabel.text = "fcScanQRCodeKEY".localiz()
+            self.scanoruploadLabel.text = "Scan QR Code".localiz()
             self.scanAgain.setTitle("SCAN AGAIN".localiz(), for: .normal)
             self.scannerImage.isHidden = false
             //self.scanImage12.isHidden = true
@@ -202,7 +209,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
     @IBAction func uploadQRCodeNEWModelActBTN(_ sender: Any) {
         DispatchQueue.main.async {
             self.selectedindex = 2
-            self.scanoruploadLabel.text = "hpUploadCodeKEY".localiz()
+            self.scanoruploadLabel.text = "Upload Code".localiz()
             self.scanAgain.setTitle("UPLOAD AGAIN".localiz(), for: .normal)
             self.scannerImage.isHidden = true
             //   self.scanImage12.isHidden = false
@@ -367,7 +374,7 @@ class CP_Scanner_VC: BaseViewController,AVCaptureMetadataOutputObjectsDelegate, 
         
         if self.scannerVM.codeGenuineResponse?.qrUsegereport?.count != 0{
             self.scannerVM.codeGenuineResponse?.plantCode = ""
-            self.scannerVM.codeGenuineResponse?.plantName = ""
+            self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].locationName = ""
             self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].printDate = ""
             self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].productId = 0
             self.scannerVM.codeGenuineResponse?.qrUsegereport?[0].productName = ""

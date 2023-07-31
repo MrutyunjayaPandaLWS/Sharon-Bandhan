@@ -537,10 +537,13 @@ class RedemptionOTP_VC: BaseViewController,UITextFieldDelegate, popUpDelegate {
         print(productsParameter!)
         self.VM.sendSMSApi(parameters: productsParameter!) { response in
             print(response?.returnValue ?? 0, "Send SMS Status")
-            if response?.returnValue ?? 0 >= 0{
-                DispatchQueue.main.async{
-                    self.sendSuccessMessage()
-                }
+//            if response?.returnValue ?? 0 >= 0{
+//                DispatchQueue.main.async{
+//                    self.sendSuccessMessage()
+//                }
+//            }
+            DispatchQueue.main.async{
+                self.sendSuccessMessage()
             }
             }
         }
@@ -571,7 +574,7 @@ class RedemptionOTP_VC: BaseViewController,UITextFieldDelegate, popUpDelegate {
         self.VM.sendSUCESSApi(parameters: productsParameter!) { response in
             DispatchQueue.main.async {
                 self.stopLoading()
-                if response?.sendSMSForSuccessfulRedemptionMobileAppResult! == true{
+//                if response?.sendSMSForSuccessfulRedemptionMobileAppResult! == true{
                     if self.contractorName == ""{
                         
                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RedemptionSuccess_VC") as! RedemptionSuccess_VC
@@ -586,7 +589,7 @@ class RedemptionOTP_VC: BaseViewController,UITextFieldDelegate, popUpDelegate {
                         self.removeDreamGift()
                     }
                     
-                }
+//                }
                 self.stopLoading()
             }
            
@@ -598,7 +601,7 @@ class RedemptionOTP_VC: BaseViewController,UITextFieldDelegate, popUpDelegate {
                 "ActionType": 4,
                 "ActorId": "\(userID)",
                 "DreamGiftId": "\(dreamGiftId)",
-                "GiftStatusId": 4
+                "GiftStatusId": 5
         ] as [String: Any]
         print(parameters)
         self.VM.removeDreamGift(parameters: parameters) { response in

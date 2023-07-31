@@ -156,52 +156,68 @@ class SubmitEWarrantyViewController: BaseViewController, SelectedItemDelegate, U
     
     
     @IBAction func cityButton(_ sender: Any) {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DropDownVC") as! DropDownVC
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DropDownVC") as! DropDownVC
             vc.delegate = self
             vc.isComeFrom = 2
             vc.modalPresentationStyle = .overCurrentContext
             vc.modalTransitionStyle = .crossDissolve
             self.present(vc, animated: true, completion: nil)
+        }
     }
     
     @IBAction func areaButton(_ sender: Any) {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DropDownVC") as! DropDownVC
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DropDownVC") as! DropDownVC
             vc.delegate = self
             vc.isComeFrom = 4
             vc.modalPresentationStyle = .overCurrentContext
             vc.modalTransitionStyle = .crossDissolve
             self.present(vc, animated: true, completion: nil)
+        }
     }
     
     @IBAction func nackButton(_ sender: Any) {
-        if generateE_warranty.currentTitle == "Generate E-Warranty".localiz(){
-            self.navigationController?.popViewController(animated: true)
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
         }else{
-            for controller in self.navigationController!.viewControllers as Array {
-                if controller.isKind(of: DownloadEWarrantyListViewController.self) {
-                    _ =  self.navigationController!.popToViewController(controller, animated: true)
-                    break
+            if generateE_warranty.currentTitle == "Generate E-Warranty".localiz(){
+                self.navigationController?.popViewController(animated: true)
+            }else{
+                for controller in self.navigationController!.viewControllers as Array {
+                    if controller.isKind(of: DownloadEWarrantyListViewController.self) {
+                        _ =  self.navigationController!.popToViewController(controller, animated: true)
+                        break
+                    }
                 }
-            } }
+                
+            }
+        }
     }
     
     @IBAction func generateE_warranty(_ sender: Any) {
-        
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
         if generateE_warranty.currentTitle == "Generate E-Warranty".localiz() {
             if self.nameTF.text?.count == 0 {
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
                 vc!.descriptionInfo = "Enter Name".localiz()
-//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                    vc!.descriptionInfo = "Enter Name"
-//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                     vc!.descriptionInfo = "नाम दर्ज करें"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                    vc!.descriptionInfo = "নাম লিখুন"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                    vc!.descriptionInfo = "పేరు నమోదు చేయండి"
-//                  }
+                //                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                //                    vc!.descriptionInfo = "Enter Name"
+                //                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                //                     vc!.descriptionInfo = "नाम दर्ज करें"
+                //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                //                    vc!.descriptionInfo = "নাম লিখুন"
+                //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+                //                    vc!.descriptionInfo = "పేరు నమోదు చేయండి"
+                //                  }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -210,15 +226,15 @@ class SubmitEWarrantyViewController: BaseViewController, SelectedItemDelegate, U
                 vc!.delegate = self
                 vc!.titleInfo = ""
                 vc!.descriptionInfo = "fEnterMobileNumberKEY".localiz()
-//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                    vc!.descriptionInfo = "fEnterMobileNumberKEY".localiz()
-//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                     vc!.descriptionInfo = "मोबाइल नंबर डालें"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                    vc!.descriptionInfo = "মোবাইল নম্বর লিখুন"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                    vc!.descriptionInfo = "మొబైల్ నంబర్ ఎంటర్ చేయండి"
-//                  }
+                //                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                //                    vc!.descriptionInfo = "fEnterMobileNumberKEY".localiz()
+                //                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                //                     vc!.descriptionInfo = "मोबाइल नंबर डालें"
+                //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                //                    vc!.descriptionInfo = "মোবাইল নম্বর লিখুন"
+                //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+                //                    vc!.descriptionInfo = "మొబైల్ నంబర్ ఎంటర్ చేయండి"
+                //                  }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
@@ -227,123 +243,124 @@ class SubmitEWarrantyViewController: BaseViewController, SelectedItemDelegate, U
                 vc!.delegate = self
                 vc!.titleInfo = ""
                 vc!.descriptionInfo = "EnterValidNumberKey".localiz()
-//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                    vc!.descriptionInfo = "Enter Valid Mobile Number"
-//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                     vc!.descriptionInfo = "वैध मोबाइल नंबर दर्ज करें"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                    vc!.descriptionInfo = "বৈধ মোবাইল নম্বর লিখুন"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                    vc!.descriptionInfo = "చెల్లుబాటయ్యే మొబైల్ నంబర్‌ని నమోదు చేయండిr"
-//                  }
+                //                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                //                    vc!.descriptionInfo = "Enter Valid Mobile Number"
+                //                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                //                     vc!.descriptionInfo = "वैध मोबाइल नंबर दर्ज करें"
+                //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                //                    vc!.descriptionInfo = "বৈধ মোবাইল নম্বর লিখুন"
+                //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+                //                    vc!.descriptionInfo = "చెల్లుబాటయ్యే మొబైల్ నంబర్‌ని నమోదు చేయండిr"
+                //                  }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
             }
-//            else if emailTF.text?.count == 0{
-//                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
-//                vc!.delegate = self
-//                vc!.titleInfo = ""
-//
-//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                    vc!.descriptionInfo = "Enter Email ID"
-//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                     vc!.descriptionInfo = "ईमेल आईडी दर्ज करें"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                    vc!.descriptionInfo = "ইমেইল আইডি লিখুন"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                    vc!.descriptionInfo = "ఈమెయిల్ ఐడిని నమోదు చేయండి"
-//                  }
-//                vc!.modalPresentationStyle = .overCurrentContext
-//                vc!.modalTransitionStyle = .crossDissolve
-//                self.present(vc!, animated: true, completion: nil)
-//            }
-//            else if !isValidEmail(emailTF.text ?? "") {
-//                DispatchQueue.main.async{
-//                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
-//                    vc!.delegate = self
-//                    vc!.titleInfo = ""
-//
-//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                        vc!.descriptionInfo = "Enter Valid EmailID"
-//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                         vc!.descriptionInfo = "मान्य ईमेल आईडी दर्ज करें"
-//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                        vc!.descriptionInfo = "বৈধ ইমেইল আইডি লিখুন"
-//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                        vc!.descriptionInfo = "చెల్లుబాటు అయ్యే ఇమెయిల్ IDని నమోదు చేయండి"
-//                      }
-//                    vc!.modalPresentationStyle = .overCurrentContext
-//                    vc!.modalTransitionStyle = .crossDissolve
-//                    self.present(vc!, animated: true, completion: nil)
-//                    }
-//            }
+            //            else if emailTF.text?.count == 0{
+            //                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
+            //                vc!.delegate = self
+            //                vc!.titleInfo = ""
+            //
+            //                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+            //                    vc!.descriptionInfo = "Enter Email ID"
+            //                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+            //                     vc!.descriptionInfo = "ईमेल आईडी दर्ज करें"
+            //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+            //                    vc!.descriptionInfo = "ইমেইল আইডি লিখুন"
+            //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+            //                    vc!.descriptionInfo = "ఈమెయిల్ ఐడిని నమోదు చేయండి"
+            //                  }
+            //                vc!.modalPresentationStyle = .overCurrentContext
+            //                vc!.modalTransitionStyle = .crossDissolve
+            //                self.present(vc!, animated: true, completion: nil)
+            //            }
+            //            else if !isValidEmail(emailTF.text ?? "") {
+            //                DispatchQueue.main.async{
+            //                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
+            //                    vc!.delegate = self
+            //                    vc!.titleInfo = ""
+            //
+            //                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+            //                        vc!.descriptionInfo = "Enter Valid EmailID"
+            //                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+            //                         vc!.descriptionInfo = "मान्य ईमेल आईडी दर्ज करें"
+            //                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+            //                        vc!.descriptionInfo = "বৈধ ইমেইল আইডি লিখুন"
+            //                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+            //                        vc!.descriptionInfo = "చెల్లుబాటు అయ్యే ఇమెయిల్ IDని నమోదు చేయండి"
+            //                      }
+            //                    vc!.modalPresentationStyle = .overCurrentContext
+            //                    vc!.modalTransitionStyle = .crossDissolve
+            //                    self.present(vc!, animated: true, completion: nil)
+            //                    }
+            //            }
             else if addressTF.text?.count == 0{
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                 vc!.delegate = self
                 vc!.titleInfo = ""
                 vc!.descriptionInfo = "Enter Address".localiz()
-//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                    vc!.descriptionInfo = "Enter Address"
-//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                     vc!.descriptionInfo = "पता दर्ज करें"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                    vc!.descriptionInfo = "ঠিকানা লিখুন"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                    vc!.descriptionInfo = "చిరునామా నమోదు చేయండి"
-//                  }
+                //                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                //                    vc!.descriptionInfo = "Enter Address"
+                //                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                //                     vc!.descriptionInfo = "पता दर्ज करें"
+                //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                //                    vc!.descriptionInfo = "ঠিকানা লিখুন"
+                //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+                //                    vc!.descriptionInfo = "చిరునామా నమోదు చేయండి"
+                //                  }
                 vc!.modalPresentationStyle = .overCurrentContext
                 vc!.modalTransitionStyle = .crossDissolve
                 self.present(vc!, animated: true, completion: nil)
             }
-//            else if self.selectedCityID == -1{
-//                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
-//                vc!.delegate = self
-//                vc!.titleInfo = ""
-//
-//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                    vc!.descriptionInfo = "Select City"
-//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                     vc!.descriptionInfo = "शहर चुनें"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                    vc!.descriptionInfo = "শহর নির্বাচন করুন"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                    vc!.descriptionInfo = "సిటీని ఎంచుకోండి"
-//                  }
-//                vc!.modalPresentationStyle = .overCurrentContext
-//                vc!.modalTransitionStyle = .crossDissolve
-//                self.present(vc!, animated: true, completion: nil)
-//            }else if self.selectedAreaID == -1{
-//                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
-//                vc!.delegate = self
-//                vc!.titleInfo = ""
-//
-//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                    vc!.descriptionInfo = "Select Area"
-//                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                     vc!.descriptionInfo = "क्षेत्र का चयन करें"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                    vc!.descriptionInfo = "এলাকা নির্বাচন করুন"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                    vc!.descriptionInfo = "ప్రాంతాన్ని ఎంచుకోండి"
-//                  }
-//                vc!.modalPresentationStyle = .overCurrentContext
-//                vc!.modalTransitionStyle = .crossDissolve
-//                self.present(vc!, animated: true, completion: nil)
-//            }
+            //            else if self.selectedCityID == -1{
+            //                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
+            //                vc!.delegate = self
+            //                vc!.titleInfo = ""
+            //
+            //                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+            //                    vc!.descriptionInfo = "Select City"
+            //                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+            //                     vc!.descriptionInfo = "शहर चुनें"
+            //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+            //                    vc!.descriptionInfo = "শহর নির্বাচন করুন"
+            //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+            //                    vc!.descriptionInfo = "సిటీని ఎంచుకోండి"
+            //                  }
+            //                vc!.modalPresentationStyle = .overCurrentContext
+            //                vc!.modalTransitionStyle = .crossDissolve
+            //                self.present(vc!, animated: true, completion: nil)
+            //            }else if self.selectedAreaID == -1{
+            //                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
+            //                vc!.delegate = self
+            //                vc!.titleInfo = ""
+            //
+            //                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+            //                    vc!.descriptionInfo = "Select Area"
+            //                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+            //                     vc!.descriptionInfo = "क्षेत्र का चयन करें"
+            //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+            //                    vc!.descriptionInfo = "এলাকা নির্বাচন করুন"
+            //                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+            //                    vc!.descriptionInfo = "ప్రాంతాన్ని ఎంచుకోండి"
+            //                  }
+            //                vc!.modalPresentationStyle = .overCurrentContext
+            //                vc!.modalTransitionStyle = .crossDissolve
+            //                self.present(vc!, animated: true, completion: nil)
+            //            }
             else{
-
+                
                 generateApiCalling()
             }
             
             
-           
+            
         } else {
-//           if generateE_warranty.currentTitle == "Download E-Warranty" || generateE_warranty.currentTitle == "ई-वारंटी डाउनलोड करें" || generateE_warranty.currentTitle == "ই-ওয়ারেন্টি ডাউনলোড করুন" || generateE_warranty.currentTitle == "ఇ-వారెంటీని డౌన్‌లోడ్ చేయండి"
+            //           if generateE_warranty.currentTitle == "Download E-Warranty" || generateE_warranty.currentTitle == "ई-वारंटी डाउनलोड करें" || generateE_warranty.currentTitle == "ই-ওয়ারেন্টি ডাউনলোড করুন" || generateE_warranty.currentTitle == "ఇ-వారెంటీని డౌన్‌లోడ్ చేయండి"
             if generateE_warranty.currentTitle == "Download E-Warranty".localiz(){
                 downloadEWarrantyApiCall()
             }
         }
+    }
     }
     
     //Delegate: -

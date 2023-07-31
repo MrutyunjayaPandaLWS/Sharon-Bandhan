@@ -30,8 +30,13 @@ class OffersListViewController: BaseViewController, OffersandPromotionsDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.VM.VC = self
+        animationLottieView.isHidden =  true
         self.offerstableView.register(UINib(nibName: "OffersTableViewCell", bundle: nil), forCellReuseIdentifier: "OffersTableViewCell")
-        offersandPromotionsApi()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            offersandPromotionsApi()
+        }
         self.offerstableView.delegate = self
         self.offerstableView.dataSource = self
         self.noDataFound.isHidden = true
@@ -53,7 +58,7 @@ class OffersListViewController: BaseViewController, OffersandPromotionsDelegate{
     func languagelocalization(){
         
         self.header.text = "opOffersAndMarketingKEY".localiz()
-        self.noDataFound.text = "NoDataFoundKEY".localiz()
+        self.noDataFound.text = "Currently, No Offers and Promotions are running.".localiz()
         
 //        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
 //

@@ -743,5 +743,32 @@ class RestAPI_Requests {
         }
     }
     
+    func myRedeemptionDetailsApi(parameters: JSON, completion: @escaping (MyRedeemptionDetailsModels?, Error?) -> ()) -> URLSessionDataTask? {
+       return client.load(path: myRedemptionList_URLMethod, method: .post, params: parameters) { data, error in
+           do{
+               if data != nil{
+                   let result1 =  try JSONDecoder().decode(MyRedeemptionDetailsModels?.self, from: data as! Data)
+                   completion(result1, nil)
+               }
+           }catch{
+               completion(nil, error)
+           }
+       }
+   }
     
+
+    //MARK: - TERMS AND CONDITIONS API
+    func termsAndCondition_API(parameters: JSON, completion: @escaping (termsAndConditionModels?, Error?) -> ()) -> URLSessionDataTask? {
+        return client.load(path: termsAndConditionMethodName, method: .post, params: parameters) { data, error in
+            do{
+//                print(data)
+                if data != nil{
+                    let result1 =  try JSONDecoder().decode(termsAndConditionModels?.self, from: data as! Data)
+                    completion(result1, nil)
+                }
+            }catch{
+                completion(nil, error)
+            }
+        }
+    }
 }

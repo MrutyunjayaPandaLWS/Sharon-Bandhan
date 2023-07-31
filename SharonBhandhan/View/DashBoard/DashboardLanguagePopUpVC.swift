@@ -29,30 +29,30 @@ class DashboardLanguagePopUpVC: UIViewController {
     
     
     @IBAction func english(_ sender: Any) {
-       UserDefaults.standard.set("1", forKey: "LanguageLocalizable")
+       UserDefaults.standard.setValue("1", forKey: "LanguageLocalizable")
         LanguageManager.shared.setLanguage(language: .en)
-        UserDefaults.standard.synchronize()
+//        UserDefaults.standard.synchronize()
         NotificationCenter.default.post(name: Notification.Name("languagerefreshRequired"), object: nil)
               self.dismiss(animated: true, completion: nil)
     }
     @IBAction func hindi(_ sender: Any) {
-        UserDefaults.standard.set("2", forKey: "LanguageLocalizable")
+        UserDefaults.standard.setValue("2", forKey: "LanguageLocalizable")
         LanguageManager.shared.setLanguage(language: .hi)
-        UserDefaults.standard.synchronize()
+//        UserDefaults.standard.synchronize()
         NotificationCenter.default.post(name: Notification.Name("languagerefreshRequired"), object: nil)
             self.dismiss(animated: true, completion: nil)
     }
     @IBAction func bangla(_ sender: Any) {
-        UserDefaults.standard.set("3", forKey: "LanguageLocalizable")
+        UserDefaults.standard.setValue("3", forKey: "LanguageLocalizable")
         LanguageManager.shared.setLanguage(language: .taIN)
-        UserDefaults.standard.synchronize()
+//        UserDefaults.standard.synchronize()
         NotificationCenter.default.post(name: Notification.Name("languagerefreshRequired"), object: nil)
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func telugu(_ sender: Any) {
-        UserDefaults.standard.set("4", forKey: "LanguageLocalizable")
+        UserDefaults.standard.setValue("4", forKey: "LanguageLocalizable")
         LanguageManager.shared.setLanguage(language: .te)
-             UserDefaults.standard.synchronize()
+//             UserDefaults.standard.synchronize()
              NotificationCenter.default.post(name: Notification.Name("languagerefreshRequired"), object: nil)
              self.dismiss(animated: true, completion: nil)
     }

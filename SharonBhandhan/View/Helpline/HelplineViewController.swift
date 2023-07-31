@@ -9,16 +9,20 @@ import UIKit
 import Lottie
 import Firebase
 import LanguageManager_iOS
+import MessageUI
 
 class HelplineViewController: UIViewController {
     
     
+    @IBOutlet weak var orlbl: UILabel!
+    @IBOutlet weak var emailIdBtn: UIButton!
+    @IBOutlet weak var writeToLbl: UILabel!
     @IBOutlet weak var informationLbl: UILabel!
     @IBOutlet weak var callInfo: UILabel!
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var mobileNumber: UILabel!
     var fromSideMenu = ""
-    
+    var emailID = ["help@sharonply.com"]
     override func viewDidLoad() {
         super.viewDidLoad()
        // playAnimation()
@@ -84,6 +88,13 @@ class HelplineViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func didTappedEmailIdBtn(_ sender: UIButton) {
+        
+//        openGmail(emailID: emailID)
+        showMailComposer(emailID: emailID)
+    }
+    
     @IBAction func missedCallButton(_ sender: Any) {
         if let phoneCallURL = URL(string: "tel://\(+917845858414)") {
             
@@ -94,4 +105,25 @@ class HelplineViewController: UIViewController {
             }
         }
     }
+}
+
+extension HelplineViewController:MFMailComposeViewControllerDelegate{
+    
+    func showMailComposer(emailID : [String]) {
+        if MFMailComposeViewController.canSendMail() {
+            let mailComposer = MFMailComposeViewController()
+            mailComposer.mailComposeDelegate = self
+            mailComposer.setToRecipients(emailID)
+            mailComposer.setSubject("")
+            mailComposer.setMessageBody("", isHTML: false)
+            present(mailComposer, animated: true, completion: nil)
+        } else {
+            // Handle the case where the device cannot send emails
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+            // Handle the result of the email composition
+            controller.dismiss(animated: true, completion: nil)
+        }
 }

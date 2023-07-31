@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -188,19 +188,19 @@
                                     <constraint firstAttribute="height" constant="30" id="uvP-OV-IZq"/>
                                 </constraints>
                             </stackView>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVi-aK-scD">
-                                <rect key="frame" x="38" y="104.5" width="18" height="18"/>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVi-aK-scD">
+                                <rect key="frame" x="38" y="106.5" width="14" height="14"/>
                                 <color key="backgroundColor" red="0.043137254899999998" green="0.57254901960000004" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="e9k-W3-8CY"/>
-                                    <constraint firstAttribute="width" constant="18" id="sL6-Qc-sln"/>
+                                    <constraint firstAttribute="height" constant="14" id="e9k-W3-8CY"/>
+                                    <constraint firstAttribute="width" constant="14" id="sL6-Qc-sln"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="8"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="9"/>
+                                        <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
@@ -274,6 +274,7 @@
                 <outlet property="ptsRequired" destination="pKY-mz-35G" id="31z-co-glO"/>
                 <outlet property="redeemButton" destination="pCj-iI-84P" id="dJB-4C-t0R"/>
                 <outlet property="removeGiftBTN" destination="tKX-9N-yFf" id="nKX-1Y-FRK"/>
+                <outlet property="tdsPointsTitleLbl" destination="NhG-hZ-Lic" id="TmP-do-Dlw"/>
                 <outlet property="tdsvalue" destination="M63-XO-hSl" id="26u-TA-AT7"/>
             </connections>
             <point key="canvasLocation" x="188.40579710144928" y="107.47767857142857"/>

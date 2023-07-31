@@ -13,6 +13,7 @@ class ShippingAddress_VC: BaseViewController, SendUpdatedAddressDelegate, popUpD
     func popupAlertDidTap(_ vc: PopupAlertOne_VC) {}
     
    
+    @IBOutlet weak var headerLbl: UILabel!
     @IBOutlet var customerAddressTV: UITextView!
     @IBOutlet var customerNameLabel: UILabel!
     @IBOutlet var totalPointsHeadingLabel: UILabel!
@@ -85,23 +86,7 @@ class ShippingAddress_VC: BaseViewController, SendUpdatedAddressDelegate, popUpD
         self.defaultAddressHeadingLabel.text = "coDefaultAddressKEY".localiz()
         self.totalPointsHeadingLabel.text = "mcTotalPointsKEY".localiz()
         self.proceedToCheckoutButton.setTitle("PROCESS TO CHECKOUT".localiz(), for: .normal)
-//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//            self.defaultAddressHeadingLabel.text = "Default Address"
-//            self.totalPointsHeadingLabel.text = "Total Points"
-//            self.proceedToCheckoutButton.setTitle("PROCEED TO CHECKOUT", for: .normal)
-//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//            self.defaultAddressHeadingLabel.text = "डिफ़ॉल्ट पता"
-//            self.totalPointsHeadingLabel.text = "कुल अंक"
-//            self.proceedToCheckoutButton.setTitle("चेक आउट करने के लिए आगे बढ़ें", for: .normal)
-//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//            self.defaultAddressHeadingLabel.text = "ডিফল্ট ঠিকানা"
-//            self.totalPointsHeadingLabel.text = "মোট পয়েন্ট"
-//            self.proceedToCheckoutButton.setTitle("চেকআউটে এগিয়ে যান", for: .normal)
-//        }else{
-//            self.defaultAddressHeadingLabel.text = "డిఫాల్ట్ చిరునామా"
-//            self.totalPointsHeadingLabel.text = "మొత్తం పాయింట్లు"
-//            self.proceedToCheckoutButton.setTitle("చెక్అవుట్‌కి వెళ్లండి", for: .normal)
-//        }
+        self.headerLbl.text = "checkoutkey".localiz()
     }
     
     
@@ -144,16 +129,6 @@ class ShippingAddress_VC: BaseViewController, SendUpdatedAddressDelegate, popUpD
                     vc!.delegate = self
                     vc!.titleInfo = ""
                     vc!.descriptionInfo = "Shipping address requires: State,City,Address,Pin code and Mobile Number,details,Click on 'Edit' to edit and add details".localiz()
-                    
-//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                        vc!.descriptionInfo = "Shipping address requires: State,City,Address,Pin code and Mobile Number,details,Click on 'Edit' to edit and add details"
-//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                         vc!.descriptionInfo = "शिपिंग पते की आवश्यकता है: राज्य, शहर, पता, पिनकोड और मोबाइल_नंबर, विवरण, संपादित करने और विवरण जोड़ने के लिए 'संपादित करें' पर क्लिक करें"
-//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                        vc!.descriptionInfo = "শিপিং ঠিকানার প্রয়োজন: রাজ্য, শহর, ঠিকানা, পিনকোড এবং মোবাইল_ নম্বর, বিশদ বিবরণ, সম্পাদনা করতে ক্লিক করুন"
-//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                        vc!.descriptionInfo = "షిప్పింగ్ చిరునామా అవసరం: రాష్ట్రం, నగరం, చిరునామా, పిన్‌కోడ్ మరియు మొబైల్_నెంబర్, వివరాలు, క్లిక్ చేయండి'సవరించు'కు సవరించండి"
-//                      }
                     vc!.modalPresentationStyle = .overCurrentContext
                     vc!.modalTransitionStyle = .crossDissolve
                     self.present(vc!, animated: true, completion: nil)
@@ -192,16 +167,6 @@ class ShippingAddress_VC: BaseViewController, SendUpdatedAddressDelegate, popUpD
                         vc!.delegate = self
                         vc!.titleInfo = ""
                         vc!.descriptionInfo = "Insufficent Point Balance".localiz()
-                        
-//                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                            vc!.descriptionInfo = "Insufficient Point Balance"
-//                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                             vc!.descriptionInfo = "अपर्याप्त प्वाइंट बैलेंस"
-//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                            vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
-//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                            vc!.descriptionInfo = "తగినంత పాయింట్ బ్యాలెన్స్ లేదు"
-//                          }
                         vc!.modalPresentationStyle = .overCurrentContext
                         vc!.modalTransitionStyle = .crossDissolve
                         self.present(vc!, animated: true, completion: nil)
@@ -226,16 +191,6 @@ class ShippingAddress_VC: BaseViewController, SendUpdatedAddressDelegate, popUpD
             print(vc.selectedemail)
             
             self.customerAddressTV.text = "\(vc.selectedaddress),\n\(vc.selectedState),\n\(vc.selectedCity), \(vc.selectedpincode),\n\("rMobileKEY".localiz())o: \(vc.selectedmobile),\n\("ewEmailIDKEY".localiz()):\(vc.selectedemail)"
-
-//            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                self.customerAddressTV.text = "\(vc.selectedaddress),\n\(vc.selectedState),\n\(vc.selectedCity), \(vc.selectedpincode),\nMobile No: \(vc.selectedmobile),\nEmail ID:\(vc.selectedemail)"
-//             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                 self.customerAddressTV.text = "\(vc.selectedaddress),\n\(vc.selectedState),\n\(vc.selectedCity), \(vc.selectedpincode),\nमोबाइल नहीं है: \(vc.selectedmobile),\nईमेल आईडी:\(vc.selectedemail)"
-//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                self.customerAddressTV.text = "\(vc.selectedaddress),\n\(vc.selectedState),\n\(vc.selectedCity), \(vc.selectedpincode),\nমোবাইল নাম্বার: \(vc.selectedmobile),\nইমেইল আইডি:\(vc.selectedemail)"
-//            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                self.customerAddressTV.text = "\(vc.selectedaddress),\n\(vc.selectedState),\n\(vc.selectedCity), \(vc.selectedpincode),\nమొబైల్ నెం: \(vc.selectedmobile),\nఇమెయిల్ ID:\(vc.selectedemail)"
-//              }
            
 //            self.pincode = vc.selectedpincode
 //            self.stateID = vc.selectedStateID

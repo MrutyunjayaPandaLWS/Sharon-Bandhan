@@ -38,7 +38,7 @@ class RedemptionPlanner_VC: BaseViewController, RedemptionPlannerDelegate, popUp
         self.productsTableView.delegate = self
         self.productsTableView.dataSource = self
         self.productsTableView.separatorStyle = .none
-        var vc = self.storyboard?.instantiateViewController(withIdentifier: "TaxRelatedPopupViewController") as! TaxRelatedPopupViewController
+        var vc = self.storyboard?.instantiateViewController(withIdentifier: "TDS_PopUpVC") as! TDS_PopUpVC
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
         self.present(vc, animated: true, completion: nil)
@@ -46,8 +46,12 @@ class RedemptionPlanner_VC: BaseViewController, RedemptionPlannerDelegate, popUp
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.plannerListing()
-        self.myCartList()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            self.plannerListing()
+            self.myCartList()
+        }
         languagelocalization()
         
    
@@ -94,10 +98,14 @@ class RedemptionPlanner_VC: BaseViewController, RedemptionPlannerDelegate, popUp
     //Delegate:-
     
     func removeProduct(_ cell: RedemptionPlanner_TVC) {
-        guard let tappedIndex = productsTableView.indexPath(for: cell) else{return}
-        self.selectedPlannerID = self.VM.myPlannerListArray[tappedIndex.row].redemptionPlannerId ?? 0
-        self.removeProductInPlanner()
-        self.productsTableView.reloadData()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            guard let tappedIndex = productsTableView.indexPath(for: cell) else{return}
+            self.selectedPlannerID = self.VM.myPlannerListArray[tappedIndex.row].redemptionPlannerId ?? 0
+            self.removeProductInPlanner()
+            self.productsTableView.reloadData()
+        }
     }
     
     func producDetails(_ cell: RedemptionPlanner_TVC) {
@@ -123,55 +131,80 @@ class RedemptionPlanner_VC: BaseViewController, RedemptionPlannerDelegate, popUp
     }
     
     func productRedeem(_ cell: RedemptionPlanner_TVC) {
-        self.selectedPlannerID = -1
-        guard let tappedIndex = productsTableView.indexPath(for: cell) else{return}
-        if cell.productRedeemBTN.tag == tappedIndex.row{
-            let filterCategory = self.VM.myCartListArray.filter { $0.catalogueId == self.VM.myPlannerListArray[tappedIndex.row].catalogueId ?? 0}
-            if filterCategory.count > 0{
-                DispatchQueue.main.async{
-                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
-                    vc!.delegate = self
-                    vc!.titleInfo = ""
-                    vc!.descriptionInfo = "Gift product is already added in the Redeem list".localiz()
-                    
-//                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                        vc!.descriptionInfo = "Gift product is already added in the Redeem list".localiz()
-//                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                         vc!.descriptionInfo = "उपहार उत्पाद पहले से ही रिडीम सूची में जोड़ा जा चुका है"
-//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                        vc!.descriptionInfo = "উপহার পণ্য ইতিমধ্যেই রিডিম তালিকায় যোগ করা হয়েছে"
-//                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                        vc!.descriptionInfo = "బహుమతి ఉత్పత్తి ఇప్పటికే రీడీమ్ జాబితాలో జోడించబడింది"
-//                      }
-                    vc!.modalPresentationStyle = .overCurrentContext
-                    vc!.modalTransitionStyle = .crossDissolve
-                    self.present(vc!, animated: true, completion: nil)
-                }
-            }else{
-                print(UserDefaults.standard.integer(forKey: "PlannerIsRedeemable"))
-                if self.totalCartValue < Int(self.pointBalance) ?? 0 {
-                    let calcValue = self.totalCartValue + Int(self.VM.myPlannerListArray[tappedIndex.row].pointsRequired!) + Int(self.VM.myPlannerListArray[tappedIndex.row].applicableTds ?? 0)
-                    if calcValue <= Int(self.pointBalance) ?? 0{
-                        if self.verifiedStatus == 6 || self.verifiedStatus == 4{
-                            if self.checkAccountStatus == "1"{
-                                NotificationCenter.default.post(name: .verificationStatus, object: nil)
-                            }else{
-                                NotificationCenter.default.post(name: .verificationStatus, object: nil)
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            self.selectedPlannerID = -1
+            guard let tappedIndex = productsTableView.indexPath(for: cell) else{return}
+            if cell.productRedeemBTN.tag == tappedIndex.row{
+                let filterCategory = self.VM.myCartListArray.filter { $0.catalogueId == self.VM.myPlannerListArray[tappedIndex.row].catalogueId ?? 0}
+                if filterCategory.count > 0{
+                    DispatchQueue.main.async{
+                        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
+                        vc!.delegate = self
+                        vc!.titleInfo = ""
+                        vc!.descriptionInfo = "Gift product is already added in the Redeem list".localiz()
+                        
+                        //                    if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                        //                        vc!.descriptionInfo = "Gift product is already added in the Redeem list".localiz()
+                        //                     }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                        //                         vc!.descriptionInfo = "उपहार उत्पाद पहले से ही रिडीम सूची में जोड़ा जा चुका है"
+                        //                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                        //                        vc!.descriptionInfo = "উপহার পণ্য ইতিমধ্যেই রিডিম তালিকায় যোগ করা হয়েছে"
+                        //                    }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+                        //                        vc!.descriptionInfo = "బహుమతి ఉత్పత్తి ఇప్పటికే రీడీమ్ జాబితాలో జోడించబడింది"
+                        //                      }
+                        vc!.modalPresentationStyle = .overCurrentContext
+                        vc!.modalTransitionStyle = .crossDissolve
+                        self.present(vc!, animated: true, completion: nil)
+                    }
+                }else{
+                    print(UserDefaults.standard.integer(forKey: "PlannerIsRedeemable"))
+                    if self.totalCartValue < Int(self.pointBalance) ?? 0 {
+                        let calcValue = self.totalCartValue + Int(self.VM.myPlannerListArray[tappedIndex.row].pointsRequired!) + Int(self.VM.myPlannerListArray[tappedIndex.row].applicableTds ?? 0)
+                        if calcValue <= Int(self.pointBalance) ?? 0{
+                            if self.verifiedStatus == 6 || self.verifiedStatus == 4{
+                                if self.checkAccountStatus == "1"{
+                                    NotificationCenter.default.post(name: .verificationStatus, object: nil)
+                                }else{
+                                    NotificationCenter.default.post(name: .verificationStatus, object: nil)
+                                }
+                                
+                            }else if self.verifiedStatus == 1{
+                                if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == -3{
+                                    self.view.makeToast("Your PAN Details are pending,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
+                                }else if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == -4{
+                                    self.view.makeToast("Your PAN Details are rejected,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
+                                }else if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == 1{
+                                    self.selectedPlannerID = self.VM.myPlannerListArray[tappedIndex.row].catalogueId ?? 0
+                                    addToCartApi()
+                                }else{
+                                    self.view.makeToast("Insufficient point balance to redeem!".localiz(), duration: 2.0, position: .bottom)
+                                }
                             }
                             
-                        }else if self.verifiedStatus == 1{
-                            if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == -3{
-                                self.view.makeToast("Your PAN Details are pending,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
-                            }else if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == -4{
-                                self.view.makeToast("Your PAN Details are rejected,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
-                            }else if UserDefaults.standard.integer(forKey: "PlannerIsRedeemable") == 1{
-                                self.selectedPlannerID = self.VM.myPlannerListArray[tappedIndex.row].catalogueId ?? 0
-                                addToCartApi()
-                            }else{
-                                self.view.makeToast("Insufficient point balance to redeem!".localiz(), duration: 2.0, position: .bottom)
+                        }else{
+                            DispatchQueue.main.async{
+                                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
+                                vc!.delegate = self
+                                vc!.titleInfo = ""
+                                vc!.descriptionInfo = "Insufficent Point Balance".localiz()
+                                
+                                
+                                //                            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                                //                                vc!.descriptionInfo = "Insufficent Point Balance".localiz()
+                                //                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                                //                                 vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
+                                //                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                                //                                vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
+                                //                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+                                //                                vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
+                                //                              }
+                                vc!.modalPresentationStyle = .overCurrentContext
+                                vc!.modalTransitionStyle = .crossDissolve
+                                self.present(vc!, animated: true, completion: nil)
                             }
                         }
-                        
                     }else{
                         DispatchQueue.main.async{
                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
@@ -179,47 +212,23 @@ class RedemptionPlanner_VC: BaseViewController, RedemptionPlannerDelegate, popUp
                             vc!.titleInfo = ""
                             vc!.descriptionInfo = "Insufficent Point Balance".localiz()
                             
-                            
-//                            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                                vc!.descriptionInfo = "Insufficent Point Balance".localiz()
-//                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                                 vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
-//                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                                vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
-//                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                                vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
-//                              }
+                            //                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                            //                            vc!.descriptionInfo = "Insufficent Point Balance".localiz()
+                            //                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                            //                             vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
+                            //                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                            //                            vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
+                            //                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+                            //                            vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
+                            //                          }
                             vc!.modalPresentationStyle = .overCurrentContext
                             vc!.modalTransitionStyle = .crossDissolve
                             self.present(vc!, animated: true, completion: nil)
                         }
                     }
-                }else{
-                    DispatchQueue.main.async{
-                        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
-                        vc!.delegate = self
-                        vc!.titleInfo = ""
-                        vc!.descriptionInfo = "Insufficent Point Balance".localiz()
-                        
-//                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                            vc!.descriptionInfo = "Insufficent Point Balance".localiz()
-//                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                             vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
-//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                            vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
-//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                            vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
-//                          }
-                        vc!.modalPresentationStyle = .overCurrentContext
-                        vc!.modalTransitionStyle = .crossDissolve
-                        self.present(vc!, animated: true, completion: nil)
-                    }
                 }
-             
+                self.productsTableView.reloadData()
             }
-            
-            
-            self.productsTableView.reloadData()
         }
     }
     
@@ -388,7 +397,7 @@ extension RedemptionPlanner_VC: UITableViewDelegate, UITableViewDataSource{
         cell.productNameLabel.text = self.VM.myPlannerListArray[indexPath.row].productName ?? ""
         let receivedImage = self.VM.myPlannerListArray[indexPath.row].productImage ?? ""
         let totalImgURL = productCatalogueImgURL + receivedImage
-        cell.productImage.sd_setImage(with: URL(string: totalImgURL), placeholderImage: UIImage(named: "ic_default_img"))
+        cell.productImage.sd_setImage(with: URL(string: totalImgURL), placeholderImage: UIImage(named: "Group 6524"))
         cell.productDetailsBTN.tag = indexPath.row
         cell.productRedeemBTN.tag = indexPath.row
         cell.removeProductBTN.tag = indexPath.row

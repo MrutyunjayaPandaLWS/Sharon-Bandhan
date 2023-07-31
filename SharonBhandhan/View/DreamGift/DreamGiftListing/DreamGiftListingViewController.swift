@@ -36,7 +36,7 @@ class DreamGiftListingViewController: BaseViewController, AddOrRemoveGiftDelegat
         
         
         
-        var vc = self.storyboard?.instantiateViewController(withIdentifier: "TaxRelatedPopupViewController") as! TaxRelatedPopupViewController
+        var vc = self.storyboard?.instantiateViewController(withIdentifier: "TDS_PopUpVC") as! TDS_PopUpVC
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
         self.present(vc, animated: true, completion: nil)
@@ -46,7 +46,11 @@ class DreamGiftListingViewController: BaseViewController, AddOrRemoveGiftDelegat
         super.viewWillAppear(animated)
         
         languagelocalization()
-        dreamGiftListApi()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            dreamGiftListApi()
+        }
         
 
     }
@@ -155,11 +159,11 @@ class DreamGiftListingViewController: BaseViewController, AddOrRemoveGiftDelegat
                 UserDefaults.standard.set(self.VM.myDreamGiftListArray[0].is_Redeemable ?? 0, forKey: "DreamGiftIsRedeemable")
                 UserDefaults.standard.synchronize()
                 self.dreamGifttableView.isHidden = false
-                self.noDataFound.isHidden = true
+//                self.noDataFound.isHidden = true
                 self.dreamGifttableView.reloadData()
             }else{
                 self.dreamGifttableView.isHidden = true
-                self.noDataFound.isHidden = false
+//                self.noDataFound.isHidden = false
                 self.dreamGifttableView.reloadData()
 
             }
@@ -241,8 +245,9 @@ extension DreamGiftListingViewController : UITableViewDelegate, UITableViewDataS
 
         cell?.dreamGiftTitle.text = self.VM.myDreamGiftListArray[indexPath.row].giftType ?? ""
         let createdDate = (self.VM.myDreamGiftListArray[indexPath.row].jCreatedDate ?? "").split(separator: " ")
-        let convertedFormat = convertDateFormater(String(createdDate[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")
-        cell?.giftCreatedDate.text = convertedFormat
+        cell?.tdsPointsTitleLbl.text = "\("tdsPts".localiz())"
+//        let convertedFormat = convertDateFormater(String(createdDate[0]), fromDate: "MM/DD/yyyy", toDate: "DD/MM/yyyy")
+        cell?.giftCreatedDate.text = String(createdDate[0])
         
         let desiredDate = (self.VM.myDreamGiftListArray[indexPath.row].jDesiredDate ?? "").split(separator: " ")
 //        let desiredDateFormat = convertDateFormater(String(desiredDate[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")
@@ -284,13 +289,13 @@ extension DreamGiftListingViewController : UITableViewDelegate, UITableViewDataS
         let percentage = CGFloat(balance/pointRequired)
         if pointRequired < balance{
             cell?.percentageValue.text = "100%"
-            cell?.progressView.progress = Float(percentage)
-            cell?.percentageLeadingSpace.constant = ((cell?.progressView.frame.width ?? 0) * CGFloat(100/100) + 40)
+            cell?.progressView.progress = Float(1)
+            cell?.percentageLeadingSpace.constant = ((cell?.progressView.frame.width ?? 0) * 1)
         }else{
             let final = CGFloat(percentage) * 100
             cell?.percentageValue.text = "\(Int(final))%"
             cell?.progressView.progress = Float(percentage)
-            cell?.percentageLeadingSpace.constant = ((cell?.progressView.frame.width ?? 0) * CGFloat(percentage/100) + 50)
+            cell?.percentageLeadingSpace.constant = ((cell?.progressView.frame.width ?? 0) * CGFloat(percentage) + 7)
         }
        
         
@@ -309,7 +314,7 @@ extension DreamGiftListingViewController : UITableViewDelegate, UITableViewDataS
         //vc.giftImage = self.VM.myDreamGiftListArray[indexPath.row].
         let createdDate = (self.VM.myDreamGiftListArray[indexPath.row].jCreatedDate ?? "").split(separator: " ")
         let convertedFormat = convertDateFormater(String(createdDate[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")
-        vc.addedDate = convertedFormat
+        vc.addedDate = "\(createdDate[0] ?? "")"
         
         let desiredDate = (self.VM.myDreamGiftListArray[indexPath.row].jDesiredDate ?? "").split(separator: " ")
         //let desiredDateFormat = convertDateFormater(String(desiredDate[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")

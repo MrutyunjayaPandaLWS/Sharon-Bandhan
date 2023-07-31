@@ -15,6 +15,9 @@ protocol AddOrRemoveGiftDelegate{
 
 class DreamGiftTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var tdsPointsTitleLbl: UILabel!
+    
     @IBOutlet weak var percentageLeadingSpace: NSLayoutConstraint!
     @IBOutlet weak var tdsvalue: UILabel!
     @IBOutlet weak var dreamGiftTitle: UILabel!

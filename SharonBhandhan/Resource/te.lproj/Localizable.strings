@@ -1,9 +1,7 @@
 /*
-  Localizable.strings
-  
+Localizable.strings
 
-  Created by ADMIN on 02/05/2022.
-  
+Created by ADMIN on 02/05/2022.
 */
 
 //INITIAL VIEW
@@ -53,7 +51,7 @@
 "rDistrictKEY" = "జిల్లా";
 "rPreferredLanguageKEY" = "ఇష్టపడే భాష";
 "rNativeStateKEY" = "స్థానిక రాష్ట్రం";
-"rOKKEY" = "OK";
+"rOKKEY" = "అలాగే";
 "rSelectStateKEY" = "రాష్ట్రం ఎంచుకోండి";
 "rSelectCityKEY" = "నగరాన్ని ఎంచుకోండి";
 "rSelectPreferredLanguageKEY" = "ఇష్టపడే భాషను ఎంచుకోండి";
@@ -301,17 +299,17 @@
 "Enter12DigitsKey" = "దయచేసి 12 అంకెల కోడ్";
 
 //Code sync status
- "CodeSYNCKey" = "కోడ్ సమకాలీకరణ స్థితి";
+"CodeSYNCKey" = "కోడ్ సమకాలీకరణ స్థితి";
 "CodeSummaryKey" = "కోడ్ సారాంశం";
 "ToDateKey" = "తేదీ వరకు";
 "FromDateKey" = "తేదీ నుండి";
 "FilterKey" = "ఫిల్టర్ చేయండి";
 "DateOrStausKey" = "దయచేసి తేదీ లేదా స్థితిని ఎంచుకోండి";
 "SelectToDateKey" = "దయచేసి తేదీని ఎంచుకోండి";
- "ToDateGreaterFromDateKey" = "తేదీ తేదీ కంటే ఎక్కువ ఉండాలి";
+"ToDateGreaterFromDateKey" = "తేదీ తేదీ కంటే ఎక్కువ ఉండాలి";
 "CountKey" = "కౌంట్";
 "SelectDateKey" = "తేదీని ఎంచుకోండి";
- "CancelKey" = "రద్దు చేయండి";
+"CancelKey" = "రద్దు చేయండి";
 "ConfirmKey" = "నిర్ధారించండి";
 
 //E-warranty certhificate
@@ -334,13 +332,13 @@
 
 //Redemption catelogue
 "addedToCartKey" = "బండికి జోడించబడింది";
- "EnterAllFieldsKey" = "అన్ని ఫీల్డ్లను నమోదు చేయండి";
-"AlreadyPlannerAddedKey"  = "మీ విమోచన ప్లానర్కు ఉత్పత్తి ఇప్పటికే జోడించబడింది";
+"EnterAllFieldsKey" = "అన్ని ఫీల్డ్లను నమోదు చేయండి";
+"AlreadyPlannerAddedKey" = "మీ విమోచన ప్లానర్కు ఉత్పత్తి ఇప్పటికే జోడించబడింది";
 "PlannerAddedKey" = "ఉత్పత్తి మీ విమోచన ప్లానర్కు జోడించబడింది";
 "NotAllowedToRedeemKey" = "మీరు రీడీమ్ చేయడానికి అనుమతించబడలేదు. దయచేసి మీ నిర్వాహకుడిని సంప్రదించండి";
 
 //My earning
- "SelectDateRangeKey" = "తేదీ పరిధిని ఎంచుకోండి";
+"SelectDateRangeKey" = "తేదీ పరిధిని ఎంచుకోండి";
 "QRCodeKey" = "QR కోడ్";
 
 //My redemption
@@ -389,12 +387,12 @@
 "tdsPts" = "TDS పాయింట్లు";
 "TDS" = "TDS";
 "plzEnterPAN" = "దయచేసి మీ పాన్ నంబర్‌ను నమోదు చేయండి";
-"validPanNum" = "చెల్లుబాటు అయ్యే  పాన్ నంబర్‌ని నమోదు చేయండి!";
+"validPanNum" = "చెల్లుబాటు అయ్యే పాన్ నంబర్‌ని నమోదు చేయండి!";
 "douWantSubmit" = "మీరు పాన్ అటాచ్‌మెంట్ లేకుండా సమర్పించాలనుకుంటున్నారా?";
 "PanSaveFailed" = "పాన్ కార్డ్ వివరాలను సేవ్ చేయడం విఫలమైంది!";
 "panDetailsSaved" = "పాన్ కార్డ్ వివరాలు విజయవంతంగా సేవ్ చేయబడ్డాయి!";
-"panDetailsSubmitted" = "మీ పాన్  వివరాలు ధృవీకరణ కోసం సమర్పించబడ్డాయి!";
-"panVerified" = "మీ పాన్  వివరాలు ధృవీకరించబడ్డాయి!";
+"panDetailsSubmitted" = "మీ పాన్ వివరాలు ధృవీకరణ కోసం సమర్పించబడ్డాయి!";
+"panVerified" = "మీ పాన్ వివరాలు ధృవీకరించబడ్డాయి!";
 "techincalErr" = "సాంకేతిక లోపం!";
 
 "PanVerification" = "పాన్ ధృవీకరణ";
@@ -409,170 +407,190 @@
 "customerPANVerified" = "కస్టమర్ పాన్ వివరాలు ధృవీకరించబడ్డాయి!";
 "verify" = "ధృవీకరించండి";
 "savingPancarFailed" = "పాన్‌కార్డ్‌ను సేవ్ చేయడం విఫలమైంది. కొంత సమయం తర్వాత ప్రయత్నించండి";
+"Points Balance" = "పాయింట్ల బ్యాలెన్స్";
 
 // MARK: - NEW
-"E-Warrenty" = "E-Warrenty";
-"Are you sure want to exit without generating E-Warranty?" = "Are you sure want to exit without generating E-Warranty?";
-"E-Warranty generated successfully.You can download the E-Warranty in Download E-warranty Section" = "E-Warranty generated successfully.You can download the E-Warranty in Download E-warranty Section";
-"E-Warranty generation failed.Please try after sometime" = "E-Warranty generation failed.Please try after sometime";
-"UPLOAD AGAIN" = "UPLOAD AGAIN";
-"SCAN AGAIN" = "SCAN AGAIN";
-"Please Enter code" = "Please Enter code";
-"Your daily uploading limit exceeded" = "Your daily uploading limit exceeded";
-"Code is already scanned" = "Code is already scanned";
-"Code is already uploaded" = "Code is already uploaded";
-"Your daily Scanning limit exceeded" = "Your daily Scanning limit exceeded";
-"Invalid QR code ! QR code should be 12 character" = "Invalid QR code ! QR code should be 12 character";
-"Not a Sharon Ply Genuine Product" = "Not a Sharon Ply Genuine Product";
-"You are not entitled to this product" = "You are not entitled to this product";
-"Please enter the valid code" = "Please enter the valid code";
-"Enter Customer Name" = "Enter Customer Name";
-"Enter valid First Name" = "Enter valid First Name";
-"Enter EmailID" = "Enter EmailID";
-"Enter valid EmailID" = "Enter valid EmailID";
-"Enter Address" = "Enter Address";
-"Enter Customer Details" = "Enter Customer Details";
-"Customer Mobile Number" = "Customer Mobile Number";
-"Enter the Mobile Number" = "Enter the Mobile Number";
-"Cutomer Email" = "Cutomer Email";
-"Enter the email address" = "Enter the email address";
-"Customer Address" = "Customer Address";
-"Enter the address details" = "Enter the address details";
- "Camera access required for Scanning QR Codes" = "Camera access required for Scanning QR Codes";
-"Allow Camera" = "Allow Camera";
-"Sync Status" = "Sync Status";
-"EWarranty" = "E - Warranty";
-"account_deactivated_check_with_the_administrator" = "Your account is deactivated please check with the administrator";
-"New update Available!" = "New update Available!";
-"force update message" = "Update is available to download. Downloading the latest update you will get the latest features, improvements and bug fixes of Century Pro Club App";
-"Update Now" = "Update Now";
+"E-Warrenty" = "ఇ-వారంటీ";
+"Are you sure want to exit without generating E-Warranty?" = "మీరు ఖచ్చితంగా E-వారెంటీని రూపొందించకుండానే నిష్క్రమించాలనుకుంటున్నారా?";
+"E-Warranty generated successfully.You can download the E-Warranty in Download E-warranty Section" = "E-వారంటీ విజయవంతంగా రూపొందించబడింది. మీరు డౌన్‌లోడ్ E-వారంటీ విభాగంలో E-వారెంటీని డౌన్‌లోడ్ చేసుకోవచ్చు";
+"E-Warranty generation failed.Please try after sometime" = "ఇ-వారంటీ ఉత్పత్తి విఫలమైంది. దయచేసి కొంత సమయం తర్వాత ప్రయత్నించండి";
+"UPLOAD AGAIN" = "మళ్లీ అప్‌లోడ్ చేయండి";
+"SCAN AGAIN" = "మళ్లీ స్కాన్ చేయండి";
+"Please Enter code" = "దయచేసి కోడ్‌ని నమోదు చేయండి";
+"Your daily uploading limit exceeded" = "మీ రోజువారీ అప్‌లోడ్ పరిమితి మించిపోయింది";
+"Code is already scanned" = "కోడ్ ఇప్పటికే స్కాన్ చేయబడింది";
+"Code is already uploaded" = "కోడ్ ఇప్పటికే అప్‌లోడ్ చేయబడింది";
+"Your daily Scanning limit exceeded" = "మీ రోజువారీ స్కానింగ్ పరిమితి మించిపోయింది";
+"Invalid QR code ! QR code should be 12 character" = "చెల్లని QR కోడ్! QR కోడ్ 12 అక్షరాలు ఉండాలి";
+"Not a Sharon Ply Genuine Product" = "Sharon Ply నిజమైన ఉత్పత్తి కాదు";
+"You are not entitled to this product" = "మీకు ఈ ఉత్పత్తికి అర్హత లేదు";
+"Please enter the valid code" = "దయచేసి చెల్లుబాటు అయ్యే కోడ్‌ని నమోదు చేయండి";
+"Enter Customer Name" = "కస్టమర్ పేరు నమోదు చేయండి";
+"Enter valid First Name" = "చెల్లుబాటు అయ్యే మొదటి పేరును నమోదు చేయండి";
+"Enter EmailID" = "ఇమెయిల్ IDని నమోదు చేయండి";
+"Enter valid EmailID" = "చెల్లుబాటు అయ్యే ఇమెయిల్ IDని నమోదు చేయండి";
+"Enter Address" = "చిరునామాను నమోదు చేయండి";
+"Enter Customer Details" = "కస్టమర్ వివరాలను నమోదు చేయండి";
+"Customer Mobile Number" = "కస్టమర్ మొబైల్ నంబర్";
+"Enter the Mobile Number" = "మొబైల్ నంబర్‌ను నమోదు చేయండి";
+"Cutomer Email" = "కస్టమర్ ఇమెయిల్";
+"Enter the email address" = "ఇమెయిల్ చిరునామాను నమోదు చేయండి";
+"Customer Address" = "కస్టమర్ చిరునామా";
+"Enter the address details" = "చిరునామా వివరాలను నమోదు చేయండి";
+"Camera access required for Scanning QR Codes" = "QR కోడ్‌లను స్కాన్ చేయడానికి కెమెరా యాక్సెస్ అవసరం";
+"Allow Camera" = "కెమెరాను అనుమతించండి";
+"Sync Status" = "సమకాలీకరణ స్థితి";
+"EWarranty" = "E - వారంటీ";
+"account_deactivated_check_with_the_administrator" = "మీ ఖాతా నిష్క్రియం చేయబడింది, దయచేసి నిర్వాహకుడిని సంప్రదించండి";
+"New update Available!" = "కొత్త అప్‌డేట్ అందుబాటులో ఉంది!";
+"force update message" = "డౌన్‌లోడ్ చేసుకోవడానికి అప్‌డేట్ అందుబాటులో ఉంది. తాజా అప్‌డేట్‌ను డౌన్‌లోడ్ చేయడం ద్వారా మీరు సెంచరీ ప్రో క్లబ్ యాప్ యొక్క తాజా ఫీచర్‌లు, మెరుగుదలలు మరియు బగ్ పరిష్కారాలను పొందుతారు";
+"Update Now" = "ఇప్పుడే నవీకరించండి";
 
-"Your Dream Gift" = "Your Dream Gift";
-"Product Points" = "Product Points";
-"Redeemable Points" = "Redeemable Points";
-"Points required to redeem" = "Points required to redeem";
+"Your Dream Gift" = "మీ డ్రీమ్ గిఫ్ట్";
+"Product Points" = "ఉత్పత్తి పాయింట్లు";
+"Redeemable Points" = "రీడీమ్ చేయదగిన పాయింట్లు";
+"Points required to redeem" = "రిడీమ్ చేయడానికి అవసరమైన పాయింట్‌లు";
 
-"Add E-Warranty" = "Add E-Warranty";
-"Enter Name" = "Enter Name";
-"Generate E-Warranty" = "Generate E-Warranty";
-"Select Area" = "Select Area";
-"Download E-Warranty" = "Download E-Warranty";
+"Add E-Warranty" = "ఇ-వారెంటీని జోడించండి";
+"Enter Name" = "పేరు నమోదు చేయండి";
+"Generate E-Warranty" = "E-వారెంటీని రూపొందించండి";
+"Select Area" = "ప్రాంతాన్ని ఎంచుకోండి";
+"Download E-Warranty" = "ఇ-వారంటీని డౌన్‌లోడ్ చేయండి";
 
-"E-Warranty details saved successfully" = "E-Warranty details saved successfully.";
-"Something went wrong please try again later." = "Something went wrong please try again later !";
+"E-Warranty details saved successfully" = "ఇ-వారంటీ వివరాలు విజయవంతంగా సేవ్ చేయబడ్డాయి.";
+"Something went wrong please try again later." = "ఏదో తప్పు జరిగినది. దయచేసి కాసేపు ఆగక ప్రయత్నించండి !";
 
-"No Attachment found to download E-Warranty" = "No Attachment found to download E-Warranty";
-"Select date range to check your E-Warranty" = "Select date range to check your E-Warranty";
-"Only 1 product we can add" = "Only 1 product we can add";
-"Quantity should not exceed." = "Quantity should not exceed.";
-"Quantity should not be zero." = "Quantity should not be zero.";
-"E-Warranty" = "E-Warranty";
-"Generated Date" = "Generated Date";
-"Points Required" = "Points Required";
-"Dream Gift" = "Dream Gift";
+"No Attachment found to download E-Warranty" = "E-వారంటీని డౌన్‌లోడ్ చేయడానికి అటాచ్‌మెంట్ కనుగొనబడలేదు";
+"Select date range to check your E-Warranty" = "మీ ఇ-వారంటీని తనిఖీ చేయడానికి తేదీ పరిధిని ఎంచుకోండి";
+"Only 1 product we can add" = "మేము 1 ఉత్పత్తిని మాత్రమే జోడించగలము";
+"Quantity should not exceed." = "పరిమాణం మించకూడదు.";
+"Quantity should not be zero." = "పరిమాణం సున్నాగా ఉండకూడదు.";
+"E-Warranty" = "ఇ-వారంటీ";
+"Generated Date" = "రూపొందించిన తేదీ";
+"Points Required" = "పాయింట్లు అవసరం";
+"Dream Gift" = "డ్రీం గిఫ్ట్";
 
-"Your PAN Details are pending,Please contact your administrator!" = "Your PAN Details are pending,Please contact your administrator!";
-"Your PAN Details are rejected,Please contact your administrator!" = "Your PAN Details are rejected,Please contact your administrator!";
-"Insufficient point balance to redeem!" = "Insufficient point balance to redeem!";
-"Dream Gift has been removed successfully" = "Dream Gift has been removed successfully";
-"Dream Gift has been removed failed" = "Dream Gift has been removed failed";
-"Congratulations! you are eligible to win this existing Dream Gift" = "Congratulations! you are eligible to win this existing Dream Gift";
-"Congratulations! You are almost near to win this existing Dream Gift." = "Congratulations! You are almost near to win this existing Dream Gift.";
-"Redeemable points as on today" = "Redeemable points as on today";
-"Dream Gift Details" = "Dream Gift Details";
-"Expected Redemption" = "Expected Redemption";
-"Redeem Now" = "Redeem Now";
-"Remove" = "Remove";
-"back To Login" = "back To Login";
-"Please Enter Membership ID" = "Please Enter Membership ID";
-"New password sent to the registered mobile number!" = "New password sent to the registered mobile number!";
- 
-"MembershipID doesn't exists" = "MembershipID doesn't exists";
-"queryQuestion info" = "For any questions and queries on the Sharon Bandhan Loyalty Program. Please give a miss call on the following number";
-"Add Lodge Query" = "Add Lodge Query";
-"Submit Query" = "Submit Query";
-"Select a Query Topic" = "Select a Query Topic";
-"Query summary is Empty" = "Query summary is Empty";
-"Query Details is empty" = "Query Details is empty";
-"Query submitted successfully" = "Query submitted successfully";
-"Login to continue" = "Login to continue";
-"Privacy Policy" = "Privacy Policy";
-"Please Enter the Membership ID" = "Please Enter the Membership ID";
-"Please Enter the Password" = "Please Enter the Password";
-"Please Accept Terms and conditons" = "Please Accept Terms and conditons";
-"account is verification pending" = "Your account is verification pending! Kindly contact your administrator.";
-"Your account is not activated! Kindly activate your account." = "Your account is not activated! Kindly activate your account.";
-"Your account verification is failed !" = "Your account verification is failed !";
-"Your account has been deactivated! Kindly contact the administrator or contact center at +91-8955177400." = "Your account has been deactivated! Kindly contact the administrator or contact center at +91-8955177400.";
+"Your PAN Details are pending,Please contact your administrator!" = "మీ PAN వివరాలు పెండింగ్‌లో ఉన్నాయి, దయచేసి మీ నిర్వాహకుడిని సంప్రదించండి!";
+"Your PAN Details are rejected,Please contact your administrator!" = "మీ PAN వివరాలు తిరస్కరించబడ్డాయి, దయచేసి మీ నిర్వాహకుడిని సంప్రదించండిtor!";
+"Insufficient point balance to redeem!" = "రీడీమ్ చేయడానికి తగినంత పాయింట్ బ్యాలెన్స్ లేదు!";
+"Dream Gift has been removed successfully" = "డ్రీమ్ గిఫ్ట్ విజయవంతంగా తీసివేయబడింది";
+"Dream Gift has been removed failed" = "డ్రీమ్ గిఫ్ట్ తీసివేయబడింది విఫలమైంది";
+"Congratulations! you are eligible to win this existing Dream Gift" = "అభినందనలు! మీరు ఇప్పటికే ఉన్న ఈ డ్రీమ్ బహుమతిని గెలవడానికి అర్హులు";
+"Congratulations! You are almost near to win this existing Dream Gift." = "అభినందనలు! ఇప్పటికే ఉన్న ఈ డ్రీమ్ గిఫ్ట్‌ని గెలవడానికి మీరు దాదాపు దగ్గరలో ఉన్నారు.";
+"Redeemable points as on today" = "నేటికి రీడీమ్ చేయగల పాయింట్లు";
+"Dream Gift Details" = "డ్రీం గిఫ్ట్ వివరాలు";
+"Expected Redemption" = "ఆశించిన విముక్తి";
+"Redeem Now" = "ఇప్పుడే రీడీమ్ చేయండి";
+"Remove" = "తొలగించు";
+"back To Login" = "లాగిన్‌కి తిరిగి వెళ్ళు";
+"Please Enter Membership ID" = "దయచేసి సభ్యత్వ IDని నమోదు చేయండి";
+"New password sent to the registered mobile number!" = "రిజిస్టర్డ్ మొబైల్ నంబర్‌కు కొత్త పాస్‌వర్డ్ పంపబడింది!";
+"MembershipID doesn't exists" = "సభ్యత్వ ID ఉనికిలో లేదు";
+"queryQuestion info" = "షారన్ బంధన్ లాయల్టీ ప్రోగ్రామ్‌లో ఏవైనా ప్రశ్నలు మరియు సందేహాల కోసం. దయచేసి కింది నంబర్‌కు మిస్ కాల్ ఇవ్వండి";
+"Add Lodge Query" = "లాడ్జ్ ప్రశ్నను జోడించండి";
+"Submit Query" = "ప్రశ్నను సమర్పించండి";
+"Select a Query Topic" = "ప్రశ్న అంశాన్ని ఎంచుకోండి";
+"Query summary is Empty" = "ప్రశ్న సారాంశం ఖాళీగా ఉంది";
+"Query Details is empty" = "ప్రశ్న వివరాలు ఖాళీగా ఉన్నాయి";
+"Query submitted successfully" = "ప్రశ్న విజయవంతంగా సమర్పించబడింది";
+"Login to continue" = "కొనసాగించడానికి లాగిన్ చేయండి";
+"Privacy Policy" = "గోప్యతా విధానం";
+"Please Enter the Membership ID" = "దయచేసి సభ్యత్వ IDని నమోదు చేయండి";
+"Please Enter the Password" = "దయచేసి పాస్‌వర్డ్‌ను నమోదు చేయండి";
+"Please Accept Terms and conditons" = "దయచేసి నిబంధనలు మరియు షరతులను అంగీకరించండి";
+"account is verification pending" = "మీ ఖాతా ధృవీకరణ పెండింగ్‌లో ఉంది! దయచేసి మీ నిర్వాహకుడిని సంప్రదించండి.";
+"Your account is not activated! Kindly activate your account." = "మీ ఖాతా యాక్టివేట్ కాలేదు! దయచేసి మీ ఖాతాను సక్రియం చేయండి.";
+"Your account verification is failed !" = "మీ ఖాతా ధృవీకరణ విఫలమైంది!";
+"Your account has been deactivated! Kindly contact the administrator or contact center at +91-8955177400." = "మీ ఖాతా డీయాక్టివేట్ చేయబడింది! దయచేసి నిర్వాహకుడిని లేదా సంప్రదింపు కేంద్రాన్ని +91-8955177400లో సంప్రదించండి.";
 
-"Reward Adjusted" = "Reward Adjusted";
-"My Redemptions" = "My Redemptions";
+"Reward Adjusted" ="రివార్డ్ సర్దుబాటు చేయబడింది";
+"My Redemptions" = "నా విమోచనాలు";
 "REF" = "REF";
-"Pan attachment required" = "Pan attachment required";
-"Need Gallary access" = "Need Gallary access";
-"Allow Gallery access" = "Allow Gallery access";
-"Allow" = "Allow";
-"DisAllow" = "DisAllow";
-"My Account" = "My Account";
-"Profile image updated successfully" = "Profile image updated successfully";
-"Profile image update Failed" = "Profile image update Failed";
-"Add To Planner" = "Add To Planner";
-"Added To Planner" = "Added To Planner";
-"Redemption Details" = "Redemption Details";
-"Quantity" = "Quantity";
-"TDS applicable" = "TDS applicable";
-"Insufficent Point Balance" = "Insufficient Point Balance";
-"Product has been added to Cart" = "Product has been added to Cart";
-"Product has been added into Planner List" = "Product has been added into Planner List";
-"You have redeemed your product successfully" = "You have redeemed your product successfully";
-"Back To Dashboard" = "Back To Dashboard";
-"PROCESS TO CHECKOUT" = "PROCEED TO CHECKOUT";
-"Product has been removed from Cart" = "Product has been removed from Cart";
-"Select Country" = "Select Country";
-"No Internet" = "No Internet";
-"Enter Pin" = "Enter Pin";
-"Enter Valid Zip" = "Enter Valid Zip";
-"OTP Verification" = "OTP Verification";
-"We send a OTP to your Number" = "We send a OTP to your Number";
-"OTP will Receive within" = "OTP will Receive within";
-"Didn't receive OTP Code?" = "Didn't receive OTP Code?";
-"Redemption Failed" = "Redemption Failed";
-"InValid OTP" = "InValid OTP";
-"Please Enter Correct OTP" = "Please Enter Correct OTP";
-"Enter Valid OTP" = "Enter Valid OTP";
-"Shipping address requires: State,City,Address,Pin code and Mobile Number,details,Click on 'Edit' to edit and add details" = "Shipping address requires: State,City,Address,Pin code and Mobile Number,details,Click on 'Edit' to edit and add details";
-"Search Product Name" = "Search Product Name";
-"You need" = "You need";
-"more redeemable points to redeem this product" = "more redeemable points to redeem this product";
-"Your expected redemption of" = "Your expected redemption of";
-"is in" = "is in";
-"Redeem" = "Redeem";
-"Average earning required per month" = "Average earning required per month";
-"Gift product is already added in the Redeem list" = "Gift product is already added in the Redeem list";
-"No Internet. Please check your internet connection" = "No Internet. Please check your internet connection";
-"Are you sure you really want to delete your account?" = "Are you sure you really want to delete your account?";
-"Account deleted successfully" = "Account deleted successfully";
-"Logout" = "Logout";
-"Delete Account" = "Delete Account";
-"Home" = "Home";
-"Upload Code" = "Upload Code";
-"My QR Codes" = "My QR Codes";
+"Pan attachment required" = "పాన్ అటాచ్మెంట్ అవసరం";
+"Need Gallary access" = "గ్యాలరీ యాక్సెస్ అవసరం";
+"Allow Gallery access" = "గ్యాలరీ యాక్సెస్‌ను అనుమతించండి";
+"Allow" = "అనుమతించు";
+"DisAllow" = "అనుమతించవద్దు";
+"My Account" = "నా ఖాతా";
+"Profile image updated successfully" = "ప్రొఫైల్ చిత్రం విజయవంతంగా నవీకరించబడింది";
+"Profile image update Failed" = "ప్రొఫైల్ చిత్రం నవీకరణ విఫలమైంది";
+"Add To Planner" = "ప్లానర్‌కు జోడించండి";
+"Added To Planner" = "ప్లానర్‌కు జోడించబడింది";
+"Redemption Details" = "విముక్తి వివరాలు";
+"Quantity" = "పరిమాణం";
+"TDS applicable" = "TDS వర్తిస్తుంది";
+"Insufficent Point Balance" = "తగినంత పాయింట్ బ్యాలెన్స్ లేదు";
+"Product has been added to Cart" = "ఉత్పత్తి కార్ట్‌కి జోడించబడింది";
+"Product has been added into Planner List" = "ఉత్పత్తి ప్లానర్ జాబితాలోకి జోడించబడింది";
+"You have redeemed your product successfully" = "మీరు మీ ఉత్పత్తిని విజయవంతంగా రీడీమ్ చేసారు";
+"Back To Dashboard" = "తిరిగి డాష్‌బోర్డ్‌కి";
+"PROCESS TO CHECKOUT" = "చెక్అవుట్ చేయడానికి కొనసాగండి";
+"Product has been removed from Cart" = "కార్ట్ నుండి ఉత్పత్తి తీసివేయబడింది";
+"Select Country" = "దేశాన్ని ఎంచుకోండి";
+"No Internet" = "ఇంటర్నెట్ లేదు";
+"Enter Pin" = "పిన్ నమోదు చేయండి";
+"Enter Valid Zip" = "చెల్లుబాటు అయ్యే జిప్‌ని నమోదు చేయండి";
+"OTP Verification" = "OTP ధృవీకరణ";
+"We send a OTP to your Number" = "మేము మీ నంబర్‌కి OTPని పంపుతాము";
+"OTP will Receive within" = "లోపల OTP అందుతుంది";
+"Didn't receive OTP Code?" = "OTP కోడ్‌ని అందుకోలేదు?";
+"Redemption Failed" = "విముక్తి విఫలమైంది";
+"InValid OTP" = "చెల్లని OTP";
+"Please Enter Correct OTP" = "దయచేసి సరైన OTPని నమోదు చేయండి";
+"Enter Valid OTP" = "చెల్లుబాటు అయ్యే OTPని నమోదు చేయండి";
+"Shipping address requires: State,City,Address,Pin code and Mobile Number,details,Click on 'Edit' to edit and add details" = "షిప్పింగ్ చిరునామా అవసరం: రాష్ట్రం, నగరం, చిరునామా, పిన్ కోడ్ మరియు మొబైల్ నంబర్, వివరాలు, సవరించడానికి మరియు వివరాలను జోడించడానికి 'సవరించు'పై క్లిక్ చేయండి";
+"Search Product Name" = "శోధన ఉత్పత్తి పేరు";
+"You need" = "నీకు అవసరం";
+"more redeemable points to redeem this product" = "ఈ ఉత్పత్తిని రీడీమ్ చేయడానికి మరిన్ని రీడీమ్ చేయగల పాయింట్‌లు";
+"Your expected redemption of" = "మీరు ఆశించిన విముక్తి";
+"is in" = "లోపల ఉన్నది";
+"Redeem" = "రీడీమ్ చేయండి";
+"Average earning required per month" = "నెలకు సగటు సంపాదన అవసరం";
+"Gift product is already added in the Redeem list" = "బహుమతి ఉత్పత్తి ఇప్పటికే రీడీమ్ జాబితాలో జోడించబడింది";
+"No Internet. Please check your internet connection" = "ఇంటర్నెట్ లేదు. దయచేసి మీ ఇంటర్నెట్ కనెక్షన్‌ని తనిఖీ చేయండి";
+"Are you sure you really want to delete your account?" = "మీరు ఖచ్చితంగా మీ ఖాతాను తొలగించాలనుకుంటున్నారా?";
+"Account deleted successfully" = "ఖాతా విజయవంతంగా తొలగించబడింది";
+"Logout" = "లాగ్అవుట్";
+"Delete Account" = "ఖాతాను తొలగించండి";
+"Home" = "హోమ్";
+"Upload Code" = "అప్‌లోడ్ కోడ్";
+"My QR Codes" = "నా QR కోడ్‌లు";
 
-"Submit without scan Upload QR" = "Submit without scan Upload QR";
-"Please scan/upload QR code" = "Please scan/upload QR code";
-"QR code is Submitted Successfully. Check the status of the code in  status report." = "QR code is Submitted Successfully. Check the status of the code in  status report.";
+"Submit without scan Upload QR" = "స్కాన్ లేకుండా సమర్పించండి అప్‌లోడ్ QR";
+"Please scan/upload QR code" = "దయచేసి QR కోడ్‌ని స్కాన్/అప్‌లోడ్ చేయండి";
+"QR code is Submitted Successfully. Check the status of the code in status report." = "QR కోడ్ విజయవంతంగా సమర్పించబడింది. స్థితి నివేదికలో కోడ్ స్థితిని తనిఖీ చేయండి.";
 "Scan_Again" = "Scan Again";
-"Place a QR Code inside the view finder rectangle to scan it." = "Place a QR Code inside the view finder rectangle  to scan it.";
-"Enter QR code in the above field and submit." = "Enter QR code in the above field and submit.";
+"Place a QR Code inside the view finder rectangle to scan it." = "స్కాన్ చేయడానికి వీక్షణ ఫైండర్ దీర్ఘచతురస్రం లోపల QR కోడ్‌ను ఉంచండి.";
+"Enter QR code in the above field and submit." = "పై ఫీల్డ్‌లో QR కోడ్‌ని నమోదు చేసి సమర్పించండి.";
 
-"Click here to see your QR Codes" = "Click here to see your QR Codes";
-"Upload QR Code" = "Upload QR Code";
-"QR Code Submission Failed" = "QR Code Submission Failed";
-"Offline scanning limit exceeded. Sync pending codes in Wifi/Mobile data or Clear processed codes ." = "Offline scanning limit exceeded. Sync pending codes in Wifi/Mobile data or Clear processed codes .";
-"QR Code length should be 12" = "QR Code length should be 12";
-"Enter the QR Code" = "Enter the QR Code";
-"Enable Location Services" = "Enable Location Services";
-"QR Code scanning requires Location Access" = "QR Code scanning requires Location Access";
-"Settings" = "Settings";
-"Sharon Bandhan Application need Camera permission for Scanning Codes" = "Sharon Bandhan Application need Camera permission for Scanning Codes";
-"Allow Camera Access" = "Allow Camera Access";
+"Click here to see your QR Codes" = "మీ QR కోడ్‌లను చూడటానికి ఇక్కడ క్లిక్ చేయండి";
+"Upload QR Code" = "QR కోడ్‌ని అప్‌లోడ్ చేయండి";
+"QR Code Submission Failed" = "QR కోడ్ సమర్పణ విఫలమైంది";
+"Offline scanning limit exceeded. Sync pending codes in Wifi/Mobile data or Clear processed codes ." = "ఆఫ్‌లైన్ స్కానింగ్ పరిమితి మించిపోయింది. Wifi/మొబైల్ డేటాలో పెండింగ్‌లో ఉన్న కోడ్‌లను సమకాలీకరించండి లేదా ప్రాసెస్ చేసిన కోడ్‌లను క్లియర్ చేయండి.";
+"QR Code length should be 12" = "QR కోడ్ పొడవు 12 ఉండాలి";
+"Enter the QR Code" = "QR కోడ్‌ని నమోదు చేయండి";
+"Enable Location Services" = "స్థాన సేవలను ప్రారంభించండి";
+"QR Code scanning requires Location Access" = "QR కోడ్ స్కానింగ్‌కు స్థాన ప్రాప్యత అవసరం";
+"Settings" = "సెట్టింగ్‌లు";
+"Sharon Bandhan Application need Camera permission for Scanning Codes" = "షారన్ బంధన్ అప్లికేషన్ కోడ్‌లను స్కానింగ్ చేయడానికి కెమెరా అనుమతి అవసరం";
+"Allow Camera Access" = "కెమెరా యాక్సెస్‌ని అనుమతించండి";
+"Scan QR Code" = "స్కాన్ క్యూఆర్ కోడ్ ";
+
+"Ask Help ?" = "సహాయం అడగాలా?";
+"Raise a ticket our team will connect you soon" = "టిక్కెట్ని పెంచండి మా బృందం త్వరలో మిమ్మల్ని కనెక్ట్ చేస్తుంది";
+"Raise a Ticket" = "టికెట్ పెంచండి";
+
+
+"Online scanning limit exceeded. Sync pending codes in Wifi/Mobile data or Clear processed codes ." = "ఆన్లైన్ స్కానింగ్ పరిమితి మించిపోయింది. Wifi/Mobile డేటాలో పెండింగ్లో ఉన్న కోడ్లను సమకాలీకరించండి లేదా ప్రాసెస్ చేసిన కోడ్లను క్లియర్ చేయండి .";
+"PAN INFORMATION" = "పాన్ సమాచారం";
+
+
+"Receive Benefits Upon Joining" = "చేరిన తర్వాత ప్రయోజనాలను పొందండి";
+"Earn Points for your purchase" = "మీ కొనుగోలు కోసం పాయింట్‌లను సంపాదించండి";
+"Redeem Reward points for Attractive Gift Items" = "ఆకర్షణీయమైన బహుమతి వస్తువుల కోసం రివార్డ్ పాయింట్‌లను రీడీమ్ చేయండి";
+"Redemption Planner - Journey to Redeem your Dream Products" = "రిడెంప్షన్ ప్లానర్ - మీ డ్రీమ్ ప్రోడక్ట్‌లను రీడీమ్ చేసుకోవడానికి ప్రయాణం";
+"Interactive Mobile App & Website" = "ఇంటరాక్టివ్ మొబైల్ యాప్ & వెబ్‌సైట్";
+"Become a SharonBandhan Member and Be a Winner" = "షరాన్ భంధన్ మెంబర్ అవ్వండి మరియు విజేతగా అవ్వండి";
+//MARK: - New
+"Currently, No Offers and Promotions are running." = "Currently, No Offers and Promotions are running.";
+"Please upload the relevant images only." = "Please upload the relevant images only.";

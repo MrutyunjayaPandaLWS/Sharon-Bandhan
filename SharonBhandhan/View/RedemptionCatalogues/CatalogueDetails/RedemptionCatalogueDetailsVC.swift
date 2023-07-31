@@ -54,6 +54,7 @@ class RedemptionCatalogueDetailsVC: BaseViewController, popUpDelegate {
     var quantity = 0
     var categoryId = 0
     var catalogueId = 0
+    var redemptionID = 0
     var isComeFrom = ""
     var pointBalance = UserDefaults.standard.string(forKey: "RedeemablePointBalance") ?? ""
     let loyaltyId = UserDefaults.standard.string(forKey: "LoyaltyID") ?? ""
@@ -71,7 +72,11 @@ class RedemptionCatalogueDetailsVC: BaseViewController, popUpDelegate {
         categoryTypeLabel.text = productCategory
         productRefNo.text = prodRefNo
         tdsvalue.text = "\(Int(applicabletds))"
-        tdspercentage.text = "\(tdspercentage1)%"
+        if isComeFrom == "MyRedemption"{
+            myRedeemptionDetailsDataApi()
+        }else{
+            tdspercentage.text = "\(Int(tdspercentage1))%"
+        }
         productNameLabel.text = productName
         pointsLabel.text = productPoints
         qtyValue.text = "\(quantity)"
@@ -80,7 +85,7 @@ class RedemptionCatalogueDetailsVC: BaseViewController, popUpDelegate {
         let receivedImage = productImage
         print(receivedImage)
         let totalImgURL = productCatalogueImgURL + receivedImage
-        productImageView.sd_setImage(with: URL(string: totalImgURL), placeholderImage: UIImage(named: "ic_default_img"))
+        productImageView.sd_setImage(with: URL(string: totalImgURL), placeholderImage: UIImage(named: "Group 6524"))
 //        if (Int(productPoints)! + Int(self.applicabletds)) >= Int(pointBalance)!{
 //            self.addToCart.isHidden = false
 //            self.addToPlanner.isHidden = true
@@ -91,6 +96,11 @@ class RedemptionCatalogueDetailsVC: BaseViewController, popUpDelegate {
 //
         
     }
+    
+//https://bandhandemoserv.loyltwo3ks.com/MobileApp/MobileApi.svc/json/GetCatalogueDetails
+//
+//{"ActionType":"53","ActorId":"31","ObjCatalogueDetails":{"RedemptionId":"101"}}
+//
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         if isComeFrom == "MyRedemption"{
@@ -102,7 +112,11 @@ class RedemptionCatalogueDetailsVC: BaseViewController, popUpDelegate {
         }else{
             quantityLbl.isHidden = true
             qtyValue.isHidden = true
-            self.myCartList()
+            if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+                self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+            }else{
+                self.myCartList()
+            }
             }
         languagelocalization()
         languagelocalization1()
@@ -115,6 +129,19 @@ class RedemptionCatalogueDetailsVC: BaseViewController, popUpDelegate {
 //            tracker.send(builder.build() as [NSObject : AnyObject])
     }
     
+    func myRedeemptionDetailsDataApi(){
+        let parameter = [
+                    "ActionType":"53",
+                    "ActorId":"\(userID)",
+                    "ObjCatalogueDetails":[
+                        "RedemptionId":"\(redemptionID)"
+                    ]
+        ] as [String : Any]
+        print(parameter,"myRedeemptionDetailsDataApi")
+        self.VM.myRedeemptionDetailsApi(parameters: parameter) { result in
+            self.tdspercentage.text = "\(result?.objCatalogueList?[0].tDSPercentage ?? 0)%"
+        }
+    }
     func languagelocalization(){
         
         self.redemptionDetailsHeadingLabel.text = "Redemption Details".localiz()
@@ -201,7 +228,9 @@ class RedemptionCatalogueDetailsVC: BaseViewController, popUpDelegate {
         
     }
     @IBAction func addeToCartButton(_ sender: Any) {
-        
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
         if self.verifiedStatus == 6 || self.verifiedStatus == 4{
             if self.checkAccountStatus == "1"{
                 NotificationCenter.default.post(name: .verificationStatus, object: nil)
@@ -210,35 +239,36 @@ class RedemptionCatalogueDetailsVC: BaseViewController, popUpDelegate {
             }
             
         }else{
-//            if self.totalCartValue <= Int(pointBalance)!{
-//                let calcValues = self.totalCartValue + Int(self.productPoints)!
-//                print(calcValues)
+            //            if self.totalCartValue <= Int(pointBalance)!{
+            //                let calcValues = self.totalCartValue + Int(self.productPoints)!
+            //                print(calcValues)
             if Int(productPoints) ?? 0 <= Int(pointBalance)!{
-                    addToCartApi()
-                }else{
-                    DispatchQueue.main.async{
-                        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
-                        vc!.delegate = self
-                        vc!.titleInfo = ""
-                        vc!.descriptionInfo = "Insufficent Point Balance".localiz()
-                       
-//                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                            vc!.descriptionInfo = "Insufficent Point Balance"
-//                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                             vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
-//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                            vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
-//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                            vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
-//                          }
-                        vc!.modalPresentationStyle = .overCurrentContext
-                        vc!.modalTransitionStyle = .crossDissolve
-                        self.present(vc!, animated: true, completion: nil)
-                    }
-            //    }
+                addToCartApi()
+            }else{
+                DispatchQueue.main.async{
+                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
+                    vc!.delegate = self
+                    vc!.titleInfo = ""
+                    vc!.descriptionInfo = "Insufficent Point Balance".localiz()
+                    
+                    //                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                    //                            vc!.descriptionInfo = "Insufficent Point Balance"
+                    //                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                    //                             vc!.descriptionInfo = "अपर्याप्त अंक संतुलन"
+                    //                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                    //                            vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
+                    //                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+                    //                            vc!.descriptionInfo = "సరిపోని పాయింట్లు బ్యాలెన్స్"
+                    //                          }
+                    vc!.modalPresentationStyle = .overCurrentContext
+                    vc!.modalTransitionStyle = .crossDissolve
+                    self.present(vc!, animated: true, completion: nil)
+                }
+                //    }
                 
             }
         }
+    }
     }
     
     @IBAction func addedToPlanner(_ sender: Any) {
@@ -251,7 +281,11 @@ class RedemptionCatalogueDetailsVC: BaseViewController, popUpDelegate {
 //            }
 //
 //        }else{
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
             addedToPlanner()
+        }
        // }
     }
     

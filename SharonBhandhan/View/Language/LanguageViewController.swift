@@ -39,34 +39,37 @@ class LanguageViewController: UIViewController {
 //        self.roundLetterLabel4.layer.cornerRadius = self.roundLetterLabel4.frame.width / 2
         }
 
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(UserDefaults.standard.string(forKey: "LanguageLocalizable"),"language status")
+    }
 
     
     @IBAction func englishLanguage(_ sender: Any) {
-        UserDefaults.standard.set("1", forKey: "LanguageLocalizable")
+        UserDefaults.standard.setValue("1", forKey: "LanguageLocalizable")
         LanguageManager.shared.setLanguage(language: .en)
-        UserDefaults.standard.synchronize()
+//        UserDefaults.standard.synchronize()
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func hindiLanguage(_ sender: Any) {
-        UserDefaults.standard.set("2", forKey: "LanguageLocalizable")
+        UserDefaults.standard.setValue("2", forKey: "LanguageLocalizable")
         LanguageManager.shared.setLanguage(language: .hi)
-        UserDefaults.standard.synchronize()
+//        UserDefaults.standard.synchronize()
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func banglaLanguaga(_ sender: Any) {
-        UserDefaults.standard.set("3", forKey: "LanguageLocalizable")
+        UserDefaults.standard.setValue("3", forKey: "LanguageLocalizable")
         LanguageManager.shared.setLanguage(language: .taIN)
-        UserDefaults.standard.synchronize()
+//        UserDefaults.standard.synchronize()
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func teluguLanguage(_ sender: Any) {
-        UserDefaults.standard.set("4", forKey: "LanguageLocalizable")
+        UserDefaults.standard.setValue("4", forKey: "LanguageLocalizable")
         LanguageManager.shared.setLanguage(language: .te)
-        UserDefaults.standard.synchronize()
+//        UserDefaults.standard.synchronize()
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }

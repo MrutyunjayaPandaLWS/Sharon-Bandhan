@@ -14,6 +14,8 @@ import LanguageManager_iOS
 
 class ProfileViewController: BaseViewController {
   
+    @IBOutlet weak var panDetailsTitleLbl: UILabel!
+    @IBOutlet weak var profileTitleLbl: UILabel!
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var mobileTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
@@ -47,7 +49,12 @@ class ProfileViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileDetails()
+        self.VM.VC = self
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            profileDetails()
+        }
         mobileTF.isEnabled = false
         emailTF.isEnabled = false
         addressTF.isEnabled = false
@@ -73,8 +80,12 @@ class ProfileViewController: BaseViewController {
     }
     
     @IBAction func pandetails(_ sender: Any) {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PancardViewController") as! PancardViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PancardViewController") as! PancardViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     override func viewWillLayoutSubviews() {
         self.profileImg.layer.cornerRadius = self.profileImg.frame.width / 2
@@ -85,7 +96,9 @@ class ProfileViewController: BaseViewController {
         }
     
     func languagelocalization(){
-        self.header.text = "My Account".localiz()
+        self.panDetailsTitleLbl.text = "myPan".localiz()
+        self.profileTitleLbl.text = "mpMyProfileKEY".localiz()
+        self.header.text = "mpMyProfileKEY".localiz()
         self.nativeState.text = "rNativeStateKEY".localiz()
         self.zip.text = "mpPinKEY".localiz()
         self.city.text = "rCityKEY".localiz()
@@ -95,73 +108,28 @@ class ProfileViewController: BaseViewController {
         self.mobile.text = "rMobileKEY".localiz()
         self.districtLbl.text = "mpDistrictKEY".localiz()
         self.prefLanguage.text = "mpPreferredLanguageKEY".localiz()
-        
-//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//            self.header.text = "My Account"
-//            self.nativeState.text = "rNativeStateKEY".localizableString(loc: "en")
-//            self.zip.text = "mpPinKEY".localizableString(loc: "en")
-//            self.city.text = "rCityKEY".localizableString(loc: "en")
-//            self.state.text = "rStateKEY".localizableString(loc: "en")
-//            self.address.text = "rAddressKEY".localizableString(loc: "en")
-//            self.email.text = "rEmailKEY".localizableString(loc: "en")
-//            self.mobile.text = "rMobileKEY".localizableString(loc: "en")
-//            self.districtLbl.text = "mpDistrictKEY".localizableString(loc: "en")
-//            self.prefLanguage.text = "mpPreferredLanguageKEY".localizableString(loc: "en")
-//
-//
-//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//            self.header.text = "मेरा खाता"
-//            self.nativeState.text = "rNativeStateKEY".localizableString(loc: "hi")
-//            self.zip.text = "mpPinKEY".localizableString(loc: "hi")
-//            self.city.text = "rCityKEY".localizableString(loc: "hi")
-//            self.state.text = "rStateKEY".localizableString(loc: "hi")
-//            self.address.text = "rAddressKEY".localizableString(loc: "hi")
-//            self.email.text = "rEmailKEY".localizableString(loc: "hi")
-//            self.mobile.text = "rMobileKEY".localizableString(loc: "hi")
-//            self.districtLbl.text = "mpDistrictKEY".localizableString(loc: "hi")
-//            self.prefLanguage.text = "mpPreferredLanguageKEY".localizableString(loc: "hi")
-//
-//        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//            self.header.text = "என் கணக்கு"
-//            self.nativeState.text = "rNativeStateKEY".localizableString(loc: "ta-IN")
-//            self.zip.text = "mpPinKEY".localizableString(loc: "ta-IN")
-//            self.city.text = "rCityKEY".localizableString(loc: "ta-IN")
-//            self.state.text = "rStateKEY".localizableString(loc: "ta-IN")
-//            self.address.text = "rAddressKEY".localizableString(loc: "ta-IN")
-//            self.email.text = "rEmailKEY".localizableString(loc: "ta-IN")
-//            self.mobile.text = "rMobileKEY".localizableString(loc: "ta-IN")
-//            self.districtLbl.text = "mpDistrictKEY".localizableString(loc: "ta-IN")
-//            self.prefLanguage.text = "mpPreferredLanguageKEY".localizableString(loc: "ta-IN")
-//
-//        }else{
-//            self.header.text = "నా ఖాతా"
-//            self.nativeState.text = "rNativeStateKEY".localizableString(loc: "te")
-//            self.zip.text = "mpPinKEY".localizableString(loc: "te")
-//            self.city.text = "rCityKEY".localizableString(loc: "te")
-//            self.state.text = "rStateKEY".localizableString(loc: "te")
-//            self.address.text = "rAddressKEY".localizableString(loc: "te")
-//            self.email.text = "rEmailKEY".localizableString(loc: "te")
-//            self.mobile.text = "rMobileKEY".localizableString(loc: "te")
-//            self.districtLbl.text = "mpDistrictKEY".localizableString(loc: "te")
-//            self.prefLanguage.text = "mpPreferredLanguageKEY".localizableString(loc: "te")
-//        }
+        self.country.text = "mpCountryKEY".localiz()
     }
     @IBAction func profileButton(_ sender: Any) {
         
     }
     @IBAction func profileImageUpdateBtn(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Choose any option", message: "", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Camera", style: .default , handler:{ (UIAlertAction)in
-            self.openCamera()
-        }))
-        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler:{ (UIAlertAction)in
-            self.openGallery()
-        }))
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler:{ (UIAlertAction)in
-        }))
-        self.present(alert, animated: true, completion: {
-            print("completion block")
-        })
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            let alert = UIAlertController(title: "Choose any option", message: "", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Camera", style: .default , handler:{ (UIAlertAction)in
+                self.openCamera()
+            }))
+            alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler:{ (UIAlertAction)in
+                self.openGallery()
+            }))
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler:{ (UIAlertAction)in
+            }))
+            self.present(alert, animated: true, completion: {
+                print("completion block")
+            })
+        }
     }
     
     func profileDetails(){
@@ -174,8 +142,15 @@ class ProfileViewController: BaseViewController {
             DispatchQueue.main.async {
                 self.stopLoading()
                 let profileDetails = response?.getCustomerDetailsMobileAppResult?.lstCustomerJson ?? []
-                let customerImage = String(profileDetails[0].profilePicture ?? "").dropFirst()
-                self.profileImg.sd_setImage(with: URL(string: customerImageURL + "\(customerImage)"), placeholderImage: UIImage(named: "icons8-test-account-96"))
+                var customerImage = String(profileDetails[0].profilePicture ?? "")
+                if customerImage.first == "~"{
+                    customerImage = String(customerImage.dropFirst())
+                }
+                if customerImage.contains("UploadFiles/CustomerImage"){
+                    self.profileImg.sd_setImage(with: URL(string: customerImageURL + "\(customerImage)"), placeholderImage: UIImage(named: "icons8-test-account-96"))
+                }else{
+                    self.profileImg.sd_setImage(with: URL(string: profileImageURL + "\(customerImage)"), placeholderImage: UIImage(named: "icons8-test-account-96"))
+                }
                 self.name.text = profileDetails[0].firstName ?? "-"
                 self.mobileTF.text = profileDetails[0].mobile ?? "-"
                 self.emailTF.text = profileDetails[0].email ?? "-"

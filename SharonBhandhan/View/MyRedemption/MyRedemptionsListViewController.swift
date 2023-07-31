@@ -38,7 +38,11 @@ class MyRedemptionsListViewController: BaseViewController, FilterDelegate{
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        myRedemptionList()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            myRedemptionList()
+        }
         self.noDataFound.isHidden = true
         pointsLbl.text = UserDefaults.standard.string(forKey: "RedeemablePointBalance") ?? "0"
         languagelocalization()
@@ -263,8 +267,12 @@ extension MyRedemptionsListViewController : UITableViewDelegate, UITableViewData
            
         
         let receivedImage = self.VM.myRedemptionList[indexPath.row].productImage ?? ""
-        let totalImgURL = productCatalogueImgURL + receivedImage
-        cell?.productImage.sd_setImage(with: URL(string: totalImgURL), placeholderImage: UIImage(named: "ic_default_img"))
+        if receivedImage.count != 0{
+            let totalImgURL = productCatalogueImgURL + receivedImage
+            cell?.productImage.sd_setImage(with: URL(string: totalImgURL), placeholderImage: UIImage(named: "Group 6524"))
+        }else{
+            cell?.productImage.image = UIImage(named: "Group 6524")
+        }
         return cell!
         
     }
@@ -283,6 +291,7 @@ extension MyRedemptionsListViewController : UITableViewDelegate, UITableViewData
         vc.termsandContions = self.VM.myRedemptionList[indexPath.row].termsCondition ?? ""
         vc.quantity = self.VM.myRedemptionList[indexPath.row].quantity ?? 0
         vc.tdspercentage1 = self.VM.myRedemptionList[indexPath.row].TDSPercentage ?? 0.0
+        vc.redemptionID = self.VM.myRedemptionList[indexPath.row].redemptionId ?? 0
         print(vc.tdspercentage1,"points")
         vc.applicabletds = self.VM.myRedemptionList[indexPath.row].ApplicableTds ?? 0.0
         self.navigationController?.pushViewController(vc, animated: true)

@@ -88,29 +88,33 @@ class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
     
     @IBAction func checkOutButton(_ sender: Any) {
         print(verifiedStatus, "account verified Status")
-        if self.verifiedStatus == 6 || self.verifiedStatus == 4 || self.verifiedStatus != 1{
-            if self.checkAccountStatus == "1"{
-                NotificationCenter.default.post(name: .verificationStatus, object: nil)
-            }else{
-                NotificationCenter.default.post(name: .verificationStatus, object: nil)
-            }
-            
-        }else if self.verifiedStatus == 1{
-            if UserDefaults.standard.integer(forKey: "IsRedeemable") == -3{
-                self.view.makeToast("Your PAN Details are pending,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
-            }else if UserDefaults.standard.integer(forKey: "IsRedeemable") == -4{
-                self.view.makeToast("Your PAN Details are rejected,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
-            }else if UserDefaults.standard.integer(forKey: "IsRedeemable") == 1{
-                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ShippingAddress_VC") as! ShippingAddress_VC
-                vc.totalPoint = finalPoints
-                vc.redemptionTypeId = 1
-                self.navigationController?.pushViewController(vc, animated: true)
-            }else{
-                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ShippingAddress_VC") as! ShippingAddress_VC
-                vc.totalPoint = finalPoints
-                vc.redemptionTypeId = 1
-                self.navigationController?.pushViewController(vc, animated: true)
-//                self.view.makeToast("Insufficient point balance to redeem!", duration: 2.0, position: .bottom)
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            if self.verifiedStatus == 6 || self.verifiedStatus == 4 || self.verifiedStatus != 1{
+                if self.checkAccountStatus == "1"{
+                    NotificationCenter.default.post(name: .verificationStatus, object: nil)
+                }else{
+                    NotificationCenter.default.post(name: .verificationStatus, object: nil)
+                }
+                
+            }else if self.verifiedStatus == 1{
+                if UserDefaults.standard.integer(forKey: "IsRedeemable") == -3{
+                    self.view.makeToast("Your PAN Details are pending,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
+                }else if UserDefaults.standard.integer(forKey: "IsRedeemable") == -4{
+                    self.view.makeToast("Your PAN Details are rejected,Please contact your administrator!".localiz(), duration: 2.0, position: .bottom)
+                }else if UserDefaults.standard.integer(forKey: "IsRedeemable") == 1{
+                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ShippingAddress_VC") as! ShippingAddress_VC
+                    vc.totalPoint = finalPoints
+                    vc.redemptionTypeId = 1
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }else{
+                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ShippingAddress_VC") as! ShippingAddress_VC
+                    vc.totalPoint = finalPoints
+                    vc.redemptionTypeId = 1
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    //                self.view.makeToast("Insufficient point balance to redeem!", duration: 2.0, position: .bottom)
+                }
             }
         }
         
@@ -119,6 +123,9 @@ class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
     //Delegate:-
     
     func increaseCount(_ cell: MyCart_TVC) {
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
         guard let tappedIndexPath = self.myCartTableView.indexPath(for: cell) else{return}
         if cell.plusBTN.tag == tappedIndexPath.row{
             if self.VM.myCartListArray[tappedIndexPath.row].sumOfTotalPointsRequired ?? 0 <= Int(self.pointBalance) ?? 0{
@@ -137,15 +144,15 @@ class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
                         vc!.titleInfo = ""
                         vc!.descriptionInfo = "Insufficent Point Balance".localiz()
                         
-//                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                            vc!.descriptionInfo = "Insufficient Point Balance"
-//                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                             vc!.descriptionInfo = "अपर्याप्त प्वाइंट बैलेंस"
-//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                            vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
-//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                            vc!.descriptionInfo = "తగినంత పాయింట్ బ్యాలెన్స్ లేదు"
-//                          }
+                        //                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                        //                            vc!.descriptionInfo = "Insufficient Point Balance"
+                        //                         }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                        //                             vc!.descriptionInfo = "अपर्याप्त प्वाइंट बैलेंस"
+                        //                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                        //                            vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
+                        //                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+                        //                            vc!.descriptionInfo = "తగినంత పాయింట్ బ్యాలెన్స్ లేదు"
+                        //                          }
                         vc!.modalPresentationStyle = .overCurrentContext
                         vc!.modalTransitionStyle = .crossDissolve
                         self.present(vc!, animated: true, completion: nil)
@@ -156,8 +163,12 @@ class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
         }
         self.myCartTableView.reloadData()
     }
+    }
     
     func decreaseCount(_ cell: MyCart_TVC) {
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
         guard let tappedIndexPath = self.myCartTableView.indexPath(for: cell) else{return}
         if self.VM.myCartListArray[tappedIndexPath.row].noOfQuantity ?? 0 >= 1{
             cell.minusBTN.isEnabled = true
@@ -176,7 +187,7 @@ class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
                             }else{
                                 self.quantity = 1
                             }
-                           
+                            
                         }
                         
                     }else{
@@ -186,15 +197,15 @@ class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
                             vc!.titleInfo = ""
                             vc!.descriptionInfo = "Insufficent Point Balance".localiz()
                             
-//                            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                                vc!.descriptionInfo = "Insufficient Point Balance"
-//                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                                 vc!.descriptionInfo = "अपर्याप्त प्वाइंट बैलेंस"
-//                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                                vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
-//                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                                vc!.descriptionInfo = "తగినంత పాయింట్ బ్యాలెన్స్ లేదు"
-//                              }
+                            //                            if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
+                            //                                vc!.descriptionInfo = "Insufficient Point Balance"
+                            //                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
+                            //                                 vc!.descriptionInfo = "अपर्याप्त प्वाइंट बैलेंस"
+                            //                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
+                            //                                vc!.descriptionInfo = "অপর্যাপ্ত পয়েন্ট ব্যালেন্স"
+                            //                            }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
+                            //                                vc!.descriptionInfo = "తగినంత పాయింట్ బ్యాలెన్స్ లేదు"
+                            //                              }
                             vc!.modalPresentationStyle = .overCurrentContext
                             vc!.modalTransitionStyle = .crossDissolve
                             self.present(vc!, animated: true, completion: nil)
@@ -204,23 +215,26 @@ class MyCart_VC: BaseViewController, MyCartDelegate, popUpDelegate{
                 
             }
         }else{
-//            if self.VM.myCartListArray[tappedIndexPath.row].noOfQuantity ?? 0 < 1{
-//                cell.minusBTN.isEnabled = false
-//                cell.countTF.text = "1"
-//            }
-          
+            //            if self.VM.myCartListArray[tappedIndexPath.row].noOfQuantity ?? 0 < 1{
+            //                cell.minusBTN.isEnabled = false
+            //                cell.countTF.text = "1"
+            //            }
+            
         }
-        
- 
-            self.myCartTableView.reloadData()
+        self.myCartTableView.reloadData()
+    }
     }
     
     func removeProduct(_ cell: MyCart_TVC) {
-        guard let tappedIndexPath = self.myCartTableView.indexPath(for: cell) else{return}
-        if cell.removeProductBTN.tag == tappedIndexPath.row{
-            self.customerCartId = self.VM.myCartListArray[tappedIndexPath.row].customerCartId ?? 0
-            self.removeProduct()
-            self.myCartTableView.reloadData()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            guard let tappedIndexPath = self.myCartTableView.indexPath(for: cell) else{return}
+            if cell.removeProductBTN.tag == tappedIndexPath.row{
+                self.customerCartId = self.VM.myCartListArray[tappedIndexPath.row].customerCartId ?? 0
+                self.removeProduct()
+                self.myCartTableView.reloadData()
+            }
         }
     }
     
@@ -369,7 +383,7 @@ extension MyCart_VC: UITableViewDelegate, UITableViewDataSource{
         cell.pointsLabel.text = "\(self.VM.myCartListArray[indexPath.row].pointsRequired ?? 0)"
         let receivedImage = self.VM.myCartListArray[indexPath.row].productImage ?? ""
         let totalImgURL = productCatalogueImgURL + receivedImage
-        cell.productImageView.sd_setImage(with: URL(string: totalImgURL), placeholderImage: UIImage(named: "ic_default_img"))
+        cell.productImageView.sd_setImage(with: URL(string: totalImgURL), placeholderImage: UIImage(named: "Group 6524"))
         
         if self.VM.myCartListArray[indexPath.row].noOfQuantity ?? 0 != 0 {
             cell.countTF.text = "\(self.VM.myCartListArray[indexPath.row].noOfQuantity ?? 0)"

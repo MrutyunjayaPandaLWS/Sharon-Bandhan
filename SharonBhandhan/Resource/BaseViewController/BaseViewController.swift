@@ -8,11 +8,13 @@
 import UIKit
 import WebKit
 import Lottie
+import Reachability
 
 class BaseViewController: UIViewController {
     let activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView();
     
     var myView = UIView()
+//    let reachability = try! Reachability()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +32,16 @@ class BaseViewController: UIViewController {
     }
     
     func convertDateFormater(_ date: String, fromDate: String, toDate: String) -> String {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = fromDate
-            let date = dateFormatter.date(from: date)
-            dateFormatter.dateFormat = toDate
-        return  dateFormatter.string(from: date!)
- 
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = fromDate
+        let date1 = dateFormatter.date(from: date)
+        dateFormatter.dateFormat = toDate
+        if let date1 = date1{
+            return  dateFormatter.string(from: date1)
+        }else{
+            return date
         }
+    }
     
        func startLoading(){
            self.activityIndicator.transform = CGAffineTransform(scaleX: 2, y: 2)
@@ -69,5 +74,28 @@ class BaseViewController: UIViewController {
 
     }
 
-
+//    func InternetCheck(InternetON: @escaping ()->(),InternetOff: @escaping ()->()){
+//        DispatchQueue.main.async {
+//            self.reachability.whenReachable = { reachability in
+//                if reachability.connection == .wifi {
+//                    print("Reachable via WiFi")
+//                } else {
+//                    print("Reachable via Cellular")
+//                }
+//                InternetON()
+////                self.view.window?.rootViewController?.dismiss(animated: true)
+//            }
+//            self.reachability.whenUnreachable = { _ in
+//                print("Not reachable")
+//                InternetOff()
+//            }
+//
+//            do {
+//                try self.reachability.startNotifier()
+//            } catch {
+//                print("Unable to start notifier")
+//            }
+//        }
+//    }
+    
 }

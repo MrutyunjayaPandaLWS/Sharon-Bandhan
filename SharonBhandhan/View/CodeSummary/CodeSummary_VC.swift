@@ -25,7 +25,11 @@ class CodeSummary_VC: BaseViewController {
         self.vm.VC = self
         self.codeSummaryTableView.delegate = self
         self.codeSummaryTableView.dataSource = self
-        self.apiCalling()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            self.apiCalling()
+        }
         languagelocalization()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -81,7 +85,7 @@ extension CodeSummary_VC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CodeSummary_TVC") as! CodeSummary_TVC
-        cell.codeCount.text = String(self.codeSummaryListingArray[indexPath.row].codeStatusWiseCount ?? 0)
+        cell.codeCount.text = "\("CountKey".localiz()) : \(self.codeSummaryListingArray[indexPath.row].codeStatusWiseCount ?? 0)"
         cell.codesTitleName.text = self.codeSummaryListingArray[indexPath.row].status ?? ""
         return cell
     }

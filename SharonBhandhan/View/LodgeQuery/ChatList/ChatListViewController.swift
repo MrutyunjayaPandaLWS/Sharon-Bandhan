@@ -30,6 +30,7 @@ class ChatListViewController: BaseViewController,UITextFieldDelegate,UITableView
     var helptopicdetails = ""
     var querysummary = ""
     var querydetails = ""
+    var messageTFStatus = false
 //    let fromURL = HTTPHelper()
 //    var chatlistingArray = [chatlistingdetails]()
     var VM = ChatListViewModel()
@@ -76,6 +77,7 @@ class ChatListViewController: BaseViewController,UITextFieldDelegate,UITableView
             self.commenttextfield.placeholder = "ఇక్కడ ప్రశ్న రాయండి ..."
         }
         
+        self.textfieldview.isHidden = messageTFStatus
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -85,6 +87,7 @@ class ChatListViewController: BaseViewController,UITextFieldDelegate,UITableView
 //
 //        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
 //        tracker.send(builder.build() as [NSObject : AnyObject])
+        
 
         
     }

@@ -14,7 +14,7 @@ import LanguageManager_iOS
 
 class HistoryNotificationsViewController: BaseViewController, notificationDelgate {
     func didTappedNotificationimage(cell: HistoryNotificationsTableViewCell) {
-        let secondaryIMG = cell.imageUrl.dropFirst(1)
+        let secondaryIMG = cell.imageUrl
 //        expandedimageview.kf.setImage(with: URL(string: "\(Promo_ImageData)\(secondaryIMG)"), placeholder: UIImage(named: "no_image1.jpg"))
         expandedimageview.sd_setImage(with: URL(string: "\(PROMO_IMG)\(secondaryIMG)"),placeholderImage: UIImage(named: "no_image1.jpg"))
         expandedview.isHidden = false
@@ -43,7 +43,11 @@ class HistoryNotificationsViewController: BaseViewController, notificationDelgat
         expandedview.isHidden = true
         self.noDataFound.isHidden = true
         self.NotificationstableView.register(UINib(nibName: "HistoryNotificationsTableViewCell", bundle: nil), forCellReuseIdentifier: "HistoryNotificationsTableViewCell")
-        notificationListApi()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            self.view.makeToast("No Internet".localiz(), duration: 2.0, position: .bottom)
+        }else{
+            notificationListApi()
+        }
         self.NotificationstableView.delegate = self
         self.NotificationstableView.dataSource = self
         languagelocalization()
@@ -156,7 +160,7 @@ extension HistoryNotificationsViewController : UITableViewDelegate, UITableViewD
         if  receivedImage != ""{
             cell.imageView1.isHidden = false
 //            cell.notificationImg.kf.setImage(with: URL(string: "\(Promo_ImageData)\(receivedImage.dropFirst(1))"), placeholder: UIImage(named: "no_image1.jpg"))
-            cell.notificationImg.sd_setImage(with: URL(string: "\(PROMO_IMG)\(receivedImage.dropFirst(1))"),placeholderImage: UIImage(named: "no_image1.jpg"))
+            cell.notificationImg.sd_setImage(with: URL(string: "\(PROMO_IMG)\(receivedImage)"),placeholderImage: UIImage(named: "Group 6524"))
         }else{
             cell.imageView1.isHidden = true
         }

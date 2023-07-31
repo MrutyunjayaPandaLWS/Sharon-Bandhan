@@ -31,7 +31,6 @@ class ScannedCodes_VC: BaseViewController, RemoveCodeDelegate{
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var upload: GradientButton!
     var codeLIST:Array = [ScanCodeSTORE]()
-   
     
     var newproductArray: [[String:Any]] = []
     var parameterJSON:JSON?
@@ -44,6 +43,7 @@ class ScannedCodes_VC: BaseViewController, RemoveCodeDelegate{
     var pincode = ""
     var itsFrom = ""
     var codeIsSubmitted = 0
+//    private var animationView: LottieAnimationView?
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -48,7 +48,7 @@ class RedemptionCatalogueVC: BaseViewController, AddedToCartOrPlannerDelegate, p
         catalogueCollectionView.delegate = self
         catalogueCollectionView.dataSource = self
         self.pointsLabel.text = pointBalance
-        var vc = self.storyboard?.instantiateViewController(withIdentifier: "TaxRelatedPopupViewController") as! TaxRelatedPopupViewController
+        var vc = self.storyboard?.instantiateViewController(withIdentifier: "TDS_PopUpVC") as! TDS_PopUpVC
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
         self.present(vc, animated: true, completion: nil)
@@ -481,7 +481,7 @@ extension RedemptionCatalogueVC: UITableViewDelegate, UITableViewDataSource {
         cell.pointsLabel.text = "\(self.VM.redemptionCatalogueArray[indexPath.row].pointsRequired ?? 0)"
         let receivedImage = self.VM.redemptionCatalogueArray[indexPath.row].productImage ?? ""
         let totalImgURL = productCatalogueImgURL + receivedImage
-        cell.productImage.sd_setImage(with: URL(string: totalImgURL), placeholderImage: UIImage(named: "ic_default_img"))
+        cell.productImage.sd_setImage(with: URL(string: totalImgURL), placeholderImage: UIImage(named: "Group 6524"))
         cell.addToPlanner.tag = indexPath.row
         cell.addToCartButton.tag = indexPath.row
         let filterCategory = self.VM.myCartListArray.filter { $0.catalogueId == self.VM.redemptionCatalogueArray[indexPath.row].catalogueId ?? 0 }
@@ -559,6 +559,7 @@ extension RedemptionCatalogueVC: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Catalogue_CVC", for: indexPath) as! Catalogue_CVC
+        
         cell.catalogurLabel.text = "\(self.productCategoryListArray[indexPath.row].productCategorName ?? "")    "
             if self.categoryId == Int(self.productCategoryListArray[indexPath.item].productCategoryId!) ?? -1{
                 cell.catalogurLabel.textColor = UIColor.white

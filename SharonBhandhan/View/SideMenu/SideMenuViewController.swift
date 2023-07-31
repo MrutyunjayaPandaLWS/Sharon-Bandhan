@@ -39,7 +39,7 @@ class SideMenuViewController: BaseViewController, popUpDelegate {
     var sideMenuListArray =  [MenuMaster]()
     var parameters: JSON?
                                  
-    var sideMenuListArray1 = ["Home","Scan QR Code","Upload QR Code","Code Status","Generate E-warranty","My dream gift","Redemption catelogue","My Earning","My Redemption","Redemption Planner" ,"Offers and Promotions","My Benefits","Unique Features","Lodge Query","Helpline Call","Terms and condition"]
+    var sideMenuListArray1 = ["Home","Scan QR Code","Upload QR Code","Code Status","Generate E-Warranty","My dream gift","Redemption catelogue","My Earning","My Redemption","Redemption Planner" ,"Offers and Promotions","My Benefits","Unique Features","Lodge Query","Helpline Call","Terms and condition"]
 //    var sideMenyImagesArray = ["home 2", "qr 2", "uploadalt 2", "time-interval 2", "certificatealt 2", "gift 2", "bxs-coin-stack 2", "reademailalt 2", "calendar3-fill 2", "bxs-offer 2", "thumbs-up-solid 2", "social-buffer 2", "query 2", "headset 2", "document-text-sharp 2"]
     var sideMenuListImageArray = ["home 2","qr 2","uploadalt 2","time-interval 2","certificatealt 2","gift 2","card-giftcard 2","bxs-coin-stack 2","reademailalt 2","calendar3-fill 2","bxs-offer 2","thumbs-up-solid 2","social-buffer 2","query 2","headset 2","document-text-sharp 2"]
     
@@ -287,18 +287,16 @@ class SideMenuViewController: BaseViewController, popUpDelegate {
             DispatchQueue.main.async {
                 self.customerNameLabel.text = response?.lstCustomerFeedBackJsonApi?[0].firstName ?? ""
                 self.memberSince.text = "\("smMemberSinceKEY".localiz()): \(response?.objCustomerDashboardList?[0].memberSince ?? "")"
+                var customerImage = String(response?.lstCustomerFeedBackJsonApi?[0].customerImage ?? "")
+                if customerImage.first == "~"{
+                    customerImage = String(customerImage.dropFirst())
+                }
+                if customerImage.contains("UploadFiles/CustomerImage"){
+                    self.profileImageView.sd_setImage(with: URL(string: customerImageURL + "\(customerImage)"), placeholderImage: UIImage(named: "icons8-test-account-96"))
+                }else{
+                    self.profileImageView.sd_setImage(with: URL(string: profileImageURL + "\(customerImage)"), placeholderImage: UIImage(named: "icons8-test-account-96"))
+                }
                 
-//                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                    self.memberSince.text = "\("smMemberSinceKEY".localiz()): \(response?.objCustomerDashboardList?[0].memberSince ?? "")"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                    self.memberSince.text = "से सदस्ये: \(response?.objCustomerDashboardList?[0].memberSince ?? "")"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                    self.memberSince.text = "যেহেতু সদস্য: \(response?.objCustomerDashboardList?[0].memberSince ?? "")"
-//                }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "4"{
-//                    self.memberSince.text = "నుండి సభ్యుడు: \(response?.objCustomerDashboardList?[0].memberSince ?? "")"
-//                }
-                let customerImage = String(response?.lstCustomerFeedBackJsonApi?[0].customerImage ?? "").dropFirst()
-                self.profileImageView.sd_setImage(with: URL(string: customerImageURL + "\(customerImage)"), placeholderImage: UIImage(named: "icons8-test-account-96"))
                 self.tierNameLabel.text = response?.lstCustomerFeedBackJsonApi?[0].customerGrade ?? ""
                 if response?.lstCustomerFeedBackJsonApi?[0].customerGrade ?? "" == "Bronze" {
                     self.tierImageView.image = UIImage(named: "grade1")
@@ -367,7 +365,7 @@ extension SideMenuViewController : UITableViewDelegate, UITableViewDataSource{
             if indexPath.row == 0{
                 cell?.sideMenuLabel.text = "Home".localiz()
             }else if indexPath.row == 1{
-                cell?.sideMenuLabel.text = "fcScanQRCodeKEY".localiz()
+                cell?.sideMenuLabel.text = "Scan QR Code".localiz()
                 
 //                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
 //                    cell?.sideMenuLabel.text = "fcScanQRCodeKEY".localiz()
@@ -406,7 +404,7 @@ extension SideMenuViewController : UITableViewDelegate, UITableViewDataSource{
 //                    cell?.sideMenuLabel.text = "కోడ్ స్థితి"
 //                }
             }else if indexPath.row == 4{
-                cell?.sideMenuLabel.text = "ewGenerateEWarrentyKEY".localiz()
+                cell?.sideMenuLabel.text = "Generate E-Warranty".localiz()
                 
 //                if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
 //                    cell?.sideMenuLabel.text = "ewGenerateEWarrentyKEY".localiz()
@@ -630,7 +628,7 @@ extension SideMenuViewController : UITableViewDelegate, UITableViewDataSource{
                     }else if self.vm.menuListArray[indexPath.row].idMenu ?? 0 == 401{
                         //Generate E Warranty
                         cell?.sideMenuImageView.image = UIImage(named: "certificatealt 2")
-                        cell?.sideMenuLabel.text = "ewGenerateEWarrentyKEY".localiz()
+                        cell?.sideMenuLabel.text = "Generate E-Warranty".localiz()
                         
 //                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
 //                            cell?.sideMenuLabel.text = "ewGenerateEWarrentyKEY".localiz()
@@ -835,7 +833,7 @@ extension SideMenuViewController : UITableViewDelegate, UITableViewDataSource{
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CodeStatusListVC") as! CodeStatusListVC
                 vc.fromSideMenu = "SideMenu"
                 self.navigationController?.pushViewController(vc, animated: true)
-            }else if sideMenuListArray1[indexPath.row] == "Generate E-warranty"{
+            }else if sideMenuListArray1[indexPath.row] == "Generate E-Warranty"{
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DownloadEWarrantyListViewController") as! DownloadEWarrantyListViewController
                 vc.fromSideMenu = "SideMenu"
                 self.navigationController?.pushViewController(vc, animated: true)
