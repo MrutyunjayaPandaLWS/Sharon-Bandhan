@@ -32,7 +32,7 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
         self.vm.VC = self
         self.userNameTF.keyboardType = .numberPad
         self.userNameTF.delegate = self
-        self.checkMarkButton.setImage(UIImage(named: "uncheck1"), for: .normal)
+        self.checkMarkButton.setImage(UIImage(named: "square (1)"), for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -92,7 +92,7 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
     @IBAction func forgotPassword(_ sender: Any) {
         self.userNameTF.text = ""
         self.passwordTF.text = ""
-        self.checkMarkButton.setImage(UIImage(named: "uncheck1"), for: .normal)
+        self.checkMarkButton.setImage(UIImage(named: "square (1)"), for: .normal)
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -147,16 +147,16 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
     //Delegate:-
     
     func declineDidTap(_ vc: Terms_ConditionsViewController) {
-        self.checkMarkButton.setImage(UIImage(named: "uncheck1"), for: .normal)
+        self.checkMarkButton.setImage(UIImage(named: "square (1)"), for: .normal)
     }
     
     func acceptDidTap(_ vc: Terms_ConditionsViewController) {
         if vc.boolResult == true{
             self.boolResult = true
-            self.checkMarkButton.setImage(UIImage(named: "check1"), for: .normal)
+            self.checkMarkButton.setImage(UIImage(named: "checkmark-2"), for: .normal)
             return
         }
-        self.checkMarkButton.setImage(UIImage(named: "uncheck1"), for: .normal)
+        self.checkMarkButton.setImage(UIImage(named: "square (1)"), for: .normal)
             self.boolResult = false
          return
     }
@@ -296,7 +296,7 @@ class LoginViewController: BaseViewController, TermsAndConditionDelegate,UITextF
                     DispatchQueue.main.async{
                         self.userNameTF.text = ""
                         self.passwordTF.text = ""
-                        self.checkMarkButton.setImage(UIImage(named: "uncheck1"), for: .normal)
+                        self.checkMarkButton.setImage(UIImage(named: "square (1)"), for: .normal)
                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PopupAlertOne_VC") as? PopupAlertOne_VC
                         vc!.delegate = self
                         vc!.titleInfo = ""

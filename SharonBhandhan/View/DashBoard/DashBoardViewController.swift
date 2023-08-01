@@ -481,6 +481,7 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
                 let images = ("\(PROMO_IMG)\(filterImage)").replacingOccurrences(of: " ", with: "%20")
                 
                 sourceArray.append(AlamofireSource(urlString: images, placeholder: UIImage(named: "backgroundImage"))!)
+                bannerView.contentScaleMode = .scaleToFill
             }
             bannerView.setImageInputs(sourceArray)
             bannerView.slideshowInterval = 3.0

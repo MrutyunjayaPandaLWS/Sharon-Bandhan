@@ -3321,6 +3321,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2HG885J5KS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SharonBhandhan/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sharon Bandhan";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sharon Bandhan Need to Access the camera to upload profile Image and Customer support";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Sharon Bhandhan Application\" wants to determine your location to understand you are a genuine customer, tagged to a Century Retailer Location.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Sharon Bandhan Need to Access the Photo Library to upload profile Image  and Customer support";
@@ -3365,6 +3366,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2HG885J5KS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SharonBhandhan/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sharon Bandhan";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sharon Bandhan Need to Access the camera to upload profile Image and Customer support";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Sharon Bhandhan Application\" wants to determine your location to understand you are a genuine customer, tagged to a Century Retailer Location.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Sharon Bandhan Need to Access the Photo Library to upload profile Image  and Customer support";

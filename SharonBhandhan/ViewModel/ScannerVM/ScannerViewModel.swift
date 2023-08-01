@@ -164,23 +164,27 @@ class ScannerViewModel: PopUpDelegate{
                                 } else {
                                     list3 = self.tempStoreCodesArray.filter{ ($0.scratchCode == "\(code)") }
                                     if list3.count ==  0 {
-                                        self.vc?.alertWithAction(title: "", message: "\(splittedArray[1]) " + "\(self.codeGenuineResponse?.qrUsegereport?[0].memberName ?? "")")
+//                                        self.vc?.alertWithAction(title: "", message: "\(splittedArray[1]) " + "\(self.codeGenuineResponse?.qrUsegereport?[0].memberName ?? "")")
+                                        self.vc?.alertWithAction(title: "", message: "\(splittedArray[1]) ")
                                         //                                    self.vc?.alertmsg(msg: "\(splittedArray[1]) " + "\(self.codeGenuineResponse.membername ?? "")", title: "")
                                     }
                                 }
                                 
                                 DispatchQueue.main.async {
-                                    self.vc!.productname.text = self.codeGenuineResponse?.qrUsegereport?[0].productName ?? ""
-                                    self.vc!.plantName.text = self.codeGenuineResponse?.qrUsegereport?[0].locationName ?? ""
-                                    self.vc!.thickness.text = self.codeGenuineResponse?.qrUsegereport?[0].thickness ?? ""
-                                    self.vc!.size.text = self.codeGenuineResponse?.qrUsegereport?[0].size ?? ""
-                                    if self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "" != "" && self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "" != nil && self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "" != "-"{
-                                        self.vc!.dateofMfg.text = self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "01/01/0001 00:00:00" //self.dateformatterFunc(stringDate: self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "01/01/0001 00:00:00")
-                                    }else{
-                                        self.vc!.dateofMfg.text = "-"
+                                    if self.codeGenuineResponse?.qrUsegereport?.count != 0{
+                                        self.vc!.productname.text = self.codeGenuineResponse?.qrUsegereport?[0].productName ?? ""
+                                        self.vc!.plantName.text = self.codeGenuineResponse?.qrUsegereport?[0].locationName ?? ""
+                                        self.vc!.thickness.text = self.codeGenuineResponse?.qrUsegereport?[0].thickness ?? ""
+                                        self.vc!.size.text = self.codeGenuineResponse?.qrUsegereport?[0].size ?? ""
+                                        if self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "" != "" && self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "" != nil && self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "" != "-"{
+                                            self.vc!.dateofMfg.text = self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "01/01/0001 00:00:00" //self.dateformatterFunc(stringDate: self.codeGenuineResponse?.qrUsegereport?[0].printDate ?? "01/01/0001 00:00:00")
+                                        }else{
+                                            self.vc!.dateofMfg.text = "-"
+                                        }
+                                        self.vc!.uniqueCode.text = self.codeGenuineResponse?.qrUsegereport?[0].scratchCode ?? ""
+                                        self.appendDatatoListing(data: self.codeGenuineResponse!, StatusID: String(splittedArray[0]), scratchcode: code)
+
                                     }
-                                    self.vc!.uniqueCode.text = self.codeGenuineResponse?.qrUsegereport?[0].scratchCode ?? ""
-                                    self.appendDatatoListing(data: self.codeGenuineResponse!, StatusID: String(splittedArray[0]), scratchcode: code)
                                 }
                                 
                                 

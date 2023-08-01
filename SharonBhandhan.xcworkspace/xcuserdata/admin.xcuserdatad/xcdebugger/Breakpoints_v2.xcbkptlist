@@ -174,8 +174,8 @@
             filePath = "SharonBhandhan/View/DashBoard/DashBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1021"
-            endingLineNumber = "1021"
+            startingLineNumber = "1022"
+            endingLineNumber = "1022"
             landmarkName = "codesSubmissionsApi()"
             landmarkType = "7">
             <Locations>
@@ -222,8 +222,8 @@
             filePath = "SharonBhandhan/View/DashBoard/DashBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1028"
-            endingLineNumber = "1028"
+            startingLineNumber = "1029"
+            endingLineNumber = "1029"
             landmarkName = "codesSubmissionsApi()"
             landmarkType = "7">
             <Locations>
@@ -270,8 +270,8 @@
             filePath = "SharonBhandhan/View/DashBoard/DashBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1032"
-            endingLineNumber = "1032"
+            startingLineNumber = "1033"
+            endingLineNumber = "1033"
             landmarkName = "codesSubmissionsApi()"
             landmarkType = "7">
             <Locations>
@@ -1447,72 +1447,10 @@
             filePath = "SharonBhandhan/ViewModel/ScannerVM/ScannerViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "369"
-            endingLineNumber = "369"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
             landmarkName = "codeGenuineAPI(code:parameter:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "07532591-A0B5-4357-8D52-B696C486F52F - c8bd9bb089562f97"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #10 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;SharonBhandhan.EWarrentyScannerModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.ScannerViewModel.codeGenuineAPI(code: Swift.String, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
-                  moduleName = "SharonBhandhan"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/ViewModel/ScannerVM/ScannerViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "369"
-                  endingLineNumber = "369"
-                  offsetFromSymbolStart = "325">
-               </Location>
-               <Location
-                  uuid = "07532591-A0B5-4357-8D52-B696C486F52F - c8bd9bb089562f97"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #10 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;SharonBhandhan.EWarrentyScannerModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.ScannerViewModel.codeGenuineAPI(code: Swift.String, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
-                  moduleName = "SharonBhandhan"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/ViewModel/ScannerVM/ScannerViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "369"
-                  endingLineNumber = "369"
-                  offsetFromSymbolStart = "408">
-               </Location>
-               <Location
-                  uuid = "07532591-A0B5-4357-8D52-B696C486F52F - 3688b05f85c0a39a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;SharonBhandhan.EWarrentyScannerModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.ScannerViewModel.codeGenuineAPI(code: Swift.String, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
-                  moduleName = "SharonBhandhan"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/ViewModel/ScannerVM/ScannerViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "381"
-                  endingLineNumber = "381"
-                  offsetFromSymbolStart = "6468">
-               </Location>
-               <Location
-                  uuid = "07532591-A0B5-4357-8D52-B696C486F52F - 3688b05f85c0a39a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;SharonBhandhan.EWarrentyScannerModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.ScannerViewModel.codeGenuineAPI(code: Swift.String, parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
-                  moduleName = "SharonBhandhan"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/ViewModel/ScannerVM/ScannerViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "381"
-                  endingLineNumber = "381"
-                  offsetFromSymbolStart = "8395">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2676,6 +2614,38 @@
             endingLineNumber = "34"
             landmarkName = "localization()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "78F24FEE-257D-4F82-9BA8-1D95D6734ACA - afaeb63e9864f6c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.TermsAndConditionsVC.localization() -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/Terms&amp;Conditions/TermsAndConditionsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "305">
+               </Location>
+               <Location
+                  uuid = "78F24FEE-257D-4F82-9BA8-1D95D6734ACA - afaeb63e9864f6c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.TermsAndConditionsVC.localization() -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/Terms&amp;Conditions/TermsAndConditionsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "356">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2692,13 +2662,45 @@
             endingLineNumber = "76"
             landmarkName = "termsAndConditionApi()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F867ABCB-719B-4F75-931D-7001F8D580F2 - cf84c3666009e088"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.TermsAndConditionsVC.termsAndConditionApi() -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/Terms&amp;Conditions/TermsAndConditionsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "F867ABCB-719B-4F75-931D-7001F8D580F2 - cf84c3666009e088"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.TermsAndConditionsVC.termsAndConditionApi() -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/Terms&amp;Conditions/TermsAndConditionsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "260">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "73424298-F7DE-4C74-A8EB-139E6D4C9EB7"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SharonBhandhan/View/Terms&amp;Conditions/Terms&amp;ConditionsViewController.swift"
@@ -2714,7 +2716,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E0688FB3-2AD8-4CA8-87E5-3ECDC37CFE9A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SharonBhandhan/View/Terms&amp;Conditions/Terms&amp;ConditionsViewController.swift"
@@ -2755,6 +2757,36 @@
                   endingLineNumber = "115"
                   offsetFromSymbolStart = "244">
                </Location>
+               <Location
+                  uuid = "E0688FB3-2AD8-4CA8-87E5-3ECDC37CFE9A - 342bb0f0858539b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.Terms_ConditionsViewController.termsAndConditionApi() -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/Terms&amp;Conditions/Terms&amp;ConditionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "932">
+               </Location>
+               <Location
+                  uuid = "E0688FB3-2AD8-4CA8-87E5-3ECDC37CFE9A - dff342b705be797a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;SharonBhandhan.termsAndConditionModels&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.Terms_ConditionsViewController.termsAndConditionApi() -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/Terms&amp;Conditions/Terms&amp;ConditionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "217">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2762,7 +2794,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0C68F818-AE39-4B6F-978B-BC43CF9F695A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SharonBhandhan/Resource/Networking/RestAPI_Requests.swift"
@@ -2778,7 +2810,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C8D6BB0B-1C20-4F41-BBB8-491A53DDD5C8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SharonBhandhan/Resource/Networking/RestAPI_Requests.swift"
@@ -2804,6 +2836,419 @@
             endingLineNumber = "88"
             landmarkName = "termsAndConditionApi()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E52DC831-BBF1-466B-8D30-CF1560BF97B9 - e659a201953877e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;SharonBhandhan.termsAndConditionModels&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.TermsAndConditionsVC.termsAndConditionApi() -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/Terms&amp;Conditions/TermsAndConditionsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "290">
+               </Location>
+               <Location
+                  uuid = "E52DC831-BBF1-466B-8D30-CF1560BF97B9 - e659a201953877e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;SharonBhandhan.termsAndConditionModels&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.TermsAndConditionsVC.termsAndConditionApi() -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/Terms&amp;Conditions/TermsAndConditionsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "332">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2BAE7075-CD48-4D4C-BE53-40B25CC4FDD3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharonBhandhan/View/Login/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "callAPI()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2BAE7075-CD48-4D4C-BE53-40B25CC4FDD3 - 3196ea8d1d636d8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;SharonBhandhan.LoginModels&gt;) -&gt; () in SharonBhandhan.LoginViewController.callAPI() -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "178"
+                  endingLineNumber = "178"
+                  offsetFromSymbolStart = "203">
+               </Location>
+               <Location
+                  uuid = "2BAE7075-CD48-4D4C-BE53-40B25CC4FDD3 - 3196ea8d1d636d8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;SharonBhandhan.LoginModels&gt;) -&gt; () in SharonBhandhan.LoginViewController.callAPI() -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "178"
+                  endingLineNumber = "178"
+                  offsetFromSymbolStart = "272">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "48DC3479-4F0A-436D-A681-8E61C567CFD1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharonBhandhan/View/MyRedemption/MyRedemptionsListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "myRedemptionList()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "48DC3479-4F0A-436D-A681-8E61C567CFD1 - 56eb8ef66920c103"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.MyRedemptionsListViewController.myRedemptionList() -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/MyRedemption/MyRedemptionsListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "1006">
+               </Location>
+               <Location
+                  uuid = "48DC3479-4F0A-436D-A681-8E61C567CFD1 - 56eb8ef66920c103"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.MyRedemptionsListViewController.myRedemptionList() -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/MyRedemption/MyRedemptionsListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "824">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E93CEDD8-FBF3-4658-BCA7-AF27271F155B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharonBhandhan/View/DreamGift/DreamGiftListing/DreamGiftListingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "273"
+            endingLineNumber = "273"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E93CEDD8-FBF3-4658-BCA7-AF27271F155B - b86801bb19f31a4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.DreamGiftListingViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/DreamGift/DreamGiftListing/DreamGiftListingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "273"
+                  endingLineNumber = "273"
+                  offsetFromSymbolStart = "15292">
+               </Location>
+               <Location
+                  uuid = "E93CEDD8-FBF3-4658-BCA7-AF27271F155B - b86801bb19f31a4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.DreamGiftListingViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/DreamGift/DreamGiftListing/DreamGiftListingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "273"
+                  endingLineNumber = "273"
+                  offsetFromSymbolStart = "13122">
+               </Location>
+               <Location
+                  uuid = "E93CEDD8-FBF3-4658-BCA7-AF27271F155B - b86801bb19f31a4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.DreamGiftListingViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/DreamGift/DreamGiftListing/DreamGiftListingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "273"
+                  endingLineNumber = "273"
+                  offsetFromSymbolStart = "10668">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0FB05579-0F8F-4597-83C3-2118C4BCC692"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharonBhandhan/View/MyEarning/MyEarningsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0FB05579-0F8F-4597-83C3-2118C4BCC692 - e0d8ba7cd79ff5fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.MyEarningsViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/MyEarning/MyEarningsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "2569">
+               </Location>
+               <Location
+                  uuid = "0FB05579-0F8F-4597-83C3-2118C4BCC692 - e0d8ba7cd79ff5fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.MyEarningsViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/MyEarning/MyEarningsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "2585">
+               </Location>
+               <Location
+                  uuid = "0FB05579-0F8F-4597-83C3-2118C4BCC692 - e0d8ba7cd79ff5fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.MyEarningsViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/MyEarning/MyEarningsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "2601">
+               </Location>
+               <Location
+                  uuid = "0FB05579-0F8F-4597-83C3-2118C4BCC692 - e0d8ba7cd79ff5fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.MyEarningsViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/MyEarning/MyEarningsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "2400">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C0321CE-E629-472A-BF01-6AB75081296E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharonBhandhan/View/MyEarning/MyEarningsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "myEarningListApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0C0321CE-E629-472A-BF01-6AB75081296E - e9f85bf755cb81f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.MyEarningsViewController.myEarningListApi() -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/MyEarning/MyEarningsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "495">
+               </Location>
+               <Location
+                  uuid = "0C0321CE-E629-472A-BF01-6AB75081296E - e9f85bf755cb81f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.MyEarningsViewController.myEarningListApi() -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/MyEarning/MyEarningsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "464">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80E1DB65-A9F6-4C2B-A50B-6E5BAF7DF722"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharonBhandhan/View/MyEarning/MyEarningsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "80E1DB65-A9F6-4C2B-A50B-6E5BAF7DF722 - e0d8ba7cd79ff7ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.MyEarningsViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/MyEarning/MyEarningsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "183"
+                  endingLineNumber = "183"
+                  offsetFromSymbolStart = "6605">
+               </Location>
+               <Location
+                  uuid = "80E1DB65-A9F6-4C2B-A50B-6E5BAF7DF722 - e0d8ba7cd79ff7ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.MyEarningsViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/MyEarning/MyEarningsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "183"
+                  endingLineNumber = "183"
+                  offsetFromSymbolStart = "5208">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D72D6938-9586-4D0D-AD24-A8B03B1D6153"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharonBhandhan/View/SideMenu/SideMenuViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "deleteAccountBTN(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D72D6938-9586-4D0D-AD24-A8B03B1D6153 - 730f5165abb6cbec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (__C.UIAlertAction) -&gt; () in SharonBhandhan.SideMenuViewController.deleteAccountBTN(Any) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/SideMenu/SideMenuViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "580">
+               </Location>
+               <Location
+                  uuid = "D72D6938-9586-4D0D-AD24-A8B03B1D6153 - 730f5165abb6cbec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (__C.UIAlertAction) -&gt; () in SharonBhandhan.SideMenuViewController.deleteAccountBTN(Any) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/View/SideMenu/SideMenuViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "592">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

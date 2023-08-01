@@ -129,7 +129,7 @@ class DreamGiftDetailsViewController: BaseViewController, popUpDelegate {
 //            redeemBTN.backgroundColor = UIColor(red: 209/255, green: 209/255, blue: 214/255, alpha: 1.0)
 //        }
         
-        if self.isRedeemable == 1{
+        if self.pointsBalance != 0{
             print(pointsRequired,"pointsRequired")
             print(pointsBalance,"PointBalance")
             print(tdsvalue,"TDs")

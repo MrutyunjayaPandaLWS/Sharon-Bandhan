@@ -160,7 +160,8 @@ extension CustomerQueryListingViewController:  UITableViewDelegate, UITableViewD
             cell.querydetails.text = "  \(VM.queryListingArray[indexPath.section].helpTopic ?? "")"
             let querydateAndTime = VM.queryListingArray[indexPath.section].jCreatedDate ?? ""
             let querydateAndTimeArray = querydateAndTime.components(separatedBy: " ")
-            cell.querydate.text = querydateAndTimeArray[0]
+        
+            cell.querydate.text = convertDateFormater(String(querydateAndTimeArray[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")//querydateAndTimeArray[0]
             cell.querytime.text = querydateAndTimeArray[1]
 //            if CustomerTicketID == CustomerTicketIDchatvc{
 //                let centerviewcontroller = self.storyboard1.instantiateViewController(withIdentifier: "ChatListViewController") as! ChatListViewController

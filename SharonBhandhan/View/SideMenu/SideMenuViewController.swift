@@ -56,7 +56,7 @@ class SideMenuViewController: BaseViewController, popUpDelegate {
         
     }
     override func viewWillLayoutSubviews() {
-        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
+        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.height / 2
         self.profileImageView.layer.borderColor = UIColor.white.cgColor
         self.profileImageView.layer.borderWidth = 1.0
         self.profileImageView.clipsToBounds = true

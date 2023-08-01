@@ -178,7 +178,12 @@ extension MyEarningsViewController : UITableViewDelegate, UITableViewDataSource{
 //            }
             
         }else {
-            cell?.giftId.text = self.VM.myEarningListArray[indexPath.row].invoiceNo ?? ""
+            print(self.VM.myEarningListArray[indexPath.row].invoiceNo,"invoice number")
+            if self.VM.myEarningListArray[indexPath.row].invoiceNo == "-- nn  "{
+                cell?.giftId.text = "Enrollment Complimentary"
+            }else{
+                cell?.giftId.text = self.VM.myEarningListArray[indexPath.row].invoiceNo ?? ""
+            }
         }
         
         cell?.pointsLbl.text = "\(self.VM.myEarningListArray[indexPath.row].rewardPoints ?? 0)"

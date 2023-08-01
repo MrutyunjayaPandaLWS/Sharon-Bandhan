@@ -30,7 +30,7 @@ class DreamGiftListingViewController: BaseViewController, AddOrRemoveGiftDelegat
         self.dreamGifttableView.delegate = self
         self.dreamGifttableView.dataSource = self
         self.dreamGifttableView.separatorStyle = .none
-        
+        self.noDataFound.isHidden = true
         NotificationCenter.default.addObserver(self, selector: #selector(afterRemovedProducts), name: Notification.Name.dreamGiftRemoved, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(giftAddedIntoCart), name: Notification.Name.giftAddedIntoCart, object: nil)
         
@@ -246,12 +246,12 @@ extension DreamGiftListingViewController : UITableViewDelegate, UITableViewDataS
         cell?.dreamGiftTitle.text = self.VM.myDreamGiftListArray[indexPath.row].giftType ?? ""
         let createdDate = (self.VM.myDreamGiftListArray[indexPath.row].jCreatedDate ?? "").split(separator: " ")
         cell?.tdsPointsTitleLbl.text = "\("tdsPts".localiz())"
-//        let convertedFormat = convertDateFormater(String(createdDate[0]), fromDate: "MM/DD/yyyy", toDate: "DD/MM/yyyy")
-        cell?.giftCreatedDate.text = String(createdDate[0])
+        let convertedFormat = convertDateFormater(String(createdDate[0]), fromDate: "MM/DD/yyyy", toDate: "DD/MM/yyyy")
+        cell?.giftCreatedDate.text = convertedFormat//String(createdDate[0])
         
         let desiredDate = (self.VM.myDreamGiftListArray[indexPath.row].jDesiredDate ?? "").split(separator: " ")
-//        let desiredDateFormat = convertDateFormater(String(desiredDate[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")
-        cell?.desiredDate.text = "\(desiredDate[0])"//desiredDateFormat
+        let desiredDateFormat = convertDateFormater(String(desiredDate[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")
+        cell?.desiredDate.text = desiredDateFormat //"\(desiredDate[0])"//desiredDateFormat
         cell?.pointsRequired.text = "\(self.VM.myDreamGiftListArray[indexPath.row].pointsRequired ?? 0)"
         let balance = Double(self.VM.myDreamGiftListArray[indexPath.row].pointsBalance ?? 0)
         let pointRequired = Double(self.VM.myDreamGiftListArray[indexPath.row].pointsRequired ?? 0)
@@ -270,7 +270,7 @@ extension DreamGiftListingViewController : UITableViewDelegate, UITableViewDataS
         
         
         
-        if self.VM.myDreamGiftListArray[indexPath.row].is_Redeemable ?? -2 != 1{
+        if self.VM.myDreamGiftListArray[indexPath.row].pointsBalance ?? -2 == 0{
             cell?.redeemButton.isEnabled = false
 //            cell?.redeemButton.backgroundColor = UIColor(red: 209/255, green: 209/255, blue: 214/255, alpha: 1.0)
             cell?.redeemButton.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)

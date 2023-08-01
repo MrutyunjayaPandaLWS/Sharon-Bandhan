@@ -171,8 +171,8 @@ extension MyRedemptionsListViewController : UITableViewDelegate, UITableViewData
         
 
         let redemptionDate = (self.VM.myRedemptionList[indexPath.row].jRedemptionDate ?? "-").split(separator: " ")
-//        let dateFormatted = convertDateFormater(String(redemptionDate[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")
-        cell?.redemptionDate.text = "\(redemptionDate[0])"//"\(dateFormatted)"
+        let dateFormatted = convertDateFormater(String(redemptionDate[0]), fromDate: "MM/dd/yyyy", toDate: "dd/MM/yyyy")
+        cell?.redemptionDate.text = "\(dateFormatted)" // "\(redemptionDate[0])"
         cell?.productName.text = self.VM.myRedemptionList[indexPath.row].productName ?? "-"
         cell?.tdsvalue.text = "\(Int(self.VM.myRedemptionList[indexPath.row].ApplicableTds ?? 0.0))"
         cell?.productPoints.text = "\(self.VM.myRedemptionList[indexPath.row].redeemedPoints ?? 0)"
@@ -280,21 +280,24 @@ extension MyRedemptionsListViewController : UITableViewDelegate, UITableViewData
         return 180
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RedemptionCatalogueDetailsVC") as! RedemptionCatalogueDetailsVC
-        vc.isComeFrom = "MyRedemption"
-        vc.productImage = self.VM.myRedemptionList[indexPath.row].productImage ?? ""
-        vc.prodRefNo = self.VM.myRedemptionList[indexPath.row].redemptionRefno ?? ""
-        vc.productCategory = self.VM.myRedemptionList[indexPath.row].categoryName ?? ""
-        vc.productName = self.VM.myRedemptionList[indexPath.row].productName ?? ""
-        vc.productPoints = "\(self.VM.myRedemptionList[indexPath.row].redeemedPoints ?? 0)"
-        vc.productDetails = self.VM.myRedemptionList[indexPath.row].productDesc ?? ""
-        vc.termsandContions = self.VM.myRedemptionList[indexPath.row].termsCondition ?? ""
-        vc.quantity = self.VM.myRedemptionList[indexPath.row].quantity ?? 0
-        vc.tdspercentage1 = self.VM.myRedemptionList[indexPath.row].TDSPercentage ?? 0.0
-        vc.redemptionID = self.VM.myRedemptionList[indexPath.row].redemptionId ?? 0
-        print(vc.tdspercentage1,"points")
-        vc.applicabletds = self.VM.myRedemptionList[indexPath.row].ApplicableTds ?? 0.0
-        self.navigationController?.pushViewController(vc, animated: true)
+        let redemptionType = self.VM.myRedemptionList[indexPath.item].redemptionType
+        if redemptionType != 3 && redemptionType != 4 && redemptionType != 5{
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RedemptionCatalogueDetailsVC") as! RedemptionCatalogueDetailsVC
+            vc.isComeFrom = "MyRedemption"
+            vc.productImage = self.VM.myRedemptionList[indexPath.row].productImage ?? ""
+            vc.prodRefNo = self.VM.myRedemptionList[indexPath.row].redemptionRefno ?? ""
+            vc.productCategory = self.VM.myRedemptionList[indexPath.row].categoryName ?? ""
+            vc.productName = self.VM.myRedemptionList[indexPath.row].productName ?? ""
+            vc.productPoints = "\(self.VM.myRedemptionList[indexPath.row].redeemedPoints ?? 0)"
+            vc.productDetails = self.VM.myRedemptionList[indexPath.row].productDesc ?? ""
+            vc.termsandContions = self.VM.myRedemptionList[indexPath.row].termsCondition ?? ""
+            vc.quantity = self.VM.myRedemptionList[indexPath.row].quantity ?? 0
+            vc.tdspercentage1 = self.VM.myRedemptionList[indexPath.row].TDSPercentage ?? 0.0
+            vc.redemptionID = self.VM.myRedemptionList[indexPath.row].redemptionId ?? 0
+            print(vc.tdspercentage1,"points")
+            vc.applicabletds = self.VM.myRedemptionList[indexPath.row].ApplicableTds ?? 0.0
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 

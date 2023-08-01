@@ -2899,9 +2899,6 @@ to Sharon Bandhan</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bev-PY-HA2">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimageavailable" translatesAutoresizingMaskIntoConstraints="NO" id="f3M-Qs-HP1">
-                                        <rect key="frame" x="8" y="94" width="373" height="637"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80p-Wq-KiR">
                                         <rect key="frame" x="345" y="20" width="28" height="28"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2917,6 +2914,9 @@ to Sharon Bandhan</string>
                                             <action selector="closeexpandedview:" destination="0pJ-9O-L4m" eventType="touchUpInside" id="mAS-rk-qA2"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimageavailable" translatesAutoresizingMaskIntoConstraints="NO" id="f3M-Qs-HP1">
+                                        <rect key="frame" x="8" y="94" width="373" height="637"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9178026319" green="0.99688774349999998" blue="0.95293635129999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -8477,7 +8477,7 @@ to Sharon Bandhan</string>
                                                 <rect key="frame" x="12" y="10" width="331" height="290"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="290" id="ecA-wJ-hdh"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="290" id="ecA-wJ-hdh"/>
                                                 </constraints>
                                                 <string key="text">*  Tax Deduction at Source (TDS) will be applicable on redemption value, once the total amount crosses points worth Rs 20000 :     - 10 % if PAN number available.     - 20 % if PAN number not available  *  TDS will be deducted once the product is Delivered to the customer.  *  TDS once deducted will not be reversed and will be paid to the Govt. of India.</string>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -8560,6 +8560,7 @@ to Sharon Bandhan</string>
                         <constraints>
                             <constraint firstItem="N3z-GR-lnn" firstAttribute="trailing" secondItem="qMW-MJ-kFa" secondAttribute="trailing" constant="20" id="5xh-xy-HSj"/>
                             <constraint firstItem="qMW-MJ-kFa" firstAttribute="leading" secondItem="N3z-GR-lnn" secondAttribute="leading" constant="20" id="Cm6-bP-63r"/>
+                            <constraint firstItem="3x6-OQ-goo" firstAttribute="height" secondItem="N3z-GR-lnn" secondAttribute="height" multiplier="0.382082" id="Qhe-iB-ruA"/>
                             <constraint firstItem="qMW-MJ-kFa" firstAttribute="centerY" secondItem="GWQ-39-Boo" secondAttribute="centerY" id="mvw-Ar-e2N"/>
                         </constraints>
                     </view>
@@ -11082,7 +11083,7 @@ to Sharon Bandhan</string>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_default_img" translatesAutoresizingMaskIntoConstraints="NO" id="pg5-rE-XtS">
                                         <rect key="frame" x="8.0000000000000036" y="8.0000000000000036" width="50.333333333333343" height="50.333333333333343"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="pg5-rE-XtS" secondAttribute="height" multiplier="1:1" id="Lfz-ID-ZqP"/>
+                                            <constraint firstAttribute="width" secondItem="pg5-rE-XtS" secondAttribute="height" multiplier="1:1" id="XfI-qH-FO9"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xky-2f-HgC">
@@ -11113,7 +11114,7 @@ to Sharon Bandhan</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ucb-WL-cST">
-                                        <rect key="frame" x="16" y="69" width="345" height="35"/>
+                                        <rect key="frame" x="16" y="70.333333333333343" width="345" height="35"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Uxv-sy-c7W">
                                                 <rect key="frame" x="0.0" y="0.0" width="196" height="35"/>
@@ -11163,7 +11164,7 @@ to Sharon Bandhan</string>
                                                     </label>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="120" id="Beg-Qn-yg9"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Beg-Qn-yg9"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -11178,18 +11179,17 @@ to Sharon Bandhan</string>
                                     <constraint firstItem="pg5-rE-XtS" firstAttribute="leading" secondItem="7QG-Ue-GTB" secondAttribute="leading" constant="8" id="6cc-SH-oXE"/>
                                     <constraint firstItem="nnP-6E-gYQ" firstAttribute="top" secondItem="xky-2f-HgC" secondAttribute="bottom" constant="2" id="7ag-yQ-7QT"/>
                                     <constraint firstAttribute="trailing" secondItem="nnP-6E-gYQ" secondAttribute="trailing" constant="8" id="9NB-Ud-uZN"/>
-                                    <constraint firstAttribute="height" constant="112" id="AdH-Mb-TpS"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="112" id="AdH-Mb-TpS"/>
                                     <constraint firstItem="xky-2f-HgC" firstAttribute="leading" secondItem="pg5-rE-XtS" secondAttribute="trailing" constant="8" symbolic="YES" id="B2E-VY-BMo"/>
                                     <constraint firstItem="xky-2f-HgC" firstAttribute="top" secondItem="7QG-Ue-GTB" secondAttribute="top" constant="8" id="CgZ-aN-iVP"/>
-                                    <constraint firstItem="pg5-rE-XtS" firstAttribute="width" secondItem="7QG-Ue-GTB" secondAttribute="width" multiplier="0.13369" id="F75-9O-We4"/>
-                                    <constraint firstItem="ucb-WL-cST" firstAttribute="top" secondItem="wI1-bT-Ivn" secondAttribute="bottom" constant="8" symbolic="YES" id="H7j-WE-SW8"/>
                                     <constraint firstItem="pg5-rE-XtS" firstAttribute="top" secondItem="7QG-Ue-GTB" secondAttribute="top" constant="8" id="P5H-8Y-neh"/>
+                                    <constraint firstItem="ucb-WL-cST" firstAttribute="top" secondItem="pg5-rE-XtS" secondAttribute="bottom" constant="12" id="bCs-bB-M74"/>
                                     <constraint firstItem="ucb-WL-cST" firstAttribute="leading" secondItem="7QG-Ue-GTB" secondAttribute="leading" constant="16" id="ePt-gC-fht"/>
+                                    <constraint firstItem="pg5-rE-XtS" firstAttribute="height" secondItem="7QG-Ue-GTB" secondAttribute="height" multiplier="0.449405" id="lA4-jw-hXE"/>
                                     <constraint firstAttribute="trailing" secondItem="ucb-WL-cST" secondAttribute="trailing" constant="16" id="oIl-tr-Nyx"/>
                                     <constraint firstItem="nnP-6E-gYQ" firstAttribute="leading" secondItem="wI1-bT-Ivn" secondAttribute="trailing" constant="8" symbolic="YES" id="rB3-Dt-Rvi"/>
                                     <constraint firstAttribute="trailing" secondItem="xky-2f-HgC" secondAttribute="trailing" constant="8" id="rJR-lq-mF2"/>
                                     <constraint firstItem="wI1-bT-Ivn" firstAttribute="leading" secondItem="pg5-rE-XtS" secondAttribute="trailing" constant="8" symbolic="YES" id="wFf-oL-rTw"/>
-                                    <constraint firstAttribute="bottom" secondItem="ucb-WL-cST" secondAttribute="bottom" constant="8" id="wfL-Ao-2Qp"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -11291,9 +11291,9 @@ to Sharon Bandhan</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bcf-ld-6bV">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bcf-ld-6bV">
                                 <rect key="frame" x="8" y="206" width="377" height="507"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.91764705882352937" green="0.99607843137254903" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="12"/>
@@ -11393,6 +11393,7 @@ to Sharon Bandhan</string>
                         <color key="backgroundColor" red="0.96078431372549022" green="1" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IGe-RE-aDv" firstAttribute="leading" secondItem="Zk1-Ku-ZOb" secondAttribute="leading" constant="8" id="0om-2v-dbi"/>
+                            <constraint firstItem="7QG-Ue-GTB" firstAttribute="height" secondItem="Zk1-Ku-ZOb" secondAttribute="height" multiplier="0.147563" id="3cn-YE-Doq"/>
                             <constraint firstItem="Zk1-Ku-ZOb" firstAttribute="trailing" secondItem="IGe-RE-aDv" secondAttribute="trailing" constant="8" id="62u-Vn-rUO"/>
                             <constraint firstItem="Zk1-Ku-ZOb" firstAttribute="trailing" secondItem="7QG-Ue-GTB" secondAttribute="trailing" constant="8" id="6vS-Dj-78r"/>
                             <constraint firstItem="7mg-VR-xzk" firstAttribute="leading" secondItem="Zk1-Ku-ZOb" secondAttribute="leading" constant="20" id="CRV-OV-F5p"/>
@@ -11408,6 +11409,7 @@ to Sharon Bandhan</string>
                             <constraint firstItem="YDe-mF-QTx" firstAttribute="top" secondItem="hOu-rQ-SCY" secondAttribute="bottom" id="irH-Lh-IMf"/>
                             <constraint firstItem="YDe-mF-QTx" firstAttribute="leading" secondItem="Zk1-Ku-ZOb" secondAttribute="leading" constant="8" id="kuB-Pt-0Yq"/>
                             <constraint firstItem="7mg-VR-xzk" firstAttribute="top" secondItem="Zk1-Ku-ZOb" secondAttribute="top" constant="6" id="otL-Pk-5fZ"/>
+                            <constraint firstItem="M09-ky-iqv" firstAttribute="width" secondItem="Zk1-Ku-ZOb" secondAttribute="width" multiplier="0.305344" id="ovB-yP-qwT"/>
                             <constraint firstItem="hOu-rQ-SCY" firstAttribute="top" secondItem="Bcf-ld-6bV" secondAttribute="bottom" constant="5" id="qXi-QB-1nv"/>
                             <constraint firstItem="Bcf-ld-6bV" firstAttribute="top" secondItem="7QG-Ue-GTB" secondAttribute="bottom" constant="5" id="sle-rW-Mhg"/>
                             <constraint firstItem="Zk1-Ku-ZOb" firstAttribute="bottom" secondItem="YDe-mF-QTx" secondAttribute="bottom" id="xEf-fR-l6e"/>
@@ -15113,14 +15115,14 @@ to Sharon Bandhan</string>
                                 <rect key="frame" x="0.0" y="116" width="393" height="702"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcQ-WG-agV">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="779.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759.66666666666663"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWP-sy-0yJ" customClass="ImageSlideshow" customModule="ImageSlideshow">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="180"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UcW-E4-ZLX">
-                                                <rect key="frame" x="20" y="208" width="353" height="128"/>
+                                                <rect key="frame" x="20" y="188" width="353" height="128"/>
                                                 <subviews>
                                                     <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 8948" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1k8-fs-TRC">
                                                         <rect key="frame" x="4" y="5" width="343" height="118"/>
@@ -15248,7 +15250,6 @@ to Sharon Bandhan</string>
                                                     <constraint firstItem="my0-Oo-3zU" firstAttribute="leading" secondItem="UcW-E4-ZLX" secondAttribute="leading" constant="10" id="6h0-JE-goj"/>
                                                     <constraint firstItem="TLs-xN-QCx" firstAttribute="leading" secondItem="m4R-2V-1Ur" secondAttribute="trailing" constant="2" id="9mL-hz-ynO"/>
                                                     <constraint firstAttribute="trailing" secondItem="TLs-xN-QCx" secondAttribute="trailing" constant="15" id="CRg-Aj-6OB"/>
-                                                    <constraint firstItem="m4R-2V-1Ur" firstAttribute="height" secondItem="UcW-E4-ZLX" secondAttribute="height" multiplier="0.148438" id="H2j-gi-5xK"/>
                                                     <constraint firstItem="1k8-fs-TRC" firstAttribute="top" secondItem="UcW-E4-ZLX" secondAttribute="top" constant="5" id="Lwo-ht-Lt6"/>
                                                     <constraint firstItem="1k8-fs-TRC" firstAttribute="leading" secondItem="UcW-E4-ZLX" secondAttribute="leading" constant="4" id="Moe-lY-bsE"/>
                                                     <constraint firstAttribute="trailing" secondItem="45J-SJ-yde" secondAttribute="trailing" constant="20" id="OSh-31-wBj"/>
@@ -15274,16 +15275,13 @@ to Sharon Bandhan</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9gf-fs-10o">
-                                                <rect key="frame" x="20" y="346" width="353" height="150.66666666666663"/>
+                                                <rect key="frame" x="20" y="326" width="353" height="150.66666666666663"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHR-yu-V5h">
                                                         <rect key="frame" x="0.0" y="0.0" width="353" height="150.66666666666666"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asset 5" translatesAutoresizingMaskIntoConstraints="NO" id="vGU-dc-bau">
                                                                 <rect key="frame" x="8" y="8" width="140" height="134.66666666666666"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="140" id="Bjq-MV-ao1"/>
-                                                                </constraints>
                                                             </imageView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WCo-Lg-mWH">
                                                                 <rect key="frame" x="158" y="21.333333333333314" width="187" height="108"/>
@@ -15397,6 +15395,7 @@ to Sharon Bandhan</string>
                                                             <constraint firstItem="vGU-dc-bau" firstAttribute="top" secondItem="VHR-yu-V5h" secondAttribute="top" constant="8" id="1sS-3d-dAj"/>
                                                             <constraint firstItem="WCo-Lg-mWH" firstAttribute="centerY" secondItem="vGU-dc-bau" secondAttribute="centerY" id="X2f-EA-QSL"/>
                                                             <constraint firstAttribute="bottom" secondItem="vGU-dc-bau" secondAttribute="bottom" constant="8" id="fjm-HA-U9W"/>
+                                                            <constraint firstItem="vGU-dc-bau" firstAttribute="width" secondItem="VHR-yu-V5h" secondAttribute="width" multiplier="0.396601" id="g2C-RA-fLY"/>
                                                             <constraint firstItem="vGU-dc-bau" firstAttribute="leading" secondItem="VHR-yu-V5h" secondAttribute="leading" constant="8" id="h3h-eV-ddH"/>
                                                             <constraint firstAttribute="trailing" secondItem="WCo-Lg-mWH" secondAttribute="trailing" constant="8" id="sHD-ee-0MJ"/>
                                                             <constraint firstItem="WCo-Lg-mWH" firstAttribute="leading" secondItem="vGU-dc-bau" secondAttribute="trailing" constant="10" id="zw3-Zi-fU8"/>
@@ -15492,7 +15491,7 @@ to Sharon Bandhan</string>
                                                 </subviews>
                                             </stackView>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcG-Uw-rgI" customClass="GradientView" customModule="SharonBhandhan" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="506.66666666666663" width="353" height="120"/>
+                                                <rect key="frame" x="20" y="486.66666666666663" width="353" height="120"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OAc-7b-Aaj">
                                                         <rect key="frame" x="0.0" y="0.0" width="353" height="120"/>
@@ -15618,13 +15617,10 @@ to Sharon Bandhan</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Vy-pL-Fxe">
-                                                <rect key="frame" x="20" y="634.66666666666663" width="353" height="140"/>
+                                                <rect key="frame" x="20" y="614.66666666666663" width="353" height="140"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group 4090" translatesAutoresizingMaskIntoConstraints="NO" id="oqV-wv-GD3">
                                                         <rect key="frame" x="15" y="0.0" width="110" height="140"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="110" id="pXx-mh-Ibj"/>
-                                                        </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="g0y-lb-Z9V">
                                                         <rect key="frame" x="145" y="9.6666666666667425" width="188" height="121"/>
@@ -15696,6 +15692,7 @@ to Sharon Bandhan</string>
                                                     <constraint firstAttribute="bottom" secondItem="oqV-wv-GD3" secondAttribute="bottom" id="fVl-x7-Pnc"/>
                                                     <constraint firstItem="g0y-lb-Z9V" firstAttribute="centerY" secondItem="2Vy-pL-Fxe" secondAttribute="centerY" id="pir-j3-H8t"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="syw-QD-RCk"/>
+                                                    <constraint firstItem="oqV-wv-GD3" firstAttribute="width" secondItem="2Vy-pL-Fxe" secondAttribute="width" multiplier="0.311615" id="uaN-kA-p9m"/>
                                                     <constraint firstItem="g0y-lb-Z9V" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2Vy-pL-Fxe" secondAttribute="top" constant="8" id="yyD-XV-9qi"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -15746,8 +15743,8 @@ to Sharon Bandhan</string>
                                     <constraint firstItem="qcQ-WG-agV" firstAttribute="centerX" secondItem="N8p-7P-gQo" secondAttribute="centerX" id="vaB-1l-G3m"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qq6-ED-JQk">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qq6-ED-JQk">
+                                <rect key="frame" x="0.0" y="797" width="393" height="21"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g76-PV-quc">
                                         <rect key="frame" x="82.666666666666671" y="265.66666666666669" width="227.66666666666663" height="227.66666666666669"/>
@@ -15792,12 +15789,12 @@ to Sharon Bandhan</string>
                             <constraint firstItem="aFq-Ib-Xb4" firstAttribute="height" secondItem="d7k-k6-qjg" secondAttribute="height" multiplier="0.0669643" id="7I1-wG-i3t"/>
                             <constraint firstItem="N8p-7P-gQo" firstAttribute="leading" secondItem="tR3-bV-mcs" secondAttribute="leading" id="Acm-yY-ASa"/>
                             <constraint firstItem="qq6-ED-JQk" firstAttribute="leading" secondItem="d7k-k6-qjg" secondAttribute="leading" id="Au2-fF-kx1"/>
-                            <constraint firstItem="iWP-sy-0yJ" firstAttribute="height" secondItem="tR3-bV-mcs" secondAttribute="height" multiplier="0.263505" id="Ft5-Pq-9e1"/>
                             <constraint firstItem="N8p-7P-gQo" firstAttribute="top" secondItem="aFq-Ib-Xb4" secondAttribute="bottom" id="OfY-Zw-o4h"/>
                             <constraint firstItem="tR3-bV-mcs" firstAttribute="trailing" secondItem="N8p-7P-gQo" secondAttribute="trailing" id="T4Y-yy-2ct"/>
                             <constraint firstItem="tR3-bV-mcs" firstAttribute="bottom" secondItem="N8p-7P-gQo" secondAttribute="bottom" id="VG5-BM-fLa"/>
                             <constraint firstItem="2Vy-pL-Fxe" firstAttribute="height" secondItem="tR3-bV-mcs" secondAttribute="height" multiplier="0.184453" priority="750" id="edI-6a-RIK"/>
                             <constraint firstItem="aFq-Ib-Xb4" firstAttribute="trailing" secondItem="tR3-bV-mcs" secondAttribute="trailing" id="fcF-sP-F1g"/>
+                            <constraint firstItem="iWP-sy-0yJ" firstAttribute="height" secondItem="tR3-bV-mcs" secondAttribute="height" multiplier="0.237154" id="kiC-QL-4R8"/>
                             <constraint firstItem="aFq-Ib-Xb4" firstAttribute="leading" secondItem="tR3-bV-mcs" secondAttribute="leading" id="mlb-Gn-hFf"/>
                             <constraint firstItem="UcW-E4-ZLX" firstAttribute="height" secondItem="tR3-bV-mcs" secondAttribute="height" multiplier="0.168643" id="uLF-PX-44Z"/>
                             <constraint firstItem="qq6-ED-JQk" firstAttribute="top" secondItem="tR3-bV-mcs" secondAttribute="top" id="xbf-0K-mfa"/>
@@ -16632,9 +16629,11 @@ to Sharon Bandhan</string>
         <designable name="JS2-VU-DvS">
             <size key="intrinsicContentSize" width="34" height="30"/>
         </designable>
+        <designable name="Kbz-9J-2hy"/>
         <designable name="NSX-fW-k7n">
             <size key="intrinsicContentSize" width="131" height="33"/>
         </designable>
+        <designable name="OX6-Kd-R7S"/>
         <designable name="QV5-yN-vJW">
             <size key="intrinsicContentSize" width="105.66666666666667" height="18.666666666666668"/>
         </designable>
@@ -16647,6 +16646,7 @@ to Sharon Bandhan</string>
         <designable name="UwI-X2-e9h">
             <size key="intrinsicContentSize" width="136" height="29"/>
         </designable>
+        <designable name="Xcg-D1-DNa"/>
         <designable name="YDe-mF-QTx">
             <size key="intrinsicContentSize" width="157" height="24"/>
         </designable>
