@@ -1,4 +1,4 @@
-# Uncomment the next line to define a global platform for your project
+	# Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
 target 'SharonBhandhan' do
@@ -15,15 +15,13 @@ target 'SharonBhandhan' do
   pod "ImageSlideshow/Alamofire"
   pod 'Toast-Swift', '~> 5.0.1'
   pod 'GoogleAnalytics'
-  pod 'Firebase/Core'
+  pod 'Firebase/CoreOnly'
   pod 'Firebase/Messaging'
   pod 'Firebase/Analytics'
   pod 'Crashlytics', '~> 3.14.0'
   pod 'KSImageCarousel'
   pod 'ReachabilitySwift'
   pod 'DPOTPView'
-
-
 
 
 end
