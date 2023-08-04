@@ -225,19 +225,46 @@ class CreateNewQueryViewController: BaseViewController , UITextFieldDelegate, UI
     
     
        @IBAction func uploadPhotoButton(_ sender: UIButton) {
-           let alert = UIAlertController(title: "Choose any option", message: "", preferredStyle: .actionSheet)
-           alert.addAction(UIAlertAction(title: "Camera", style: .default , handler:{ (UIAlertAction)in
-               self.openCamera()
-           }))
-           alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler:{ (UIAlertAction)in
-               self.openGallery()
-           }))
-           alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler:{ (UIAlertAction)in
-           }))
-           self.present(alert, animated: true, completion: {
-               print("completion block")
-           })
+           showOptions()
        }
+    
+    func showOptions() {
+//        let alert = UIAlertController(title: "Choose any option", message: nil, preferredStyle: .actionSheet)
+//
+//        alert.addAction(UIAlertAction(title: "Camera", style: .default) { _ in
+//            self.openCamera()
+//        })
+//
+//        alert.addAction(UIAlertAction(title: "Gallery", style: .default) { _ in
+//            self.openGallery()
+//        })
+//        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+//        present(alert, animated: true, completion: nil)
+        
+        let alert = UIAlertController(title: "Choose any option", message: nil, preferredStyle: .actionSheet)
+
+            alert.addAction(UIAlertAction(title: "Camera", style: .default) { _ in
+                self.openCamera()
+            })
+
+            alert.addAction(UIAlertAction(title: "Gallery", style: .default) { _ in
+                self.openGallery()
+            })
+
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+
+            // Set popover presentation information for large screen devices
+            if let popoverPresentationController = alert.popoverPresentationController {
+                popoverPresentationController.sourceView = self.view // Replace 'self.view' with the appropriate source view
+                popoverPresentationController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+                // or
+                // popoverPresentationController.barButtonItem = yourBarButtonItem
+            }
+
+            present(alert, animated: true, completion: nil)
+    }
+    
+    
 
         func openGallery() {
             PHPhotoLibrary.requestAuthorization({

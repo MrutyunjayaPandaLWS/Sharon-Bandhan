@@ -9,10 +9,10 @@ import Foundation
 
 // MARK: - Testing DEMO URL
 
-//let baseURl = "https://bandhandemoserv.loyltwo3ks.com/MobileApp/MobileApi.svc/json/"
-//let username = "SharonBandhanAPI"
-//let password = "SharonBandhan@%753"
-//let PROMO_IMG = "https://sharonbandhan.loyltwo3ks.com"
+let baseURl = "https://bandhandemoserv.loyltwo3ks.com/MobileApp/MobileApi.svc/json/"
+let username = "SharonBandhanAPI"
+let password = "SharonBandhan@%753"
+let PROMO_IMG = "https://sharonbandhan.loyltwo3ks.com"
 
 
 // MARK: - Testting LIVE URL
@@ -23,12 +23,12 @@ import Foundation
 
 
 // MARK: - Appstore LIVE URL
-let baseURl = "https://bandhanliveserv.loyltwo3ks.com/MobileApp/MobileApi.svc/json/"
-let username = "SharonBandhanAPI"
-let password = "SharonBandhan@%753"
-let PROMO_IMG = "https://bandhan.sharonply.com"
-
-
+//let baseURl = "https://bandhanliveserv.loyltwo3ks.com/MobileApp/MobileApi.svc/json/"
+//let username = "SharonBandhanAPI"
+//let password = "SharonBandhan@%753"
+//let PROMO_IMG = "https://bandhan.sharonply.com"
+//
+//
 let product_IMG = "\(PROMO_IMG)/UploadFiles/CategoryImg/"
 let imageBaseURL = "\(PROMO_IMG)/UploadFiles/ProductManager/ProductImages/"
 let profileImageURL = "\(PROMO_IMG)/UploadFiles/CustomerImage/"

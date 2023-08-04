@@ -3340,7 +3340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBandhan_AppStore;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBandhan_Adhoc;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -3385,7 +3385,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBandhan_AppStore;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBandhan_Adhoc;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -3494,7 +3494,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhan.NotificationServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "SharonBhandhan_Notification _AppStore";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBhandhan_NotificationServices_Adhoc;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -3525,7 +3525,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhan.NotificationServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "SharonBhandhan_Notification _AppStore";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBhandhan_NotificationServices_Adhoc;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

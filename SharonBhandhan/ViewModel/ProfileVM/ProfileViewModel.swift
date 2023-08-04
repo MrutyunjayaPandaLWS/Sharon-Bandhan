@@ -48,16 +48,14 @@ class ProfileViewModel: popUpDelegate{
         DispatchQueue.main.async {
               self.VC?.startLoading()
          }
-
-        
         let parameters = [
             "ActorId": "\(userID)",
-            "ObjCustomer": [
+            "ActionType": "159",
+            "ObjCustomerJson": [
                 "DisplayImage": "\(base64)",
                 "LoyaltyId": "\(loyaltyID)"
             ]
         ]as [String : Any]
-        
         print(parameters,"imageAPI")
         self.requestAPIs.imageSavingAPI(parameters: parameters) { (result, error) in
             if error == nil{
@@ -93,12 +91,14 @@ class ProfileViewModel: popUpDelegate{
                 }else{
                     DispatchQueue.main.async {
                         self.VC?.stopLoading()
+                        print("Wrong Datas dsjhbdj")
                     }
                 }
                 
             }else{
                 DispatchQueue.main.async {
                     self.VC?.stopLoading()
+                    print("Wrong Data")
                 }
             }
         }
