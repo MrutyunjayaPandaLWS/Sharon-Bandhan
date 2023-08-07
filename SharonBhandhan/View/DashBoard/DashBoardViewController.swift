@@ -132,6 +132,7 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
         collectionViewFLowLayout.minimumInteritemSpacing = 2.5
          self.collectionViewScrollData.collectionViewLayout = collectionViewFLowLayout
         profileImage.layer.cornerRadius = (profileImage.frame.height / 2)
+        riseTicketBtn.contentEdgeInsets = UIEdgeInsets(top: 2, left: 10, bottom: 2, right: 10)
     }
     
     

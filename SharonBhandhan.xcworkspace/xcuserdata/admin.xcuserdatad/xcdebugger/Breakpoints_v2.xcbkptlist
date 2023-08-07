@@ -94,6 +94,36 @@
                   endingLineNumber = "61"
                   offsetFromSymbolStart = "217">
                </Location>
+               <Location
+                  uuid = "B65C2FB9-7D58-42DF-B978-EF871CB30CE7 - dae908d8dde26ea0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharonBhandhan.ProfileViewModel.imageSubmissionAPI(base64: Swift.String) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/ViewModel/ProfileVM/ProfileViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "2385">
+               </Location>
+               <Location
+                  uuid = "B65C2FB9-7D58-42DF-B978-EF871CB30CE7 - cd169a1ca735ee63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;SharonBhandhan.ProfileImageUpdateModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.ProfileViewModel.imageSubmissionAPI(base64: Swift.String) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/ViewModel/ProfileVM/ProfileViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "217">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -151,6 +181,21 @@
                   moduleName = "SharonBhandhan"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/admin/Documents/LWS_Projects/Sharon-Bandhan/SharonBhandhan/ViewModel/ProfileVM/ProfileViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "1201">
+               </Location>
+               <Location
+                  uuid = "82380038-CD68-485F-AEEA-0B7D2B2D4661 - 23f0f470776c0b7e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in closure #2 (Swift.Optional&lt;SharonBhandhan.ProfileImageUpdateModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.ProfileViewModel.imageSubmissionAPI(base64: Swift.String) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/ViewModel/ProfileVM/ProfileViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "72"
@@ -220,6 +265,21 @@
                   endingLineNumber = "65"
                   offsetFromSymbolStart = "738">
                </Location>
+               <Location
+                  uuid = "2E68566D-B6E9-4D60-B48D-8899F50E5469 - 54c55014e000e68a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #2 (Swift.Optional&lt;SharonBhandhan.ProfileImageUpdateModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.ProfileViewModel.imageSubmissionAPI(base64: Swift.String) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/ViewModel/ProfileVM/ProfileViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "738">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -277,6 +337,21 @@
                   moduleName = "SharonBhandhan"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/admin/Documents/LWS_Projects/Sharon-Bandhan/SharonBhandhan/ViewModel/ProfileVM/ProfileViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "290">
+               </Location>
+               <Location
+                  uuid = "5F6F1039-D863-46A6-B720-1750446FD380 - cd169a1ca735ef80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;SharonBhandhan.ProfileImageUpdateModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.ProfileViewModel.imageSubmissionAPI(base64: Swift.String) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/ViewModel/ProfileVM/ProfileViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "62"
@@ -346,6 +421,21 @@
                   endingLineNumber = "93"
                   offsetFromSymbolStart = "33">
                </Location>
+               <Location
+                  uuid = "19B3EECD-9F24-43E2-BA93-E390F0D1883B - df0976df47b11ee8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in closure #2 (Swift.Optional&lt;SharonBhandhan.ProfileImageUpdateModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.ProfileViewModel.imageSubmissionAPI(base64: Swift.String) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/ViewModel/ProfileVM/ProfileViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "33">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -394,7 +484,38 @@
                   endingLineNumber = "102"
                   offsetFromSymbolStart = "274">
                </Location>
+               <Location
+                  uuid = "B6607AAB-64F9-4472-9EB6-2E97E1256A63 - 5a5e8f83bb2249c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 @Swift.MainActor () -&gt; () in closure #2 (Swift.Optional&lt;SharonBhandhan.ProfileImageUpdateModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SharonBhandhan.ProfileViewModel.imageSubmissionAPI(base64: Swift.String) -&gt; ()"
+                  moduleName = "SharonBhandhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/Sharon-Bandhan/SharonBhandhan/ViewModel/ProfileVM/ProfileViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "274">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1C61360-6552-4F81-AA35-FC1B46E249EE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharonBhandhan/View/MyEarning/MyEarningsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "myEarningListApi()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

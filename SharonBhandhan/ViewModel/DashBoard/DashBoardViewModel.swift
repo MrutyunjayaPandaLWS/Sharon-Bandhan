@@ -127,7 +127,8 @@ class DashBoardViewModel{
         
         let parameters = [
             "ActorId": "\(self.VC?.userID ?? "")",
-            "ObjCustomer": [
+            "ActionType": "159",
+            "ObjCustomerJson": [
                 "DisplayImage": "\(base64)",
                 "LoyaltyId": "\(self.VC?.loyaltyIDData ?? "")"
             ]

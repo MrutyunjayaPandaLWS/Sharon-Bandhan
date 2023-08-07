@@ -15,13 +15,14 @@ target 'SharonBhandhan' do
   pod "ImageSlideshow/Alamofire"
   pod 'Toast-Swift', '~> 5.0.1'
   pod 'GoogleAnalytics'
-  pod 'Firebase/Core'
+  pod 'Firebase/CoreOnly'
   pod 'Firebase/Messaging'
   pod 'Firebase/Analytics'
   pod 'Crashlytics', '~> 3.14.0'
   pod 'KSImageCarousel'
   pod 'ReachabilitySwift'
   pod 'DPOTPView'
+  
 
 
 

@@ -141,6 +141,10 @@ class ScanOrUpload_VC: BaseViewController, AVCaptureVideoDataOutputSampleBufferD
 //        tracker.send(builder.build() as [NSObject : AnyObject])
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        scanQRCodeButton.contentEdgeInsets = UIEdgeInsets(top: 2, left: 20, bottom: 2, right: 20)
+    }
     
     @IBAction func syncLaterActBtn(_ sender: UIButton) {
         self.session.stopRunning()
@@ -439,7 +443,10 @@ class ScanOrUpload_VC: BaseViewController, AVCaptureVideoDataOutputSampleBufferD
             self.scanQRCodeButton.setImage(UIImage(named: "software-upload"), for: .normal)
             self.scannerView.isHidden = false
             self.uploadView.isHidden = true
-            self.session.startRunning()
+            DispatchQueue.global().async {
+                self.session.startRunning()
+            }
+            
             AVCaptureDevice.requestAccess(for: .video, completionHandler: { (granted: Bool) in
                 if granted == true {
                 } else {
@@ -822,7 +829,10 @@ class ScanOrUpload_VC: BaseViewController, AVCaptureVideoDataOutputSampleBufferD
                             self.scaned = 1
                             self.scannedStatus = true
                         }else{
-                            session.startRunning()
+                            DispatchQueue.global().async {
+                                self.session.startRunning()
+                            }
+                           
 //                            self.restartScanning()
 //                            print("Restart Again")
                             self.messageLbl.isHidden = false
@@ -1104,7 +1114,10 @@ class ScanOrUpload_VC: BaseViewController, AVCaptureVideoDataOutputSampleBufferD
             imageLayer.frame = CGRect(x: 0, y: 0, width: self.scannerView.frame.size.width, height: self.scannerView.frame.size.height)
             imageLayer.videoGravity = .resizeAspectFill
             self.scannerView.layer.addSublayer(imageLayer)
-            self.session.startRunning()
+            DispatchQueue.global().async {
+                self.session.startRunning()
+            }
+            
             self.isscannedOnce = true
         }
     }
