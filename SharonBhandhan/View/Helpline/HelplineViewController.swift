@@ -27,7 +27,7 @@ class HelplineViewController: UIViewController {
         super.viewDidLoad()
        // playAnimation()
         languagelocalization()
-        mobileNumber.text = "+91-7845858414"
+        mobileNumber.text = "+91-8875751514"
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -96,7 +96,7 @@ class HelplineViewController: UIViewController {
     }
     
     @IBAction func missedCallButton(_ sender: Any) {
-        if let phoneCallURL = URL(string: "tel://\(+917845858414)") {
+        if let phoneCallURL = URL(string: "tel://\(+918875751514)") {
             
             let application:UIApplication = UIApplication.shared
             if (application.canOpenURL(phoneCallURL)) {

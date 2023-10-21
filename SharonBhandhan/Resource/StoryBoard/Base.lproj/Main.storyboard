@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zW3-h7-Del">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zW3-h7-Del">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1213,6 +1213,9 @@ to Sharon Bandhan</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1t-lW-1ET" customClass="LottieAnimationView" customModule="Lottie">
                                 <rect key="frame" x="45" y="274.33333333333337" width="303.33333333333331" height="303.33333333333337"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="i1t-lW-1ET" secondAttribute="height" multiplier="1:1" id="HOw-ag-2Ck"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="lf30_editor_jh47f7lt"/>
                                 </userDefinedRuntimeAttributes>
@@ -1264,7 +1267,6 @@ to Sharon Bandhan</string>
                             <constraint firstItem="i1t-lW-1ET" firstAttribute="centerY" secondItem="eUG-ih-lFt" secondAttribute="centerY" id="6Sb-Hc-FE1"/>
                             <constraint firstItem="VZF-Mt-bfp" firstAttribute="top" secondItem="uRO-M6-JBf" secondAttribute="top" id="9yV-Km-3uO"/>
                             <constraint firstItem="VZF-Mt-bfp" firstAttribute="height" secondItem="eUG-ih-lFt" secondAttribute="height" multiplier="0.0669643" id="Et6-22-FRg"/>
-                            <constraint firstItem="i1t-lW-1ET" firstAttribute="width" secondItem="i1t-lW-1ET" secondAttribute="height" multiplier="1:1" id="HOw-ag-2Ck"/>
                             <constraint firstItem="uRO-M6-JBf" firstAttribute="trailing" secondItem="rrh-ox-6wA" secondAttribute="trailing" constant="20" id="Nat-j9-bZY"/>
                             <constraint firstItem="2Uf-br-doL" firstAttribute="height" secondItem="uRO-M6-JBf" secondAttribute="height" multiplier="0.0289855" id="OKT-Wt-2bz"/>
                             <constraint firstItem="uRO-M6-JBf" firstAttribute="trailing" secondItem="I90-OJ-4yc" secondAttribute="trailing" id="Oni-Sh-P31"/>
@@ -2887,6 +2889,7 @@ to Sharon Bandhan</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RbJ-ak-h9W" secondAttribute="height" multiplier="1:1" id="SZj-sg-PUX"/>
+                                    <constraint firstAttribute="width" secondItem="RbJ-ak-h9W" secondAttribute="height" multiplier="1:1" id="zDC-dn-x1A"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="lf30_editor_jh47f7lt"/>
@@ -2956,7 +2959,6 @@ to Sharon Bandhan</string>
                             <constraint firstItem="RbJ-ak-h9W" firstAttribute="centerY" secondItem="oYk-kD-xMt" secondAttribute="centerY" id="rnt-a1-aBG"/>
                             <constraint firstItem="bev-PY-HA2" firstAttribute="trailing" secondItem="HMz-Rs-1yE" secondAttribute="trailing" id="uEY-UF-gLj"/>
                             <constraint firstItem="gC2-Sw-Tk2" firstAttribute="centerY" secondItem="oYk-kD-xMt" secondAttribute="centerY" id="wJz-ik-w1p"/>
-                            <constraint firstItem="RbJ-ak-h9W" firstAttribute="width" secondItem="RbJ-ak-h9W" secondAttribute="height" multiplier="1:1" id="zDC-dn-x1A"/>
                             <constraint firstItem="1Ce-05-20a" firstAttribute="trailing" secondItem="HMz-Rs-1yE" secondAttribute="trailing" id="zXr-td-lUa"/>
                         </constraints>
                     </view>
@@ -4513,7 +4515,7 @@ to Sharon Bandhan</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="es1-yy-e1g">
                                 <rect key="frame" x="8" y="387.66666666666669" width="377" height="77"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer PAN Details have been submitted for verification !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dor-DP-lEN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your PAN Details have been submitted for verification !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dor-DP-lEN">
                                         <rect key="frame" x="12" y="18" width="353" height="41"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5367,20 +5369,28 @@ to Sharon Bandhan</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8La-MU-3A5">
                                 <rect key="frame" x="0.0" y="116" width="393" height="40"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Redeemable Points" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnH-C1-xhd">
-                                        <rect key="frame" x="255.33333333333334" y="11.666666666666673" width="105.66666666666666" height="16.666666666666671"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
-                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raU-9R-jON">
-                                        <rect key="frame" x="375" y="11.666666666666673" width="4" height="16.666666666666671"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="12"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ig6-rN-VtC">
+                                        <rect key="frame" x="236.33333333333337" y="11.666666666666673" width="142.66666666666663" height="16.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Redeemable Points" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnH-C1-xhd">
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="16.666666666666668"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="115" id="sN7-Ke-f8T"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-----" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raU-9R-jON">
+                                                <rect key="frame" x="122.99999999999999" y="0.0" width="19.666666666666671" height="16.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Search Product Name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9W0-CI-tru">
-                                        <rect key="frame" x="5" y="5" width="230.33333333333334" height="30"/>
+                                        <rect key="frame" x="5" y="5" width="211.33333333333334" height="30"/>
                                         <color key="backgroundColor" red="0.78443449740000004" green="0.84772259000000005" blue="0.81176072359999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5402,11 +5412,9 @@ to Sharon Bandhan</string>
                                 <color key="backgroundColor" white="1" alpha="0.047646225680000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="9W0-CI-tru" firstAttribute="top" secondItem="8La-MU-3A5" secondAttribute="top" constant="5" id="3Dv-dQ-wCT"/>
-                                    <constraint firstItem="raU-9R-jON" firstAttribute="centerY" secondItem="8La-MU-3A5" secondAttribute="centerY" id="6Ai-QD-EjO"/>
-                                    <constraint firstAttribute="trailing" secondItem="raU-9R-jON" secondAttribute="trailing" constant="14" id="E4C-Xg-92d"/>
-                                    <constraint firstItem="cnH-C1-xhd" firstAttribute="leading" secondItem="9W0-CI-tru" secondAttribute="trailing" constant="20" id="aze-BV-h0M"/>
-                                    <constraint firstItem="raU-9R-jON" firstAttribute="leading" secondItem="cnH-C1-xhd" secondAttribute="trailing" constant="14" id="eqY-PE-iz1"/>
-                                    <constraint firstItem="cnH-C1-xhd" firstAttribute="centerY" secondItem="raU-9R-jON" secondAttribute="centerY" id="fUv-gD-TIJ"/>
+                                    <constraint firstItem="ig6-rN-VtC" firstAttribute="centerY" secondItem="9W0-CI-tru" secondAttribute="centerY" id="4XD-Pc-Grc"/>
+                                    <constraint firstItem="ig6-rN-VtC" firstAttribute="leading" secondItem="9W0-CI-tru" secondAttribute="trailing" constant="20" id="V4k-ll-na6"/>
+                                    <constraint firstAttribute="trailing" secondItem="ig6-rN-VtC" secondAttribute="trailing" constant="14" id="hHZ-rL-Dh6"/>
                                     <constraint firstItem="9W0-CI-tru" firstAttribute="leading" secondItem="8La-MU-3A5" secondAttribute="leading" constant="5" id="qXp-eU-HoH"/>
                                     <constraint firstAttribute="height" constant="40" id="sDh-1k-Ojz"/>
                                     <constraint firstAttribute="bottom" secondItem="9W0-CI-tru" secondAttribute="bottom" constant="5" id="zw5-Yb-KQW"/>
@@ -10958,7 +10966,7 @@ to Sharon Bandhan</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpm-xT-2aR">
                                         <rect key="frame" x="8" y="342.66666666666669" width="377" height="77"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer PAN Details have been submitted for verification !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6B-0p-Pd5">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your PAN Details have been submitted for verification !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6B-0p-Pd5">
                                                 <rect key="frame" x="12" y="18" width="353" height="41"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -12448,6 +12456,7 @@ to Sharon Bandhan</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fEg-IT-9Jo" secondAttribute="height" multiplier="1:1" id="qav-L0-heO"/>
+                                    <constraint firstAttribute="width" secondItem="fEg-IT-9Jo" secondAttribute="height" multiplier="1:1" id="r7b-Ev-upa"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="lf30_editor_jh47f7lt"/>
@@ -12482,7 +12491,6 @@ to Sharon Bandhan</string>
                             <constraint firstItem="fEg-IT-9Jo" firstAttribute="centerX" secondItem="07p-sY-rXt" secondAttribute="centerX" id="hWl-EZ-5FQ"/>
                             <constraint firstItem="fEg-IT-9Jo" firstAttribute="centerY" secondItem="07p-sY-rXt" secondAttribute="centerY" id="nrp-6d-PwT"/>
                             <constraint firstItem="8bM-UT-beg" firstAttribute="leading" secondItem="dCI-NA-Sj1" secondAttribute="leading" id="pgO-6s-8TI"/>
-                            <constraint firstItem="fEg-IT-9Jo" firstAttribute="width" secondItem="fEg-IT-9Jo" secondAttribute="height" multiplier="1:1" id="r7b-Ev-upa"/>
                             <constraint firstItem="Ral-1c-NKq" firstAttribute="top" secondItem="dCI-NA-Sj1" secondAttribute="top" id="vNl-Am-2uS"/>
                         </constraints>
                     </view>
@@ -15008,6 +15016,7 @@ to Sharon Bandhan</string>
                                         <rect key="frame" x="355.66666666666669" y="13.666666666666673" width="29.333333333333314" height="29.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2kK-Tg-EJG" secondAttribute="height" multiplier="1:1" id="CEg-3z-hJi"/>
+                                            <constraint firstAttribute="width" secondItem="2kK-Tg-EJG" secondAttribute="height" multiplier="1:1" id="zeL-d4-dY0"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="Rectangle 2714"/>
@@ -15019,6 +15028,7 @@ to Sharon Bandhan</string>
                                         <rect key="frame" x="318" y="13.666666666666673" width="29.666666666666686" height="29.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Gi1-eQ-VWb" secondAttribute="height" multiplier="1:1" id="Xap-Rp-kPx"/>
+                                            <constraint firstAttribute="width" secondItem="Gi1-eQ-VWb" secondAttribute="height" multiplier="1:1" id="gyR-5O-CeS"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="Asset 3"/>
@@ -15093,14 +15103,12 @@ to Sharon Bandhan</string>
                                     <constraint firstItem="YXY-dv-oXb" firstAttribute="height" secondItem="aFq-Ib-Xb4" secondAttribute="height" multiplier="0.516667" id="RM2-4i-Mzi"/>
                                     <constraint firstItem="2kK-Tg-EJG" firstAttribute="leading" secondItem="Gi1-eQ-VWb" secondAttribute="trailing" constant="8" symbolic="YES" id="UTU-M3-pyz"/>
                                     <constraint firstItem="Gi1-eQ-VWb" firstAttribute="centerY" secondItem="aFq-Ib-Xb4" secondAttribute="centerY" id="fj3-Wc-jmk"/>
-                                    <constraint firstItem="Gi1-eQ-VWb" firstAttribute="width" secondItem="Gi1-eQ-VWb" secondAttribute="height" multiplier="1:1" id="gyR-5O-CeS"/>
                                     <constraint firstItem="Gi1-eQ-VWb" firstAttribute="leading" secondItem="8fd-1y-Nhk" secondAttribute="trailing" constant="16" id="ico-su-go5"/>
                                     <constraint firstItem="YXY-dv-oXb" firstAttribute="centerY" secondItem="aFq-Ib-Xb4" secondAttribute="centerY" id="juJ-JP-uGn"/>
                                     <constraint firstItem="2kK-Tg-EJG" firstAttribute="centerY" secondItem="aFq-Ib-Xb4" secondAttribute="centerY" id="kri-QY-NaI"/>
                                     <constraint firstItem="Gi1-eQ-VWb" firstAttribute="height" secondItem="aFq-Ib-Xb4" secondAttribute="height" multiplier="0.516667" id="qSZ-qY-oit"/>
                                     <constraint firstItem="8fd-1y-Nhk" firstAttribute="height" secondItem="aFq-Ib-Xb4" secondAttribute="height" multiplier="0.6" id="sUX-29-6ug"/>
                                     <constraint firstItem="YXY-dv-oXb" firstAttribute="leading" secondItem="aFq-Ib-Xb4" secondAttribute="leading" constant="8" id="vXD-eX-HU5"/>
-                                    <constraint firstItem="2kK-Tg-EJG" firstAttribute="width" secondItem="2kK-Tg-EJG" secondAttribute="height" multiplier="1:1" id="zeL-d4-dY0"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -15969,6 +15977,7 @@ to Sharon Bandhan</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYL-WG-hkF">
                                         <rect key="frame" x="355.66666666666669" y="13.666666666666673" width="29.333333333333314" height="29.666666666666671"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" secondItem="wYL-WG-hkF" secondAttribute="height" multiplier="1:1" id="WAE-cE-yjh"/>
                                             <constraint firstAttribute="width" secondItem="wYL-WG-hkF" secondAttribute="height" multiplier="1:1" id="fY1-1m-N2v"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -15981,6 +15990,7 @@ to Sharon Bandhan</string>
                                         <rect key="frame" x="318" y="13.666666666666673" width="29.666666666666686" height="29.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="i1R-M1-gzr" secondAttribute="height" multiplier="1:1" id="8RX-vK-6Qm"/>
+                                            <constraint firstAttribute="width" secondItem="i1R-M1-gzr" secondAttribute="height" multiplier="1:1" id="lMh-xa-IP2"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="Asset 3"/>
@@ -16054,11 +16064,9 @@ to Sharon Bandhan</string>
                                     <constraint firstItem="O04-PN-QwO" firstAttribute="height" secondItem="Ez0-He-KS1" secondAttribute="height" multiplier="0.516667" id="DkM-du-byj"/>
                                     <constraint firstAttribute="trailing" secondItem="wYL-WG-hkF" secondAttribute="trailing" constant="8" id="Kag-sj-gl5"/>
                                     <constraint firstItem="MVh-aI-aNH" firstAttribute="leading" secondItem="ObH-gv-grw" secondAttribute="trailing" constant="16" id="Ttn-Ma-doa"/>
-                                    <constraint firstItem="wYL-WG-hkF" firstAttribute="width" secondItem="wYL-WG-hkF" secondAttribute="height" multiplier="1:1" id="WAE-cE-yjh"/>
                                     <constraint firstItem="ObH-gv-grw" firstAttribute="centerY" secondItem="Ez0-He-KS1" secondAttribute="centerY" id="ZSx-gO-3bL"/>
                                     <constraint firstItem="i1R-M1-gzr" firstAttribute="height" secondItem="Ez0-He-KS1" secondAttribute="height" multiplier="0.516667" id="cIH-6k-FuA"/>
                                     <constraint firstItem="i1R-M1-gzr" firstAttribute="centerY" secondItem="Ez0-He-KS1" secondAttribute="centerY" id="dmf-Nb-NqR"/>
-                                    <constraint firstItem="i1R-M1-gzr" firstAttribute="width" secondItem="i1R-M1-gzr" secondAttribute="height" multiplier="1:1" id="lMh-xa-IP2"/>
                                     <constraint firstItem="i1R-M1-gzr" firstAttribute="leading" secondItem="MVh-aI-aNH" secondAttribute="trailing" constant="16" id="lyX-vn-3Jz"/>
                                     <constraint firstItem="MVh-aI-aNH" firstAttribute="height" secondItem="Ez0-He-KS1" secondAttribute="height" multiplier="0.6" id="mOd-0r-Dar"/>
                                     <constraint firstItem="O04-PN-QwO" firstAttribute="centerY" secondItem="Ez0-He-KS1" secondAttribute="centerY" id="mr7-Ky-lQQ"/>
@@ -16607,9 +16615,11 @@ to Sharon Bandhan</string>
         <designable name="6y1-QQ-pLl">
             <size key="intrinsicContentSize" width="49" height="33"/>
         </designable>
+        <designable name="7IR-l9-DYq"/>
         <designable name="7vk-cb-8fW">
             <size key="intrinsicContentSize" width="108" height="30.666666666666668"/>
         </designable>
+        <designable name="8n4-53-xEE"/>
         <designable name="ALG-Rf-kme">
             <size key="intrinsicContentSize" width="30" height="36"/>
         </designable>
@@ -16622,6 +16632,7 @@ to Sharon Bandhan</string>
         <designable name="CTl-4m-447">
             <size key="intrinsicContentSize" width="52" height="33"/>
         </designable>
+        <designable name="GcX-Aj-8aW"/>
         <designable name="Gnp-tk-7YE">
             <size key="intrinsicContentSize" width="136" height="29"/>
         </designable>
@@ -16636,6 +16647,7 @@ to Sharon Bandhan</string>
         <designable name="QV5-yN-vJW">
             <size key="intrinsicContentSize" width="105.66666666666667" height="18.666666666666668"/>
         </designable>
+        <designable name="RbJ-ak-h9W"/>
         <designable name="T43-v3-MQk">
             <size key="intrinsicContentSize" width="75" height="30"/>
         </designable>
@@ -16682,6 +16694,8 @@ to Sharon Bandhan</string>
         <designable name="dv1-DS-VlI">
             <size key="intrinsicContentSize" width="141" height="30"/>
         </designable>
+        <designable name="fEg-IT-9Jo"/>
+        <designable name="i1t-lW-1ET"/>
         <designable name="jda-Wr-yku">
             <size key="intrinsicContentSize" width="55" height="34"/>
         </designable>
@@ -16847,22 +16861,22 @@ to Sharon Bandhan</string>
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

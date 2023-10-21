@@ -68,13 +68,13 @@ class PancardViewModel{
                         if result?.lstPanDetails![0].isVerified ?? "-1" == "0"{
                             self.VC?.SuccessshadowView.isHidden = false
                             if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                                self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "en")
+                                self.VC?.successmeassage.text = "panDetailsSubmitted".localizableString(loc: "en")
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                                self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "hi")
+                                self.VC?.successmeassage.text = "panDetailsSubmitted".localizableString(loc: "hi")
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "ta-IN")
+                                self.VC?.successmeassage.text = "panDetailsSubmitted".localizableString(loc: "ta-IN")
                             }else{
-                                self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "te")
+                                self.VC?.successmeassage.text = "panDetailsSubmitted".localizableString(loc: "te")
                             }
                             self.VC?.panImage.isHidden = true
                             self.VC?.dobLabel.isHidden = true
@@ -99,13 +99,13 @@ class PancardViewModel{
                         }else if result?.lstPanDetails![0].isVerified ?? "-1" == "1"{
                             self.VC?.SuccessshadowView.isHidden = false
                             if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                                self.VC?.successmeassage.text = "customerPANVerified".localizableString(loc: "en")
+                                self.VC?.successmeassage.text = "panVerified".localizableString(loc: "en")
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                                self.VC?.successmeassage.text = "customerPANVerified".localizableString(loc: "hi")
+                                self.VC?.successmeassage.text = "panVerified".localizableString(loc: "hi")
                             }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                self.VC?.successmeassage.text = "customerPANVerified".localizableString(loc: "ta-IN")
+                                self.VC?.successmeassage.text = "panVerified".localizableString(loc: "ta-IN")
                             }else{
-                                self.VC?.successmeassage.text = "customerPANVerified".localizableString(loc: "te")
+                                self.VC?.successmeassage.text = "panVerified".localizableString(loc: "te")
                             }
                             self.VC?.panImage.isHidden = true
                             self.VC?.dobLabel.isHidden = true
@@ -296,25 +296,25 @@ class PancardViewModel{
                                 //self.VC?.successmeassage.text = "Pancard saved successfully"
                                 //self.VC?.successmeassage.text = "Customer PAN details have been submitted for verification!"
                                 if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                                    self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "en")
+                                    self.VC?.successmeassage.text = "panDetailsSubmitted".localizableString(loc: "en")
                                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                                    self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "hi")
+                                    self.VC?.successmeassage.text = "panDetailsSubmitted".localizableString(loc: "hi")
                                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                    self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "ta-IN")
+                                    self.VC?.successmeassage.text = "panDetailsSubmitted".localizableString(loc: "ta-IN")
                                 }else{
-                                    self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "te")
+                                    self.VC?.successmeassage.text = "panDetailsSubmitted".localizableString(loc: "te")
                                 }
                             }else if splitted[0] == "2"{
                                 self.VC?.SuccessshadowView.isHidden = false
                                 //self.VC?.successmeassage.text = "Customer PAN details have been verified!"
                                 if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-                                    self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "en")
+                                    self.VC?.successmeassage.text = "panDetailsSubmitted".localizableString(loc: "en")
                                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-                                    self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "hi")
+                                    self.VC?.successmeassage.text = "panDetailsSubmitted".localizableString(loc: "hi")
                                 }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-                                    self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "ta-IN")
+                                    self.VC?.successmeassage.text = "panDetailsSubmitted".localizableString(loc: "ta-IN")
                                 }else{
-                                    self.VC?.successmeassage.text = "customerPANDetails".localizableString(loc: "te")
+                                    self.VC?.successmeassage.text = "panDetailsSubmitted".localizableString(loc: "te")
                                 }
                             }else{
                                 self.VC?.SuccessshadowView.isHidden = false

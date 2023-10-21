@@ -401,10 +401,10 @@ Copyright © 2020 Ltd.Technologies.WeMakeAppz. All rights reserved.
 "Validate" = "Validate";
 "DOB" = "Date Of Birth : ";
 "PANAttachment" = "PAN Attachment";
-"customerPANDetails" = "Customer PAN Details have been submitted for verification !";
+"customerPANDetails" = "Your PAN Details have been submitted for verification !";
 "Save" = "Save";
 "personName" = "Person Name :";
-"customerPANVerified" = "Customer PAN Details has been verified!";
+"customerPANVerified" = "Your PAN Details has been verified!";
 "verify" = "Verify";
 "savingPancarFailed" = "Saving Pancard failed. try after sometime";
 

@@ -16,6 +16,10 @@
 		8425C6E729F9248B007E6F29 /* GenerateEwarrantyListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425C6E629F9248B007E6F29 /* GenerateEwarrantyListingViewModel.swift */; };
 		8425C6EA29F92515007E6F29 /* MyprofileDetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425C6E929F92515007E6F29 /* MyprofileDetailsModels.swift */; };
 		8425C6EC29F9254D007E6F29 /* GenerateSubmissionEwarrantyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425C6EB29F9254D007E6F29 /* GenerateSubmissionEwarrantyModels.swift */; };
+		843C2E402ADD55470026BE1F /* SB-Uniq-Cust-Eng.html in Resources */ = {isa = PBXBuildFile; fileRef = 843C2E3F2ADD55470026BE1F /* SB-Uniq-Cust-Eng.html */; };
+		843C2E422ADD556F0026BE1F /* SB-Uniq-Cust-Hindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 843C2E412ADD556E0026BE1F /* SB-Uniq-Cust-Hindi.html */; };
+		843C2E442ADD559A0026BE1F /* SB-Uniq-Cust-Tamil.html in Resources */ = {isa = PBXBuildFile; fileRef = 843C2E432ADD559A0026BE1F /* SB-Uniq-Cust-Tamil.html */; };
+		843C2E462ADD55DA0026BE1F /* SB-Uniq-Cust-Telungu.html in Resources */ = {isa = PBXBuildFile; fileRef = 843C2E452ADD55DA0026BE1F /* SB-Uniq-Cust-Telungu.html */; };
 		8443ECF82A4EF2EC00900471 /* cloud_sync.json in Resources */ = {isa = PBXBuildFile; fileRef = 8443ECF72A4EF2EC00900471 /* cloud_sync.json */; };
 		8443ECFA2A4F029C00900471 /* lf30_editor_jh47f7lt.json in Resources */ = {isa = PBXBuildFile; fileRef = 8443ECF92A4F029C00900471 /* lf30_editor_jh47f7lt.json */; };
 		8443ECFD2A4F047900900471 /* TDS_PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443ECFC2A4F047900900471 /* TDS_PopUpVC.swift */; };
@@ -312,10 +316,6 @@
 		84BE6B0C2A25B9C800100D24 /* CP_Scanner_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE6B0B2A25B9C800100D24 /* CP_Scanner_VC.swift */; };
 		84BE6B0E2A25BA2100100D24 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE6B0D2A25BA2100100D24 /* ScannerViewModel.swift */; };
 		84BE6B112A25F9C900100D24 /* ewarrentSubmissionModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE6B102A25F9C900100D24 /* ewarrentSubmissionModels.swift */; };
-		84C77CD32A6FD6E800604694 /* SB-Uniq-Cust-Eng.html in Resources */ = {isa = PBXBuildFile; fileRef = 84C77CCF2A6FD6E700604694 /* SB-Uniq-Cust-Eng.html */; };
-		84C77CD42A6FD6E800604694 /* SB-Uniq-Cust-Tamil.html in Resources */ = {isa = PBXBuildFile; fileRef = 84C77CD02A6FD6E700604694 /* SB-Uniq-Cust-Tamil.html */; };
-		84C77CD52A6FD6E800604694 /* SB-Uniq-Cust-Hindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 84C77CD12A6FD6E700604694 /* SB-Uniq-Cust-Hindi.html */; };
-		84C77CD62A6FD6E800604694 /* SB-Uniq-Cust-Telungu.html in Resources */ = {isa = PBXBuildFile; fileRef = 84C77CD22A6FD6E700604694 /* SB-Uniq-Cust-Telungu.html */; };
 		84C77CDB2A6FD76900604694 /* tds_info-telugu.html in Resources */ = {isa = PBXBuildFile; fileRef = 84C77CD72A6FD76900604694 /* tds_info-telugu.html */; };
 		84C77CDC2A6FD76900604694 /* tds_info-tamil.html in Resources */ = {isa = PBXBuildFile; fileRef = 84C77CD82A6FD76900604694 /* tds_info-tamil.html */; };
 		84C77CDD2A6FD76900604694 /* tds_info.html in Resources */ = {isa = PBXBuildFile; fileRef = 84C77CD92A6FD76900604694 /* tds_info.html */; };
@@ -377,6 +377,10 @@
 		8425C6E629F9248B007E6F29 /* GenerateEwarrantyListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateEwarrantyListingViewModel.swift; sourceTree = "<group>"; };
 		8425C6E929F92515007E6F29 /* MyprofileDetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyprofileDetailsModels.swift; sourceTree = "<group>"; };
 		8425C6EB29F9254D007E6F29 /* GenerateSubmissionEwarrantyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateSubmissionEwarrantyModels.swift; sourceTree = "<group>"; };
+		843C2E3F2ADD55470026BE1F /* SB-Uniq-Cust-Eng.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "SB-Uniq-Cust-Eng.html"; sourceTree = "<group>"; };
+		843C2E412ADD556E0026BE1F /* SB-Uniq-Cust-Hindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "SB-Uniq-Cust-Hindi.html"; sourceTree = "<group>"; };
+		843C2E432ADD559A0026BE1F /* SB-Uniq-Cust-Tamil.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "SB-Uniq-Cust-Tamil.html"; sourceTree = "<group>"; };
+		843C2E452ADD55DA0026BE1F /* SB-Uniq-Cust-Telungu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "SB-Uniq-Cust-Telungu.html"; sourceTree = "<group>"; };
 		8443ECF72A4EF2EC00900471 /* cloud_sync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cloud_sync.json; sourceTree = "<group>"; };
 		8443ECF92A4F029C00900471 /* lf30_editor_jh47f7lt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lf30_editor_jh47f7lt.json; sourceTree = "<group>"; };
 		8443ECFC2A4F047900900471 /* TDS_PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDS_PopUpVC.swift; sourceTree = "<group>"; };
@@ -690,10 +694,6 @@
 		84BE6B0B2A25B9C800100D24 /* CP_Scanner_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CP_Scanner_VC.swift; sourceTree = "<group>"; };
 		84BE6B0D2A25BA2100100D24 /* ScannerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
 		84BE6B102A25F9C900100D24 /* ewarrentSubmissionModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ewarrentSubmissionModels.swift; sourceTree = "<group>"; };
-		84C77CCF2A6FD6E700604694 /* SB-Uniq-Cust-Eng.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "SB-Uniq-Cust-Eng.html"; sourceTree = "<group>"; };
-		84C77CD02A6FD6E700604694 /* SB-Uniq-Cust-Tamil.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "SB-Uniq-Cust-Tamil.html"; sourceTree = "<group>"; };
-		84C77CD12A6FD6E700604694 /* SB-Uniq-Cust-Hindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "SB-Uniq-Cust-Hindi.html"; sourceTree = "<group>"; };
-		84C77CD22A6FD6E700604694 /* SB-Uniq-Cust-Telungu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "SB-Uniq-Cust-Telungu.html"; sourceTree = "<group>"; };
 		84C77CD72A6FD76900604694 /* tds_info-telugu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "tds_info-telugu.html"; sourceTree = "<group>"; };
 		84C77CD82A6FD76900604694 /* tds_info-tamil.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "tds_info-tamil.html"; sourceTree = "<group>"; };
 		84C77CD92A6FD76900604694 /* tds_info.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = tds_info.html; sourceTree = "<group>"; };
@@ -771,10 +771,10 @@
 		8441C14F2A31BC330030BBEF /* Unique Feature HTML */ = {
 			isa = PBXGroup;
 			children = (
-				84C77CCF2A6FD6E700604694 /* SB-Uniq-Cust-Eng.html */,
-				84C77CD12A6FD6E700604694 /* SB-Uniq-Cust-Hindi.html */,
-				84C77CD02A6FD6E700604694 /* SB-Uniq-Cust-Tamil.html */,
-				84C77CD22A6FD6E700604694 /* SB-Uniq-Cust-Telungu.html */,
+				843C2E3F2ADD55470026BE1F /* SB-Uniq-Cust-Eng.html */,
+				843C2E412ADD556E0026BE1F /* SB-Uniq-Cust-Hindi.html */,
+				843C2E432ADD559A0026BE1F /* SB-Uniq-Cust-Tamil.html */,
+				843C2E452ADD55DA0026BE1F /* SB-Uniq-Cust-Telungu.html */,
 			);
 			path = "Unique Feature HTML";
 			sourceTree = "<group>";
@@ -2723,6 +2723,7 @@
 				84540B9329E18AD800CEE692 /* OffersTableViewCell.xib in Resources */,
 				84540BD829E18AD800CEE692 /* AddFollowerTableViewCell.xib in Resources */,
 				84540BE729E18AD800CEE692 /* SidemenuTableViewCell.xib in Resources */,
+				843C2E422ADD556F0026BE1F /* SB-Uniq-Cust-Hindi.html in Resources */,
 				840DF55C2A305DD4004C3E26 /* T&C-Sharon-Tamil.html in Resources */,
 				84540BA229E18AD800CEE692 /* SelectProductEWarrantyListTableViewCell.xib in Resources */,
 				84540BCF29E18AD800CEE692 /* MyRedemptionsTableViewCell.xib in Resources */,
@@ -2733,22 +2734,21 @@
 				84540BAD29E18AD800CEE692 /* otherImageTableViewCell.xib in Resources */,
 				84540AEB29E18AAE00CEE692 /* uniqueFeatures.html in Resources */,
 				84C77CDD2A6FD76900604694 /* tds_info.html in Resources */,
-				84C77CD62A6FD6E800604694 /* SB-Uniq-Cust-Telungu.html in Resources */,
 				84540BAC29E18AD800CEE692 /* senderInfoTableViewCell.xib in Resources */,
-				84C77CD42A6FD6E800604694 /* SB-Uniq-Cust-Tamil.html in Resources */,
 				8452CB9D29E3D3120018CCE1 /* Localizable.strings in Resources */,
 				84540BB329E18AD800CEE692 /* otherInfoImageTableViewCell.xib in Resources */,
-				84C77CD32A6FD6E800604694 /* SB-Uniq-Cust-Eng.html in Resources */,
 				84540BA629E18AD800CEE692 /* DownloadListTableViewCell.xib in Resources */,
 				84540BEA29E18AD800CEE692 /* MyEarningsTableViewCell.xib in Resources */,
 				849E84A52A177553006F0ED8 /* HistoryNotificationsTableViewCell.xib in Resources */,
+				843C2E442ADD559A0026BE1F /* SB-Uniq-Cust-Tamil.html in Resources */,
+				843C2E402ADD55470026BE1F /* SB-Uniq-Cust-Eng.html in Resources */,
 				84540BA929E18AD800CEE692 /* senderInfoImageTableViewCell.xib in Resources */,
 				84540B8F29E18AD800CEE692 /* DreamGiftTableViewCell.xib in Resources */,
 				84C77CDE2A6FD76900604694 /* tds_info-hindi.html in Resources */,
+				843C2E462ADD55DA0026BE1F /* SB-Uniq-Cust-Telungu.html in Resources */,
 				8443ECFA2A4F029C00900471 /* lf30_editor_jh47f7lt.json in Resources */,
 				84A7BB7E29E3F4E500896FA1 /* GoogleService-Info.plist in Resources */,
 				84540AA229E187E900CEE692 /* LaunchScreen.storyboard in Resources */,
-				84C77CD52A6FD6E800604694 /* SB-Uniq-Cust-Hindi.html in Resources */,
 				840DF55D2A305DD4004C3E26 /* T&C-Sharon-Telugu.html in Resources */,
 				84540A9F29E187E900CEE692 /* Assets.xcassets in Resources */,
 				84540A9A29E187E600CEE692 /* Main.storyboard in Resources */,
@@ -3314,9 +3314,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SharonBhandhan/SharonBhandhan.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2HG885J5KS;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -3328,19 +3328,18 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBhandhan_Dev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBandhan_AppStore;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -3359,9 +3358,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SharonBhandhan/SharonBhandhan.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2HG885J5KS;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -3373,19 +3372,18 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBhandhan_Dev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBandhan_AppStore;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -3405,7 +3403,7 @@
 				DEVELOPMENT_TEAM = XAVVX55AD4;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhanTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -3425,7 +3423,7 @@
 				DEVELOPMENT_TEAM = XAVVX55AD4;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhanTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -3443,7 +3441,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XAVVX55AD4;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhanUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -3461,7 +3459,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XAVVX55AD4;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhanUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -3475,7 +3473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -3490,11 +3488,11 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhan.NotificationServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBhandhan_Notification_Dev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "SharonBhandhan_Notification _AppStore";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -3506,7 +3504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -3521,11 +3519,11 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyaltyWorks.SharonBhandhan.NotificationServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SharonBhandhan_Notification_Dev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "SharonBhandhan_Notification _AppStore";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

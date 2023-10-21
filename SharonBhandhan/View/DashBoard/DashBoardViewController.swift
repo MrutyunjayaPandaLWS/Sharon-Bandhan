@@ -704,7 +704,8 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
     }
     
     func maintenanceAPI(){
-        guard let url = URL(string: "http://appupdate.arokiait.com/updates/serviceget?pid=com.centuryproclub.customer") else {return}
+        
+        guard let url = URL(string: "http://appupdate.arokiait.com/updates/serviceget?pid=com.loyaltyWorks.SharonBhandhan") else {return}
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let dataResponse = data,
                   error == nil else {
@@ -723,15 +724,6 @@ class DashBoardViewController: BaseViewController, popUpDelegate, PopUpDelegate 
                     DispatchQueue.main.async {
                         self.stopLoading()
                         self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localiz()
-//                        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-//                            self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localiz()
-//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "2"{
-//                            self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "hi")
-//                        }else if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "3"{
-//                            self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "ta-IN")
-//                        }else{
-//                            self.maintenanceLbl.text = "hpTheAppISUnableToAccessTheServicesAsMaintenanceKEY".localizableString(loc: "te")
-//                        }
                         self.maintenanceView.isHidden = false
                     }
                 }else if isMaintenanceValue == "0"{
@@ -805,14 +797,6 @@ extension DashBoardViewController : UICollectionViewDelegate,UICollectionViewDat
         return cell
         
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print("JSGAGUSGs")
-//
-//    }
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//            collectionview.deselectItem(at: indexPath, animated: true)
-//     }
     
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -1157,7 +1141,6 @@ extension DashBoardViewController{
                                 self.internetPushMessage = "QR కోడ్ సమర్పణ విఫలమైంది"
                                 self.scheduleNotification()
                             }
-                            
                             // Add the actions
                             alertController.addAction(okAction)
                             

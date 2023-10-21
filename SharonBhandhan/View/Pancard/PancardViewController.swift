@@ -98,7 +98,7 @@ class PancardViewController: BaseViewController, UITextFieldDelegate, UIImagePic
     
     func languagelocalization(){
         self.headerTitle.text = "PanVerification".localiz()
-        self.successmeassage.text = "customerPANDetails".localiz()
+        self.successmeassage.text = "panDetailsSubmitted".localiz()
         self.myPanDetails.text = "myPan".localiz()
         self.myProfile.text = "myProfile".localiz()
         self.saveButton.setTitle("Save".localiz(), for: .normal)
